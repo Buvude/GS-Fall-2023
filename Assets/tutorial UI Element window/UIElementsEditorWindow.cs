@@ -28,12 +28,15 @@ public class UIElementsEditorWindow : EditorWindow
         
         Label title = new Label("Color Picker");
         ColorField cF = new ColorField();
-        
-        
-        container.Add(title);
+        cF.name = "CP";
+
+    container.Add(title);
         container.Add(cF);
 
         VisualElement buttonsContainer = new VisualElement();
+
+        
+
         Button RandomColorbtn = (Button)CreateButton("Random Color");
         Button ResetColorbtn = (Button)CreateButton("Reset Color");
         Button CopyColorbtn = (Button)CreateButton("Copy Color");
