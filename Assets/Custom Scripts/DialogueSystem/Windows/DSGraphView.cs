@@ -56,8 +56,11 @@ namespace DS.Windows
         private void AddStyles()
         {
             StyleSheet sS = (StyleSheet)EditorGUIUtility.Load("DialogueSystem/DSGraphViewStyles.uss");
+            StyleSheet sS2 = (StyleSheet)EditorGUIUtility.Load("DialogueSystem/DSNodeStyles.uss");
+
 
             styleSheets.Add(sS);
+            styleSheets.Add(sS2);
         }
 
         private void AddGridBackground()

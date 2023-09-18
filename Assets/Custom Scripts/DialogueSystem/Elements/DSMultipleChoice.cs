@@ -18,6 +18,8 @@ namespace DS.Elements
                 text = "Add Choice"
             };
 
+            addChoiceBtn.AddToClassList("ds-node__button");
+
             mainContainer.Insert(1, addChoiceBtn);
 
 
@@ -32,11 +34,16 @@ namespace DS.Elements
                 {
                     text = "X"
                 };
+                deleteChoiceBtn.AddToClassList("ds-node__button");
 
                 TextField choiceText = new TextField()
                 {
                     value = choice
                 };
+                choiceText.AddToClassList("ds-node__text-field");
+                choiceText.AddToClassList("ds-node__choice-text-field");
+                choiceText.AddToClassList("ds-node__text-field__hidden");
+                
 
                 choicePort.Add(choiceText);
                 choicePort.Add(deleteChoiceBtn);
