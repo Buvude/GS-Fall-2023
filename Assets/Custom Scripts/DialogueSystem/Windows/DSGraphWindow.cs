@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 
 namespace DS.Windows
 {
+    using Utility;
     public class DSGraphWindow : EditorWindow
     {
         /*[SerializeField]
@@ -25,9 +26,7 @@ namespace DS.Windows
         #region Elements addition
         private void AddStyles()
         {
-            StyleSheet sS = (StyleSheet)EditorGUIUtility.Load("DialogueSystem/DSVariables.uss");
-
-            rootVisualElement.styleSheets.Add(sS);
+            rootVisualElement.AddStyleSheets("DialogueSystem/DSVariables.uss");
         }
 
         private void AddGraphView()

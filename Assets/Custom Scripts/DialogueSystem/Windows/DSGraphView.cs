@@ -10,6 +10,7 @@ namespace DS.Windows
 {
     using DS.Elements;
     using Enumeration;
+    using Utility;
     public class DSGraphView : GraphView
     {
         public DSGraphView()
@@ -115,12 +116,10 @@ namespace DS.Windows
         #region Elements Addition
         private void AddStyles()
         {
-            StyleSheet sS = (StyleSheet)EditorGUIUtility.Load("DialogueSystem/DSGraphViewStyles.uss");
-            StyleSheet sS2 = (StyleSheet)EditorGUIUtility.Load("DialogueSystem/DSNodeStyles.uss");
-
-
-            styleSheets.Add(sS);
-            styleSheets.Add(sS2);
+            this.AddStyleSheets(
+                "DialogueSystem/DSGraphViewStyles.uss",
+                "DialogueSystem/DSNodeStyles.uss"
+                );
         }
 
         private void AddGridBackground()

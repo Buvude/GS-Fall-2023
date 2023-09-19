@@ -55,9 +55,10 @@ namespace DS.Elements
 
             TextField choiceTextField = DSElementUtility.CreateTextField(choice);
 
-            choiceTextField.AddToClassList("ds-node__text-field");
-            choiceTextField.AddToClassList("ds-node__choice-text-field");
-            choiceTextField.AddToClassList("ds-node__text-field__hidden");
+            choiceTextField.AddClasses(
+                "ds-node__text-field",
+                "ds-node__choice-text-field",
+                "ds-node__text-field__hidden");
 
 
             choicePort.Add(choiceTextField);

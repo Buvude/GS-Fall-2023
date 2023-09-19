@@ -29,11 +29,14 @@ namespace DS.Elements
         }
         public virtual void Draw()
         {
-
+            
             TextField dialogueNameTextField = DSElementUtility.CreateTextField(DialogueName);
-            dialogueNameTextField.AddToClassList("ds-node__text-field");
-            dialogueNameTextField.AddToClassList("ds-node__filename-text-field");
-            dialogueNameTextField.AddToClassList("ds-node__text-field__hidden");
+
+            dialogueNameTextField.AddClasses(
+                "ds-node__text-field",
+                "ds-node__filename-text-field",
+                "ds-node__text-field__hidden"
+                );
 
             titleContainer.Insert(0, dialogueNameTextField);
 
@@ -55,8 +58,10 @@ namespace DS.Elements
 
             TextField textTextField = DSElementUtility.CreateTextArea(Text);
 
-            textTextField.AddToClassList("ds-node__text-field");
-            textTextField.AddToClassList("ds-node__quote-text-field");
+            textTextField.AddClasses(
+                "ds-node__text-field",
+                "ds-node__quote-text-field"
+                );
             textFoldout.Add(textTextField);
 
             customDataContainer.Add(textFoldout);
