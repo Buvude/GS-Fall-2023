@@ -5,6 +5,8 @@ using UnityEngine;
 
 namespace DS.Elements
 {
+    using Enumeration;
+    using Utility;
     public class DSSingleChoice : DSNode
     {
         public override void Draw()
@@ -13,7 +15,7 @@ namespace DS.Elements
             //Output Container
             foreach (string choice in Choices)
             {
-                Port choicePort = InstantiatePort(Orientation.Horizontal, Direction.Output, Port.Capacity.Single, typeof(bool));
+                Port choicePort =this.CreatePort(choice);
 
                 choicePort.portName = choice;
 

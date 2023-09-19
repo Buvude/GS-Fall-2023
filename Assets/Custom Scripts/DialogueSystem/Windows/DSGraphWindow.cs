@@ -22,7 +22,7 @@ namespace DS.Windows
 
             AddStyles();
         }
-
+        #region Elements addition
         private void AddStyles()
         {
             StyleSheet sS = (StyleSheet)EditorGUIUtility.Load("DialogueSystem/DSVariables.uss");
@@ -39,5 +39,6 @@ namespace DS.Windows
             rootVisualElement.Add(gV);
         }
     }
+    #endregion
 
 }

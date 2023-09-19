@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DS.Elements
+namespace DS.Enumeration
 {
     public enum DSDialogueType
     {

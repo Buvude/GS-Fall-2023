@@ -9,6 +9,7 @@ using UnityEditor;
 namespace DS.Windows
 {
     using DS.Elements;
+    using Enumeration;
     public class DSGraphView : GraphView
     {
         public DSGraphView()
@@ -19,8 +20,36 @@ namespace DS.Windows
             AddStyles();
         }
 
+        #region Overide Methods
 
+        public override List<Port> GetCompatiblePorts(Port startPort, NodeAdapter nodeAdapter)
+        {
+            List<Port> compatiblePorts = new List<Port>();
 
+            ports.ForEach(port =>
+            {
+                if(startPort == port)
+                {
+                    return;
+                }
+
+                if (startPort.node == port.node)
+                {
+                    return;
+                }
+
+                if(startPort.direction == port.direction)
+                {
+                    return;
+                }
+
+                compatiblePorts.Add(port);
+            });
+            return compatiblePorts;
+        }
+        #endregion
+
+        #region Manipulators
         private void AddManipulators()
         {
             this.AddManipulator(new ContentDragger());
@@ -31,7 +60,20 @@ namespace DS.Windows
             this.AddManipulator(new SelectionDragger());
             this.AddManipulator(new RectangleSelector());
 
+            this.AddManipulator(createGroupContextualMenu());
+
         }
+
+        private IManipulator createGroupContextualMenu()
+        {
+            ContextualMenuManipulator cMM = new ContextualMenuManipulator(
+                menuEvent => menuEvent.menu.AppendAction("Add group", actionEvent => AddElement(CreateGroup("Dialogue Group", actionEvent.eventInfo.localMousePosition)))
+                );
+
+            return cMM;
+        }
+
+       
 
         private IManipulator CreateNodeContextualMenu(string actionTitle, DSDialogueType dT)
         {
@@ -40,6 +82,22 @@ namespace DS.Windows
                 );
 
             return cMM;
+        }
+        #endregion
+
+        #region Elements Creations
+        private Group CreateGroup(string Title, Vector2 localMousePosition)
+        {
+            Group group = new Group()
+            {
+                title = Title
+            };
+
+            group.SetPosition(new Rect(localMousePosition, Vector2.zero));
+
+            return group;
+
+
         }
 
         private DSNode CreateNode(DSDialogueType dT, Vector2 position)
@@ -52,7 +110,9 @@ namespace DS.Windows
             node.Draw();
             return node;
         }
+        #endregion
 
+        #region Elements Addition
         private void AddStyles()
         {
             StyleSheet sS = (StyleSheet)EditorGUIUtility.Load("DialogueSystem/DSGraphViewStyles.uss");
@@ -72,5 +132,6 @@ namespace DS.Windows
             Insert(0, gB);
         }
     }
+    #endregion
 
 }

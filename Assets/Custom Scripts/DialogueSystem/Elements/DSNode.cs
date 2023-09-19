@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 
 namespace DS.Elements
 {
+    using Enumeration;
+    using Utility;
     public class DSNode : Node
     {
         //this is used as a base class that all nodes will inherit from
@@ -28,11 +30,7 @@ namespace DS.Elements
         public virtual void Draw()
         {
 
-            TextField dialogueNameTextField = new TextField()
-            {
-                value = DialogueName
-            };
-
+            TextField dialogueNameTextField = DSElementUtility.CreateTextField(DialogueName);
             dialogueNameTextField.AddToClassList("ds-node__text-field");
             dialogueNameTextField.AddToClassList("ds-node__filename-text-field");
             dialogueNameTextField.AddToClassList("ds-node__text-field__hidden");
@@ -41,7 +39,7 @@ namespace DS.Elements
 
             //Input Container
 
-            Port inputPort = InstantiatePort(Orientation.Horizontal, Direction.Input, Port.Capacity.Multi, typeof(bool));
+            Port inputPort = this.CreatePort("Dialogue Connection", Orientation.Horizontal, Direction.Input, Port.Capacity.Multi);
 
             inputPort.portName = "Dialogue Connection";
 
@@ -53,15 +51,9 @@ namespace DS.Elements
 
             customDataContainer.AddToClassList("ds-custom-data-container");
 
-            Foldout textFoldout = new Foldout()
-            {
-                text = "Dialogue Text"
-            };
+            Foldout textFoldout = DSElementUtility.CreateFoldout("Dialogue Text");
 
-            TextField textTextField = new TextField()
-            {
-                value = Text
-            };
+            TextField textTextField = DSElementUtility.CreateTextArea(Text);
 
             textTextField.AddToClassList("ds-node__text-field");
             textTextField.AddToClassList("ds-node__quote-text-field");
