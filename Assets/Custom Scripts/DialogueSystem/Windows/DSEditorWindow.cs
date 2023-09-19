@@ -6,15 +6,17 @@ using UnityEngine.UIElements;
 namespace DS.Windows
 {
     using Utility;
-    public class DSGraphWindow : EditorWindow
+    using Windows;
+    using Enumeration;
+    public class DSEditorWindow : EditorWindow
     {
         /*[SerializeField]
         private StyleSheet m_StyleSheet = default;*/
 
-        [MenuItem("Window/DS/DSGraphWindow")]
+        [MenuItem("Window/DS/DSEditorWindow")]
         public static void ShowExample()
         {
-            GetWindow<DSGraphWindow>("Dialogue Graph");
+            GetWindow<DSEditorWindow>("Dialogue Graph");
         }
 
         private void OnEnable()
@@ -31,7 +33,7 @@ namespace DS.Windows
 
         private void AddGraphView()
         {
-            DSGraphView gV = new DSGraphView();
+            DSGraphView gV = new DSGraphView(this);
 
             gV.StretchToParentSize();
 

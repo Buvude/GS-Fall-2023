@@ -8,18 +8,26 @@ using UnityEditor;
 
 namespace DS.Windows
 {
-    using DS.Elements;
+    using Elements;
     using Enumeration;
     using Utility;
     public class DSGraphView : GraphView
     {
-        public DSGraphView()
+        //private VisualElement contentViewContainer = new VisualElement();
+
+        private DSEditorWindow editorwindow;
+        private DSSearchWindow searchWindow;
+
+        public DSGraphView(DSEditorWindow window)
         {
             AddManipulators();
+            AddSearchWindow();
             AddGridBackground();
 
             AddStyles();
+            this.editorwindow = window;
         }
+
 
         #region Overide Methods
 
@@ -29,7 +37,7 @@ namespace DS.Windows
 
             ports.ForEach(port =>
             {
-                if(startPort == port)
+                if (startPort == port)
                 {
                     return;
                 }
@@ -39,7 +47,7 @@ namespace DS.Windows
                     return;
                 }
 
-                if(startPort.direction == port.direction)
+                if (startPort.direction == port.direction)
                 {
                     return;
                 }
@@ -68,26 +76,39 @@ namespace DS.Windows
         private IManipulator createGroupContextualMenu()
         {
             ContextualMenuManipulator cMM = new ContextualMenuManipulator(
-                menuEvent => menuEvent.menu.AppendAction("Add group", actionEvent => AddElement(CreateGroup("Dialogue Group", actionEvent.eventInfo.localMousePosition)))
+                menuEvent => menuEvent.menu.AppendAction("Add group", actionEvent => AddElement(CreateGroup("Dialogue Group", GetLocalMousePosition(actionEvent.eventInfo.localMousePosition))))
                 );
 
             return cMM;
         }
 
-       
+
 
         private IManipulator CreateNodeContextualMenu(string actionTitle, DSDialogueType dT)
         {
             ContextualMenuManipulator cMM = new ContextualMenuManipulator(
-                menuEvent => menuEvent.menu.AppendAction(actionTitle, actionEvent => AddElement(CreateNode(dT, actionEvent.eventInfo.localMousePosition)))
+                menuEvent => menuEvent.menu.AppendAction(actionTitle, actionEvent => AddElement(CreateNode(dT, GetLocalMousePosition(actionEvent.eventInfo.localMousePosition))))
                 );
 
             return cMM;
         }
         #endregion
 
-        #region Elements Creations
-        private Group CreateGroup(string Title, Vector2 localMousePosition)
+        #region Elements Addition
+
+        public void AddSearchWindow()
+        {
+            if (searchWindow == null)
+            {
+                searchWindow = ScriptableObject.CreateInstance<DSSearchWindow>();
+
+                searchWindow.initialize(this);
+            }
+
+            nodeCreationRequest = context => SearchWindow.Open(new SearchWindowContext(context.screenMousePosition), searchWindow);
+        }
+
+        public Group CreateGroup(string Title, Vector2 localMousePosition)
         {
             Group group = new Group()
             {
@@ -100,7 +121,11 @@ namespace DS.Windows
 
 
         }
+        public DSNode createNodeActivator(DSDialogueType dT, Vector2 position)
+        {
+            return CreateNode(dT, position);
 
+        }
         private DSNode CreateNode(DSDialogueType dT, Vector2 position)
         {
             Type nodeType = Type.GetType($"DS.Elements.DS{dT}");
@@ -113,7 +138,7 @@ namespace DS.Windows
         }
         #endregion
 
-        #region Elements Addition
+        #region Elements Creation
         private void AddStyles()
         {
             this.AddStyleSheets(
@@ -130,7 +155,24 @@ namespace DS.Windows
 
             Insert(0, gB);
         }
-    }
-    #endregion
 
+        #endregion
+
+        #region Utilities
+        public Vector2 GetLocalMousePosition(Vector2 mousePosition, bool isSearchWindow = false)
+        {
+
+            Vector2 worldMousePosition = mousePosition;
+
+            if(isSearchWindow )
+            {
+                worldMousePosition -= editorwindow.position.position;
+            }
+
+            Vector2 localMousePosition = contentViewContainer.WorldToLocal(worldMousePosition);
+
+            return localMousePosition;
+        }
+        #endregion
+    }
 }
