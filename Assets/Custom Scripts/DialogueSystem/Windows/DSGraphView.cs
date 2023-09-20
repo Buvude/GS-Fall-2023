@@ -37,8 +37,9 @@ namespace DS.Windows
 
             OnElementDeleted();
             OnGroupElementsAdded();
-            OnGroupElementsRemeoved();
             OnGroupRenamed();
+            OnGroupElementsRemoved();
+
 
 
             AddStyles();
@@ -93,7 +94,7 @@ namespace DS.Windows
         private IManipulator createGroupContextualMenu()
         {
             ContextualMenuManipulator cMM = new ContextualMenuManipulator(
-                menuEvent => menuEvent.menu.AppendAction("Add group", actionEvent => AddElement(CreateGroup("Dialogue Group", GetLocalMousePosition(actionEvent.eventInfo.localMousePosition))))
+                menuEvent => menuEvent.menu.AppendAction("Add group", actionEvent => CreateGroup("Dialogue Group", GetLocalMousePosition(actionEvent.eventInfo.localMousePosition)))
                 );
 
             return cMM;
@@ -131,6 +132,20 @@ namespace DS.Windows
 
             AddGroup(group);
 
+            AddElement(group);
+
+            foreach(GraphElement selectedElement in selection)
+            {
+                if (!(selectedElement is DSNode))
+                {
+                    continue;
+                }
+
+                DSNode node = (DSNode) selectedElement;
+
+                group.AddElement(node);
+            }
+
             return group;
 
 
@@ -163,30 +178,50 @@ namespace DS.Windows
                 Type groupType=typeof(DSGroup);
                 List<DSGroup> groupsToDelete = new List<DSGroup>();
                 List<DSNode> nodesToDelete=new List<DSNode>();
-                foreach(GraphElement element in selection)
+                foreach(GraphElement selectedElement in selection)
                 {
-                    if(element is DSNode node)
+                    if(selectedElement is DSNode node)
                     {
                         nodesToDelete.Add(node);
 
                         continue;
                     }
 
-                    if(element.GetType()!=groupType)
+                    if(selectedElement.GetType()!=groupType)
                     {
                         continue;
                     }
 
-                    DSGroup group = (DSGroup)element;
-
-                    RemoveGroup(group);
+                    DSGroup group = (DSGroup)selectedElement;
 
                     groupsToDelete.Add(group);
                 }
 
                 foreach(DSGroup group in groupsToDelete)
                 {
+                    List<DSNode> groupNodes = new List<DSNode>();
+
+                    foreach (GraphElement groupElement in group.containedElements)
+                    {
+                        if(!(groupElement is DSNode))
+                        {
+                            continue;
+                        }
+                        DSNode groupNode = (DSNode)groupElement;
+                       
+                        groupNodes.Add(groupNode);
+                    }
+
+                    group.RemoveElements(groupNodes);
+
+                    RemoveGroup(group);
+
                     RemoveElement(group);
+
+                    foreach(DSNode node in groupNodes)
+                    {
+                        
+                    }
                 }
                 foreach(DSNode node in nodesToDelete)
                 {
@@ -200,8 +235,6 @@ namespace DS.Windows
                 }
             };
         }
-
-        
 
         private void OnGroupElementsAdded()
         {
@@ -238,10 +271,12 @@ namespace DS.Windows
             };
         }
 
-        private void OnGroupElementsRemeoved()
+        private void OnGroupElementsRemoved()
         {
+            
             elementsRemovedFromGroup = (group, elements) =>
             {
+                Debug.Log(group.title + "\n" + elements);
                 foreach (GraphElement element in selection)
                 {
                     if (!(element is DSNode))
@@ -249,6 +284,7 @@ namespace DS.Windows
                         continue;
                     }
 
+                    DSGroup dSGroup= (DSGroup)group;
                     DSNode node = (DSNode)element;
 
                     RemoveGroupedNode(node, group);

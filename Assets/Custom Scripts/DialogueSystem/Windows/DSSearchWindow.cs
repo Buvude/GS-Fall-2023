@@ -61,9 +61,7 @@ namespace DS.Windows
                     graphView.AddElement(multipleChoiceNode);
                     return true;
                 case Group _:
-                    DSGroup group = graphView.CreateGroup("DialogueGroup", context.screenMousePosition);
-
-                    graphView.AddElement(group);
+                    graphView.CreateGroup("DialogueGroup", context.screenMousePosition);
 
                     return true;
                 default: return false;
