@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 
 namespace DS.Elements
 {
+    using Windows;
     using Enumeration;
     using Utility;
     public class DSNode : Node
@@ -15,12 +16,18 @@ namespace DS.Elements
         public List<string> Choices { get; set; }
         public string Text { get; set; }
         public DSDialogueType dT { get; set; }
+        private DSGraphView graphView { get; set; }
 
-        public virtual void Initialize(Vector2 position)
+        private Color defaultBackgroundColor;
+
+        public virtual void Initialize(DSGraphView dSGraphView, Vector2 position)
         {
             DialogueName = "DialogueName";
             Choices = new List<string>();
             Text = "Dialogue text.";
+
+            graphView = dSGraphView;
+            defaultBackgroundColor = new Color(29f/255f, 29f / 255f, 30f / 255f);
 
             SetPosition(new Rect(position, Vector2.zero));
 
@@ -30,7 +37,14 @@ namespace DS.Elements
         public virtual void Draw()
         {
             
-            TextField dialogueNameTextField = DSElementUtility.CreateTextField(DialogueName);
+            TextField dialogueNameTextField = DSElementUtility.CreateTextField(DialogueName, callback=>
+            {
+                graphView.removeUngroupedNode(this);
+
+                DialogueName = callback.newValue;
+
+                graphView.AddUngroupedNode(this);
+            });
 
             dialogueNameTextField.AddClasses(
                 "ds-node__text-field",
@@ -67,6 +81,16 @@ namespace DS.Elements
             customDataContainer.Add(textFoldout);
 
             extensionContainer.Add(textFoldout);
+        }
+
+        public void setErrorStyle(Color color)
+        {
+            mainContainer.style.backgroundColor = color;
+        }
+
+        public void resetStyle()
+        {
+            mainContainer.style.backgroundColor = defaultBackgroundColor;
         }
     }
 

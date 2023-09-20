@@ -11,6 +11,7 @@ namespace DS.Windows
     using Elements;
     using Enumeration;
     using Utility;
+    using Data.Error;
     public class DSGraphView : GraphView
     {
         //private VisualElement contentViewContainer = new VisualElement();
@@ -18,11 +19,17 @@ namespace DS.Windows
         private DSEditorWindow editorwindow;
         private DSSearchWindow searchWindow;
 
+        private SerializableDictionary<string, DSNodeErrorData> ungroupedNodes;
+
         public DSGraphView(DSEditorWindow window)
         {
+            ungroupedNodes=new SerializableDictionary<string, DSNodeErrorData> ();
+
             AddManipulators();
             AddSearchWindow();
             AddGridBackground();
+
+            OnElementDeleted();
 
             AddStyles();
             this.editorwindow = window;
@@ -126,15 +133,93 @@ namespace DS.Windows
             return CreateNode(dT, position);
 
         }
-        private DSNode CreateNode(DSDialogueType dT, Vector2 position)
+        public DSNode CreateNode(DSDialogueType dT, Vector2 position)
         {
             Type nodeType = Type.GetType($"DS.Elements.DS{dT}");
 
             DSNode node = (DSNode)Activator.CreateInstance(nodeType);
 
-            node.Initialize(position);
+            node.Initialize(this,position);
             node.Draw();
+
+            AddUngroupedNode(node);
+
             return node;
+        }
+        #endregion
+        #region Callbacks
+        private void OnElementDeleted()
+        {
+            deleteSelection = (operationName, AskUser) =>
+            {
+                List<DSNode> nodesToDelete=new List<DSNode>();
+                foreach(GraphElement element in selection)
+                {
+                    if(element is DSNode node)
+                    {
+                        nodesToDelete.Add(node);
+
+                        continue;
+                    }
+                }
+                foreach(DSNode node in nodesToDelete)
+                {
+                    removeUngroupedNode(node);
+
+                    RemoveElement(node);
+                }
+            };
+        }
+        #endregion
+
+        #region Repeated Elements
+        public void AddUngroupedNode(DSNode node)
+        {
+            string nodeName = node.DialogueName;
+
+            if(!ungroupedNodes.ContainsKey(nodeName))
+            {
+                DSNodeErrorData nodeErrorData = new DSNodeErrorData();
+
+                nodeErrorData.Nodes.Add(node);
+
+                ungroupedNodes.Add(nodeName, nodeErrorData);
+
+                return;
+            }
+
+            List<DSNode> ungroupedNodesList = ungroupedNodes[nodeName].Nodes;
+            ungroupedNodesList.Add(node);
+
+            Color errorColor = ungroupedNodes[nodeName].ErrorData.Color;
+
+            node.setErrorStyle(errorColor);
+
+            if (ungroupedNodesList.Count == 2)
+            {
+                ungroupedNodesList[0].setErrorStyle(errorColor);
+            }
+        }
+
+        public void removeUngroupedNode(DSNode node)
+        {
+            string nodeName=node.DialogueName;
+
+            List<DSNode> ungroupedNodesList = ungroupedNodes[nodeName].Nodes;
+
+            ungroupedNodesList.Remove(node);
+
+            node.resetStyle();
+
+            if (ungroupedNodesList.Count == 1)
+            {
+                ungroupedNodesList[0].resetStyle();
+            }
+
+            if (ungroupedNodesList.Count == 0)
+            {
+                ungroupedNodes.Remove(nodeName);
+            }
         }
         #endregion
 

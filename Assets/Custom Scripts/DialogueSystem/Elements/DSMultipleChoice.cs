@@ -9,10 +9,21 @@ namespace DS.Elements
 {
     using Enumeration;
     using Elements;
-    using DS.Utility;
+    using Utility;
+    using Windows;
 
     public class DSMultipleChoice : DSNode
     {
+
+        public override void Initialize(DSGraphView dSGraphView, Vector2 position)
+        {
+            base.Initialize(dSGraphView, position);
+
+            dT = DSDialogueType.MultipleChoice;
+
+            Choices.Add("New Choice");
+
+        }
         public override void Draw()
         {
             //Main Container
@@ -67,15 +78,7 @@ namespace DS.Elements
             return choicePort;
         }
         #endregion
-        public override void Initialize(Vector2 position)
-        {
-            base.Initialize(position);
-
-            dT = DSDialogueType.MultipleChoice;
-
-            Choices.Add("New Choice");
-
-        }
+       
     }
 
 }
