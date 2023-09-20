@@ -16,7 +16,7 @@ namespace DS.Elements
         public List<string> Choices { get; set; }
         public string Text { get; set; }
         public DSDialogueType dT { get; set; }
-        public Group Group { get; set; }
+        public DSGroup Group { get; set; }
 
         private DSGraphView graphView { get; set; }
 
@@ -52,7 +52,7 @@ namespace DS.Elements
                     return;
                 }
 
-                Group currentGroup=Group;
+                DSGroup currentGroup=Group;
 
                 graphView.RemoveGroupedNode(this, Group);
 
