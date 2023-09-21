@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
@@ -7,7 +6,9 @@ namespace DS.Elements
 {
     public class DSGroup : Group
     {
-        public string oldTitle;
+        public string oldTitle {  get; set; }
+
+
         private Color defaultBorderColor;
         private float defaultBorderWidth;
 
@@ -15,7 +16,9 @@ namespace DS.Elements
         {
             title = groupTitle;
             oldTitle = groupTitle;
+
             SetPosition(new Rect(position, Vector2.zero));
+
             defaultBorderColor = contentContainer.style.borderBottomColor.value;
             defaultBorderWidth=contentContainer.style.borderBottomWidth.value;
         }

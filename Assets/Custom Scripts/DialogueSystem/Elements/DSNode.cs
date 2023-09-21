@@ -43,7 +43,7 @@ namespace DS.Elements
             {
                 if(Group==null)
                 {
-                    graphView.removeUngroupedNode(this);
+                    graphView.RemoveUngroupedNode(this);
 
                     DialogueName = callback.newValue;
 
