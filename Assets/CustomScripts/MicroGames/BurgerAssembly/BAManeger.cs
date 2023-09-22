@@ -28,10 +28,12 @@ namespace InterDineMension.MicroGame.BA
         public List<GameObject> PattyOptions = new List<GameObject>();
         public List<GameObject> bonus3Options = new List<GameObject>();
         public List<GameObject> bonus4Options = new List<GameObject>();
-        public List<GameObject> eBunOptionsOptions = new List<GameObject>();
+        public List<GameObject> eBunOptions = new List<GameObject>();
         public List<GameObject> toSpawn=new List<GameObject>();
         // Start is called before the first frame update
-
+        /// <summary>
+        /// randomizes the placement of the items
+        /// </summary>
         public void StartTheNextPhase()
         {
             switch (bAState)
@@ -42,22 +44,54 @@ namespace InterDineMension.MicroGame.BA
                     Instantiate(toSpawn[1], lane2.transform);
                     Instantiate(toSpawn[2], lane3.transform);
                     toSpawn.Clear();
-                    foreach (GameObject obj in toSpawn)
-                    {
-                        Debug.Log(obj.name);
-                    }
+                    bAState = phase.bonus1;
                     break;
                 case phase.bonus1:
+                    shuffleList(bonus1Options);
+                    Instantiate(toSpawn[0], lane1.transform);
+                    Instantiate(toSpawn[1], lane2.transform);
+                    Instantiate(toSpawn[2], lane3.transform);
+                    toSpawn.Clear();
+                    bAState = phase.bonus2;
                     break;
                 case phase.bonus2:
+                    shuffleList(bonus2Options);
+                    Instantiate(toSpawn[0], lane1.transform);
+                    Instantiate(toSpawn[1], lane2.transform);
+                    Instantiate(toSpawn[2], lane3.transform);
+                    toSpawn.Clear();
+                    bAState = phase.Patty;
                     break;
                 case phase.Patty:
+                    shuffleList(PattyOptions);
+                    Instantiate(toSpawn[0], lane1.transform);
+                    Instantiate(toSpawn[1], lane2.transform);
+                    Instantiate(toSpawn[2], lane3.transform);
+                    toSpawn.Clear();
+                    bAState = phase.bonus3;
                     break;
                 case phase.bonus3:
+                    shuffleList(bonus3Options);
+                    Instantiate(toSpawn[0], lane1.transform);
+                    Instantiate(toSpawn[1], lane2.transform);
+                    Instantiate(toSpawn[2], lane3.transform);
+                    toSpawn.Clear();
+                    bAState = phase.bonus4;
                     break;
                 case phase.bonus4:
+                    shuffleList(bonus4Options);
+                    Instantiate(toSpawn[0], lane1.transform);
+                    Instantiate(toSpawn[1], lane2.transform);
+                    Instantiate(toSpawn[2], lane3.transform);
+                    toSpawn.Clear();
+                    bAState = phase.eBun;
                     break;
                 case phase.eBun:
+                    shuffleList(eBunOptions);
+                    Instantiate(toSpawn[0], lane1.transform);
+                    Instantiate(toSpawn[1], lane2.transform);
+                    Instantiate(toSpawn[2], lane3.transform);
+                    toSpawn.Clear();
                     break;
                 default:
                     break;
@@ -74,10 +108,6 @@ namespace InterDineMension.MicroGame.BA
                 int index=Random.Range(0, temp.Count - 1);//using unity system.random
                 toSpawn.Add(temp[index]);
                 temp.RemoveAt(index);
-            }
-            foreach (GameObject item in toSpawn)
-            {
-                Debug.Log(item.name);
             }
         }
     }
