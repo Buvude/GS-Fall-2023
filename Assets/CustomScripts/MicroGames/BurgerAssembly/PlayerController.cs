@@ -8,6 +8,7 @@ namespace InterDineMension.BA
 {
     public class PlayerController : MonoBehaviour
     {
+        public BAManeger BAManeger;
         public SpriteRenderer bottomBunRend, picklesRend, lettuceRend, pattyRend, condimentRend, finalBonusRend, topBunRend;
         public Sprite classicBottomBun, lettuceWrapBottom, noBottomBun,//top bun types
             pickles, relish, noPickles, //pickle type 
@@ -85,74 +86,92 @@ namespace InterDineMension.BA
                 case BurgerIngredients.ingredientType.classicBottomBun:
                     bottomBunRend.sprite = classicBottomBun;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.lettuceWrapBottom:
                     bottomBunRend.sprite = lettuceWrapBottom;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.noBottomBun:
                     bottomBunRend.sprite = noBottomBun;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.pickles:
                     picklesRend.sprite = pickles;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.relish:
                     picklesRend.sprite = relish;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.noPickles:
                     picklesRend.sprite = noPickles;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.wholeLeafLettuce:
                     lettuceRend.sprite = wholeLeafLettuce;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.choppedLettuce:
                     lettuceRend.sprite = choppedLettuce;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.noLettuce:
                     lettuceRend.sprite = noLettuce;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.beefPatty:
                     pattyRend.sprite = beefPatty;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.veganPatty:
                     pattyRend.sprite = veganPatty;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.unspeakableHorror:
                     pattyRend.sprite = unspeakableHorror;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.ketchup:
                     condimentRend.sprite = ketchup;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.mustard:
                     condimentRend.sprite = mustard;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.both:
                     condimentRend.sprite = both;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.tomatoe:
                     finalBonusRend.sprite = tomatoe;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.choppedOnions:
                     finalBonusRend.sprite = choppedOnions;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.none:
                     finalBonusRend.sprite = none;
                     ingredientTypes.Add(type);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.classicTopBun:
                     topBunRend.sprite = classicTopBun;

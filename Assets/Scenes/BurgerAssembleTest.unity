@@ -916,7 +916,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0811a9ad8c671e4099a60eab324692f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  orderedIngredients: 000000000300000006000000090000000c0000000f00000012000000
+  leftOrder: {fileID: 1636894779}
+  rightOrder: {fileID: 39094241}
   lane1: {fileID: 90243401}
   lane2: {fileID: 101931223}
   lane3: {fileID: 744207840}
@@ -946,9 +947,9 @@ MonoBehaviour:
   - {fileID: 3830152665219838398, guid: 86bd674bdcbed0d43ae49fe42eddd399, type: 3}
   - {fileID: 3940909251784713043, guid: 2640a2e920b52494886ebd246d815982, type: 3}
   eBunOptions:
-  - {fileID: 3417823326797170283, guid: ce6c320f8263bef4cbebdad58610accb, type: 3}
-  - {fileID: 3830152665219838398, guid: 86bd674bdcbed0d43ae49fe42eddd399, type: 3}
-  - {fileID: 3940909251784713043, guid: 2640a2e920b52494886ebd246d815982, type: 3}
+  - {fileID: 3417823326797170283, guid: b050675ee5489e041878354970215bb8, type: 3}
+  - {fileID: 3830152665219838398, guid: 2e5b9a272113e9d4ba7818ca9fa19cbf, type: 3}
+  - {fileID: 3940909251784713043, guid: bf7c8764996588c4b8f79ee8ce121d77, type: 3}
   toSpawn: []
 --- !u!1 &516124186
 GameObject:
@@ -1480,6 +1481,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f5942599fdfb04081f9d58260cd6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  BAManeger: {fileID: 425115987}
   bottomBunRend: {fileID: 516124188}
   picklesRend: {fileID: 1386970371}
   lettuceRend: {fileID: 950847049}
@@ -1512,7 +1514,7 @@ MonoBehaviour:
   Lane2: {fileID: 1671230919}
   Lane3: {fileID: 72139932}
   ingredientTypes: 
-  currentpos: 0
+  currentpos: 1
 --- !u!1 &1183388458
 GameObject:
   m_ObjectHideFlags: 0

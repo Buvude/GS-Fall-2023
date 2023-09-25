@@ -79,7 +79,6 @@ namespace InterDineMension.MicroGame.BA
                 case phase.Patty:
                     shuffleList(PattyOptions);
                     Instantiate(toSpawn[0], lane1.transform);
-                    Instantiate(toSpawn[0], lane1.transform);
                     toSpawn[0].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane1;
                     Instantiate(toSpawn[1], lane2.transform);
                     toSpawn[1].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane2;
