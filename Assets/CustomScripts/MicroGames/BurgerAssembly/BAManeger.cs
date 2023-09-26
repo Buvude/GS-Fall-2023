@@ -1,4 +1,4 @@
-using InterDineMension.BA;
+using InterDineMension.MicroGame.BA;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -19,20 +19,29 @@ namespace InterDineMension.MicroGame.BA
         /// </summary>
         public enum phase//this will determine what will spawn
         {
-            sBun, bonus1, bonus2, Patty, bonus3, bonus4, eBun
+            bottomBun, pickle, lettuce, Patty, condiment, veggie, topBun
         };
-        public phase bAState=phase.sBun;
+        public phase bAState=phase.bottomBun;
         /// <summary>
         /// lists of objects that can spawn in the microgame
         /// </summary>
-        public List<GameObject> sBunOptions = new List<GameObject>();
-        public List<GameObject> bonus1Options=new List<GameObject>();
-        public List<GameObject> bonus2Options = new List<GameObject>();
+        public List<GameObject> bottomBunOptions = new List<GameObject>();
+        public List<GameObject> pickleOptions=new List<GameObject>();
+        public List<GameObject> lettuceOptions = new List<GameObject>();
         public List<GameObject> PattyOptions = new List<GameObject>();
-        public List<GameObject> bonus3Options = new List<GameObject>();
-        public List<GameObject> bonus4Options = new List<GameObject>();
-        public List<GameObject> eBunOptions = new List<GameObject>();
+        public List<GameObject> condimentsOptions = new List<GameObject>();
+        public List<GameObject> veggieOptions = new List<GameObject>();
+        public List<GameObject> topBunOptions = new List<GameObject>();
         public List<GameObject> toSpawn=new List<GameObject>();
+
+        public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients)
+        {
+            for (int i = 0; i < ingredients.Count; i++)
+            {
+                orderedIngredients.Add(ingredients[i]);
+            }
+        }
+
         // Start is called before the first frame update
         /// <summary>
         /// randomizes the placement of the items
@@ -43,80 +52,80 @@ namespace InterDineMension.MicroGame.BA
         {
             switch (bAState)
             {
-                case phase.sBun:
-                    shuffleList(sBunOptions);
+                case phase.bottomBun:
+                    shuffleList(bottomBunOptions);
                     Instantiate(toSpawn[0], lane1.transform);
-                    toSpawn[0].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane1;
+                    toSpawn[0].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane1;
                     Instantiate(toSpawn[1], lane2.transform);
-                    toSpawn[1].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane2;
+                    toSpawn[1].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane2;
                     Instantiate(toSpawn[2], lane3.transform);
-                    toSpawn[2].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane3;
+                    toSpawn[2].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane3;
                     toSpawn.Clear();
-                    bAState = phase.bonus1;
+                    bAState = phase.pickle;
                     break;
-                case phase.bonus1:
-                    shuffleList(bonus1Options);
+                case phase.pickle:
+                    shuffleList(pickleOptions);
                     Instantiate(toSpawn[0], lane1.transform);
-                    toSpawn[0].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane1;
+                    toSpawn[0].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane1;
                     Instantiate(toSpawn[1], lane2.transform);
-                    toSpawn[1].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane2;
+                    toSpawn[1].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane2;
                     Instantiate(toSpawn[2], lane3.transform);
-                    toSpawn[2].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane3;
+                    toSpawn[2].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane3;
                     toSpawn.Clear();
-                    bAState = phase.bonus2;
+                    bAState = phase.lettuce;
                     break;
-                case phase.bonus2:
-                    shuffleList(bonus2Options);
+                case phase.lettuce:
+                    shuffleList(lettuceOptions);
                     Instantiate(toSpawn[0], lane1.transform);
-                    toSpawn[0].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane1;
+                    toSpawn[0].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane1;
                     Instantiate(toSpawn[1], lane2.transform);
-                    toSpawn[1].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane2;
+                    toSpawn[1].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane2;
                     Instantiate(toSpawn[2], lane3.transform);
-                    toSpawn[2].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane3;
+                    toSpawn[2].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane3;
                     toSpawn.Clear();
                     bAState = phase.Patty;
                     break;
                 case phase.Patty:
                     shuffleList(PattyOptions);
                     Instantiate(toSpawn[0], lane1.transform);
-                    toSpawn[0].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane1;
+                    toSpawn[0].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane1;
                     Instantiate(toSpawn[1], lane2.transform);
-                    toSpawn[1].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane2;
+                    toSpawn[1].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane2;
                     Instantiate(toSpawn[2], lane3.transform);
-                    toSpawn[2].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane3;
+                    toSpawn[2].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane3;
                     toSpawn.Clear();
-                    bAState = phase.bonus3;
+                    bAState = phase.condiment;
                     break;
-                case phase.bonus3:
-                    shuffleList(bonus3Options);
+                case phase.condiment:
+                    shuffleList(condimentsOptions);
                     Instantiate(toSpawn[0], lane1.transform);
-                    toSpawn[0].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane1;
+                    toSpawn[0].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane1;
                     Instantiate(toSpawn[1], lane2.transform);
-                    toSpawn[1].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane2;
+                    toSpawn[1].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane2;
                     Instantiate(toSpawn[2], lane3.transform);
-                    toSpawn[2].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane3;
+                    toSpawn[2].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane3;
                     toSpawn.Clear();
-                    bAState = phase.bonus4;
+                    bAState = phase.veggie;
                     break;
-                case phase.bonus4:
-                    shuffleList(bonus4Options);
+                case phase.veggie:
+                    shuffleList(veggieOptions);
                     Instantiate(toSpawn[0], lane1.transform);
-                    toSpawn[0].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane1;
+                    toSpawn[0].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane1;
                     Instantiate(toSpawn[1], lane2.transform);
-                    toSpawn[1].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane2;
+                    toSpawn[1].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane2;
                     Instantiate(toSpawn[2], lane3.transform);
-                    toSpawn[2].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane3;
+                    toSpawn[2].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane3;
                     toSpawn.Clear();
-                    bAState = phase.eBun;
+                    bAState = phase.topBun;
                     break;
-                case phase.eBun:
-                    shuffleList(eBunOptions);
+                case phase.topBun:
+                    shuffleList(topBunOptions);
                     Instantiate(toSpawn[0], lane1.transform);
-                    toSpawn[0].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane1;
+                    toSpawn[0].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane1;
                     Instantiate(toSpawn[1], lane2.transform);
-                    toSpawn[1].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane2;
+                    toSpawn[1].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane2;
                     Instantiate(toSpawn[2], lane3.transform);
-                    toSpawn[2].GetComponent<BurgerIngredients>().currentpos = BurgerIngredients.lanePos.lane3;
+                    toSpawn[2].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane3;
                     toSpawn.Clear();
                     break;
                 default:

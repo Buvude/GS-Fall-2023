@@ -1,9 +1,10 @@
+using InterDineMension.MicroGame.BA;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace InterDineMension.BA
+namespace InterDineMension.MicroGame.BA
 {
     public class BurgerIngredients : MonoBehaviour
     {
@@ -23,7 +24,7 @@ namespace InterDineMension.BA
             classicTopBun, lettuceWrapTop, noTopBun//top bun choice
         };
         public ingredientType ing;
-        public lanePos currentpos;
+        public lanePos currentposIngredients;
         public PlayerController player;
         
         // Start is called before the first frame update
@@ -40,7 +41,7 @@ namespace InterDineMension.BA
 
         public void EndOfTheLine()
         {
-            switch (currentpos)
+            switch (currentposIngredients)
             {
                 case lanePos.lane1:
                     if (player.currentpos == PlayerController.lanePos.lane1)
@@ -64,7 +65,10 @@ namespace InterDineMension.BA
                     Debug.Log("default Triggered");
                     break;
             }
+            //Destroy(this.gameObject);
             this.gameObject.SetActive(false);
         }
     }
+
+    
 }

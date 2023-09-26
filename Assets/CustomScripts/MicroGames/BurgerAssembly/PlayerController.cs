@@ -4,13 +4,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace InterDineMension.BA
+namespace InterDineMension.MicroGame.BA
 {
     public class PlayerController : MonoBehaviour
     {
         public BAManeger BAManeger;
         public SpriteRenderer bottomBunRend, picklesRend, lettuceRend, pattyRend, condimentRend, finalBonusRend, topBunRend;
-        public Sprite classicBottomBun, lettuceWrapBottom, noBottomBun,//top bun types
+        public Sprite 
+            classicBottomBun, lettuceWrapBottom, noBottomBun,//top bun types
             pickles, relish, noPickles, //pickle type 
             wholeLeafLettuce, choppedLettuce, noLettuce,//Lettuce type
             beefPatty, veganPatty, unspeakableHorror,//patty type
