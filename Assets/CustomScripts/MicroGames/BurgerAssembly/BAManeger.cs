@@ -11,6 +11,15 @@ namespace InterDineMension.MicroGame.BA
 {
     public class BAManeger : MonoBehaviour
     {
+        public static int finalScore = 0;
+        public Microgamecontroller microgamecontroller;
+        void Start()
+        {
+            microgamecontroller = GameObject.FindGameObjectWithTag("eventSystem").GetComponent<Microgamecontroller>();
+            microgamecontroller.bAM = this;
+            StartMicroGame(microgamecontroller.orderedIngredients);
+        }
+
         public TextMeshProUGUI leftOrder, rightOrder;
         public static List<BurgerIngredients.ingredientType> orderedIngredients=new List<BurgerIngredients.ingredientType> ();
         public GameObject lane1, lane2, lane3;//lanes will increase with higher difficulty
@@ -40,6 +49,15 @@ namespace InterDineMension.MicroGame.BA
             {
                 orderedIngredients.Add(ingredients[i]);
             }
+            string orderForSide = $"{orderedIngredients[0]}\n\n" +
+                $"{orderedIngredients[1]}\n\n" +
+                $"{orderedIngredients[2]}\n\n" +
+                $"{orderedIngredients[3]}\n\n" +
+                $"{orderedIngredients[4]}\n\n" +
+                $"{ orderedIngredients[5]}\n\n" +
+                $"{orderedIngredients[6]}";
+            leftOrder.text = orderForSide;
+            rightOrder.text = orderForSide;
         }
 
         // Start is called before the first frame update
@@ -152,8 +170,7 @@ namespace InterDineMension.MicroGame.BA
         /// <param name="ingredientTypes"></param> used for keeping score to compare with orderedIngredients
         internal static void FinalTally(List<BurgerIngredients.ingredientType> ingredientTypes)
         {
-            int finalScore=0;
-            for (int i = 0;i < ingredientTypes.Count;i++)
+            for (int i = 0;i < ingredientTypes.Count;)
             {
                 if (ingredientTypes[i]== orderedIngredients[i])
                 {
@@ -163,7 +180,9 @@ namespace InterDineMension.MicroGame.BA
                 {
                     //finalScore--; maybe? not sure if we'll keep this yet
                 }
+                i++;
             }
+            Debug.Log(finalScore);
             //BAMicroGameScore(finalScore);
             //will be used for passing the score through to another script as needed
         }
