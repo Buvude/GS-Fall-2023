@@ -4,18 +4,29 @@ using UnityEngine;
 
 namespace InterDineMension.MicroGame
 {
+    using InterDineMension.MicroGame.BA;
+    using System;
+
     public class Microgamecontroller : MonoBehaviour
     {
-        // Start is called before the first frame update
+        public Canvas canvas;
+
+        public GameObject bAMContainer;
+        public BAManeger bAM = new BAManeger();
+        public List<BurgerIngredients.ingredientType> orderedIngredients = new List<BurgerIngredients.ingredientType>();
+
+
+        public GameObject tempMicroGameHolder;
+
         void Start()
         {
-        
+
         }
 
-        // Update is called once per frame
+
         void Update()
         {
-        
+
         }
     }
 }
