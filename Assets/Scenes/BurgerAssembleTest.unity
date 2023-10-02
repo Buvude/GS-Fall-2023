@@ -402,6 +402,7 @@ GameObject:
   - component: {fileID: 304975177}
   - component: {fileID: 304975179}
   - component: {fileID: 304975178}
+  - component: {fileID: 304975180}
   m_Layer: 5
   m_Name: Dialogue-mockup
   m_TagString: Untagged
@@ -468,6 +469,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304975176}
   m_CullTransparentMesh: 1
+--- !u!114 &304975180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304975176}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3cfa8b450ff8848b228ff262f7ef5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialoguePanel: {fileID: 304975176}
+  dialogueText: {fileID: 1363743504}
+  choices:
+  - {fileID: 1986589455}
+  - {fileID: 1440309818}
+  - {fileID: 633572524}
+  inkJSON: {fileID: 4900000, guid: 1c63910f0a1a11147ab0066b77833684, type: 3}
 --- !u!114 &455315795 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
@@ -561,7 +581,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 633572527}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 304975180}
+        m_TargetAssemblyTypeName: InterDineMension.Manager.dialogueManager, Assembly-CSharp
+        m_MethodName: MakeChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &633572527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -891,8 +923,8 @@ GameObject:
   - component: {fileID: 1183388461}
   - component: {fileID: 1183388460}
   - component: {fileID: 1183388462}
-  - component: {fileID: 1183388463}
   - component: {fileID: 1183388464}
+  - component: {fileID: 1183388465}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: eventSystem
@@ -947,24 +979,6 @@ MonoBehaviour:
   bAM: {fileID: 455315795}
   orderedIngredients: 000000000300000006000000090000000e0000001000000012000000
   tempMicroGameHolder: {fileID: 886513137}
---- !u!114 &1183388463
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183388458}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2e3cfa8b450ff8848b228ff262f7ef5c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialoguePanel: {fileID: 304975176}
-  dialogueText: {fileID: 1363743504}
-  choices:
-  - {fileID: 1986589455}
-  - {fileID: 1440309818}
-  - {fileID: 633572524}
 --- !u!114 &1183388464
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -995,6 +1009,19 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!114 &1183388465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1183388458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c76bb9d4a239db47956034ead3ca339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 304975180}
 --- !u!1 &1363743502
 GameObject:
   m_ObjectHideFlags: 0
@@ -1211,7 +1238,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1440309821}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 304975180}
+        m_TargetAssemblyTypeName: InterDineMension.Manager.dialogueManager, Assembly-CSharp
+        m_MethodName: MakeChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1440309821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1542,7 +1581,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1986589458}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 304975180}
+        m_TargetAssemblyTypeName: InterDineMension.Manager.dialogueManager, Assembly-CSharp
+        m_MethodName: MakeChoice
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1986589458
 MonoBehaviour:
   m_ObjectHideFlags: 0

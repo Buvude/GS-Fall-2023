@@ -5,7 +5,7 @@ using TMPro;
 using Ink.Runtime;
 using System;
 
-namespace InterDineMension
+namespace InterDineMension.Manager
 {
     public class dialogueManager : MonoBehaviour
     {
@@ -15,6 +15,8 @@ namespace InterDineMension
         [SerializeField] private TextMeshProUGUI dialogueText;
 
         [SerializeField] private GameObject[] choices;
+
+        [SerializeField] public TextAsset inkJSON;
 
         private TextMeshProUGUI[] choicesText;
 
@@ -29,6 +31,16 @@ namespace InterDineMension
                 Debug.LogWarning("Found more then one DialogueManager instance");
             }
             instance = this;
+            
+            dialoguePlaying = false;
+            dialoguePanel.SetActive(false);
+            choicesText = new TextMeshProUGUI[choices.Length];
+            int index = 0;
+            foreach (GameObject choice in choices)
+            {
+                choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
+                index++;
+            }
         }
 
         public static dialogueManager GetInstance()
@@ -38,18 +50,7 @@ namespace InterDineMension
 
         private void Start()
         {
-            dialoguePlaying = false;
-            dialoguePanel.SetActive(false);
-
-            choicesText=new TextMeshProUGUI[choices.Length];
-            int index = 0;
-            foreach (GameObject choice in choices)
-            {
-                choicesText[index]=choice.GetComponentInChildren<TextMeshProUGUI>();
-                index++;
-            }
-
-
+         
         }
 
         private void Update()
@@ -58,7 +59,7 @@ namespace InterDineMension
             {
                 return;
             }
-            if(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)) 
+            if(currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)))
             {
                 ContinueStory();
             }
@@ -66,9 +67,9 @@ namespace InterDineMension
 
         public void EnterDialogueMode(TextAsset inkJSON)
         {
-            currentStory=new Story(inkJSON.text);
-            dialoguePlaying=true;
             dialoguePanel.SetActive(true);
+            currentStory =new Story(inkJSON.text);
+            dialoguePlaying=true;
 
             ContinueStory();
         }
@@ -79,6 +80,7 @@ namespace InterDineMension
             {
                 dialogueText.text = currentStory.Continue();
                 DisplayChoices();
+                Debug.Log(currentStory.currentChoices.Count);
             }
 
             else
@@ -116,6 +118,11 @@ namespace InterDineMension
             {
                 choices[i].gameObject.SetActive(false);
             }
+        }
+
+        public void MakeChoice(int choiceIndex)
+        {
+            currentStory.ChooseChoiceIndex(choiceIndex);
         }
     }
 }
