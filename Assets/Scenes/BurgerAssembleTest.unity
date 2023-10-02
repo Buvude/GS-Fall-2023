@@ -489,6 +489,18 @@ MonoBehaviour:
   - {fileID: 633572524}
   inkJSON: {fileID: 4900000, guid: 1c63910f0a1a11147ab0066b77833684, type: 3}
   inkJSON2: {fileID: 4900000, guid: 4c8d56090abb0d8459c999aaa653c757, type: 3}
+  globalsInkFile:
+    inkAsset: {fileID: 102900000, guid: ea3e0d395319bf148b9b83ba394b007d, type: 3}
+    jsonAssetDirectory: {fileID: 0}
+    jsonAsset: {fileID: 0}
+    unhandledCompileErrors: []
+    recursiveIncludeErrorPaths: []
+    errors: []
+    warnings: []
+    todos: []
+    masterInkAssets: []
+    localIncludePaths: []
+    includes: []
 --- !u!114 &455315795 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}

@@ -1,6 +1,7 @@
 INCLUDE globals.ink
 
-{ pokemon_name == " ": -> main | -> already_chose }
+{ pokemon_name == "": -> main | -> already_chose }
+
 
 ===main===
 Which pokemon do you choose?
