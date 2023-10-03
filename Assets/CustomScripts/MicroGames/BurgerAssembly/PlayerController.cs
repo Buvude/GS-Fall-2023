@@ -183,10 +183,12 @@ namespace InterDineMension.MicroGame.BA
                 case BurgerIngredients.ingredientType.lettuceWrapTop:
                     topBunRend.sprite = lettuceWrapBottom;
                     ingredientTypes.Add(type);
+                    BAManeger.FinalTally(ingredientTypes);
                     break;
                 case BurgerIngredients.ingredientType.noTopBun:
                     topBunRend.sprite = noTopBun;
                     ingredientTypes.Add(type);
+                    BAManeger.FinalTally(ingredientTypes);
                     break;
                 default:
                     break;
