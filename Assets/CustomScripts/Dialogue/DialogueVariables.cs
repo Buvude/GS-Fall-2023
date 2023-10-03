@@ -22,7 +22,7 @@ namespace InterDineMension
             {
                 Ink.Runtime.Object value = globalVarialbesStory.variablesState.GetVariableWithName(name);
                 variables.Add(name, value);
-                Debug.Log("Initialized global Dialogue Variable: " + name + " = " + value);
+                /*Debug.Log("Initialized global Dialogue Variable: " + name + " = " + value);*/
             }
         }
 
@@ -40,7 +40,7 @@ namespace InterDineMension
 
         private void VariableChanged(string name, Ink.Runtime.Object value)
         {
-            Debug.Log("Variable changed: " + name + " = " + value);
+            /*Debug.Log("Variable changed: " + name + " = " + value);*/
             //only maintain variables that were initialized from the globals ink file
             if (variables.ContainsKey(name))
             {

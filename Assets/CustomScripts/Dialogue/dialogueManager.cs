@@ -80,6 +80,10 @@ namespace InterDineMension.Manager
 
             dV.StartListening(currentStory);
 
+            currentStory.BindExternalFunction("StartBAMicro", () =>
+            {
+                Debug.Log("called StartBAMicro");
+            });
             ContinueStory();
         }
 
@@ -111,6 +115,9 @@ namespace InterDineMension.Manager
         private void ExitDialogueMode()
         {
             dV.StopListening(currentStory);
+
+            currentStory.UnbindExternalFunction("StartBAMicro");
+            
             dialoguePlaying = false;
             dialoguePanel.SetActive(false);
             dialogueText.text = "";
