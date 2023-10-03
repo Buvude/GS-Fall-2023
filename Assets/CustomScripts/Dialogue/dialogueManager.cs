@@ -8,6 +8,8 @@ using Ink.UnityIntegration;
 
 namespace InterDineMension.Manager
 {
+    using MicroGame;
+    using MicroGame.BA;
     public class dialogueManager : MonoBehaviour
     {
         private DialogueVariables dV;
@@ -16,6 +18,7 @@ namespace InterDineMension.Manager
 
         [SerializeField] private GameObject dialoguePanel;
         [SerializeField] private TextMeshProUGUI dialogueText;
+        [SerializeField] private TextMeshProUGUI displayNameText;
 
         [SerializeField] private GameObject[] choices;
 
@@ -27,7 +30,23 @@ namespace InterDineMension.Manager
 
         private Story currentStory;
 
+        public Microgamecontroller mGC;
+        public BAManeger bAM;
+
         public bool dialoguePlaying { get; private set; }
+        /// <summary>
+        /// this is for the BAMicro game
+        /// </summary>
+        private const string SPEAKER_TAG = "speaker";
+        private const string BBUN_TAG = "BBun";
+        private const string PICKLES_TAG = "Pickles";
+        private const string LETTUCE_TAG = "lettuce";
+        private const string PATTY_TAG = "patty";
+        private const string CONDIMENTS_TAG = "Condiments";
+        private const string VEGGIE_TAG = "veggie";
+        private const string TBUN_TAG = "TBun";
+
+        public InkExternalFunctions iEF;
 
         private void Awake()
         {
@@ -80,10 +99,12 @@ namespace InterDineMension.Manager
 
             dV.StartListening(currentStory);
 
-            currentStory.BindExternalFunction("StartBAMicro", () =>
-            {
-                Debug.Log("called StartBAMicro");
-            });
+            /* currentStory.BindExternalFunction("StartBAMicro", () =>
+             {
+                 //Debug.Log("called StartBAMicro");
+             });*/
+
+            //iEF.Bind(currentStory,bAM,mGC);
             ContinueStory();
         }
 
@@ -103,12 +124,153 @@ namespace InterDineMension.Manager
             {
                 dialogueText.text = currentStory.Continue();
                 DisplayChoices();
-                Debug.Log(currentStory.currentChoices.Count);
+                HandleTags(currentStory.currentTags);
+                //Debug.Log(currentStory.currentChoices.Count);
             }
 
             else
             {
                 ExitDialogueMode();
+            }
+        }
+
+        private void HandleTags(List<string> currentTags)
+        {
+            foreach(string tag in currentTags)
+            {
+                string[] splitTag = tag.Split(':');
+                if (splitTag.Length != 2)
+                {
+                    Debug.LogError("Tag could not be appropriatly parsed: " + tag);
+                }
+                string tagKey = splitTag[0].Trim();
+                string tagValue = splitTag[1].Trim();
+
+                switch (tagKey)
+                {
+                    case SPEAKER_TAG:
+                        displayNameText.text = tagValue;
+                        break;
+                    case BBUN_TAG:
+                        switch (tagValue)
+                        {
+                            case "Plain":
+                                mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.classicBottomBun;
+                                break;
+                            case "Lettuce_bun":
+                                mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.lettuceWrapBottom;
+                                break;
+                            case "None":
+                                mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.noBottomBun;
+                                break;
+                            default:
+                                Debug.LogWarning($"BBun value {tagValue} has not been recongnized");
+                                break;
+                        }
+                        break;
+                    case PICKLES_TAG:
+                        switch (tagValue)
+                        {
+                            case "Sliced_pickles":
+                                mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.pickles;
+                                break;
+                            case "Relish":
+                                mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.relish;
+                                break;
+                            case "None":
+                                mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.noPickles;
+                                break;
+                            default:
+                                Debug.LogWarning($"Pickles value {tagValue} has not been recongnized");
+                                break;
+                        }
+                        break;
+                    case LETTUCE_TAG:
+                        switch (tagValue)
+                        {
+                            case "Whole_leaf":
+                                mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.wholeLeafLettuce;
+                                break;
+                            case "Chopped":
+                                mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.choppedLettuce;
+                                break;
+                            case "None":
+                                mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.noLettuce;
+                                break;
+                            default:
+                                Debug.LogWarning($"Lettuce value {tagValue} has not been recongnized");
+                                break;
+                        }
+                        break;
+                    case PATTY_TAG:
+                        switch (tagValue)
+                        {
+                            case "Beef":
+                                mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.beefPatty;
+                                break;
+                            case "Vegan":
+                                mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.veganPatty;
+                                break;
+                            default:
+                                Debug.LogWarning($"Patty value {tagValue} has not been recongnized");
+                                break;
+                        };
+                        break;
+                    case CONDIMENTS_TAG:
+                        switch (tagValue)
+                        {
+                            case "Ketchup":
+                                mGC.orderedIngredients[4] = BurgerIngredients.ingredientType.ketchup;
+                                break;
+                            case "Mustard":
+                                mGC.orderedIngredients[4] = BurgerIngredients.ingredientType.mustard;
+                                break;
+                            case "Both":
+                                mGC.orderedIngredients[4] = BurgerIngredients.ingredientType.both;
+                                break;
+                            default:
+                                Debug.LogWarning($"Condiments value {tagValue} has not been recongnized");
+                                break;
+                        }
+                        break;
+                    case VEGGIE_TAG:
+                        switch (tagValue)
+                        {
+                            case "Tomatoe":
+                                mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.tomatoe;
+                                break;
+                            case "Onion":
+                                mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.choppedOnions;
+                                break;
+                            case "None":
+                                mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.none;
+                                break;
+                            default:
+                                Debug.LogWarning($"Veggie value {tagValue} has not been recongnized");
+                                break;
+                        }
+                        break;
+                    case TBUN_TAG:
+                        switch (tagValue)
+                        {
+                            case "Plain":
+                                mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.classicTopBun;
+                                break;
+                            case "Lettuce_bun":
+                                mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.lettuceWrapTop;
+                                break;
+                            case "None":
+                                mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.noTopBun;
+                                break;
+                            default:
+                                Debug.LogWarning($"TBun value {tagValue} has not been recongnized");
+                                break;
+                        }
+                        break;
+                    default:
+                        Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
+                        break;
+                }
             }
         }
 

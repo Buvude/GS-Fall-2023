@@ -5,14 +5,24 @@ using Ink.Runtime;
 
 namespace InterDineMension
 {
+    using MicroGame.BA;
+    using MicroGame;
     public class InkExternalFunctions
     {
-        public void Bind(Story currentStory)
+
+        
+        public void Bind(Story currentStory, BAManeger bAM, Microgamecontroller mGC)
         {
             currentStory.BindExternalFunction("StartBAMicro", () =>
             {
-                Debug.Log("called StartBAMicro");
+                bAM.StartMicroGame(mGC.orderedIngredients);
+                
             });
+        }
+
+        public void unBind(Story currentStory)
+        {
+            currentStory.UnbindExternalFunction("StartBAMicro");
         }
     }
 }
