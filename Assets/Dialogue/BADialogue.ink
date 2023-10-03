@@ -1,7 +1,7 @@
 EXTERNAL StartBAMicro()
 INCLUDE globals.ink
 
-~StartBAMicro()
+
 VAR tempHolder =""
 ->Main
 ===Main===

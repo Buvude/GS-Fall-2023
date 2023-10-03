@@ -46,7 +46,7 @@ namespace InterDineMension.Manager
         private const string VEGGIE_TAG = "veggie";
         private const string TBUN_TAG = "TBun";
 
-        public InkExternalFunctions iEF;
+        public InkExternalFunctions iEF=new InkExternalFunctions();
 
         private void Awake()
         {
@@ -67,6 +67,11 @@ namespace InterDineMension.Manager
                 choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
                 index++;
             }
+        }
+
+        public void StartFirstConvo()
+        {
+            EnterDialogueMode(inkJSON);
         }
 
         public static dialogueManager GetInstance()
@@ -99,12 +104,12 @@ namespace InterDineMension.Manager
 
             dV.StartListening(currentStory);
 
-            /* currentStory.BindExternalFunction("StartBAMicro", () =>
-             {
-                 //Debug.Log("called StartBAMicro");
+            /*currentStory.BindExternalFunction("StartBAMicro", () =>
+            {
+                 Debug.Log("called StartBAMicro");
              });*/
 
-            //iEF.Bind(currentStory,bAM,mGC);
+            iEF.Bind(currentStory,bAM,mGC);
             ContinueStory();
         }
 

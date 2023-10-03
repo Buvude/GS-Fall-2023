@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ink.Runtime;
 
 namespace InterDineMension.Manager
 {
@@ -10,7 +11,7 @@ namespace InterDineMension.Manager
         // Start is called before the first frame update
         void Start()
         {
-            dialogueManager.GetInstance().EnterDialogueMode(manager.inkJSON);
+            dialogueManager.GetInstance().StartFirstConvo();
         }
 
         // Update is called once per frame

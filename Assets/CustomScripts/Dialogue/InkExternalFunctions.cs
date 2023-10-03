@@ -15,7 +15,8 @@ namespace InterDineMension
         {
             currentStory.BindExternalFunction("StartBAMicro", () =>
             {
-                bAM.StartMicroGame(mGC.orderedIngredients);
+                mGC.StartBAM();
+                /*bAM.StartMicroGame(mGC.orderedIngredients);*/
                 
             });
         }

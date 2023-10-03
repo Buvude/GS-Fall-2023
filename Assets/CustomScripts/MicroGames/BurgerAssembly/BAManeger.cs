@@ -45,6 +45,7 @@ namespace InterDineMension.MicroGame.BA
 
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients)
         {
+            
             for (int i = 0; i < ingredients.Count; i++)
             {
                 orderedIngredients.Add(ingredients[i]);
@@ -58,6 +59,7 @@ namespace InterDineMension.MicroGame.BA
                 $"{orderedIngredients[6]}";
             leftOrder.text = orderForSide;
             rightOrder.text = orderForSide;
+
         }
 
         // Start is called before the first frame update
