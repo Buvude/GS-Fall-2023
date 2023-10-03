@@ -28,5 +28,11 @@ namespace InterDineMension.MicroGame
         {
 
         }
+
+        public void StartBAM()
+        {
+            bAMContainer.SetActive(true);
+            bAM.StartMicroGame(orderedIngredients);
+        }
     }
 }

@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace InterDineMension.MicroGame.BA
 {
+
     public class PlayerController : MonoBehaviour
     {
         public BAManeger BAManeger;
