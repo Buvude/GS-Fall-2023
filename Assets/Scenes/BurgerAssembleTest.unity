@@ -491,18 +491,7 @@ MonoBehaviour:
   - {fileID: 633572524}
   inkJSON: {fileID: 4900000, guid: 4b2faca77ca5d71478b28411f3aefcfb, type: 3}
   inkJSON2: {fileID: 4900000, guid: 4c8d56090abb0d8459c999aaa653c757, type: 3}
-  globalsInkFile:
-    inkAsset: {fileID: 102900000, guid: ea3e0d395319bf148b9b83ba394b007d, type: 3}
-    jsonAssetDirectory: {fileID: 0}
-    jsonAsset: {fileID: 0}
-    unhandledCompileErrors: []
-    recursiveIncludeErrorPaths: []
-    errors: []
-    warnings: []
-    todos: []
-    masterInkAssets: []
-    localIncludePaths: []
-    includes: []
+  loadGlobalsJSON: {fileID: 4900000, guid: 79643bfe944f4e248b2caa40b789658e, type: 3}
   mGC: {fileID: 1183388462}
   bAM: {fileID: 455315795}
 --- !u!114 &329995196 stripped
@@ -1877,10 +1866,30 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -196.4
       objectReference: {fileID: 0}
+    - target: {fileID: 8554411331843971713, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554411331843971713, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8554411331843971713, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: finishedBurger
       value: 
       objectReference: {fileID: 329995196}
+    - target: {fileID: 9133024778814056345, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 112.197
+      objectReference: {fileID: 0}
+    - target: {fileID: 9133024778814056345, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1.2678
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

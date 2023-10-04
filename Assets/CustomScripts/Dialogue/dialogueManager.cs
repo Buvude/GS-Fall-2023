@@ -4,7 +4,6 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using System;
-using Ink.UnityIntegration;
 
 namespace InterDineMension.Manager
 {
@@ -24,7 +23,7 @@ namespace InterDineMension.Manager
 
         [SerializeField] public TextAsset inkJSON;
         [SerializeField] public TextAsset inkJSON2;
-        [SerializeField] private InkFile globalsInkFile;
+        [SerializeField] private TextAsset loadGlobalsJSON;
 
         private TextMeshProUGUI[] choicesText;
 
@@ -50,7 +49,7 @@ namespace InterDineMension.Manager
 
         private void Awake()
         {
-            dV = new DialogueVariables(globalsInkFile.filePath); 
+            dV = new DialogueVariables(loadGlobalsJSON); 
              
             if (instance != null)
             {
@@ -329,6 +328,15 @@ namespace InterDineMension.Manager
                 Debug.LogWarning("Ink Variable was found to be null: " + variableName);
             }
             return variableValue;
+        }
+
+        public void OnApplicationQuit()
+        {
+            if(dV != null)
+            {
+                dV.SaveVariables();
+            }
+            
         }
     }
 }
