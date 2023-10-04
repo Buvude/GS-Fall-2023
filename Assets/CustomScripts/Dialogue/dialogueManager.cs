@@ -162,7 +162,7 @@ namespace InterDineMension.Manager
                             case "Plain":
                                 mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.classicBottomBun;
                                 break;
-                            case "Lettuce_bun":
+                            case "Lettucebun":
                                 mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.lettuceWrapBottom;
                                 break;
                             case "None":
@@ -176,7 +176,7 @@ namespace InterDineMension.Manager
                     case PICKLES_TAG:
                         switch (tagValue)
                         {
-                            case "Sliced_pickles":
+                            case "Chips":
                                 mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.pickles;
                                 break;
                             case "Relish":
@@ -193,7 +193,7 @@ namespace InterDineMension.Manager
                     case LETTUCE_TAG:
                         switch (tagValue)
                         {
-                            case "Whole_leaf":
+                            case "Leaf":
                                 mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.wholeLeafLettuce;
                                 break;
                             case "Chopped":
@@ -261,7 +261,7 @@ namespace InterDineMension.Manager
                             case "Plain":
                                 mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.classicTopBun;
                                 break;
-                            case "Lettuce_bun":
+                            case "Lettucebun":
                                 mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.lettuceWrapTop;
                                 break;
                             case "None":

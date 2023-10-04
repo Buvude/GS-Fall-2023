@@ -6,11 +6,15 @@ using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 using TMPro;
+using UnityEngine.UI;
+using Unity.VisualScripting;
 
 namespace InterDineMension.MicroGame.BA
 {
     public class BAManeger : MonoBehaviour
     {
+        public Image finishedBurger;
+        public Sprite GoodBurger, BadBurger, MediocreBurger;
         public static int finalScore = 0;
         public Microgamecontroller microgamecontroller;
         void Start()
@@ -170,10 +174,14 @@ namespace InterDineMension.MicroGame.BA
         /// using a for loop instead of foreach so I can use the i variable to check the same position in both lists
         /// </summary>
         /// <param name="ingredientTypes"></param> used for keeping score to compare with orderedIngredients
-        internal static void FinalTally(List<BurgerIngredients.ingredientType> ingredientTypes)
+        public void FinalTally(List<BurgerIngredients.ingredientType> ingredientTypes)
         {
             for (int i = 0;i < ingredientTypes.Count;)
             {
+                if (ingredientTypes[i]==BurgerIngredients.ingredientType.unspeakableHorror)
+                {
+                    finalScore = -7;
+                }
                 if (ingredientTypes[i]== orderedIngredients[i])
                 {
                     finalScore++;
@@ -185,6 +193,28 @@ namespace InterDineMension.MicroGame.BA
                 i++;
             }
             Debug.Log(finalScore);
+            switch (finalScore)
+            {
+                case <= 2:
+                    {
+                        finishedBurger.gameObject.SetActive(true);
+                        finishedBurger.sprite = BadBurger;
+                        break;
+                    }
+                case <= 5:
+                    {
+                        finishedBurger.gameObject.SetActive(true);
+                        finishedBurger.sprite = MediocreBurger;
+                        break;
+                    }
+                case > 5:
+                    {
+                        finishedBurger.gameObject.SetActive(true);
+                        finishedBurger.sprite = GoodBurger;
+                        break;
+                    }
+                default: break;//unreachable, but still safe to have
+            }
             //BAMicroGameScore(finalScore);
             //will be used for passing the score through to another script as needed
         }
