@@ -45,7 +45,7 @@ namespace InterDineMension.MicroGame.BA
         public List<GameObject> condimentsOptions = new List<GameObject>();
         public List<GameObject> veggieOptions = new List<GameObject>();
         public List<GameObject> topBunOptions = new List<GameObject>();
-        public List<GameObject> toSpawn=new List<GameObject>();
+        public List<GameObject> toSpawn;
 
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients)
         {
@@ -213,7 +213,7 @@ namespace InterDineMension.MicroGame.BA
                         finishedBurger.sprite = GoodBurger;
                         break;
                     }
-                default: break;//unreachable, but still safe to have
+                //default: break;//unreachable, but still safe to have
             }
             //BAMicroGameScore(finalScore);
             //will be used for passing the score through to another script as needed

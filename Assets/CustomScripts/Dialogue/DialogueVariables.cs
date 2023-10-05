@@ -3,26 +3,45 @@ using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
 using System.IO;
+using UnityEditor.Experimental.RestService;
+
 namespace InterDineMension
 {
     public class DialogueVariables
     {
         public Dictionary<string, Ink.Runtime.Object> variables {  get; private set; }
 
-        public DialogueVariables(string globalsFilePath)
+        private Story globalVariablesStory;
+
+        private const string saveVariablesKey = "INK_VARIABLES";
+
+        public DialogueVariables(TextAsset loadGlobalJSON)
         {
             //compiles the story
-            string inkFileContents=File.ReadAllText(globalsFilePath);
-            Ink.Compiler compiler=new Ink.Compiler(inkFileContents);
-            Story globalVarialbesStory = compiler.Compile();
-
+            globalVariablesStory = new Story(loadGlobalJSON.text);
             //Initialize dictionary
-            variables = new Dictionary<string, Ink.Runtime.Object>();
-            foreach(string name in globalVarialbesStory.variablesState)
+
+            if(PlayerPrefs.HasKey(saveVariablesKey))
             {
-                Ink.Runtime.Object value = globalVarialbesStory.variablesState.GetVariableWithName(name);
+                string jsonState =PlayerPrefs.GetString(saveVariablesKey);
+                globalVariablesStory.state.LoadJson(jsonState);
+            }
+
+            variables = new Dictionary<string, Ink.Runtime.Object>();
+            foreach(string name in globalVariablesStory.variablesState)
+            {
+                Ink.Runtime.Object value = globalVariablesStory.variablesState.GetVariableWithName(name);
                 variables.Add(name, value);
                 /*Debug.Log("Initialized global Dialogue Variable: " + name + " = " + value);*/
+            }
+        }
+
+        public void SaveVariables()
+        {
+            if(globalVariablesStory != null)
+            {
+                VariablesToStory(globalVariablesStory);
+                PlayerPrefs.SetString(saveVariablesKey, globalVariablesStory.state.ToJson());
             }
         }
 
