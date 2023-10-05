@@ -119,7 +119,7 @@ namespace InterDineMension.Manager
         public void debugCommand()
         {
             
-            EnterDialogueMode(inkJSON2);
+            EnterDialogueMode(inkJSON);
         }
 
         private void ContinueStory()

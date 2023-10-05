@@ -7,11 +7,13 @@ namespace InterDineMension.Manager
 {
     public class GameplayManager : MonoBehaviour
     {
+        [SerializeField] public List<TextAsset> cheffSwattsConvos;
+        [SerializeField] public List<TextAsset> FredConvos;
         public dialogueManager manager;
         // Start is called before the first frame update
         void Start()
         {
-            dialogueManager.GetInstance().StartFirstConvo();
+            //dialogueManager.GetInstance().StartFirstConvo();
         }
 
         // Update is called once per frame
@@ -21,6 +23,18 @@ namespace InterDineMension.Manager
             {
                 dialogueManager.GetInstance().EnterDialogueMode(manager.inkJSON);
             }*/
+        }
+        public void StartConvoCheffSwatts()
+        {
+            //check variables to see which conversation to start. 
+            manager.EnterDialogueMode(cheffSwattsConvos[0]);
+            //filler for until we have implimented the variables
+
+        }
+
+        public void StartConvoFred()
+        {
+            //check variables to see which story to start
         }
     }
 }

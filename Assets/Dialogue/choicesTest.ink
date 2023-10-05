@@ -5,6 +5,7 @@ INCLUDE globals.ink
 
 ===main===
 Which pokemon do you choose?
+Which pokemon do you choose?
     +[Charmander]
         ->chosen("Charmander")
     +[Bulbasaur]
