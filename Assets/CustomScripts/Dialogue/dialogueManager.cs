@@ -11,7 +11,12 @@ namespace InterDineMension.Manager
     using MicroGame.BA;
     public class dialogueManager : MonoBehaviour
     {
+        //tutorial made it a private serializeField, but I want to be able to adjust this with settings
+        public float typingSpeed = 0.04f;
+        private Coroutine displayLineCorutine;
         private DialogueVariables dV;
+        private bool canContinueToNextLine = false;
+
 
         private static dialogueManager instance;
 
@@ -89,7 +94,7 @@ namespace InterDineMension.Manager
             {
                 return;
             }
-            if(currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)))
+            if(canContinueToNextLine&& currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)))
             {
                 ContinueStory();
             }
@@ -126,8 +131,14 @@ namespace InterDineMension.Manager
         {
             if (currentStory.canContinue)
             {
-                dialogueText.text = currentStory.Continue();
-                DisplayChoices();
+                //set text for current dialogue line
+                if (displayLineCorutine != null)
+                {
+                    StopCoroutine(displayLineCorutine);
+                }
+
+                displayLineCorutine=StartCoroutine(DisplayLine(currentStory.Continue()));
+                /*dialogueText.text = currentStory.Continue(); outdated*/ 
                 HandleTags(currentStory.currentTags);
                 //Debug.Log(currentStory.currentChoices.Count);
             }
@@ -135,6 +146,30 @@ namespace InterDineMension.Manager
             else
             {
                 ExitDialogueMode();
+            }
+        }
+        private IEnumerator DisplayLine(string line)
+        {
+            //empty dialogue text
+            dialogueText.text = "";
+            Hidechoices();
+            canContinueToNextLine = false;
+
+            //display each letter one at a time. 
+            foreach(char letter in line.ToCharArray())
+            {
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(typingSpeed);
+            }
+            DisplayChoices();
+            canContinueToNextLine = true;
+        }
+
+        private void Hidechoices()
+        {
+            foreach(GameObject choiceButton in choices)
+            {
+                choiceButton.SetActive(false);
             }
         }
 
@@ -315,8 +350,11 @@ namespace InterDineMension.Manager
 
         public void MakeChoice(int choiceIndex)
         {
-            currentStory.ChooseChoiceIndex(choiceIndex);
-            ContinueStory();
+            if (canContinueToNextLine)
+            {
+                currentStory.ChooseChoiceIndex(choiceIndex);
+                ContinueStory();
+            }
         }
 
         public Ink.Runtime.Object GetVariableState(string variableName)

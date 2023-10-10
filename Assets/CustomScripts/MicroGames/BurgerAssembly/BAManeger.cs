@@ -11,8 +11,11 @@ using Unity.VisualScripting;
 
 namespace InterDineMension.MicroGame.BA
 {
+    using InterDineMension.Manager;
     public class BAManeger : MonoBehaviour
     {
+        public GameplayManager gM;
+        public dialogueManager dM;
         public Image finishedBurger;
         public Sprite GoodBurger, BadBurger, MediocreBurger;
         public static int finalScore = 0;
@@ -215,8 +218,22 @@ namespace InterDineMension.MicroGame.BA
                     }
                 //default: break;//unreachable, but still safe to have
             }
-            //BAMicroGameScore(finalScore);
+            StartCoroutine(BAMicroGameScore(finalScore));
             //will be used for passing the score through to another script as needed
+        }
+
+        private IEnumerator BAMicroGameScore(int finalScore)
+        {
+            if (finalScore >= 4)
+            {
+                yield return new WaitForSeconds(3);
+                dM.EnterDialogueMode(gM.cheffSwattsConvos[2]);//only valid for day one
+            }
+            else
+            {
+                yield return new WaitForSeconds(3);
+                dM.EnterDialogueMode(gM.cheffSwattsConvos[1]);//only valid for day one
+            }
         }
     }
 }

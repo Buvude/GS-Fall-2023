@@ -5,7 +5,6 @@ VAR tempHolder =""
 ->Main
 ===Main===
 Ey, Graciana! Think ya can give me some help real quick? #speaker:Chef Swatts
-Ey, Graciana! Think ya can give me some help real quick?
 
 * [Sure]
 
@@ -25,7 +24,6 @@ Ey, Graciana! Think ya can give me some help real quick?
 
     (He hands me a strange looking vegetable, and goes back to grabbing more ingredients. It's about the size of a normal tomato, except it's green, and small hairs are growing out of it... It's strangely damp too, and the skin is almost leathery.) #speaker:Graciana
 
-    (...How am I supposed to prep this?)
     (...How am I supposed to prep this?)
     
     ** [Peel it]
