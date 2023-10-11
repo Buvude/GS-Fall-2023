@@ -4,11 +4,11 @@ INCLUDE globals.ink
 VAR tempHolder =""
 ->Main
 ===Main===
-Ey, Graciana! Think ya can give me some help real quick? #speaker:Chef Swatts
+Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Swatts
 
-* [Sure]
+* [<color=\#F8FF30>Sure</color>]
 
-    Sure, why not. #speaker:Graciana
+    Sure, why not. #speaker:Graciana #mood:test
 
     Perfect! Come come, prep this for me ya? #speaker:Chef Swatts
 

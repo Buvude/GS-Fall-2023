@@ -23,6 +23,7 @@ namespace InterDineMension.Manager
         [SerializeField] private GameObject dialoguePanel;
         [SerializeField] private TextMeshProUGUI dialogueText;
         [SerializeField] private TextMeshProUGUI displayNameText;
+        [SerializeField] private GameObject continueIcon;
 
         [SerializeField] private GameObject[] choices;
 
@@ -49,6 +50,7 @@ namespace InterDineMension.Manager
         private const string CONDIMENTS_TAG = "Condiments";
         private const string VEGGIE_TAG = "veggie";
         private const string TBUN_TAG = "TBun";
+        private const string MOOD = "mood";
 
         public InkExternalFunctions iEF=new InkExternalFunctions();
 
@@ -94,7 +96,7 @@ namespace InterDineMension.Manager
             {
                 return;
             }
-            if(canContinueToNextLine&& currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)))
+            if(canContinueToNextLine&& currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)||Input.GetKey(KeyCode.LeftControl)))
             {
                 ContinueStory();
             }
@@ -148,20 +150,53 @@ namespace InterDineMension.Manager
                 ExitDialogueMode();
             }
         }
+
+        /// <summary>
+        /// used for typing effect
+        /// </summary>
+        /// <param name="line"></param>
+        /// <returns></returns>
         private IEnumerator DisplayLine(string line)
         {
             //empty dialogue text
             dialogueText.text = "";
             Hidechoices();
+            continueIcon.SetActive(false);
+
             canContinueToNextLine = false;
+
+            bool isAddingRichTextTag = false;
 
             //display each letter one at a time. 
             foreach(char letter in line.ToCharArray())
             {
-                dialogueText.text += letter;
-                yield return new WaitForSeconds(typingSpeed);
+                //if the submit button is pressed, finish up displaying the line right away
+                if (Input.GetKey(KeyCode.LeftControl))
+                {
+                    dialogueText.text = line;
+                    break;
+                }
+
+                //check for rich text tag, if found add all without waiting
+                if(letter=='<'|| isAddingRichTextTag)
+                {
+                    isAddingRichTextTag=true;
+                    dialogueText.text += letter;
+                    if (letter == '>')
+                    {
+                        isAddingRichTextTag=false;
+                    }
+                }
+                //otherwise can continue at normal speed
+                else
+                {
+                    dialogueText.text += letter;
+                    yield return new WaitForSeconds(typingSpeed);
+                }
+                
             }
             DisplayChoices();
+            continueIcon.SetActive(true);
             canContinueToNextLine = true;
         }
 
@@ -187,6 +222,11 @@ namespace InterDineMension.Manager
 
                 switch (tagKey)
                 {
+                    case MOOD:
+                        {
+
+                            break;
+                        }
                     case SPEAKER_TAG:
                         displayNameText.text = tagValue;
                         break;
