@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace InterDineMension.Character
 {
     public class Graciana : MonoBehaviour
     {
-        public Dictionary<string,Sprite> spriteDictionary = new Dictionary<string,Sprite>();
+        public Image sR;
+        public Dictionary<string, Sprite> spriteDictionary = new Dictionary<string, Sprite>();
         public string[] dictKeyG;
         public Sprite[] dictValueG;
         // Start is called before the first frame update
@@ -19,7 +21,7 @@ namespace InterDineMension.Character
             }
             else
             {
-                for(int i = 0; i < dictKeyG.Length; i++)
+                for (int i = 0; i < dictKeyG.Length; i++)
                 {
                     spriteDictionary.Add(dictKeyG[i], dictValueG[i]);
                 }
@@ -29,6 +31,7 @@ namespace InterDineMension.Character
         // Update is called once per frame
         void Update()
         {
-    
+
         }
+    }
 }

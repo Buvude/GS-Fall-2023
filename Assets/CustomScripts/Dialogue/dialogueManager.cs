@@ -7,6 +7,7 @@ using System;
 
 namespace InterDineMension.Manager
 {
+    using InterDineMension.Character;
     using MicroGame;
     using MicroGame.BA;
     public class dialogueManager : MonoBehaviour
@@ -16,7 +17,11 @@ namespace InterDineMension.Manager
         private Coroutine displayLineCorutine;
         private DialogueVariables dV;
         private bool canContinueToNextLine = false;
+        public CheffSwatts cS = new CheffSwatts();
+        public Graciana grac=new Graciana();
 
+        public enum speaker { Graciana, Swatts};
+        public speaker charSpeak;
 
         private static dialogueManager instance;
 
@@ -224,7 +229,75 @@ namespace InterDineMension.Manager
                 {
                     case MOOD:
                         {
+                            switch (charSpeak)
+                            {
+                                case speaker.Graciana:
+                                    {
+                                        grac.sR.sprite = grac.spriteDictionary[tagValue];
+                                        /*switch(tagValue) 
+                                        {
+                                            case "annoyed":
+                                                {
+                                                    break;
+                                                }
+                                            case "happy":
+                                                {
+                                                    break;
+                                                }
+                                            case "money":
+                                                {
+                                                    break;
+                                                }
+                                            case "neutral":
+                                                {
+                                                    break;
+                                                }
+                                            case "sad":
+                                                {
+                                                    break;
+                                                }
+                                            case "think":
+                                                {
+                                                    break;
+                                                }
+                                            default:Debug.LogWarning("tag value not recognized for mood");break;
+                                        }*/ //hopefully I won't need to use this
+                                    }
+                                    break;
+                                case speaker.Swatts:
+                                    {
+                                        cS.sR.sprite = cS.spriteDictionary[tagValue];
+                                        /*switch (tagValue)
+                                        {
 
+
+                                            case "annoyed":
+                                                {
+                                                    break;
+                                                }
+                                            case "happy":
+                                                {
+                                                    break;
+                                                }
+                                            case "neutral":
+                                                {
+                                                    break;
+                                                }
+                                            case "pray":
+                                                {
+                                                    break;
+                                                }
+                                            case "sad":
+                                                {
+                                                    break;
+                                                }
+                                            default:
+                                                Debug.LogWarning("tag value not recognized for mood"); break;
+                                        }*/
+                                        break;
+                                    }
+                                default:break;
+                                }
                             break;
                         }
                     case SPEAKER_TAG:

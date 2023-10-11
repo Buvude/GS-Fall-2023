@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace InterDineMension.Character
 {
     public class CheffSwatts : MonoBehaviour
     {
+        public Image sR;
         public Dictionary<string,Sprite> spriteDictionary = new Dictionary<string,Sprite>();
         public string[] dictKeyCS;
         public Sprite[] dictValueCS;
