@@ -4,25 +4,25 @@ INCLUDE globals.ink
 VAR tempHolder =""
 ->Main
 ===Main===
-Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Swatts
+Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Swatts #mood:neutral
 
-* [<color=\#F8FF30>Sure</color>]
+* [Sure]
 
-    Sure, why not. #speaker:Graciana #mood:test
+    Sure, why not. #speaker:Graciana #mood:neutral
 
     Perfect! Come come, prep this for me ya? #speaker:Chef Swatts
 
-    Whatcha making? #speaker:Graciana
+    Whatcha making? #speaker:Graciana #mood:happy
 
-    Experimenting wit some pasta. I had an idea for a new kinda sauce. #speaker:Chef Swatts
+    Experimenting wit some pasta. I had an idea for a new kinda sauce. #speaker:Chef Swatts #mood:happy
     Here, prep these bombadoes for me?
 
-    Bombadoes? ...You mean tomatoes? #speaker:Graciana
+    Bombadoes? ...You mean tomatoes? #speaker:Graciana #mood:think
 
-    No no no, I mean bombadoes. BIG difference. #speaker:Chef Swatts
+    No no no, I mean bombadoes. BIG difference. #speaker:Chef Swatts #mood:neutral
 
 
-    (He hands me a strange looking vegetable, and goes back to grabbing more ingredients. It's about the size of a normal tomato, except it's green, and small hairs are growing out of it... It's strangely damp too, and the skin is almost leathery.) #speaker:Graciana
+    (He hands me a strange looking vegetable, and goes back to grabbing more ingredients. It's about the size of a normal tomato, except it's green, and small hairs are growing out of it... It's strangely damp too, and the skin is almost leathery.) #speaker:Graciana #mood:neutral
 
     (...How am I supposed to prep this?)
     
@@ -183,7 +183,6 @@ Order up! Looks like we got an order of: #speaker:Chef Swatts
     ~tempHolder=pop_random(TBuns)
     For the top bun we've got: {tempHolder}#TBun:{tempHolder}
     ~StartBAMicro()
-    Alright, it's go time!
 ->DONE
     
 

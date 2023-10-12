@@ -14,12 +14,13 @@ namespace InterDineMension.MicroGame.BA
     using InterDineMension.Manager;
     public class BAManeger : MonoBehaviour
     {
+        public GameObject BAMObject;
         public GameplayManager gM;
         public dialogueManager dM;
         public Image finishedBurger;
         public Sprite GoodBurger, BadBurger, MediocreBurger;
         public static int finalScore = 0;
-        public Microgamecontroller microgamecontroller;
+        public Microgamecontroller microgamecontroller; 
         void Start()
         {
             microgamecontroller = GameObject.FindGameObjectWithTag("eventSystem").GetComponent<Microgamecontroller>();
@@ -225,13 +226,18 @@ namespace InterDineMension.MicroGame.BA
         private IEnumerator BAMicroGameScore(int finalScore)
         {
             if (finalScore >= 4)
-            {
+            { 
+                
                 yield return new WaitForSeconds(3);
+                microgamecontroller.dialogueContainer.SetActive(true);
+                BAMObject.SetActive(false);
                 dM.EnterDialogueMode(gM.cheffSwattsConvos[2]);//only valid for day one
             }
             else
             {
                 yield return new WaitForSeconds(3);
+                microgamecontroller.dialogueContainer.SetActive(true);
+                BAMObject.SetActive(false);
                 dM.EnterDialogueMode(gM.cheffSwattsConvos[1]);//only valid for day one
             }
         }

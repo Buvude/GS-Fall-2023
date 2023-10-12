@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using System;
+using UnityEngine.UI;
 
 namespace InterDineMension.Manager
 {
@@ -12,6 +13,7 @@ namespace InterDineMension.Manager
     using MicroGame.BA;
     public class dialogueManager : MonoBehaviour
     {
+        public GameObject dialogueObject;
         //tutorial made it a private serializeField, but I want to be able to adjust this with settings
         public float typingSpeed = 0.04f;
         private Coroutine displayLineCorutine;
@@ -112,7 +114,8 @@ namespace InterDineMension.Manager
             dialoguePanel.SetActive(true);
             currentStory =new Story(inkJSON.text);
             dialoguePlaying=true;
-
+            //move non-graciana to the front to join convo (not making it yet due to ui issues)
+            grac.gameObject.GetComponent<Image>().enabled = true;
             dV.StartListening(currentStory);
 
             /*currentStory.BindExternalFunction("StartBAMicro", () =>
@@ -142,17 +145,24 @@ namespace InterDineMension.Manager
                 if (displayLineCorutine != null)
                 {
                     StopCoroutine(displayLineCorutine);
-                }
 
-                displayLineCorutine=StartCoroutine(DisplayLine(currentStory.Continue()));
-                /*dialogueText.text = currentStory.Continue(); outdated*/ 
+                }
+                if (!dialogueObject.activeSelf)
+                {
+                    Debug.Log("made it here");
+                }
+                
+                displayLineCorutine = StartCoroutine(DisplayLine(currentStory.Continue()));
+                /*dialogueText.text = currentStory.Continue(); outdated*/
                 HandleTags(currentStory.currentTags);
                 //Debug.Log(currentStory.currentChoices.Count);
+
             }
 
             else
             {
                 ExitDialogueMode();
+                dialoguePanel.SetActive(false);
             }
         }
 
@@ -161,7 +171,7 @@ namespace InterDineMension.Manager
         /// </summary>
         /// <param name="line"></param>
         /// <returns></returns>
-        private IEnumerator DisplayLine(string line)
+        public IEnumerator DisplayLine(string line)
         {
             //empty dialogue text
             dialogueText.text = "";
@@ -426,10 +436,10 @@ namespace InterDineMension.Manager
             }
         }
 
-        private void ExitDialogueMode()
+        public void ExitDialogueMode()
         {
             dV.StopListening(currentStory);
-
+            dialogueObject.SetActive(false);
             currentStory.UnbindExternalFunction("StartBAMicro");
             
             dialoguePlaying = false;

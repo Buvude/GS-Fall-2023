@@ -26,6 +26,7 @@ namespace InterDineMension.Character
                     spriteDictionary.Add(dictKeyCS[i], dictValueCS[i]);
                 }
             }
+            Debug.Log(spriteDictionary.Count);
         }
 
         // Update is called once per frame
