@@ -4,20 +4,33 @@ using UnityEngine;
 using TMPro;
 using Ink.Runtime;
 using System;
+using UnityEngine.UI;
 
 namespace InterDineMension.Manager
 {
+    using InterDineMension.Character;
     using MicroGame;
     using MicroGame.BA;
     public class dialogueManager : MonoBehaviour
     {
+        public GameObject dialogueObject;
+        //tutorial made it a private serializeField, but I want to be able to adjust this with settings
+        public float typingSpeed = 0.04f;
+        private Coroutine displayLineCorutine;
         private DialogueVariables dV;
+        private bool canContinueToNextLine = false;
+        public CheffSwatts cS = new CheffSwatts();
+        public Graciana grac=new Graciana();
+
+        public enum speaker { Graciana, Swatts};
+        public speaker charSpeak;
 
         private static dialogueManager instance;
 
         [SerializeField] private GameObject dialoguePanel;
         [SerializeField] private TextMeshProUGUI dialogueText;
         [SerializeField] private TextMeshProUGUI displayNameText;
+        [SerializeField] private GameObject continueIcon;
 
         [SerializeField] private GameObject[] choices;
 
@@ -44,6 +57,7 @@ namespace InterDineMension.Manager
         private const string CONDIMENTS_TAG = "Condiments";
         private const string VEGGIE_TAG = "veggie";
         private const string TBUN_TAG = "TBun";
+        private const string MOOD = "mood";
 
         public InkExternalFunctions iEF=new InkExternalFunctions();
 
@@ -89,7 +103,7 @@ namespace InterDineMension.Manager
             {
                 return;
             }
-            if(currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)))
+            if(canContinueToNextLine&& currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)||Input.GetKey(KeyCode.LeftControl)))
             {
                 ContinueStory();
             }
@@ -100,7 +114,8 @@ namespace InterDineMension.Manager
             dialoguePanel.SetActive(true);
             currentStory =new Story(inkJSON.text);
             dialoguePlaying=true;
-
+            //move non-graciana to the front to join convo (not making it yet due to ui issues)
+            grac.gameObject.GetComponent<Image>().enabled = true;
             dV.StartListening(currentStory);
 
             /*currentStory.BindExternalFunction("StartBAMicro", () =>
@@ -126,15 +141,85 @@ namespace InterDineMension.Manager
         {
             if (currentStory.canContinue)
             {
-                dialogueText.text = currentStory.Continue();
-                DisplayChoices();
+                //set text for current dialogue line
+                if (displayLineCorutine != null)
+                {
+                    StopCoroutine(displayLineCorutine);
+
+                }
+                if (!dialogueObject.activeSelf)
+                {
+                    Debug.Log("made it here");
+                }
+                
+                displayLineCorutine = StartCoroutine(DisplayLine(currentStory.Continue()));
+                /*dialogueText.text = currentStory.Continue(); outdated*/
                 HandleTags(currentStory.currentTags);
                 //Debug.Log(currentStory.currentChoices.Count);
+
             }
 
             else
             {
                 ExitDialogueMode();
+                dialoguePanel.SetActive(false);
+            }
+        }
+
+        /// <summary>
+        /// used for typing effect
+        /// </summary>
+        /// <param name="line"></param>
+        /// <returns></returns>
+        public IEnumerator DisplayLine(string line)
+        {
+            //empty dialogue text
+            dialogueText.text = "";
+            Hidechoices();
+            continueIcon.SetActive(false);
+
+            canContinueToNextLine = false;
+
+            bool isAddingRichTextTag = false;
+
+            //display each letter one at a time. 
+            foreach(char letter in line.ToCharArray())
+            {
+                //if the submit button is pressed, finish up displaying the line right away
+                if (Input.GetKey(KeyCode.LeftControl))
+                {
+                    dialogueText.text = line;
+                    break;
+                }
+
+                //check for rich text tag, if found add all without waiting
+                if(letter=='<'|| isAddingRichTextTag)
+                {
+                    isAddingRichTextTag=true;
+                    dialogueText.text += letter;
+                    if (letter == '>')
+                    {
+                        isAddingRichTextTag=false;
+                    }
+                }
+                //otherwise can continue at normal speed
+                else
+                {
+                    dialogueText.text += letter;
+                    yield return new WaitForSeconds(typingSpeed);
+                }
+                
+            }
+            DisplayChoices();
+            continueIcon.SetActive(true);
+            canContinueToNextLine = true;
+        }
+
+        private void Hidechoices()
+        {
+            foreach(GameObject choiceButton in choices)
+            {
+                choiceButton.SetActive(false);
             }
         }
 
@@ -152,6 +237,79 @@ namespace InterDineMension.Manager
 
                 switch (tagKey)
                 {
+                    case MOOD:
+                        {
+                            switch (charSpeak)
+                            {
+                                case speaker.Graciana:
+                                    {
+                                        grac.sR.sprite = grac.spriteDictionary[tagValue];
+                                        /*switch(tagValue) 
+                                        {
+                                            case "annoyed":
+                                                {
+                                                    break;
+                                                }
+                                            case "happy":
+                                                {
+                                                    break;
+                                                }
+                                            case "money":
+                                                {
+                                                    break;
+                                                }
+                                            case "neutral":
+                                                {
+                                                    break;
+                                                }
+                                            case "sad":
+                                                {
+                                                    break;
+                                                }
+                                            case "think":
+                                                {
+                                                    break;
+                                                }
+                                            default:Debug.LogWarning("tag value not recognized for mood");break;
+                                        }*/ //hopefully I won't need to use this
+                                    }
+                                    break;
+                                case speaker.Swatts:
+                                    {
+                                        cS.sR.sprite = cS.spriteDictionary[tagValue];
+                                        /*switch (tagValue)
+                                        {
+
+
+                                            case "annoyed":
+                                                {
+                                                    break;
+                                                }
+                                            case "happy":
+                                                {
+                                                    break;
+                                                }
+                                            case "neutral":
+                                                {
+                                                    break;
+                                                }
+                                            case "pray":
+                                                {
+                                                    break;
+                                                }
+                                            case "sad":
+                                                {
+                                                    break;
+                                                }
+                                            default:
+                                                Debug.LogWarning("tag value not recognized for mood"); break;
+                                        }*/
+                                        break;
+                                    }
+                                default:break;
+                                }
+                            break;
+                        }
                     case SPEAKER_TAG:
                         displayNameText.text = tagValue;
                         break;
@@ -278,10 +436,10 @@ namespace InterDineMension.Manager
             }
         }
 
-        private void ExitDialogueMode()
+        public void ExitDialogueMode()
         {
             dV.StopListening(currentStory);
-
+            dialogueObject.SetActive(false);
             currentStory.UnbindExternalFunction("StartBAMicro");
             
             dialoguePlaying = false;
@@ -315,8 +473,11 @@ namespace InterDineMension.Manager
 
         public void MakeChoice(int choiceIndex)
         {
-            currentStory.ChooseChoiceIndex(choiceIndex);
-            ContinueStory();
+            if (canContinueToNextLine)
+            {
+                currentStory.ChooseChoiceIndex(choiceIndex);
+                ContinueStory();
+            }
         }
 
         public Ink.Runtime.Object GetVariableState(string variableName)

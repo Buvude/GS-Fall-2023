@@ -130,8 +130,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2.8519, y: -135.3096}
-  m_SizeDelta: {x: 161.3046, y: 20.3195}
+  m_AnchoredPosition: {x: 1.2678, y: -135.3096}
+  m_SizeDelta: {x: 112.197, y: 20.3195}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3680455092862108255
 CanvasRenderer:
@@ -308,7 +308,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0811a9ad8c671e4099a60eab324692f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finishedBurger: {fileID: 0}
+  BAMObject: {fileID: 3446430597110178411}
+  gM: {fileID: 0}
+  dM: {fileID: 0}
+  finishedBurger: {fileID: 8554411331843971713}
   GoodBurger: {fileID: 21300000, guid: 5d851bb1b3d96b541b54073586b3f8a4, type: 3}
   BadBurger: {fileID: 21300000, guid: dcc421bdf43631947992b37d68302c4c, type: 3}
   MediocreBurger: {fileID: 21300000, guid: a04f45c28159f764b8502b20e7f88b79, type: 3}
@@ -366,7 +369,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &8015628118462198046
 RectTransform:
   m_ObjectHideFlags: 0
@@ -383,7 +386,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.7, y: -210.7}
+  m_AnchoredPosition: {x: -8.7, y: -196.4}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3406690551944637895
@@ -407,7 +410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1898005, g: 1, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -818,7 +821,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2162067074381656856
 RectTransform:
   m_ObjectHideFlags: 0
