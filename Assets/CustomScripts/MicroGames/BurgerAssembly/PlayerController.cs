@@ -9,6 +9,8 @@ namespace InterDineMension.MicroGame.BA
 
     public class PlayerController : MonoBehaviour
     {
+        public AudioSource aS;
+        public AudioClip correct, wrong, cosmic;
         public BAManeger BAManeger;
         public SpriteRenderer bottomBunRend, picklesRend, lettuceRend, pattyRend, condimentRend, finalBonusRend, topBunRend;
         public Sprite 
@@ -88,106 +90,308 @@ namespace InterDineMension.MicroGame.BA
                 case BurgerIngredients.ingredientType.classicBottomBun:
                     bottomBunRend.sprite = classicBottomBun;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.classicBottomBun)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.lettuceWrapBottom:
                     bottomBunRend.sprite = lettuceWrapBottom;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.lettuceWrapBottom)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.noBottomBun:
                     bottomBunRend.sprite = noBottomBun;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.noBottomBun)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.pickles:
                     picklesRend.sprite = pickles;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.pickles)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.relish:
                     picklesRend.sprite = relish;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.relish)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.noPickles:
                     picklesRend.sprite = noPickles;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.noPickles)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.wholeLeafLettuce:
                     lettuceRend.sprite = wholeLeafLettuce;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.wholeLeafLettuce)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.choppedLettuce:
                     lettuceRend.sprite = choppedLettuce;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.choppedLettuce)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.noLettuce:
                     lettuceRend.sprite = noLettuce;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.noLettuce)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.beefPatty:
                     pattyRend.sprite = beefPatty;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.beefPatty)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.veganPatty:
                     pattyRend.sprite = veganPatty;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.veganPatty)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.unspeakableHorror:
                     pattyRend.sprite = unspeakableHorror;
                     ingredientTypes.Add(type);
+                    aS.clip = cosmic;
+                    aS.Play();
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.ketchup:
                     condimentRend.sprite = ketchup;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.ketchup)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.mustard:
                     condimentRend.sprite = mustard;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.mustard)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.both:
                     condimentRend.sprite = both;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.both)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.tomatoe:
                     finalBonusRend.sprite = tomatoe;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.tomatoe)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.choppedOnions:
                     finalBonusRend.sprite = choppedOnions;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.choppedOnions)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.none:
                     finalBonusRend.sprite = none;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.none)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.classicTopBun:
                     topBunRend.sprite = classicTopBun;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.classicTopBun)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.FinalTally(ingredientTypes);
                     break;
                 case BurgerIngredients.ingredientType.lettuceWrapTop:
                     topBunRend.sprite = lettuceWrapBottom;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.lettuceWrapTop)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.FinalTally(ingredientTypes);
                     break;
                 case BurgerIngredients.ingredientType.noTopBun:
                     topBunRend.sprite = noTopBun;
                     ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.noTopBun)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.FinalTally(ingredientTypes);
                     break;
                 default:
