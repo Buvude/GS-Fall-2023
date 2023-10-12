@@ -8,7 +8,6 @@ namespace InterDineMension.MicroGame.BA
 {
     public class BurgerIngredients : MonoBehaviour
     {
-
         public enum lanePos
         {
             lane1, lane2, lane3
