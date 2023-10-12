@@ -312,6 +312,14 @@ namespace InterDineMension.Manager
                         }
                     case SPEAKER_TAG:
                         displayNameText.text = tagValue;
+                        if(tagValue== "Chef Swatts")
+                        {
+                            charSpeak = speaker.Swatts;
+                        }
+                        else if(tagValue== "Graciana")
+                        {
+                            charSpeak = speaker.Graciana;
+                        }
                         break;
                     case BBUN_TAG:
                         switch (tagValue)
