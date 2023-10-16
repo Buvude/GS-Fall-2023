@@ -327,15 +327,15 @@ namespace InterDineMension.Manager
                         {
                             case "Plain":
                                 mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.classicBottomBun;
-                                manager.DisplayImage(manager.classicBottomBun);
+                                manager.DisplayImage(manager.classicBottomBun,1);
                                 break;
                             case "Lettucebun":
                                 mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.lettuceWrapBottom;
-                                manager.DisplayImage(manager.lettuceWrapBottom);
+                                manager.DisplayImage(manager.lettuceWrapBottom, 1);
                                 break;
                             case "None":
                                 mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.noBottomBun;
-                                manager.DisplayImage(null);
+                                manager.DisplayImage(null,1);
                                 break;
                             default:
                                 Debug.LogWarning($"BBun value {tagValue} has not been recongnized");
@@ -347,15 +347,15 @@ namespace InterDineMension.Manager
                         {
                             case "Chips":
                                 mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.pickles;
-                                manager.DisplayImage(manager.pickles);
+                                manager.DisplayImage(manager.pickles,2);
                                 break;
                             case "Relish":
                                 mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.relish;
-                                manager.DisplayImage(manager.relish);
+                                manager.DisplayImage(manager.relish, 2);
                                 break;
                             case "None":
                                 mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.noPickles;
-                                manager.DisplayImage(null);
+                                manager.DisplayImage(null, 2);
                                 break;
                             default:
                                 Debug.LogWarning($"Pickles value {tagValue} has not been recongnized");
@@ -367,15 +367,15 @@ namespace InterDineMension.Manager
                         {
                             case "Leaf":
                                 mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.wholeLeafLettuce;
-                                manager.DisplayImage(manager.wholeLeafLettuce);
+                                manager.DisplayImage(manager.wholeLeafLettuce, 3);
                                 break;
                             case "Chopped":
                                 mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.choppedLettuce;
-                                manager.DisplayImage(manager.choppedLettuce);
+                                manager.DisplayImage(manager.choppedLettuce, 3);
                                 break;
                             case "None":
                                 mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.noLettuce;
-                                manager.DisplayImage(null);
+                                manager.DisplayImage(null, 3);
                                 break;
                             default:
                                 Debug.LogWarning($"Lettuce value {tagValue} has not been recongnized");
@@ -387,11 +387,11 @@ namespace InterDineMension.Manager
                         {
                             case "Beef":
                                 mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.beefPatty;
-                                manager.DisplayImage(manager.beefPatty);
+                                manager.DisplayImage(manager.beefPatty, 4);
                                 break;
                             case "Vegan":
                                 mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.veganPatty;
-                                manager.DisplayImage(manager.veganPatty);
+                                manager.DisplayImage(manager.veganPatty, 4);
                                 break;
                             default:
                                 Debug.LogWarning($"Patty value {tagValue} has not been recongnized");
@@ -403,15 +403,15 @@ namespace InterDineMension.Manager
                         {
                             case "Ketchup":
                                 mGC.orderedIngredients[4] = BurgerIngredients.ingredientType.ketchup;
-                                manager.DisplayImage(manager.ketchup);
+                                manager.DisplayImage(manager.ketchup, 5);
                                 break;
                             case "Mustard":
                                 mGC.orderedIngredients[4] = BurgerIngredients.ingredientType.mustard;
-                                manager.DisplayImage(manager.mustard);
+                                manager.DisplayImage(manager.mustard, 5);
                                 break;
                             case "Both":
                                 mGC.orderedIngredients[4] = BurgerIngredients.ingredientType.both;
-                                manager.DisplayImage(manager.both);
+                                manager.DisplayImage(manager.both, 5);
                                 break;
                             default:
                                 Debug.LogWarning($"Condiments value {tagValue} has not been recongnized");
@@ -423,15 +423,15 @@ namespace InterDineMension.Manager
                         {
                             case "Tomatoe":
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.tomatoe;
-                                manager.DisplayImage(manager.tomatoe);
+                                manager.DisplayImage(manager.tomatoe, 6);
                                 break;
                             case "Onion":
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.choppedOnions;
-                                manager.DisplayImage(manager.choppedOnions);
+                                manager.DisplayImage(manager.choppedOnions, 6);
                                 break;
                             case "None":
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.none;
-                                manager.DisplayImage(null);
+                                manager.DisplayImage(null, 6);
                                 break;
                             default:
                                 Debug.LogWarning($"Veggie value {tagValue} has not been recongnized");
@@ -443,15 +443,15 @@ namespace InterDineMension.Manager
                         {
                             case "Plain":
                                 mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.classicTopBun;
-                                manager.DisplayImage(manager.classicTopBun);
+                                manager.DisplayImage(manager.classicTopBun, 7);
                                 break;
                             case "Lettucebun":
                                 mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.lettuceWrapTop;
-                                manager.DisplayImage(manager.lettuceWrapBottom);
+                                manager.DisplayImage(manager.lettuceWrapBottom, 7);
                                 break;
                             case "None":
                                 mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.noTopBun;
-                                manager.DisplayImage(null);
+                                manager.DisplayImage(null, 7);
                                 break;
                             default:
                                 Debug.LogWarning($"TBun value {tagValue} has not been recongnized");

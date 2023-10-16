@@ -1,17 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 namespace InterDineMension.Manager
 {
-
+    
     /// <summary>
     /// this is to both store what image will be shown, and show it. 
     /// </summary>
     public class dialogueSpriteManager : MonoBehaviour
     {
         public Image imagePopUp;
+        public List<Image> orderImages=new List<Image>();
         public Sprite
             classicBottomBun, lettuceWrapBottom, noBottomBun,//top bun types
             pickles, relish, noPickles, //pickle type 
@@ -43,18 +47,22 @@ namespace InterDineMension.Manager
         
         }
 
-        public void DisplayImage(Sprite popUp)
+        public void DisplayImage(Sprite popUp, int phase)
         {
             if(popUp != null)
             {
                 imagePopUp.gameObject.SetActive(true);
+                orderImages[phase-1].gameObject.SetActive(true);
                 imagePopUp.sprite = popUp;
+                orderImages[phase-1].sprite = popUp;
             }
+
             else
             {
                 imagePopUp.gameObject.SetActive(false);
+                orderImages[phase-1].gameObject.SetActive(false);
             }
-            
+
             
         }
     }
