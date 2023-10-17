@@ -13,6 +13,7 @@ namespace InterDineMension.Manager
     using MicroGame.BA;
     public class dialogueManager : MonoBehaviour
     {
+        public GameObject convoModImages, charBtn;
         public dialogueSpriteManager manager;
         public GameObject dialogueObject;
         //tutorial made it a private serializeField, but I want to be able to adjust this with settings
@@ -112,6 +113,10 @@ namespace InterDineMension.Manager
 
         public void EnterDialogueMode(TextAsset inkJSON)
         {
+            charBtn.SetActive(false);
+            convoModImages.gameObject.SetActive(true);
+            dialogueObject.SetActive(true);
+            //add method to determine which convo is going on, possibly triggered by the char btn
             dialoguePanel.SetActive(true);
             currentStory =new Story(inkJSON.text);
             dialoguePlaying=true;
@@ -470,6 +475,7 @@ namespace InterDineMension.Manager
             dV.StopListening(currentStory);
             dialogueObject.SetActive(false);
             currentStory.UnbindExternalFunction("StartBAMicro");
+            convoModImages.gameObject.SetActive(false);
             
             dialoguePlaying = false;
             dialoguePanel.SetActive(false);
