@@ -63,6 +63,7 @@ namespace InterDineMension.Manager
 
         public InkExternalFunctions iEF=new InkExternalFunctions();
 
+
         private void Awake()
         {
             dV = new DialogueVariables(loadGlobalsJSON); 
