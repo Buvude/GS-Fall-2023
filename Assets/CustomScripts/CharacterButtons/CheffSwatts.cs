@@ -12,7 +12,7 @@ namespace InterDineMension.Character
         public string[] dictKeyCS;
         public Sprite[] dictValueCS;
         // Start is called before the first frame update
-        void Start()
+        void Awake()
         {
             if (dictKeyCS.Length != dictValueCS.Length)
             {

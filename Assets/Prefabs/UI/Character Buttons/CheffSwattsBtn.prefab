@@ -53,8 +53,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sR: {fileID: 0}
-  dictKeyCS: []
-  dictValueCS: []
+  dictKeyCS:
+  - annoyed
+  - happy
+  - neutral
+  - pray
+  - sad
+  dictValueCS:
+  - {fileID: 21300000, guid: f6208e39c56e08b4598c00394e192c0e, type: 3}
+  - {fileID: 21300000, guid: ce5eaec2011c9f44dbcc544d9dfd391d, type: 3}
+  - {fileID: 21300000, guid: ccd957e23faf41e44ae84868171c1635, type: 3}
+  - {fileID: 21300000, guid: e6189bbb89dd53a4b8d6a638cc151bab, type: 3}
+  - {fileID: 21300000, guid: 30c45a0445ae7154484bc9e3b0263a0f, type: 3}
 --- !u!222 &3453327873401711260
 CanvasRenderer:
   m_ObjectHideFlags: 0
