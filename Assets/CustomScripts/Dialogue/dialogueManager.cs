@@ -14,7 +14,7 @@ namespace InterDineMension.Manager
     public class dialogueManager : MonoBehaviour
     {
         public VariableHolder vH;
-        public GameObject convoModImages, charBtn;
+        public GameObject convoModeImages, charBtn;
         public dialogueSpriteManager manager;
         public GameObject dialogueObject;
         //tutorial made it a private serializeField, but I want to be able to adjust this with settings
@@ -85,9 +85,10 @@ namespace InterDineMension.Manager
                 choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
                 index++;
             }
+            StartMorningConvo();
         }
 
-        public void StartFirstConvo()
+        public void StartMorningConvo()
         {
             EnterDialogueMode(inkJSON);
         }
@@ -117,13 +118,12 @@ namespace InterDineMension.Manager
         public void EnterDialogueMode(TextAsset inkJSON)
         {
             charBtn.SetActive(false);
-            convoModImages.gameObject.SetActive(true);
+            convoModeImages.gameObject.SetActive(true);
             dialogueObject.SetActive(true);
             //add method to determine which convo is going on, possibly triggered by the char btn
             dialoguePanel.SetActive(true);
             currentStory =new Story(inkJSON.text);
             dialoguePlaying=true;
-            //move non-graciana to the front to join convo (not making it yet due to ui issues)
             grac.gameObject.GetComponent<Image>().enabled = true;
             dV.StartListening(currentStory);
 
@@ -132,7 +132,7 @@ namespace InterDineMension.Manager
                  Debug.Log("called StartBAMicro");
              });*/
 
-            iEF.Bind(currentStory,bAM,mGC);
+            iEF.Bind(currentStory,bAM,mGC,this);
             ContinueStory();
         }
 
@@ -170,7 +170,7 @@ namespace InterDineMension.Manager
 
             else
             {
-                ExitDialogueMode();
+                ExitDialogueMode(false);
                 dialoguePanel.SetActive(false);
             }
         }
@@ -473,16 +473,25 @@ namespace InterDineMension.Manager
             }
         }
 
-        public void ExitDialogueMode()
+        public void ExitDialogueMode(bool enterDialogueMode)
         {
             dV.StopListening(currentStory);
             dialogueObject.SetActive(false);
             currentStory.UnbindExternalFunction("StartBAMicro");
-            convoModImages.gameObject.SetActive(false);
-            
+            convoModeImages.gameObject.SetActive(false);
             dialoguePlaying = false;
             dialoguePanel.SetActive(false);
             dialogueText.text = "";
+            if(enterDialogueMode)
+            {
+                EnterDinerMode();
+            }
+        }
+
+        public void EnterDinerMode()
+        {
+            convoModeImages.gameObject.SetActive(false);
+            charBtn.gameObject.SetActive(true);
         }
 
         private void DisplayChoices()

@@ -1,17 +1,17 @@
 EXTERNAL StartBAMicro()
-INCLUDE globals.ink
+
 
 
 VAR tempHolder =""
-->Main
-===Main===
+//->MainBAD
+===MainBAD===
 // ~Random_Holder=Random(1,3)
     Order up! Let's take a lookie here... #speaker:Chef Swatts
     ~tempHolder=pop_random(BBuns)
     For the bottom bun, it's {tempHolder}. #BBun:{tempHolder}
     ~tempHolder=pop_random(Pickles)
     With {tempHolder} on top of that... #Pickles:{tempHolder}
-    ~tempHolder=pop_random(Lettuce)
+    ~tempHolder=pop_random(Greens)
     For them greens, they want {tempHolder}. #lettuce:{tempHolder}
     ~tempHolder=pop_random(patty)
     And of course, they want that {tempHolder} patty. #patty:{tempHolder}

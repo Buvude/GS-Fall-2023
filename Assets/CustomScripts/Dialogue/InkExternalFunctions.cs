@@ -7,17 +7,24 @@ namespace InterDineMension
 {
     using MicroGame.BA;
     using MicroGame;
+    using Manager;
+
     public class InkExternalFunctions
     {
 
         
-        public void Bind(Story currentStory, BAManeger bAM, Microgamecontroller mGC)
+        public void Bind(Story currentStory, BAManeger bAM, Microgamecontroller mGC, dialogueManager dM)
         {
             currentStory.BindExternalFunction("StartBAMicro", () =>
             {
                 mGC.StartBAM();
                 /*bAM.StartMicroGame(mGC.orderedIngredients);*/
                 
+            });
+            currentStory.BindExternalFunction("GoToDiner", () =>
+            {
+                dM.ExitDialogueMode(true);
+                //dM.EnterDinerMode();
             });
         }
 

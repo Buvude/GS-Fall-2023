@@ -1,3 +1,4 @@
+INCLUDE EveningTest.ink
 ...oops... #speaker:Graciana
 
 Ay, no worries. It takes a while for tha way of the food to start speakin' to ya. #speaker:Chef Swatts
@@ -13,4 +14,5 @@ Anyways, go ahead an' take this burger out to tha customer, ya?
 
 Got it... #speaker:Graciana
 (I take the burger out to the customer, and help Chef Swatts with some more prepwork and cleaning.)
+->EveningStart
 -> END
