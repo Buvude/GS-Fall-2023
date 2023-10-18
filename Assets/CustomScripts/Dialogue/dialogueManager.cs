@@ -13,6 +13,7 @@ namespace InterDineMension.Manager
     using MicroGame.BA;
     public class dialogueManager : MonoBehaviour
     {
+        public VariableHolder vH;
         public GameObject convoModImages, charBtn;
         public dialogueSpriteManager manager;
         public GameObject dialogueObject;
@@ -60,6 +61,7 @@ namespace InterDineMension.Manager
         private const string VEGGIE_TAG = "veggie";
         private const string TBUN_TAG = "TBun";
         private const string MOOD = "mood";
+        private const string VAR_CHANGE = "varChange";
 
         public InkExternalFunctions iEF=new InkExternalFunctions();
 
