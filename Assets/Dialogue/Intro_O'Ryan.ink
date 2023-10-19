@@ -1,5 +1,6 @@
--> main
-==main==
+
+==mainORYAN==
+
 (Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral
 (Just gotta clean and close up...)
 (...)
@@ -11,7 +12,7 @@ E-excuse me, we're closing now, so if you could please-- #speaker:Graciana #mood
 (It's almost like... if a galaxy was a person...) #speaker:Graciana #mood:fear
 S-sir? Uh... Ma'am? Uh...
 
-... #speaker:???
+... #speaker:???//set to slower text speed for O'Ryan while they are ???
 
 (I can't tell if it has eyes, but I somehow feel them staring into my soul...) #speaker:Graciana
 C-can I help you...?
@@ -26,7 +27,7 @@ Uh...
         Y-yeah, that's me... #speaker:Graciana
         
         ... #speaker:???
-        I am O'Ryan. #speaker:O'Ryan
+        I am O'Ryan. #speaker:O'Ryan #mood:neutral
         I am the owner of The Portal Diner.
         
         !! #speaker:Graciana

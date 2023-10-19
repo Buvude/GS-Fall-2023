@@ -14,7 +14,7 @@ namespace InterDineMension.Character
         // Start is called before the first frame update
         void Start()
         {
-            Debug.Log("graciana started");
+            //Debug.Log("graciana started");
             if (dictKeyG.Length != dictValueG.Length)
             {
                 Debug.LogWarning("The length of moods is different then the list of sprites");
@@ -27,7 +27,7 @@ namespace InterDineMension.Character
                     spriteDictionary.Add(dictKeyG[i], dictValueG[i]);
                 }
             }
-            Debug.Log(spriteDictionary.Count);
+            //Debug.Log(spriteDictionary.Count);
         }
 
         // Update is called once per frame

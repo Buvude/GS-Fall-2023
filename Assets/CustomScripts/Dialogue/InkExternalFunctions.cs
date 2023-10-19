@@ -26,6 +26,11 @@ namespace InterDineMension
                 dM.ExitDialogueMode(true);
                 //dM.EnterDinerMode();
             });
+            currentStory.BindExternalFunction("StartO_Ryan", () =>
+            {
+                dM.charSpeakTo = dialogueManager.speakingTo.O_Ryan;
+                dM.EnterDialogueMode(dM.inkJSON2);
+            });
         }
 
         public void unBind(Story currentStory)

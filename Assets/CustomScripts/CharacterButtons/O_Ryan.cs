@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace InterDineMension.Character
 {
-    public class CheffSwatts : MonoBehaviour
+    public class O_Ryan : MonoBehaviour
     {
         public Image sR;
         public Dictionary<string, Sprite> spriteDictionary = new Dictionary<string,Sprite>();

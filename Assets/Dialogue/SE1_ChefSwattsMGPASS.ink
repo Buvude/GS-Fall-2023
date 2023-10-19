@@ -1,4 +1,5 @@
-INCLUDE EveningTest.ink 
+INCLUDE Intro_O'Ryan.ink  
+INCLUDE globals.ink
 
 Ay, there ya go! #speaker:Chef Swatts
 I knew it, you're a natural at this!
@@ -18,5 +19,6 @@ Go ahead an' take this burger out to tha customer, ya?
 
 Got it. #speaker:Graciana
 (I take the burger out to the customer, and help Chef Swatts with some more prepwork and cleaning.)
-->EveningStart
+~convo_numberCS=1
+->mainORYAN
 -> END

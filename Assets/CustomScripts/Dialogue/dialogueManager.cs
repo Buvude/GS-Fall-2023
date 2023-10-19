@@ -11,12 +11,18 @@ namespace InterDineMension.Manager
     using InterDineMension.Character;
     using MicroGame;
     using MicroGame.BA;
+    using System.Reflection.Emit;
+    using Unity.VisualScripting;
+    //using UnityEngine.UIElements;
+
     public class dialogueManager : MonoBehaviour
     {
+        //public GameObject charImageCS, charImageOR;
+        private bool deactivatedcorutines = false;
         public VariableHolder vH;
         public GameObject convoModeImages, charBtn;
         public dialogueSpriteManager manager;
-        public GameObject dialogueObject;
+        public GameObject[] dialogueObject;
         //tutorial made it a private serializeField, but I want to be able to adjust this with settings
         public float typingSpeed = 0.04f;
         private Coroutine displayLineCorutine;
@@ -24,13 +30,20 @@ namespace InterDineMension.Manager
         private bool canContinueToNextLine = false;
         public CheffSwatts cS = new CheffSwatts();
         public Graciana grac=new Graciana();
+        public O_Ryan oR=new O_Ryan();
 
-        public enum speaker { Graciana, Swatts};
+        public enum speaker { Graciana, Swatts,O_Ryan,None};
+        public enum speakingTo {  O_Ryan, Swatts};
         public speaker charSpeak;
+        public speakingTo charSpeakTo;
 
         private static dialogueManager instance;
 
-        [SerializeField] private GameObject dialoguePanel;
+        public GameObject dialoguePanel;
+
+
+        [SerializeField] private Image dPTest;
+
         [SerializeField] private TextMeshProUGUI dialogueText;
         [SerializeField] private TextMeshProUGUI displayNameText;
         [SerializeField] private GameObject continueIcon;
@@ -68,6 +81,7 @@ namespace InterDineMension.Manager
 
         private void Awake()
         {
+            dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(loadGlobalsJSON); 
              
             if (instance != null)
@@ -77,7 +91,7 @@ namespace InterDineMension.Manager
             instance = this;
             
             dialoguePlaying = false;
-            dialoguePanel.SetActive(false);
+            dPTest.enabled=true;
             choicesText = new TextMeshProUGUI[choices.Length];
             int index = 0;
             foreach (GameObject choice in choices)
@@ -113,20 +127,53 @@ namespace InterDineMension.Manager
             {
                 ContinueStory();
             }
+           /* if (!this.gameObject.activeInHierarchy&&!deactivatedcorutines)
+            {
+                deactivatedcorutines = true; 
+                Debug.Log("No longer active in hierarchy");
+                this.StopAllCoroutines();
+            }
+            else if(this.gameObject.activeInHierarchy && deactivatedcorutines)
+            {
+                deactivatedcorutines= false;
+            }*/
         }
-
+        public void setCharSpeakToCS()
+        {
+            charSpeakTo = speakingTo.Swatts;
+        }
         public void EnterDialogueMode(TextAsset inkJSON)
         {
             charBtn.SetActive(false);
             convoModeImages.gameObject.SetActive(true);
-            dialogueObject.SetActive(true);
+            //dialogueObject.SetActive(true);
+            foreach (GameObject item in dialogueObject)
+            {
+                item.SetActive(true);
+            }
+
             //add method to determine which convo is going on, possibly triggered by the char btn
-            dialoguePanel.SetActive(true);
+            dPTest.enabled = true;
             currentStory =new Story(inkJSON.text);
             dialoguePlaying=true;
             grac.gameObject.GetComponent<Image>().enabled = true;
             dV.StartListening(currentStory);
 
+            switch (charSpeakTo)
+            {
+                case speakingTo.O_Ryan:
+                    {
+                        oR.gameObject.SetActive(true);
+                    }
+                    break;
+                case speakingTo.Swatts:
+                    {
+                        cS.gameObject.SetActive(true);
+                    }
+                    break;
+                default:
+                    break;
+            }
             /*currentStory.BindExternalFunction("StartBAMicro", () =>
             {
                  Debug.Log("called StartBAMicro");
@@ -136,7 +183,7 @@ namespace InterDineMension.Manager
             ContinueStory();
         }
 
-
+        
         /// <summary>
         /// this is a a function that will be called by the debug button to do any number of things.
         /// </summary>
@@ -156,22 +203,19 @@ namespace InterDineMension.Manager
                     StopCoroutine(displayLineCorutine);
 
                 }
-                if (!dialogueObject.activeSelf)
-                {
-                    Debug.Log("made it here");
-                }
-                
                 displayLineCorutine = StartCoroutine(DisplayLine(currentStory.Continue()));
                 /*dialogueText.text = currentStory.Continue(); outdated*/
                 HandleTags(currentStory.currentTags);
                 //Debug.Log(currentStory.currentChoices.Count);
+
+
 
             }
 
             else
             {
                 ExitDialogueMode(false);
-                dialoguePanel.SetActive(false);
+                dPTest.enabled = false;
             }
         }
 
@@ -222,6 +266,7 @@ namespace InterDineMension.Manager
             DisplayChoices();
             continueIcon.SetActive(true);
             canContinueToNextLine = true;
+            yield return new WaitForEndOfFrame();
         }
 
         private void Hidechoices()
@@ -315,6 +360,11 @@ namespace InterDineMension.Manager
                                         }*/
                                         break;
                                     }
+                                case speaker.O_Ryan:
+                                    {
+                                        oR.sR.sprite= oR.spriteDictionary[tagValue];
+                                        break;
+                                    }
                                 default:break;
                                 }
                             break;
@@ -328,6 +378,14 @@ namespace InterDineMension.Manager
                         else if(tagValue== "Graciana")
                         {
                             charSpeak = speaker.Graciana;
+                        }
+                        else if (tagValue == "O'Ryan")
+                        {
+                            charSpeak= speaker.O_Ryan;
+                        }
+                        else if (tagValue == "???")
+                        {
+                            charSpeak = speaker.None;
                         }
                         break;
                     case BBUN_TAG:
@@ -476,11 +534,19 @@ namespace InterDineMension.Manager
         public void ExitDialogueMode(bool enterDialogueMode)
         {
             dV.StopListening(currentStory);
-            dialogueObject.SetActive(false);
+
+            //dialogueObject.SetActive(false);
+            foreach (GameObject item in dialogueObject)
+            {
+                item.SetActive(false);
+            }
+            
             currentStory.UnbindExternalFunction("StartBAMicro");
             convoModeImages.gameObject.SetActive(false);
             dialoguePlaying = false;
-            dialoguePanel.SetActive(false);
+
+            dPTest.enabled = false;
+
             dialogueText.text = "";
             if(enterDialogueMode)
             {

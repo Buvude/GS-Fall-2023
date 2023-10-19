@@ -12,8 +12,8 @@ VAR convo_numberF=0
 
 //Imma try to integrate the variables here since it'll save it 
 
-VAR dayVar = 0
-//Cheff Swatts ariables
+VAR dayVar = 1//may not need to be used
+//Cheff Swatts variables
 VAR affectionCS = 0
 VAR chaosCS = 0
 VAR irritatedCS = 0
@@ -22,14 +22,18 @@ VAR affectionN = 0
 VAR chaosN = 0
 VAR irritatedN = 0
 //CeCe variables
+VAR affectionC = 0
+VAR chaosC = 0
+VAR irritatedC = 0
+//Gnomies variables
 VAR affectionG = 0
 VAR chaosG = 0
 VAR irritatedG = 0
-//Nico variables
+//Morgan variables
 VAR affectionM = 0
 VAR chaosM = 0
 VAR irritatedM = 0
-//Nico variables
+//Fred variables
 VAR affectionF = 0
 VAR chaosF = 0
 VAR irritatedF = 0

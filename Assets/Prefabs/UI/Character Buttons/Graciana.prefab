@@ -166,6 +166,7 @@ MonoBehaviour:
   - neutral
   - sad
   - think
+  - blank
   dictValueG:
   - {fileID: 21300000, guid: b6baae56f419fac49bb3e078d3fa4f58, type: 3}
   - {fileID: 21300000, guid: 1bd17212fddb9614f8cc6148831328b9, type: 3}
@@ -173,6 +174,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 92dac8f9c6fbb384dba1c4ff9d1272ea, type: 3}
   - {fileID: 21300000, guid: 1008e35781f7a7e49ad7843b1bb1d99f, type: 3}
   - {fileID: 21300000, guid: d8e0c9322f6057f4185bdfe34647fcfa, type: 3}
+  - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
 --- !u!1 &1361008979433431810
 GameObject:
   m_ObjectHideFlags: 0
