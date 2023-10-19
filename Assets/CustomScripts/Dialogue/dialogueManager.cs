@@ -58,6 +58,8 @@ namespace InterDineMension.Manager
 
         private Story currentStory;
 
+        private bool exitedDialogueMode = false;
+
         public Microgamecontroller mGC;
         public BAManeger bAM;
 
@@ -104,6 +106,7 @@ namespace InterDineMension.Manager
 
         public void StartMorningConvo()
         {
+            charSpeakTo = speakingTo.Swatts;
             EnterDialogueMode(inkJSON);
         }
 
@@ -144,6 +147,7 @@ namespace InterDineMension.Manager
         }
         public void EnterDialogueMode(TextAsset inkJSON)
         {
+            exitedDialogueMode = false;
             charBtn.SetActive(false);
             convoModeImages.gameObject.SetActive(true);
             //dialogueObject.SetActive(true);
@@ -264,7 +268,11 @@ namespace InterDineMension.Manager
                 
             }
             DisplayChoices();
-            continueIcon.SetActive(true);
+            if(!exitedDialogueMode)
+            {
+                continueIcon.SetActive(true);
+            }
+            
             canContinueToNextLine = true;
             yield return new WaitForEndOfFrame();
         }
@@ -399,7 +407,7 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.lettuceWrapBottom;
                                 manager.DisplayImage(manager.lettuceWrapBottom, 1);
                                 break;
-                            case "None":
+                            case "Nothing":
                                 mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.noBottomBun;
                                 manager.DisplayImage(null,1);
                                 break;
@@ -419,7 +427,7 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.relish;
                                 manager.DisplayImage(manager.relish, 2);
                                 break;
-                            case "None":
+                            case "Nothing":
                                 mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.noPickles;
                                 manager.DisplayImage(null, 2);
                                 break;
@@ -439,7 +447,7 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.choppedLettuce;
                                 manager.DisplayImage(manager.choppedLettuce, 3);
                                 break;
-                            case "None":
+                            case "Nothing":
                                 mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.noLettuce;
                                 manager.DisplayImage(null, 3);
                                 break;
@@ -495,7 +503,7 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.choppedOnions;
                                 manager.DisplayImage(manager.choppedOnions, 6);
                                 break;
-                            case "None":
+                            case "Nothing":
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.none;
                                 manager.DisplayImage(null, 6);
                                 break;
@@ -513,9 +521,9 @@ namespace InterDineMension.Manager
                                 break;
                             case "Lettucebun":
                                 mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.lettuceWrapTop;
-                                manager.DisplayImage(manager.lettuceWrapBottom, 7);
+                                manager.DisplayImage(manager.lettuceWrapTop, 7);
                                 break;
-                            case "None":
+                            case "Nothing":
                                 mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.noTopBun;
                                 manager.DisplayImage(null, 7);
                                 break;
@@ -533,6 +541,7 @@ namespace InterDineMension.Manager
 
         public void ExitDialogueMode(bool enterDialogueMode)
         {
+            
             dV.StopListening(currentStory);
 
             //dialogueObject.SetActive(false);
@@ -552,6 +561,7 @@ namespace InterDineMension.Manager
             {
                 EnterDinerMode();
             }
+            exitedDialogueMode = true;
         }
 
         public void EnterDinerMode()

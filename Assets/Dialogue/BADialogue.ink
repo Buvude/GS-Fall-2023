@@ -5,6 +5,7 @@ EXTERNAL StartBAMicro()
 VAR tempHolder =""
 //->MainBAD
 ===MainBAD===
+    *stop the Dialogue
 // ~Random_Holder=Random(1,3)
     Order up! Let's take a lookie here... #speaker:Chef Swatts
     ~tempHolder=pop_random(BBuns)
