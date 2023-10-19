@@ -13,7 +13,7 @@ namespace InterDineMension.Manager
         // Start is called before the first frame update
         void Start()
         {
-            //dialogueManager.GetInstance().StartFirstConvo();
+            //dialogueManager.GetInstance().StartMorningConvo();
         }
 
         // Update is called once per frame

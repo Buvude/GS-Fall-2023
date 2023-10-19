@@ -11,11 +11,18 @@ namespace InterDineMension.Manager
     using InterDineMension.Character;
     using MicroGame;
     using MicroGame.BA;
+    using System.Reflection.Emit;
+    using Unity.VisualScripting;
+    //using UnityEngine.UIElements;
+
     public class dialogueManager : MonoBehaviour
     {
-        public GameObject convoModImages, charBtn;
+        //public GameObject charImageCS, charImageOR;
+        private bool deactivatedcorutines = false;
+        public VariableHolder vH;
+        public GameObject convoModeImages, charBtn;
         public dialogueSpriteManager manager;
-        public GameObject dialogueObject;
+        public GameObject[] dialogueObject;
         //tutorial made it a private serializeField, but I want to be able to adjust this with settings
         public float typingSpeed = 0.04f;
         private Coroutine displayLineCorutine;
@@ -23,13 +30,20 @@ namespace InterDineMension.Manager
         private bool canContinueToNextLine = false;
         public CheffSwatts cS = new CheffSwatts();
         public Graciana grac=new Graciana();
+        public O_Ryan oR=new O_Ryan();
 
-        public enum speaker { Graciana, Swatts};
+        public enum speaker { Graciana, Swatts,O_Ryan,None};
+        public enum speakingTo {  O_Ryan, Swatts};
         public speaker charSpeak;
+        public speakingTo charSpeakTo;
 
         private static dialogueManager instance;
 
-        [SerializeField] private GameObject dialoguePanel;
+        public GameObject dialoguePanel;
+
+
+        [SerializeField] private Image dPTest;
+
         [SerializeField] private TextMeshProUGUI dialogueText;
         [SerializeField] private TextMeshProUGUI displayNameText;
         [SerializeField] private GameObject continueIcon;
@@ -43,6 +57,8 @@ namespace InterDineMension.Manager
         private TextMeshProUGUI[] choicesText;
 
         private Story currentStory;
+
+        private bool exitedDialogueMode = false;
 
         public Microgamecontroller mGC;
         public BAManeger bAM;
@@ -60,12 +76,14 @@ namespace InterDineMension.Manager
         private const string VEGGIE_TAG = "veggie";
         private const string TBUN_TAG = "TBun";
         private const string MOOD = "mood";
+        private const string VAR_CHANGE = "varChange";
 
         public InkExternalFunctions iEF=new InkExternalFunctions();
 
 
         private void Awake()
         {
+            dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(loadGlobalsJSON); 
              
             if (instance != null)
@@ -75,7 +93,7 @@ namespace InterDineMension.Manager
             instance = this;
             
             dialoguePlaying = false;
-            dialoguePanel.SetActive(false);
+            dPTest.enabled=true;
             choicesText = new TextMeshProUGUI[choices.Length];
             int index = 0;
             foreach (GameObject choice in choices)
@@ -83,10 +101,12 @@ namespace InterDineMension.Manager
                 choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
                 index++;
             }
+            StartMorningConvo();
         }
 
-        public void StartFirstConvo()
+        public void StartMorningConvo()
         {
+            charSpeakTo = speakingTo.Swatts;
             EnterDialogueMode(inkJSON);
         }
 
@@ -110,31 +130,64 @@ namespace InterDineMension.Manager
             {
                 ContinueStory();
             }
+           /* if (!this.gameObject.activeInHierarchy&&!deactivatedcorutines)
+            {
+                deactivatedcorutines = true; 
+                Debug.Log("No longer active in hierarchy");
+                this.StopAllCoroutines();
+            }
+            else if(this.gameObject.activeInHierarchy && deactivatedcorutines)
+            {
+                deactivatedcorutines= false;
+            }*/
         }
-
+        public void setCharSpeakToCS()
+        {
+            charSpeakTo = speakingTo.Swatts;
+        }
         public void EnterDialogueMode(TextAsset inkJSON)
         {
+            exitedDialogueMode = false;
             charBtn.SetActive(false);
-            convoModImages.gameObject.SetActive(true);
-            dialogueObject.SetActive(true);
+            convoModeImages.gameObject.SetActive(true);
+            //dialogueObject.SetActive(true);
+            foreach (GameObject item in dialogueObject)
+            {
+                item.SetActive(true);
+            }
+
             //add method to determine which convo is going on, possibly triggered by the char btn
-            dialoguePanel.SetActive(true);
+            dPTest.enabled = true;
             currentStory =new Story(inkJSON.text);
             dialoguePlaying=true;
-            //move non-graciana to the front to join convo (not making it yet due to ui issues)
             grac.gameObject.GetComponent<Image>().enabled = true;
             dV.StartListening(currentStory);
 
+            switch (charSpeakTo)
+            {
+                case speakingTo.O_Ryan:
+                    {
+                        oR.gameObject.SetActive(true);
+                    }
+                    break;
+                case speakingTo.Swatts:
+                    {
+                        cS.gameObject.SetActive(true);
+                    }
+                    break;
+                default:
+                    break;
+            }
             /*currentStory.BindExternalFunction("StartBAMicro", () =>
             {
                  Debug.Log("called StartBAMicro");
              });*/
 
-            iEF.Bind(currentStory,bAM,mGC);
+            iEF.Bind(currentStory,bAM,mGC,this);
             ContinueStory();
         }
 
-
+        
         /// <summary>
         /// this is a a function that will be called by the debug button to do any number of things.
         /// </summary>
@@ -154,22 +207,19 @@ namespace InterDineMension.Manager
                     StopCoroutine(displayLineCorutine);
 
                 }
-                if (!dialogueObject.activeSelf)
-                {
-                    Debug.Log("made it here");
-                }
-                
                 displayLineCorutine = StartCoroutine(DisplayLine(currentStory.Continue()));
                 /*dialogueText.text = currentStory.Continue(); outdated*/
                 HandleTags(currentStory.currentTags);
                 //Debug.Log(currentStory.currentChoices.Count);
 
+
+
             }
 
             else
             {
-                ExitDialogueMode();
-                dialoguePanel.SetActive(false);
+                ExitDialogueMode(false);
+                dPTest.enabled = false;
             }
         }
 
@@ -218,8 +268,13 @@ namespace InterDineMension.Manager
                 
             }
             DisplayChoices();
-            continueIcon.SetActive(true);
+            if(!exitedDialogueMode)
+            {
+                continueIcon.SetActive(true);
+            }
+            
             canContinueToNextLine = true;
+            yield return new WaitForEndOfFrame();
         }
 
         private void Hidechoices()
@@ -313,6 +368,11 @@ namespace InterDineMension.Manager
                                         }*/
                                         break;
                                     }
+                                case speaker.O_Ryan:
+                                    {
+                                        oR.sR.sprite= oR.spriteDictionary[tagValue];
+                                        break;
+                                    }
                                 default:break;
                                 }
                             break;
@@ -327,6 +387,14 @@ namespace InterDineMension.Manager
                         {
                             charSpeak = speaker.Graciana;
                         }
+                        else if (tagValue == "O'Ryan")
+                        {
+                            charSpeak= speaker.O_Ryan;
+                        }
+                        else if (tagValue == "???")
+                        {
+                            charSpeak = speaker.None;
+                        }
                         break;
                     case BBUN_TAG:
                         switch (tagValue)
@@ -339,7 +407,7 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.lettuceWrapBottom;
                                 manager.DisplayImage(manager.lettuceWrapBottom, 1);
                                 break;
-                            case "None":
+                            case "Nothing":
                                 mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.noBottomBun;
                                 manager.DisplayImage(null,1);
                                 break;
@@ -359,7 +427,7 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.relish;
                                 manager.DisplayImage(manager.relish, 2);
                                 break;
-                            case "None":
+                            case "Nothing":
                                 mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.noPickles;
                                 manager.DisplayImage(null, 2);
                                 break;
@@ -379,7 +447,7 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.choppedLettuce;
                                 manager.DisplayImage(manager.choppedLettuce, 3);
                                 break;
-                            case "None":
+                            case "Nothing":
                                 mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.noLettuce;
                                 manager.DisplayImage(null, 3);
                                 break;
@@ -435,7 +503,7 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.choppedOnions;
                                 manager.DisplayImage(manager.choppedOnions, 6);
                                 break;
-                            case "None":
+                            case "Nothing":
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.none;
                                 manager.DisplayImage(null, 6);
                                 break;
@@ -453,9 +521,9 @@ namespace InterDineMension.Manager
                                 break;
                             case "Lettucebun":
                                 mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.lettuceWrapTop;
-                                manager.DisplayImage(manager.lettuceWrapBottom, 7);
+                                manager.DisplayImage(manager.lettuceWrapTop, 7);
                                 break;
-                            case "None":
+                            case "Nothing":
                                 mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.noTopBun;
                                 manager.DisplayImage(null, 7);
                                 break;
@@ -471,16 +539,35 @@ namespace InterDineMension.Manager
             }
         }
 
-        public void ExitDialogueMode()
+        public void ExitDialogueMode(bool enterDialogueMode)
         {
-            dV.StopListening(currentStory);
-            dialogueObject.SetActive(false);
-            currentStory.UnbindExternalFunction("StartBAMicro");
-            convoModImages.gameObject.SetActive(false);
             
+            dV.StopListening(currentStory);
+
+            //dialogueObject.SetActive(false);
+            foreach (GameObject item in dialogueObject)
+            {
+                item.SetActive(false);
+            }
+            
+            currentStory.UnbindExternalFunction("StartBAMicro");
+            convoModeImages.gameObject.SetActive(false);
             dialoguePlaying = false;
-            dialoguePanel.SetActive(false);
+
+            dPTest.enabled = false;
+
             dialogueText.text = "";
+            if(enterDialogueMode)
+            {
+                EnterDinerMode();
+            }
+            exitedDialogueMode = true;
+        }
+
+        public void EnterDinerMode()
+        {
+            convoModeImages.gameObject.SetActive(false);
+            charBtn.gameObject.SetActive(true);
         }
 
         private void DisplayChoices()

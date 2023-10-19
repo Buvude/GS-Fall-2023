@@ -32,7 +32,7 @@ namespace InterDineMension.MicroGame
 
         public void StartBAM()
         {
-            dM.ExitDialogueMode();
+            dM.ExitDialogueMode(false);
             bAMContainer.SetActive(true);
             bAM.StartMicroGame(orderedIngredients);
         }

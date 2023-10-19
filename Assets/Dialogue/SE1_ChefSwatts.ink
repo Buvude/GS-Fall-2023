@@ -1,7 +1,10 @@
-EXTERNAL StartBAMicro()
+//EXTERNAL StartBAMicro()
 INCLUDE globals.ink
+INCLUDE BADialogue.ink
+//INCLUDE EveningTest.ink
 
-VAR tempHolder =""
+
+//VAR tempHolder =""
 ->Main
 ===Main===
 Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Swatts #mood:neutral
@@ -28,7 +31,8 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
     
     ** [Peel it]
         // GOOD OPTION
-        (I take a potato skin peeler, and begin peeling away at the bombado.) #speaker:Graciana
+        ~affectionCS=affectionCS+1
+        (I take a potato skin peeler, and begin peeling away at the bombado.) #speaker:Graciana 
         (Piece by piece, the skin comes off with relative ease. The inside is almost gelatin-like.)
         (Chef Swatts turns back around, looking over my shoulder...)
 
@@ -57,7 +61,8 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
     
     ** [Squeeze it]
         // CHAOTIC OPTION
-        (I take the bombado into a bowl and squeeze it with both hands.) #speaker:Graciana
+        ~chaosCS=chaosCS+1
+        (I take the bombado into a bowl and squeeze it with both hands.) #speaker:Graciana 
 
         (POP!) #speaker: 
 
@@ -87,6 +92,7 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
 
     ** [Slice it]
         // BAD OPTION
+        ~irritatedCS=irritatedCS+1
         (I grab a kitchen knife and bring it to the bombado. I barely even poke it with the knife, when...) #speaker:Graciana
 
         (SPLAT!) #speaker: 
@@ -166,29 +172,30 @@ Ya ya, I hear ya. Took me a while to understand that food ain't rare like it is 
 Speakin' of, help me wit' this burger, ya? 
 
 O-oh, right, yeah! #speaker:Graciana
+->MainBAD
 
-Order up! Looks like we got an order of: #speaker:Chef Swatts
-    ~tempHolder=pop_random(BBuns)
-    For the bottom bun we've got: {tempHolder} #BBun:{tempHolder}
-    ~tempHolder=pop_random(Pickles)
-    For the pickles we've got: {tempHolder} #Pickles:{tempHolder}
-    ~tempHolder=pop_random(Lettuce)
-    For the lettuce we've got: {tempHolder}#lettuce:{tempHolder}
-    ~tempHolder=pop_random(patty)
-    For the patty we've got: {tempHolder}#patty:{tempHolder}
-    ~tempHolder=pop_random(Condiments)
-    For the Ketchup/Mustard we've got: {tempHolder}#Condiments:{tempHolder}
-    ~tempHolder=pop_random(Veggies)
-    For the veggie topping we've got: {tempHolder}#veggie:{tempHolder}
-    ~tempHolder=pop_random(TBuns)
-    For the top bun we've got: {tempHolder}#TBun:{tempHolder}
-    ~StartBAMicro()
+// Order up! Looks like we got an order of: #speaker:Chef Swatts
+//     ~tempHolder=pop_random(BBuns)
+//     For the bottom bun we've got: {tempHolder} #BBun:{tempHolder}
+//     ~tempHolder=pop_random(Pickles)
+//     For the pickles we've got: {tempHolder} #Pickles:{tempHolder}
+//     ~tempHolder=pop_random(Greens)
+//     For the lettuce we've got: {tempHolder}#lettuce:{tempHolder}
+//     ~tempHolder=pop_random(patty)
+//     For the patty we've got: {tempHolder}#patty:{tempHolder}
+//     ~tempHolder=pop_random(Condiments)
+//     For the Ketchup/Mustard we've got: {tempHolder}#Condiments:{tempHolder}
+//     ~tempHolder=pop_random(Veggies)
+//     For the veggie topping we've got: {tempHolder}#veggie:{tempHolder}
+//     ~tempHolder=pop_random(TBuns)
+//     For the top bun we've got: {tempHolder}#TBun:{tempHolder}
+//     ~StartBAMicro()
 ->DONE
     
 
-=== function pop_random(ref _list) 
-    ~ temp el = LIST_RANDOM(_list) 
-    // ~ _list -= el
-    ~ return el 
+// === function pop_random(ref _list) 
+//     ~ temp el = LIST_RANDOM(_list) 
+//     // ~ _list -= el
+//     ~ return el 
     
 
