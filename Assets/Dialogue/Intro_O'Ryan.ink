@@ -1,6 +1,8 @@
+EXTERNAL StartO_Ryan()
+
 
 ==mainORYAN==
-
+~StartO_Ryan()
 (Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral
 (Just gotta clean and close up...)
 (...)
@@ -9,12 +11,12 @@
 E-excuse me, we're closing now, so if you could please-- #speaker:Graciana #mood:think
 (A massive, towering figure exits the portal.)
 // Show O'Ryan Neutral
-(It's almost like... if a galaxy was a person...) #speaker:Graciana #mood:fear
+(It's almost like... if a galaxy was a person...) #speaker:Graciana
 S-sir? Uh... Ma'am? Uh...
 
 ... #speaker:???//set to slower text speed for O'Ryan while they are ???
 
-(I can't tell if it has eyes, but I somehow feel them staring into my soul...) #speaker:Graciana
+(I can't tell if it has eyes, but I somehow feel them staring into my soul...) #speaker:Graciana #mood:neutral
 C-can I help you...?
 
 ... #speaker:???
@@ -27,8 +29,8 @@ Uh...
         Y-yeah, that's me... #speaker:Graciana
         
         ... #speaker:???
-        I am O'Ryan. #speaker:O'Ryan #mood:neutral
-        I am the owner of The Portal Diner.
+        I am O'Ryan. #speaker:O'Ryan 
+        I am the owner of The Portal Diner.#mood:blank
         
         !! #speaker:Graciana
         Oh! Right! Yeah, of course! Hi, uh, thank you, for, uh, hiring me, and, and, uh, I'm Graciana!

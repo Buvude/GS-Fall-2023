@@ -498,7 +498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sR: {fileID: 1434275382}
   dictKeyCS:
-  - none
+  - blank
   - angry
   - happy
   - hug
@@ -597,7 +597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5059230819423979533, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -1.000061
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 5059230819423979533, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -814,6 +814,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4846163692464896498, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.8000488
+      objectReference: {fileID: 0}
     - target: {fileID: 7134218090571132696, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -821,6 +825,10 @@ PrefabInstance:
     - target: {fileID: 7452056088500644182, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8467387704170602796, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.6754761
       objectReference: {fileID: 0}
     - target: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: dM
@@ -830,6 +838,10 @@ PrefabInstance:
       propertyPath: gM
       value: 
       objectReference: {fileID: 1183388465}
+    - target: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: BadBurger
+      value: 
+      objectReference: {fileID: 21300000, guid: 7b4c409f60cc0e246b003fad842d7cff, type: 3}
     - target: {fileID: 9133024778814056345, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0.5587498
@@ -1290,6 +1302,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1383974644}
     - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: relish
+      value: 
+      objectReference: {fileID: 21300000, guid: 0e7cfa15a3af7ca49b13034c69af4dce, type: 3}
+    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: pickles
+      value: 
+      objectReference: {fileID: 21300000, guid: 3408206a8a5ec3c44bfe6df18161bcd9, type: 3}
+    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: orderImages.Array.data[0]
       value: 
       objectReference: {fileID: 1644217945}
@@ -1317,6 +1337,22 @@ PrefabInstance:
       propertyPath: orderImages.Array.data[6]
       value: 
       objectReference: {fileID: 1644217951}
+    - target: {fileID: 1599940485331001442, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dictKeyG.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599940485331001442, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dictValueG.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599940485331001442, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dictKeyG.Array.data[7]
+      value: fear
+      objectReference: {fileID: 0}
+    - target: {fileID: 1599940485331001442, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dictValueG.Array.data[7]
+      value: 
+      objectReference: {fileID: 21300000, guid: 92dac8f9c6fbb384dba1c4ff9d1272ea, type: 3}
     - target: {fileID: 6290930265342607804, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_Name
       value: InklDialogue
@@ -1329,10 +1365,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7365178473743309746, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ccd957e23faf41e44ae84868171c1635, type: 3}
     - target: {fileID: 7387294020516569080, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
+      objectReference: {fileID: 21300000, guid: d041da730b72e45419e2ede2bcd0a783, type: 3}
     - target: {fileID: 8615375139267424601, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
