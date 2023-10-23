@@ -3,12 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace InterDineMension.MicroGame.BA
 {
 
     public class PlayerController : MonoBehaviour
     {
+        public float speed;
+        public Slider playerMovment;
+        public const float  lane4=16, lane1=39, lane2=63, lane3=82;
         public AudioSource aS;
         public AudioClip correct, wrong, cosmic;
         public BAManeger BAManeger;
@@ -25,7 +29,7 @@ namespace InterDineMension.MicroGame.BA
         public List<BurgerIngredients.ingredientType> ingredientTypes = new List<BurgerIngredients.ingredientType>();
         public enum lanePos
         {
-            lane1, lane2, lane3
+            lane1, lane2, lane3, lane4, lane5
         };
 
         public lanePos currentpos;
@@ -38,9 +42,43 @@ namespace InterDineMension.MicroGame.BA
         // Update is called once per frame
         void Update()
         {
-            if (Input.GetKeyDown(KeyCode.RightArrow))
+            switch (playerMovment.value)//naming system is confusing, sorry about that if anyone else is reading this
             {
-                switch (currentpos)
+                case < lane4:
+                    {
+                        currentpos = lanePos.lane5;
+                        break;
+                    }
+                case < lane1:
+                    {
+                        currentpos=lanePos.lane1;
+                        break;
+                    }
+                case < lane2:
+                    {
+                        currentpos=lanePos.lane2;
+                        break;
+                    }
+                case < lane3:
+                    {
+                        currentpos = lanePos.lane3;
+                        break;
+                    }
+                
+                case > lane3:
+                    {
+                        currentpos = lanePos.lane4;
+                        break;
+                    }
+
+                default:
+                    break;
+            }
+            if(playerMovment.value>playerMovment.maxValue) { playerMovment.value = playerMovment.maxValue; }
+            if (playerMovment.value < playerMovment.minValue) { playerMovment.value = playerMovment.minValue; }
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                /*switch (currentpos)
                 {
                     case lanePos.lane1:
                         this.gameObject.transform.position = Lane2.transform.position;
@@ -54,11 +92,12 @@ namespace InterDineMension.MicroGame.BA
                         break;
                     default:
                         break;
-                }
+                }*/
+                playerMovment.value += speed;
             }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow))
+            else if (Input.GetKey(KeyCode.LeftArrow))
             {
-                switch (currentpos)
+               /* switch (currentpos)
                 {
                     case lanePos.lane1:
                         break;
@@ -72,7 +111,8 @@ namespace InterDineMension.MicroGame.BA
                         break;
                     default:
                         break;
-                }
+                }*/
+               playerMovment.value -= speed;
             }
         }
         /// <summary>
