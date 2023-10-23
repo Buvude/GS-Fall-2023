@@ -167,11 +167,13 @@ namespace InterDineMension.Manager
             {
                 case speakingTo.O_Ryan:
                     {
+                        cS.gameObject.SetActive(false);
                         oR.gameObject.SetActive(true);
                     }
                     break;
                 case speakingTo.Swatts:
                     {
+                        oR.gameObject.SetActive(false);
                         cS.gameObject.SetActive(true);
                     }
                     break;
@@ -370,10 +372,11 @@ namespace InterDineMension.Manager
                                     }
                                 case speaker.O_Ryan:
                                     {
+                                        Debug.Log("Got to o'ryan sprites");
                                         oR.sR.sprite= oR.spriteDictionary[tagValue];
                                         break;
                                     }
-                                default:break;
+                                default:Debug.Log("default"); break;
                                 }
                             break;
                         }
