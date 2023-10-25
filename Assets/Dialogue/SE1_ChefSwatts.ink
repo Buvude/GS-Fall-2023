@@ -27,7 +27,7 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
 
     (He hands me a strange looking vegetable, and goes back to grabbing more ingredients. It's about the size of a normal tomato, except it's green, and small hairs are growing out of it... It's strangely damp too, and the skin is almost leathery.) #speaker:Graciana #mood:neutral
 
-    (...How am I supposed to prep this?)
+    (...How am I supposed to prep this?) #speaker:Graciana #mood:think
     
     ** [Peel it]
         // GOOD OPTION
@@ -36,12 +36,12 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
         (Piece by piece, the skin comes off with relative ease. The inside is almost gelatin-like.)
         (Chef Swatts turns back around, looking over my shoulder...)
 
-        ... #speaker:Chef Swatts
+        ... #speaker:Chef Swatts #mood:sad
         Whattya doin'?
 
         Uh... Prepping? #speaker:Graciana
 
-        Kh... Khahahaha! #speaker:Chef Swatts
+        Kh... Khahahaha! #speaker:Chef Swatts #mood:happy
         I mean, at least you didn't make a mess!
 
         (Chef Swatts takes the bombado from my hand, and squeezes it over a bowl.) #speaker:Graciana
@@ -50,10 +50,10 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
 
         (The bombado pops in his hands, juice pouring out exessively into the bowl.) #speaker:Graciana
 
-        These are from my homeworld, Dipterra. Ya supposed to pop 'em in your hands, and take the juice from it. #speaker:Chef Swatts
+        These are from my homeworld, Dipterra. Ya supposed to pop 'em in your hands, and take the juice from it. #speaker:Chef Swatts #mood:neutral
         My bad, I shoulda told ya.
         
-        No worries... #speaker:Graciana
+        No worries... #speaker:Graciana #mood:neutral
         (Chef Swatts takes the bowl and adds a handful of spices and herbs I barely recognize and pours it over the pasta, mixing it in.)
         (It doesn't look too different than your average pesto sauce, but still...)
         
@@ -68,23 +68,23 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
 
         (It pops in my hand with barely any effort. Juices pour out of the bomado, and it shrivels up.) #speaker:Graciana
 
-        Ey, there you go! You eat one of these before? #speaker:Chef Swatts
+        Ey, there you go! You eat one of these before? #speaker:Chef Swatts #mood:happy
 
         I have no idea what this even is, I just kinda wanted to see what would happen... #speaker:Graciana
 
         They from my homeworld, Dipterra. The only way to eat 'em is to pop 'em in your hands, drink the juice & eat the remains of it. #speaker:Chef Swatts
         You figured it out instantly, that must be the way of tha food guiding ya! It's in ya blood!
         
-        Ha, I wish... #speaker:Graciana
-        It was just a lucky guess. I really don't know anything about cooking... I eat instant ramen most nights.
+        Ha, I wish... #speaker:Graciana #mood:sad
+        It was just a lucky guess. I really don't know anything about cooking... I eat instant ramen most nights. #speaker:Graciana #mood:neutral
 
         Ay, but ramen is food, no? Ya still cookin' it, no? #speaker:Chef Swatts
 
-        I guess, yeah... #speaker:Graciana
+        I guess, yeah... #speaker:Graciana #mood:think
 
         Gotta start somewhere, ya? #speaker:Chef Swatts
 
-        Yeah, true... #speaker:Graciana
+        Yeah, true... #speaker:Graciana #mood:happy
         (Chef Swatts takes the bowl and adds a handful of spices and herbs I barely recognize and pours it over the pasta, mixing it in.)
         (It doesn't look too different than your average pesto sauce, but still...)
         
@@ -99,15 +99,15 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
 
         (...the bombado pops, exploding everywhere!) #speaker:Graciana
         (Juice coats the walls of the kitchen, not to mention all over myself, in my hair...)
-        I... I... I'm s-so sorry, I didn't...
+        I... I... I'm s-so sorry, I didn't... #speaker:Graciana #mood:sad
 
-        ... #speaker:Chef Swatts
+        ... #speaker:Chef Swatts #mood:happy
         Ahahahaha!
         Ya have no idea what those are, do ya?
 
         ...I guess not... #speaker:Graciana
 
-        Ya, I prolly shoulda warned ya... They're from my home, Dipterra. #speaker:Chef Swatts
+        Ya, I prolly shoulda warned ya... They're from my home, Dipterra. #speaker:Chef Swatts #mood:neutral
         Ya supposed to squeeze 'em into a bowl, and let the juice fill it.
 
         That... would've been good to know... #speaker:Graciana
@@ -123,55 +123,55 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
 
 === reconvene ===
 
-So, how much crazy food like this exists in your homeworld? #speaker:Graciana
+So, how much crazy food like this exists in your homeworld? #speaker:Graciana #mood:think
 
-Crazy? #speaker:Chef Swatts
+Crazy? #speaker:Chef Swatts #mood:neutral
 
-S-sorry, I mean... Well... #speaker:Graciana
-There isn't anything like this where I'm from.
+S-sorry, I mean... Well... #speaker:Graciana #mood:sad
+There isn't anything like this where I'm from. #speaker:Graciana #mood:neutral
 
 Ah, well, ya know, there's bombadoes, drawtherries, trapples, gongagas... #speaker:Chef Swatts
 Really, I could go on an' on an' on. Big boss O'Ryan don't wanna bother with ordering 'em, so once a week I go back home to scavenge 'em to use here. Just a lil sprinke is all I need!
 
-...Scavenge? #speaker:Graciana
+...Scavenge? #speaker:Graciana #mood:think
 
-Ya, scavenge. There ain't no supermarket where I'm from, babeh! #speaker:Chef Swatts
-I gotta grab what I can before one of 'em nasty spider clans spot me!
+Ya, scavenge. There ain't no supermarket where I'm from, babeh! #speaker:Chef Swatts #mood:happy
+I gotta grab what I can before one of 'em nasty spider clans spot me! #speaker:Chef Swatts #mood:angry
 
-Oh, I see... #speaker:Graciana
-Wait, spider clans?!
+Oh, I see... #speaker:Graciana #mood:neutral
+Wait, spider clans?! #speaker:Graciana #mood:think
 
-Ya, the spider clans rule Dipterra. They don't take well to us flyfolk. #speaker:Chef Swatts
-As in, they hunt and kill us! Ahahaha!
+Ya, the spider clans rule Dipterra. They don't take well to us flyfolk. #speaker:Chef Swatts #mood:neutral
+As in, they hunt and kill us! Ahahaha! #speaker:Chef Swatts #mood:happy
 
 ... #speaker:Graciana
 
-I laugh, but they make life very hard, ya? All us other insectfolk live in, well, the place they call "fear." #speaker:Chef Swatts
+I laugh, but they make life very hard, ya? All us other insectfolk live in, well, the place they call "fear." #speaker:Chef Swatts #mood:sad
 
-Has anyone done anything about it? Like, is there any kind of... Law? #speaker:Graciana
+Has anyone done anything about it? Like, is there any kind of... Law? #speaker:Graciana #mood:think
 
-Ahaha! That's funny! #speaker:Chef Swatts
-Nah.
+Ahaha! That's funny! #speaker:Chef Swatts #mood:happy
+Nah. #speaker:Chef Swatts #mood:neutral
 Nothin' like that. Every bug for 'emself. If ya get eaten, ya get eaten. That's how it is.
 We try not to worry 'bout it, ya know? 
 
-That makes sense, yeah... #speaker:Graciana
+That makes sense, yeah... #speaker:Graciana #mood:neutral
 
 Life's too short to stress the small stuff, ya? #speaker:Chef Swatts
 
-(...Death is considered "small stuff"?) #speaker:Graciana
+(...Death is considered "small stuff"?) #speaker:Graciana #mood:think
 (Different cultures, I guess. The multiverse is big, it makes sense that there's even bigger differences.)
 ...
 
 Yo, Graciana. Ya done staring off into space? #speaker:Chef Swatts
 
-!! #speaker:Graciana
+!! #speaker:Graciana #mood:neutral
 Yeah, sorry. I guess it never really sank in how different things are around the multiverse.
 
 Ya ya, I hear ya. Took me a while to understand that food ain't rare like it is back home. #speaker:Chef Swatts
 Speakin' of, help me wit' this burger, ya? 
 
-O-oh, right, yeah! #speaker:Graciana
+O-oh, right, yeah! #speaker:Graciana #mood:happy
 ->MainBAD
 
 // Order up! Looks like we got an order of: #speaker:Chef Swatts

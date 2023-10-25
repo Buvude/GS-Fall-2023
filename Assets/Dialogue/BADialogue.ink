@@ -7,7 +7,7 @@ VAR tempHolder =""
 ===MainBAD===
     *stop the Dialogue
 // ~Random_Holder=Random(1,3)
-    Order up! Let's take a lookie here... #speaker:Chef Swatts
+    Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral
     ~tempHolder=pop_random(BBuns)
     For the bottom bun, it's {tempHolder}. #BBun:{tempHolder}
     ~tempHolder=pop_random(Pickles)
@@ -23,7 +23,7 @@ VAR tempHolder =""
     ~tempHolder=pop_random(TBuns)
     And the bun to top it all off... {tempHolder}.#TBun:{tempHolder}
     ~StartBAMicro()
-    Aight! Graciana, get ready! It's comin' in hot!
+    Aight! Graciana, get ready! It's comin' in hot! #speaker:Chef Swatts #mood:angry
 ->DONE
 
 === function pop_random(ref _list) 
