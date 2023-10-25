@@ -1,12 +1,12 @@
 VAR pokemon_name=""
 
-LIST BBuns = (Plain), (Lettucebun), (Nothing) 
-LIST Pickles = (Chips), (Relish), (Nothing) 
-LIST Greens = (Leaf), (Chopped), (Nothing) 
-LIST patty = (Beef), (Vegan) //(Unspeakable_Horror) Unspeakable horror will not be orderable except by O'Ryan
-LIST Condiments = (Ketchup), (Mustard), (Both) 
-LIST Veggies = (Tomatoe), (Onion), (Nothing) 
-LIST TBuns = (Plain), (Lettucebun), (Nothing) 
+LIST BBuns1 = (Plain), (Lettucebun), (Nothing) //(Bun_of_the_Deep) only orderable by O'ryan
+LIST Pickles1 = (Chips), (Relish), (Nothing) 
+LIST Greens1 = (Leaf), (Chopped), (Nothing) //(Biblically_Accurate_Green) only orderable by O'ryan
+LIST patty1 = (Beef), (Vegan) //(Unspeakable_Horror) Unspeakable horror will not be orderable except by O'Ryan
+LIST Condiments1 = (Ketchup), (Mustard), (Both) 
+LIST Veggies1 = (Tomatoe), (Onion), (Nothing) 
+LIST TBuns1 = (Plain), (Lettucebun), (Nothing) //(Bun_of_the_Deep) same as above
 VAR convo_numberCS=0
 VAR convo_numberF=0
 
@@ -37,3 +37,11 @@ VAR irritatedM = 0
 VAR affectionF = 0
 VAR chaosF = 0
 VAR irritatedF = 0
+
+LIST BBuns2 = (Plain), (Lettucebun), (Nothing) //(Bun_of_the_Deep) only orderable by O'ryan
+LIST Pickles2 = (Chips), (Relish), (Nothing), (Peppers)
+LIST Greens2 = (Leaf), (Chopped), (Nothing), (Chicken) //(Biblically_Accurate_Green) only orderable by O'ryan
+LIST patty2 = (Beef), (Vegan) //(Unspeakable_Horror) Unspeakable horror will not be orderable except by O'Ryan
+LIST Condiments2 = (Ketchup), (Mustard), (Both), (Nothing)
+LIST Veggies2 = (Tomatoe), (Onion), (Nothing), (Mushrooms) 
+LIST TBuns2 = (Plain), (Lettucebun), (Nothing) //(Bun_of_the_Deep) same as above

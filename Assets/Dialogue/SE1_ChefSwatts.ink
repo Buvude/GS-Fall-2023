@@ -1,3 +1,4 @@
+
 //EXTERNAL StartBAMicro()
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
@@ -7,6 +8,7 @@ INCLUDE BADialogue.ink
 //VAR tempHolder =""
 ->Main
 ===Main===
+~convo_numberCS=0
 Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Swatts #mood:neutral
 
 * [Sure]

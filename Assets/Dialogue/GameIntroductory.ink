@@ -1,3 +1,5 @@
+#day:1 #CSConvo:0
+EXTERNAL GoToDiner()
 
 (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana
 (Here we are... The Portal Diner...) #speaker:Graciana
@@ -37,5 +39,7 @@ Oh! Ya! Soon! Like, 3 minutes! #speaker:Chef Swatts
 O-oh! #speaker:Graciana
 
 Looks like they startin' to come in, look alive! #speaker:Chef Swatts
+
+~GoToDiner()
 
 ->END

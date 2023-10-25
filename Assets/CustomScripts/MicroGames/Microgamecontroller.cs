@@ -30,11 +30,19 @@ namespace InterDineMension.MicroGame
 
         }
 
-        public void StartBAM()
+        public void StartBAM(int level)
         {
-            dM.ExitDialogueMode(false);
+            dM.ExitDialogueMode(false, 0,0);
             bAMContainer.SetActive(true);
-            bAM.StartMicroGame(orderedIngredients);
+            bAM.StartMicroGame(orderedIngredients, level);
         }
+        public void StartBAM(GameObject bun, GameObject pickle, GameObject greens,GameObject patty, GameObject condiment, GameObject veggie,GameObject tbun)
+        {
+            dM.ExitDialogueMode(false, 0, 0);
+            bAMContainer.SetActive(true);
+            bAM.LevelUp(bun, pickle, greens, patty,condiment, veggie,tbun);
+            bAM.StartMicroGame(orderedIngredients, 2);
+        }
+
     }
 }
