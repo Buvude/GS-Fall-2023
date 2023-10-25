@@ -72,6 +72,17 @@ namespace InterDineMension.MicroGame.BA
             level = levelSetter;
         }
 
+        public void LevelUp(GameObject bun, GameObject pickle, GameObject greens, GameObject patty, GameObject condiment, GameObject veggie, GameObject tbun)
+        {
+            bottomBunOptions.Add(bun);
+            pickleOptions.Add(pickle);
+            lettuceOptions.Add(greens);
+            PattyOptions.Add(patty);
+            condimentsOptions.Add(condiment);
+            veggieOptions.Add(veggie);
+            topBunOptions.Add(tbun);
+        }
+
         // Start is called before the first frame update
         /// <summary>
         /// randomizes the placement of the items
@@ -194,6 +205,7 @@ namespace InterDineMension.MicroGame.BA
                     toSpawn[1].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane2;
                     Instantiate(toSpawn[1], lane2.transform);
                     toSpawn[2].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane3;
+                    Instantiate(toSpawn[2], lane3.transform);
                     if (level == 1)
                     {
                         blank1.ing = BurgerIngredients.ingredientType.noLettuce;

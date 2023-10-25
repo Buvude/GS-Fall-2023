@@ -1,5 +1,5 @@
+#day:2 #CSConvo:1
 EXTERNAL StartO_Ryan()
-
 
 ==mainORYAN==
 ~StartO_Ryan()
@@ -67,6 +67,7 @@ Uh...
 ...Sheesh...
 (I finish closing up and head on home, envelope in hand.)
 // You got paid [amount] Øllars!
+~GoToDiner()
 
         
     -> DONE

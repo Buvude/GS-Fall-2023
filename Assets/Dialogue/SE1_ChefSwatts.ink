@@ -1,3 +1,4 @@
+
 //EXTERNAL StartBAMicro()
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
