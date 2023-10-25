@@ -27,7 +27,7 @@ namespace InterDineMension.MicroGame.BA
         {
             microgamecontroller = GameObject.FindGameObjectWithTag("eventSystem").GetComponent<Microgamecontroller>();
             microgamecontroller.bAM = this;
-            StartMicroGame(microgamecontroller.orderedIngredients);
+            //StartMicroGame(microgamecontroller.orderedIngredients);
         }
 
         public TextMeshProUGUI leftOrder, rightOrder;
@@ -53,7 +53,7 @@ namespace InterDineMension.MicroGame.BA
         public List<GameObject> topBunOptions = new List<GameObject>();
         public List<GameObject> toSpawn;
 
-        public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients)
+        public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)
         {
             dM.manager.imagePopUp.enabled = false;
             for (int i = 0; i < ingredients.Count; i++)
@@ -69,7 +69,7 @@ namespace InterDineMension.MicroGame.BA
                 $"{orderedIngredients[6]}";
             leftOrder.text = orderForSide;
             rightOrder.text = orderForSide;
-
+            level = levelSetter;
         }
 
         // Start is called before the first frame update
@@ -92,8 +92,10 @@ namespace InterDineMension.MicroGame.BA
                     Instantiate(toSpawn[2], lane3.transform);
                     if (level == 1)
                     {
+                        blank1.ing = BurgerIngredients.ingredientType.noBottomBun;
                         blank1.currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(blank1, lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.noBottomBun;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -101,6 +103,7 @@ namespace InterDineMension.MicroGame.BA
                     {
                         toSpawn[3].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(toSpawn[3], lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.noBottomBun;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -124,8 +127,10 @@ namespace InterDineMension.MicroGame.BA
                     Instantiate(toSpawn[2], lane3.transform);
                     if (level == 1)
                     {
+                        blank1.ing = BurgerIngredients.ingredientType.noPickles;
                         blank1.currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(blank1, lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.noPickles;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -133,6 +138,7 @@ namespace InterDineMension.MicroGame.BA
                     {
                         toSpawn[3].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(toSpawn[3], lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.noPickles;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -156,8 +162,10 @@ namespace InterDineMension.MicroGame.BA
                     Instantiate(toSpawn[2], lane3.transform);
                     if (level == 1)
                     {
+                        blank1.ing = BurgerIngredients.ingredientType.noLettuce;
                         blank1.currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(blank1, lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.noLettuce;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -165,6 +173,7 @@ namespace InterDineMension.MicroGame.BA
                     {
                         toSpawn[3].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(toSpawn[3], lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.noLettuce;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -185,11 +194,12 @@ namespace InterDineMension.MicroGame.BA
                     toSpawn[1].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane2;
                     Instantiate(toSpawn[1], lane2.transform);
                     toSpawn[2].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane3;
-                    Instantiate(toSpawn[2], lane3.transform);
                     if (level == 1)
                     {
+                        blank1.ing = BurgerIngredients.ingredientType.noLettuce;
                         blank1.currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(blank1, lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.noLettuce;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -197,6 +207,7 @@ namespace InterDineMension.MicroGame.BA
                     {
                         toSpawn[3].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(toSpawn[3], lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.noLettuce;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -220,8 +231,10 @@ namespace InterDineMension.MicroGame.BA
                     Instantiate(toSpawn[2], lane3.transform);
                     if (level == 1)
                     {
+                        blank1.ing = BurgerIngredients.ingredientType.neither;
                         blank1.currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(blank1, lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.neither;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -229,6 +242,7 @@ namespace InterDineMension.MicroGame.BA
                     {
                         toSpawn[3].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(toSpawn[3], lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.neither;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -252,15 +266,18 @@ namespace InterDineMension.MicroGame.BA
                     Instantiate(toSpawn[2], lane3.transform);
                     if (level == 1)
                     {
+                        blank1.ing = BurgerIngredients.ingredientType.none;
                         blank1.currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(blank1, lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.none;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
-                    if (level ==2)
+                    if (level == 2)
                     {
                         toSpawn[3].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(toSpawn[3], lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.none;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -284,8 +301,10 @@ namespace InterDineMension.MicroGame.BA
                     Instantiate(toSpawn[2], lane3.transform);
                     if (level == 1)
                     {
+                        blank1.ing = BurgerIngredients.ingredientType.noTopBun;
                         blank1.currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(blank1, lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.noTopBun;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }
@@ -293,6 +312,7 @@ namespace InterDineMension.MicroGame.BA
                     {
                         toSpawn[3].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane4;
                         Instantiate(toSpawn[3], lane4.transform);
+                        blank2.ing = BurgerIngredients.ingredientType.noTopBun;
                         blank2.currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(blank2, lane5.transform);
                     }

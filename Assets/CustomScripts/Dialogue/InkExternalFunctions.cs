@@ -15,11 +15,15 @@ namespace InterDineMension
         
         public void Bind(Story currentStory, BAManeger bAM, Microgamecontroller mGC, dialogueManager dM)
         {
-            currentStory.BindExternalFunction("StartBAMicro", () =>
+            currentStory.BindExternalFunction("StartBAMicro1", () =>
             {
-                mGC.StartBAM();
+                mGC.StartBAM(1);
                 /*bAM.StartMicroGame(mGC.orderedIngredients);*/
                 
+            });
+            currentStory.BindExternalFunction("StartBAMicro2",() =>
+            {
+                mGC.StartBAM(2);
             });
             currentStory.BindExternalFunction("GoToDiner", () =>
             {
@@ -35,7 +39,10 @@ namespace InterDineMension
 
         public void unBind(Story currentStory)
         {
-            currentStory.UnbindExternalFunction("StartBAMicro");
+            currentStory.UnbindExternalFunction("StartBAMicro1");
+            currentStory.UnbindExternalFunction("StartBAMicro2");
+            currentStory.UnbindExternalFunction("GoToDiner");
+            currentStory.UnbindExternalFunction("StartO_Ryan");
         }
     }
 }

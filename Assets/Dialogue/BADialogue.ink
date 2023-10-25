@@ -1,4 +1,6 @@
-EXTERNAL StartBAMicro()
+//INCLUDE globals.ink
+EXTERNAL StartBAMicro1()
+EXTERNAL StartBAMicro2()
 
 
 
@@ -24,8 +26,10 @@ VAR tempHolder =""
         Veggies? Let's see... {tempHolder}...#veggie:{tempHolder}
         ~tempHolder=pop_random(TBuns1)
         And the bun to top it all off... {tempHolder}.#TBun:{tempHolder}
-        ~StartBAMicro()
+        ~StartBAMicro1()
         Aight! Graciana, get ready! It's comin' in hot!
+    
+    
     -convo_numberCS==1:
         Order up! Let's take a lookie here... #speaker:Chef Swatts
         ~tempHolder=pop_random(BBuns1)
@@ -42,7 +46,7 @@ VAR tempHolder =""
         Veggies? Let's see... {tempHolder}...#veggie:{tempHolder}
         ~tempHolder=pop_random(TBuns1)
         And the bun to top it all off... {tempHolder}.#TBun:{tempHolder}
-        ~StartBAMicro()
+        ~StartBAMicro2()
         Aight! Graciana, get ready! It's comin' in hot!
 }
 

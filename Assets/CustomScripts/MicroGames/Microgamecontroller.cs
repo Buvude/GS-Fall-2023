@@ -30,11 +30,11 @@ namespace InterDineMension.MicroGame
 
         }
 
-        public void StartBAM()
+        public void StartBAM(int level)
         {
             dM.ExitDialogueMode(false);
             bAMContainer.SetActive(true);
-            bAM.StartMicroGame(orderedIngredients);
+            bAM.StartMicroGame(orderedIngredients, level);
         }
     }
 }

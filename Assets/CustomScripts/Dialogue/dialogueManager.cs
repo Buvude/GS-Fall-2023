@@ -552,8 +552,9 @@ namespace InterDineMension.Manager
             {
                 item.SetActive(false);
             }
-            
-            currentStory.UnbindExternalFunction("StartBAMicro");
+
+            iEF.unBind(currentStory);
+            //currentStory.UnbindExternalFunction("StartBAMicro1");
             convoModeImages.gameObject.SetActive(false);
             dialoguePlaying = false;
 
