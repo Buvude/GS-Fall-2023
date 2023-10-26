@@ -1,6 +1,6 @@
 INCLUDE Intro_O'Ryan.ink 
 INCLUDE globals.ink
-...oops... #speaker:Graciana
+...oops... #speaker:Graciana #mood:sad
 
 Ay, no worries. It takes a while for tha way of the food to start speakin' to ya. #speaker:Chef Swatts
 

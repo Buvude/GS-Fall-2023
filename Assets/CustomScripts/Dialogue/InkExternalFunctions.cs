@@ -14,7 +14,19 @@ namespace InterDineMension
     {
         public int day, csConvo;
         public GameObject BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2;
-        
+        private GameObject bun2;
+
+        public InkExternalFunctions(GameObject bBun2, GameObject pickles2, GameObject greens2, GameObject patty2, GameObject condiment2, GameObject veggie2, GameObject bun2)
+        {
+            BBun2 = bBun2;
+            Pickles2 = pickles2;
+            Greens2 = greens2;
+            Patty2 = patty2;
+            Condiment2 = condiment2;
+            Veggie2 = veggie2;
+            TBun2 = bun2;
+        }
+
         public void Bind(Story currentStory, BAManeger bAM, Microgamecontroller mGC, dialogueManager dM)
         {
             

@@ -17,13 +17,13 @@ namespace InterDineMension.Manager
         public Image imagePopUp;
         public List<Image> orderImages=new List<Image>();
         public Sprite
-            classicBottomBun, lettuceWrapBottom, noBottomBun,//top bun types
-            pickles, relish, noPickles, //pickle type 
-            wholeLeafLettuce, choppedLettuce, noLettuce,//Lettuce type
-            beefPatty, veganPatty, unspeakableHorror,//patty type
-            ketchup, mustard, both,//condiment choice
-            tomatoe, choppedOnions, none,//final bonus choice
-            classicTopBun, lettuceWrapTop, noTopBun;//top bun choice
+            classicBottomBun, lettuceWrapBottom, noBottomBun,bBunOfTheDeep,//top bun types
+            pickles, relish, noPickles,peppers, //pickle type 
+            wholeLeafLettuce, choppedLettuce, noLettuce,biblicallyAcurateGreens,//Lettuce type
+            beefPatty, veganPatty, unspeakableHorror,chicken,//patty type
+            ketchup, mustard, both,neither,//condiment choice
+            tomatoe, choppedOnions, none,mushrooms,//final bonus choice
+            classicTopBun, lettuceWrapTop, noTopBun,tBunOfTheDeep;//top bun choice
        /* public enum ingredientType
         {
             classicBottomBun, lettuceWrapBottom, noBottomBun,//top bun types
