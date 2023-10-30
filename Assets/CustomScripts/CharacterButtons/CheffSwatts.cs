@@ -7,6 +7,7 @@ namespace InterDineMension.Character
 {
     public class CheffSwatts : MonoBehaviour
     {
+        public TextAsset CS1, CS2;
         public Image sR;
         public Dictionary<string, Sprite> spriteDictionary = new Dictionary<string,Sprite>();
         public string[] dictKeyCS;

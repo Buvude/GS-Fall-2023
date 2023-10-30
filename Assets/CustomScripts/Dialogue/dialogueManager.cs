@@ -9,6 +9,7 @@ using UnityEngine.UI;
 namespace InterDineMension.Manager
 {
     using InterDineMension.Character;
+    using JetBrains.Annotations;
     using MicroGame;
     using MicroGame.BA;
     using System.Reflection.Emit;
@@ -50,8 +51,8 @@ namespace InterDineMension.Manager
 
         [SerializeField] private GameObject[] choices;
 
-        [SerializeField] public TextAsset inkJSON;
-        [SerializeField] public TextAsset inkJSON2;
+        [SerializeField] public TextAsset dayOneIntro;
+        [SerializeField] public TextAsset O_RyanIntro;
         [SerializeField] private TextAsset loadGlobalsJSON;
 
         private TextMeshProUGUI[] choicesText;
@@ -107,7 +108,7 @@ namespace InterDineMension.Manager
         public void StartMorningConvo()
         {
             charSpeakTo = speakingTo.Swatts;
-            EnterDialogueMode(inkJSON);
+            EnterDialogueMode(dayOneIntro);
         }
 
         public static dialogueManager GetInstance()
@@ -144,6 +145,36 @@ namespace InterDineMension.Manager
         public void setCharSpeakToCS()
         {
             charSpeakTo = speakingTo.Swatts;
+        }
+
+        public void EnterDialogueModeBTN()
+        {
+            switch (charSpeakTo)
+            {
+                case speakingTo.Swatts:
+                    {
+                        switch (iEF.csConvo)
+                        {
+                            case 0:
+                                {
+                                    EnterDialogueMode(cS.CS1);
+                                    break;
+                                }
+                            case 1:
+                                {
+                                    EnterDialogueMode(cS.CS2);
+                                    break;
+                                }
+                            default:
+                                break;
+                        }
+                        break;
+                    }
+                default:
+                    {
+                        break;
+                    }
+            }
         }
         public void EnterDialogueMode(TextAsset inkJSON)
         {
@@ -196,7 +227,7 @@ namespace InterDineMension.Manager
         public void debugCommand()
         {
             
-            EnterDialogueMode(inkJSON);
+            EnterDialogueMode(dayOneIntro);
         }
 
         private void ContinueStory()
@@ -220,7 +251,7 @@ namespace InterDineMension.Manager
 
             else
             {
-                ExitDialogueMode(false);
+                ExitDialogueMode(false,0,0);
                 dPTest.enabled = false;
             }
         }
@@ -542,7 +573,7 @@ namespace InterDineMension.Manager
             }
         }
 
-        public void ExitDialogueMode(bool enterDialogueMode)
+        public void ExitDialogueMode(bool enterDialogueMode, int day, int csConvoNumber)
         {
             
             dV.StopListening(currentStory);
@@ -552,8 +583,9 @@ namespace InterDineMension.Manager
             {
                 item.SetActive(false);
             }
-            
-            currentStory.UnbindExternalFunction("StartBAMicro");
+
+            iEF.unBind(currentStory);
+            //currentStory.UnbindExternalFunction("StartBAMicro1");
             convoModeImages.gameObject.SetActive(false);
             dialoguePlaying = false;
 
@@ -562,13 +594,19 @@ namespace InterDineMension.Manager
             dialogueText.text = "";
             if(enterDialogueMode)
             {
-                EnterDinerMode();
+                EnterDinerMode(day,csConvoNumber);
             }
             exitedDialogueMode = true;
         }
 
-        public void EnterDinerMode()
+        public void EnterDinerMode(int day, int csConvoNumber)
         {
+            Debug.Log("entered diner mode!");
+            /*switch (day)
+            {
+                default:
+                    break;
+            }*/
             convoModeImages.gameObject.SetActive(false);
             charBtn.gameObject.SetActive(true);
         }
