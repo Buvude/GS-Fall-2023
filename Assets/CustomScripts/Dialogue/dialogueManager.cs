@@ -79,11 +79,12 @@ namespace InterDineMension.Manager
         private const string MOOD = "mood";
         private const string VAR_CHANGE = "varChange";
 
-        public InkExternalFunctions iEF=new InkExternalFunctions();
-
+        public InkExternalFunctions iEF;
+        public GameObject BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2;
 
         private void Awake()
         {
+            iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2);
             dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(loadGlobalsJSON); 
              
@@ -465,6 +466,11 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.noPickles;
                                 manager.DisplayImage(null, 2);
                                 break;
+                            case "Peppers":
+                                mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.peppers;
+                                manager.DisplayImage(manager.peppers, 2);
+                                break;
+
                             default:
                                 Debug.LogWarning($"Pickles value {tagValue} has not been recongnized");
                                 break;
@@ -501,6 +507,10 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.veganPatty;
                                 manager.DisplayImage(manager.veganPatty, 4);
                                 break;
+                            case "Chicken":
+                                mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.chicken;
+                                manager.DisplayImage(manager.chicken, 4);
+                                break;
                             default:
                                 Debug.LogWarning($"Patty value {tagValue} has not been recongnized");
                                 break;
@@ -521,6 +531,10 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[4] = BurgerIngredients.ingredientType.both;
                                 manager.DisplayImage(manager.both, 5);
                                 break;
+                            case "Nothing":
+                                mGC.orderedIngredients[4] = BurgerIngredients.ingredientType.neither;
+                                manager.DisplayImage(null, 5);
+                                break;
                             default:
                                 Debug.LogWarning($"Condiments value {tagValue} has not been recongnized");
                                 break;
@@ -540,6 +554,10 @@ namespace InterDineMension.Manager
                             case "Nothing":
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.none;
                                 manager.DisplayImage(null, 6);
+                                break;
+                            case "Mushrooms":
+                                mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.mushrooms;
+                                manager.DisplayImage(manager.mushrooms, 6);
                                 break;
                             default:
                                 Debug.LogWarning($"Veggie value {tagValue} has not been recongnized");
