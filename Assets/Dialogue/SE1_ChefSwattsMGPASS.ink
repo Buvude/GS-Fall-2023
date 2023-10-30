@@ -4,7 +4,7 @@ INCLUDE globals.ink
 Ay, there ya go! #speaker:Chef Swatts
 I knew it, you're a natural at this!
 
-Hah, thanks... I honestly don't really know how... #speaker:Graciana
+Hah, thanks... I honestly don't really know how... #speaker:Graciana mood:happy
 
 I'm tellin ya, it's the way of the food in ya blood! #speaker:Chef Swatts
 
