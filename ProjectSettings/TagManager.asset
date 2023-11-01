@@ -9,16 +9,16 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - foreground
   - Water
   - UI
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - background
+  - intagible
+  - Trash
+  - Recycle
+  - Compost
+  - Bounds
+  - missed
   - 
   - 
   - 

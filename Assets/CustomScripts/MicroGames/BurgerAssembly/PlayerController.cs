@@ -418,7 +418,8 @@ namespace InterDineMension.MicroGame.BA
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.tomatoe:
-                    finalBonusRend.sprite = tomatoe;
+                    FindLowestNullRenderer().sprite = tomatoe;
+                    FindLowestNullRenderer().enabled = true;
                     ingredientTypes.Add(type);
                     if (BAManeger.orderedIngredients[5] == BurgerIngredients.ingredientType.tomatoe)
                     {
@@ -433,7 +434,7 @@ namespace InterDineMension.MicroGame.BA
                     BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.choppedOnions:
-                    FindLowestNullRenderer().sprite = choppedLettuce;
+                    FindLowestNullRenderer().sprite = choppedOnions;
                     FindLowestNullRenderer().enabled = true;
                     ingredientTypes.Add(type);
                     if (BAManeger.orderedIngredients[5] == BurgerIngredients.ingredientType.choppedOnions)
@@ -537,6 +538,16 @@ namespace InterDineMension.MicroGame.BA
             }
         }
 
+        public void resetMiniGameSprites()
+        {
+            bottomBunRend.enabled = false;
+            picklesRend.enabled = false;
+            lettuceRend.enabled = false;
+            pattyRend.enabled = false;
+            condimentRend.enabled = false;
+            finalBonusRend.enabled = false;
+            topBunRend.enabled = false;
+        }
         public Image FindLowestNullRenderer()
         {
             if(!bottomBunRend.IsActive()) { return bottomBunRend; }

@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/BurgerAssembleTest.unity
+    path: Assets/Scenes/AddToBuildList/DinerScene.unity
     guid: 9cbbee0b0dc53d94e852bec3925650ab
   m_configObjects: {}

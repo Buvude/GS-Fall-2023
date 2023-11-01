@@ -1,5 +1,15 @@
+EXTERNAL GoToDiner()
 INCLUDE Intro_O'Ryan.ink 
 INCLUDE globals.ink
+INCLUDE BADialogue.ink
+Would you like to retry the minigame?
+    *[Yes]
+        ->MainBAD
+    *[No]
+        ->MainFail
+
+
+===MainFail===
 ...oops... #speaker:Graciana #mood:sad
 
 Ay, no worries. It takes a while for tha way of the food to start speakin' to ya. #speaker:Chef Swatts
