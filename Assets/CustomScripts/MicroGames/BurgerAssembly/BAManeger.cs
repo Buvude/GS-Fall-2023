@@ -14,6 +14,8 @@ namespace InterDineMension.MicroGame.BA
     using InterDineMension.Manager;
     public class BAManeger : MonoBehaviour
     {
+        public PlayerController pC;
+        public Button startBtn;
         public BurgerIngredients blank1,blank2;
         public int level;
         public GameObject BAMObject;
@@ -55,6 +57,8 @@ namespace InterDineMension.MicroGame.BA
 
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)
         {
+            ResetMiniGame();
+            Debug.Log(finalScore);
             dM.manager.imagePopUp.enabled = false;
             for (int i = 0; i < ingredients.Count; i++)
             {
@@ -89,6 +93,17 @@ namespace InterDineMension.MicroGame.BA
         /// </summary>
         /// 
         //TODO make a 
+
+        public void ResetMiniGame()
+        {
+            pC.ingredientTypes.Clear();
+            orderedIngredients.Clear();
+            pC.resetMiniGameSprites();
+            bAState = phase.bottomBun;
+            finalScore = 0;
+            finishedBurger.gameObject.SetActive(false);
+            startBtn.gameObject.SetActive(true);
+        }
         public void StartTheNextPhase()
         {
             switch (bAState)

@@ -1,3 +1,12 @@
+// Would you like to retry the minigame?
+//     *[Yes]
+//         ->MainBAD
+//     *[No]
+//         ->MainFail 
+//          this should work, but
+//          but I'll wait to impliment it until 
+//          I'm sure
+
 Ay... Still not gettin' it, huh? #speaker:Chef Swatts #mood:sad
 
 Y-yeah... #speaker:Graciana #mood:sad
