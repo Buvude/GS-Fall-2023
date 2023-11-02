@@ -16,6 +16,7 @@ namespace InterDineMension.MicroGame.TT
         public bool timerHasStarted, timerHasEnded;
         public List<FallingObjectScript> fallenObjects;
         public reticalControl rc;
+        public BoxCollider2D topCollider;
 
         // Start is called before the first frame update
         void Start()
@@ -74,6 +75,7 @@ namespace InterDineMension.MicroGame.TT
                 timerText.text = $"{i} seconds";
                 yield return new WaitForSeconds(1);
             }
+            topCollider.enabled = false;   
             StartCoroutine(tallyUp());
             StopCoroutine(timer());
         }
