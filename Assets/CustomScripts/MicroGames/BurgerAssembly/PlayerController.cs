@@ -76,7 +76,7 @@ namespace InterDineMension.MicroGame.BA
             }
             if(playerMovment.value>playerMovment.maxValue) { playerMovment.value = playerMovment.maxValue; }
             if (playerMovment.value < playerMovment.minValue) { playerMovment.value = playerMovment.minValue; }
-            if (Input.GetKey(KeyCode.RightArrow))
+            if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D)) 
             {
                 /*switch (currentpos)
                 {
@@ -95,7 +95,7 @@ namespace InterDineMension.MicroGame.BA
                 }*/
                 playerMovment.value += speed;
             }
-            else if (Input.GetKey(KeyCode.LeftArrow))
+            else if (Input.GetKey(KeyCode.LeftArrow)||Input.GetKey(KeyCode.A) )
             {
                /* switch (currentpos)
                 {

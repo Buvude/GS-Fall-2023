@@ -338,6 +338,7 @@ namespace InterDineMension.Manager
                 {
                     case MOOD:
                         {
+                            
                             switch (charSpeak)
                             {
                                 case speaker.Graciana:
