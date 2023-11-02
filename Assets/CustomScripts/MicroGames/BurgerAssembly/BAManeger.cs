@@ -42,17 +42,18 @@ namespace InterDineMension.MicroGame.BA
         {
             bottomBun, pickle, lettuce, Patty, condiment, veggie, topBun
         };
-        public phase bAState=phase.bottomBun;
+        public phase bAState;
+        
         /// <summary>
         /// lists of objects that can spawn in the microgame
         /// </summary>
-        public List<GameObject> bottomBunOptions = new List<GameObject>();
-        public List<GameObject> pickleOptions=new List<GameObject>();
-        public List<GameObject> lettuceOptions = new List<GameObject>();
-        public List<GameObject> PattyOptions = new List<GameObject>();
-        public List<GameObject> condimentsOptions = new List<GameObject>();
-        public List<GameObject> veggieOptions = new List<GameObject>();
-        public List<GameObject> topBunOptions = new List<GameObject>();
+        public List<GameObject> bottomBunOptions;
+        public List<GameObject> pickleOptions;
+        public List<GameObject> lettuceOptions;
+        public List<GameObject> PattyOptions;
+        public List<GameObject> condimentsOptions;
+        public List<GameObject> veggieOptions;
+        public List<GameObject> topBunOptions;
         public List<GameObject> toSpawn;
 
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)

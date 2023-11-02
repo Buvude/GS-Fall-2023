@@ -1,6 +1,5 @@
 #day:1 #CSConvo:0
 EXTERNAL GoToDiner()
-
 (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana
 (Here we are... The Portal Diner...) #speaker:Graciana
 (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)
@@ -14,7 +13,7 @@ OH! Ya! You’re Graciana, right? #speaker:???
 
 (Suddenly, the kitchen door swings open, and before me stands, literally… a “fly guy.”) #speaker:Graciana
 
-Why didn’t ya start with that? I’m Chef Swatts, I’m tha head chef–and only–chef here! #speaker:Chef Swatts
+Why didn’t ya start with that? I’m Chef Swatts, I’m tha head chef–and only–chef here! #speaker:Chef Swatts #mood:neutral
 
 H-hi, I’m Graciana–#speaker:Graciana
 

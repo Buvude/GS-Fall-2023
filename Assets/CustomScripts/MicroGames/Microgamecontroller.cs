@@ -13,8 +13,8 @@ namespace InterDineMension.MicroGame
         public GameObject dialogueContainer;
         public dialogueManager dM;
         public GameObject bAMContainer;
-        public BAManeger bAM = new BAManeger();
-        public List<BurgerIngredients.ingredientType> orderedIngredients = new List<BurgerIngredients.ingredientType>();
+        public BAManeger bAM;
+        public List<BurgerIngredients.ingredientType> orderedIngredients;
 
 
         public GameObject tempMicroGameHolder;

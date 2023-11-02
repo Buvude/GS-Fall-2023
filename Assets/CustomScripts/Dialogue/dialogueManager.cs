@@ -18,8 +18,9 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+     
         //public GameObject charImageCS, charImageOR;
-        private bool deactivatedcorutines = false;
+        //private bool deactivatedcorutines = false;
         public VariableHolder vH;
         public GameObject convoModeImages, charBtn;
         public dialogueSpriteManager manager;
@@ -29,9 +30,9 @@ namespace InterDineMension.Manager
         private Coroutine displayLineCorutine;
         private DialogueVariables dV;
         private bool canContinueToNextLine = false;
-        public CheffSwatts cS = new CheffSwatts();
-        public Graciana grac=new Graciana();
-        public O_Ryan oR=new O_Ryan();
+        public CheffSwatts cS /*= new CheffSwatts()*/;
+        public Graciana grac/*=new Graciana()*/;
+        public O_Ryan oR;
 
         public enum speaker { Graciana, Swatts,O_Ryan,None};
         public enum speakingTo {  O_Ryan, Swatts};
@@ -84,6 +85,8 @@ namespace InterDineMension.Manager
 
         private void Awake()
         {
+            cS.sR.color = Color.HSVToRGB(0, 0, 40);
+            grac.sR.color = Color.HSVToRGB(0, 0, 40);
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2);
             dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(loadGlobalsJSON); 
@@ -416,18 +419,38 @@ namespace InterDineMension.Manager
                         displayNameText.text = tagValue;
                         if(tagValue== "Chef Swatts")
                         {
+                            cS.sR.color = Color.HSVToRGB(0, 0, 1, true);
+                            grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
                             charSpeak = speaker.Swatts;
                         }
                         else if(tagValue== "Graciana")
                         {
                             charSpeak = speaker.Graciana;
+                            switch (charSpeakTo)
+                            {
+                                case speakingTo.O_Ryan:
+                                    oR.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    break;
+                                case speakingTo.Swatts:
+                                    cS.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1,false);
+                                    break;
+                                default:
+                                    grac.sR.color=Color.HSVToRGB(0,0, 1, true);
+                                    break;
+                            }
                         }
                         else if (tagValue == "O'Ryan")
                         {
-                            charSpeak= speaker.O_Ryan;
+                            oR.sR.color = Color.HSVToRGB(0, 0, 1);
+                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                            charSpeak = speaker.O_Ryan;
                         }
                         else if (tagValue == "???")
                         {
+                            //cS.sR.color = Color.HSVToRGB(0, 0, 40);
+                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
                             charSpeak = speaker.None;
                         }
                         break;
