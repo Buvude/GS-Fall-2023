@@ -34,7 +34,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.74632764}
   m_AnchorMax: {x: 0.18250173, y: 0.85255754}
-  m_AnchoredPosition: {x: 0.099975586, y: 0.3999939}
+  m_AnchoredPosition: {x: 0.099975586, y: 0.39996338}
   m_SizeDelta: {x: -4.0571995, y: -0.1568985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2828143803069152127
@@ -321,7 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2f5942599fdfb04081f9d58260cd6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
+  speed: 0
   playerMovment: {fileID: 6807433092018355946}
   aS: {fileID: 0}
   correct: {fileID: 8300000, guid: a7e6dd97f7bfe2d4d8978d80db0c598b, type: 3}
@@ -342,7 +342,7 @@ MonoBehaviour:
   pickles: {fileID: 21300000, guid: 3408206a8a5ec3c44bfe6df18161bcd9, type: 3}
   relish: {fileID: 21300000, guid: 0e7cfa15a3af7ca49b13034c69af4dce, type: 3}
   noPickles: {fileID: 0}
-  peppers: {fileID: 0}
+  peppers: {fileID: 21300000, guid: 8b5736f873fad1640bd13437714c0d04, type: 3}
   wholeLeafLettuce: {fileID: 21300000, guid: d1b7b1aa38d1d6f48a8c7a5331b6899e, type: 3}
   choppedLettuce: {fileID: 21300000, guid: 00f50e750870d794caf46bfe7a1a638e, type: 3}
   noLettuce: {fileID: 0}
@@ -357,7 +357,7 @@ MonoBehaviour:
   tomatoe: {fileID: 21300000, guid: 9c07e6e5ccffbd646bb6f0abc0c4e602, type: 3}
   choppedOnions: {fileID: 21300000, guid: 6233f7efda0523b4fbf34ddb9b1b0153, type: 3}
   none: {fileID: 0}
-  mushrooms: {fileID: 0}
+  mushrooms: {fileID: 21300000, guid: 67de693ba79e75a4caf42f6b097b6dd7, type: 3}
   classicTopBun: {fileID: 21300000, guid: a72f0c7b4f336d94cb15e4602401ba93, type: 3}
   lettuceWrapTop: {fileID: 21300000, guid: e3d567ec0332f4a40bf362f259ee645f, type: 3}
   noTopBun: {fileID: 0}
@@ -460,6 +460,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0811a9ad8c671e4099a60eab324692f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pC: {fileID: 3833102980267247129}
+  startBtn: {fileID: 763463599341371729}
   blank1: {fileID: 4900866067201898603, guid: f1f068873de29974383f7d2e115bb628, type: 3}
   blank2: {fileID: 4900866067201898603, guid: f1f068873de29974383f7d2e115bb628, type: 3}
   level: 1
@@ -1568,15 +1570,15 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 6237360708754120732}
-  m_FillRect: {fileID: 0}
+  m_FillRect: {fileID: 1156582760885038806}
   m_HandleRect: {fileID: 6523369711528844446}
   m_Direction: 0
   m_MinValue: 0
   m_MaxValue: 100
   m_WholeNumbers: 0
-  m_Value: 50
+  m_Value: 53
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -2205,7 +2207,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Use the arrow keys to move around and collect the needed ingredients
+  m_text: Click the plate and drag it around to collect ingredients!
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2748,7 +2750,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.6087874}
   m_AnchorMax: {x: 0.18250173, y: 0.7153449}
-  m_AnchoredPosition: {x: 0.099975586, y: -0.69999695}
+  m_AnchoredPosition: {x: 0.099975586, y: -0.7000122}
   m_SizeDelta: {x: -4.0572, y: -0.1568985}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6100035243344079591

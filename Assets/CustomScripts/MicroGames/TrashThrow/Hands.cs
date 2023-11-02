@@ -53,5 +53,10 @@ namespace InterDineMension
                 Debug.LogWarning("No items in options");
             }
         }
+
+        public void ReadyToThrow()
+        {
+            rc.canThrow = true;
+        }
     }
 }

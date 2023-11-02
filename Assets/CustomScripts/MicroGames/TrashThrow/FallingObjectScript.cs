@@ -36,6 +36,12 @@ namespace InterDineMension
                     worthPoint = true;
                 }
             }
+            else if(collision.gameObject.layer == 11&&canScore)
+            {
+                canScore=false;
+                location=BinLandedIn.none;
+                worthPoint=false;
+            }
 
         }
     }

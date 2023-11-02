@@ -22,6 +22,7 @@ namespace InterDineMension.MicroGame.TT
             bc = parenthand.upperbounds;
             gameObject.GetComponentInParent<Hands>().currentObject = this;
             rb.gravityScale = 0f;
+            /*rc.canThrow = true;*/
         }
 
         // Update is called once per frame
