@@ -36,19 +36,23 @@ namespace InterDineMension.MicroGame.TT
 
         IEnumerator tallyUp()
         {
+            rc.player.GetComponent<Animator>().SetTrigger("End");
             timerHasEnded = true;
             rc.speed = 0f;
-            Debug.Log("Times up");
             instructions.text=$"Score: {score}/{goal}";
 
             foreach(var f in fallenObjects)
             {
                 if (f.worthPoint)
                 {
+                    f.transform.parent = null;
+                    f.transform.localScale.Set(1, 1, 1);
                     PlusPoint(f);
                 }
                 else
                 {
+                    f.transform.parent = null;
+                    f.transform.localScale.Set(1, 1, 1);
                     noPoint(f);
                 }
                 yield return new WaitForSeconds(scorepause);

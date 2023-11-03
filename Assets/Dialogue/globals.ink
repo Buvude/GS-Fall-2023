@@ -9,11 +9,12 @@ LIST Veggies1 = (Tomatoe), (Onion), (Nothing)
 LIST TBuns1 = (Plain), (Lettucebun), (Nothing) //(Bun_of_the_Deep) same as above
 VAR convo_numberCS=0
 VAR convo_numberF=0
-VAR tTMLevelNumber=0
+
 
 //Imma try to integrate the variables here since it'll save it 
 
 VAR dayVar = 1//may not need to be used
+VAR weekDay = "Mon"
 //Cheff Swatts variables
 VAR affectionCS = 0
 VAR chaosCS = 0

@@ -29,9 +29,30 @@ namespace InterDineMension
         {
             if (collision.gameObject.layer == 8&&canScore)
             {
+                this.gameObject.transform.parent = collision.gameObject.transform;
                 canScore = false;
                 location=BinLandedIn.trash;
                 if (type == objectType.trash)
+                {
+                    worthPoint = true;
+                }
+            }
+            else if (collision.gameObject.layer == 9 && canScore)
+            {
+                this.gameObject.transform.parent = collision.gameObject.transform;
+                canScore = false;
+                location = BinLandedIn.recycling;
+                if (type == objectType.recycling)
+                {
+                    worthPoint = true;
+                }
+            }
+            else if (collision.gameObject.layer == 10 && canScore)
+            {
+                this.gameObject.transform.parent = collision.gameObject.transform;
+                canScore = false;
+                location = BinLandedIn.compost;
+                if (type == objectType.compost)
                 {
                     worthPoint = true;
                 }
