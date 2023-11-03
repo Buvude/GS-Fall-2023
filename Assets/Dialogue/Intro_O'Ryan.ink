@@ -11,12 +11,12 @@ EXTERNAL StartO_Ryan()
 E-excuse me, we're closing now, so if you could please-- #speaker:Graciana #mood:think
 (A massive, towering figure exits the portal.)
 // Show O'Ryan Neutral
-(It's almost like... if a galaxy was a person...) #speaker:Graciana
+(It's almost like... if a galaxy was a person...) #speaker:Graciana #mood:fear
 S-sir? Uh... Ma'am? Uh...
 
 ... #speaker:???//set to slower text speed for O'Ryan while they are ???
 
-(I can't tell if it has eyes, but I somehow feel them staring into my soul...) #speaker:Graciana #mood:neutral
+(I can't tell if it has eyes, but I somehow feel them staring into my soul...) #speaker:Graciana
 C-can I help you...?
 
 ... #speaker:???
@@ -29,8 +29,8 @@ Uh...
         Y-yeah, that's me... #speaker:Graciana
         
         ... #speaker:???
-        I am O'Ryan. #speaker:O'Ryan 
-        I am the owner of The Portal Diner.#mood:blank
+        I am O'Ryan. #speaker:O'Ryan #mood:happy
+        I am the owner of The Portal Diner.
         
         !! #speaker:Graciana
         Oh! Right! Yeah, of course! Hi, uh, thank you, for, uh, hiring me, and, and, uh, I'm Graciana!
@@ -50,14 +50,14 @@ Uh...
         Who's Graciana? I-I've never heard that n-name before... #speaker:Graciana
         
         ... #speaker:???
-        I am O'Ryan. #speaker:O'Ryan
+        I am O'Ryan. #speaker:O'Ryan 
         I am the owner of The Portal Diner.
         
         !!!! #speaker:Graciana
         O-oh! Y-yeah! Right, s-sorry, I, uh, yeah, uh, I am, uh, Graciana, ha, ha, s-sorry, I, uh, j-just--
         (O'Ryan holds out an envelope without a word. They gesture for me to take it.)
         
-        Payment. For today. #speaker:O'Ryan
+        Payment. For today. #speaker:O'Ryan #mood:annoyed
         ...
         Graciana.
         ->continue
