@@ -1,4 +1,4 @@
-#day:1 #CSConvo:0
+//#day:1 #CSConvo:0
 EXTERNAL GoToDiner()
 
 (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana

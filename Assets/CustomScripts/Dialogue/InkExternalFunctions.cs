@@ -29,6 +29,7 @@ namespace InterDineMension
 
         public void Bind(Story currentStory, BAManeger bAM, Microgamecontroller mGC, dialogueManager dM)
         {
+            Debug.Log(currentStory.variablesState["dayVar"]);
             
             currentStory.BindExternalFunction("StartBAMicro1", () =>
             {
@@ -42,7 +43,11 @@ namespace InterDineMension
             });
             currentStory.BindExternalFunction("GoToDiner", (/*int day, int csConvo*/) =>
             {
-                List<string> temp = currentStory.globalTags;
+                if (currentStory.variablesState["dayVar"].ToString() == "1")
+                {
+                    Debug.Log("made it to day one");
+                }
+                /*List<string> temp = currentStory.globalTags;
                 foreach (string tag in temp)
                 {
                     string[] splitTag = tag.Split(':');
@@ -60,7 +65,7 @@ namespace InterDineMension
                     {
                         csConvo = int.Parse(tagValue);
                     }
-                }
+                }*/
                 dM.ExitDialogueMode(true,day,csConvo);
                 //dM.EnterDinerMode();
             });

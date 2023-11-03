@@ -9,6 +9,8 @@ Ay, Gracie, ya got a minute? #speaker:Chef Swatts
     What's happenin'? #speaker:Graciana #mood:think
 
     Ay, just wanted to lend ya ear for a minute #speaker:Chef Swatts
+    //go to ending
+    ->DONE //temporary place holder so no error
     
 * I'm busy
     -> DONE

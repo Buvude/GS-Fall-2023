@@ -172,6 +172,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346a44ada3d002b439ecf81ccdb0c8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  GlobalInk: {fileID: 4900000, guid: 79643bfe944f4e248b2caa40b789658e, type: 3}
+  day: 0
+  affectionCS: 0
+  chaosCS: 0
+  irritatedCS: 0
+  affectionN: 0
+  chaosN: 0
+  irritatedN: 0
+  affectionCC: 0
+  chaosCC: 0
+  irritatedCC: 0
+  affectionG: 0
+  chaosG: 0
+  irritatedG: 0
+  affectionM: 0
+  chaosM: 0
+  irritatedM: 0
+  affectionF: 0
+  chaosF: 0
+  irritatedF: 0
+  finalEncounterTracker: 0
   characterStateNico: 0
 --- !u!1 &819664206
 GameObject:
@@ -546,6 +567,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819664210}
     m_Modifications:
+    - target: {fileID: 1156582760885038806, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156582760885038806, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2162067074381656856, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -630,10 +659,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: BurgerAssemblyMicrogameContainer
       objectReference: {fileID: 0}
+    - target: {fileID: 3446430597110178411, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3833102980267247129, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: aS
       value: 
       objectReference: {fileID: 1764469276}
+    - target: {fileID: 3833102980267247129, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: speed
+      value: 0.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523369711528844446, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.53
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523369711528844446, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6523369711528844446, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.53
+      objectReference: {fileID: 0}
     - target: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: dM
       value: 
@@ -646,6 +695,10 @@ PrefabInstance:
       propertyPath: microgamecontroller
       value: 
       objectReference: {fileID: 1183388462}
+    - target: {fileID: 9136977010044305304, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.7590942
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

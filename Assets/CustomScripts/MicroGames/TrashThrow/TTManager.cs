@@ -16,6 +16,7 @@ namespace InterDineMension.MicroGame.TT
         public bool timerHasStarted, timerHasEnded;
         public List<FallingObjectScript> fallenObjects;
         public reticalControl rc;
+        public BoxCollider2D topCollider;
 
         // Start is called before the first frame update
         void Start()
@@ -35,19 +36,23 @@ namespace InterDineMension.MicroGame.TT
 
         IEnumerator tallyUp()
         {
+            rc.player.GetComponent<Animator>().SetTrigger("End");
             timerHasEnded = true;
             rc.speed = 0f;
-            Debug.Log("Times up");
             instructions.text=$"Score: {score}/{goal}";
 
             foreach(var f in fallenObjects)
             {
                 if (f.worthPoint)
                 {
+                    f.transform.parent = null;
+                    f.transform.localScale.Set(1, 1, 1);
                     PlusPoint(f);
                 }
                 else
                 {
+                    f.transform.parent = null;
+                    f.transform.localScale.Set(1, 1, 1);
                     noPoint(f);
                 }
                 yield return new WaitForSeconds(scorepause);
@@ -74,6 +79,7 @@ namespace InterDineMension.MicroGame.TT
                 timerText.text = $"{i} seconds";
                 yield return new WaitForSeconds(1);
             }
+            topCollider.enabled = false;   
             StartCoroutine(tallyUp());
             StopCoroutine(timer());
         }

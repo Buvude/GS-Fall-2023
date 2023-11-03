@@ -18,8 +18,9 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+     
         //public GameObject charImageCS, charImageOR;
-        private bool deactivatedcorutines = false;
+        //private bool deactivatedcorutines = false;
         public VariableHolder vH;
         public GameObject convoModeImages, charBtn;
         public dialogueSpriteManager manager;
@@ -29,12 +30,14 @@ namespace InterDineMension.Manager
         private Coroutine displayLineCorutine;
         private DialogueVariables dV;
         private bool canContinueToNextLine = false;
-        public CheffSwatts cS = new CheffSwatts();
-        public Graciana grac=new Graciana();
-        public O_Ryan oR=new O_Ryan();
+        public CheffSwatts cS /*= new CheffSwatts()*/;
+        public Graciana grac/*=new Graciana()*/;
+        public O_Ryan oR;
+        public CeeCee cC;
+        public Gnomies G;
 
-        public enum speaker { Graciana, Swatts,O_Ryan,None};
-        public enum speakingTo {  O_Ryan, Swatts};
+        public enum speaker { Graciana, Swatts,O_Ryan, CeeCee, Gnomies, Fred, None};
+        public enum speakingTo {  O_Ryan, Swatts, CeeCee, Gnomies, Fred};
         public speaker charSpeak;
         public speakingTo charSpeakTo;
 
@@ -77,13 +80,15 @@ namespace InterDineMension.Manager
         private const string VEGGIE_TAG = "veggie";
         private const string TBUN_TAG = "TBun";
         private const string MOOD = "mood";
-        private const string VAR_CHANGE = "varChange";
+        //private const string VAR_CHANGE = "varChange"; not sure what this was supposed to me lmao
 
         public InkExternalFunctions iEF;
         public GameObject BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2;
 
         private void Awake()
         {
+            cS.sR.color = Color.HSVToRGB(0, 0, 40);
+            grac.sR.color = Color.HSVToRGB(0, 0, 40);
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2);
             dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(loadGlobalsJSON); 
@@ -103,7 +108,7 @@ namespace InterDineMension.Manager
                 choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
                 index++;
             }
-            StartMorningConvo();
+            StartMorningConvo();//will need to be adjusted later
         }
 
         public void StartMorningConvo()
@@ -335,6 +340,7 @@ namespace InterDineMension.Manager
                 {
                     case MOOD:
                         {
+                            
                             switch (charSpeak)
                             {
                                 case speaker.Graciana:
@@ -408,6 +414,12 @@ namespace InterDineMension.Manager
                                         oR.sR.sprite= oR.spriteDictionary[tagValue];
                                         break;
                                     }
+                                case speaker.CeeCee:
+                                    {
+                                        Debug.Log("Got to CeeCee sprites");
+                                        cC.sR.sprite = oR.spriteDictionary[tagValue];
+                                        break;
+                                    }
                                 default:Debug.Log("default"); break;
                                 }
                             break;
@@ -416,18 +428,58 @@ namespace InterDineMension.Manager
                         displayNameText.text = tagValue;
                         if(tagValue== "Chef Swatts")
                         {
+                            cS.sR.color = Color.HSVToRGB(0, 0, 1, true);
+                            grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
                             charSpeak = speaker.Swatts;
                         }
                         else if(tagValue== "Graciana")
                         {
                             charSpeak = speaker.Graciana;
+                            switch (charSpeakTo)
+                            {
+                                case speakingTo.O_Ryan:
+                                    oR.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    break;
+                                case speakingTo.Swatts:
+                                    cS.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1,false);
+                                    break;
+                                case speakingTo.CeeCee:
+                                    cC.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    break;
+                                case speakingTo.Gnomies:
+                                    G.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    break;
+                                default:
+                                    grac.sR.color=Color.HSVToRGB(0,0, 1, true);
+                                    break;
+                            }
                         }
                         else if (tagValue == "O'Ryan")
                         {
-                            charSpeak= speaker.O_Ryan;
+                            oR.sR.color = Color.HSVToRGB(0, 0, 1);
+                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                            charSpeak = speaker.O_Ryan;
+                        }
+                        else if (tagValue == "CeeCee") 
+                        {
+                            cC.sR.color = Color.HSVToRGB(0, 0, 1);
+                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                            charSpeak = speaker.O_Ryan;
+                        }
+                        else if (tagValue == "Gnomies")
+                        {
+                            G.sR.color = Color.HSVToRGB(0, 0, 1);
+                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                            charSpeak = speaker.O_Ryan;
                         }
                         else if (tagValue == "???")
                         {
+                            //cS.sR.color = Color.HSVToRGB(0, 0, 40);
+                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
                             charSpeak = speaker.None;
                         }
                         break;
@@ -612,19 +664,18 @@ namespace InterDineMension.Manager
             dialogueText.text = "";
             if(enterDialogueMode)
             {
-                EnterDinerMode(day,csConvoNumber);
+                EnterDinerMode(day);
             }
             exitedDialogueMode = true;
         }
 
-        public void EnterDinerMode(int day, int csConvoNumber)
+        public void EnterDinerMode(int day)
         {
-            Debug.Log("entered diner mode!");
-            /*switch (day)
+            switch (day)//will determine who's avalible
             {
                 default:
                     break;
-            }*/
+            }
             convoModeImages.gameObject.SetActive(false);
             charBtn.gameObject.SetActive(true);
         }

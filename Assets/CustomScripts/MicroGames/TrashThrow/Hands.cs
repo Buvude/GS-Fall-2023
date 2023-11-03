@@ -26,10 +26,7 @@ namespace InterDineMension
         // Update is called once per frame
         void Update()
         {
-            if (animating && GetComponent<Animator>().GetCurrentAnimatorClipInfo(1)==null)
-            {
-                animating = false;
-            }
+            
         }
 
         public void releaseObject()

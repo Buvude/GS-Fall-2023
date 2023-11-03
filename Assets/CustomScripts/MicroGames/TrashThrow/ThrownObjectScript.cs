@@ -33,10 +33,8 @@ namespace InterDineMension.MicroGame.TT
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            Debug.Log("got here");
             if (collision.collider == bc)
             {
-                Debug.Log("Level 2");
                 rc.SpawnFallingObject(dropPosition, type);
                 Destroy(this.gameObject);
             }

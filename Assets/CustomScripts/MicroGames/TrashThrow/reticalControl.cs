@@ -7,6 +7,7 @@ namespace InterDineMension.MicroGame.TT
 {
     public class reticalControl : MonoBehaviour
     {
+        public GameObject hitMarker;
         public TTManager manager;
         public GameObject fallingTrash, fallingRecycling, fallingCompost;
         public Vector3 dropSpot;
@@ -44,8 +45,14 @@ namespace InterDineMension.MicroGame.TT
             
             if (canThrow&&!manager.timerHasEnded&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Z)||Input.GetKeyDown(KeyCode.Space)))
             {
+                if(hitMarker.transform.parent != null) 
+                {
+                    hitMarker.transform.parent = null;
+                }
+
                 canThrow = false;
                 dropSpot = transform.position;
+                hitMarker.transform.position = dropSpot;
                 player.GetComponent<Animator>().SetTrigger("Throw");
                 player.animating = true;
             }
