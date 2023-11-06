@@ -10,6 +10,9 @@ LIST TBuns1 = (Plain), (Lettucebun), (Nothing) //(Bun_of_the_Deep) same as above
 VAR convo_numberCS=0
 VAR convo_numberF=0
 
+VAR BAMLevel = 0
+VAR TTMLevel = 0
+VAR currentConvo="test"
 
 //Imma try to integrate the variables here since it'll save it 
 

@@ -74,6 +74,10 @@ namespace InterDineMension
                 dM.charSpeakTo = dialogueManager.speakingTo.O_Ryan;
                 dM.EnterDialogueMode(dM.O_RyanIntro);
             });
+            currentStory.BindExternalFunction("StartTTMicro", () =>
+            {
+                mGC.loadTTM();
+            });
         }
 
         public void unBind(Story currentStory)
@@ -82,6 +86,7 @@ namespace InterDineMension
             currentStory.UnbindExternalFunction("StartBAMicro2");
             currentStory.UnbindExternalFunction("GoToDiner");
             currentStory.UnbindExternalFunction("StartO_Ryan");
+            currentStory.UnbindExternalFunction("StartTTMicro");
         }
     }
 }

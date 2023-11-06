@@ -29,7 +29,7 @@ namespace InterDineMension
         {
             if (collision.gameObject.layer == 8&&canScore)
             {
-                this.gameObject.transform.parent = collision.gameObject.transform;
+                //this.gameObject.transform.parent = collision.gameObject.GetComponentInChildren<Transform>();
                 canScore = false;
                 location=BinLandedIn.trash;
                 if (type == objectType.trash)
@@ -39,7 +39,7 @@ namespace InterDineMension
             }
             else if (collision.gameObject.layer == 9 && canScore)
             {
-                this.gameObject.transform.parent = collision.gameObject.transform;
+                //this.gameObject.transform.parent = collision.gameObject.GetComponentInChildren<GameObject>().transform;
                 canScore = false;
                 location = BinLandedIn.recycling;
                 if (type == objectType.recycling)
@@ -49,7 +49,7 @@ namespace InterDineMension
             }
             else if (collision.gameObject.layer == 10 && canScore)
             {
-                this.gameObject.transform.parent = collision.gameObject.transform;
+                //this.gameObject.transform.parent = collision.gameObject.GetComponentInChildren<GameObject>().transform;
                 canScore = false;
                 location = BinLandedIn.compost;
                 if (type == objectType.compost)
@@ -57,7 +57,7 @@ namespace InterDineMension
                     worthPoint = true;
                 }
             }
-            else if(collision.gameObject.layer == 11&&canScore)
+            else if(collision.gameObject.layer == 12&&canScore)
             {
                 canScore=false;
                 location=BinLandedIn.none;
