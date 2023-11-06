@@ -14,6 +14,8 @@ namespace InterDineMension.MicroGame.BA
     using InterDineMension.Manager;
     public class BAManeger : MonoBehaviour
     {
+        public PlayerController pC;
+        public Button startBtn;
         public BurgerIngredients blank1,blank2;
         public int level;
         public GameObject BAMObject;
@@ -40,21 +42,24 @@ namespace InterDineMension.MicroGame.BA
         {
             bottomBun, pickle, lettuce, Patty, condiment, veggie, topBun
         };
-        public phase bAState=phase.bottomBun;
+        public phase bAState;
+        
         /// <summary>
         /// lists of objects that can spawn in the microgame
         /// </summary>
-        public List<GameObject> bottomBunOptions = new List<GameObject>();
-        public List<GameObject> pickleOptions=new List<GameObject>();
-        public List<GameObject> lettuceOptions = new List<GameObject>();
-        public List<GameObject> PattyOptions = new List<GameObject>();
-        public List<GameObject> condimentsOptions = new List<GameObject>();
-        public List<GameObject> veggieOptions = new List<GameObject>();
-        public List<GameObject> topBunOptions = new List<GameObject>();
+        public List<GameObject> bottomBunOptions;
+        public List<GameObject> pickleOptions;
+        public List<GameObject> lettuceOptions;
+        public List<GameObject> PattyOptions;
+        public List<GameObject> condimentsOptions;
+        public List<GameObject> veggieOptions;
+        public List<GameObject> topBunOptions;
         public List<GameObject> toSpawn;
 
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)
         {
+            ResetMiniGame();
+            Debug.Log(finalScore);
             dM.manager.imagePopUp.enabled = false;
             for (int i = 0; i < ingredients.Count; i++)
             {
@@ -89,6 +94,17 @@ namespace InterDineMension.MicroGame.BA
         /// </summary>
         /// 
         //TODO make a 
+
+        public void ResetMiniGame()
+        {
+            pC.ingredientTypes.Clear();
+            orderedIngredients.Clear();
+            pC.resetMiniGameSprites();
+            bAState = phase.bottomBun;
+            finalScore = 0;
+            finishedBurger.gameObject.SetActive(false);
+            startBtn.gameObject.SetActive(true);
+        }
         public void StartTheNextPhase()
         {
             switch (bAState)

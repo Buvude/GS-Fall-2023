@@ -9,12 +9,13 @@ namespace InterDineMension.Character
     {
         public TextAsset CS1, CS2;
         public Image sR;
-        public Dictionary<string, Sprite> spriteDictionary = new Dictionary<string,Sprite>();
+        public Dictionary<string, Sprite> spriteDictionary;
         public string[] dictKeyCS;
         public Sprite[] dictValueCS;
         // Start is called before the first frame update
         void Awake()
         {
+            spriteDictionary = new Dictionary<string, Sprite>();
             if (dictKeyCS.Length != dictValueCS.Length)
             {
                 Debug.LogWarning("The length of moods is different then the list of sprites");
