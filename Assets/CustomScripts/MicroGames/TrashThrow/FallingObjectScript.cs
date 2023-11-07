@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace InterDineMension
+namespace InterDineMension.MicroGame.TT
 {
     public class FallingObjectScript : MonoBehaviour
     {
