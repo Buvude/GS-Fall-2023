@@ -8,6 +8,7 @@ namespace InterDineMension.MicroGame.BT
     {
         public DirtSpots dirt;
         public GameObject silverwareNapkinCombo;
+        public FullTable fT;
         // Start is called before the first frame update
         void Start()
         {
@@ -25,6 +26,7 @@ namespace InterDineMension.MicroGame.BT
             if (dirt.clean)
             {
                 silverwareNapkinCombo.SetActive(true);
+                fT.numberBussed++;
             }
         }
     }

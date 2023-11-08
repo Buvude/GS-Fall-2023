@@ -19,6 +19,7 @@ namespace InterDineMension.MicroGame.BT
             if (this.GetComponent<SpriteRenderer>().color.a == 0)
             {
                 clean = true;
+                this.gameObject.GetComponent<CircleCollider2D>().enabled = false;
             }
         }
         private void OnCollisionEnter2D(Collision2D collision)
