@@ -10,6 +10,7 @@ namespace InterDineMension.MicroGame.BT
         public int numberBussed, numberOfSections;
         public Animator animator;
         public bool animationcalled = false;
+        public MouseControls mc;
         // Start is called before the first frame update
         void Start()
         {
@@ -19,6 +20,7 @@ namespace InterDineMension.MicroGame.BT
                 numberOfSections++;
                 table.fT = this;
             }
+            mc=GetComponentInParent<MouseControls>();
 
         }
 
@@ -34,7 +36,7 @@ namespace InterDineMension.MicroGame.BT
 
         public void onExit()
         {
-
+            mc.spawnNextTable(this);
         }
     }
 }

@@ -12,6 +12,7 @@ VAR convo_numberF=0
 
 VAR BAMLevel = 0
 VAR TTMLevel = 0
+VAR TBMLevel = 1
 VAR currentConvo="test"
 
 //Imma try to integrate the variables here since it'll save it 

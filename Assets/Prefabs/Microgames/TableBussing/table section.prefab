@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 678359056203787542}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.0570238, y: 2.4671233, z: 0.17838144}
+  m_LocalPosition: {x: 3.0570238, y: 2.4671233, z: 0}
   m_LocalScale: {x: 3.7463462, y: 3.7463462, z: 3.7463462}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dirt: {fileID: 4703814047841582468}
   silverwareNapkinCombo: {fileID: 4819100194868339668}
+  fT: {fileID: 0}
 --- !u!212 &102709836958489450
 SpriteRenderer:
   m_ObjectHideFlags: 0
