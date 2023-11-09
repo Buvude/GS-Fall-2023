@@ -88,6 +88,23 @@ namespace InterDineMension.MicroGame.BA
             topBunOptions.Add(tbun);
         }
 
+        public void LevelUp(GameObject bBun2, GameObject pickles2, GameObject greens2, GameObject patty2, GameObject condiment2, GameObject veggie2, GameObject bun2, GameObject bBun3, GameObject pickles3, GameObject greens3, GameObject patty3, GameObject condiment3, GameObject veggie3, GameObject bun3)
+        {
+            bottomBunOptions.Add(bBun2);
+            pickleOptions.Add(pickles2);
+            lettuceOptions.Add(greens2);
+            PattyOptions.Add(patty2);
+            condimentsOptions.Add(condiment2);
+            veggieOptions.Add(veggie2);
+            topBunOptions.Add(bun2);
+            bottomBunOptions.Add(bBun3);
+            pickleOptions.Add(pickles3);
+            lettuceOptions.Add(greens3);
+            PattyOptions.Add(patty3);
+            condimentsOptions.Add(condiment3);
+            veggieOptions.Add(veggie3);
+            topBunOptions.Add(bun3);
+        }
         // Start is called before the first frame update
         /// <summary>
         /// randomizes the placement of the items
@@ -365,7 +382,7 @@ namespace InterDineMension.MicroGame.BA
             temp.AddRange(toShuffle);
             for (int i = 0; i < toShuffle.Count; i++)
             {
-                int index=Random.Range(0, temp.Count - 1);//using unity system.random
+                int index=Random.Range(0, temp.Count);//using unity system.random
                 toSpawn.Add(temp[index]);
                 temp.RemoveAt(index);
             }
@@ -440,5 +457,7 @@ namespace InterDineMension.MicroGame.BA
                 dM.EnterDialogueMode(gM.cheffSwattsConvos[1]);//only valid for day one
             }
         }
+
+        
     }
 }

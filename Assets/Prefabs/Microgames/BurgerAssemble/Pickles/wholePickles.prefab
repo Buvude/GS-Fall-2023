@@ -30,27 +30,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6926032783735619097, guid: bc7291a118b4be346acaac2b9484a92b, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 0.4967245
       objectReference: {fileID: 0}
     - target: {fileID: 6926032783735619097, guid: bc7291a118b4be346acaac2b9484a92b, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0.5
+      value: 0.4977324
       objectReference: {fileID: 0}
     - target: {fileID: 6926032783735619097, guid: bc7291a118b4be346acaac2b9484a92b, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0.4967245
       objectReference: {fileID: 0}
     - target: {fileID: 6926032783735619097, guid: bc7291a118b4be346acaac2b9484a92b, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0.5
+      value: 0.4977324
       objectReference: {fileID: 0}
     - target: {fileID: 6926032783735619097, guid: bc7291a118b4be346acaac2b9484a92b, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 66.7652
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6926032783735619097, guid: bc7291a118b4be346acaac2b9484a92b, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 57.418
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6926032783735619097, guid: bc7291a118b4be346acaac2b9484a92b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -82,11 +82,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6926032783735619097, guid: bc7291a118b4be346acaac2b9484a92b, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6926032783735619097, guid: bc7291a118b4be346acaac2b9484a92b, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6926032783735619097, guid: bc7291a118b4be346acaac2b9484a92b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -106,7 +106,7 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: c54cf81fddfff014eb0c832bc4970c42, type: 3}
     - target: {fileID: 7028399151471062100, guid: bc7291a118b4be346acaac2b9484a92b, type: 3}
       propertyPath: m_Color.a
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
