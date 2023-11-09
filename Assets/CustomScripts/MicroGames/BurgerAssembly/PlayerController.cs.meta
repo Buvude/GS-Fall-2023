@@ -3,7 +3,50 @@ guid: a2f5942599fdfb04081f9d58260cd6cd
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - playerMovment: {instanceID: 0}
+  - aS: {instanceID: 0}
+  - correct: {instanceID: 0}
+  - wrong: {instanceID: 0}
+  - cosmic: {instanceID: 0}
+  - BAManeger: {instanceID: 0}
+  - bottomBunRend: {instanceID: 0}
+  - picklesRend: {instanceID: 0}
+  - lettuceRend: {instanceID: 0}
+  - pattyRend: {instanceID: 0}
+  - condimentRend: {instanceID: 0}
+  - finalBonusRend: {instanceID: 0}
+  - topBunRend: {instanceID: 0}
+  - classicBottomBun: {fileID: 21300000, guid: 1c1881d0bf0dd0e428a634a4e672bb02, type: 3}
+  - lettuceWrapBottom: {fileID: 21300000, guid: 1cd1807cdd04e684396d0a63b204b807, type: 3}
+  - sourDoughBottom: {fileID: 21300000, guid: a019cf8aafc32d648b6739c50740f540, type: 3}
+  - bottomBunOfTheDeep: {fileID: 21300000, guid: 1896dded979e00c47b7d5077571284c2, type: 3}
+  - pickles: {fileID: 21300000, guid: 271ff673a7c06f0489937964858971e2, type: 3}
+  - relish: {fileID: 21300000, guid: f1d863f5155a7c84eba2abbedadc56db, type: 3}
+  - noPickles: {instanceID: 0}
+  - peppers: {fileID: 21300000, guid: e2c459b94d2ccd74fb3fdf6706ecd2f2, type: 3}
+  - wholeLeafLettuce: {fileID: 21300000, guid: 6563a04707f066841b5fcf3e1e096856, type: 3}
+  - choppedLettuce: {fileID: 21300000, guid: ff8b39dc6e1218c4aa793f100f59b471, type: 3}
+  - noLettuce: {instanceID: 0}
+  - biblicallyAccurateGreens: {fileID: 21300000, guid: c4e58b3d0c02a3b4999461aae727ef9b, type: 3}
+  - beefPatty: {fileID: 21300000, guid: 21d6bf7cdd801f345ae3fe8e1511c4d3, type: 3}
+  - veganPatty: {fileID: 21300000, guid: 1f49f4127fe041c44a342cc467042699, type: 3}
+  - unspeakableHorror: {fileID: 21300000, guid: d6409311f3a611d49840bb99f0988327, type: 3}
+  - Chicken: {fileID: 21300000, guid: 9339dadde9a03fc49adee138f4546653, type: 3}
+  - ketchup: {fileID: 21300000, guid: 48267f5200a2e7b4193332cd657a7595, type: 3}
+  - mustard: {fileID: 21300000, guid: f58440f23f3752c4d8bdae0a9452a8ca, type: 3}
+  - both: {fileID: 21300000, guid: 5fd9413f72b31034a89edf603a3e271b, type: 3}
+  - tomatoe: {fileID: 21300000, guid: ac7abe9dc72b0304492a03750b9892e7, type: 3}
+  - choppedOnions: {fileID: 21300000, guid: df61e067e90243d46b13d8d47794a968, type: 3}
+  - none: {instanceID: 0}
+  - mushrooms: {fileID: 21300000, guid: badbfadca10427f478e1460968be236b, type: 3}
+  - classicTopBun: {fileID: 21300000, guid: 0ea5b4e4f7e1d2e4fac834500915e122, type: 3}
+  - lettuceWrapTop: {fileID: 21300000, guid: b77ba6b726b1ac64f944eaa9468f38f4, type: 3}
+  - sourDoughTop: {fileID: 21300000, guid: 5ee5819ca98c58a4f807ac189ab21520, type: 3}
+  - topBunOfTheDeep: {fileID: 21300000, guid: 5f5fed19b3fb7e54693bd8570451d289, type: 3}
+  - Lane1: {instanceID: 0}
+  - Lane2: {instanceID: 0}
+  - Lane3: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

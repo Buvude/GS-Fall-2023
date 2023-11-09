@@ -174,6 +174,7 @@ Ya ya, I hear ya. Took me a while to understand that food ain't rare like it is 
 Speakin' of, help me wit' this burger, ya? 
 
 O-oh, right, yeah! #speaker:Graciana #mood:happy
+~currentConvo="cSD1"
 ->MainBAD
 
 // Order up! Looks like we got an order of: #speaker:Chef Swatts

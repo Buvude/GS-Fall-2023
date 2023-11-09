@@ -87,7 +87,7 @@ namespace InterDineMension.Manager
 
         private void Awake()
         {
-            cS.sR.color = Color.HSVToRGB(0, 0, 40);
+           /* cS.sR.color = Color.HSVToRGB(0, 0, 40);*/
             grac.sR.color = Color.HSVToRGB(0, 0, 40);
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2);
             dPTest = this.gameObject.GetComponent<Image>();
@@ -108,23 +108,22 @@ namespace InterDineMension.Manager
                 choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
                 index++;
             }
-            StartMorningConvo();//will need to be adjusted later
         }
+
+        private void Start()
+        {
+            StartMorningConvo();//will need to be adjusted later
+        }   
 
         public void StartMorningConvo()
         {
-            charSpeakTo = speakingTo.Swatts;
+            //charSpeakTo = speakingTo.Swatts;
             EnterDialogueMode(dayOneIntro);
         }
 
         public static dialogueManager GetInstance()
         {
             return instance;
-        }
-
-        private void Start()
-        {
-         
         }
 
         private void Update()
@@ -203,16 +202,30 @@ namespace InterDineMension.Manager
             switch (charSpeakTo)
             {
                 case speakingTo.O_Ryan:
-                    {
-                        cS.gameObject.SetActive(false);
-                        oR.gameObject.SetActive(true);
-                    }
+                    oR.gameObject.SetActive (true);
+                    G.gameObject.SetActive(false);
+                    cS.gameObject.SetActive(false);
+                    cC.gameObject.SetActive(false);
                     break;
                 case speakingTo.Swatts:
-                    {
-                        oR.gameObject.SetActive(false);
-                        cS.gameObject.SetActive(true);
-                    }
+                    oR.gameObject.SetActive(false);
+                    G.gameObject.SetActive(false);
+                    cS.gameObject.SetActive(true);
+                    cC.gameObject.SetActive(false);
+                    break;
+                case speakingTo.CeeCee:
+                    oR.gameObject.SetActive(false);
+                    G.gameObject.SetActive(false);
+                    cS.gameObject.SetActive(false);
+                    cC.gameObject.SetActive(true);
+                    break;
+                case speakingTo.Gnomies:
+                    oR.gameObject.SetActive(false);
+                    G.gameObject.SetActive(true);
+                    cS.gameObject.SetActive(false);
+                    cC.gameObject.SetActive(false);
+                    break;
+                case speakingTo.Fred:
                     break;
                 default:
                     break;
@@ -223,6 +236,7 @@ namespace InterDineMension.Manager
              });*/
 
             iEF.Bind(currentStory,bAM,mGC,this);
+            vH.currentStory = currentStory;
             ContinueStory();
         }
 
@@ -417,7 +431,13 @@ namespace InterDineMension.Manager
                                 case speaker.CeeCee:
                                     {
                                         Debug.Log("Got to CeeCee sprites");
-                                        cC.sR.sprite = oR.spriteDictionary[tagValue];
+                                        cC.sR.sprite = cC.spriteDictionary[tagValue];
+                                        break;
+                                    }
+                                case speaker.Gnomies:
+                                    {
+                                        Debug.Log("Got to gnomies sprites");
+                                        G.sR.sprite = G.spriteDictionary[tagValue];
                                         break;
                                     }
                                 default:Debug.Log("default"); break;
@@ -468,13 +488,13 @@ namespace InterDineMension.Manager
                         {
                             cC.sR.color = Color.HSVToRGB(0, 0, 1);
                             grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.O_Ryan;
+                            charSpeak = speaker.CeeCee;
                         }
                         else if (tagValue == "Gnomies")
                         {
                             G.sR.color = Color.HSVToRGB(0, 0, 1);
                             grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.O_Ryan;
+                            charSpeak = speaker.Gnomies;
                         }
                         else if (tagValue == "???")
                         {
@@ -556,7 +576,7 @@ namespace InterDineMension.Manager
                                 manager.DisplayImage(manager.beefPatty, 4);
                                 break;
                             case "Vegan":
-                                mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.veganPatty;
+                                mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.mushroomPatty;
                                 manager.DisplayImage(manager.veganPatty, 4);
                                 break;
                             case "Chicken":

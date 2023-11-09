@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-namespace InterDineMension
+namespace InterDineMension.MicroGame.TT
 {
     public class Hands : MonoBehaviour
     {

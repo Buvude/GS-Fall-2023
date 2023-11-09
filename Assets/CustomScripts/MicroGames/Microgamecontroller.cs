@@ -1,12 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Ink.Runtime;
+using UnityEngine.SceneManagement;
 
 namespace InterDineMension.MicroGame
 {
     using InterDineMension.MicroGame.BA;
     using System;
     using InterDineMension.Manager;
+
     public class Microgamecontroller : MonoBehaviour
     {
         public Canvas canvas;
@@ -15,6 +18,7 @@ namespace InterDineMension.MicroGame
         public GameObject bAMContainer;
         public BAManeger bAM;
         public List<BurgerIngredients.ingredientType> orderedIngredients;
+        public Story currentStory;
 
 
         public GameObject tempMicroGameHolder;
@@ -42,6 +46,11 @@ namespace InterDineMension.MicroGame
             bAMContainer.SetActive(true);
             bAM.LevelUp(bun, pickle, greens, patty,condiment, veggie,tbun);
             bAM.StartMicroGame(orderedIngredients, 2);
+        }
+
+        public void loadTTM()
+        {
+            SceneManager.LoadScene("TTMinigame");
         }
 
     }

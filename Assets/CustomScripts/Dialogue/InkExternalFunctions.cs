@@ -30,7 +30,16 @@ namespace InterDineMension
         public void Bind(Story currentStory, BAManeger bAM, Microgamecontroller mGC, dialogueManager dM)
         {
             Debug.Log(currentStory.variablesState["dayVar"]);
-            
+
+           /* currentStory.BindExternalFunction("SetSpeaker", (string character) =>
+            {
+                switch (character)
+                {
+                    case
+                    default:
+                        break;
+                }
+            });*/
             currentStory.BindExternalFunction("StartBAMicro1", () =>
             {
                 mGC.StartBAM(1);
@@ -74,6 +83,10 @@ namespace InterDineMension
                 dM.charSpeakTo = dialogueManager.speakingTo.O_Ryan;
                 dM.EnterDialogueMode(dM.O_RyanIntro);
             });
+            currentStory.BindExternalFunction("StartTTMicro", () =>
+            {
+                mGC.loadTTM();
+            });
         }
 
         public void unBind(Story currentStory)
@@ -82,6 +95,7 @@ namespace InterDineMension
             currentStory.UnbindExternalFunction("StartBAMicro2");
             currentStory.UnbindExternalFunction("GoToDiner");
             currentStory.UnbindExternalFunction("StartO_Ryan");
+            currentStory.UnbindExternalFunction("StartTTMicro");
         }
     }
 }

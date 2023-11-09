@@ -27,9 +27,9 @@ namespace InterDineMension.Manager
        /* public enum ingredientType
         {
             classicBottomBun, lettuceWrapBottom, noBottomBun,//top bun types
-            pickles, relish, noPickles, //pickle type 
+            chips, relish, noPickles, //pickle type 
             wholeLeafLettuce, choppedLettuce, noLettuce,//Lettuce type
-            beefPatty, veganPatty, unspeakableHorror,//patty type
+            beefPatty, mushroomPatty, unspeakableHorror,//patty type
             ketchup, mustard, both,//condiment choice
             tomatoe, choppedOnions, none,//final bonus choice
             classicTopBun, lettuceWrapTop, noTopBun//top bun choice

@@ -1,1 +1,0 @@
-﻿{"inkVersion":21,"root":[[{"->":"MainMorningTest"},["done",{"#f":5,"#n":"g-0"}],null],"done",{"MainMorningTest":["^This is the morning test ","#","^speaker:Cheff Swatts","/#","\n","^Let's go to afternoon!","\n","ev",{"x()":"GoToDiner"},"pop","/ev","\n","end",{"#f":1}],"#f":1}],"listDefs":{}}
