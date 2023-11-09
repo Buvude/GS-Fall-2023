@@ -3,7 +3,8 @@
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
 //INCLUDE EveningTest.ink
-What level do you want to try? #
+
+What level do you want to try? #speaker:Chef Swatts #mood:happy
     *[Level 1]
         ~convo_numberCS=0
         ->MainBAD

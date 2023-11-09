@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5157989516564867718, guid: 2640a2e920b52494886ebd246d815982, type: 3}
       propertyPath: ing
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5157989516564867718, guid: 2640a2e920b52494886ebd246d815982, type: 3}
       propertyPath: currentposIngredients

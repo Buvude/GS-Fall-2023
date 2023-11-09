@@ -30,7 +30,16 @@ namespace InterDineMension
         public void Bind(Story currentStory, BAManeger bAM, Microgamecontroller mGC, dialogueManager dM)
         {
             Debug.Log(currentStory.variablesState["dayVar"]);
-            
+
+           /* currentStory.BindExternalFunction("SetSpeaker", (string character) =>
+            {
+                switch (character)
+                {
+                    case
+                    default:
+                        break;
+                }
+            });*/
             currentStory.BindExternalFunction("StartBAMicro1", () =>
             {
                 mGC.StartBAM(1);

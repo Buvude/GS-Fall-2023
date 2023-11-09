@@ -14,13 +14,13 @@ namespace InterDineMension.MicroGame.BA
         };
         public enum ingredientType
         {
-            classicBottomBun, lettuceWrapBottom, noBottomBun,bottomBunOfTheDeep, //top bun types
-            pickles, relish, noPickles,peppers, //pickle type 
-            wholeLeafLettuce, choppedLettuce, noLettuce,biblicallyAccurateGreens,//Lettuce type
-            beefPatty, veganPatty, unspeakableHorror,chicken,//patty type
-            ketchup, mustard, both,neither,//condiment choice
-            tomatoe, choppedOnions, none,mushrooms,//final bonus choice
-            classicTopBun, lettuceWrapTop, noTopBun,topBunOfTheDeep //top bun choice
+            classicBottomBun, lettuceWrapBottom, noBottomBun,bottomBunOfTheDeep, sourdoughBottom, pretzelBottom, //bottom bun types
+            pickles, relish, noPickles,peppers, wholePickle, allSeeingEyes, //pickle type 
+            wholeLeafLettuce, choppedLettuce, noLettuce,biblicallyAccurateGreens, aLeaf, purple,//Lettuce type
+            beefPatty, mushroomPatty, unspeakableHorror,chicken, withCheese,//patty type
+            ketchup, mustard, both,neither, mayo, slime,//condiment choice
+            tomatoe, choppedOnions, none,mushrooms, onionRings, theHand,//final bonus choice
+            classicTopBun, lettuceWrapTop, noTopBun,topBunOfTheDeep, sourdoughTop, pretzelTop //top bun choice
         };
         public ingredientType ing;
         public lanePos currentposIngredients;

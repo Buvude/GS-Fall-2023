@@ -123,6 +123,17 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &461199830 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 692711467498142345, guid: aecfaee706bc8b141959a0c2fd8c05c4, type: 3}
+  m_PrefabInstance: {fileID: 2910581409021249545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c341833c9964ed4080e67cfdae7ddb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &487559503 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6906407462370306188, guid: aecfaee706bc8b141959a0c2fd8c05c4, type: 3}
@@ -172,28 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346a44ada3d002b439ecf81ccdb0c8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GlobalInk: {fileID: 4900000, guid: 79643bfe944f4e248b2caa40b789658e, type: 3}
-  day: 0
-  affectionCS: 0
-  chaosCS: 0
-  irritatedCS: 0
-  affectionN: 0
-  chaosN: 0
-  irritatedN: 0
-  affectionCC: 0
-  chaosCC: 0
-  irritatedCC: 0
-  affectionG: 0
-  chaosG: 0
-  irritatedG: 0
-  affectionM: 0
-  chaosM: 0
-  irritatedM: 0
-  affectionF: 0
-  chaosF: 0
-  irritatedF: 0
-  finalEncounterTracker: 0
-  characterStateNico: 0
+  curStor: {fileID: 4900000, guid: 3c2bb8e5716feaa4a9df6efd1256b628, type: 3}
 --- !u!1 &819664206
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +530,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: characterDinerPlacement
       objectReference: {fileID: 0}
+    - target: {fileID: 5451295201165389326, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8899975419621761794, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.2000122
@@ -683,6 +677,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0.53
       objectReference: {fileID: 0}
+    - target: {fileID: 8302470133335168117, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 1.9238472
+      objectReference: {fileID: 0}
     - target: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: dM
       value: 
@@ -704,6 +702,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+--- !u!114 &1648542496 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 651225843426171970, guid: aecfaee706bc8b141959a0c2fd8c05c4, type: 3}
+  m_PrefabInstance: {fileID: 2910581409021249545}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb6f982e6c769240af102d08ce9570a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1764469272
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,8 +1267,10 @@ MonoBehaviour:
   cS: {fileID: 1368545723}
   grac: {fileID: 1625768248}
   oR: {fileID: 8973544249656952753}
+  cC: {fileID: 461199830}
+  G: {fileID: 1648542496}
   charSpeak: 0
-  charSpeakTo: 0
+  charSpeakTo: 1
   dialoguePanel: {fileID: 4229370329156961681}
   dPTest: {fileID: 3612441124530662563}
   dialogueText: {fileID: 3418033007117590386}
@@ -3011,20 +3022,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sR: {fileID: 8973544249656952756}
-  dictKeyCS:
-  - blank
-  - angry
-  - happy
-  - hug
-  - neutral
-  - sad
-  dictValueCS:
-  - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
-  - {fileID: 21300000, guid: b5bc3fb151ef4de48b0698fd6e8d5d5f, type: 3}
-  - {fileID: 21300000, guid: b749b593a8a55b041b7ae84c422dae35, type: 3}
-  - {fileID: 21300000, guid: f585cc34a35f7c2479f3c17ead5c052e, type: 3}
-  - {fileID: 21300000, guid: d041da730b72e45419e2ede2bcd0a783, type: 3}
-  - {fileID: 21300000, guid: 187d8443445e27644a1a56d7f6543eb5, type: 3}
+  dictKeyoR: []
+  dictValueoR: []
 --- !u!114 &8973544249656952756 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6667507732906497112, guid: aecfaee706bc8b141959a0c2fd8c05c4, type: 3}

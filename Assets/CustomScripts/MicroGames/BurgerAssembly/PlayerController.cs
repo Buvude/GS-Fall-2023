@@ -18,13 +18,13 @@ namespace InterDineMension.MicroGame.BA
         public BAManeger BAManeger;
         public Image bottomBunRend, picklesRend, lettuceRend, pattyRend, condimentRend, finalBonusRend, topBunRend;
         public Sprite 
-            classicBottomBun, lettuceWrapBottom, noBottomBun,bottomBunOfTheDeep,//top bun types
-            pickles, relish, noPickles, peppers, //pickle type 
-            wholeLeafLettuce, choppedLettuce, noLettuce, biblicallyAccurateGreens,//Lettuce type
-            beefPatty, veganPatty, unspeakableHorror,Chicken,//patty type
-            ketchup, mustard, both,//condiment choice
-            tomatoe, choppedOnions, none,mushrooms,//final bonus choice
-            classicTopBun, lettuceWrapTop, noTopBun,topBunOfTheDeep;//top bun choice
+            classicBottomBun, lettuceWrapBottom, noBottomBun,bottomBunOfTheDeep,sourDoughBottom,pretzelBottom,//bottom bun types
+            chips, relish, noPickles, peppers,wholePickle,allSeeingEyes, //pickle type 
+            wholeLeafLettuce, choppedLettuce, noLettuce, biblicallyAccurateGreens, aLeaf, purple,//Lettuce type
+            beefPatty, mushroomPatty, unspeakableHorror,Chicken,withCheese,//patty type
+            ketchup, mustard, both,mayo,slime,//condiment choice
+            tomatoe, choppedOnions, none,mushrooms,onionRings,theHand,//final bonus choice
+            classicTopBun, lettuceWrapTop, noTopBun,topBunOfTheDeep, sourDoughTop, pretzelTop;//top bun choice
         public GameObject Lane1, Lane2, Lane3;
         public List<BurgerIngredients.ingredientType> ingredientTypes = new List<BurgerIngredients.ingredientType>();
         public enum lanePos
@@ -183,8 +183,44 @@ namespace InterDineMension.MicroGame.BA
                     aS.Play();
                     BAManeger.StartTheNextPhase();
                     break;
+                case BurgerIngredients.ingredientType.sourdoughBottom:
+                    //bottomBunRend.sprite = classicBottomBun;
+                    FindLowestNullRenderer().sprite = sourDoughBottom;
+                    FindLowestNullRenderer().enabled = true;
+
+                    ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.sourdoughBottom)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
+                    BAManeger.StartTheNextPhase();
+                    break;
+                case BurgerIngredients.ingredientType.pretzelBottom:
+                    //bottomBunRend.sprite = classicBottomBun;
+                    FindLowestNullRenderer().sprite = pretzelBottom;
+                    FindLowestNullRenderer().enabled = true;
+
+                    ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.pretzelBottom)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
+                    BAManeger.StartTheNextPhase();
+                    break;
                 case BurgerIngredients.ingredientType.pickles:
-                    FindLowestNullRenderer().sprite = pickles;
+                    FindLowestNullRenderer().sprite = chips;
                     FindLowestNullRenderer().enabled = true;
                     ingredientTypes.Add(type);
                     if (BAManeger.orderedIngredients[1] == BurgerIngredients.ingredientType.pickles)
@@ -245,6 +281,30 @@ namespace InterDineMension.MicroGame.BA
                     }
                     BAManeger.StartTheNextPhase();
                     break;
+                case BurgerIngredients.ingredientType.wholePickle:
+                    FindLowestNullRenderer().sprite = wholePickle;
+                    FindLowestNullRenderer().enabled = true;
+                    ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[1] == BurgerIngredients.ingredientType.wholePickle)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
+                    BAManeger.StartTheNextPhase();
+                    break;
+                case BurgerIngredients.ingredientType.allSeeingEyes:
+                    FindLowestNullRenderer().sprite = allSeeingEyes;
+                    FindLowestNullRenderer().enabled = true;
+                    ingredientTypes.Add(type);
+                    aS.clip = cosmic;
+                    aS.Play();
+                    BAManeger.StartTheNextPhase();
+                    break;
                 case BurgerIngredients.ingredientType.wholeLeafLettuce:
                     FindLowestNullRenderer().sprite = wholeLeafLettuce;
                     FindLowestNullRenderer().enabled = true;
@@ -299,6 +359,38 @@ namespace InterDineMension.MicroGame.BA
                     aS.Play();
                     BAManeger.StartTheNextPhase();
                     break;
+                case BurgerIngredients.ingredientType.aLeaf:
+                    FindLowestNullRenderer().sprite = aLeaf;
+                    FindLowestNullRenderer().enabled = true;
+                    ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[2] == BurgerIngredients.ingredientType.aLeaf)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
+                    BAManeger.StartTheNextPhase();
+                    break;
+                case BurgerIngredients.ingredientType.purple:
+                    FindLowestNullRenderer().sprite = purple;
+                    FindLowestNullRenderer().enabled = true;
+                    ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[2] == BurgerIngredients.ingredientType.purple)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
+                    BAManeger.StartTheNextPhase();
+                    break;
                 case BurgerIngredients.ingredientType.beefPatty:
                     FindLowestNullRenderer().sprite = beefPatty;
                     FindLowestNullRenderer().enabled = true;
@@ -315,11 +407,11 @@ namespace InterDineMension.MicroGame.BA
                     }
                     BAManeger.StartTheNextPhase();
                     break;
-                case BurgerIngredients.ingredientType.veganPatty:
-                    FindLowestNullRenderer().sprite = veganPatty;
+                case BurgerIngredients.ingredientType.mushroomPatty:
+                    FindLowestNullRenderer().sprite = mushroomPatty;
                     FindLowestNullRenderer().enabled = true;
                     ingredientTypes.Add(type);
-                    if (BAManeger.orderedIngredients[3] == BurgerIngredients.ingredientType.veganPatty)
+                    if (BAManeger.orderedIngredients[3] == BurgerIngredients.ingredientType.mushroomPatty)
                     {
                         aS.clip = correct;
                         aS.Play();
@@ -344,6 +436,22 @@ namespace InterDineMension.MicroGame.BA
                     FindLowestNullRenderer().enabled = true;
                     ingredientTypes.Add(type);
                     if (BAManeger.orderedIngredients[3] == BurgerIngredients.ingredientType.chicken)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
+                    BAManeger.StartTheNextPhase();
+                    break;
+                case BurgerIngredients.ingredientType.withCheese:
+                    FindLowestNullRenderer().sprite = withCheese;
+                    FindLowestNullRenderer().enabled = true;
+                    ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[3] == BurgerIngredients.ingredientType.withCheese)
                     {
                         aS.clip = correct;
                         aS.Play();
@@ -417,6 +525,30 @@ namespace InterDineMension.MicroGame.BA
                     }
                     BAManeger.StartTheNextPhase();
                     break;
+                case BurgerIngredients.ingredientType.mayo:
+                    FindLowestNullRenderer().sprite = mayo;
+                    FindLowestNullRenderer().enabled = true;
+                    ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[4] == BurgerIngredients.ingredientType.mayo)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
+                    BAManeger.StartTheNextPhase();
+                    break;
+                case BurgerIngredients.ingredientType.slime:
+                    FindLowestNullRenderer().sprite = slime;
+                    FindLowestNullRenderer().enabled = true;
+                    ingredientTypes.Add(type);
+                    aS.clip = cosmic;
+                    aS.Play();
+                    BAManeger.StartTheNextPhase();
+                    break;
                 case BurgerIngredients.ingredientType.tomatoe:
                     FindLowestNullRenderer().sprite = tomatoe;
                     FindLowestNullRenderer().enabled = true;
@@ -479,6 +611,29 @@ namespace InterDineMension.MicroGame.BA
                     }
                     BAManeger.FinalTally(ingredientTypes);
                     break;
+                case BurgerIngredients.ingredientType.onionRings:
+                    FindLowestNullRenderer().sprite = onionRings;
+                    FindLowestNullRenderer().enabled = true;
+                    ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[5] == BurgerIngredients.ingredientType.onionRings)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
+                    break;
+                case BurgerIngredients.ingredientType.theHand:
+                    FindLowestNullRenderer().sprite = theHand;
+                    FindLowestNullRenderer().enabled = true;
+                    ingredientTypes.Add(type);
+                    aS.clip = cosmic;
+                    aS.Play();
+                    BAManeger.StartTheNextPhase();
+                    break;
                 case BurgerIngredients.ingredientType.classicTopBun:
                     FindLowestNullRenderer().sprite = classicTopBun;
                     FindLowestNullRenderer().enabled = true;
@@ -531,6 +686,42 @@ namespace InterDineMension.MicroGame.BA
                     ingredientTypes.Add(type);
                     aS.clip = cosmic;
                     aS.Play();
+                    BAManeger.StartTheNextPhase();
+                    break;
+                case BurgerIngredients.ingredientType.pretzelTop:
+                    //bottomBunRend.sprite = classicBottomBun;
+                    FindLowestNullRenderer().sprite = pretzelTop;
+                    FindLowestNullRenderer().enabled = true;
+
+                    ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.pretzelTop)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
+                    BAManeger.StartTheNextPhase();
+                    break;
+                case BurgerIngredients.ingredientType.sourdoughTop:
+                    //bottomBunRend.sprite = classicBottomBun;
+                    FindLowestNullRenderer().sprite = sourDoughTop;
+                    FindLowestNullRenderer().enabled = true;
+
+                    ingredientTypes.Add(type);
+                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.sourdoughTop)
+                    {
+                        aS.clip = correct;
+                        aS.Play();
+                    }
+                    else
+                    {
+                        aS.clip = wrong;
+                        aS.Play();
+                    }
                     BAManeger.StartTheNextPhase();
                     break;
                 default:

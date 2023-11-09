@@ -576,7 +576,7 @@ namespace InterDineMension.Manager
                                 manager.DisplayImage(manager.beefPatty, 4);
                                 break;
                             case "Vegan":
-                                mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.veganPatty;
+                                mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.mushroomPatty;
                                 manager.DisplayImage(manager.veganPatty, 4);
                                 break;
                             case "Chicken":
