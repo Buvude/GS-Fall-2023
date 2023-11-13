@@ -1,13 +1,9 @@
-INCLUDE SE2_ChefSwattsMGPASS.ink
-INCLUDE SE2_ChefSwattsMGFAIL.ink
-INCLUDE SE2_ChefSwatts-2.ink
 INCLUDE globals.ink
+
 
 
 -> Start
 ==Start==
-~weekDay="Tue"
-~dayVar=dayVar+1
 Ey yo, Graciana! Think ya can gimme some help real quick? #speaker:Chef Swatts
 * [Sure]
 -> Sure
@@ -154,7 +150,7 @@ What was that thing you did...? It almost looked like you were praying. #speaker
 -> Next
 
 * [Nah]
-
+~GoToDiner()
 -> DONE
 
 ==Next==

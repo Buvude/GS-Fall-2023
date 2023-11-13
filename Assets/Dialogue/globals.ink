@@ -1,3 +1,5 @@
+//EXTERNAL GoToDiner()
+INCLUDE MorningPlaceHolder.ink
 VAR pokemon_name=""
 
 LIST BBuns1 = (Plain), (Lettucebun), (Sourdough) //(Bun_of_the_Deep) only orderable by O'ryan
@@ -10,15 +12,15 @@ LIST TBuns1 = (Plain), (Lettucebun), (Sourdough) //(Bun_of_the_Deep) same as abo
 VAR convo_numberCS=0
 VAR convo_numberF=0
 
+VAR timeOfDay="morning" //morning, afternoon, night
 VAR BAMLevel = 0
 VAR TTMLevel = 0
 VAR TBMLevel = 1
 VAR currentConvo="test"
-
-//Imma try to integrate the variables here since it'll save it 
+VAR winState="Win"
 
 VAR dayVar = 1//may not need to be used
-VAR weekDay = "Mon"
+VAR weekDay = "Tut"//Tut=Tutorial
 //Cheff Swatts variables
 VAR affectionCS = 0
 VAR chaosCS = 0
@@ -59,3 +61,38 @@ LIST patty3 = (Beef), (Vegan),(Chicken),(Cheeseburger) //(Unspeakable_Horror) Un
 LIST Condiments3 = (Ketchup), (Mustard), (Both), (Mayo)
 LIST Veggies3 = (Tomatoe), (Onion), (Onionrings), (Mushrooms) 
 LIST TBuns3 = (Plain), (Lettucebun), (Sourdough),(Pretzel) //(Bun_of_the_Deep) same as above
+
+
+
+
+
+
+===NextDayVarAdjust===
+{
+    -weekDay=="Tut":
+        ~weekDay="Mon"
+        ~dayVar+=1
+    -weekDay=="Mon":
+        ~weekDay="Tue"
+        ~dayVar+=1
+    -weekDay=="Tue":
+        ~weekDay="Wed"
+        ~dayVar+=1
+    -weekDay=="Wed":
+        ~weekDay="Thu"
+        ~dayVar+=1
+    -weekDay=="Thu":
+        ~weekDay="Fri"
+        ~dayVar+=1
+    -weekDay=="Fri":
+        ~weekDay="Sat"
+        ~dayVar+=1
+    -weekDay=="Sat":
+        ~weekDay="Sun"
+        ~dayVar+=1
+        //redirect to Day Off events
+    -weekDay=="Sun":
+        ~weekDay="Mon"
+        ~dayVar+=1
+}
+->MorningPlaceholderMain

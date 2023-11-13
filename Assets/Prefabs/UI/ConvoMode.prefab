@@ -56,18 +56,6 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3422064168978351305, guid: d43ab98c9429f86449a7fb589ea95ce2, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422064168978351305, guid: d43ab98c9429f86449a7fb589ea95ce2, type: 3}
-      propertyPath: m_Color.g
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422064168978351305, guid: d43ab98c9429f86449a7fb589ea95ce2, type: 3}
-      propertyPath: m_Color.r
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 6211866049891237256, guid: d43ab98c9429f86449a7fb589ea95ce2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -170,18 +158,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: O_Ryan
       objectReference: {fileID: 0}
-    - target: {fileID: 3422064168978351305, guid: 250da55a5527d79429f8776b46450af0, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422064168978351305, guid: 250da55a5527d79429f8776b46450af0, type: 3}
-      propertyPath: m_Color.g
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422064168978351305, guid: 250da55a5527d79429f8776b46450af0, type: 3}
-      propertyPath: m_Color.r
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 6211866049891237256, guid: 250da55a5527d79429f8776b46450af0, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -262,8 +238,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 4248787475207273169, guid: 250da55a5527d79429f8776b46450af0, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -288,18 +263,6 @@ PrefabInstance:
     - target: {fileID: 3180208950384769053, guid: 279f9cfe965e90044a16660bd6d9fdd3, type: 3}
       propertyPath: m_IsActive
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422064168978351305, guid: 279f9cfe965e90044a16660bd6d9fdd3, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422064168978351305, guid: 279f9cfe965e90044a16660bd6d9fdd3, type: 3}
-      propertyPath: m_Color.g
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3422064168978351305, guid: 279f9cfe965e90044a16660bd6d9fdd3, type: 3}
-      propertyPath: m_Color.r
-      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6211866049891237256, guid: 279f9cfe965e90044a16660bd6d9fdd3, type: 3}
       propertyPath: m_Pivot.x
@@ -399,22 +362,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6382958783050413673}
     m_Modifications:
-    - target: {fileID: 958605901015147599, guid: da21edeed81272f4ab58f6fe04ab5b06, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 393bab37af23cfd498199ef6ebc3f053, type: 3}
-    - target: {fileID: 958605901015147599, guid: da21edeed81272f4ab58f6fe04ab5b06, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 958605901015147599, guid: da21edeed81272f4ab58f6fe04ab5b06, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 958605901015147599, guid: da21edeed81272f4ab58f6fe04ab5b06, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1013983879073519771, guid: da21edeed81272f4ab58f6fe04ab5b06, type: 3}
       propertyPath: m_Name
       value: Graciana
@@ -517,58 +464,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6382958783050413673}
     m_Modifications:
-    - target: {fileID: 2411177332949617874, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: ccd957e23faf41e44ae84868171c1635, type: 3}
-    - target: {fileID: 2411177332949617874, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: m_Color.b
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2411177332949617874, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: m_Color.g
-      value: 0.4
-      objectReference: {fileID: 0}
-    - target: {fileID: 2411177332949617874, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: m_Color.r
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 2461774690315677702, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
       propertyPath: m_Name
       value: CheffSwattsBtn
       objectReference: {fileID: 0}
-    - target: {fileID: 3364893432361671551, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3364893432361671551, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: m_Transition
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818240545872425674, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: CS1
-      value: 
-      objectReference: {fileID: 4900000, guid: 4ed29146fe40dd94b9498d427d78b33f, type: 3}
-    - target: {fileID: 3818240545872425674, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: CS2
-      value: 
-      objectReference: {fileID: 4900000, guid: 973ed7783acde294d8b5b3c78078c11a, type: 3}
-    - target: {fileID: 3818240545872425674, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: dictKeyCS.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818240545872425674, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: dictValueCS.Array.size
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818240545872425674, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: dictKeyCS.Array.data[6]
-      value: angry
-      objectReference: {fileID: 0}
-    - target: {fileID: 3818240545872425674, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
-      propertyPath: dictValueCS.Array.data[6]
-      value: 
-      objectReference: {fileID: 21300000, guid: f6208e39c56e08b4598c00394e192c0e, type: 3}
     - target: {fileID: 6358906184018228627, guid: 6ca28177d8618394d8c881d9559db58d, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

@@ -7,8 +7,10 @@ namespace InterDineMension.Manager
 {
     public class VariableHolder : MonoBehaviour
     {
+        public bool wonMini = false;
         public Story currentStory;
         public TextAsset curStor;
+        internal dialogueManager dM;
         //these will track the stats for each character 
        /* public int 
             day,

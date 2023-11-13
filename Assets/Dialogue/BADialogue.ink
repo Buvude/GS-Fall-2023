@@ -7,8 +7,7 @@ EXTERNAL StartBAMicro3()
 VAR tempHolder =""
 //->MainBAD
 ===MainBAD===
-    *stop the Dialogue
-    
+    //TODO replace variable here
     {
     -convo_numberCS==0:
     // ~Random_Holder=Random(1,3)
@@ -49,7 +48,7 @@ VAR tempHolder =""
         ~StartBAMicro2()
         Aight! Graciana, get ready! It's comin' in hot! #speaker:Chef Swatts
 ->DONE
-    -convo_numberCS==2
+    -convo_numberCS==2:
          Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral
         ~tempHolder=pop_random(BBuns3)
         For the bottom bun, it's {tempHolder}. #BBun:{tempHolder}
@@ -67,7 +66,7 @@ VAR tempHolder =""
         And the bun to top it all off... {tempHolder}.#TBun:{tempHolder}
         ~StartBAMicro3()
         Aight! Graciana, get ready! It's comin' in hot! #speaker:Chef Swatts
-    ->DONE
+->DONE
 }
 
 

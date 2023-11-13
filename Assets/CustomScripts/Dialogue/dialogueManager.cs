@@ -21,7 +21,7 @@ namespace InterDineMension.Manager
      
         //public GameObject charImageCS, charImageOR;
         //private bool deactivatedcorutines = false;
-        public VariableHolder vH;
+        private VariableHolder vH;
         public GameObject convoModeImages, charBtn;
         public dialogueSpriteManager manager;
         public GameObject[] dialogueObject;
@@ -35,6 +35,7 @@ namespace InterDineMension.Manager
         public O_Ryan oR;
         public CeeCee cC;
         public Gnomies G;
+        public GameObject cSBtn, oRBtn, cCBtn, gBtn, fBtn, mBtn, nBtn;
 
         public enum speaker { Graciana, Swatts,O_Ryan, CeeCee, Gnomies, Fred, None};
         public enum speakingTo {  O_Ryan, Swatts, CeeCee, Gnomies, Fred};
@@ -61,6 +62,7 @@ namespace InterDineMension.Manager
         private TextMeshProUGUI[] choicesText;
 
         private Story currentStory;
+        public Story loadGlobalink;
 
         private bool exitedDialogueMode = false;
 
@@ -87,6 +89,9 @@ namespace InterDineMension.Manager
         public GameObject BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3;
         private void Awake()
         {
+            currentStory = new Story(loadGlobalsJSON.text);
+            vH=GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
+            vH.dM = this;
            /* cS.sR.color = Color.HSVToRGB(0, 0, 40);*/
             grac.sR.color = Color.HSVToRGB(0, 0, 40);
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
@@ -112,15 +117,55 @@ namespace InterDineMension.Manager
 
         private void Start()
         {
-            StartMorningConvo();//will need to be adjusted later
-        }   
+            if (currentStory.variablesState["timeOfDay"].ToString() == "morning")
+            {
+                StartMorningConvo();//will need to be adjusted later
+            }
+            else if (currentStory.variablesState["timeOfDay"].ToString() == "afternoon")
+            {
+                PostMiniGameConvo();
+            }
+            else if (currentStory.variablesState["timeOfDay"].ToString() == "night")
+            {
+                //night time activity
+            }
+            else
+            {
+                Debug.LogWarning("The variable timeOfDay in globals.ink is not in a valid state");
+            }
+
+            //conditional of what state the day is in
+            
+        }
+
 
         public void StartMorningConvo()
         {
-            //charSpeakTo = speakingTo.Swatts;
-            EnterDialogueMode(dayOneIntro);
+            Debug.Log(currentStory.variablesState["dayVar"]);
+            charSpeakTo = speakingTo.Swatts;
+            switch (int.Parse(currentStory.variablesState["dayVar"].ToString()))//so it defaults to the random quip thing unless there is something specific for CS to say today
+            {
+                case 1:
+                    EnterDialogueMode(cS.dialogueDictionary["gameIntro"]);
+                    break;
+                default:
+                    EnterDialogueMode(cS.dialogueDictionary["morning"]);
+                    break;
+            }
+
+            
         }
 
+        public void PostMiniGameConvo()
+        {
+            switch (currentStory.variablesState["currentConvo"].ToString())
+            {
+                case "":
+                    break;
+                default:
+                    break;
+            }
+        }
         public static dialogueManager GetInstance()
         {
             return instance;
@@ -162,12 +207,12 @@ namespace InterDineMension.Manager
                         {
                             case 0:
                                 {
-                                    EnterDialogueMode(cS.CS1);
+                                    EnterDialogueMode(cS.dialogueDictionary["cSTalkTo1"]);
                                     break;
                                 }
                             case 1:
                                 {
-                                    EnterDialogueMode(cS.CS2);
+                                    EnterDialogueMode(cS.dialogueDictionary["cSTalkTo2"]);
                                     break;
                                 }
                             default:
@@ -195,6 +240,7 @@ namespace InterDineMension.Manager
             //add method to determine which convo is going on, possibly triggered by the char btn
             dPTest.enabled = true;
             currentStory =new Story(inkJSON.text);
+            vH.currentStory = currentStory;
             dialoguePlaying=true;
             grac.gameObject.GetComponent<Image>().enabled = true;
             dV.StartListening(currentStory);
@@ -271,7 +317,7 @@ namespace InterDineMension.Manager
 
             else
             {
-                ExitDialogueMode(false,0,0);
+                ExitDialogueMode(false,0);
                 dPTest.enabled = false;
             }
         }
@@ -679,7 +725,7 @@ namespace InterDineMension.Manager
             }
         }
 
-        public void ExitDialogueMode(bool enterDialogueMode, int day, int csConvoNumber)
+        public void ExitDialogueMode(bool enterDialogueMode, int day)
         {
             
             dV.StopListening(currentStory);
@@ -707,8 +753,79 @@ namespace InterDineMension.Manager
 
         public void EnterDinerMode(int day)
         {
-            switch (day)//will determine who's avalible
+            cSBtn.gameObject.SetActive(false);
+            oRBtn.gameObject.SetActive(false); 
+            cCBtn.SetActive(false);
+            gBtn.SetActive(false);
+            fBtn.SetActive(false);
+            mBtn.SetActive(false);
+            nBtn.SetActive(false);
+
+            switch (currentStory.variablesState["weekDay"].ToString())//will determine who's avalible
             {
+                case "Tut":
+                    cSBtn.gameObject.SetActive(true);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(false);
+                    gBtn.SetActive(false);
+                    fBtn.SetActive(false);
+                    mBtn.SetActive(false);
+                    nBtn.SetActive(false);
+                    break;
+                case "Mon":                   
+                    cSBtn.gameObject.SetActive(true);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(false);
+                    gBtn.SetActive(true);
+                    fBtn.SetActive(false);
+                    mBtn.SetActive(false);
+                    nBtn.SetActive(true);
+                    break;
+                case "Tue":
+                    cSBtn.gameObject.SetActive(true);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(true);
+                    gBtn.SetActive(true);
+                    fBtn.SetActive(false);
+                    mBtn.SetActive(false);
+                    nBtn.SetActive(false);
+                    break;
+                case "Wed":
+                    cSBtn.gameObject.SetActive(true);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(false);
+                    gBtn.SetActive(false);
+                    fBtn.SetActive(true);
+                    mBtn.SetActive(true);
+                    nBtn.SetActive(false);
+                    break;
+                case "Thu":
+                    cSBtn.gameObject.SetActive(true);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(false);
+                    gBtn.SetActive(true);
+                    fBtn.SetActive(false);
+                    mBtn.SetActive(true);
+                    nBtn.SetActive(false);
+                    break;
+                case "Fri":
+                    cSBtn.gameObject.SetActive(false);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(true);
+                    gBtn.SetActive(false);
+                    fBtn.SetActive(true);
+                    mBtn.SetActive(false);
+                    nBtn.SetActive(false);
+                break;
+                case "Sat":
+                    cSBtn.gameObject.SetActive(false);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(true);
+                    gBtn.SetActive(false);
+                    fBtn.SetActive(false);
+                    mBtn.SetActive(false);
+                    nBtn.SetActive(true);
+                    break;
                 default:
                     break;
             }

@@ -7,25 +7,44 @@ namespace InterDineMension.Character
 {
     public class CheffSwatts : MonoBehaviour
     {
-        public TextAsset CS1, CS2;
+        //public TextAsset CS1, CS2;
         public Image sR;
         public Dictionary<string, Sprite> spriteDictionary;
-        public string[] dictKeyCS;
-        public Sprite[] dictValueCS;
+        public Dictionary<string, TextAsset> dialogueDictionary;
+        public string[] sDictKeyCS, dDictKeyCS;
+        public Sprite[] sDictValueCS;
+        public TextAsset[] dDictValueCS;
         // Start is called before the first frame update
+       
+        /// <summary>
+        /// sets up the dictionaries
+        /// </summary>
         void Awake()
         {
             spriteDictionary = new Dictionary<string, Sprite>();
-            if (dictKeyCS.Length != dictValueCS.Length)
+            if (sDictKeyCS.Length != sDictValueCS.Length)
             {
                 Debug.LogWarning("The length of moods is different then the list of sprites");
                 return;
             }
             else
             {
-                for(int i = 0; i < dictKeyCS.Length; i++)
+                for(int i = 0; i < sDictKeyCS.Length; i++)
                 {
-                    spriteDictionary.Add(dictKeyCS[i], dictValueCS[i]);
+                    spriteDictionary.Add(sDictKeyCS[i], sDictValueCS[i]);
+                }
+            }
+            dialogueDictionary = new Dictionary<string, TextAsset>();
+            if (dDictKeyCS.Length != dDictValueCS.Length)
+            {
+                Debug.LogWarning("The length of dialogue is different then the list of dialogue assets");
+                return;
+            }
+            else
+            {
+                for (int i = 0; i < dDictKeyCS.Length; i++)
+                {
+                    dialogueDictionary.Add(dDictKeyCS[i], dDictValueCS[i]);
                 }
             }
             //Debug.Log(spriteDictionary.Count);

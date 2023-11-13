@@ -1,6 +1,5 @@
 //#day:1 #CSConvo:0
-EXTERNAL GoToDiner()
-
+INCLUDE globals.ink
 (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana
 (Here we are... The Portal Diner...) #speaker:Graciana #mood:think
 (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)
@@ -36,7 +35,7 @@ Right… Uh… #speaker:Graciana #mood:neutral
 
 Oh! Ya! Soon! Like, 3 minutes! #speaker:Chef Swatts #mood:happy
 
-O-oh! #speaker:Graciana #mood:fear
+O-oh! #speaker:Graciana #mood:neutral
 
 Looks like they startin' to come in, look alive! #speaker:Chef Swatts
 

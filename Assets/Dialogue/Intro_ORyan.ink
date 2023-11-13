@@ -63,11 +63,9 @@ Uh...
         ->continue
         
 ==continue==
-(In complete silence, O'Ryan turns and leaves the Diner.)#speaker:Graciana
-...Sheesh...
-(I finish closing up and head on home, envelope in hand.)
-// You got paid [amount] Øllars!
-~GoToDiner()
-
-        
-    -> DONE
+    (In complete silence, O'Ryan turns and leaves the Diner.)#speaker:Graciana
+    ...Sheesh...
+    (I finish closing up and head on home, envelope in hand.)
+    // You got paid [amount] Øllars!
+    
+    ->NextDayVarAdjust//temp until appartment is set up

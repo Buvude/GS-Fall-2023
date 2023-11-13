@@ -61,9 +61,11 @@ namespace InterDineMension
             });
             currentStory.BindExternalFunction("GoToDiner", (/*int day, int csConvo*/) =>
             {
+                day = int.Parse(currentStory.variablesState["dayVar"].ToString());
                 if (currentStory.variablesState["dayVar"].ToString() == "1")
                 {
                     Debug.Log("made it to day one");
+                    dM.ExitDialogueMode(true,day);
                 }
                 /*List<string> temp = currentStory.globalTags;
                 foreach (string tag in temp)
@@ -84,13 +86,13 @@ namespace InterDineMension
                         csConvo = int.Parse(tagValue);
                     }
                 }*/
-                dM.ExitDialogueMode(true,day,csConvo);
+                
                 //dM.EnterDinerMode();
             });
             currentStory.BindExternalFunction("StartO_Ryan", () =>
             {
                 dM.charSpeakTo = dialogueManager.speakingTo.O_Ryan;
-                dM.EnterDialogueMode(dM.O_RyanIntro);
+                //dM.EnterDialogueMode(dM.O_RyanIntro);
             });
             currentStory.BindExternalFunction("StartTTMicro", () =>
             {

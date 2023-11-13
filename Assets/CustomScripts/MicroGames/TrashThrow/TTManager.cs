@@ -124,6 +124,14 @@ namespace InterDineMension.MicroGame.TT
                 }
                 yield return new WaitForSeconds(scorepause);
             }
+            if (score >= goal)
+            {
+                vH.wonMini = true;
+            }
+            else
+            {
+                vH.wonMini= false;
+            }
             
         }
         public void PlusPoint(FallingObjectScript f)

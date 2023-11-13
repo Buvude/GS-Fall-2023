@@ -3,6 +3,7 @@
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
 //INCLUDE EveningTest.ink
+//EXTERNAL GoToDiner()
 
 
 //VAR tempHolder =""
@@ -121,7 +122,8 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
         -> reconvene
 
 * Nah
-    -> DONE
+    ~GoToDiner()
+    ->DONE
 
 === reconvene ===
 

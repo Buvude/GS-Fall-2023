@@ -1,5 +1,5 @@
-EXTERNAL GoToDiner()
-INCLUDE Intro_O'Ryan.ink 
+//EXTERNAL GoToDiner()
+INCLUDE Intro_ORyan.ink 
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
 Would you like to retry the minigame?
@@ -27,4 +27,3 @@ Got it... #speaker:Graciana
 (I take the burger out to the customer, and help Chef Swatts with some more prepwork and cleaning.)
 ~convo_numberCS=1
 ->mainORYAN
--> END
