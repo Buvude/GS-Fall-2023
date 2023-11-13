@@ -72,27 +72,35 @@ LIST TBuns3 = (Plain), (Lettucebun), (Sourdough),(Pretzel) //(Bun_of_the_Deep) s
     -weekDay=="Tut":
         ~weekDay="Mon"
         ~dayVar+=1
+        ->MorningPlaceholderMain
     -weekDay=="Mon":
         ~weekDay="Tue"
         ~dayVar+=1
+        ->MorningPlaceholderMain
     -weekDay=="Tue":
         ~weekDay="Wed"
         ~dayVar+=1
+        ->MorningPlaceholderMain
     -weekDay=="Wed":
         ~weekDay="Thu"
         ~dayVar+=1
+        ->MorningPlaceholderMain
     -weekDay=="Thu":
         ~weekDay="Fri"
         ~dayVar+=1
+        ->MorningPlaceholderMain
     -weekDay=="Fri":
         ~weekDay="Sat"
         ~dayVar+=1
+        ->MorningPlaceholderMain
     -weekDay=="Sat":
         ~weekDay="Sun"
         ~dayVar+=1
+        ->DONE
         //redirect to Day Off events
     -weekDay=="Sun":
         ~weekDay="Mon"
         ~dayVar+=1
+        ->MorningPlaceholderMain
+        
 }
-->MorningPlaceholderMain

@@ -24,7 +24,8 @@ namespace InterDineMension.MicroGame.BA
         public Image finishedBurger;
         public Sprite GoodBurger, BadBurger, MediocreBurger;
         public static int finalScore = 0;
-        public Microgamecontroller microgamecontroller; 
+        public Microgamecontroller microgamecontroller;
+        public VariableHolder vH;
         void Start()
         {
             microgamecontroller = GameObject.FindGameObjectWithTag("eventSystem").GetComponent<Microgamecontroller>();
@@ -447,14 +448,22 @@ namespace InterDineMension.MicroGame.BA
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
-                dM.EnterDialogueMode(gM.cheffSwattsConvos[2]);//only valid for day one
+                if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
+                {
+                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGPass1"]); //only valid for day one
+                }
+                
             }
             else
             {
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
-                dM.EnterDialogueMode(gM.cheffSwattsConvos[1]);//only valid for day one
+                if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
+                {
+                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGFail1"]);//only valid for day one
+                }
+                
             }
         }
 

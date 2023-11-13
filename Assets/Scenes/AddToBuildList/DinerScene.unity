@@ -1041,11 +1041,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4846163692464896498, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.6781921
+      value: 2.6782227
       objectReference: {fileID: 0}
     - target: {fileID: 4846163692464896498, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 37.199997
+      value: 37.200012
       objectReference: {fileID: 0}
     - target: {fileID: 4964567013036564434, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1157,7 +1157,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5601624108134946796, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 2.6781921
+      value: 2.6782227
       objectReference: {fileID: 0}
     - target: {fileID: 5601624108134946796, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1273,7 +1273,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9133024778814056345, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -63
+      value: -62.99994
       objectReference: {fileID: 0}
     - target: {fileID: 9133024778814056345, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -1829,6 +1829,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8339956522360858026, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKeyCS.Array.data[0]
+      value: gameIntro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339956522360858026, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKeyCS.Array.data[1]
+      value: morning
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339956522360858026, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKeyCS.Array.data[2]
+      value: cSTalkTo1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339956522360858026, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValueCS.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 5325151c076c8e3418d8a2ed9b3b5e14, type: 3}
+    - target: {fileID: 8339956522360858026, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValueCS.Array.data[1]
+      value: 
+      objectReference: {fileID: 4900000, guid: 280438649d13aba49bb1d2b700830ee9, type: 3}
     - target: {fileID: 8615375139267424601, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

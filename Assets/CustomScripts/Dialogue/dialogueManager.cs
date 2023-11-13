@@ -21,7 +21,7 @@ namespace InterDineMension.Manager
      
         //public GameObject charImageCS, charImageOR;
         //private bool deactivatedcorutines = false;
-        private VariableHolder vH;
+        internal VariableHolder vH;
         public GameObject convoModeImages, charBtn;
         public dialogueSpriteManager manager;
         public GameObject[] dialogueObject;
@@ -90,14 +90,14 @@ namespace InterDineMension.Manager
         private void Awake()
         {
             currentStory = new Story(loadGlobalsJSON.text);
-            vH=GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
+            vH =GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
             vH.dM = this;
            /* cS.sR.color = Color.HSVToRGB(0, 0, 40);*/
             grac.sR.color = Color.HSVToRGB(0, 0, 40);
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
             dPTest = this.gameObject.GetComponent<Image>();
-            dV = new DialogueVariables(loadGlobalsJSON); 
-             
+            dV = new DialogueVariables(loadGlobalsJSON);
+
             if (instance != null)
             {
                 Debug.LogWarning("Found more then one DialogueManager instance");
@@ -141,7 +141,7 @@ namespace InterDineMension.Manager
 
         public void StartMorningConvo()
         {
-            Debug.Log(currentStory.variablesState["dayVar"]);
+            
             charSpeakTo = speakingTo.Swatts;
             switch (int.Parse(currentStory.variablesState["dayVar"].ToString()))//so it defaults to the random quip thing unless there is something specific for CS to say today
             {
@@ -228,6 +228,7 @@ namespace InterDineMension.Manager
         }
         public void EnterDialogueMode(TextAsset inkJSON)
         {
+            Debug.Log("made it to eDM");
             exitedDialogueMode = false;
             charBtn.SetActive(false);
             convoModeImages.gameObject.SetActive(true);
