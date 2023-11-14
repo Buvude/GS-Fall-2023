@@ -550,6 +550,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819664210}
     m_Modifications:
+    - target: {fileID: 4290938683640984112, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 489.1186
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290938683640984112, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 428.1621
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290938683640984112, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 258.8486
+      objectReference: {fileID: 0}
+    - target: {fileID: 4290938683640984112, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -31.1536
+      objectReference: {fileID: 0}
+    - target: {fileID: 4727334360704350117, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5059230819423979533, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -633,6 +653,10 @@ PrefabInstance:
     - target: {fileID: 5451295201165389326, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: m_Name
       value: characterDinerPlacement
+      objectReference: {fileID: 0}
+    - target: {fileID: 5451295201165389326, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5548898992456309980, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: m_TargetGraphic
@@ -1192,93 +1216,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1637327998}
     - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: mayo
+      propertyPath: beefPatty
       value: 
-      objectReference: {fileID: 21300000, guid: 7c1821854849f0e488dd313d7549574f, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: aLeaf
-      value: 
-      objectReference: {fileID: 21300000, guid: 7ef6342e2d9427a46bbd40ebbd724609, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: plain
-      value: 
-      objectReference: {fileID: 21300000, guid: c54cf81fddfff014eb0c832bc4970c42, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: slime
-      value: 
-      objectReference: {fileID: 21300000, guid: 54c8540e1867d6b40bfe22dca5016acf, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: purple
-      value: 
-      objectReference: {fileID: 21300000, guid: b768cec04c018e44dab2e326e23e8e29, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: chicken
-      value: 
-      objectReference: {fileID: 21300000, guid: 09e94fda7d1f5414389d64529b375138, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: peppers
-      value: 
-      objectReference: {fileID: 21300000, guid: 8b5736f873fad1640bd13437714c0d04, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: tomatoe
-      value: 
-      objectReference: {fileID: 21300000, guid: 4b35c1c0a39aa0343ba9171f7548fd7e, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: mushroom
-      value: 
-      objectReference: {fileID: 21300000, guid: 391d29bba81a7994680b8097466bfb38, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: theThing
-      value: 
-      objectReference: {fileID: 21300000, guid: b4cbb88a5bd718f409727bae8f75e215, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: mushrooms
-      value: 
-      objectReference: {fileID: 21300000, guid: 391d29bba81a7994680b8097466bfb38, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: onionRings
-      value: 
-      objectReference: {fileID: 21300000, guid: 625caff2034384241b9f8a215113312c, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: mysteryMeat
-      value: 
-      objectReference: {fileID: 21300000, guid: f2f617da76f6fe34fa17b12ef50cc458, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: pretzelBBun
-      value: 
-      objectReference: {fileID: 21300000, guid: 71685dc025b82e9438772c738d2c8804, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: pretzelTBun
-      value: 
-      objectReference: {fileID: 21300000, guid: bbed43c92af04494391e3ce01063c04f, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: cheeseburger
-      value: 
-      objectReference: {fileID: 21300000, guid: 423842e831bcee546a05e3c0b7ab1cbe, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: allSeeingEyes
-      value: 
-      objectReference: {fileID: 21300000, guid: a9eb73eb5c6449449936812509c99e05, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: bBunOfTheDeep
-      value: 
-      objectReference: {fileID: 21300000, guid: a841bb8b62cc71a49bc651d810c2e022, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: choppedOnions
-      value: 
-      objectReference: {fileID: 21300000, guid: 7f88d4f425be427448ee7fba754b5762, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: sourdoughBBun
-      value: 
-      objectReference: {fileID: 21300000, guid: cc112b928c5952b408932e7852cc7215, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: sourdoughTBun
-      value: 
-      objectReference: {fileID: 21300000, guid: 5ee5819ca98c58a4f807ac189ab21520, type: 3}
-    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: biblicallyAcurateGreens
-      value: 
-      objectReference: {fileID: 21300000, guid: c4e58b3d0c02a3b4999461aae727ef9b, type: 3}
+      objectReference: {fileID: 21300000, guid: 14e2a55b4e82f79429431ee28221cfde, type: 3}
     - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: orderImages.Array.data[0]
       value: 

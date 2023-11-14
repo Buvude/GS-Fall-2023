@@ -203,7 +203,7 @@ namespace InterDineMension.Manager
             {
                 case speakingTo.Swatts:
                     {
-                        switch (iEF.csConvo)
+                        switch (int.Parse(currentStory.variablesState["convo_numberCS"].ToString()))
                         {
                             case 0:
                                 {
@@ -228,7 +228,6 @@ namespace InterDineMension.Manager
         }
         public void EnterDialogueMode(TextAsset inkJSON)
         {
-            Debug.Log("made it to eDM");
             exitedDialogueMode = false;
             charBtn.SetActive(false);
             convoModeImages.gameObject.SetActive(true);
@@ -318,7 +317,7 @@ namespace InterDineMension.Manager
 
             else
             {
-                ExitDialogueMode(false,0);
+                ExitDialogueMode(false,0,"ContinueStory");
                 dPTest.enabled = false;
             }
         }
@@ -471,19 +470,16 @@ namespace InterDineMension.Manager
                                     }
                                 case speaker.O_Ryan:
                                     {
-                                        Debug.Log("Got to o'ryan sprites");
                                         oR.sR.sprite= oR.spriteDictionary[tagValue];
                                         break;
                                     }
                                 case speaker.CeeCee:
                                     {
-                                        Debug.Log("Got to CeeCee sprites");
                                         cC.sR.sprite = cC.spriteDictionary[tagValue];
                                         break;
                                     }
                                 case speaker.Gnomies:
                                     {
-                                        Debug.Log("Got to gnomies sprites");
                                         G.sR.sprite = G.spriteDictionary[tagValue];
                                         break;
                                     }
@@ -726,9 +722,9 @@ namespace InterDineMension.Manager
             }
         }
 
-        public void ExitDialogueMode(bool enterDialogueMode, int day)
+        public void ExitDialogueMode(bool enterDinnerMode, int day, string whereCameFrom)
         {
-            
+            //Debug.Log($"Got to exit dialogue mode from {whereCameFrom} ");
             dV.StopListening(currentStory);
 
             //dialogueObject.SetActive(false);
@@ -745,7 +741,7 @@ namespace InterDineMension.Manager
             dPTest.enabled = false;
 
             dialogueText.text = "";
-            if(enterDialogueMode)
+            if(enterDinnerMode)
             {
                 EnterDinerMode(day);
             }

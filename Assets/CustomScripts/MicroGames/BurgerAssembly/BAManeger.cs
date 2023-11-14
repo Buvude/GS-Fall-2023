@@ -60,7 +60,6 @@ namespace InterDineMension.MicroGame.BA
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)
         {
             ResetMiniGame();
-            Debug.Log(finalScore);
             dM.manager.imagePopUp.enabled = false;
             for (int i = 0; i < ingredients.Count; i++)
             {
@@ -442,6 +441,7 @@ namespace InterDineMension.MicroGame.BA
 
         private IEnumerator BAMicroGameScore(int finalScore)
         {
+            Debug.Log(dM.vH.currentStory.variablesState["currentConvo"].ToString());
             if (finalScore >= 4)
             { 
                 
@@ -451,6 +451,10 @@ namespace InterDineMension.MicroGame.BA
                 if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
                 {
                     dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGPass1"]); //only valid for day one
+                }
+                else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
+                {
+                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGPass2"]);
                 }
                 
             }
@@ -463,7 +467,11 @@ namespace InterDineMension.MicroGame.BA
                 {
                     dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGFail1"]);//only valid for day one
                 }
-                
+                else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
+                {
+                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGFail2"]);
+                }
+
             }
         }
 

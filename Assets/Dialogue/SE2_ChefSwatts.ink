@@ -1,4 +1,5 @@
 INCLUDE globals.ink
+INCLUDE BADialogue.ink
 
 
 
@@ -7,6 +8,9 @@ INCLUDE globals.ink
 Ey yo, Graciana! Think ya can gimme some help real quick? #speaker:Chef Swatts
 * [Sure]
 -> Sure
+* [Sorry not now]
+    ~GoToDiner()
+    ->DONE
 
 ==Sure==
 Yeah, you got it. #speaker:Graciana #mood:neutral
@@ -149,10 +153,6 @@ What was that thing you did...? It almost looked like you were praying. #speaker
 
 -> Next
 
-* [Nah]
-~GoToDiner()
--> DONE
-
 ==Next==
 
 Ah, well, ya know... #speaker:Chef Swatts #mood:neutral
@@ -220,8 +220,8 @@ But what abou-- #speaker:Graciana #mood:angry
 Order up! Come help me out with this, ya? #speaker:Chef Swatts #mood:angry
 
 (sigh...) #speaker:Graciana #mood:sad
-//Microgame goes here
-
+->MainBAD
+~currentConvo="cSD2"
 -> DONE
 
 ***["We"?]
@@ -263,8 +263,8 @@ But-- #speaker:Graciana #mood:angry
 Graciana, come help me wit' this, ya? #speaker:Chef Swatts #mood:neutral
 
 (sigh...) #speaker:Graciana #mood:sad
-//Microgame goes here
-
+->MainBAD
+~currentConvo="cSD2"
 -> DONE
 
 ***[What kinda food?]
@@ -300,6 +300,7 @@ B-but... #speaker:Graciana #mood:sad
 Graciana, help me with this, ya? #speaker:Chef Swatts #mood:neutral
 
 ...Okay... #speaker:Graciana
-//Microgame goes here
+~currentConvo="cSD2"
+->MainBAD
 
 -> DONE

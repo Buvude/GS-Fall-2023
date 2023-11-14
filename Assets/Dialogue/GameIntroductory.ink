@@ -3,6 +3,9 @@ INCLUDE globals.ink
 
 ->GameIntro
 ===GameIntro===
+    ~dayVar=1
+    ~weekDay="Tut"
+    ~convo_numberCS=0
     (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana
     (Here we are... The Portal Diner...) #speaker:Graciana #mood:think
     (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)

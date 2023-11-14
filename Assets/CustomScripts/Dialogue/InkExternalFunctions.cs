@@ -53,36 +53,21 @@ namespace InterDineMension
             currentStory.BindExternalFunction("GoToDiner", (/*int day, int csConvo*/) =>
             {
                 day = int.Parse(currentStory.variablesState["dayVar"].ToString());
-                if (currentStory.variablesState["dayVar"].ToString() == "1")
-                {
-                    Debug.Log("made it to day one");
-                    dM.ExitDialogueMode(true,day);
-                }
-                /*List<string> temp = currentStory.globalTags;
-                foreach (string tag in temp)
-                {
-                    string[] splitTag = tag.Split(':');
-                    if (splitTag.Length != 2)
-                    {
-                        Debug.LogError("Tag could not be appropriatly parsed: " + tag);
-                    }
-                    string tagKey = splitTag[0].Trim();
-                    string tagValue = splitTag[1].Trim();
-                    if(tagKey == "day")
-                    {
-                        day = int.Parse(tagValue);
-                    }
-                    else if(tagKey == "CSConvo")
-                    {
-                        csConvo = int.Parse(tagValue);
-                    }
-                }*/
-                
-                //dM.EnterDinerMode();
+                /* if (currentStory.variablesState["dayVar"].ToString() == "1")
+                 {
+                     Debug.Log("made it to day one");
+                     dM.ExitDialogueMode(true,day,"GotToDiner func in IEF");
+                 }*/
+                dM.ExitDialogueMode(true, day, "GotToDiner func in IEF");
+               
             });
             currentStory.BindExternalFunction("StartO_Ryan", () =>
             {
                 dM.charSpeakTo = dialogueManager.speakingTo.O_Ryan;
+                dM.oR.gameObject.SetActive(true);
+                dM.G.gameObject.SetActive(false);
+                dM.cS.gameObject.SetActive(false);
+                dM.cC.gameObject.SetActive(false);
                 //dM.EnterDialogueMode(dM.O_RyanIntro);
             });
             currentStory.BindExternalFunction("StartTTMicro", () =>
