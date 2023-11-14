@@ -1,5 +1,5 @@
 //EXTERNAL GoToDiner()
-INCLUDE Intro_ORyan.ink 
+INCLUDE Intro_ORyan.ink
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
 Would you like to retry the minigame?

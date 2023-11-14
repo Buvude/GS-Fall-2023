@@ -629,7 +629,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3cfa8b450ff8848b228ff262f7ef5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vH: {fileID: 0}
   convoModeImages: {fileID: 5626996928375492772}
   charBtn: {fileID: 0}
   manager: {fileID: 1022270413289010190}
@@ -642,8 +641,15 @@ MonoBehaviour:
   cS: {fileID: 8339956522360858026}
   grac: {fileID: 1599940485331001442}
   oR: {fileID: 6501522974495267309}
-  cC: {fileID: 0}
-  G: {fileID: 0}
+  cC: {fileID: 3719497583599481129}
+  G: {fileID: 3677981040014956514}
+  cSBtn: {fileID: 0}
+  oRBtn: {fileID: 0}
+  cCBtn: {fileID: 0}
+  gBtn: {fileID: 0}
+  fBtn: {fileID: 0}
+  mBtn: {fileID: 0}
+  nBtn: {fileID: 0}
   charSpeak: 0
   charSpeakTo: 0
   dialoguePanel: {fileID: 2942686232391779896}
@@ -667,6 +673,13 @@ MonoBehaviour:
   Condiment2: {fileID: 0}
   Veggie2: {fileID: 0}
   TBun2: {fileID: 0}
+  BBun3: {fileID: 0}
+  Pickles3: {fileID: 0}
+  Greens3: {fileID: 0}
+  Patty3: {fileID: 0}
+  Condiment3: {fileID: 0}
+  Veggie3: {fileID: 0}
+  TBun3: {fileID: 0}
 --- !u!114 &1022270413289010190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -692,30 +705,43 @@ MonoBehaviour:
   lettuceWrapBottom: {fileID: 21300000, guid: b03a20b56718eda4a9e29b324d9e77f7, type: 3}
   noBottomBun: {fileID: 0}
   bBunOfTheDeep: {fileID: 0}
+  pretzelBBun: {fileID: 0}
+  sourdoughBBun: {fileID: 0}
   pickles: {fileID: 21300000, guid: 3408206a8a5ec3c44bfe6df18161bcd9, type: 3}
   relish: {fileID: 21300000, guid: 0e7cfa15a3af7ca49b13034c69af4dce, type: 3}
   noPickles: {fileID: 0}
   peppers: {fileID: 0}
+  allSeeingEyes: {fileID: 0}
+  plain: {fileID: 0}
   wholeLeafLettuce: {fileID: 21300000, guid: d1b7b1aa38d1d6f48a8c7a5331b6899e, type: 3}
   choppedLettuce: {fileID: 21300000, guid: 00f50e750870d794caf46bfe7a1a638e, type: 3}
   noLettuce: {fileID: 0}
   biblicallyAcurateGreens: {fileID: 0}
+  aLeaf: {fileID: 0}
+  purple: {fileID: 0}
   beefPatty: {fileID: 21300000, guid: 423842e831bcee546a05e3c0b7ab1cbe, type: 3}
-  veganPatty: {fileID: 21300000, guid: 17f01ca57f3f6ca49afca9103b99ef86, type: 3}
-  unspeakableHorror: {fileID: 21300000, guid: f2f617da76f6fe34fa17b12ef50cc458, type: 3}
+  mushroom: {fileID: 0}
+  mysteryMeat: {fileID: 0}
   chicken: {fileID: 0}
+  cheeseburger: {fileID: 0}
   ketchup: {fileID: 21300000, guid: 3d4ac4c8be2130e4398584f8577ee818, type: 3}
   mustard: {fileID: 21300000, guid: 86bcf8a90b661184890ccb7e3b9f385d, type: 3}
   both: {fileID: 21300000, guid: fd34bacb7a74ef342978e016f0cb3a25, type: 3}
   neither: {fileID: 0}
+  slime: {fileID: 0}
+  mayo: {fileID: 0}
   tomatoe: {fileID: 21300000, guid: 9c07e6e5ccffbd646bb6f0abc0c4e602, type: 3}
   choppedOnions: {fileID: 21300000, guid: 6233f7efda0523b4fbf34ddb9b1b0153, type: 3}
   none: {fileID: 0}
   mushrooms: {fileID: 21300000, guid: 67de693ba79e75a4caf42f6b097b6dd7, type: 3}
+  onionRings: {fileID: 0}
+  theThing: {fileID: 0}
   classicTopBun: {fileID: 21300000, guid: a72f0c7b4f336d94cb15e4602401ba93, type: 3}
   lettuceWrapTop: {fileID: 21300000, guid: e3d567ec0332f4a40bf362f259ee645f, type: 3}
   noTopBun: {fileID: 0}
   tBunOfTheDeep: {fileID: 21300000, guid: 2c683cc2b0f2fd941b0327480a72dc73, type: 3}
+  pretzelTBun: {fileID: 0}
+  sourdoughTBun: {fileID: 0}
 --- !u!1 &5173986231806907828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1925,6 +1951,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e19f4a7086b9d64582564d4dca7a7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3677981040014956514 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 651225843426171970, guid: aecfaee706bc8b141959a0c2fd8c05c4, type: 3}
+  m_PrefabInstance: {fileID: 4180270850102922144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb6f982e6c769240af102d08ce9570a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &3719497583599481129 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 692711467498142345, guid: aecfaee706bc8b141959a0c2fd8c05c4, type: 3}
+  m_PrefabInstance: {fileID: 4180270850102922144}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c341833c9964ed4080e67cfdae7ddb5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &5626996928375492772 stripped

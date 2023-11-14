@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 699349200}
   m_Layer: 0
   m_Name: variableHolder
-  m_TagString: Untagged
+  m_TagString: variableHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346a44ada3d002b439ecf81ccdb0c8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wonMini: 0
   curStor: {fileID: 4900000, guid: 3c2bb8e5716feaa4a9df6efd1256b628, type: 3}
 --- !u!1 &819664206
 GameObject:
@@ -1567,7 +1568,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3cfa8b450ff8848b228ff262f7ef5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vH: {fileID: 699349200}
   convoModeImages: {fileID: 1086744512}
   charBtn: {fileID: 1637327998}
   manager: {fileID: 2038140412671358887}
@@ -1582,6 +1582,13 @@ MonoBehaviour:
   oR: {fileID: 8973544249656952753}
   cC: {fileID: 461199830}
   G: {fileID: 1648542496}
+  cSBtn: {fileID: 0}
+  oRBtn: {fileID: 0}
+  cCBtn: {fileID: 0}
+  gBtn: {fileID: 0}
+  fBtn: {fileID: 0}
+  mBtn: {fileID: 0}
+  nBtn: {fileID: 0}
   charSpeak: 0
   charSpeakTo: 1
   dialoguePanel: {fileID: 4229370329156961681}
