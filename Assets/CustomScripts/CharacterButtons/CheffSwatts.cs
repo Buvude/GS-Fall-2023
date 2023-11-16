@@ -5,15 +5,10 @@ using UnityEngine.UI;
 
 namespace InterDineMension.Character
 {
-    public class CheffSwatts : MonoBehaviour
+    public class CheffSwatts : CharBtnParent
     {
         //public TextAsset CS1, CS2;
-        public Image sR;
-        public Dictionary<string, Sprite> spriteDictionary;
-        public Dictionary<string, TextAsset> dialogueDictionary;
-        public string[] sDictKeyCS, dDictKeyCS;
-        public Sprite[] sDictValueCS;
-        public TextAsset[] dDictValueCS;
+        
         // Start is called before the first frame update
        
         /// <summary>
@@ -22,32 +17,31 @@ namespace InterDineMension.Character
         void Awake()
         {
             spriteDictionary = new Dictionary<string, Sprite>();
-            if (sDictKeyCS.Length != sDictValueCS.Length)
+            if (sDictKey.Length != sDictValue.Length)
             {
                 Debug.LogWarning("The length of moods is different then the list of sprites");
                 return;
             }
             else
             {
-                for(int i = 0; i < sDictKeyCS.Length; i++)
+                for (int i = 0; i < sDictKey.Length; i++)
                 {
-                    spriteDictionary.Add(sDictKeyCS[i], sDictValueCS[i]);
+                    spriteDictionary.Add(sDictKey[i], sDictValue[i]);
                 }
             }
             dialogueDictionary = new Dictionary<string, TextAsset>();
-            if (dDictKeyCS.Length != dDictValueCS.Length)
+            if (dDictKey.Length != dDictValue.Length)
             {
                 Debug.LogWarning("The length of dialogue is different then the list of dialogue assets");
                 return;
             }
             else
             {
-                for (int i = 0; i < dDictKeyCS.Length; i++)
+                for (int i = 0; i < dDictKey.Length; i++)
                 {
-                    dialogueDictionary.Add(dDictKeyCS[i], dDictValueCS[i]);
+                    dialogueDictionary.Add(dDictKey[i], dDictValue[i]);
                 }
             }
-            //Debug.Log(spriteDictionary.Count);
         }
 
         // Update is called once per frame

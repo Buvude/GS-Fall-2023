@@ -11,7 +11,7 @@ Would you like to retry the minigame?
          but I'll wait to impliment it until 
          I'm sure
     ===MainFail2===
-    ~irritatedCS+=2
+    ~affectionCS-=2
     Ay... Still not gettin' it, huh? #speaker:Chef Swatts #mood:sad
     
     Y-yeah... #speaker:Graciana #mood:sad

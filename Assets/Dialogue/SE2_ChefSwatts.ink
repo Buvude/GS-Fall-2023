@@ -56,7 +56,7 @@ They don't even feel pain! They're like fish, they don't got nerves or whateva. 
 
 **[kill the blobster]
 // Good Option
-~affectionCS+=1
+~affectionCS+=3
 
 (I reluctantly grab the knife. As I pick up the Blobster, Swatts clasps his hands, bows his head, and whispers something under his breath.) #speaker:Graciana #mood:fear
 ... #speaker:Chef Swatts #mood:pray
@@ -87,7 +87,7 @@ What was that thing you did, right before I cut it? It almost looked like you we
 
 **[make chef do it]
 //Bad Option
-~irritatedCS+=1
+~affectionCS-=3
 
 N-no way! I'm not doing it! #speaker:Graciana #mood:fear
 
@@ -128,7 +128,7 @@ Maybe you're right... I dunno. #speaker:Graciana #mood:sad
 
 **[free the blobster]
 //Chaotic Option
-~chaosCS+=1
+~chaosCS+=3
 
 Y-yeah... Sure... #speaker:Graciana #mood:fear
 (I reluctantly grab the knife, and pick up the Blobster.)

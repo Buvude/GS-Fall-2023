@@ -10,7 +10,7 @@ Would you like to retry the minigame?
 
 
 ===MainFail===
-~irritatedCS+=3
+~affectionCS-=3
 ...oops... #speaker:Graciana #mood:sad
 
 Ay, no worries. It takes a while for tha way of the food to start speakin' to ya. #speaker:Chef Swatts

@@ -76,6 +76,7 @@ namespace InterDineMension
             });
             currentStory.BindExternalFunction("SaveGame", () =>
             {
+                mGC.dM.dV = new DialogueVariables(currentStory);
                 mGC.dM.SaveGame();
             });
         }

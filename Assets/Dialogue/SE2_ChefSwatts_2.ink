@@ -69,7 +69,7 @@
     
     * [You're right...]
     //Bad//
-    ~irritatedCS+=1
+    ~affectionCS-=4
     
     Honestly... It seems like you might be right. #speaker:Graciana #mood:think
     It seems like you struggled a lot, and you finally made it... I don't blame you for not wanting to ever go back.
@@ -101,7 +101,7 @@
     
     * [The other flyfolk?]
     //Good//
-    ~affectionCS+=1
+    ~affectionCS+=4
     
     What about the other flyfolk? #speaker:Graciana #mood:think
     
@@ -136,7 +136,7 @@
     
     * [Overthrow the Spiders!]
     //Chaotic//
-    ~chaosCS+=1
+    ~chaosCS+=4
     
     Y'know, you defeated a Spider, and even took its Portal Device... #speaker:Graciana #mood:think
     Has anyone done that before?

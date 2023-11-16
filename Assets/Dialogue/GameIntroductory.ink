@@ -3,7 +3,6 @@ INCLUDE globals.ink
 
 ->GameIntro
 ===GameIntro===
-    VAR tempTest=0
     ~dayVar=1
     ~weekDay="Tut"
     ~convo_numberCS=0

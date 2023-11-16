@@ -8,6 +8,7 @@ namespace InterDineMension.MicroGame.BA
 {
     public class BurgerIngredients : MonoBehaviour
     {
+        public const float DELAY = .25f;
         public enum lanePos
         {
             lane1, lane2, lane3, lane4, lane5
@@ -30,6 +31,7 @@ namespace InterDineMension.MicroGame.BA
         void Start()
         {
             player = GameObject.FindWithTag("Player").GetComponent<PlayerController>();
+            StartCoroutine(delay());
         }
 
         // Update is called once per frame
@@ -37,51 +39,358 @@ namespace InterDineMension.MicroGame.BA
         {
         
         }
-
-        public void EndOfTheLine()
+        public void CheckInBB()
         {
-            switch (currentposIngredients)
+            if (player.BAManeger.bAState == BAManeger.phase.bottomBun)
             {
-                case lanePos.lane1:
-                    if (player.currentpos == PlayerController.lanePos.lane1)
-                    {
-                        player.CollectIngredient(ing);
-                    }
-                    break;
-                case lanePos.lane2:
-                    if (player.currentpos == PlayerController.lanePos.lane2)
-                    {
-                        player.CollectIngredient(ing);
-                    }
-                    break;
-                case lanePos.lane3:
-                    if (player.currentpos == PlayerController.lanePos.lane3)
-                    {
-                        player.CollectIngredient(ing);
-                    }
-                    break;
-                case lanePos.lane4:
-                    {
+                switch (currentposIngredients)
+                {
+                    case lanePos.lane1:
+                        if (player.currentpos == PlayerController.lanePos.lane1)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane2:
+                        if (player.currentpos == PlayerController.lanePos.lane2)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane3:
+                        if (player.currentpos == PlayerController.lanePos.lane3)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane4:
                         if (player.currentpos == PlayerController.lanePos.lane4)
                         {
                             player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
                         }
                         break;
-                    }
-                case lanePos.lane5:
-                    {
+                    case lanePos.lane5:
                         if (player.currentpos == PlayerController.lanePos.lane5)
                         {
                             player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
                         }
                         break;
-                    }
-                default:
-                    Debug.Log("default Triggered");
-                    break;
+                    default:
+                        Debug.Log("default Triggered");
+                        break;
+                }
             }
+
+        }
+        public void CheckInPi()
+        {
+            if (player.BAManeger.bAState == BAManeger.phase.pickle)
+            {
+                switch (currentposIngredients)
+                {
+                    case lanePos.lane1:
+                        if (player.currentpos == PlayerController.lanePos.lane1)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane2:
+                        if (player.currentpos == PlayerController.lanePos.lane2)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane3:
+                        if (player.currentpos == PlayerController.lanePos.lane3)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane4:
+                        if (player.currentpos == PlayerController.lanePos.lane4)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane5:
+                        if (player.currentpos == PlayerController.lanePos.lane5)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    default:
+                        Debug.Log("default Triggered");
+                        break;
+                }
+            }
+
+        }
+        public void CheckInGr()
+        {
+            if (player.BAManeger.bAState == BAManeger.phase.lettuce)
+            {
+                switch (currentposIngredients)
+                {
+                    case lanePos.lane1:
+                        if (player.currentpos == PlayerController.lanePos.lane1)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane2:
+                        if (player.currentpos == PlayerController.lanePos.lane2)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane3:
+                        if (player.currentpos == PlayerController.lanePos.lane3)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane4:
+                        if (player.currentpos == PlayerController.lanePos.lane4)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane5:
+                        if (player.currentpos == PlayerController.lanePos.lane5)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    default:
+                        Debug.Log("default Triggered");
+                        break;
+                }
+            }
+
+        }
+        public void CheckInPa()
+        {
+            if (player.BAManeger.bAState == BAManeger.phase.Patty)
+            {
+                switch (currentposIngredients)
+                {
+                    case lanePos.lane1:
+                        if (player.currentpos == PlayerController.lanePos.lane1)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane2:
+                        if (player.currentpos == PlayerController.lanePos.lane2)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane3:
+                        if (player.currentpos == PlayerController.lanePos.lane3)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane4:
+                        if (player.currentpos == PlayerController.lanePos.lane4)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane5:
+                        if (player.currentpos == PlayerController.lanePos.lane5)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    default:
+                        Debug.Log("default Triggered");
+                        break;
+                }
+            }
+
+        }
+        public void CheckInCo()
+        {
+            if (player.BAManeger.bAState == BAManeger.phase.condiment)
+            {
+                switch (currentposIngredients)
+                {
+                    case lanePos.lane1:
+                        if (player.currentpos == PlayerController.lanePos.lane1)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane2:
+                        if (player.currentpos == PlayerController.lanePos.lane2)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane3:
+                        if (player.currentpos == PlayerController.lanePos.lane3)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane4:
+                        if (player.currentpos == PlayerController.lanePos.lane4)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane5:
+                        if (player.currentpos == PlayerController.lanePos.lane5)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    default:
+                        Debug.Log("default Triggered");
+                        break;
+                }
+            }
+
+        }
+        public void CheckInVe()
+        {
+            if (player.BAManeger.bAState == BAManeger.phase.veggie)
+            {
+                switch (currentposIngredients)
+                {
+                    case lanePos.lane1:
+                        if (player.currentpos == PlayerController.lanePos.lane1)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane2:
+                        if (player.currentpos == PlayerController.lanePos.lane2)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane3:
+                        if (player.currentpos == PlayerController.lanePos.lane3)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane4:
+                        if (player.currentpos == PlayerController.lanePos.lane4)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane5:
+                        if (player.currentpos == PlayerController.lanePos.lane5)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    default:
+                        Debug.Log("default Triggered");
+                        break;
+                }
+            }
+
+        }
+        public void CheckInTB()
+        {
+            if (player.BAManeger.bAState == BAManeger.phase.topBun)
+            {
+                switch (currentposIngredients)
+                {
+                    case lanePos.lane1:
+                        if (player.currentpos == PlayerController.lanePos.lane1)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane2:
+                        if (player.currentpos == PlayerController.lanePos.lane2)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane3:
+                        if (player.currentpos == PlayerController.lanePos.lane3)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane4:
+                        if (player.currentpos == PlayerController.lanePos.lane4)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    case lanePos.lane5:
+                        if (player.currentpos == PlayerController.lanePos.lane5)
+                        {
+                            player.CollectIngredient(ing);
+                            this.gameObject.GetComponent<Image>().enabled = false;
+                        }
+                        break;
+                    default:
+                        Debug.Log("default Triggered");
+                        break;
+                }
+            }
+
+        }
+        public void EndOfTheLine()
+        {
+          
             //Destroy(this.gameObject);
             this.gameObject.SetActive(false);
+        }
+
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            Debug.Log("test collision");
+        }
+
+        IEnumerator delay()
+        {
+            yield return new WaitForSeconds(DELAY);
+            this.GetComponent<Animator>().SetTrigger("Drop");
         }
     }
 

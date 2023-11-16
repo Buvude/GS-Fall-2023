@@ -52,10 +52,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gnomies
       objectReference: {fileID: 0}
-    - target: {fileID: 3180208950384769053, guid: d43ab98c9429f86449a7fb589ea95ce2, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6211866049891237256, guid: d43ab98c9429f86449a7fb589ea95ce2, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -259,10 +255,6 @@ PrefabInstance:
     - target: {fileID: 3180208950384769053, guid: 279f9cfe965e90044a16660bd6d9fdd3, type: 3}
       propertyPath: m_Name
       value: CeeCee
-      objectReference: {fileID: 0}
-    - target: {fileID: 3180208950384769053, guid: 279f9cfe965e90044a16660bd6d9fdd3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6211866049891237256, guid: 279f9cfe965e90044a16660bd6d9fdd3, type: 3}
       propertyPath: m_Pivot.x

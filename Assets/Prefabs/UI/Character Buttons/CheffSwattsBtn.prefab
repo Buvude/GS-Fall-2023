@@ -53,41 +53,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sR: {fileID: 2411177332949617874}
-  sDictKeyCS:
-  - blank
-  - angry
+  sDictKey:
+  - annoyed
   - happy
   - neutral
   - pray
   - sad
-  - annoyed
-  dDictKeyCS:
+  - angry
+  dDictKey:
   - gameIntro
-  - morning
   - cSTalkTo1
-  - cSMGPass1
   - cSMGFail1
+  - cSMGPass1
+  - morning
   - cSTalkTo2
-  - cSMGPass2
   - cSMGFail2
+  - cSMGPass2
   - cSTalkTo3
-  sDictValueCS:
-  - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
+  sDictValue:
   - {fileID: 21300000, guid: f6208e39c56e08b4598c00394e192c0e, type: 3}
   - {fileID: 21300000, guid: ce5eaec2011c9f44dbcc544d9dfd391d, type: 3}
   - {fileID: 21300000, guid: ccd957e23faf41e44ae84868171c1635, type: 3}
   - {fileID: 21300000, guid: e6189bbb89dd53a4b8d6a638cc151bab, type: 3}
   - {fileID: 21300000, guid: 30c45a0445ae7154484bc9e3b0263a0f, type: 3}
   - {fileID: 21300000, guid: f6208e39c56e08b4598c00394e192c0e, type: 3}
-  dDictValueCS:
+  dDictValue:
   - {fileID: 4900000, guid: 5325151c076c8e3418d8a2ed9b3b5e14, type: 3}
-  - {fileID: 4900000, guid: 280438649d13aba49bb1d2b700830ee9, type: 3}
   - {fileID: 4900000, guid: 34e0e12b4b640cf4b939c56959b6c81b, type: 3}
-  - {fileID: 4900000, guid: b1b521620d3923748a993db49a3958d0, type: 3}
   - {fileID: 4900000, guid: 493981d5a2af59e419c91105c19638c5, type: 3}
+  - {fileID: 4900000, guid: b1b521620d3923748a993db49a3958d0, type: 3}
+  - {fileID: 4900000, guid: 280438649d13aba49bb1d2b700830ee9, type: 3}
   - {fileID: 4900000, guid: 41656c98891803c41bcd5e378621f6af, type: 3}
-  - {fileID: 4900000, guid: dd1d934898fa1814cb31d10707489dbc, type: 3}
   - {fileID: 4900000, guid: 5928dc06a3ad23b45b204b3260f17e61, type: 3}
+  - {fileID: 4900000, guid: dd1d934898fa1814cb31d10707489dbc, type: 3}
   - {fileID: 4900000, guid: 8b8707f507da77540987723d60045bd0, type: 3}
 --- !u!222 &3453327873401711260
 CanvasRenderer:

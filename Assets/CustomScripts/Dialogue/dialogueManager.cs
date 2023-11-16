@@ -28,7 +28,7 @@ namespace InterDineMension.Manager
         //tutorial made it a private serializeField, but I want to be able to adjust this with settings
         public float typingSpeed = 0.04f;
         private Coroutine displayLineCorutine;
-        private DialogueVariables dV;
+        internal DialogueVariables dV;
         private bool canContinueToNextLine = false;
         public CheffSwatts cS /*= new CheffSwatts()*/;
         public Graciana grac/*=new Graciana()*/;
@@ -91,14 +91,28 @@ namespace InterDineMension.Manager
         private void Awake()
         {
             currentStory = new Story(loadGlobalsJSON.text);
+            Debug.Log(currentStory.variablesState["dayVar"].ToString());
             vH = GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
             vH.dM = this;
            /* cS.sR.color = Color.HSVToRGB(0, 0, 40);*/
             grac.sR.color = Color.HSVToRGB(0, 0, 40);
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
             dPTest = this.gameObject.GetComponent<Image>();
-            dV = new DialogueVariables(loadGlobalsJSON);
-            dV.VariablesToStory(dV.globalVariablesStory);
+            dV = new DialogueVariables(currentStory);
+            /* 
+             * 
+             * 
+             * REPLACE THIS WITH LOADING SYSTEM WHEN DONE AND BEFORE SWITCHING SCENES
+             * 
+             * 
+             */
+            dV.LoadVariables();
+            /*
+             * 
+             * REPLACE THIS WITH LOADING SYSTEM WHEN DONE AND BEFORE SWITCHING SCENES
+             * 
+             * 
+             */
             Debug.Log(currentStory.variablesState["dayVar"].ToString());
 
 
@@ -687,7 +701,7 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.choppedOnions;
                                 manager.DisplayImage(manager.choppedOnions, 6);
                                 break;
-                            case "Onionrings":
+                            case "OnionRings":
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.onionRings;
                                 manager.DisplayImage(manager.onionRings, 6);
                                 break;

@@ -10,6 +10,7 @@ namespace InterDineMension.MicroGame.BA
 
     public class PlayerController : MonoBehaviour
     {
+        public BoxCollider2D bc2;
         public float speed;
         public Slider playerMovment;
         public const float  lane4=16, lane1=39, lane2=63, lane3=82;
@@ -750,5 +751,10 @@ namespace InterDineMension.MicroGame.BA
             else if (!finalBonusRend.IsActive()) { return finalBonusRend; }
             else { return topBunRend; }
         }
+       /* private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Debug.Log("test collision player");
+        }*/
+       
     }
 }
