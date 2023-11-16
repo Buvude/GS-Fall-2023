@@ -13,6 +13,7 @@ Ey yo, Graciana! Think ya can gimme some help real quick? #speaker:Chef Swatts
     ->DONE
 
 ==Sure==
+~currentConvo="cSD2"
 Yeah, you got it. #speaker:Graciana #mood:neutral
 
 Good good! Get ovah here an' help me with this! #speaker:Chef Swatts #mood:angry
@@ -113,7 +114,7 @@ Nothing, actually.
 Ehh, I just thought ya'd want the experience, ya know? #speaker:Chef Swatts
 Ya mentioned cooking ain't a strong point for ya. Thought this woulda helped ya.
 
-How would killing a weird alien lobster thing helped me cook?! #speaker:Graciana #mood:angry
+How would killing a weird alien lobster thing helped me cook?! #speaker:Graciana #mood:annoyed
 
 It's part of tha process! Ya gotta be with tha food for every step of tha way! #speaker:Chef Swatts #mood:angry
 
@@ -221,7 +222,6 @@ Order up! Come help me out with this, ya? #speaker:Chef Swatts #mood:angry
 
 (sigh...) #speaker:Graciana #mood:sad
 ->MainBAD
-~currentConvo="cSD2"
 -> DONE
 
 ***["We"?]
@@ -264,7 +264,6 @@ Graciana, come help me wit' this, ya? #speaker:Chef Swatts #mood:neutral
 
 (sigh...) #speaker:Graciana #mood:sad
 ->MainBAD
-~currentConvo="cSD2"
 -> DONE
 
 ***[What kinda food?]
@@ -300,7 +299,6 @@ B-but... #speaker:Graciana #mood:sad
 Graciana, help me with this, ya? #speaker:Chef Swatts #mood:neutral
 
 ...Okay... #speaker:Graciana
-~currentConvo="cSD2"
-->MainBAD
 
+->MainBAD
 -> DONE

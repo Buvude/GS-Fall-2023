@@ -4,6 +4,7 @@ using UnityEngine;
 using Ink.Runtime;
 using System.IO;
 using UnityEditor.Experimental;
+using UnityEditor;
 
 namespace InterDineMension
 {
@@ -59,7 +60,8 @@ namespace InterDineMension
 
         private void VariableChanged(string name, Ink.Runtime.Object value)
         {
-            /*Debug.Log("Variable changed: " + name + " = " + value);*/
+            /*Debug.Log("Variable changed: " + name + " = " + value);
+            EditorApplication.isPaused = true;*/
             //only maintain variables that were initialized from the globals ink file
             if (variables.ContainsKey(name))
             {

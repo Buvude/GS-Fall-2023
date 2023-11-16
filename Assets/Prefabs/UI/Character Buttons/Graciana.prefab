@@ -62,6 +62,7 @@ MonoBehaviour:
   - think
   - blank
   - fear
+  - angry
   dictValueG:
   - {fileID: 21300000, guid: b6baae56f419fac49bb3e078d3fa4f58, type: 3}
   - {fileID: 21300000, guid: 12d7e24ac87eafc4ea91f961c41a3e63, type: 3}
@@ -71,6 +72,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: be7db0a522532f546b99b9eaabb2eb45, type: 3}
   - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
   - {fileID: 21300000, guid: 2e8a895bc1cee2f43aebd70352753727, type: 3}
+  - {fileID: 21300000, guid: b6baae56f419fac49bb3e078d3fa4f58, type: 3}
 --- !u!222 &276743336170488321
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -74,6 +74,10 @@ namespace InterDineMension
             {
                 mGC.loadTTM();
             });
+            currentStory.BindExternalFunction("SaveGame", () =>
+            {
+                mGC.dM.SaveGame();
+            });
         }
 
         public void unBind(Story currentStory)
@@ -84,6 +88,7 @@ namespace InterDineMension
             currentStory.UnbindExternalFunction("GoToDiner");
             currentStory.UnbindExternalFunction("StartO_Ryan");
             currentStory.UnbindExternalFunction("StartTTMicro");
+            currentStory.UnbindExternalFunction("SaveGame");
         }
     }
 }

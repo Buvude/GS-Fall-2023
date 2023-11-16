@@ -18,7 +18,7 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
-     
+        
         //public GameObject charImageCS, charImageOR;
         //private bool deactivatedcorutines = false;
         internal VariableHolder vH;
@@ -113,6 +113,7 @@ namespace InterDineMension.Manager
                 choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
                 index++;
             }
+            Debug.Log(currentStory.variablesState["dayVar"].ToString());
         }
 
         private void Start()
@@ -213,6 +214,11 @@ namespace InterDineMension.Manager
                             case 1:
                                 {
                                     EnterDialogueMode(cS.dialogueDictionary["cSTalkTo2"]);
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    EnterDialogueMode(cS.dialogueDictionary["cSTalkTo3"]);
                                     break;
                                 }
                             default:
@@ -873,13 +879,18 @@ namespace InterDineMension.Manager
             }
             return variableValue;
         }
+        public void SaveGame()
+        {
+            dV.SaveVariables();
+        }
+
 
         public void OnApplicationQuit()
         {
-            if(dV != null)
+            /*if(dV != null)
             {
                 dV.SaveVariables();
-            }
+            }*/
             
         }
     }

@@ -94,6 +94,8 @@
     Y'know, I guess so... #speaker:Graciana #mood:think
     (Jeez... I hope I didn't come across as too depressing...) #speaker:Graciana #mood:sad
     (Well, I can't dwell on it now. I got more cleaning to do...)
+    ~convo_numberCS=2
+    ->NextDayVarAdjust
     ->DONE
     
     * [The other flyfolk?]
@@ -126,6 +128,8 @@
     Haha, yeah... #speaker:Graciana
     (I don't know if Swatts is genuine or not, but I hope he actually thinks of what I said...) #mood:think
     (For now, I still got some cleaning to do.)
+    ~convo_numberCS=2
+    ->NextDayVarAdjust
     ->DONE
     
     * [Overthrow the Spiders!]
@@ -156,4 +160,6 @@
     Yea, of course... Just an idea... #speaker:Graciana #mood:neutral
     (I really hope Swatts does the right thing here. The insectica seem to have been suffering for centuries--this could be their chance at freedom.)
     (But for now... I still have some more cleaning to do.)
+    ~convo_numberCS=2
+    ->NextDayVarAdjust
     ->DONE
