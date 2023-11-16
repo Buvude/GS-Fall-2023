@@ -12,7 +12,7 @@ namespace InterDineMension
     {
         public Dictionary<string, Ink.Runtime.Object> variables {  get; private set; }
 
-        private Story globalVariablesStory;
+        internal Story globalVariablesStory;
 
         private const string saveVariablesKey = "INK_VARIABLES";
 
@@ -35,6 +35,7 @@ namespace InterDineMension
                 variables.Add(name, value);
                 /*Debug.Log("Initialized global Dialogue Variable: " + name + " = " + value);*/
             }
+            Debug.Log(globalVariablesStory.variablesState["dayVar"]);
         }
 
         public void SaveVariables()
@@ -70,7 +71,7 @@ namespace InterDineMension
             }
         }
 
-        private void VariablesToStory(Story story)
+        internal void VariablesToStory(Story story)
         {
             foreach(KeyValuePair<string, Ink.Runtime.Object> variable in variables)
             {

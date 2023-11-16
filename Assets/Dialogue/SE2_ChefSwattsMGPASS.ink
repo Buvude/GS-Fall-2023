@@ -1,6 +1,6 @@
 INCLUDE globals.ink
 INCLUDE SE2_ChefSwatts_2.ink
-
+~affectionCS+=2
 Ay, there ya go! Gettin' better and better, huh? #speaker:Chef Swatts #mood:happy
 
 I guess so! #speaker:Graciana #mood:happy

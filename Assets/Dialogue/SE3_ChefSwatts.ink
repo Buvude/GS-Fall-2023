@@ -1,3 +1,8 @@
+INCLUDE globals.ink
+
+
+->MainCS3
+
 ==MainCS3==
 Ay, Gracie, ya got a minute? #speaker:Chef Swatts
 
@@ -10,6 +15,14 @@ Ay, Gracie, ya got a minute? #speaker:Chef Swatts
 
     Ay, just wanted to lend ya ear for a minute #speaker:Chef Swatts
     //go to ending
+    {
+    -chaosCS>=3:
+        ->ChaosEndCS
+    -affectionCS>=irritatedCS:
+        ->GoodEndCS
+    -irritatedCS>affectionCS:
+        ->BadEndCS
+    }
     ->DONE //temporary place holder so no error
     
 * I'm busy

@@ -87,16 +87,20 @@ namespace InterDineMension.Manager
         public InkExternalFunctions iEF;
         public GameObject BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2;
         public GameObject BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3;
+        
         private void Awake()
         {
             currentStory = new Story(loadGlobalsJSON.text);
-            vH =GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
+            vH = GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
             vH.dM = this;
            /* cS.sR.color = Color.HSVToRGB(0, 0, 40);*/
             grac.sR.color = Color.HSVToRGB(0, 0, 40);
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
             dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(loadGlobalsJSON);
+            dV.VariablesToStory(dV.globalVariablesStory);
+            Debug.Log(currentStory.variablesState["dayVar"].ToString());
+
 
             if (instance != null)
             {
@@ -113,7 +117,6 @@ namespace InterDineMension.Manager
                 choicesText[index] = choice.GetComponentInChildren<TextMeshProUGUI>();
                 index++;
             }
-            Debug.Log(currentStory.variablesState["dayVar"].ToString());
         }
 
         private void Start()
