@@ -53,18 +53,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sR: {fileID: 3422064168978351305}
-  dictKeyoR:
+  sDictKey:
   - neutral
   - happy
   - annoyed
   - sad
   - hug
-  dictValueoR:
+  - angry
+  - blank
+  dDictKey: []
+  sDictValue:
   - {fileID: 21300000, guid: d041da730b72e45419e2ede2bcd0a783, type: 3}
   - {fileID: 21300000, guid: b749b593a8a55b041b7ae84c422dae35, type: 3}
   - {fileID: 21300000, guid: b5bc3fb151ef4de48b0698fd6e8d5d5f, type: 3}
   - {fileID: 21300000, guid: 187d8443445e27644a1a56d7f6543eb5, type: 3}
   - {fileID: 21300000, guid: f585cc34a35f7c2479f3c17ead5c052e, type: 3}
+  - {fileID: 21300000, guid: b5bc3fb151ef4de48b0698fd6e8d5d5f, type: 3}
+  - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
+  dDictValue: []
 --- !u!222 &2442933825277518471
 CanvasRenderer:
   m_ObjectHideFlags: 0

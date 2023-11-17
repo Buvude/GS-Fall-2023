@@ -11,4 +11,7 @@ What level do you want to try? #speaker:Chef Swatts #mood:happy
     *[Level 2]
         ~convo_numberCS=1
         ->MainBAD
+    *[Level 3]
+        ~convo_numberCS=2
+        ->MainBAD
     ->DONE

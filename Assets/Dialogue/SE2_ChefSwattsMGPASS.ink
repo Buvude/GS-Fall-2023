@@ -1,3 +1,6 @@
+INCLUDE globals.ink
+INCLUDE SE2_ChefSwatts_2.ink
+~affectionCS+=2
 Ay, there ya go! Gettin' better and better, huh? #speaker:Chef Swatts #mood:happy
 
 I guess so! #speaker:Graciana #mood:happy
@@ -16,4 +19,4 @@ So... get that out to tha customer as soon as ya can! #speaker:Chef Swatts #mood
 ...On it! #speaker:Graciana #mood:happy
 (I take the food out to the customer, and go back to the kitchen to help Swatts clean up a bit.)
 
--> DONE
+-> MainCS2

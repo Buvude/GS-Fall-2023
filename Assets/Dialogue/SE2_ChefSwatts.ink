@@ -1,18 +1,19 @@
-INCLUDE SE2_ChefSwattsMGPASS.ink
-INCLUDE SE2_ChefSwattsMGFAIL.ink
-INCLUDE SE2_ChefSwatts-2.ink
 INCLUDE globals.ink
+INCLUDE BADialogue.ink
+
 
 
 -> Start
 ==Start==
-~weekDay="Tue"
-~dayVar=dayVar+1
 Ey yo, Graciana! Think ya can gimme some help real quick? #speaker:Chef Swatts
 * [Sure]
 -> Sure
+* [Sorry not now]
+    ~GoToDiner()
+    ->DONE
 
 ==Sure==
+~currentConvo="cSD2"
 Yeah, you got it. #speaker:Graciana #mood:neutral
 
 Good good! Get ovah here an' help me with this! #speaker:Chef Swatts #mood:angry
@@ -55,6 +56,7 @@ They don't even feel pain! They're like fish, they don't got nerves or whateva. 
 
 **[kill the blobster]
 // Good Option
+~affectionCS+=3
 
 (I reluctantly grab the knife. As I pick up the Blobster, Swatts clasps his hands, bows his head, and whispers something under his breath.) #speaker:Graciana #mood:fear
 ... #speaker:Chef Swatts #mood:pray
@@ -85,6 +87,7 @@ What was that thing you did, right before I cut it? It almost looked like you we
 
 **[make chef do it]
 //Bad Option
+~affectionCS-=3
 
 N-no way! I'm not doing it! #speaker:Graciana #mood:fear
 
@@ -113,7 +116,7 @@ Nothing, actually.
 Ehh, I just thought ya'd want the experience, ya know? #speaker:Chef Swatts
 Ya mentioned cooking ain't a strong point for ya. Thought this woulda helped ya.
 
-How would killing a weird alien lobster thing helped me cook?! #speaker:Graciana #mood:angry
+How would killing a weird alien lobster thing helped me cook?! #speaker:Graciana #mood:annoyed
 
 It's part of tha process! Ya gotta be with tha food for every step of tha way! #speaker:Chef Swatts #mood:angry
 
@@ -125,6 +128,7 @@ Maybe you're right... I dunno. #speaker:Graciana #mood:sad
 
 **[free the blobster]
 //Chaotic Option
+~chaosCS+=3
 
 Y-yeah... Sure... #speaker:Graciana #mood:fear
 (I reluctantly grab the knife, and pick up the Blobster.)
@@ -152,10 +156,6 @@ Right before I, well, "freed" it...
 What was that thing you did...? It almost looked like you were praying. #speaker:Graciana #mood:think
 
 -> Next
-
-* [Nah]
-
--> DONE
 
 ==Next==
 
@@ -224,8 +224,7 @@ But what abou-- #speaker:Graciana #mood:angry
 Order up! Come help me out with this, ya? #speaker:Chef Swatts #mood:angry
 
 (sigh...) #speaker:Graciana #mood:sad
-//Microgame goes here
-
+->MainBAD
 -> DONE
 
 ***["We"?]
@@ -267,8 +266,7 @@ But-- #speaker:Graciana #mood:angry
 Graciana, come help me wit' this, ya? #speaker:Chef Swatts #mood:neutral
 
 (sigh...) #speaker:Graciana #mood:sad
-//Microgame goes here
-
+->MainBAD
 -> DONE
 
 ***[What kinda food?]
@@ -304,6 +302,6 @@ B-but... #speaker:Graciana #mood:sad
 Graciana, help me with this, ya? #speaker:Chef Swatts #mood:neutral
 
 ...Okay... #speaker:Graciana
-//Microgame goes here
 
+->MainBAD
 -> DONE

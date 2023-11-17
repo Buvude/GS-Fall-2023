@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 352288855898864990}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.557024, y: -1.0328766, z: 0.17838144}
+  m_LocalPosition: {x: 6.557024, y: -1.0328766, z: 0}
   m_LocalScale: {x: 3.7463462, y: 3.7463462, z: 3.7463462}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51,6 +51,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dirt: {fileID: 545283539978005264}
   silverwareNapkinCombo: {fileID: 5655704779214333076}
+  fT: {fileID: 0}
 --- !u!212 &7002545609959177878
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -204,7 +205,7 @@ Transform:
   m_GameObject: {fileID: 1822016507841151860}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.0570238, y: -1.0328766, z: 0.17838144}
+  m_LocalPosition: {x: 3.0570238, y: -1.0328766, z: 0}
   m_LocalScale: {x: 3.7463462, y: 3.7463462, z: 3.7463462}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -226,6 +227,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dirt: {fileID: 204158566645286307}
   silverwareNapkinCombo: {fileID: 8740067437828995012}
+  fT: {fileID: 0}
 --- !u!212 &6503939727487498338
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -438,7 +440,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.46226418, g: 0.3073675, b: 0.102483094, a: 1}
   m_FlipX: 0
@@ -600,7 +602,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.46226418, g: 0.3073675, b: 0.102483094, a: 1}
   m_FlipX: 0
@@ -846,7 +848,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
   m_Color: {r: 0.46226418, g: 0.3073675, b: 0.102483094, a: 1}
   m_FlipX: 0
@@ -949,7 +951,7 @@ Transform:
   m_GameObject: {fileID: 7751506812027205112}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.557024, y: 2.4671233, z: 0.17838144}
+  m_LocalPosition: {x: 6.557024, y: 2.4671233, z: 0}
   m_LocalScale: {x: 3.7463462, y: 3.7463462, z: 3.7463462}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -971,6 +973,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dirt: {fileID: 56386148399656008}
   silverwareNapkinCombo: {fileID: 8050434501671011124}
+  fT: {fileID: 0}
 --- !u!212 &5195685082407121360
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1188,6 +1191,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 168859709274047760}
+  - component: {fileID: 8198600348405821727}
+  - component: {fileID: 4758773060451415303}
   m_Layer: 0
   m_Name: Table of Four
   m_TagString: Untagged
@@ -1204,8 +1209,8 @@ Transform:
   m_GameObject: {fileID: 8073913131048721006}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.86, y: -1.22, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -31.72, y: -1.22, z: 0}
+  m_LocalScale: {x: 1.221, y: 1.221, z: 1.221}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5914863230700257490}
@@ -1214,6 +1219,49 @@ Transform:
   - {fileID: 8273638486495646501}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &8198600348405821727
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8073913131048721006}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 352ec70701ea32a46926c879de86540c, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4758773060451415303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8073913131048721006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f07ba3964e9af24d87756e79886b3b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tableSections:
+  - {fileID: 8972941105951262662}
+  - {fileID: 8009590197183690730}
+  - {fileID: 13667747247916843}
+  - {fileID: 6336483130199102437}
+  numberBussed: 0
+  numberOfSections: 0
+  animator: {fileID: 8198600348405821727}
+  animationcalled: 0
+  mc: {fileID: 0}
 --- !u!1 &8740067437828995012
 GameObject:
   m_ObjectHideFlags: 0
@@ -1316,7 +1364,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 373692547566765596, guid: 093fe140de26cb34f8e285810374c047, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.17838144
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 373692547566765596, guid: 093fe140de26cb34f8e285810374c047, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1350,6 +1398,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: table section
       objectReference: {fileID: 0}
+    - target: {fileID: 8648597375792410122, guid: 093fe140de26cb34f8e285810374c047, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1360,3 +1412,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 373692547566765596, guid: 093fe140de26cb34f8e285810374c047, type: 3}
   m_PrefabInstance: {fileID: 6285423783931348686}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &8972941105951262662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3151400180414988552, guid: 093fe140de26cb34f8e285810374c047, type: 3}
+  m_PrefabInstance: {fileID: 6285423783931348686}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3bf9d4b2ca32774988a69cce580fb1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

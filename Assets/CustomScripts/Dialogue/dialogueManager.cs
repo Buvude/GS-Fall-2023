@@ -18,23 +18,24 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
-     
+        
         //public GameObject charImageCS, charImageOR;
         //private bool deactivatedcorutines = false;
-        public VariableHolder vH;
+        internal VariableHolder vH;
         public GameObject convoModeImages, charBtn;
         public dialogueSpriteManager manager;
         public GameObject[] dialogueObject;
         //tutorial made it a private serializeField, but I want to be able to adjust this with settings
         public float typingSpeed = 0.04f;
         private Coroutine displayLineCorutine;
-        private DialogueVariables dV;
+        internal DialogueVariables dV;
         private bool canContinueToNextLine = false;
         public CheffSwatts cS /*= new CheffSwatts()*/;
         public Graciana grac/*=new Graciana()*/;
         public O_Ryan oR;
         public CeeCee cC;
         public Gnomies G;
+        public GameObject cSBtn, oRBtn, cCBtn, gBtn, fBtn, mBtn, nBtn;
 
         public enum speaker { Graciana, Swatts,O_Ryan, CeeCee, Gnomies, Fred, None};
         public enum speakingTo {  O_Ryan, Swatts, CeeCee, Gnomies, Fred};
@@ -61,6 +62,7 @@ namespace InterDineMension.Manager
         private TextMeshProUGUI[] choicesText;
 
         private Story currentStory;
+        public Story loadGlobalink;
 
         private bool exitedDialogueMode = false;
 
@@ -84,15 +86,34 @@ namespace InterDineMension.Manager
 
         public InkExternalFunctions iEF;
         public GameObject BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2;
-
+        public GameObject BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3;
+        
         private void Awake()
         {
+            currentStory = new Story(loadGlobalsJSON.text);
+            vH = GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
+            vH.dM = this;
            /* cS.sR.color = Color.HSVToRGB(0, 0, 40);*/
             grac.sR.color = Color.HSVToRGB(0, 0, 40);
-            iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2);
+            iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
             dPTest = this.gameObject.GetComponent<Image>();
-            dV = new DialogueVariables(loadGlobalsJSON); 
-             
+            dV = new DialogueVariables(currentStory);
+            /* 
+             * 
+             * 
+             * REPLACE THIS WITH LOADING SYSTEM WHEN DONE AND BEFORE SWITCHING SCENES
+             * 
+             * 
+             */
+            dV.LoadVariables();
+            /*
+             * 
+             * REPLACE THIS WITH LOADING SYSTEM WHEN DONE AND BEFORE SWITCHING SCENES
+             * 
+             * 
+             */
+
+
             if (instance != null)
             {
                 Debug.LogWarning("Found more then one DialogueManager instance");
@@ -112,15 +133,55 @@ namespace InterDineMension.Manager
 
         private void Start()
         {
-            StartMorningConvo();//will need to be adjusted later
-        }   
+            if (currentStory.variablesState["timeOfDay"].ToString() == "morning")
+            {
+                StartMorningConvo();//will need to be adjusted later
+            }
+            else if (currentStory.variablesState["timeOfDay"].ToString() == "afternoon")
+            {
+                PostMiniGameConvo();
+            }
+            else if (currentStory.variablesState["timeOfDay"].ToString() == "night")
+            {
+                //night time activity
+            }
+            else
+            {
+                Debug.LogWarning("The variable timeOfDay in globals.ink is not in a valid state");
+            }
+
+            //conditional of what state the day is in
+            
+        }
+
 
         public void StartMorningConvo()
         {
-            //charSpeakTo = speakingTo.Swatts;
-            EnterDialogueMode(dayOneIntro);
+            
+            charSpeakTo = speakingTo.Swatts;
+            switch (int.Parse(currentStory.variablesState["dayVar"].ToString()))//so it defaults to the random quip thing unless there is something specific for CS to say today
+            {
+                case 1:
+                    EnterDialogueMode(cS.dialogueDictionary["gameIntro"]);
+                    break;
+                default:
+                    EnterDialogueMode(cS.dialogueDictionary["morning"]);
+                    break;
+            }
+
+            
         }
 
+        public void PostMiniGameConvo()
+        {
+            switch (currentStory.variablesState["currentConvo"].ToString())
+            {
+                case "":
+                    break;
+                default:
+                    break;
+            }
+        }
         public static dialogueManager GetInstance()
         {
             return instance;
@@ -158,16 +219,21 @@ namespace InterDineMension.Manager
             {
                 case speakingTo.Swatts:
                     {
-                        switch (iEF.csConvo)
+                        switch (int.Parse(currentStory.variablesState["convo_numberCS"].ToString()))
                         {
                             case 0:
                                 {
-                                    EnterDialogueMode(cS.CS1);
+                                    EnterDialogueMode(cS.dialogueDictionary["cSTalkTo1"]);
                                     break;
                                 }
                             case 1:
                                 {
-                                    EnterDialogueMode(cS.CS2);
+                                    EnterDialogueMode(cS.dialogueDictionary["cSTalkTo2"]);
+                                    break;
+                                }
+                            case 2:
+                                {
+                                    EnterDialogueMode(cS.dialogueDictionary["cSTalkTo3"]);
                                     break;
                                 }
                             default:
@@ -195,6 +261,7 @@ namespace InterDineMension.Manager
             //add method to determine which convo is going on, possibly triggered by the char btn
             dPTest.enabled = true;
             currentStory =new Story(inkJSON.text);
+            vH.currentStory = currentStory;
             dialoguePlaying=true;
             grac.gameObject.GetComponent<Image>().enabled = true;
             dV.StartListening(currentStory);
@@ -271,7 +338,7 @@ namespace InterDineMension.Manager
 
             else
             {
-                ExitDialogueMode(false,0,0);
+                ExitDialogueMode(false,0,"ContinueStory");
                 dPTest.enabled = false;
             }
         }
@@ -424,19 +491,16 @@ namespace InterDineMension.Manager
                                     }
                                 case speaker.O_Ryan:
                                     {
-                                        Debug.Log("Got to o'ryan sprites");
                                         oR.sR.sprite= oR.spriteDictionary[tagValue];
                                         break;
                                     }
                                 case speaker.CeeCee:
                                     {
-                                        Debug.Log("Got to CeeCee sprites");
                                         cC.sR.sprite = cC.spriteDictionary[tagValue];
                                         break;
                                     }
                                 case speaker.Gnomies:
                                     {
-                                        Debug.Log("Got to gnomies sprites");
                                         G.sR.sprite = G.spriteDictionary[tagValue];
                                         break;
                                     }
@@ -514,9 +578,13 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.lettuceWrapBottom;
                                 manager.DisplayImage(manager.lettuceWrapBottom, 1);
                                 break;
-                            case "Nothing":
-                                mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.noBottomBun;
-                                manager.DisplayImage(null,1);
+                            case "Sourdough":
+                                mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.sourdoughBottom;
+                                manager.DisplayImage(manager.sourdoughBBun,1);
+                                break;
+                            case "Pretzel":
+                                mGC.orderedIngredients[0] = BurgerIngredients.ingredientType.pretzelBottom;
+                                manager.DisplayImage(manager.pretzelBBun, 1);
                                 break;
                             default:
                                 Debug.LogWarning($"BBun value {tagValue} has not been recongnized");
@@ -534,9 +602,9 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.relish;
                                 manager.DisplayImage(manager.relish, 2);
                                 break;
-                            case "Nothing":
-                                mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.noPickles;
-                                manager.DisplayImage(null, 2);
+                            case "Plain":
+                                mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.wholePickle;
+                                manager.DisplayImage(manager.plain, 2);
                                 break;
                             case "Peppers":
                                 mGC.orderedIngredients[1] = BurgerIngredients.ingredientType.peppers;
@@ -551,7 +619,7 @@ namespace InterDineMension.Manager
                     case LETTUCE_TAG:
                         switch (tagValue)
                         {
-                            case "Leaf":
+                            case "Wholeleaf":
                                 mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.wholeLeafLettuce;
                                 manager.DisplayImage(manager.wholeLeafLettuce, 3);
                                 break;
@@ -559,9 +627,13 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.choppedLettuce;
                                 manager.DisplayImage(manager.choppedLettuce, 3);
                                 break;
-                            case "Nothing":
-                                mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.noLettuce;
-                                manager.DisplayImage(null, 3);
+                            case "Purple":
+                                mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.purple;
+                                manager.DisplayImage(manager.purple, 3);
+                                break;
+                            case "Leaf":
+                                mGC.orderedIngredients[2] = BurgerIngredients.ingredientType.aLeaf;
+                                manager.DisplayImage(manager.aLeaf, 3);
                                 break;
                             default:
                                 Debug.LogWarning($"Lettuce value {tagValue} has not been recongnized");
@@ -577,11 +649,15 @@ namespace InterDineMension.Manager
                                 break;
                             case "Vegan":
                                 mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.mushroomPatty;
-                                manager.DisplayImage(manager.veganPatty, 4);
+                                manager.DisplayImage(manager.mushroom, 4);
                                 break;
                             case "Chicken":
                                 mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.chicken;
                                 manager.DisplayImage(manager.chicken, 4);
+                                break;
+                            case "Cheeseburger":
+                                mGC.orderedIngredients[3] = BurgerIngredients.ingredientType.withCheese;
+                                manager.DisplayImage(manager.cheeseburger, 4);
                                 break;
                             default:
                                 Debug.LogWarning($"Patty value {tagValue} has not been recongnized");
@@ -603,9 +679,9 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[4] = BurgerIngredients.ingredientType.both;
                                 manager.DisplayImage(manager.both, 5);
                                 break;
-                            case "Nothing":
-                                mGC.orderedIngredients[4] = BurgerIngredients.ingredientType.neither;
-                                manager.DisplayImage(null, 5);
+                            case "Mayo":
+                                mGC.orderedIngredients[4] = BurgerIngredients.ingredientType.mayo;
+                                manager.DisplayImage(manager.mayo, 5);
                                 break;
                             default:
                                 Debug.LogWarning($"Condiments value {tagValue} has not been recongnized");
@@ -623,9 +699,9 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.choppedOnions;
                                 manager.DisplayImage(manager.choppedOnions, 6);
                                 break;
-                            case "Nothing":
-                                mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.none;
-                                manager.DisplayImage(null, 6);
+                            case "OnionRings":
+                                mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.onionRings;
+                                manager.DisplayImage(manager.onionRings, 6);
                                 break;
                             case "Mushrooms":
                                 mGC.orderedIngredients[5] = BurgerIngredients.ingredientType.mushrooms;
@@ -647,9 +723,13 @@ namespace InterDineMension.Manager
                                 mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.lettuceWrapTop;
                                 manager.DisplayImage(manager.lettuceWrapTop, 7);
                                 break;
-                            case "Nothing":
-                                mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.noTopBun;
-                                manager.DisplayImage(null, 7);
+                            case "Sourdough":
+                                mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.sourdoughTop;
+                                manager.DisplayImage(manager.sourdoughTBun, 7);
+                                break;
+                            case "Pretzel":
+                                mGC.orderedIngredients[6] = BurgerIngredients.ingredientType.pretzelTop;
+                                manager.DisplayImage(manager.pretzelTBun, 7);
                                 break;
                             default:
                                 Debug.LogWarning($"TBun value {tagValue} has not been recongnized");
@@ -663,9 +743,9 @@ namespace InterDineMension.Manager
             }
         }
 
-        public void ExitDialogueMode(bool enterDialogueMode, int day, int csConvoNumber)
+        public void ExitDialogueMode(bool enterDinnerMode, int day, string whereCameFrom)
         {
-            
+            //Debug.Log($"Got to exit dialogue mode from {whereCameFrom} ");
             dV.StopListening(currentStory);
 
             //dialogueObject.SetActive(false);
@@ -682,7 +762,7 @@ namespace InterDineMension.Manager
             dPTest.enabled = false;
 
             dialogueText.text = "";
-            if(enterDialogueMode)
+            if(enterDinnerMode)
             {
                 EnterDinerMode(day);
             }
@@ -691,8 +771,79 @@ namespace InterDineMension.Manager
 
         public void EnterDinerMode(int day)
         {
-            switch (day)//will determine who's avalible
+            cSBtn.gameObject.SetActive(false);
+            oRBtn.gameObject.SetActive(false); 
+            cCBtn.SetActive(false);
+            gBtn.SetActive(false);
+            fBtn.SetActive(false);
+            mBtn.SetActive(false);
+            nBtn.SetActive(false);
+
+            switch (currentStory.variablesState["weekDay"].ToString())//will determine who's avalible
             {
+                case "Tut":
+                    cSBtn.gameObject.SetActive(true);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(false);
+                    gBtn.SetActive(false);
+                    fBtn.SetActive(false);
+                    mBtn.SetActive(false);
+                    nBtn.SetActive(false);
+                    break;
+                case "Mon":                   
+                    cSBtn.gameObject.SetActive(true);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(false);
+                    gBtn.SetActive(true);
+                    fBtn.SetActive(false);
+                    mBtn.SetActive(false);
+                    nBtn.SetActive(true);
+                    break;
+                case "Tue":
+                    cSBtn.gameObject.SetActive(true);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(true);
+                    gBtn.SetActive(true);
+                    fBtn.SetActive(false);
+                    mBtn.SetActive(false);
+                    nBtn.SetActive(false);
+                    break;
+                case "Wed":
+                    cSBtn.gameObject.SetActive(true);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(false);
+                    gBtn.SetActive(false);
+                    fBtn.SetActive(true);
+                    mBtn.SetActive(true);
+                    nBtn.SetActive(false);
+                    break;
+                case "Thu":
+                    cSBtn.gameObject.SetActive(true);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(false);
+                    gBtn.SetActive(true);
+                    fBtn.SetActive(false);
+                    mBtn.SetActive(true);
+                    nBtn.SetActive(false);
+                    break;
+                case "Fri":
+                    cSBtn.gameObject.SetActive(false);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(true);
+                    gBtn.SetActive(false);
+                    fBtn.SetActive(true);
+                    mBtn.SetActive(false);
+                    nBtn.SetActive(false);
+                break;
+                case "Sat":
+                    cSBtn.gameObject.SetActive(false);
+                    oRBtn.gameObject.SetActive(false);
+                    cCBtn.SetActive(true);
+                    gBtn.SetActive(false);
+                    fBtn.SetActive(false);
+                    mBtn.SetActive(false);
+                    nBtn.SetActive(true);
+                    break;
                 default:
                     break;
             }
@@ -743,13 +894,18 @@ namespace InterDineMension.Manager
             }
             return variableValue;
         }
+        public void SaveGame()
+        {
+            dV.SaveVariables();
+        }
+
 
         public void OnApplicationQuit()
         {
-            if(dV != null)
+            /*if(dV != null)
             {
                 dV.SaveVariables();
-            }
+            }*/
             
         }
     }

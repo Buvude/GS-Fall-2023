@@ -1,6 +1,7 @@
-INCLUDE Intro_O'Ryan.ink  
+//EXTERNAL GoToDiner()
+INCLUDE Intro_ORyan.ink
 INCLUDE globals.ink
-
+~affectionCS+=1
 Ay, there ya go! #speaker:Chef Swatts
 I knew it, you're a natural at this!
 
@@ -22,4 +23,3 @@ Got it. #speaker:Graciana #mood:happy
 
 ~convo_numberCS=1
 ->mainORYAN
--> END

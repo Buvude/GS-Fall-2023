@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &6211866049891237256
 RectTransform:
   m_ObjectHideFlags: 0
@@ -53,18 +53,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sR: {fileID: 3422064168978351305}
-  dictKeyCC:
+  sDictKey:
   - angry
   - happy
   - neutral
   - sad
   - blank
-  dictValueCC:
+  - annoyed
+  dDictKey: []
+  sDictValue:
   - {fileID: 21300000, guid: c5903308058dab746979b3c68bacb805, type: 3}
   - {fileID: 21300000, guid: 5f92d9f7476740f438d413756ac3b384, type: 3}
   - {fileID: 21300000, guid: 3b3c1e6cf46c52b4b8775a701b970176, type: 3}
   - {fileID: 21300000, guid: f6c3aea8c65f17c408db155c3eba6f8d, type: 3}
   - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
+  - {fileID: 21300000, guid: c5903308058dab746979b3c68bacb805, type: 3}
+  dDictValue: []
 --- !u!222 &2442933825277518471
 CanvasRenderer:
   m_ObjectHideFlags: 0

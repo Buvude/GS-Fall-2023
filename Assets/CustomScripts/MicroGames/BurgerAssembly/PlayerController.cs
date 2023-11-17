@@ -10,6 +10,7 @@ namespace InterDineMension.MicroGame.BA
 
     public class PlayerController : MonoBehaviour
     {
+        public BoxCollider2D bc2;
         public float speed;
         public Slider playerMovment;
         public const float  lane4=16, lane1=39, lane2=63, lane3=82;
@@ -23,7 +24,7 @@ namespace InterDineMension.MicroGame.BA
             wholeLeafLettuce, choppedLettuce, noLettuce, biblicallyAccurateGreens, aLeaf, purple,//Lettuce type
             beefPatty, mushroomPatty, unspeakableHorror,Chicken,withCheese,//patty type
             ketchup, mustard, both,mayo,slime,//condiment choice
-            tomatoe, choppedOnions, none,mushrooms,onionRings,theHand,//final bonus choice
+            tomatoe, choppedOnions, none,mushrooms,onionRings,theThing,//final bonus choice
             classicTopBun, lettuceWrapTop, noTopBun,topBunOfTheDeep, sourDoughTop, pretzelTop;//top bun choice
         public GameObject Lane1, Lane2, Lane3;
         public List<BurgerIngredients.ingredientType> ingredientTypes = new List<BurgerIngredients.ingredientType>();
@@ -609,7 +610,7 @@ namespace InterDineMension.MicroGame.BA
                         aS.clip = wrong;
                         aS.Play();
                     }
-                    BAManeger.FinalTally(ingredientTypes);
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.onionRings:
                     FindLowestNullRenderer().sprite = onionRings;
@@ -625,9 +626,10 @@ namespace InterDineMension.MicroGame.BA
                         aS.clip = wrong;
                         aS.Play();
                     }
+                    BAManeger.StartTheNextPhase();
                     break;
                 case BurgerIngredients.ingredientType.theHand:
-                    FindLowestNullRenderer().sprite = theHand;
+                    FindLowestNullRenderer().sprite = theThing;
                     FindLowestNullRenderer().enabled = true;
                     ingredientTypes.Add(type);
                     aS.clip = cosmic;
@@ -686,7 +688,7 @@ namespace InterDineMension.MicroGame.BA
                     ingredientTypes.Add(type);
                     aS.clip = cosmic;
                     aS.Play();
-                    BAManeger.StartTheNextPhase();
+                    BAManeger.FinalTally(ingredientTypes);
                     break;
                 case BurgerIngredients.ingredientType.pretzelTop:
                     //bottomBunRend.sprite = classicBottomBun;
@@ -704,7 +706,7 @@ namespace InterDineMension.MicroGame.BA
                         aS.clip = wrong;
                         aS.Play();
                     }
-                    BAManeger.StartTheNextPhase();
+                    BAManeger.FinalTally(ingredientTypes);
                     break;
                 case BurgerIngredients.ingredientType.sourdoughTop:
                     //bottomBunRend.sprite = classicBottomBun;
@@ -722,7 +724,7 @@ namespace InterDineMension.MicroGame.BA
                         aS.clip = wrong;
                         aS.Play();
                     }
-                    BAManeger.StartTheNextPhase();
+                    BAManeger.FinalTally(ingredientTypes);
                     break;
                 default:
                     break;
@@ -746,8 +748,13 @@ namespace InterDineMension.MicroGame.BA
             else if (!lettuceRend.IsActive()) { return lettuceRend; }
             else if (!pattyRend.IsActive()) { return pattyRend; }
             else if (!condimentRend.IsActive()) { return condimentRend; }
-            else if (finalBonusRend.IsActive()) { return finalBonusRend; }
+            else if (!finalBonusRend.IsActive()) { return finalBonusRend; }
             else { return topBunRend; }
         }
+       /* private void OnTriggerEnter2D(Collider2D collision)
+        {
+            Debug.Log("test collision player");
+        }*/
+       
     }
 }

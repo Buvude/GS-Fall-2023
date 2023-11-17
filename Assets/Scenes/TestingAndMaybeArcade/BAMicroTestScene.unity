@@ -151,7 +151,7 @@ GameObject:
   - component: {fileID: 699349200}
   m_Layer: 0
   m_Name: variableHolder
-  m_TagString: Untagged
+  m_TagString: variableHolder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -183,6 +183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346a44ada3d002b439ecf81ccdb0c8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wonMini: 0
   curStor: {fileID: 4900000, guid: 3c2bb8e5716feaa4a9df6efd1256b628, type: 3}
 --- !u!1 &819664206
 GameObject:
@@ -561,14 +562,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819664210}
     m_Modifications:
-    - target: {fileID: 1156582760885038806, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 1156582760885038806, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2162067074381656856, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -653,34 +646,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BurgerAssemblyMicrogameContainer
       objectReference: {fileID: 0}
-    - target: {fileID: 3446430597110178411, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3833102980267247129, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: aS
       value: 
       objectReference: {fileID: 1764469276}
-    - target: {fileID: 3833102980267247129, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
-      propertyPath: speed
-      value: 0.16
-      objectReference: {fileID: 0}
-    - target: {fileID: 6523369711528844446, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 6523369711528844446, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6523369711528844446, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.53
-      objectReference: {fileID: 0}
-    - target: {fileID: 8302470133335168117, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 1.9238472
-      objectReference: {fileID: 0}
     - target: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: dM
       value: 
@@ -693,10 +662,6 @@ PrefabInstance:
       propertyPath: microgamecontroller
       value: 
       objectReference: {fileID: 1183388462}
-    - target: {fileID: 9136977010044305304, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -1.7590942
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1213,30 +1178,43 @@ MonoBehaviour:
   lettuceWrapBottom: {fileID: 21300000, guid: b03a20b56718eda4a9e29b324d9e77f7, type: 3}
   noBottomBun: {fileID: 0}
   bBunOfTheDeep: {fileID: 21300000, guid: a841bb8b62cc71a49bc651d810c2e022, type: 3}
+  pretzelBBun: {fileID: 21300000, guid: 72415256950878149ba37737d46cd262, type: 3}
+  sourdoughBBun: {fileID: 21300000, guid: cc112b928c5952b408932e7852cc7215, type: 3}
   pickles: {fileID: 21300000, guid: 3408206a8a5ec3c44bfe6df18161bcd9, type: 3}
   relish: {fileID: 21300000, guid: 0e7cfa15a3af7ca49b13034c69af4dce, type: 3}
   noPickles: {fileID: 0}
   peppers: {fileID: 21300000, guid: 8b5736f873fad1640bd13437714c0d04, type: 3}
+  allSeeingEyes: {fileID: 21300000, guid: a9eb73eb5c6449449936812509c99e05, type: 3}
+  plain: {fileID: 21300000, guid: c54cf81fddfff014eb0c832bc4970c42, type: 3}
   wholeLeafLettuce: {fileID: 21300000, guid: d1b7b1aa38d1d6f48a8c7a5331b6899e, type: 3}
   choppedLettuce: {fileID: 21300000, guid: 00f50e750870d794caf46bfe7a1a638e, type: 3}
   noLettuce: {fileID: 0}
   biblicallyAcurateGreens: {fileID: 21300000, guid: f203ef3ecf47e5b458cb3785c86ad171, type: 3}
+  aLeaf: {fileID: 21300000, guid: 7ef6342e2d9427a46bbd40ebbd724609, type: 3}
+  purple: {fileID: 21300000, guid: b768cec04c018e44dab2e326e23e8e29, type: 3}
   beefPatty: {fileID: 21300000, guid: 423842e831bcee546a05e3c0b7ab1cbe, type: 3}
-  veganPatty: {fileID: 21300000, guid: 17f01ca57f3f6ca49afca9103b99ef86, type: 3}
-  unspeakableHorror: {fileID: 21300000, guid: f2f617da76f6fe34fa17b12ef50cc458, type: 3}
+  mushroom: {fileID: 21300000, guid: 478fcc49553203345a2e25de10e3aaa7, type: 3}
+  mysteryMeat: {fileID: 21300000, guid: f2f617da76f6fe34fa17b12ef50cc458, type: 3}
   chicken: {fileID: 21300000, guid: 09e94fda7d1f5414389d64529b375138, type: 3}
+  cheeseburger: {fileID: 21300000, guid: 423842e831bcee546a05e3c0b7ab1cbe, type: 3}
   ketchup: {fileID: 21300000, guid: 3d4ac4c8be2130e4398584f8577ee818, type: 3}
   mustard: {fileID: 21300000, guid: 86bcf8a90b661184890ccb7e3b9f385d, type: 3}
   both: {fileID: 21300000, guid: fd34bacb7a74ef342978e016f0cb3a25, type: 3}
   neither: {fileID: 0}
-  tomatoe: {fileID: 21300000, guid: 9c07e6e5ccffbd646bb6f0abc0c4e602, type: 3}
-  choppedOnions: {fileID: 21300000, guid: 6233f7efda0523b4fbf34ddb9b1b0153, type: 3}
+  slime: {fileID: 21300000, guid: 54c8540e1867d6b40bfe22dca5016acf, type: 3}
+  mayo: {fileID: 21300000, guid: 7c1821854849f0e488dd313d7549574f, type: 3}
+  tomatoe: {fileID: 21300000, guid: 4b35c1c0a39aa0343ba9171f7548fd7e, type: 3}
+  choppedOnions: {fileID: 21300000, guid: 7f88d4f425be427448ee7fba754b5762, type: 3}
   none: {fileID: 0}
-  mushrooms: {fileID: 21300000, guid: 67de693ba79e75a4caf42f6b097b6dd7, type: 3}
+  mushrooms: {fileID: 21300000, guid: 391d29bba81a7994680b8097466bfb38, type: 3}
+  onionRings: {fileID: 21300000, guid: 625caff2034384241b9f8a215113312c, type: 3}
+  theThing: {fileID: 21300000, guid: b4cbb88a5bd718f409727bae8f75e215, type: 3}
   classicTopBun: {fileID: 21300000, guid: a72f0c7b4f336d94cb15e4602401ba93, type: 3}
   lettuceWrapTop: {fileID: 21300000, guid: e3d567ec0332f4a40bf362f259ee645f, type: 3}
   noTopBun: {fileID: 0}
   tBunOfTheDeep: {fileID: 21300000, guid: 2c683cc2b0f2fd941b0327480a72dc73, type: 3}
+  pretzelTBun: {fileID: 21300000, guid: bbed43c92af04494391e3ce01063c04f, type: 3}
+  sourdoughTBun: {fileID: 21300000, guid: 5ee5819ca98c58a4f807ac189ab21520, type: 3}
 --- !u!224 &2162067076025873743 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2162067074381656856, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
@@ -1254,7 +1232,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3cfa8b450ff8848b228ff262f7ef5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vH: {fileID: 699349200}
   convoModeImages: {fileID: 1086744512}
   charBtn: {fileID: 1637327998}
   manager: {fileID: 2038140412671358887}
@@ -1269,6 +1246,13 @@ MonoBehaviour:
   oR: {fileID: 8973544249656952753}
   cC: {fileID: 461199830}
   G: {fileID: 1648542496}
+  cSBtn: {fileID: 0}
+  oRBtn: {fileID: 0}
+  cCBtn: {fileID: 0}
+  gBtn: {fileID: 0}
+  fBtn: {fileID: 0}
+  mBtn: {fileID: 0}
+  nBtn: {fileID: 0}
   charSpeak: 0
   charSpeakTo: 1
   dialoguePanel: {fileID: 4229370329156961681}
@@ -1289,9 +1273,16 @@ MonoBehaviour:
   Pickles2: {fileID: 3940909251784713043, guid: 8f78078ac07b0b34daa66cfbc14451be, type: 3}
   Greens2: {fileID: 3830152665219838398, guid: b692609f8884eef46869806e4fc9abe2, type: 3}
   Patty2: {fileID: 3417823326797170283, guid: a2f6cc346e6df4b408d5bb49cab1faec, type: 3}
-  Condiment2: {fileID: 3940909251784713043, guid: cf8188c8c82076e469f79c3260d1dee1, type: 3}
+  Condiment2: {fileID: 3940909251784713043, guid: 6bf0f74d80fa7ed43801e4895a8a14e9, type: 3}
   Veggie2: {fileID: 3417823326797170283, guid: 48c85073a1a8c884d90c4cd0f9be6064, type: 3}
   TBun2: {fileID: 3940909251784713043, guid: 5607e875a5eec23468818372f397c50c, type: 3}
+  BBun3: {fileID: 3940909251784713043, guid: ae46a218d4ad7634b8345fda4c63455d, type: 3}
+  Pickles3: {fileID: 3940909251784713043, guid: 04f835702712b64468fe2dfab43818dc, type: 3}
+  Greens3: {fileID: 3830152665219838398, guid: 2c1565128408823439b5bffa724f0df2, type: 3}
+  Patty3: {fileID: 3830152665219838398, guid: 27e60d53bbb440440853d465a481d4fd, type: 3}
+  Condiment3: {fileID: 3940909251784713043, guid: 3ec4e05c0ed5cfe4ca59838988e19b05, type: 3}
+  Veggie3: {fileID: 3940909251784713043, guid: fd949bbb92e3cfb4bbaec33cb06e73fb, type: 3}
+  TBun3: {fileID: 3940909251784713043, guid: 433244c9e4017f241b9fd6704162b398, type: 3}
 --- !u!114 &2286700584396555647 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2286700582819480360, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
