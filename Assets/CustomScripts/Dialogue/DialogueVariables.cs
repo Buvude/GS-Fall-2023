@@ -35,7 +35,6 @@ namespace InterDineMension
                 variables.Add(name, value);
                 /*Debug.Log("Initialized global Dialogue Variable: " + name + " = " + value);*/
             }
-            Debug.Log(globalVariablesStory.variablesState["dayVar"]);
         }
 
         public void SaveVariables()

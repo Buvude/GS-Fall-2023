@@ -662,6 +662,10 @@ PrefabInstance:
       propertyPath: m_TargetGraphic
       value: 
       objectReference: {fileID: 1844958005}
+    - target: {fileID: 7608579084026050278, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.data[4]
+      value: 
+      objectReference: {fileID: 4900000, guid: 280438649d13aba49bb1d2b700830ee9, type: 3}
     - target: {fileID: 8347570795070398291, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1238,7 +1242,31 @@ PrefabInstance:
     - target: {fileID: 7365178473743309746, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
+      objectReference: {fileID: 21300000, guid: fccfe242ecdeb7945b388cf6f15afa09, type: 3}
+    - target: {fileID: 8339956522360858026, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKey.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339956522360858026, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKey.Array.data[4]
+      value: morning
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339956522360858026, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKey.Array.data[5]
+      value: cSTalkTo2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339956522360858026, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKey.Array.data[6]
+      value: cSMGFail2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339956522360858026, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKey.Array.data[7]
+      value: cSMGPass2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8339956522360858026, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.data[4]
+      value: 
+      objectReference: {fileID: 4900000, guid: 217c852ed09151847b552f6a664adda5, type: 3}
     - target: {fileID: 8615375139267424601, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

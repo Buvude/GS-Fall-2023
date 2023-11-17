@@ -91,7 +91,6 @@ namespace InterDineMension.Manager
         private void Awake()
         {
             currentStory = new Story(loadGlobalsJSON.text);
-            Debug.Log(currentStory.variablesState["dayVar"].ToString());
             vH = GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
             vH.dM = this;
            /* cS.sR.color = Color.HSVToRGB(0, 0, 40);*/
@@ -113,7 +112,6 @@ namespace InterDineMension.Manager
              * 
              * 
              */
-            Debug.Log(currentStory.variablesState["dayVar"].ToString());
 
 
             if (instance != null)
