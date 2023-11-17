@@ -105,7 +105,7 @@ namespace InterDineMension.Manager
              * 
              * 
              */
-            dV.LoadVariables();
+            //dV.LoadVariables();
             /*
              * 
              * REPLACE THIS WITH LOADING SYSTEM WHEN DONE AND BEFORE SWITCHING SCENES
