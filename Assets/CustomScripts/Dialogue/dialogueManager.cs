@@ -110,6 +110,7 @@ namespace InterDineMension.Manager
              */
             if(useSaveSystem)
             {
+                Debug.Log("Using save system");
                 dV.LoadVariables();
                 QuickSave();
             }
@@ -177,7 +178,6 @@ namespace InterDineMension.Manager
         }
         public void StartMorningConvo()
         {
-
             charSpeakTo = speakingTo.Swatts;
             switch (int.Parse(currentStory.variablesState["dayVar"].ToString()))//so it defaults to the random quip thing unless there is something specific for CS to say today
             {

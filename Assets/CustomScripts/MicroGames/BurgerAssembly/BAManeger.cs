@@ -14,6 +14,7 @@ namespace InterDineMension.MicroGame.BA
     using InterDineMension.Manager;
     public class BAManeger : MonoBehaviour
     {
+        public Animator final;
         public GameObject orderImages;
         public PlayerController pC;
         public Button startBtn;
@@ -431,20 +432,20 @@ namespace InterDineMension.MicroGame.BA
                     }
                 case <= 2:
                     {
-                        finishedBurger.gameObject.SetActive(true);
                         finishedBurger.sprite = BadBurger;
+                        final.enabled = true;
                         break;
                     }
                 case <= 5:
                     {
-                        finishedBurger.gameObject.SetActive(true);
                         finishedBurger.sprite = MediocreBurger;
+                        final.enabled = true;
                         break;
                     }
                 case > 5:
                     {
-                        finishedBurger.gameObject.SetActive(true);
                         finishedBurger.sprite = GoodBurger;
+                        final.enabled = true;
                         break;
                     }
                 //default: break;//unreachable, but still safe to have

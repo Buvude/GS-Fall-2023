@@ -163,6 +163,7 @@ GameObject:
   - component: {fileID: 6237360708754120732}
   - component: {fileID: 8877522899283675460}
   - component: {fileID: 6784188543923894668}
+  - component: {fileID: 2690876806367202051}
   m_Layer: 5
   m_Name: Player
   m_TagString: Untagged
@@ -189,6 +190,7 @@ RectTransform:
   - {fileID: 1452928128093147817}
   - {fileID: 8734346203483489976}
   - {fileID: 3175356316757053349}
+  - {fileID: 8015628118462198046}
   m_Father: {fileID: 6523369711528844446}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -306,6 +308,27 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 98.54263, y: 26.406425}
   m_EdgeRadius: 0
+--- !u!95 &2690876806367202051
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 221383995442269852}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e315abda9fe173f4c8fa8ea054aa3c63, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &269752236753414492
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,6 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0811a9ad8c671e4099a60eab324692f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  orderImages: {fileID: 2842711599391330572}
   pC: {fileID: 3833102980267247129}
   startBtn: {fileID: 763463599341371729}
   blank1: {fileID: 4900866067201898603, guid: f1f068873de29974383f7d2e115bb628, type: 3}
@@ -720,7 +744,6 @@ GameObject:
   - component: {fileID: 8015628118462198046}
   - component: {fileID: 3406690551944637895}
   - component: {fileID: 8554411331843971713}
-  - component: {fileID: 7164677291715564300}
   m_Layer: 4
   m_Name: FinalBurger
   m_TagString: Untagged
@@ -735,16 +758,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1582120709953189990}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.6233309}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2162067074381656856}
+  m_Father: {fileID: 8302470133335168117}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -8.7, y: -196.4}
+  m_AnchoredPosition: {x: -9.6532345, y: -13.4379425}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3406690551944637895
@@ -785,27 +808,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &7164677291715564300
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1582120709953189990}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e315abda9fe173f4c8fa8ea054aa3c63, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1684650797819709161
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,7 +1260,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 9136977010044305304}
-  - {fileID: 8015628118462198046}
   - {fileID: 9133024778814056345}
   - {fileID: 1349763109415371167}
   - {fileID: 5117322812736433466}
@@ -2264,7 +2265,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.0007171631, y: -54.502144}
+  m_AnchoredPosition: {x: -0.0007324219, y: -54.502136}
   m_SizeDelta: {x: 0, y: 0.034576416}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8129623329322233076
