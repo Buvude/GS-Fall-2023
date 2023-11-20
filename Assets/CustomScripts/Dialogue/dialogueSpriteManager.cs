@@ -51,6 +51,7 @@ namespace InterDineMension.Manager
         {
             if(popUp != null)
             {
+                imagePopUp.enabled = true;
                 imagePopUp.gameObject.SetActive(true);
                 orderImages[phase-1].gameObject.SetActive(true);
                 imagePopUp.sprite = popUp;

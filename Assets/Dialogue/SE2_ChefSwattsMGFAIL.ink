@@ -4,12 +4,11 @@ INCLUDE BADialogue.ink
 
 Would you like to retry the minigame?
     *[Yes]
+        ~BAMLevel=1
+        ~currentConvo="cSD2"
         ->MainBAD
     *[No]
         ->MainFail2
-         this should work, but
-         but I'll wait to impliment it until 
-         I'm sure
     ===MainFail2===
     ~affectionCS-=2
     Ay... Still not gettin' it, huh? #speaker:Chef Swatts #mood:sad

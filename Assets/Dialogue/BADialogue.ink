@@ -9,7 +9,7 @@ VAR tempHolder =""
 ===MainBAD===
     //TODO replace variable here
     {
-    -convo_numberCS==0:
+    -BAMLevel==0:
     // ~Random_Holder=Random(1,3)
         Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral
         ~tempHolder=pop_random(BBuns1)
@@ -29,7 +29,7 @@ VAR tempHolder =""
         ~StartBAMicro1()
         Aight! Graciana, get ready! It's comin' in hot! #speaker:Chef Swatts
 ->DONE
-    -convo_numberCS==1:
+    -BAMLevel==1:
         Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral
         ~tempHolder=pop_random(BBuns2)
         For the bottom bun, it's {tempHolder}. #BBun:{tempHolder}
@@ -48,7 +48,7 @@ VAR tempHolder =""
         ~StartBAMicro2()
         Aight! Graciana, get ready! It's comin' in hot! #speaker:Chef Swatts
 ->DONE
-    -convo_numberCS==2:
+    -BAMLevel==2:
          Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral
         ~tempHolder=pop_random(BBuns3)
         For the bottom bun, it's {tempHolder}. #BBun:{tempHolder}

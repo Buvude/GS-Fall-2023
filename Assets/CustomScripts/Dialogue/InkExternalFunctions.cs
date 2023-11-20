@@ -58,7 +58,7 @@ namespace InterDineMension
                      Debug.Log("made it to day one");
                      dM.ExitDialogueMode(true,day,"GotToDiner func in IEF");
                  }*/
-                dM.ExitDialogueMode(true, day, "GotToDiner func in IEF");
+                dM.ExitDialogueMode(true, day, "GotToDiner func in IEF",true);
                
             });
             currentStory.BindExternalFunction("StartO_Ryan", () =>
@@ -79,6 +79,10 @@ namespace InterDineMension
                 mGC.dM.dV = new DialogueVariables(currentStory);
                 mGC.dM.SaveGame();
             });
+            currentStory.BindExternalFunction("QuickSave", () =>
+            {
+                dM.QuickSave();
+            });
         }
 
         public void unBind(Story currentStory)
@@ -90,6 +94,7 @@ namespace InterDineMension
             currentStory.UnbindExternalFunction("StartO_Ryan");
             currentStory.UnbindExternalFunction("StartTTMicro");
             currentStory.UnbindExternalFunction("SaveGame");
+            currentStory.UnbindExternalFunction("QuickSave");
         }
     }
 }
