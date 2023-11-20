@@ -696,7 +696,7 @@ namespace InterDineMension.MicroGame.BA
                     FindLowestNullRenderer().enabled = true;
 
                     ingredientTypes.Add(type);
-                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.pretzelTop)
+                    if (BAManeger.orderedIngredients[6] == BurgerIngredients.ingredientType.pretzelTop)
                     {
                         aS.clip = correct;
                         aS.Play();
@@ -714,7 +714,7 @@ namespace InterDineMension.MicroGame.BA
                     FindLowestNullRenderer().enabled = true;
 
                     ingredientTypes.Add(type);
-                    if (BAManeger.orderedIngredients[0] == BurgerIngredients.ingredientType.sourdoughTop)
+                    if (BAManeger.orderedIngredients[6] == BurgerIngredients.ingredientType.sourdoughTop)
                     {
                         aS.clip = correct;
                         aS.Play();

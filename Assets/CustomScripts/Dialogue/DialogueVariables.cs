@@ -37,6 +37,38 @@ namespace InterDineMension
             }
         }
 
+        public void QuickSaveVariables()
+        {
+            PlayerPrefs.SetInt("dayVarT", int.Parse(globalVariablesStory.variablesState["dayVar"].ToString()));
+            PlayerPrefs.SetString("weekDayT", globalVariablesStory.variablesState["weekDay"].ToString());
+
+
+            PlayerPrefs.SetInt("convo_numberCST", int.Parse(globalVariablesStory.variablesState["convo_numberCS"].ToString()));
+            PlayerPrefs.SetInt("affectionCST", int.Parse(globalVariablesStory.variablesState["affectionCS"].ToString()));
+            PlayerPrefs.SetInt("chaosCST", int.Parse(globalVariablesStory.variablesState["chaosCS"].ToString()));
+
+            PlayerPrefs.SetInt("convo_numberNT", int.Parse(globalVariablesStory.variablesState["convo_numberN"].ToString()));
+            PlayerPrefs.SetInt("affectionNT", int.Parse(globalVariablesStory.variablesState["affectionN"].ToString()));
+            PlayerPrefs.SetInt("chaosNT", int.Parse(globalVariablesStory.variablesState["chaosN"].ToString()));
+
+            PlayerPrefs.SetInt("convo_numberCCT", int.Parse(globalVariablesStory.variablesState["convo_numberCC"].ToString()));
+            PlayerPrefs.SetInt("affectionCCT", int.Parse(globalVariablesStory.variablesState["affectionCC"].ToString()));
+            PlayerPrefs.SetInt("chaosCCT", int.Parse(globalVariablesStory.variablesState["chaosCC"].ToString()));
+
+            PlayerPrefs.SetInt("convo_numberMT", int.Parse(globalVariablesStory.variablesState["convo_numberM"].ToString()));
+            PlayerPrefs.SetInt("affectionMT", int.Parse(globalVariablesStory.variablesState["affectionM"].ToString()));
+            PlayerPrefs.SetInt("chaosMT", int.Parse(globalVariablesStory.variablesState["chaosM"].ToString()));
+
+            PlayerPrefs.SetInt("convo_numberGT", int.Parse(globalVariablesStory.variablesState["convo_numberG"].ToString()));
+            PlayerPrefs.SetInt("affectionGT", int.Parse(globalVariablesStory.variablesState["affectionG"].ToString()));
+            PlayerPrefs.SetInt("chaosGT", int.Parse(globalVariablesStory.variablesState["chaosG"].ToString()));
+
+            PlayerPrefs.SetInt("convo_numberFT", int.Parse(globalVariablesStory.variablesState["convo_numberF"].ToString()));
+            PlayerPrefs.SetInt("affectionFT", int.Parse(globalVariablesStory.variablesState["affectionF"].ToString()));
+            PlayerPrefs.SetInt("chaosFT", int.Parse(globalVariablesStory.variablesState["chaosF"].ToString()));
+
+            PlayerPrefs.Save();
+        }
         public void SaveVariables()
         {
             if(globalVariablesStory != null)
@@ -44,33 +76,33 @@ namespace InterDineMension
                 /*VariablesToStory(globalVariablesStory);
                 PlayerPrefs.SetString(saveVariablesKey, globalVariablesStory.state.ToJson());*/
 
-                PlayerPrefs.SetString("dayVar", globalVariablesStory.variablesState["dayVar"].ToString());
+                PlayerPrefs.SetInt("dayVar", int.Parse(globalVariablesStory.variablesState["dayVar"].ToString()));
                 PlayerPrefs.SetString("weekDay", globalVariablesStory.variablesState["weekDay"].ToString());
 
 
-                PlayerPrefs.SetString("convo_numberCS", globalVariablesStory.variablesState["convo_numberCS"].ToString());
-                PlayerPrefs.SetString("affectionCS", globalVariablesStory.variablesState["affectionCS"].ToString());
-                PlayerPrefs.SetString("chaosCS", globalVariablesStory.variablesState["chaosCS"].ToString());
+                PlayerPrefs.SetInt("convo_numberCS", int.Parse(globalVariablesStory.variablesState["convo_numberCS"].ToString()));
+                PlayerPrefs.SetInt("affectionCS", int.Parse(globalVariablesStory.variablesState["affectionCS"].ToString()));
+                PlayerPrefs.SetInt("chaosCS", int.Parse(globalVariablesStory.variablesState["chaosCS"].ToString()));
 
-                PlayerPrefs.SetString("convo_numberN", globalVariablesStory.variablesState["convo_numberN"].ToString());
-                PlayerPrefs.SetString("affectionN", globalVariablesStory.variablesState["affectionN"].ToString());
-                PlayerPrefs.SetString("chaosN", globalVariablesStory.variablesState["chaosN"].ToString());
+                PlayerPrefs.SetInt("convo_numberN", int.Parse(globalVariablesStory.variablesState["convo_numberN"].ToString()));
+                PlayerPrefs.SetInt("affectionN", int.Parse(globalVariablesStory.variablesState["affectionN"].ToString()));
+                PlayerPrefs.SetInt("chaosN", int.Parse(globalVariablesStory.variablesState["chaosN"].ToString()));
 
-                PlayerPrefs.SetString("convo_numberCC", globalVariablesStory.variablesState["convo_numberCC"].ToString());
-                PlayerPrefs.SetString("affectionCC", globalVariablesStory.variablesState["affectionCC"].ToString());
-                PlayerPrefs.SetString("chaosCC", globalVariablesStory.variablesState["chaosCC"].ToString());
+                PlayerPrefs.SetInt("convo_numberCC", int.Parse(globalVariablesStory.variablesState["convo_numberCC"].ToString()));
+                PlayerPrefs.SetInt("affectionCC", int.Parse(globalVariablesStory.variablesState["affectionCC"].ToString()));
+                PlayerPrefs.SetInt("chaosCC", int.Parse(globalVariablesStory.variablesState["chaosCC"].ToString()));
 
-                PlayerPrefs.SetString("convo_numberM", globalVariablesStory.variablesState["convo_numberM"].ToString());
-                PlayerPrefs.SetString("affectionM", globalVariablesStory.variablesState["affectionM"].ToString());
-                PlayerPrefs.SetString("chaosM", globalVariablesStory.variablesState["chaosM"].ToString());
+                PlayerPrefs.SetInt("convo_numberM", int.Parse(globalVariablesStory.variablesState["convo_numberM"].ToString()));
+                PlayerPrefs.SetInt("affectionM", int.Parse(globalVariablesStory.variablesState["affectionM"].ToString()));
+                PlayerPrefs.SetInt("chaosM", int.Parse(globalVariablesStory.variablesState["chaosM"].ToString()));
 
-                PlayerPrefs.SetString("convo_numberG", globalVariablesStory.variablesState["convo_numberG"].ToString());
-                PlayerPrefs.SetString("affectionG", globalVariablesStory.variablesState["affectionG"].ToString());
-                PlayerPrefs.SetString("chaosG", globalVariablesStory.variablesState["chaosG"].ToString());
+                PlayerPrefs.SetInt("convo_numberG", int.Parse(globalVariablesStory.variablesState["convo_numberG"].ToString()));
+                PlayerPrefs.SetInt("affectionG", int.Parse(globalVariablesStory.variablesState["affectionG"].ToString()));
+                PlayerPrefs.SetInt("chaosG", int.Parse(globalVariablesStory.variablesState["chaosG"].ToString()));
 
-                PlayerPrefs.SetString("convo_numberF", globalVariablesStory.variablesState["convo_numberF"].ToString());
-                PlayerPrefs.SetString("affectionF", globalVariablesStory.variablesState["affectionF"].ToString());
-                PlayerPrefs.SetString("chaosF", globalVariablesStory.variablesState["chaosF"].ToString());
+                PlayerPrefs.SetInt("convo_numberF", int.Parse(globalVariablesStory.variablesState["convo_numberF"].ToString()));
+                PlayerPrefs.SetInt("affectionF", int.Parse(globalVariablesStory.variablesState["affectionF"].ToString()));
+                PlayerPrefs.SetInt("chaosF", int.Parse(globalVariablesStory.variablesState["chaosF"].ToString()));
 
                 PlayerPrefs.Save();
             }
@@ -82,35 +114,66 @@ namespace InterDineMension
 
         public void LoadVariables()
         {
-            globalVariablesStory.variablesState["dayVar"] = PlayerPrefs.GetString("dayVar");
+            globalVariablesStory.variablesState["dayVar"] = PlayerPrefs.GetInt("dayVar");
             globalVariablesStory.variablesState["weekDay"] = PlayerPrefs.GetString("weekDay");
 
-            globalVariablesStory.variablesState["convo_numberCS"]=PlayerPrefs.GetString("convo_numberCS");
-            globalVariablesStory.variablesState["affectionCS"]=PlayerPrefs.GetString("affectionCS");
-            globalVariablesStory.variablesState["chaosCS"] = PlayerPrefs.GetString("chaosCS");
+            globalVariablesStory.variablesState["convo_numberCS"]=PlayerPrefs.GetInt("convo_numberCS");
+            globalVariablesStory.variablesState["affectionCS"]=PlayerPrefs.GetInt("affectionCS");
+            globalVariablesStory.variablesState["chaosCS"] = PlayerPrefs.GetInt("chaosCS");
 
-            globalVariablesStory.variablesState["convo_numberN"] = PlayerPrefs.GetString("convo_numberN");
-            globalVariablesStory.variablesState["affectionN"] = PlayerPrefs.GetString("affectionN");
-            globalVariablesStory.variablesState["chaosN"] = PlayerPrefs.GetString("chaosN");
+            globalVariablesStory.variablesState["convo_numberN"] = PlayerPrefs.GetInt("convo_numberN");
+            globalVariablesStory.variablesState["affectionN"] = PlayerPrefs.GetInt("affectionN");
+            globalVariablesStory.variablesState["chaosN"] = PlayerPrefs.GetInt("chaosN");
 
-            globalVariablesStory.variablesState["convo_numberCC"] = PlayerPrefs.GetString("convo_numberCC");
-            globalVariablesStory.variablesState["affectionCC"] = PlayerPrefs.GetString("affectionCC");
-            globalVariablesStory.variablesState["chaosCC"] = PlayerPrefs.GetString("chaosCC");
+            globalVariablesStory.variablesState["convo_numberCC"] = PlayerPrefs.GetInt("convo_numberCC");
+            globalVariablesStory.variablesState["affectionCC"] = PlayerPrefs.GetInt("affectionCC");
+            globalVariablesStory.variablesState["chaosCC"] = PlayerPrefs.GetInt("chaosCC");
 
-            globalVariablesStory.variablesState["convo_numberM"] = PlayerPrefs.GetString("convo_numberM");
-            globalVariablesStory.variablesState["affectionM"] = PlayerPrefs.GetString("affectionM");
-            globalVariablesStory.variablesState["chaosM"] = PlayerPrefs.GetString("chaosM");
+            globalVariablesStory.variablesState["convo_numberM"] = PlayerPrefs.GetInt("convo_numberM");
+            globalVariablesStory.variablesState["affectionM"] = PlayerPrefs.GetInt("affectionM");
+            globalVariablesStory.variablesState["chaosM"] = PlayerPrefs.GetInt("chaosM");
 
-            globalVariablesStory.variablesState["convo_numberG"] = PlayerPrefs.GetString("convo_numberG");
-            globalVariablesStory.variablesState["affectionG"] = PlayerPrefs.GetString("affectionG");
-            globalVariablesStory.variablesState["chaosG"] = PlayerPrefs.GetString("chaosG"  );
+            globalVariablesStory.variablesState["convo_numberG"] = PlayerPrefs.GetInt("convo_numberG");
+            globalVariablesStory.variablesState["affectionG"] = PlayerPrefs.GetInt("affectionG");
+            globalVariablesStory.variablesState["chaosG"] = PlayerPrefs.GetInt("chaosG"  );
 
-            globalVariablesStory.variablesState["convo_numberF"] = PlayerPrefs.GetString("convo_numberF");
-            globalVariablesStory.variablesState["affectionF"] = PlayerPrefs.GetString("affectionF");
-            globalVariablesStory.variablesState["chaosF"] = PlayerPrefs.GetString("chaosF");
+            globalVariablesStory.variablesState["convo_numberF"] = PlayerPrefs.GetInt("convo_numberF");
+            globalVariablesStory.variablesState["affectionF"] = PlayerPrefs.GetInt("affectionF");
+            globalVariablesStory.variablesState["chaosF"] = PlayerPrefs.GetInt("chaosF");
+
+        }
+        public void QuickLoadVariables()
+        {
+            globalVariablesStory.variablesState["dayVar"] = PlayerPrefs.GetInt("dayVarT");
+            globalVariablesStory.variablesState["weekDay"] = PlayerPrefs.GetString("weekDayT");
+
+            globalVariablesStory.variablesState["convo_numberCS"] = PlayerPrefs.GetInt("convo_numberCST");
+            globalVariablesStory.variablesState["affectionCS"] = PlayerPrefs.GetInt("affectionCST");
+            globalVariablesStory.variablesState["chaosCS"] = PlayerPrefs.GetInt("chaosCST");
+
+            globalVariablesStory.variablesState["convo_numberN"] = PlayerPrefs.GetInt("convo_numberNT");
+            globalVariablesStory.variablesState["affectionN"] = PlayerPrefs.GetInt("affectionNT");
+            globalVariablesStory.variablesState["chaosN"] = PlayerPrefs.GetInt("chaosNT");
+
+            globalVariablesStory.variablesState["convo_numberCC"] = PlayerPrefs.GetInt("convo_numberCCT");
+            globalVariablesStory.variablesState["affectionCC"] = PlayerPrefs.GetInt("affectionCCT");
+            globalVariablesStory.variablesState["chaosCC"] = PlayerPrefs.GetInt("chaosCCT");
+
+            globalVariablesStory.variablesState["convo_numberM"] = PlayerPrefs.GetInt("convo_numberMT");
+            globalVariablesStory.variablesState["affectionM"] = PlayerPrefs.GetInt("affectionMT ");
+            globalVariablesStory.variablesState["chaosM"] = PlayerPrefs.GetInt("chaosMT");
+
+            globalVariablesStory.variablesState["convo_numberG"] = PlayerPrefs.GetInt("convo_numberGT");
+            globalVariablesStory.variablesState["affectionG"] = PlayerPrefs.GetInt("affectionGT");
+            globalVariablesStory.variablesState["chaosG"] = PlayerPrefs.GetInt("chaosGT");
+
+            globalVariablesStory.variablesState["convo_numberF"] = PlayerPrefs.GetInt("convo_numberFT");
+            globalVariablesStory.variablesState["affectionF"] = PlayerPrefs.GetInt("affectionFT");
+            globalVariablesStory.variablesState["chaosF"] = PlayerPrefs.GetInt("chaosFT");
 
         }
 
+        
         public void StartListening(Story story)
         {
             //it is important that this is called before listener

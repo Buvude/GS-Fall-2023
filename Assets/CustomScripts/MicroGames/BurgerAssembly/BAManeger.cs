@@ -14,6 +14,7 @@ namespace InterDineMension.MicroGame.BA
     using InterDineMension.Manager;
     public class BAManeger : MonoBehaviour
     {
+        public GameObject orderImages;
         public PlayerController pC;
         public Button startBtn;
         public BurgerIngredients blank1,blank2;
@@ -90,6 +91,7 @@ namespace InterDineMension.MicroGame.BA
 
         public void LevelUp(GameObject bBun2, GameObject pickles2, GameObject greens2, GameObject patty2, GameObject condiment2, GameObject veggie2, GameObject bun2, GameObject bBun3, GameObject pickles3, GameObject greens3, GameObject patty3, GameObject condiment3, GameObject veggie3, GameObject bun3)
         {
+            orderImages.SetActive(false);
             bottomBunOptions.Add(bBun2);
             pickleOptions.Add(pickles2);
             lettuceOptions.Add(greens2);
@@ -114,6 +116,7 @@ namespace InterDineMension.MicroGame.BA
 
         public void ResetMiniGame()
         {
+            vH.dM.gameObject.GetComponent<dialogueSpriteManager>().imagePopUp.enabled = true;
             pC.ingredientTypes.Clear();
             orderedIngredients.Clear();
             pC.resetMiniGameSprites();
@@ -398,9 +401,15 @@ namespace InterDineMension.MicroGame.BA
         {
             for (int i = 0;i < ingredientTypes.Count;)
             {
-                if (ingredientTypes[i]==BurgerIngredients.ingredientType.unspeakableHorror)
+                if (ingredientTypes[i] == BurgerIngredients.ingredientType.unspeakableHorror || 
+                    ingredientTypes[i]==BurgerIngredients.ingredientType.bottomBunOfTheDeep || 
+                    ingredientTypes[i] == BurgerIngredients.ingredientType.topBunOfTheDeep  ||
+                    ingredientTypes[i] == BurgerIngredients.ingredientType.biblicallyAccurateGreens||
+                    ingredientTypes[i] == BurgerIngredients.ingredientType.slime||
+                    ingredientTypes[i] == BurgerIngredients.ingredientType.allSeeingEyes||
+                    ingredientTypes[i] == BurgerIngredients.ingredientType.theHand)
                 {
-                    finalScore = -7;
+                    finalScore -= 1;
                 }
                 if (ingredientTypes[i]== orderedIngredients[i])
                 {
@@ -415,6 +424,11 @@ namespace InterDineMension.MicroGame.BA
             Debug.Log(finalScore);
             switch (finalScore)
             {
+                case -7:
+                    {
+                        //impliment cosmic end
+                        break;
+                    }
                 case <= 2:
                     {
                         finishedBurger.gameObject.SetActive(true);

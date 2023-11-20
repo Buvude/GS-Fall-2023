@@ -18,6 +18,7 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+        public bool useSaveSystem;
         
         //public GameObject charImageCS, charImageOR;
         //private bool deactivatedcorutines = false;
@@ -58,6 +59,8 @@ namespace InterDineMension.Manager
         [SerializeField] public TextAsset dayOneIntro;
         [SerializeField] public TextAsset O_RyanIntro;
         [SerializeField] private TextAsset loadGlobalsJSON;
+        
+        //internal string savedjson;
 
         private TextMeshProUGUI[] choicesText;
 
@@ -68,7 +71,7 @@ namespace InterDineMension.Manager
 
         public Microgamecontroller mGC;
         public BAManeger bAM;
-
+        public bool quicksaved = false;
         public bool dialoguePlaying { get; private set; }
         /// <summary>
         /// this is for the BAMicro game
@@ -105,7 +108,12 @@ namespace InterDineMension.Manager
              * 
              * 
              */
-            //dV.LoadVariables();
+            if(useSaveSystem)
+            {
+                dV.LoadVariables();
+                QuickSave();
+            }
+
             /*
              * 
              * REPLACE THIS WITH LOADING SYSTEM WHEN DONE AND BEFORE SWITCHING SCENES
@@ -154,10 +162,22 @@ namespace InterDineMension.Manager
             
         }
 
+        public void QuickSave()
+        {
+            quicksaved = true;
+            /* savedjson = currentStory.state.ToJson();
+             PlayerPrefs.SetString("savedjson", savedjson);*/
+            dV.QuickSaveVariables();
+        }
 
+        public void QuickLoad()
+        {
+            dV.globalVariablesStory = currentStory;
+            dV.QuickLoadVariables();
+        }
         public void StartMorningConvo()
         {
-            
+
             charSpeakTo = speakingTo.Swatts;
             switch (int.Parse(currentStory.variablesState["dayVar"].ToString()))//so it defaults to the random quip thing unless there is something specific for CS to say today
             {
@@ -215,6 +235,7 @@ namespace InterDineMension.Manager
 
         public void EnterDialogueModeBTN()
         {
+            Debug.Log(currentStory.variablesState["convo_numberCS"].ToString());
             switch (charSpeakTo)
             {
                 case speakingTo.Swatts:
@@ -260,11 +281,19 @@ namespace InterDineMension.Manager
 
             //add method to determine which convo is going on, possibly triggered by the char btn
             dPTest.enabled = true;
+            if (quicksaved)
+            {
+                QuickSave();
+            }
             currentStory =new Story(inkJSON.text);
+            if (quicksaved)
+            {
+                QuickLoad();
+            }
             vH.currentStory = currentStory;
             dialoguePlaying=true;
             grac.gameObject.GetComponent<Image>().enabled = true;
-            dV.StartListening(currentStory);
+            //dV.StartListening(currentStory);
 
             switch (charSpeakTo)
             {
@@ -338,7 +367,7 @@ namespace InterDineMension.Manager
 
             else
             {
-                ExitDialogueMode(false,0,"ContinueStory");
+                ExitDialogueMode(false,0,"ContinueStory",true);
                 dPTest.enabled = false;
             }
         }
@@ -743,11 +772,19 @@ namespace InterDineMension.Manager
             }
         }
 
-        public void ExitDialogueMode(bool enterDinnerMode, int day, string whereCameFrom)
+        public void ExitDialogueMode(bool enterDinnerMode, int day, string whereCameFrom, bool quickSave)
         {
             //Debug.Log($"Got to exit dialogue mode from {whereCameFrom} ");
-            dV.StopListening(currentStory);
-
+            //dV.StopListening(currentStory);
+            if (quickSave)
+            {
+                QuickSave();
+            }
+            
+            if (enterDinnerMode)
+            {
+                EnterDinerMode(day);
+            }
             //dialogueObject.SetActive(false);
             foreach (GameObject item in dialogueObject)
             {
@@ -762,10 +799,7 @@ namespace InterDineMension.Manager
             dPTest.enabled = false;
 
             dialogueText.text = "";
-            if(enterDinnerMode)
-            {
-                EnterDinerMode(day);
-            }
+            
             exitedDialogueMode = true;
         }
 

@@ -1,6 +1,7 @@
 //EXTERNAL GoToDiner()
 EXTERNAL SaveGame()
 INCLUDE MorningPlaceHolder.ink
+EXTERNAL QuickSave()
 //VAR pokemon_name=""
 
 

@@ -13,6 +13,7 @@ Ey yo, Graciana! Think ya can gimme some help real quick? #speaker:Chef Swatts
     ->DONE
 
 ==Sure==
+~BAMLevel=1
 ~currentConvo="cSD2"
 Yeah, you got it. #speaker:Graciana #mood:neutral
 
@@ -224,6 +225,8 @@ But what abou-- #speaker:Graciana #mood:angry
 Order up! Come help me out with this, ya? #speaker:Chef Swatts #mood:angry
 
 (sigh...) #speaker:Graciana #mood:sad
+~QuickSave()
+
 ->MainBAD
 -> DONE
 
@@ -266,6 +269,7 @@ But-- #speaker:Graciana #mood:angry
 Graciana, come help me wit' this, ya? #speaker:Chef Swatts #mood:neutral
 
 (sigh...) #speaker:Graciana #mood:sad
+~QuickSave()
 ->MainBAD
 -> DONE
 
@@ -302,6 +306,6 @@ B-but... #speaker:Graciana #mood:sad
 Graciana, help me with this, ya? #speaker:Chef Swatts #mood:neutral
 
 ...Okay... #speaker:Graciana
-
+~QuickSave()
 ->MainBAD
 -> DONE

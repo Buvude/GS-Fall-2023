@@ -862,6 +862,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1419853525}
     - target: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: orderImages
+      value: 
+      objectReference: {fileID: 1969850906}
+    - target: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: microgamecontroller
       value: 
       objectReference: {fileID: 1183388462}
@@ -1154,6 +1158,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1969850906 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2842711599391330572, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+  m_PrefabInstance: {fileID: 1644217943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2048992934 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4727334360704350117, guid: a8965b57116a0f54db002fcea8373573, type: 3}
@@ -1207,6 +1216,14 @@ PrefabInstance:
       propertyPath: charBtn
       value: 
       objectReference: {fileID: 1637327998}
+    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: useSaveSystem
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: mushroom
+      value: 
+      objectReference: {fileID: 21300000, guid: 478fcc49553203345a2e25de10e3aaa7, type: 3}
     - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: orderImages.Array.data[0]
       value: 
