@@ -36,5 +36,9 @@ namespace InterDineMension.Manager
         {
             //check variables to see which story to start
         }
+        private void OnApplicationQuit()
+        {
+            manager.dV.clearTempVars();
+        }
     }
 }
