@@ -1218,7 +1218,7 @@ PrefabInstance:
       objectReference: {fileID: 1637327998}
     - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: useSaveSystem
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: mushroom
