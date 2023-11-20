@@ -150,6 +150,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1671596588470820207, guid: a8965b57116a0f54db002fcea8373573, type: 3}
   m_PrefabInstance: {fileID: 1637327997}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &404336559 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2690876806367202051, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+  m_PrefabInstance: {fileID: 1644217943}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &455315795 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
@@ -798,6 +803,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3814534153223520369, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 1896dded979e00c47b7d5077571284c2, type: 3}
+    - target: {fileID: 3814534153223520369, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
@@ -806,9 +815,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1764469276}
     - target: {fileID: 3902886579772458916, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f2f617da76f6fe34fa17b12ef50cc458, type: 3}
+    - target: {fileID: 3902886579772458916, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3918550889781251642, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 332e8189a87551943aea240b13c43632, type: 3}
     - target: {fileID: 3918550889781251642, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -817,6 +834,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4691383772500030898, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: b4cbb88a5bd718f409727bae8f75e215, type: 3}
     - target: {fileID: 4691383772500030898, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -829,6 +850,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -54.502136
       objectReference: {fileID: 0}
+    - target: {fileID: 5632277237857637833, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5f5fed19b3fb7e54693bd8570451d289, type: 3}
     - target: {fileID: 5632277237857637833, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -845,6 +870,14 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 8015628118462198046, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -93.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8273452712251684995, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: c4e58b3d0c02a3b4999461aae727ef9b, type: 3}
     - target: {fileID: 8273452712251684995, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -862,6 +895,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1419853525}
     - target: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: final
+      value: 
+      objectReference: {fileID: 404336559}
+    - target: {fileID: 8790256088168946000, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: orderImages
       value: 
       objectReference: {fileID: 1969850906}
@@ -869,6 +906,10 @@ PrefabInstance:
       propertyPath: microgamecontroller
       value: 
       objectReference: {fileID: 1183388462}
+    - target: {fileID: 8901769665395868530, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: a9eb73eb5c6449449936812509c99e05, type: 3}
     - target: {fileID: 8901769665395868530, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -1218,7 +1259,7 @@ PrefabInstance:
       objectReference: {fileID: 1637327998}
     - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: useSaveSystem
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: mushroom
