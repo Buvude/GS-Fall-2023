@@ -1,3 +1,5 @@
+INCLUDE globals.ink
+
 ... #speaker:NiCo
 Hi, Graciana.
 *[What's up?]
@@ -85,6 +87,7 @@ Yes. Some people think there's something that can be done still--That there's st
 
 **[Is anyone doing anything?]
 //good
+~affectionN=affectionN+2
 
 Is anyone doing anything about this? #speaker:Graciana #mood:think
 
@@ -127,6 +130,7 @@ All the decisions they make are based on whether or not Tundra finds it acceptab
 
 **[Just move!]
 //chaos
+~chaosN=chaosN+2
 
 Why don't you just... get outta there? Like move out? If you can travel interdimentionally, surely you can just move, right? #speaker:Graciana
 
@@ -179,6 +183,7 @@ Why would I want to report them?
 
 ***[Be more obvious]
 //bad
+~affectionN=affectionN-1
 
 I mean like, y'know, uh... #speaker:Graciana
 See if you can like, get them to, uh, take a look at you?
@@ -242,6 +247,7 @@ Like I said, Tundra is always listening. They have an algorithm that detects wha
 
 ***[Try to insinuate]
 //good
+~affectionN=affectionN+2
 
 Hm... #speaker:Graciana
 I mean... You could try to see if there's a way for you to learn more about this hacking process that seems to be going around.
@@ -285,6 +291,7 @@ Anytime at all. #speaker:Graciana
 ->strike
 ==strike==
 //chaos
+~chaosN=chaosN+2
 
 What about, uh... #speaker:Graciana
 (Hm, I gotta be careful about how I word this... someone--or something--might be listening.)
@@ -349,6 +356,7 @@ Good! I'm glad I could help. #speaker:Graciana #mood:happy
 
 ==dropped==
 //bad
+~affectionN=affectionN-1
 
 Alright, alright, maybe you have a point, but still... #speaker:Graciana
 
@@ -365,6 +373,7 @@ What choice do I have?
 
 *****[It is what it is...]
 //bad
+~affectionN=affectionN-1
 
 I mean... Jeez, that's really rough. #speaker:Graciana
 
@@ -421,6 +430,7 @@ And I can't blame them. It's not like we have a choice for anything different.
 
 ==injury==
 //good
+~affectionN=affectionN+2
 
 So, going back to what you said earlier, about how hard it is to fight Tundra in court... #speaker:Graciana
 I know it's intimidating, but do you have like, any evidence in your favor? Doesn't matter how big or small it is.
@@ -446,6 +456,7 @@ I appreciate your concern, Graciana, but I really don't think it's possible.
 
 *[Keep pushing]
 //good
+~affectionN=affectionN+2
 
 Nope, there's gotta be a way! #speaker:Graciana
 What about the machine itself? You mentioned that it was made with cheap materials. The machine might've been at fault!
