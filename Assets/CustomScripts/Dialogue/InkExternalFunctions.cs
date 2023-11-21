@@ -52,7 +52,7 @@ namespace InterDineMension
             });
             currentStory.BindExternalFunction("GoToDiner", (/*int day, int csConvo*/) =>
             {
-                day = int.Parse(currentStory.variablesState["dayVar"].ToString());
+                day = PlayerPrefs.GetInt("dayVar");
                 /* if (currentStory.variablesState["dayVar"].ToString() == "1")
                  {
                      Debug.Log("made it to day one");

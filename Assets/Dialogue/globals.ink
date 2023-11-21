@@ -1,6 +1,12 @@
 //EXTERNAL GoToDiner()
 EXTERNAL SaveGame()
 INCLUDE MorningPlaceHolder.ink
+INCLUDE MondayMorning.ink
+INCLUDE TuesdayMorning.ink
+INCLUDE WednesdayMorning.ink
+INCLUDE ThursdayMorning.ink
+INCLUDE FridayMorning.ink
+INCLUDE SaturdayMorning.ink
 EXTERNAL QuickSave()
 //VAR pokemon_name=""
 
@@ -74,32 +80,32 @@ LIST TBuns3 = (Plain), (Lettucebun), (Sourdough),(Pretzel) //(Bun_of_the_Deep) s
         ~weekDay="Mon"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ->monday
     -weekDay=="Mon":
         ~weekDay="Tue"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ->tuesday
     -weekDay=="Tue":
         ~weekDay="Wed"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ->wednesday
     -weekDay=="Wed":
         ~weekDay="Thu"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ->thursday
     -weekDay=="Thu":
         ~weekDay="Fri"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ->friday
     -weekDay=="Fri":
         ~weekDay="Sat"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ->saturday
     -weekDay=="Sat":
         ~weekDay="Sun"
         ~dayVar+=1
@@ -110,6 +116,6 @@ LIST TBuns3 = (Plain), (Lettucebun), (Sourdough),(Pretzel) //(Bun_of_the_Deep) s
         ~weekDay="Mon"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ->monday
         
 }
