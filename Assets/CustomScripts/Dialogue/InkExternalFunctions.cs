@@ -68,7 +68,7 @@ namespace InterDineMension
                 dM.G.gameObject.SetActive(false);
                 dM.cS.gameObject.SetActive(false);
                 dM.cC.gameObject.SetActive(false);
-                //dM.EnterDialogueMode(dM.O_RyanIntro);
+                //dM.EnterDialogueMode(dM.TTMicroArcadeConvo);
             });
             currentStory.BindExternalFunction("StartTTMicro", () =>
             {

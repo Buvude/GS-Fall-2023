@@ -6,8 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/AddToBuildList/TittleScreen.unity
+    guid: c11541cc49b8b1f4ca7343e128e6bce4
+  - enabled: 1
     path: Assets/Scenes/AddToBuildList/DinerScene.unity
     guid: 9cbbee0b0dc53d94e852bec3925650ab
+  - enabled: 1
+    path: Assets/Scenes/TestingAndMaybeArcade/BAMicroTestScene.unity
+    guid: 129c19cbacaf91344a955e950b73016e
+  - enabled: 1
+    path: Assets/Scenes/TestingAndMaybeArcade/TTMicroTestScene.unity
+    guid: e2d38e8a3377cc94cb40b618f784e25f
   - enabled: 1
     path: Assets/Scenes/MicroGameScenes/TTMinigame.unity
     guid: b49af36bc3e74d1478002d68f4cb1e46

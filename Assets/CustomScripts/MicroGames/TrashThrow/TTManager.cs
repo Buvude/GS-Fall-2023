@@ -112,12 +112,15 @@ namespace InterDineMension.MicroGame.TT
             {
                 if (f.worthPoint)
                 {
+                    f.gameObject.SetActive(true);
+                    
                     f.transform.parent = null;
                     f.transform.localScale.Set(1, 1, 1);
                     PlusPoint(f);
                 }
                 else
                 {
+                    f.gameObject.SetActive(true);
                     f.transform.parent = null;
                     f.transform.localScale.Set(1, 1, 1);
                     noPoint(f);
@@ -132,11 +135,20 @@ namespace InterDineMension.MicroGame.TT
             {
                 vH.wonMini= false;
             }
-            
+            if(score>= goal)
+            {
+                PlayerPrefs.SetString("winStatus", "won");
+            }
+            else
+            {
+                PlayerPrefs.SetString("winStatus", "lost");
+            }
+
         }
         public void PlusPoint(FallingObjectScript f)
         {
             score++;
+            f.gameObject.layer = 7;
             f.gameObject.GetComponent<Rigidbody2D>().gravityScale = -10f;
             aS.clip= correct;aS.Play();
             instructions.text = $"Score: {score}/{goal}";

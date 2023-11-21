@@ -629,6 +629,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e3cfa8b450ff8848b228ff262f7ef5c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useSaveSystem: 0
+  sfxTittles:
+  - lostPoint
+  - gainedPoint
+  - cosmicPoint
+  sfxSounds:
+  - {fileID: 8300000, guid: 6c27e8718f9e58849b69cff21e7a3913, type: 3}
+  - {fileID: 8300000, guid: a7e6dd97f7bfe2d4d8978d80db0c598b, type: 3}
+  - {fileID: 8300000, guid: 81ad959d0d38cc6459e0dab9a026eb9a, type: 3}
+  sfxAudioSource: {fileID: 0}
+  bgmTittles: []
+  bgmSounds: []
+  bgmAudioSource: {fileID: 0}
   convoModeImages: {fileID: 5626996928375492772}
   charBtn: {fileID: 0}
   manager: {fileID: 1022270413289010190}
@@ -661,11 +674,12 @@ MonoBehaviour:
   - {fileID: 2413887151772764866}
   - {fileID: 7461033018738267412}
   - {fileID: 8390216251956698819}
-  dayOneIntro: {fileID: 4900000, guid: 5325151c076c8e3418d8a2ed9b3b5e14, type: 3}
-  O_RyanIntro: {fileID: 11500000, guid: 867d7c813c74fa04e94910e2873a385b, type: 3}
+  BAMicroArcadeConvo: {fileID: 0}
+  TTMicroArcadeConvo: {fileID: 0}
   loadGlobalsJSON: {fileID: 4900000, guid: 79643bfe944f4e248b2caa40b789658e, type: 3}
   mGC: {fileID: 0}
   bAM: {fileID: 0}
+  quicksaved: 0
   BBun2: {fileID: 3940909251784713043, guid: 818fe1044d798a441bec381ee21a0ddb, type: 3}
   Pickles2: {fileID: 3940909251784713043, guid: 8f78078ac07b0b34daa66cfbc14451be, type: 3}
   Greens2: {fileID: 3830152665219838398, guid: b692609f8884eef46869806e4fc9abe2, type: 3}
@@ -720,7 +734,7 @@ MonoBehaviour:
   aLeaf: {fileID: 21300000, guid: 7ef6342e2d9427a46bbd40ebbd724609, type: 3}
   purple: {fileID: 21300000, guid: b768cec04c018e44dab2e326e23e8e29, type: 3}
   beefPatty: {fileID: 21300000, guid: 14e2a55b4e82f79429431ee28221cfde, type: 3}
-  mushroom: {fileID: 21300000, guid: 391d29bba81a7994680b8097466bfb38, type: 3}
+  mushroom: {fileID: 21300000, guid: 478fcc49553203345a2e25de10e3aaa7, type: 3}
   mysteryMeat: {fileID: 21300000, guid: f2f617da76f6fe34fa17b12ef50cc458, type: 3}
   chicken: {fileID: 21300000, guid: 09e94fda7d1f5414389d64529b375138, type: 3}
   cheeseburger: {fileID: 21300000, guid: 423842e831bcee546a05e3c0b7ab1cbe, type: 3}
@@ -2088,7 +2102,7 @@ PrefabInstance:
     - target: {fileID: 5313742289754615306, guid: aecfaee706bc8b141959a0c2fd8c05c4, type: 3}
       propertyPath: dDictValue.Array.data[4]
       value: 
-      objectReference: {fileID: 4900000, guid: 280438649d13aba49bb1d2b700830ee9, type: 3}
+      objectReference: {fileID: 4900000, guid: 217c852ed09151847b552f6a664adda5, type: 3}
     - target: {fileID: 5313742289754615306, guid: aecfaee706bc8b141959a0c2fd8c05c4, type: 3}
       propertyPath: dDictValue.Array.data[5]
       value: 

@@ -59,7 +59,7 @@ They don't even feel pain! They're like fish, they don't got nerves or whateva. 
 // Good Option
 ~affectionCS+=3
 
-(I reluctantly grab the knife. As I pick up the Blobster, Swatts clasps his hands, bows his head, and whispers something under his breath.) #speaker:Graciana #mood:fear
+(I reluctantly grab the knife. As I pick up the Blobster, Swatts clasps his hands, bows his head, and whispers something under his breath.) #speaker:Graciana #mood:fear #sfx:gainedPoint
 ... #speaker:Chef Swatts #mood:pray
 (As told, I give the Blobster one small cut at the bottom. It instantly stops moving with no reaction.) #speaker:Graciana
 
@@ -90,7 +90,7 @@ What was that thing you did, right before I cut it? It almost looked like you we
 //Bad Option
 ~affectionCS-=3
 
-N-no way! I'm not doing it! #speaker:Graciana #mood:fear
+N-no way! I'm not doing it! #speaker:Graciana #mood:fear #sfx:lostPoint
 
 Ahh, c'mon Graciana! It only takes one cut! #speaker:Chef Swatts #mood:happy
 
@@ -131,7 +131,7 @@ Maybe you're right... I dunno. #speaker:Graciana #mood:sad
 //Chaotic Option
 ~chaosCS+=3
 
-Y-yeah... Sure... #speaker:Graciana #mood:fear
+Y-yeah... Sure... #speaker:Graciana #mood:fear #sfx:cosmicPoint
 (I reluctantly grab the knife, and pick up the Blobster.)
 (Chef Swatts clasps his hands together, bows his head, and whispers something under his breath.)
 ... #speaker:Chef Swatts #mood:pray

@@ -5,6 +5,7 @@ using TMPro;
 using Ink.Runtime;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 namespace InterDineMension.Manager
 {
@@ -12,6 +13,7 @@ namespace InterDineMension.Manager
     using JetBrains.Annotations;
     using MicroGame;
     using MicroGame.BA;
+    //using System.Diagnostics;
     using System.Reflection.Emit;
     using Unity.VisualScripting;
     //using UnityEngine.UIElements;
@@ -19,7 +21,16 @@ namespace InterDineMension.Manager
     public class dialogueManager : MonoBehaviour
     {
         public bool useSaveSystem;
-        
+
+        public List<string> sfxTittles = new List<string>();
+        public List<AudioClip> sfxSounds = new List<AudioClip>();
+        public Dictionary<string, AudioClip> sfxLibrary = new Dictionary<string, AudioClip>();
+        public AudioSource sfxAudioSource;
+        public List<string> bgmTittles = new List<string>();
+        public List<AudioClip> bgmSounds = new List<AudioClip>();
+        public Dictionary<string, AudioClip> musicLibrary = new Dictionary<string, AudioClip>();
+        public AudioSource bgmAudioSource;
+
         //public GameObject charImageCS, charImageOR;
         //private bool deactivatedcorutines = false;
         internal VariableHolder vH;
@@ -56,8 +67,8 @@ namespace InterDineMension.Manager
 
         [SerializeField] private GameObject[] choices;
 
-        [SerializeField] public TextAsset dayOneIntro;
-        [SerializeField] public TextAsset O_RyanIntro;
+        [SerializeField] public TextAsset BAMicroArcadeConvo;
+        [SerializeField] public TextAsset TTMicroArcadeConvo;
         [SerializeField] private TextAsset loadGlobalsJSON;
         
         //internal string savedjson;
@@ -85,6 +96,8 @@ namespace InterDineMension.Manager
         private const string VEGGIE_TAG = "veggie";
         private const string TBUN_TAG = "TBun";
         private const string MOOD = "mood";
+        private const string SFX = "sfx";
+        private const string BGM = "bgm";
         //private const string VAR_CHANGE = "varChange"; not sure what this was supposed to me lmao
 
         public InkExternalFunctions iEF;
@@ -93,6 +106,28 @@ namespace InterDineMension.Manager
         
         private void Awake()
         {
+            if (sfxTittles.Count == sfxSounds.Count)
+            {
+                for (int i = 0; i < sfxTittles.Count; i++)
+                {
+                    sfxLibrary.Add(sfxTittles[i], sfxSounds[i]);
+                }
+            }
+            else
+            {
+                Debug.LogError("sfxTittles and sfxSounds are not at an equal count");
+            }
+            if (bgmTittles.Count == bgmSounds.Count)
+            {
+                for (int i = 0; i < bgmTittles.Count; i++)
+                {
+                    musicLibrary.Add(bgmTittles[i], bgmSounds[i]);
+                }
+            }
+            else
+            {
+                Debug.LogError("bgmTittles and bgmSounds are not at an equal count");
+            }
             currentStory = new Story(loadGlobalsJSON.text);
             vH = GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
             vH.dM = this;
@@ -108,9 +143,10 @@ namespace InterDineMension.Manager
              * 
              * 
              */
-            if(useSaveSystem)
+            if(PlayerPrefs.HasKey("dayVar"))
             {
-                Debug.Log("Using save system");
+                useSaveSystem = true;
+                //Debug.Log("Using save system");
                 dV.LoadVariables();
                 QuickSave();
             }
@@ -142,22 +178,31 @@ namespace InterDineMension.Manager
 
         private void Start()
         {
-            if (currentStory.variablesState["timeOfDay"].ToString() == "morning")
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
             {
-                StartMorningConvo();//will need to be adjusted later
+                if (currentStory.variablesState["timeOfDay"].ToString() == "morning")
+                {
+                    StartMorningConvo();//will need to be adjusted later
+                }
+                else if (currentStory.variablesState["timeOfDay"].ToString() == "afternoon")
+                {
+                    PostMiniGameConvo();
+                }
+                else if (currentStory.variablesState["timeOfDay"].ToString() == "night")
+                {
+                    //night time activity
+                }
+                else
+                {
+                    Debug.LogWarning("The variable timeOfDay in globals.ink is not in a valid state");
+                }
             }
-            else if (currentStory.variablesState["timeOfDay"].ToString() == "afternoon")
+            else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2))
             {
-                PostMiniGameConvo();
+                charSpeakTo = speakingTo.Swatts;
+                EnterDialogueMode(BAMicroArcadeConvo);
             }
-            else if (currentStory.variablesState["timeOfDay"].ToString() == "night")
-            {
-                //night time activity
-            }
-            else
-            {
-                Debug.LogWarning("The variable timeOfDay in globals.ink is not in a valid state");
-            }
+           
 
             //conditional of what state the day is in
             
@@ -196,7 +241,8 @@ namespace InterDineMension.Manager
         {
             switch (currentStory.variablesState["currentConvo"].ToString())
             {
-                case "":
+                case "NMG1":
+
                     break;
                 default:
                     break;
@@ -343,7 +389,7 @@ namespace InterDineMension.Manager
         public void debugCommand()
         {
             
-            EnterDialogueMode(dayOneIntro);
+            EnterDialogueMode(BAMicroArcadeConvo);
         }
 
         private void ContinueStory()
@@ -765,6 +811,12 @@ namespace InterDineMension.Manager
                                 break;
                         }
                         break;
+                    case SFX:
+                        {
+                            sfxAudioSource.clip = sfxLibrary[tagValue];
+                            sfxAudioSource.Play();
+                            break;
+                        }
                     default:
                         Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
                         break;

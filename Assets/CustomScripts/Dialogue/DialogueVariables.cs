@@ -5,6 +5,7 @@ using Ink.Runtime;
 using System.IO;
 using UnityEditor.Experimental;
 using UnityEditor;
+using Unity.VisualScripting;
 
 namespace InterDineMension
 {
@@ -15,7 +16,9 @@ namespace InterDineMension
         internal Story globalVariablesStory;
 
         private const string saveVariablesKey = "INK_VARIABLES";
+        
 
+        
         public DialogueVariables(Story loadGlobalJSON)
         {
             //compiles the story
@@ -36,7 +39,6 @@ namespace InterDineMension
                 /*Debug.Log("Initialized global Dialogue Variable: " + name + " = " + value);*/
             }
         }
-
         public void QuickSaveVariables()
         {
             PlayerPrefs.SetInt("dayVarT", int.Parse(globalVariablesStory.variablesState["dayVar"].ToString()));
@@ -67,7 +69,50 @@ namespace InterDineMension
             PlayerPrefs.SetInt("affectionFT", int.Parse(globalVariablesStory.variablesState["affectionF"].ToString()));
             PlayerPrefs.SetInt("chaosFT", int.Parse(globalVariablesStory.variablesState["chaosF"].ToString()));
 
+            PlayerPrefs.SetInt("BAMLevel", int.Parse(globalVariablesStory.variablesState["BAMLevel"].ToString()));
+            PlayerPrefs.SetInt("TTMLevel", int.Parse(globalVariablesStory.variablesState["TTMLevel"].ToString()));
+            PlayerPrefs.SetInt("TBMLevel", int.Parse(globalVariablesStory.variablesState["TBMLevel"].ToString()));
+
+
+
             PlayerPrefs.Save();
+        }
+
+        public void clearTempVars()
+        {
+            PlayerPrefs.DeleteKey("winStatus");
+
+            PlayerPrefs.DeleteKey("dayVarT");
+            PlayerPrefs.DeleteKey("weekDayT");
+
+
+            PlayerPrefs.DeleteKey("convo_numberCST");
+            PlayerPrefs.DeleteKey("affectionCST");
+            PlayerPrefs.DeleteKey("chaosCST");
+
+            PlayerPrefs.DeleteKey("convo_numberNT");
+            PlayerPrefs.DeleteKey("affectionNT");
+            PlayerPrefs.DeleteKey("chaosNT");
+
+            PlayerPrefs.DeleteKey("convo_numberCCT");
+            PlayerPrefs.DeleteKey("affectionCCT");
+            PlayerPrefs.DeleteKey("chaosCCT");
+
+            PlayerPrefs.DeleteKey("convo_numberMT");
+            PlayerPrefs.DeleteKey("affectionMT");
+            PlayerPrefs.DeleteKey("chaosMT");
+
+            PlayerPrefs.DeleteKey("convo_numberGT");
+            PlayerPrefs.DeleteKey("affectionGT");
+            PlayerPrefs.DeleteKey("chaosGT");
+
+            PlayerPrefs.DeleteKey("convo_numberFT");
+            PlayerPrefs.DeleteKey("affectionFT");
+            PlayerPrefs.DeleteKey("chaosFT");
+
+            PlayerPrefs.DeleteKey("BAMLevel");
+            PlayerPrefs.DeleteKey("TTMLevel");
+            PlayerPrefs.DeleteKey("TBMLevel");
         }
         public void SaveVariables()
         {
@@ -171,6 +216,12 @@ namespace InterDineMension
             globalVariablesStory.variablesState["affectionF"] = PlayerPrefs.GetInt("affectionFT");
             globalVariablesStory.variablesState["chaosF"] = PlayerPrefs.GetInt("chaosFT");
 
+
+            globalVariablesStory.variablesState["BAMLevel"] = PlayerPrefs.GetInt("BAMLevel");
+            globalVariablesStory.variablesState["TTMLevel"] = PlayerPrefs.GetInt("TTMLevel");
+            globalVariablesStory.variablesState["TBMLevel"] = PlayerPrefs.GetInt("TBMLevel");
+
+
         }
 
         
@@ -205,5 +256,7 @@ namespace InterDineMension
                 story.variablesState.SetGlobal(variable.Key, variable.Value);
             }
         }
+
+
     }
 }
