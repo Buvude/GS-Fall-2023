@@ -29,33 +29,38 @@ namespace InterDineMension.MicroGame.TT
         {
             if (collision.gameObject.layer == 8&&canScore)
             {
-                //this.gameObject.transform.parent = collision.gameObject.GetComponentInChildren<Transform>();
+                this.gameObject.transform.parent = collision.gameObject.transform;
                 canScore = false;
                 location=BinLandedIn.trash;
                 if (type == objectType.trash)
                 {
                     worthPoint = true;
                 }
+                this.gameObject.SetActive(false);
             }
             else if (collision.gameObject.layer == 9 && canScore)
             {
-                //this.gameObject.transform.parent = collision.gameObject.GetComponentInChildren<GameObject>().transform;
+                this.gameObject.transform.parent = collision.gameObject.transform;
+                
                 canScore = false;
                 location = BinLandedIn.recycling;
                 if (type == objectType.recycling)
                 {
                     worthPoint = true;
                 }
+                this.gameObject.SetActive(false);
             }
             else if (collision.gameObject.layer == 10 && canScore)
             {
-                //this.gameObject.transform.parent = collision.gameObject.GetComponentInChildren<GameObject>().transform;
+                this.gameObject.transform.parent = collision.gameObject.transform;
+                
                 canScore = false;
                 location = BinLandedIn.compost;
                 if (type == objectType.compost)
                 {
                     worthPoint = true;
                 }
+                this.gameObject.SetActive(false);
             }
             else if(collision.gameObject.layer == 12&&canScore)
             {
