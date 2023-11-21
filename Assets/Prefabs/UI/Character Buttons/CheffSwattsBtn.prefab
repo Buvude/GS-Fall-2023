@@ -70,6 +70,12 @@ MonoBehaviour:
   - cSMGFail2
   - cSMGPass2
   - cSTalkTo3
+  - Fri
+  - Mon
+  - Sat
+  - Thu
+  - Tue
+  - Wed
   sDictValue:
   - {fileID: 21300000, guid: f6208e39c56e08b4598c00394e192c0e, type: 3}
   - {fileID: 21300000, guid: ce5eaec2011c9f44dbcc544d9dfd391d, type: 3}
@@ -87,6 +93,12 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 5928dc06a3ad23b45b204b3260f17e61, type: 3}
   - {fileID: 4900000, guid: dd1d934898fa1814cb31d10707489dbc, type: 3}
   - {fileID: 4900000, guid: 8b8707f507da77540987723d60045bd0, type: 3}
+  - {fileID: 4900000, guid: 5320cfc223a68d74a89698aca8140fb3, type: 3}
+  - {fileID: 4900000, guid: 066328ce9ca081b418343f563f782892, type: 3}
+  - {fileID: 4900000, guid: 3add1946003838e4cb5bc6657dcd9970, type: 3}
+  - {fileID: 4900000, guid: 3dc0b93e9ba7a2e42b4ed0a982095fcc, type: 3}
+  - {fileID: 4900000, guid: 3c0d97bba0158914f9b1464b32e8bf1b, type: 3}
+  - {fileID: 4900000, guid: fd933fbde340c334daa91f3a2892af43, type: 3}
 --- !u!222 &3453327873401711260
 CanvasRenderer:
   m_ObjectHideFlags: 0

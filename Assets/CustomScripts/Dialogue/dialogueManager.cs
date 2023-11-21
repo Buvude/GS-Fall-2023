@@ -103,7 +103,7 @@ namespace InterDineMension.Manager
         public InkExternalFunctions iEF;
         public GameObject BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2;
         public GameObject BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3;
-        
+        internal bool morning;
         private void Awake()
         {
             if (sfxTittles.Count == sfxSounds.Count)
@@ -224,13 +224,16 @@ namespace InterDineMension.Manager
         public void StartMorningConvo()
         {
             charSpeakTo = speakingTo.Swatts;
-            switch (int.Parse(currentStory.variablesState["dayVar"].ToString()))//so it defaults to the random quip thing unless there is something specific for CS to say today
+            switch (PlayerPrefs.GetInt("dayVar"))//so it defaults to the random quip thing unless there is something specific for CS to say today
             {
                 case 1:
                     EnterDialogueMode(cS.dialogueDictionary["gameIntro"]);
                     break;
                 default:
-                    EnterDialogueMode(cS.dialogueDictionary["morning"]);
+
+                    /* EnterDialogueMode(cS.dialogueDictionary["morning"]);*/
+                    morning = true;
+                    EnterDialogueMode(cS.dialogueDictionary[PlayerPrefs.GetString("weekDay")]);
                     break;
             }
 
@@ -327,14 +330,21 @@ namespace InterDineMension.Manager
 
             //add method to determine which convo is going on, possibly triggered by the char btn
             dPTest.enabled = true;
-            if (quicksaved)
+            if (!morning)
             {
-                QuickSave();
+                if (quicksaved)
+                {
+                    QuickSave();
+                }
+                currentStory = new Story(inkJSON.text);
+                if (quicksaved)
+                {
+                    QuickLoad();
+                }
             }
-            currentStory =new Story(inkJSON.text);
-            if (quicksaved)
+            else
             {
-                QuickLoad();
+                currentStory=new Story(inkJSON.text);
             }
             vH.currentStory = currentStory;
             dialoguePlaying=true;
@@ -379,6 +389,7 @@ namespace InterDineMension.Manager
 
             iEF.Bind(currentStory,bAM,mGC,this);
             vH.currentStory = currentStory;
+            morning = false;
             ContinueStory();
         }
 
@@ -865,7 +876,7 @@ namespace InterDineMension.Manager
             mBtn.SetActive(false);
             nBtn.SetActive(false);
 
-            switch (currentStory.variablesState["weekDay"].ToString())//will determine who's avalible
+            switch (PlayerPrefs.GetString("weekDay"))//will determine who's avalible
             {
                 case "Tut":
                     cSBtn.gameObject.SetActive(true);

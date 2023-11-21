@@ -1,6 +1,6 @@
-INCLUDE globals.ink
-->friday
-
+// INCLUDE globals.ink
+// ->friday
+// EXTERNAL GoToDiner()
 ==friday==
 Hey Chef! Morning! #speaker:Graciana #mood:neutral
 
@@ -20,5 +20,5 @@ Good! 'Cause I'ma be stuck in the kitchen all day! #speaker:Chef Swatts
 Alright, yeah! I can handle it! #speaker:Graciana #mood:happy
 
 Aight! let's crack open the portal and get rockin'! #speaker:Chef Swatts
-
+    ~GoToDiner()
     -> DONE
