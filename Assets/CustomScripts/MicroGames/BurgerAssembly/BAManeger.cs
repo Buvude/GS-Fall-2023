@@ -14,6 +14,8 @@ namespace InterDineMension.MicroGame.BA
     using InterDineMension.Manager;
     public class BAManeger : MonoBehaviour
     {
+        public Animator final;
+        public GameObject orderImages;
         public PlayerController pC;
         public Button startBtn;
         public BurgerIngredients blank1,blank2;
@@ -24,7 +26,8 @@ namespace InterDineMension.MicroGame.BA
         public Image finishedBurger;
         public Sprite GoodBurger, BadBurger, MediocreBurger;
         public static int finalScore = 0;
-        public Microgamecontroller microgamecontroller; 
+        public Microgamecontroller microgamecontroller;
+        public VariableHolder vH;
         void Start()
         {
             microgamecontroller = GameObject.FindGameObjectWithTag("eventSystem").GetComponent<Microgamecontroller>();
@@ -59,7 +62,6 @@ namespace InterDineMension.MicroGame.BA
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)
         {
             ResetMiniGame();
-            Debug.Log(finalScore);
             dM.manager.imagePopUp.enabled = false;
             for (int i = 0; i < ingredients.Count; i++)
             {
@@ -88,6 +90,24 @@ namespace InterDineMension.MicroGame.BA
             topBunOptions.Add(tbun);
         }
 
+        public void LevelUp(GameObject bBun2, GameObject pickles2, GameObject greens2, GameObject patty2, GameObject condiment2, GameObject veggie2, GameObject bun2, GameObject bBun3, GameObject pickles3, GameObject greens3, GameObject patty3, GameObject condiment3, GameObject veggie3, GameObject bun3)
+        {
+            orderImages.SetActive(false);
+            bottomBunOptions.Add(bBun2);
+            pickleOptions.Add(pickles2);
+            lettuceOptions.Add(greens2);
+            PattyOptions.Add(patty2);
+            condimentsOptions.Add(condiment2);
+            veggieOptions.Add(veggie2);
+            topBunOptions.Add(bun2);
+            bottomBunOptions.Add(bBun3);
+            pickleOptions.Add(pickles3);
+            lettuceOptions.Add(greens3);
+            PattyOptions.Add(patty3);
+            condimentsOptions.Add(condiment3);
+            veggieOptions.Add(veggie3);
+            topBunOptions.Add(bun3);
+        }
         // Start is called before the first frame update
         /// <summary>
         /// randomizes the placement of the items
@@ -97,6 +117,7 @@ namespace InterDineMension.MicroGame.BA
 
         public void ResetMiniGame()
         {
+            vH.dM.gameObject.GetComponent<dialogueSpriteManager>().imagePopUp.enabled = true;
             pC.ingredientTypes.Clear();
             orderedIngredients.Clear();
             pC.resetMiniGameSprites();
@@ -365,7 +386,7 @@ namespace InterDineMension.MicroGame.BA
             temp.AddRange(toShuffle);
             for (int i = 0; i < toShuffle.Count; i++)
             {
-                int index=Random.Range(0, temp.Count - 1);//using unity system.random
+                int index=Random.Range(0, temp.Count);//using unity system.random
                 toSpawn.Add(temp[index]);
                 temp.RemoveAt(index);
             }
@@ -381,9 +402,15 @@ namespace InterDineMension.MicroGame.BA
         {
             for (int i = 0;i < ingredientTypes.Count;)
             {
-                if (ingredientTypes[i]==BurgerIngredients.ingredientType.unspeakableHorror)
+                if (ingredientTypes[i] == BurgerIngredients.ingredientType.unspeakableHorror || 
+                    ingredientTypes[i]==BurgerIngredients.ingredientType.bottomBunOfTheDeep || 
+                    ingredientTypes[i] == BurgerIngredients.ingredientType.topBunOfTheDeep  ||
+                    ingredientTypes[i] == BurgerIngredients.ingredientType.biblicallyAccurateGreens||
+                    ingredientTypes[i] == BurgerIngredients.ingredientType.slime||
+                    ingredientTypes[i] == BurgerIngredients.ingredientType.allSeeingEyes||
+                    ingredientTypes[i] == BurgerIngredients.ingredientType.theHand)
                 {
-                    finalScore = -7;
+                    finalScore -= 1;
                 }
                 if (ingredientTypes[i]== orderedIngredients[i])
                 {
@@ -398,22 +425,27 @@ namespace InterDineMension.MicroGame.BA
             Debug.Log(finalScore);
             switch (finalScore)
             {
+                case -7:
+                    {
+                        //impliment cosmic end
+                        break;
+                    }
                 case <= 2:
                     {
-                        finishedBurger.gameObject.SetActive(true);
                         finishedBurger.sprite = BadBurger;
+                        final.enabled = true;
                         break;
                     }
                 case <= 5:
                     {
-                        finishedBurger.gameObject.SetActive(true);
                         finishedBurger.sprite = MediocreBurger;
+                        final.enabled = true;
                         break;
                     }
                 case > 5:
                     {
-                        finishedBurger.gameObject.SetActive(true);
                         finishedBurger.sprite = GoodBurger;
+                        final.enabled = true;
                         break;
                     }
                 //default: break;//unreachable, but still safe to have
@@ -424,21 +456,40 @@ namespace InterDineMension.MicroGame.BA
 
         private IEnumerator BAMicroGameScore(int finalScore)
         {
+            Debug.Log(dM.vH.currentStory.variablesState["currentConvo"].ToString());
             if (finalScore >= 4)
             { 
                 
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
-                dM.EnterDialogueMode(gM.cheffSwattsConvos[2]);//only valid for day one
+                if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
+                {
+                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGPass1"]); //only valid for day one
+                }
+                else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
+                {
+                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGPass2"]);
+                }
+                
             }
             else
             {
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
-                dM.EnterDialogueMode(gM.cheffSwattsConvos[1]);//only valid for day one
+                if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
+                {
+                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGFail1"]);//only valid for day one
+                }
+                else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
+                {
+                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGFail2"]);
+                }
+
             }
         }
+
+        
     }
 }

@@ -21,7 +21,7 @@ namespace InterDineMension.Manager
         {
             /*if (!dialogueManager.GetInstance().dialoguePlaying)
             {
-                dialogueManager.GetInstance().EnterDialogueMode(manager.dayOneIntro);
+                dialogueManager.GetInstance().EnterDialogueMode(manager.BAMicroArcadeConvo);
             }*/
         }
         public void StartConvoCheffSwatts()
@@ -35,6 +35,10 @@ namespace InterDineMension.Manager
         public void StartConvoFred()
         {
             //check variables to see which story to start
+        }
+        private void OnApplicationQuit()
+        {
+            manager.dV.clearTempVars();
         }
     }
 }

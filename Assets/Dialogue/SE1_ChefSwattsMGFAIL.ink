@@ -1,5 +1,5 @@
-EXTERNAL GoToDiner()
-INCLUDE Intro_O'Ryan.ink 
+//EXTERNAL GoToDiner()
+INCLUDE Intro_ORyan.ink
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
 Would you like to retry the minigame?
@@ -10,7 +10,8 @@ Would you like to retry the minigame?
 
 
 ===MainFail===
-...oops... #speaker:Graciana #mood:sad
+~affectionCS-=3
+...oops... #speaker:Graciana #mood:sad #sfx:lostPoint
 
 Ay, no worries. It takes a while for tha way of the food to start speakin' to ya. #speaker:Chef Swatts
 
@@ -27,4 +28,3 @@ Got it... #speaker:Graciana
 (I take the burger out to the customer, and help Chef Swatts with some more prepwork and cleaning.)
 ~convo_numberCS=1
 ->mainORYAN
--> END

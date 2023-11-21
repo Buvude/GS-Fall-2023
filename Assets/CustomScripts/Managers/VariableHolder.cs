@@ -1,4 +1,4 @@
-using Ink.Parsed;
+using Ink.Runtime;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,8 +7,12 @@ namespace InterDineMension.Manager
 {
     public class VariableHolder : MonoBehaviour
     {
+        public bool wonMini = false;
+        public Story currentStory;
+        public TextAsset curStor;
+        internal dialogueManager dM;
         //these will track the stats for each character 
-        public int 
+       /* public int 
             day,
             affectionCS, chaosCS, irritatedCS,//Cheff Swats trackers
             affectionN, chaosN, irritatedN,//Nico trackers
@@ -16,8 +20,8 @@ namespace InterDineMension.Manager
             affectionG, chaosG, irritatedG,//Gnomies
             affectionM, chaosM, irritatedM,//Morgan trackers
             affectionF, chaosF, irritatedF,//Fred trackers
-            finalEncounterTracker;//used to keep track of wins and losses in the final encounter with 
-        public bool characterStateNico;
+            finalEncounterTracker;//used to keep track of wins and losses in the final encounter with */
+        //public bool characterStateNico;
         private static VariableHolder instance;
         // Start is called before the first frame update
         void Awake()
@@ -30,6 +34,7 @@ namespace InterDineMension.Manager
             instance = this;
             DontDestroyOnLoad(instance);
 
+            currentStory = new Story(curStor.text);
         }
 
         // Update is called once per frame

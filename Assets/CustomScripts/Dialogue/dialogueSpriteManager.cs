@@ -17,19 +17,19 @@ namespace InterDineMension.Manager
         public Image imagePopUp;
         public List<Image> orderImages=new List<Image>();
         public Sprite
-            classicBottomBun, lettuceWrapBottom, noBottomBun,bBunOfTheDeep,//top bun types
-            pickles, relish, noPickles,peppers, //pickle type 
-            wholeLeafLettuce, choppedLettuce, noLettuce,biblicallyAcurateGreens,//Lettuce type
-            beefPatty, veganPatty, unspeakableHorror,chicken,//patty type
-            ketchup, mustard, both,neither,//condiment choice
-            tomatoe, choppedOnions, none,mushrooms,//final bonus choice
-            classicTopBun, lettuceWrapTop, noTopBun,tBunOfTheDeep;//top bun choice
+            classicBottomBun, lettuceWrapBottom, noBottomBun,bBunOfTheDeep,pretzelBBun, sourdoughBBun,//top bun types
+            pickles, relish, noPickles,peppers,allSeeingEyes,plain, //pickle type 
+            wholeLeafLettuce, choppedLettuce, noLettuce,biblicallyAcurateGreens, aLeaf, purple,//Lettuce type
+            beefPatty, mushroom, mysteryMeat,chicken,cheeseburger,//patty type
+            ketchup, mustard, both,neither, slime, mayo,//condiment choice
+            tomatoe, choppedOnions, none,mushrooms,onionRings,theThing,//final bonus choice
+            classicTopBun, lettuceWrapTop, noTopBun,tBunOfTheDeep, pretzelTBun, sourdoughTBun;//top bun choice
        /* public enum ingredientType
         {
             classicBottomBun, lettuceWrapBottom, noBottomBun,//top bun types
-            pickles, relish, noPickles, //pickle type 
+            chips, relish, noPickles, //pickle type 
             wholeLeafLettuce, choppedLettuce, noLettuce,//Lettuce type
-            beefPatty, veganPatty, unspeakableHorror,//patty type
+            beefPatty, mushroomPatty, mysteryMeat,//patty type
             ketchup, mustard, both,//condiment choice
             tomatoe, choppedOnions, none,//final bonus choice
             classicTopBun, lettuceWrapTop, noTopBun//top bun choice
@@ -51,6 +51,7 @@ namespace InterDineMension.Manager
         {
             if(popUp != null)
             {
+                imagePopUp.enabled = true;
                 imagePopUp.gameObject.SetActive(true);
                 orderImages[phase-1].gameObject.SetActive(true);
                 imagePopUp.sprite = popUp;

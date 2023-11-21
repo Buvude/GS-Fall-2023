@@ -3,6 +3,7 @@
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
 //INCLUDE EveningTest.ink
+//EXTERNAL GoToDiner()
 
 
 //VAR tempHolder =""
@@ -33,8 +34,8 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
     
     ** [Peel it]
         // GOOD OPTION
-        ~affectionCS=affectionCS+1
-        (I take a potato skin peeler, and begin peeling away at the bombado.) #speaker:Graciana 
+        ~affectionCS=affectionCS+2
+        (I take a potato skin peeler, and begin peeling away at the bombado.) #speaker:Graciana #sfx:gainedPoint
         (Piece by piece, the skin comes off with relative ease. The inside is almost gelatin-like.)
         (Chef Swatts turns back around, looking over my shoulder...)
 
@@ -63,8 +64,8 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
     
     ** [Squeeze it]
         // CHAOTIC OPTION
-        ~chaosCS=chaosCS+1
-        (I take the bombado into a bowl and squeeze it with both hands.) #speaker:Graciana 
+        ~chaosCS=chaosCS+2
+        (I take the bombado into a bowl and squeeze it with both hands.) #speaker:Graciana #sfx:cosmicPoint
 
         (POP!) #speaker: 
 
@@ -94,8 +95,8 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
 
     ** [Slice it]
         // BAD OPTION
-        ~irritatedCS=irritatedCS+1
-        (I grab a kitchen knife and bring it to the bombado. I barely even poke it with the knife, when...) #speaker:Graciana
+        ~affectionCS-=2
+        (I grab a kitchen knife and bring it to the bombado. I barely even poke it with the knife, when...) #speaker:Graciana #sfx:lostPoint
 
         (SPLAT!) #speaker: 
 
@@ -121,7 +122,8 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
         -> reconvene
 
 * Nah
-    -> DONE
+    ~GoToDiner()
+    ->DONE
 
 === reconvene ===
 
@@ -174,6 +176,8 @@ Ya ya, I hear ya. Took me a while to understand that food ain't rare like it is 
 Speakin' of, help me wit' this burger, ya? 
 
 O-oh, right, yeah! #speaker:Graciana #mood:happy
+~currentConvo="cSD1"
+~QuickSave()
 ->MainBAD
 
 // Order up! Looks like we got an order of: #speaker:Chef Swatts

@@ -14,12 +14,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5157989516564867718, guid: 2640a2e920b52494886ebd246d815982, type: 3}
       propertyPath: ing
-      value: 16
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8525268960417375529, guid: 2640a2e920b52494886ebd246d815982, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 3d4ac4c8be2130e4398584f8577ee818, type: 3}
+      objectReference: {fileID: 21300000, guid: 48267f5200a2e7b4193332cd657a7595, type: 3}
     - target: {fileID: 8635655747931535204, guid: 2640a2e920b52494886ebd246d815982, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5

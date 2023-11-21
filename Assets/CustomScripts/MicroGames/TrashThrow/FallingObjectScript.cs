@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace InterDineMension
+namespace InterDineMension.MicroGame.TT
 {
     public class FallingObjectScript : MonoBehaviour
     {
@@ -36,28 +36,33 @@ namespace InterDineMension
                 {
                     worthPoint = true;
                 }
+                this.gameObject.SetActive(false);
             }
             else if (collision.gameObject.layer == 9 && canScore)
             {
                 this.gameObject.transform.parent = collision.gameObject.transform;
+                
                 canScore = false;
                 location = BinLandedIn.recycling;
                 if (type == objectType.recycling)
                 {
                     worthPoint = true;
                 }
+                this.gameObject.SetActive(false);
             }
             else if (collision.gameObject.layer == 10 && canScore)
             {
                 this.gameObject.transform.parent = collision.gameObject.transform;
+                
                 canScore = false;
                 location = BinLandedIn.compost;
                 if (type == objectType.compost)
                 {
                     worthPoint = true;
                 }
+                this.gameObject.SetActive(false);
             }
-            else if(collision.gameObject.layer == 11&&canScore)
+            else if(collision.gameObject.layer == 12&&canScore)
             {
                 canScore=false;
                 location=BinLandedIn.none;
