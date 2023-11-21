@@ -11,7 +11,7 @@ Would you like to retry the minigame?
         ->MainFail2
     ===MainFail2===
     ~affectionCS-=2
-    Ay... Still not gettin' it, huh? #speaker:Chef Swatts #mood:sad
+    Ay... Still not gettin' it, huh? #speaker:Chef Swatts #mood:sad #sfx:lostPoint
     
     Y-yeah... #speaker:Graciana #mood:sad
     Why do you gotta throw the food?! Just hand it to me normally?! #speaker:Graciana #mood:angry

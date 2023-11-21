@@ -2,7 +2,7 @@
 INCLUDE Intro_ORyan.ink
 INCLUDE globals.ink
 ~affectionCS+=1
-Ay, there ya go! #speaker:Chef Swatts
+Ay, there ya go! #speaker:Chef Swatts #sfx:gainedPoint
 I knew it, you're a natural at this!
 
 Hah, thanks... I honestly don't really know how... #speaker:Graciana #mood:happy

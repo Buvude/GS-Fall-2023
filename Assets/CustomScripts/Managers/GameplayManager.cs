@@ -21,7 +21,7 @@ namespace InterDineMension.Manager
         {
             /*if (!dialogueManager.GetInstance().dialoguePlaying)
             {
-                dialogueManager.GetInstance().EnterDialogueMode(manager.dayOneIntro);
+                dialogueManager.GetInstance().EnterDialogueMode(manager.BAMicroArcadeConvo);
             }*/
         }
         public void StartConvoCheffSwatts()

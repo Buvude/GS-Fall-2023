@@ -80,6 +80,8 @@ namespace InterDineMension
 
         public void clearTempVars()
         {
+            PlayerPrefs.DeleteKey("winStatus");
+
             PlayerPrefs.DeleteKey("dayVarT");
             PlayerPrefs.DeleteKey("weekDayT");
 

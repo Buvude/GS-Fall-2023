@@ -787,7 +787,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -3
   m_Sprite: {fileID: 21300000, guid: 60cedb92a0625094fa5a302be34a42fc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1656,7 +1656,7 @@ Transform:
   m_GameObject: {fileID: 1059251439}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.79, y: -3.2, z: 0}
+  m_LocalPosition: {x: 0.79, y: -3.07, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2174,7 +2174,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.87421715, y: 0.89940524}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.5, y: 3.1099548}
+  m_AnchoredPosition: {x: -0.5, y: 3.1099854}
   m_SizeDelta: {x: 3, y: -5.223999}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1551120366
@@ -2435,6 +2435,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RecyclingDumpster
       objectReference: {fileID: 0}
+    - target: {fileID: 3585363857671582840, guid: 7ce14711ba3815b41b47b75660ee5787, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8656473610484148650, guid: 7ce14711ba3815b41b47b75660ee5787, type: 3}
       propertyPath: leftBoundary
       value: 
@@ -2474,6 +2478,10 @@ PrefabInstance:
     - target: {fileID: 3393402450955198923, guid: b89f2dd221be8dd4f8f209d3c0b43170, type: 3}
       propertyPath: m_Name
       value: CompostDumpster
+      objectReference: {fileID: 0}
+    - target: {fileID: 3393402450955198923, guid: b89f2dd221be8dd4f8f209d3c0b43170, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4268077939466191293, guid: b89f2dd221be8dd4f8f209d3c0b43170, type: 3}
       propertyPath: m_SortingOrder

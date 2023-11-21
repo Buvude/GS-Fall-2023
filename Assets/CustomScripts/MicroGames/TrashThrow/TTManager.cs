@@ -135,7 +135,15 @@ namespace InterDineMension.MicroGame.TT
             {
                 vH.wonMini= false;
             }
-            
+            if(score>= goal)
+            {
+                PlayerPrefs.SetString("winStatus", "won");
+            }
+            else
+            {
+                PlayerPrefs.SetString("winStatus", "lost");
+            }
+
         }
         public void PlusPoint(FallingObjectScript f)
         {

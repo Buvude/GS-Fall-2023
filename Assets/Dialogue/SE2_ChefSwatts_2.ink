@@ -71,7 +71,7 @@
     //Bad//
     ~affectionCS-=4
     
-    Honestly... It seems like you might be right. #speaker:Graciana #mood:think
+    Honestly... It seems like you might be right. #speaker:Graciana #mood:think #sfx:lostPoint
     It seems like you struggled a lot, and you finally made it... I don't blame you for not wanting to ever go back.
     
     Ay, I knew ya'd get what I mean! #speaker:Chef Swatts #mood:happy
@@ -103,7 +103,7 @@
     //Good//
     ~affectionCS+=4
     
-    What about the other flyfolk? #speaker:Graciana #mood:think
+    What about the other flyfolk? #speaker:Graciana #mood:think #sfx:gainedPoint
     
     Ay, whattabout 'em? #speaker:Chef Swatts #mood:neutral
     
@@ -138,7 +138,7 @@
     //Chaotic//
     ~chaosCS+=4
     
-    Y'know, you defeated a Spider, and even took its Portal Device... #speaker:Graciana #mood:think
+    Y'know, you defeated a Spider, and even took its Portal Device... #speaker:Graciana #mood:think #sfx:cosmicPoint
     Has anyone done that before?
     
     Ay, not that I know of... #speaker:Chef Swatts
