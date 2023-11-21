@@ -143,9 +143,10 @@ namespace InterDineMension.Manager
              * 
              * 
              */
-            if(useSaveSystem)
+            if(PlayerPrefs.HasKey("dayVar"))
             {
-                Debug.Log("Using save system");
+                useSaveSystem = true;
+                //Debug.Log("Using save system");
                 dV.LoadVariables();
                 QuickSave();
             }
