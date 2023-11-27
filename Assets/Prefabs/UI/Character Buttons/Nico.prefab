@@ -9,17 +9,17 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6211866049891237256}
-  - component: {fileID: 7843113840701277227}
+  - component: {fileID: -3177497895649678308}
   - component: {fileID: 2442933825277518471}
   - component: {fileID: 3422064168978351305}
   - component: {fileID: 2357956041550189412}
   m_Layer: 5
-  m_Name: Gnomies
+  m_Name: Nico
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &6211866049891237256
 RectTransform:
   m_ObjectHideFlags: 0
@@ -40,7 +40,7 @@ RectTransform:
   m_AnchoredPosition: {x: -236, y: 75.7}
   m_SizeDelta: {x: 753.0501, y: 659.2012}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &7843113840701277227
+--- !u!114 &-3177497895649678308
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -49,23 +49,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 3180208950384769053}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2fb6f982e6c769240af102d08ce9570a, type: 3}
+  m_Script: {fileID: 11500000, guid: be09083f9b4de9d4c87b11c1e918574d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   sR: {fileID: 3422064168978351305}
   sDictKey:
   - angry
-  - neutral
-  - sad
-  - blank
   - annoyed
+  - error
+  - happy
+  - sad
+  - smug
+  - tundra
+  - blank
   dDictKey: []
   sDictValue:
-  - {fileID: 21300000, guid: aef8f342730d4e54cbc41897e285c6a9, type: 3}
-  - {fileID: 21300000, guid: 089696c8b98138d4d9fbaf7d15381883, type: 3}
-  - {fileID: 21300000, guid: 61ff7d1f7ca06264593ac474c518fe1c, type: 3}
+  - {fileID: 21300000, guid: f7499f9886b5f16429a9442c3e24def8, type: 3}
+  - {fileID: 21300000, guid: f7499f9886b5f16429a9442c3e24def8, type: 3}
+  - {fileID: 21300000, guid: a678a3f14166b80449f75084addf203d, type: 3}
+  - {fileID: 21300000, guid: 68a695e2cca1df54592f1bd8929ba399, type: 3}
+  - {fileID: 21300000, guid: 629aa1f3d6d153446b72b918661bcfeb, type: 3}
+  - {fileID: 21300000, guid: f7e9d5338a0ce1242bff1e82c3a0253a, type: 3}
+  - {fileID: 21300000, guid: 0ef1323974c69ad4bab03017d13c73a3, type: 3}
   - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
-  - {fileID: 21300000, guid: aef8f342730d4e54cbc41897e285c6a9, type: 3}
   dDictValue: []
 --- !u!222 &2442933825277518471
 CanvasRenderer:
@@ -95,7 +101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 089696c8b98138d4d9fbaf7d15381883, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 68a695e2cca1df54592f1bd8929ba399, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -112,7 +118,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3180208950384769053}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 

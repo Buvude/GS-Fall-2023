@@ -14,6 +14,7 @@ namespace InterDineMension.MicroGame.BA
     using InterDineMension.Manager;
     public class BAManeger : MonoBehaviour
     {
+        public bool reseted;
         public Animator final;
         public GameObject orderImages;
         public PlayerController pC;
@@ -81,32 +82,39 @@ namespace InterDineMension.MicroGame.BA
 
         public void LevelUp(GameObject bun, GameObject pickle, GameObject greens, GameObject patty, GameObject condiment, GameObject veggie, GameObject tbun)
         {
-            bottomBunOptions.Add(bun);
-            pickleOptions.Add(pickle);
-            lettuceOptions.Add(greens);
-            PattyOptions.Add(patty);
-            condimentsOptions.Add(condiment);
-            veggieOptions.Add(veggie);
-            topBunOptions.Add(tbun);
+            if(!reseted)
+            {
+                bottomBunOptions.Add(bun);
+                pickleOptions.Add(pickle);
+                lettuceOptions.Add(greens);
+                PattyOptions.Add(patty);
+                condimentsOptions.Add(condiment);
+                veggieOptions.Add(veggie);
+                topBunOptions.Add(tbun);
+            }
+            
         }
 
         public void LevelUp(GameObject bBun2, GameObject pickles2, GameObject greens2, GameObject patty2, GameObject condiment2, GameObject veggie2, GameObject bun2, GameObject bBun3, GameObject pickles3, GameObject greens3, GameObject patty3, GameObject condiment3, GameObject veggie3, GameObject bun3)
         {
-            orderImages.SetActive(false);
-            bottomBunOptions.Add(bBun2);
-            pickleOptions.Add(pickles2);
-            lettuceOptions.Add(greens2);
-            PattyOptions.Add(patty2);
-            condimentsOptions.Add(condiment2);
-            veggieOptions.Add(veggie2);
-            topBunOptions.Add(bun2);
-            bottomBunOptions.Add(bBun3);
-            pickleOptions.Add(pickles3);
-            lettuceOptions.Add(greens3);
-            PattyOptions.Add(patty3);
-            condimentsOptions.Add(condiment3);
-            veggieOptions.Add(veggie3);
-            topBunOptions.Add(bun3);
+            if (!reseted)
+            {
+                orderImages.SetActive(false);
+                bottomBunOptions.Add(bBun2);
+                pickleOptions.Add(pickles2);
+                lettuceOptions.Add(greens2);
+                PattyOptions.Add(patty2);
+                condimentsOptions.Add(condiment2);
+                veggieOptions.Add(veggie2);
+                topBunOptions.Add(bun2);
+                bottomBunOptions.Add(bBun3);
+                pickleOptions.Add(pickles3);
+                lettuceOptions.Add(greens3);
+                PattyOptions.Add(patty3);
+                condimentsOptions.Add(condiment3);
+                veggieOptions.Add(veggie3);
+                topBunOptions.Add(bun3);
+            }
         }
         // Start is called before the first frame update
         /// <summary>
@@ -117,6 +125,7 @@ namespace InterDineMension.MicroGame.BA
 
         public void ResetMiniGame()
         {
+            reseted = true;
             vH.dM.gameObject.GetComponent<dialogueSpriteManager>().imagePopUp.enabled = true;
             pC.ingredientTypes.Clear();
             orderedIngredients.Clear();
@@ -124,7 +133,9 @@ namespace InterDineMension.MicroGame.BA
             bAState = phase.bottomBun;
             finalScore = 0;
             finishedBurger.gameObject.SetActive(false);
+            final.enabled = false;
             startBtn.gameObject.SetActive(true);
+            dM.QuickSave();
         }
         public void StartTheNextPhase()
         {

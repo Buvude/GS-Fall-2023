@@ -136,6 +136,7 @@ namespace InterDineMension.Manager
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
             dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(currentStory);
+            QuickSave();
             /* 
              * 
              * 
@@ -143,13 +144,25 @@ namespace InterDineMension.Manager
              * 
              * 
              */
-            if(PlayerPrefs.HasKey("dayVar"))
+
+            if (PlayerPrefs.GetString("newGame").Equals("false"))
             {
                 useSaveSystem = true;
                 //Debug.Log("Using save system");
                 dV.LoadVariables();
                 QuickSave();
             }
+            /*try
+            {
+                
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }*/
+
+
 
             /*
              * 
@@ -180,15 +193,15 @@ namespace InterDineMension.Manager
         {
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
             {
-                if (currentStory.variablesState["timeOfDay"].ToString() == "morning")
+                if (PlayerPrefs.GetString("timeOfDay") == "morning")
                 {
                     StartMorningConvo();//will need to be adjusted later
                 }
-                else if (currentStory.variablesState["timeOfDay"].ToString() == "afternoon")
+                else if (PlayerPrefs.GetString("timeOfDay") == "afternoon")
                 {
                     PostMiniGameConvo();
                 }
-                else if (currentStory.variablesState["timeOfDay"].ToString() == "night")
+                else if (PlayerPrefs.GetString("timeOfDay") == "night")
                 {
                     //night time activity
                 }
@@ -224,7 +237,7 @@ namespace InterDineMension.Manager
         public void StartMorningConvo()
         {
             charSpeakTo = speakingTo.Swatts;
-            switch (PlayerPrefs.GetInt("dayVar"))//so it defaults to the random quip thing unless there is something specific for CS to say today
+            switch (PlayerPrefs.GetInt("dayVarT"))//so it defaults to the random quip thing unless there is something specific for CS to say today
             {
                 case 1:
                     EnterDialogueMode(cS.dialogueDictionary["gameIntro"]);
@@ -233,7 +246,7 @@ namespace InterDineMension.Manager
 
                     /* EnterDialogueMode(cS.dialogueDictionary["morning"]);*/
                     morning = true;
-                    EnterDialogueMode(cS.dialogueDictionary[PlayerPrefs.GetString("weekDay")]);
+                    EnterDialogueMode(cS.dialogueDictionary[PlayerPrefs.GetString("weekDayT")]);
                     break;
             }
 
@@ -242,7 +255,7 @@ namespace InterDineMension.Manager
 
         public void PostMiniGameConvo()
         {
-            switch (currentStory.variablesState["currentConvo"].ToString())
+            switch (PlayerPrefs.GetString("currentConvo"))
             {
                 case "NMG1":
 
@@ -284,12 +297,12 @@ namespace InterDineMension.Manager
 
         public void EnterDialogueModeBTN()
         {
-            Debug.Log(currentStory.variablesState["convo_numberCS"].ToString());
+            Debug.Log(PlayerPrefs.GetInt("convo_numberCST"));
             switch (charSpeakTo)
             {
                 case speakingTo.Swatts:
                     {
-                        switch (int.Parse(currentStory.variablesState["convo_numberCS"].ToString()))
+                        switch (PlayerPrefs.GetInt("convo_numberCST"))
                         {
                             case 0:
                                 {
@@ -876,7 +889,7 @@ namespace InterDineMension.Manager
             mBtn.SetActive(false);
             nBtn.SetActive(false);
 
-            switch (PlayerPrefs.GetString("weekDay"))//will determine who's avalible
+            switch (PlayerPrefs.GetString("weekDayT"))//will determine who's avalible
             {
                 case "Tut":
                     cSBtn.gameObject.SetActive(true);
