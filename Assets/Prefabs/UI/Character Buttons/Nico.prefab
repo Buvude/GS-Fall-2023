@@ -62,7 +62,12 @@ MonoBehaviour:
   - smug
   - tundra
   - blank
-  dDictKey: []
+  dDictKey:
+  - NTalkTo1
+  - NTalkTo2
+  - NTalkTo3
+  - NEndings
+  - brushoff
   sDictValue:
   - {fileID: 21300000, guid: f7499f9886b5f16429a9442c3e24def8, type: 3}
   - {fileID: 21300000, guid: f7499f9886b5f16429a9442c3e24def8, type: 3}
@@ -72,7 +77,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f7e9d5338a0ce1242bff1e82c3a0253a, type: 3}
   - {fileID: 21300000, guid: 0ef1323974c69ad4bab03017d13c73a3, type: 3}
   - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
-  dDictValue: []
+  dDictValue:
+  - {fileID: 4900000, guid: 18d132f9c7322d9469209c0b87c9dd1c, type: 3}
+  - {fileID: 4900000, guid: 18d132f9c7322d9469209c0b87c9dd1c, type: 3}
+  - {fileID: 4900000, guid: 18d132f9c7322d9469209c0b87c9dd1c, type: 3}
+  - {fileID: 4900000, guid: f06a5a46a6f82cb41aebf93f33e16398, type: 3}
+  - {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
 --- !u!222 &2442933825277518471
 CanvasRenderer:
   m_ObjectHideFlags: 0

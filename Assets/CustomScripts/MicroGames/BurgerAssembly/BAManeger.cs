@@ -447,13 +447,13 @@ namespace InterDineMension.MicroGame.BA
                         final.enabled = true;
                         break;
                     }
-                case <= 5:
+                /*case <= 5:
                     {
                         finishedBurger.sprite = MediocreBurger;
                         final.enabled = true;
                         break;
-                    }
-                case > 5:
+                    }*/
+                case >= 5:
                     {
                         finishedBurger.sprite = GoodBurger;
                         final.enabled = true;
@@ -470,31 +470,35 @@ namespace InterDineMension.MicroGame.BA
             Debug.Log(dM.vH.currentStory.variablesState["currentConvo"].ToString());
             if (finalScore >= 4)
             { 
-                
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
                 if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
                 {
+                    ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGPass1"]); //only valid for day one
                 }
                 else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
                 {
+                    ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGPass2"]);
                 }
                 
             }
             else
             {
+
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
                 if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
                 {
+                    ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGFail1"]);//only valid for day one
                 }
                 else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
                 {
+                    ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGFail2"]);
                 }
 

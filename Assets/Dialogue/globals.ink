@@ -10,7 +10,7 @@ INCLUDE SaturdayMorning.ink
 EXTERNAL QuickSave()
 //VAR pokemon_name=""
 
-
+ 
 
 
 //saves at the end of each day
@@ -20,6 +20,7 @@ VAR convo_numberCC=0
 VAR convo_numberM=0
 VAR convo_numberG=0
 VAR convo_numberF=0
+VAR convo_numberOR=0
 VAR dayVar = 1//may not need to be used
 VAR weekDay = "Tut"//Tut=Tutorial
 //Cheff Swatts variables
@@ -40,6 +41,9 @@ VAR chaosM = 0
 //Fred variables
 VAR affectionF = 0
 VAR chaosF = 0
+//O'Ryan variables
+VAR affectionOR = 0
+VAR chaosOR = 0
 
 
 //used in game, no need to save

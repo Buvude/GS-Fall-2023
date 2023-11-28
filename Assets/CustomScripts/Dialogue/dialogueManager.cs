@@ -42,15 +42,21 @@ namespace InterDineMension.Manager
         private Coroutine displayLineCorutine;
         internal DialogueVariables dV;
         private bool canContinueToNextLine = false;
+       
         public CheffSwatts cS /*= new CheffSwatts()*/;
         public Graciana grac/*=new Graciana()*/;
         public O_Ryan oR;
         public CeeCee cC;
         public Gnomies G;
+        public Fred F;
+        public Morgan M;
+        public Nico N;
+
+
         public GameObject cSBtn, oRBtn, cCBtn, gBtn, fBtn, mBtn, nBtn;
 
-        public enum speaker { Graciana, Swatts,O_Ryan, CeeCee, Gnomies, Fred, None};
-        public enum speakingTo {  O_Ryan, Swatts, CeeCee, Gnomies, Fred};
+        public enum speaker { Graciana, Swatts,O_Ryan, CeeCee, Gnomies, Fred, Morgan, Nico, None};
+        public enum speakingTo {  O_Ryan, Swatts, CeeCee, Gnomies, Fred, Morgan, Nico};
         public speaker charSpeak;
         public speakingTo charSpeakTo;
 
@@ -137,14 +143,6 @@ namespace InterDineMension.Manager
             dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(currentStory);
             QuickSave();
-            /* 
-             * 
-             * 
-             * REPLACE THIS WITH LOADING SYSTEM WHEN DONE AND BEFORE SWITCHING SCENES
-             * 
-             * 
-             */
-
             if (PlayerPrefs.GetString("newGame").Equals("false"))
             {
                 useSaveSystem = true;
@@ -152,24 +150,6 @@ namespace InterDineMension.Manager
                 dV.LoadVariables();
                 QuickSave();
             }
-            /*try
-            {
-                
-            }
-            catch (Exception)
-            {
-
-                throw;
-            }*/
-
-
-
-            /*
-             * 
-             * REPLACE THIS WITH LOADING SYSTEM WHEN DONE AND BEFORE SWITCHING SCENES
-             * 
-             * 
-             */
 
 
             if (instance != null)
@@ -237,18 +217,27 @@ namespace InterDineMension.Manager
         public void StartMorningConvo()
         {
             charSpeakTo = speakingTo.Swatts;
-            switch (PlayerPrefs.GetInt("dayVarT"))//so it defaults to the random quip thing unless there is something specific for CS to say today
+            if (PlayerPrefs.GetInt("convo_numberORT") == 5)
             {
-                case 1:
-                    EnterDialogueMode(cS.dialogueDictionary["gameIntro"]);
-                    break;
-                default:
-
-                    /* EnterDialogueMode(cS.dialogueDictionary["morning"]);*/
-                    morning = true;
-                    EnterDialogueMode(cS.dialogueDictionary[PlayerPrefs.GetString("weekDayT")]);
-                    break;
+                PlayerPrefs.SetString("weekDayT", "Fin");
+                EnterDialogueMode(cS.dialogueDictionary["CSFinale"]);
             }
+            else
+            {
+                switch (PlayerPrefs.GetInt("dayVarT"))//so it defaults to the random quip thing unless there is something specific for CS to say today
+                {
+                    case 1:
+                        EnterDialogueMode(cS.dialogueDictionary["gameIntro"]);
+                        break;
+                    default:
+
+                        /* EnterDialogueMode(cS.dialogueDictionary["morning"]);*/
+                        morning = true;
+                        EnterDialogueMode(cS.dialogueDictionary[PlayerPrefs.GetString("weekDayT")]);
+                        break;
+                }
+            }
+            
 
             
         }
@@ -294,12 +283,39 @@ namespace InterDineMension.Manager
         {
             charSpeakTo = speakingTo.Swatts;
         }
+        public void setCharSpeakToOR()
+        {
+            charSpeakTo = speakingTo.O_Ryan;
+        }
+        public void setCharSpeakToCC()
+        {
+            charSpeakTo = speakingTo.CeeCee;
+        }
+        public void setCharSpeakToG()
+        {
+            charSpeakTo = speakingTo.Gnomies;
+        }
+        public void setCharSpeakToF()
+        {
+            charSpeakTo = speakingTo.Fred;
+        }
+        public void setCharSpeakToM()
+        {
+            charSpeakTo = speakingTo.Morgan;
+        }
+        public void setCharSpeakToN()
+        {
+            charSpeakTo = speakingTo.Nico;
+        }
 
         public void EnterDialogueModeBTN()
         {
             Debug.Log(PlayerPrefs.GetInt("convo_numberCST"));
             switch (charSpeakTo)
             {
+                case speakingTo.O_Ryan:
+                    //start dialogue option
+                    break;
                 case speakingTo.Swatts:
                     {
                         switch (PlayerPrefs.GetInt("convo_numberCST"))
@@ -319,15 +335,177 @@ namespace InterDineMension.Manager
                                     EnterDialogueMode(cS.dialogueDictionary["cSTalkTo3"]);
                                     break;
                                 }
+                            case 3:
+                                {
+                                    EnterDialogueMode(cS.dialogueDictionary["brushoff"]);
+                                    break;
+                                }
                             default:
                                 break;
                         }
-                        break;
                     }
-                default:
+                    break;
+                case speakingTo.CeeCee:
+                    switch (PlayerPrefs.GetInt("convo_numberCCT"))
                     {
-                        break;
+                        case 0:
+                            {
+                                EnterDialogueMode(cC.dialogueDictionary["CCTalkTo1"]);
+                                break;
+                            }
+                        case 1:
+                            {
+                                EnterDialogueMode(cC.dialogueDictionary["CCTalkTo2"]);
+                                break;
+                            }
+                        case 2:
+                            {
+                                EnterDialogueMode(cC.dialogueDictionary["CCTalkTo3"]);
+                                break;
+                            }
+                        case 3:
+                            {
+                                EnterDialogueMode(cC.dialogueDictionary["CCEndings"]);
+                                break;
+                            }
+                        case 4:
+                            {
+                                EnterDialogueMode(cC.dialogueDictionary["brushoff"]);
+                                break;
+                            }
+                        default:
+                            break;
                     }
+                    break;
+                case speakingTo.Gnomies:
+                    switch (PlayerPrefs.GetInt("convo_numberGT"))
+                    {
+                        case 0:
+                            {
+                                EnterDialogueMode(G.dialogueDictionary["GTalkTo1"]);
+                                break;
+                            }
+                        case 1:
+                            {
+                                EnterDialogueMode(G.dialogueDictionary["GTalkTo2"]);
+                                break;
+                            }
+                        case 2:
+                            {
+                                EnterDialogueMode(G.dialogueDictionary["GTalkTo3"]);
+                                break;
+                            }
+                        case 3:
+                            {
+                                EnterDialogueMode(G.dialogueDictionary["GEndings"]);
+                                break;
+                            }
+                        case 4:
+                            {
+                                EnterDialogueMode(G.dialogueDictionary["brushoff"]);
+                                break;
+                            }
+                        default:
+                            break;
+                    }break;
+                case speakingTo.Fred:
+                    switch (PlayerPrefs.GetInt("convo_numberFT"))
+                    {
+                        case 0:
+                            {
+                                EnterDialogueMode(F.dialogueDictionary["FTalkTo1"]);
+                                break;
+                            }
+                        case 1:
+                            {
+                                EnterDialogueMode(F.dialogueDictionary["FTalkTo2"]);
+                                break;
+                            }
+                        case 2:
+                            {
+                                EnterDialogueMode(F.dialogueDictionary["FTalkTo3"]);
+                                break;
+                            }
+                        case 3:
+                            {
+                                EnterDialogueMode(F.dialogueDictionary["FEndings"]);
+                                break;
+                            }
+                        case 4:
+                            {
+                                EnterDialogueMode(F.dialogueDictionary["brushoff"]);
+                                break;
+                            }
+                        default:
+                            break;
+                    }
+                    break;
+                case speakingTo.Morgan:
+                    switch (PlayerPrefs.GetInt("convo_numberMT"))
+                    {
+                        case 0:
+                            {
+                                EnterDialogueMode(M.dialogueDictionary["MTalkTo1"]);
+                                break;
+                            }
+                        case 1:
+                            {
+                                EnterDialogueMode(M.dialogueDictionary["MTalkTo2"]);
+                                break;
+                            }
+                        case 2:
+                            {
+                                EnterDialogueMode(M.dialogueDictionary["MTalkTo3"]);
+                                break;
+                            }
+                        case 3:
+                            {
+                                EnterDialogueMode(M.dialogueDictionary["MEndings"]);
+                                break;
+                            }
+                        case 4:
+                            {
+                                EnterDialogueMode(M.dialogueDictionary["brushoff"]);
+                                break;
+                            }
+                        default:
+                            break;
+                    }
+                    break;
+                case speakingTo.Nico:
+                    switch (PlayerPrefs.GetInt("convo_numberNT"))
+                    {
+                        case 0:
+                            {
+                                EnterDialogueMode(N.dialogueDictionary["NTalkTo1"]);
+                                break;
+                            }
+                        case 1:
+                            {
+                                EnterDialogueMode(N.dialogueDictionary["NTalkTo2"]);
+                                break;
+                            }
+                        case 2:
+                            {
+                                EnterDialogueMode(N.dialogueDictionary["NTalkTo3"]);
+                                break;
+                            }
+                        case 3:
+                            {
+                                EnterDialogueMode(N.dialogueDictionary["NEndings"]);
+                                break;
+                            }
+                        case 4:
+                            {
+                                EnterDialogueMode(N.dialogueDictionary["brushoff"]);
+                                break;
+                            }
+                        default:
+                            break;
+                    }
+                    break;
+                default:
+                    break;
             }
         }
         public void EnterDialogueMode(TextAsset inkJSON)
@@ -371,26 +549,63 @@ namespace InterDineMension.Manager
                     G.gameObject.SetActive(false);
                     cS.gameObject.SetActive(false);
                     cC.gameObject.SetActive(false);
+                    F.gameObject.SetActive(false);
+                    N.gameObject.SetActive(false);
+                    M.gameObject.SetActive(false);
                     break;
                 case speakingTo.Swatts:
                     oR.gameObject.SetActive(false);
                     G.gameObject.SetActive(false);
                     cS.gameObject.SetActive(true);
                     cC.gameObject.SetActive(false);
+                    F.gameObject.SetActive(false);
+                    N.gameObject.SetActive(false);
+                    M.gameObject.SetActive(false);
                     break;
                 case speakingTo.CeeCee:
                     oR.gameObject.SetActive(false);
                     G.gameObject.SetActive(false);
                     cS.gameObject.SetActive(false);
                     cC.gameObject.SetActive(true);
+                    F.gameObject.SetActive(false);
+                    N.gameObject.SetActive(false);
+                    M.gameObject.SetActive(false);
                     break;
                 case speakingTo.Gnomies:
                     oR.gameObject.SetActive(false);
                     G.gameObject.SetActive(true);
                     cS.gameObject.SetActive(false);
                     cC.gameObject.SetActive(false);
+                    F.gameObject.SetActive(false);
+                    N.gameObject.SetActive(false);
+                    M.gameObject.SetActive(false);
                     break;
                 case speakingTo.Fred:
+                    oR.gameObject.SetActive(false);
+                    G.gameObject.SetActive(false);
+                    cS.gameObject.SetActive(false);
+                    cC.gameObject.SetActive(false);
+                    F.gameObject.SetActive(true);
+                    N.gameObject.SetActive(false);
+                    M.gameObject.SetActive(false);
+                    break;
+                case speakingTo.Nico:
+                    oR.gameObject.SetActive(false);
+                    G.gameObject.SetActive(false);
+                    cS.gameObject.SetActive(false);
+                    cC.gameObject.SetActive(false);
+                    F.gameObject.SetActive(false);
+                    N.gameObject.SetActive(true);
+                    M.gameObject.SetActive(false);
+                    break;
+                case speakingTo.Morgan:
+                    oR.gameObject.SetActive(false);
+                    G.gameObject.SetActive(false);
+                    cS.gameObject.SetActive(false);
+                    cC.gameObject.SetActive(false);
+                    F.gameObject.SetActive(false);
+                    N.gameObject.SetActive(false);
+                    M.gameObject.SetActive(true);
                     break;
                 default:
                     break;
@@ -520,77 +735,22 @@ namespace InterDineMension.Manager
                 {
                     case MOOD:
                         {
-                            
+
                             switch (charSpeak)
                             {
                                 case speaker.Graciana:
                                     {
                                         grac.sR.sprite = grac.spriteDictionary[tagValue];
-                                        /*switch(tagValue) 
-                                        {
-                                            case "annoyed":
-                                                {
-                                                    break;
-                                                }
-                                            case "happy":
-                                                {
-                                                    break;
-                                                }
-                                            case "money":
-                                                {
-                                                    break;
-                                                }
-                                            case "neutral":
-                                                {
-                                                    break;
-                                                }
-                                            case "sad":
-                                                {
-                                                    break;
-                                                }
-                                            case "think":
-                                                {
-                                                    break;
-                                                }
-                                            default:Debug.LogWarning("tag value not recognized for mood");break;
-                                        }*/ //hopefully I won't need to use this
                                     }
                                     break;
                                 case speaker.Swatts:
                                     {
                                         cS.sR.sprite = cS.spriteDictionary[tagValue];
-                                        /*switch (tagValue)
-                                        {
-
-
-                                            case "annoyed":
-                                                {
-                                                    break;
-                                                }
-                                            case "happy":
-                                                {
-                                                    break;
-                                                }
-                                            case "neutral":
-                                                {
-                                                    break;
-                                                }
-                                            case "pray":
-                                                {
-                                                    break;
-                                                }
-                                            case "sad":
-                                                {
-                                                    break;
-                                                }
-                                            default:
-                                                Debug.LogWarning("tag value not recognized for mood"); break;
-                                        }*/
                                         break;
                                     }
                                 case speaker.O_Ryan:
                                     {
-                                        oR.sR.sprite= oR.spriteDictionary[tagValue];
+                                        oR.sR.sprite = oR.spriteDictionary[tagValue];
                                         break;
                                     }
                                 case speaker.CeeCee:
@@ -603,9 +763,20 @@ namespace InterDineMension.Manager
                                         G.sR.sprite = G.spriteDictionary[tagValue];
                                         break;
                                     }
-                                default:Debug.Log("default"); break;
-                                }
-                            break;
+                                case speaker.Fred:
+                                    F.sR.sprite= F.spriteDictionary[tagValue];
+                                    break;
+                                case speaker.Morgan:
+                                    M.sR.sprite= M.spriteDictionary[tagValue];
+                                    break;
+                                case speaker.Nico:
+                                    N.sR.sprite = N.spriteDictionary[tagValue];
+                                    break;
+                                case speaker.None:
+                                    break;
+                                default:
+                                    break;
+                            }break;
                         }
                     case SPEAKER_TAG:
                         displayNameText.text = tagValue;
@@ -626,7 +797,7 @@ namespace InterDineMension.Manager
                                     break;
                                 case speakingTo.Swatts:
                                     cS.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1,false);
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
                                     break;
                                 case speakingTo.CeeCee:
                                     cC.sR.color = Color.HSVToRGB(0, 0, .4f, false);
@@ -636,8 +807,20 @@ namespace InterDineMension.Manager
                                     G.sR.color = Color.HSVToRGB(0, 0, .4f, false);
                                     grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
                                     break;
+                                case speakingTo.Fred:
+                                    F.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                    grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                    break;
+                                case speakingTo.Morgan:
+                                    M.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    break;
+                                case speakingTo.Nico:
+                                    N.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    break;
                                 default:
-                                    grac.sR.color=Color.HSVToRGB(0,0, 1, true);
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, true);
                                     break;
                             }
                         }
@@ -659,11 +842,33 @@ namespace InterDineMension.Manager
                             grac.sR.color = Color.HSVToRGB(0, 0, .4f);
                             charSpeak = speaker.Gnomies;
                         }
+                        else if (tagValue == "Fred")
+                        {
+                            F.sR.color = Color.HSVToRGB(0, 0, 1);
+                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                            charSpeak = speaker.Fred;
+                        }
+                        else if (tagValue == "Morgan")
+                        {
+                            M.sR.color = Color.HSVToRGB(0, 0, 1);
+                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                            charSpeak = speaker.Morgan;
+                        }
+                        else if (tagValue == "Nico")
+                        {
+                            N.sR.color = Color.HSVToRGB(0, 0, 1);
+                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                            charSpeak = speaker.Nico;
+                        }
                         else if (tagValue == "???")
                         {
                             //cS.sR.color = Color.HSVToRGB(0, 0, 40);
                             grac.sR.color = Color.HSVToRGB(0, 0, .4f);
                             charSpeak = speaker.None;
+                        }
+                        else
+                        {
+                            Debug.LogError($"parsing the speaker tag \"{tagValue}\" ");
                         }
                         break;
                     case BBUN_TAG:
@@ -954,6 +1159,17 @@ namespace InterDineMension.Manager
                     mBtn.SetActive(false);
                     nBtn.SetActive(true);
                     break;
+                case "Fin":
+                    {
+                        cSBtn.gameObject.SetActive(false);
+                        oRBtn.gameObject.SetActive(true);
+                        cCBtn.SetActive(false);
+                        gBtn.SetActive(false);
+                        fBtn.SetActive(false);
+                        mBtn.SetActive(false);
+                        nBtn.SetActive(false);
+                        break;
+                    }
                 default:
                     break;
             }

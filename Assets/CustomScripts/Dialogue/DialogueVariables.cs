@@ -68,6 +68,10 @@ namespace InterDineMension
             PlayerPrefs.SetInt("convo_numberFT", int.Parse(globalVariablesStory.variablesState["convo_numberF"].ToString()));
             PlayerPrefs.SetInt("affectionFT", int.Parse(globalVariablesStory.variablesState["affectionF"].ToString()));
             PlayerPrefs.SetInt("chaosFT", int.Parse(globalVariablesStory.variablesState["chaosF"].ToString()));
+            
+            PlayerPrefs.SetInt("affectionORT", int.Parse(globalVariablesStory.variablesState["affectionOR"].ToString()));
+            PlayerPrefs.SetInt("chaosORT", int.Parse(globalVariablesStory.variablesState["chaosOR"].ToString())); 
+            PlayerPrefs.SetInt("convo_numberORT", int.Parse(globalVariablesStory.variablesState["convo_numberOR"].ToString()));
 
             PlayerPrefs.SetInt("BAMLevel", int.Parse(globalVariablesStory.variablesState["BAMLevel"].ToString()));
             PlayerPrefs.SetInt("TTMLevel", int.Parse(globalVariablesStory.variablesState["TTMLevel"].ToString()));
@@ -112,6 +116,11 @@ namespace InterDineMension
             PlayerPrefs.DeleteKey("affectionFT");
             PlayerPrefs.DeleteKey("chaosFT");
 
+            PlayerPrefs.DeleteKey("chaosORT");
+            PlayerPrefs.DeleteKey("affectionORT");
+            PlayerPrefs.DeleteKey("convo_numberORT");
+
+
             PlayerPrefs.DeleteKey("BAMLevel");
             PlayerPrefs.DeleteKey("TTMLevel");
             PlayerPrefs.DeleteKey("TBMLevel");
@@ -151,6 +160,13 @@ namespace InterDineMension
                 PlayerPrefs.SetInt("affectionF", int.Parse(globalVariablesStory.variablesState["affectionF"].ToString()));
                 PlayerPrefs.SetInt("chaosF", int.Parse(globalVariablesStory.variablesState["chaosF"].ToString()));
 
+                PlayerPrefs.SetInt("affectionOR", int.Parse(globalVariablesStory.variablesState["affectionOR"].ToString()));
+                PlayerPrefs.SetInt("chaosOR", int.Parse(globalVariablesStory.variablesState["chaosOR"].ToString()));
+                PlayerPrefs.SetInt("convo_numberOR", int.Parse(globalVariablesStory.variablesState["convo_numberOR"].ToString()));
+
+
+
+
                 PlayerPrefs.Save();
             }
             else
@@ -188,6 +204,11 @@ namespace InterDineMension
             globalVariablesStory.variablesState["affectionF"] = PlayerPrefs.GetInt("affectionF");
             globalVariablesStory.variablesState["chaosF"] = PlayerPrefs.GetInt("chaosF");
 
+            globalVariablesStory.variablesState["chaosOR"] = PlayerPrefs.GetInt("chaosOR");
+            globalVariablesStory.variablesState["affectionOR"] = PlayerPrefs.GetInt("affectionOR");
+            globalVariablesStory.variablesState["convo_numberOR"] = PlayerPrefs.GetInt("convo_numberOR");
+
+
         }
         public void QuickLoadVariables()
         {
@@ -218,6 +239,9 @@ namespace InterDineMension
             globalVariablesStory.variablesState["affectionF"] = PlayerPrefs.GetInt("affectionFT");
             globalVariablesStory.variablesState["chaosF"] = PlayerPrefs.GetInt("chaosFT");
 
+            globalVariablesStory.variablesState["chaosOR"] = PlayerPrefs.GetInt("chaosORT");
+            globalVariablesStory.variablesState["affectionOR"] = PlayerPrefs.GetInt("affectionORT");
+            globalVariablesStory.variablesState["convo_numberOR"] = PlayerPrefs.GetInt("convo_numberORT");
 
             globalVariablesStory.variablesState["BAMLevel"] = PlayerPrefs.GetInt("BAMLevel");
             globalVariablesStory.variablesState["TTMLevel"] = PlayerPrefs.GetInt("TTMLevel");

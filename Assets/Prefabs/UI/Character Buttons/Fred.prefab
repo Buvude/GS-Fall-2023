@@ -63,7 +63,12 @@ MonoBehaviour:
   - sad
   - blank
   - angry
-  dDictKey: []
+  dDictKey:
+  - FTalkTo1
+  - FTalkTo2
+  - FTalkTo3
+  - FEndings
+  - brushoff
   sDictValue:
   - {fileID: 21300000, guid: 5f5451734181a514c854899bafacdaef, type: 3}
   - {fileID: 21300000, guid: c2989e6201959b34b9ec507b338f9484, type: 3}
@@ -74,7 +79,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 7b035b8fbae923f419ecdbb4f63852a4, type: 3}
   - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
   - {fileID: 21300000, guid: 5f5451734181a514c854899bafacdaef, type: 3}
-  dDictValue: []
+  dDictValue:
+  - {fileID: 4900000, guid: 9ad3ed17503ebe1499a9d1e2813cda00, type: 3}
+  - {fileID: 4900000, guid: 9ad3ed17503ebe1499a9d1e2813cda00, type: 3}
+  - {fileID: 4900000, guid: 9ad3ed17503ebe1499a9d1e2813cda00, type: 3}
+  - {fileID: 4900000, guid: 1af90c3f6035d984d8962edc64ab6acc, type: 3}
+  - {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
 --- !u!222 &2442933825277518471
 CanvasRenderer:
   m_ObjectHideFlags: 0

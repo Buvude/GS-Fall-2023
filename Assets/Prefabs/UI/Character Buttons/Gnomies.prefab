@@ -59,14 +59,24 @@ MonoBehaviour:
   - sad
   - blank
   - annoyed
-  dDictKey: []
+  dDictKey:
+  - GTalkTo1
+  - GTalkTo2
+  - GTalkTo3
+  - GEndings
+  - brushoff
   sDictValue:
   - {fileID: 21300000, guid: aef8f342730d4e54cbc41897e285c6a9, type: 3}
   - {fileID: 21300000, guid: 089696c8b98138d4d9fbaf7d15381883, type: 3}
   - {fileID: 21300000, guid: 61ff7d1f7ca06264593ac474c518fe1c, type: 3}
   - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
   - {fileID: 21300000, guid: aef8f342730d4e54cbc41897e285c6a9, type: 3}
-  dDictValue: []
+  dDictValue:
+  - {fileID: 4900000, guid: dcf7cfdacffcf0a41929f2a090207c06, type: 3}
+  - {fileID: 4900000, guid: dcf7cfdacffcf0a41929f2a090207c06, type: 3}
+  - {fileID: 4900000, guid: dcf7cfdacffcf0a41929f2a090207c06, type: 3}
+  - {fileID: 4900000, guid: b7042667b1e481b4db5d20522486ca43, type: 3}
+  - {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
 --- !u!222 &2442933825277518471
 CanvasRenderer:
   m_ObjectHideFlags: 0
