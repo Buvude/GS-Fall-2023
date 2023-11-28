@@ -76,7 +76,7 @@ MonoBehaviour:
   - Thu
   - Tue
   - Wed
-  - brushoff
+  - brushOff
   - CSFinale
   sDictValue:
   - {fileID: 21300000, guid: f6208e39c56e08b4598c00394e192c0e, type: 3}

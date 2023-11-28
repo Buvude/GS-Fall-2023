@@ -67,7 +67,8 @@ I'm headin' back to Dipterra, babeh! #speaker:Chef Swatts #mood:happy
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~affectionOR+=1
--> DONE
+->NextDayVarAdjust
+
 
 ==BadEndCS==
 I ain't got no reason to evah go back to Dipterra. #speaker:Chef Swatts
@@ -101,7 +102,7 @@ Ahahaha! #speaker:Chef Swatts #mood:happy
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~affectionOR-=1
--> DONE
+->NextDayVarAdjust
 
 ==ChaosEndCS==
 I got an idea for what I wanna do afta O'Ryan finally finds a proper manager #speaker:Chef Swatts
@@ -141,4 +142,4 @@ Y-yeah... I figured... #speaker:Graciana #mood:sad
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~chaosOR+=1
--> DONE
+->NextDayVarAdjust

@@ -7,16 +7,18 @@ namespace InterDineMension.Character
 {
     public class CheffSwatts : CharBtnParent
     {
+        public Dictionary<string, Sprite> CsspriteDictionary;
+        public Dictionary<string, TextAsset> CsdialogueDictionary;
         //public TextAsset CS1, CS2;
-        
+
         // Start is called before the first frame update
-       
+
         /// <summary>
         /// sets up the dictionaries
         /// </summary>
         void Awake()
         {
-            spriteDictionary = new Dictionary<string, Sprite>();
+            CsspriteDictionary = new Dictionary<string, Sprite>();
             if (sDictKey.Length != sDictValue.Length)
             {
                 Debug.LogWarning("The length of moods is different then the list of sprites");
@@ -26,10 +28,10 @@ namespace InterDineMension.Character
             {
                 for (int i = 0; i < sDictKey.Length; i++)
                 {
-                    spriteDictionary.Add(sDictKey[i], sDictValue[i]);
+                    CsspriteDictionary.Add(sDictKey[i], sDictValue[i]);
                 }
             }
-            dialogueDictionary = new Dictionary<string, TextAsset>();
+            CsdialogueDictionary = new Dictionary<string, TextAsset>();
             if (dDictKey.Length != dDictValue.Length)
             {
                 Debug.LogWarning("The length of dialogue is different then the list of dialogue assets");
@@ -39,7 +41,7 @@ namespace InterDineMension.Character
             {
                 for (int i = 0; i < dDictKey.Length; i++)
                 {
-                    dialogueDictionary.Add(dDictKey[i], dDictValue[i]);
+                    CsdialogueDictionary.Add(dDictKey[i], dDictValue[i]);
                 }
             }
         }

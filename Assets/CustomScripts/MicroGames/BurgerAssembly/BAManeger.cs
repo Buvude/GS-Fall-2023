@@ -62,7 +62,7 @@ namespace InterDineMension.MicroGame.BA
 
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)
         {
-            ResetMiniGame();
+            dM.manager.imagePopUp.enabled = false;
             dM.manager.imagePopUp.enabled = false;
             for (int i = 0; i < ingredients.Count; i++)
             {
@@ -82,39 +82,34 @@ namespace InterDineMension.MicroGame.BA
 
         public void LevelUp(GameObject bun, GameObject pickle, GameObject greens, GameObject patty, GameObject condiment, GameObject veggie, GameObject tbun)
         {
-            if(!reseted)
-            {
-                bottomBunOptions.Add(bun);
-                pickleOptions.Add(pickle);
-                lettuceOptions.Add(greens);
-                PattyOptions.Add(patty);
-                condimentsOptions.Add(condiment);
-                veggieOptions.Add(veggie);
-                topBunOptions.Add(tbun);
-            }
-            
+
+            bottomBunOptions.Add(bun);
+            pickleOptions.Add(pickle);
+            lettuceOptions.Add(greens);
+            PattyOptions.Add(patty);
+            condimentsOptions.Add(condiment);
+            veggieOptions.Add(veggie);
+            topBunOptions.Add(tbun);
         }
+            
 
         public void LevelUp(GameObject bBun2, GameObject pickles2, GameObject greens2, GameObject patty2, GameObject condiment2, GameObject veggie2, GameObject bun2, GameObject bBun3, GameObject pickles3, GameObject greens3, GameObject patty3, GameObject condiment3, GameObject veggie3, GameObject bun3)
         {
-            if (!reseted)
-            {
-                orderImages.SetActive(false);
-                bottomBunOptions.Add(bBun2);
-                pickleOptions.Add(pickles2);
-                lettuceOptions.Add(greens2);
-                PattyOptions.Add(patty2);
-                condimentsOptions.Add(condiment2);
-                veggieOptions.Add(veggie2);
-                topBunOptions.Add(bun2);
-                bottomBunOptions.Add(bBun3);
-                pickleOptions.Add(pickles3);
-                lettuceOptions.Add(greens3);
-                PattyOptions.Add(patty3);
-                condimentsOptions.Add(condiment3);
-                veggieOptions.Add(veggie3);
-                topBunOptions.Add(bun3);
-            }
+            orderImages.SetActive(false);
+            bottomBunOptions.Add(bBun2);
+            pickleOptions.Add(pickles2);
+            lettuceOptions.Add(greens2);
+            PattyOptions.Add(patty2);
+            condimentsOptions.Add(condiment2);
+            veggieOptions.Add(veggie2);
+            topBunOptions.Add(bun2);
+            bottomBunOptions.Add(bBun3);
+            pickleOptions.Add(pickles3);
+            lettuceOptions.Add(greens3);
+            PattyOptions.Add(patty3);
+            condimentsOptions.Add(condiment3);
+            veggieOptions.Add(veggie3);
+            topBunOptions.Add(bun3);
         }
         // Start is called before the first frame update
         /// <summary>
@@ -125,8 +120,8 @@ namespace InterDineMension.MicroGame.BA
 
         public void ResetMiniGame()
         {
-            reseted = true;
-            vH.dM.gameObject.GetComponent<dialogueSpriteManager>().imagePopUp.enabled = true;
+            //reseted = true;
+            vH.dM.gameObject.GetComponent<dialogueSpriteManager>().imagePopUp.enabled = false;
             pC.ingredientTypes.Clear();
             orderedIngredients.Clear();
             pC.resetMiniGameSprites();
@@ -135,6 +130,38 @@ namespace InterDineMension.MicroGame.BA
             finishedBurger.gameObject.SetActive(false);
             final.enabled = false;
             startBtn.gameObject.SetActive(true);
+            switch (level)
+            {
+                case 1:
+                    break;
+                case 2:
+                    bottomBunOptions.Remove(bottomBunOptions[3]);
+                    pickleOptions.Remove(pickleOptions[3]);
+                    lettuceOptions.Remove(lettuceOptions[3]);
+                    PattyOptions.Remove(PattyOptions[3]);
+                    condimentsOptions.Remove(condimentsOptions[3]);
+                    veggieOptions.Remove(veggieOptions[3]);
+                    topBunOptions.Remove(topBunOptions[3]);
+                    break;
+                case 3:
+                    bottomBunOptions.Remove(bottomBunOptions[3]);
+                    pickleOptions.Remove(pickleOptions[3]);
+                    lettuceOptions.Remove(lettuceOptions[3]);
+                    PattyOptions.Remove(PattyOptions[3]);
+                    condimentsOptions.Remove(condimentsOptions[3]);
+                    veggieOptions.Remove(veggieOptions[3]);
+                    topBunOptions.Remove(topBunOptions[3]); 
+                    bottomBunOptions.Remove(bottomBunOptions[4]);
+                    pickleOptions.Remove(pickleOptions[4]);
+                    lettuceOptions.Remove(lettuceOptions[4]);
+                    PattyOptions.Remove(PattyOptions[4]);
+                    condimentsOptions.Remove(condimentsOptions[4]);
+                    veggieOptions.Remove(veggieOptions[4]);
+                    topBunOptions.Remove(topBunOptions[4]);
+                    break;
+                default:
+                    break;
+            }
             dM.QuickSave();
         }
         public void StartTheNextPhase()
@@ -476,12 +503,12 @@ namespace InterDineMension.MicroGame.BA
                 if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
                 {
                     ResetMiniGame();
-                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGPass1"]); //only valid for day one
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGPass1"]); //only valid for day one
                 }
                 else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
                 {
                     ResetMiniGame();
-                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGPass2"]);
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGPass2"]);
                 }
                 
             }
@@ -494,12 +521,12 @@ namespace InterDineMension.MicroGame.BA
                 if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
                 {
                     ResetMiniGame();
-                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGFail1"]);//only valid for day one
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFail1"]);//only valid for day one
                 }
                 else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
                 {
                     ResetMiniGame();
-                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGFail2"]);
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFail2"]);
                 }
 
             }

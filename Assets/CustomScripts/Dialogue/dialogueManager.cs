@@ -15,6 +15,7 @@ namespace InterDineMension.Manager
     using MicroGame.BA;
     //using System.Diagnostics;
     using System.Reflection.Emit;
+    using System.Runtime.CompilerServices;
     using Unity.VisualScripting;
     //using UnityEngine.UIElements;
 
@@ -217,23 +218,24 @@ namespace InterDineMension.Manager
         public void StartMorningConvo()
         {
             charSpeakTo = speakingTo.Swatts;
-            if (PlayerPrefs.GetInt("convo_numberORT") == 5)
+            if (PlayerPrefs.GetInt("convo_numberOR") == 6)
             {
                 PlayerPrefs.SetString("weekDayT", "Fin");
-                EnterDialogueMode(cS.dialogueDictionary["CSFinale"]);
+                QuickLoad();
+                EnterDialogueMode(cS.CsdialogueDictionary["CSFinale"]);
             }
             else
             {
                 switch (PlayerPrefs.GetInt("dayVarT"))//so it defaults to the random quip thing unless there is something specific for CS to say today
                 {
                     case 1:
-                        EnterDialogueMode(cS.dialogueDictionary["gameIntro"]);
+                        EnterDialogueMode(cS.CsdialogueDictionary["gameIntro"]);
                         break;
                     default:
 
-                        /* EnterDialogueMode(cS.dialogueDictionary["morning"]);*/
+                        /* EnterDialogueMode(cS.ORdialogueDictionary["morning"]);*/
                         morning = true;
-                        EnterDialogueMode(cS.dialogueDictionary[PlayerPrefs.GetString("weekDayT")]);
+                        EnterDialogueMode(cS.CsdialogueDictionary[PlayerPrefs.GetString("weekDayT")]);
                         break;
                 }
             }
@@ -310,7 +312,6 @@ namespace InterDineMension.Manager
 
         public void EnterDialogueModeBTN()
         {
-            Debug.Log(PlayerPrefs.GetInt("convo_numberCST"));
             switch (charSpeakTo)
             {
                 case speakingTo.O_Ryan:
@@ -322,22 +323,22 @@ namespace InterDineMension.Manager
                         {
                             case 0:
                                 {
-                                    EnterDialogueMode(cS.dialogueDictionary["cSTalkTo1"]);
+                                    EnterDialogueMode(cS.CsdialogueDictionary["cSTalkTo1"]);
                                     break;
                                 }
                             case 1:
                                 {
-                                    EnterDialogueMode(cS.dialogueDictionary["cSTalkTo2"]);
+                                    EnterDialogueMode(cS.CsdialogueDictionary["cSTalkTo2"]);
                                     break;
                                 }
                             case 2:
                                 {
-                                    EnterDialogueMode(cS.dialogueDictionary["cSTalkTo3"]);
+                                    EnterDialogueMode(cS.CsdialogueDictionary["cSTalkTo3"]);
                                     break;
                                 }
-                            case 3:
+                            case >=3:
                                 {
-                                    EnterDialogueMode(cS.dialogueDictionary["brushoff"]);
+                                    EnterDialogueMode(cS.CsdialogueDictionary["brushOff"]);
                                     break;
                                 }
                             default:
@@ -350,27 +351,27 @@ namespace InterDineMension.Manager
                     {
                         case 0:
                             {
-                                EnterDialogueMode(cC.dialogueDictionary["CCTalkTo1"]);
+                                EnterDialogueMode(cCBtn.gameObject.GetComponent<CeeCee>().CcdialogueDictionary["CCTalkTo1"]);
                                 break;
                             }
                         case 1:
                             {
-                                EnterDialogueMode(cC.dialogueDictionary["CCTalkTo2"]);
+                                EnterDialogueMode(cCBtn.gameObject.GetComponent<CeeCee>().CcdialogueDictionary["CCTalkTo2"]);
                                 break;
                             }
                         case 2:
                             {
-                                EnterDialogueMode(cC.dialogueDictionary["CCTalkTo3"]);
+                                EnterDialogueMode(cCBtn.gameObject.GetComponent<CeeCee>().CcdialogueDictionary["CCTalkTo3"]);
                                 break;
                             }
                         case 3:
                             {
-                                EnterDialogueMode(cC.dialogueDictionary["CCEndings"]);
+                                EnterDialogueMode(cCBtn.gameObject.GetComponent<CeeCee>().CcdialogueDictionary["CCEndings"]);
                                 break;
                             }
-                        case 4:
+                        case >=4:
                             {
-                                EnterDialogueMode(cC.dialogueDictionary["brushoff"]);
+                                EnterDialogueMode(cCBtn.gameObject.GetComponent<CeeCee>().CcdialogueDictionary["brushOff"]);
                                 break;
                             }
                         default:
@@ -382,27 +383,27 @@ namespace InterDineMension.Manager
                     {
                         case 0:
                             {
-                                EnterDialogueMode(G.dialogueDictionary["GTalkTo1"]);
+                                EnterDialogueMode(gBtn.gameObject.GetComponent<Gnomies>().GdialogueDictionary["GTalkTo1"]);
                                 break;
                             }
                         case 1:
                             {
-                                EnterDialogueMode(G.dialogueDictionary["GTalkTo2"]);
+                                EnterDialogueMode(gBtn.gameObject.GetComponent<Gnomies>().GdialogueDictionary["GTalkTo2"]);
                                 break;
                             }
                         case 2:
                             {
-                                EnterDialogueMode(G.dialogueDictionary["GTalkTo3"]);
+                                EnterDialogueMode(gBtn.gameObject.GetComponent<Gnomies>().GdialogueDictionary["GTalkTo3"]);
                                 break;
                             }
                         case 3:
                             {
-                                EnterDialogueMode(G.dialogueDictionary["GEndings"]);
+                                EnterDialogueMode(gBtn.gameObject.GetComponent<Gnomies>().GdialogueDictionary["GEndings"]);
                                 break;
                             }
-                        case 4:
+                        case >=4:
                             {
-                                EnterDialogueMode(G.dialogueDictionary["brushoff"]);
+                                EnterDialogueMode(gBtn.gameObject.GetComponent<Gnomies>().GdialogueDictionary["brushOff"]);
                                 break;
                             }
                         default:
@@ -413,30 +414,31 @@ namespace InterDineMension.Manager
                     {
                         case 0:
                             {
-                                EnterDialogueMode(F.dialogueDictionary["FTalkTo1"]);
+                                EnterDialogueMode(fBtn.gameObject.GetComponent<Fred>().FdialogueDictionary["FTalkTo1"]);
                                 break;
                             }
                         case 1:
                             {
-                                EnterDialogueMode(F.dialogueDictionary["FTalkTo2"]);
+                                EnterDialogueMode(fBtn.gameObject.GetComponent<Fred>().FdialogueDictionary["FTalkTo2"]);
                                 break;
                             }
                         case 2:
                             {
-                                EnterDialogueMode(F.dialogueDictionary["FTalkTo3"]);
+                                EnterDialogueMode(fBtn.gameObject.GetComponent<Fred>().FdialogueDictionary["FTalkTo3"]);
                                 break;
                             }
                         case 3:
                             {
-                                EnterDialogueMode(F.dialogueDictionary["FEndings"]);
+                                EnterDialogueMode(fBtn.gameObject.GetComponent<Fred>().FdialogueDictionary["FEndings"]);
                                 break;
                             }
-                        case 4:
+                        case >=4:
                             {
-                                EnterDialogueMode(F.dialogueDictionary["brushoff"]);
+                                EnterDialogueMode(fBtn.gameObject.GetComponent<Fred>().FdialogueDictionary["brushOff"]);
                                 break;
                             }
                         default:
+                            Debug.Log("test");
                             break;
                     }
                     break;
@@ -445,27 +447,27 @@ namespace InterDineMension.Manager
                     {
                         case 0:
                             {
-                                EnterDialogueMode(M.dialogueDictionary["MTalkTo1"]);
+                                EnterDialogueMode(mBtn.gameObject.GetComponent<Morgan>().MdialogueDictionary["MTalkTo1"]);
                                 break;
                             }
                         case 1:
                             {
-                                EnterDialogueMode(M.dialogueDictionary["MTalkTo2"]);
+                                EnterDialogueMode(mBtn.gameObject.GetComponent<Morgan>().MdialogueDictionary["MTalkTo2"]);
                                 break;
                             }
                         case 2:
                             {
-                                EnterDialogueMode(M.dialogueDictionary["MTalkTo3"]);
+                                EnterDialogueMode(mBtn.gameObject.GetComponent<Morgan>().MdialogueDictionary["MTalkTo3"]);
                                 break;
                             }
                         case 3:
                             {
-                                EnterDialogueMode(M.dialogueDictionary["MEndings"]);
+                                EnterDialogueMode(mBtn.gameObject.GetComponent<Morgan>().MdialogueDictionary["MEndings"]);
                                 break;
                             }
-                        case 4:
+                        case >=4:
                             {
-                                EnterDialogueMode(M.dialogueDictionary["brushoff"]);
+                                EnterDialogueMode(mBtn.gameObject.GetComponent<Morgan>().MdialogueDictionary["brushOff"]);
                                 break;
                             }
                         default:
@@ -477,27 +479,27 @@ namespace InterDineMension.Manager
                     {
                         case 0:
                             {
-                                EnterDialogueMode(N.dialogueDictionary["NTalkTo1"]);
+                                EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NTalkTo1"]);
                                 break;
                             }
                         case 1:
                             {
-                                EnterDialogueMode(N.dialogueDictionary["NTalkTo2"]);
+                                EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NTalkTo2"]);
                                 break;
                             }
                         case 2:
                             {
-                                EnterDialogueMode(N.dialogueDictionary["NTalkTo3"]);
+                                EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NTalkTo3"]);
                                 break;
                             }
                         case 3:
                             {
-                                EnterDialogueMode(N.dialogueDictionary["NEndings"]);
+                                EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NEndings"]);
                                 break;
                             }
-                        case 4:
+                        case >=4:
                             {
-                                EnterDialogueMode(N.dialogueDictionary["brushoff"]);
+                                EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["brushOff"]);
                                 break;
                             }
                         default:
@@ -740,37 +742,37 @@ namespace InterDineMension.Manager
                             {
                                 case speaker.Graciana:
                                     {
-                                        grac.sR.sprite = grac.spriteDictionary[tagValue];
+                                        grac.sR.sprite = grac.GrspriteDictionary[tagValue];
                                     }
                                     break;
                                 case speaker.Swatts:
                                     {
-                                        cS.sR.sprite = cS.spriteDictionary[tagValue];
+                                        cS.sR.sprite = cS.CsspriteDictionary[tagValue];
                                         break;
                                     }
                                 case speaker.O_Ryan:
                                     {
-                                        oR.sR.sprite = oR.spriteDictionary[tagValue];
+                                        oR.sR.sprite = oR.ORspriteDictionary[tagValue];
                                         break;
                                     }
                                 case speaker.CeeCee:
                                     {
-                                        cC.sR.sprite = cC.spriteDictionary[tagValue];
+                                        cC.sR.sprite = cC.CcspriteDictionary[tagValue];
                                         break;
                                     }
                                 case speaker.Gnomies:
                                     {
-                                        G.sR.sprite = G.spriteDictionary[tagValue];
+                                        G.sR.sprite = G.GspriteDictionary[tagValue];
                                         break;
                                     }
                                 case speaker.Fred:
-                                    F.sR.sprite= F.spriteDictionary[tagValue];
+                                    F.sR.sprite= F.FspriteDictionary[tagValue];
                                     break;
                                 case speaker.Morgan:
-                                    M.sR.sprite= M.spriteDictionary[tagValue];
+                                    M.sR.sprite= M.MspriteDictionary[tagValue];
                                     break;
                                 case speaker.Nico:
-                                    N.sR.sprite = N.spriteDictionary[tagValue];
+                                    N.sR.sprite = N.NspriteDictionary[tagValue];
                                     break;
                                 case speaker.None:
                                     break;

@@ -164,6 +164,7 @@ namespace InterDineMension
                 PlayerPrefs.SetInt("chaosOR", int.Parse(globalVariablesStory.variablesState["chaosOR"].ToString()));
                 PlayerPrefs.SetInt("convo_numberOR", int.Parse(globalVariablesStory.variablesState["convo_numberOR"].ToString()));
 
+                QuickSaveVariables();
 
 
 
