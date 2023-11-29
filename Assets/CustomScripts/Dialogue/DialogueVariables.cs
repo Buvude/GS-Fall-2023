@@ -31,20 +31,22 @@ namespace InterDineMension
                 globalVariablesStory.state.LoadJson(jsonState);
             }
 
-            variables = new Dictionary<string, Ink.Runtime.Object>();
-            foreach(string name in globalVariablesStory.variablesState)
+            //variables = new Dictionary<string, Ink.Runtime.Object>();
+            /*foreach(string name in globalVariablesStory.variablesState)
             {
                 Ink.Runtime.Object value = globalVariablesStory.variablesState.GetVariableWithName(name);
                 variables.Add(name, value);
-                /*Debug.Log("Initialized global Dialogue Variable: " + name + " = " + value);*/
-            }
+                *//*Debug.Log("Initialized global Dialogue Variable: " + name + " = " + value);*//*
+            }*/
         }
         public void QuickSaveVariables()
         {
             PlayerPrefs.SetInt("dayVarT", int.Parse(globalVariablesStory.variablesState["dayVar"].ToString()));
             PlayerPrefs.SetString("weekDayT", globalVariablesStory.variablesState["weekDay"].ToString());
+            PlayerPrefs.SetInt("aptUpgradeT", int.Parse(globalVariablesStory.variablesState["aptUpgrade"].ToString()));
 
 
+            Debug.Log(globalVariablesStory.variablesState["affectionCS"].ToString());
             PlayerPrefs.SetInt("convo_numberCST", int.Parse(globalVariablesStory.variablesState["convo_numberCS"].ToString()));
             PlayerPrefs.SetInt("affectionCST", int.Parse(globalVariablesStory.variablesState["affectionCS"].ToString()));
             PlayerPrefs.SetInt("chaosCST", int.Parse(globalVariablesStory.variablesState["chaosCS"].ToString()));
@@ -90,6 +92,7 @@ namespace InterDineMension
 
             PlayerPrefs.DeleteKey("dayVarT");
             PlayerPrefs.DeleteKey("weekDayT");
+            PlayerPrefs.DeleteKey("aptUpgradeT");
 
 
             PlayerPrefs.DeleteKey("convo_numberCST");
@@ -132,8 +135,43 @@ namespace InterDineMension
                 /*VariablesToStory(globalVariablesStory);
                 PlayerPrefs.SetString(saveVariablesKey, globalVariablesStory.state.ToJson());*/
 
+                /* PlayerPrefs.SetInt("dayVar", PlayerPrefs.GetInt("dayVarT"));
+                 PlayerPrefs.SetInt("aptUpgrade", PlayerPrefs.GetInt("aptUpgradeT"));
+                 PlayerPrefs.SetString("weekDay", PlayerPrefs.GetString("weekDayT"));
+
+
+                 PlayerPrefs.SetInt("convo_numberCS", PlayerPrefs.GetInt("convo_numberCST"));
+                 PlayerPrefs.SetInt("affectionCS", PlayerPrefs.GetInt("affectionCST"));
+                 PlayerPrefs.SetInt("chaosCS", PlayerPrefs.GetInt("chaosCST"));
+
+                 PlayerPrefs.SetInt("convo_numberN", PlayerPrefs.GetInt("convo_numberNT"));
+                 PlayerPrefs.SetInt("affectionN", PlayerPrefs.GetInt("affectionNT"));
+                 PlayerPrefs.SetInt("chaosN", PlayerPrefs.GetInt("chaosNT"));
+
+                 PlayerPrefs.SetInt("convo_numberCC", PlayerPrefs.GetInt("convo_numberCCT"));
+                 PlayerPrefs.SetInt("affectionCC", PlayerPrefs.GetInt("affectionCCT"));
+                 PlayerPrefs.SetInt("chaosCC", PlayerPrefs.GetInt("chaosCCT"));
+
+                 PlayerPrefs.SetInt("convo_numberM", PlayerPrefs.GetInt("convo_numberMT"));
+                 PlayerPrefs.SetInt("affectionM", PlayerPrefs.GetInt("affectionMT"));
+                 PlayerPrefs.SetInt("chaosM", PlayerPrefs.GetInt("chaosMT"));
+
+                 PlayerPrefs.SetInt("convo_numberG", PlayerPrefs.GetInt("convo_numberGT"));
+                 PlayerPrefs.SetInt("affectionG", PlayerPrefs.GetInt("affectionGT"));
+                 PlayerPrefs.SetInt("chaosG", PlayerPrefs.GetInt("chaosGT"));
+
+                 PlayerPrefs.SetInt("convo_numberF", PlayerPrefs.GetInt("convo_numberFT"));
+                 PlayerPrefs.SetInt("affectionF", PlayerPrefs.GetInt("affectionFT"));
+                 PlayerPrefs.SetInt("chaosF", PlayerPrefs.GetInt("chaosFT"));
+
+                 PlayerPrefs.SetInt("convo_numberOR", PlayerPrefs.GetInt("convo_numberORT"));
+                 PlayerPrefs.SetInt("affectionOR", PlayerPrefs.GetInt("affectionORT"));
+                 PlayerPrefs.SetInt("chaosOR", PlayerPrefs.GetInt("chaosORT"));*/
+
                 PlayerPrefs.SetInt("dayVar", int.Parse(globalVariablesStory.variablesState["dayVar"].ToString()));
+                PlayerPrefs.SetInt("aptUpgrade", int.Parse(globalVariablesStory.variablesState["aptUpgrade"].ToString()));
                 PlayerPrefs.SetString("weekDay", globalVariablesStory.variablesState["weekDay"].ToString());
+                PlayerPrefs.SetString("timeOfDay", globalVariablesStory.variablesState["timeOfDay"].ToString());
 
 
                 PlayerPrefs.SetInt("convo_numberCS", int.Parse(globalVariablesStory.variablesState["convo_numberCS"].ToString()));
@@ -179,7 +217,9 @@ namespace InterDineMension
         public void LoadVariables()
         {
             globalVariablesStory.variablesState["dayVar"] = PlayerPrefs.GetInt("dayVar");
+            globalVariablesStory.variablesState["aptUpgrade"] = PlayerPrefs.GetInt("aptUpgrade");
             globalVariablesStory.variablesState["weekDay"] = PlayerPrefs.GetString("weekDay");
+            globalVariablesStory.variablesState["timeOfDay"] = PlayerPrefs.GetString("timeOfDay");
 
             globalVariablesStory.variablesState["convo_numberCS"]=PlayerPrefs.GetInt("convo_numberCS");
             globalVariablesStory.variablesState["affectionCS"]=PlayerPrefs.GetInt("affectionCS");
@@ -214,6 +254,7 @@ namespace InterDineMension
         public void QuickLoadVariables()
         {
             globalVariablesStory.variablesState["dayVar"] = PlayerPrefs.GetInt("dayVarT");
+            globalVariablesStory.variablesState["aptUpgrade"] = PlayerPrefs.GetInt("aptUpgradeT");
             globalVariablesStory.variablesState["weekDay"] = PlayerPrefs.GetString("weekDayT");
 
             globalVariablesStory.variablesState["convo_numberCS"] = PlayerPrefs.GetInt("convo_numberCST");

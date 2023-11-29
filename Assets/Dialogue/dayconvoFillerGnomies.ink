@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-
+EXTERNAL GoToAppartment()
 Gnomies says fuck.jpeg
 *[good option]
     ~affectionG+=1
@@ -14,4 +14,5 @@ Gnomies says fuck.jpeg
 
 ===EndConvo===
 ~convo_numberG+=1
-->NextDayVarAdjust
+~GoToAppartment()
+->DONE

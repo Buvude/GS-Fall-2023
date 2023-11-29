@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-
+EXTERNAL GoToAppartment()
 continue to trigger endings
 {
 -chaosF>=3:
@@ -14,4 +14,5 @@ continue to trigger endings
 }
 ~convo_numberF+=1
 ~convo_numberOR+=1
-->NextDayVarAdjust
+~GoToAppartment()
+->DONE

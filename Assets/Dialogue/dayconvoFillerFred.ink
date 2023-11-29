@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-
+EXTERNAL GoToAppartment()
 Fred says fuck.jpeg
 *[good option]
     ~affectionF+=1
@@ -14,4 +14,5 @@ Fred says fuck.jpeg
 
 ===EndConvo===
 ~convo_numberF+=1
-->NextDayVarAdjust
+~GoToAppartment()
+->DONE

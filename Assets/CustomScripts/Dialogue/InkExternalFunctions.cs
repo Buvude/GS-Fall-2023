@@ -9,6 +9,9 @@ namespace InterDineMension
     using MicroGame;
     using Manager;
     using JetBrains.Annotations;
+    using UnityEngine.SceneManagement;
+    using UnityEditor;
+    using System.Runtime.CompilerServices;
 
     public class InkExternalFunctions
     {
@@ -76,12 +79,23 @@ namespace InterDineMension
             });
             currentStory.BindExternalFunction("SaveGame", () =>
             {
-                mGC.dM.dV = new DialogueVariables(currentStory);
-                mGC.dM.SaveGame();
+                dM.dV = new DialogueVariables(currentStory);
+                dM.SaveGame();
             });
             currentStory.BindExternalFunction("QuickSave", () =>
             {
+                dM.dV = new DialogueVariables(currentStory);
                 dM.QuickSave();
+            });
+            currentStory.BindExternalFunction("NewDay", () =>
+            {
+                SceneManager.LoadScene(1);
+            });
+            currentStory.BindExternalFunction("GoToAppartment", () =>
+            {
+                PlayerPrefs.SetString("timeOfDay", "Night");
+                dM.QuickSave();
+                SceneManager.LoadScene(5);
             });
         }
 
@@ -95,6 +109,8 @@ namespace InterDineMension
             currentStory.UnbindExternalFunction("StartTTMicro");
             currentStory.UnbindExternalFunction("SaveGame");
             currentStory.UnbindExternalFunction("QuickSave");
+            currentStory.UnbindExternalFunction("NewDay");
+            currentStory.UnbindExternalFunction("GoToAppartment");
         }
     }
 }

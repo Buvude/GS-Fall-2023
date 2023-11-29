@@ -162,6 +162,7 @@ namespace InterDineMension.MicroGame.BA
                 default:
                     break;
             }
+
             dM.QuickSave();
         }
         public void StartTheNextPhase()

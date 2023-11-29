@@ -21,6 +21,7 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+        public AppartmentManager aM;
         public bool useSaveSystem;
 
         public List<string> sfxTittles = new List<string>();
@@ -143,7 +144,16 @@ namespace InterDineMension.Manager
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
             dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(currentStory);
-            QuickSave();
+            if (PlayerPrefs.GetString("timeOfDay") == "night")
+            {
+                QuickLoad();
+            }
+            else if (PlayerPrefs.GetString("timeOfDay") == "morning")
+            {
+                QuickSave();
+            }
+            
+            //QuickSave();
             if (PlayerPrefs.GetString("newGame").Equals("false"))
             {
                 useSaveSystem = true;
@@ -151,7 +161,7 @@ namespace InterDineMension.Manager
                 dV.LoadVariables();
                 QuickSave();
             }
-
+            PlayerPrefs.SetString("newGame", "false");
 
             if (instance != null)
             {
@@ -172,6 +182,7 @@ namespace InterDineMension.Manager
 
         private void Start()
         {
+            //conditional of what state the day is in
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
             {
                 if (PlayerPrefs.GetString("timeOfDay") == "morning")
@@ -196,14 +207,25 @@ namespace InterDineMension.Manager
                 charSpeakTo = speakingTo.Swatts;
                 EnterDialogueMode(BAMicroArcadeConvo);
             }
+            else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(5))
+            {
+                aM = GameObject.FindGameObjectWithTag("eventSystem").GetComponent<AppartmentManager>();
+                charSpeakTo = speakingTo.Swatts;
+                aM.dM = this;
+                QuickLoad();
+                //QuickSave();
+                EnterDialogueMode(aM.appartmentIntro);
+                
+            }
            
 
-            //conditional of what state the day is in
+           
             
         }
 
         public void QuickSave()
         {
+
             quicksaved = true;
             /* savedjson = currentStory.state.ToJson();
              PlayerPrefs.SetString("savedjson", savedjson);*/
@@ -537,81 +559,90 @@ namespace InterDineMension.Manager
             }
             else
             {
-                currentStory=new Story(inkJSON.text);
+                currentStory = new Story(inkJSON.text);
             }
+
+            
             vH.currentStory = currentStory;
             dialoguePlaying=true;
-            grac.gameObject.GetComponent<Image>().enabled = true;
-            //dV.StartListening(currentStory);
-
-            switch (charSpeakTo)
+            if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(5))
             {
-                case speakingTo.O_Ryan:
-                    oR.gameObject.SetActive (true);
-                    G.gameObject.SetActive(false);
-                    cS.gameObject.SetActive(false);
-                    cC.gameObject.SetActive(false);
-                    F.gameObject.SetActive(false);
-                    N.gameObject.SetActive(false);
-                    M.gameObject.SetActive(false);
-                    break;
-                case speakingTo.Swatts:
-                    oR.gameObject.SetActive(false);
-                    G.gameObject.SetActive(false);
-                    cS.gameObject.SetActive(true);
-                    cC.gameObject.SetActive(false);
-                    F.gameObject.SetActive(false);
-                    N.gameObject.SetActive(false);
-                    M.gameObject.SetActive(false);
-                    break;
-                case speakingTo.CeeCee:
-                    oR.gameObject.SetActive(false);
-                    G.gameObject.SetActive(false);
-                    cS.gameObject.SetActive(false);
-                    cC.gameObject.SetActive(true);
-                    F.gameObject.SetActive(false);
-                    N.gameObject.SetActive(false);
-                    M.gameObject.SetActive(false);
-                    break;
-                case speakingTo.Gnomies:
-                    oR.gameObject.SetActive(false);
-                    G.gameObject.SetActive(true);
-                    cS.gameObject.SetActive(false);
-                    cC.gameObject.SetActive(false);
-                    F.gameObject.SetActive(false);
-                    N.gameObject.SetActive(false);
-                    M.gameObject.SetActive(false);
-                    break;
-                case speakingTo.Fred:
-                    oR.gameObject.SetActive(false);
-                    G.gameObject.SetActive(false);
-                    cS.gameObject.SetActive(false);
-                    cC.gameObject.SetActive(false);
-                    F.gameObject.SetActive(true);
-                    N.gameObject.SetActive(false);
-                    M.gameObject.SetActive(false);
-                    break;
-                case speakingTo.Nico:
-                    oR.gameObject.SetActive(false);
-                    G.gameObject.SetActive(false);
-                    cS.gameObject.SetActive(false);
-                    cC.gameObject.SetActive(false);
-                    F.gameObject.SetActive(false);
-                    N.gameObject.SetActive(true);
-                    M.gameObject.SetActive(false);
-                    break;
-                case speakingTo.Morgan:
-                    oR.gameObject.SetActive(false);
-                    G.gameObject.SetActive(false);
-                    cS.gameObject.SetActive(false);
-                    cC.gameObject.SetActive(false);
-                    F.gameObject.SetActive(false);
-                    N.gameObject.SetActive(false);
-                    M.gameObject.SetActive(true);
-                    break;
-                default:
-                    break;
+                grac.gameObject.GetComponent<Image>().enabled = true;
             }
+                
+            //dV.StartListening(currentStory);
+            if (SceneManager.GetActiveScene() != SceneManager.GetSceneByBuildIndex(5))
+            {
+                switch (charSpeakTo)
+                {
+                    case speakingTo.O_Ryan:
+                        oR.gameObject.SetActive(true);
+                        G.gameObject.SetActive(false);
+                        cS.gameObject.SetActive(false);
+                        cC.gameObject.SetActive(false);
+                        F.gameObject.SetActive(false);
+                        N.gameObject.SetActive(false);
+                        M.gameObject.SetActive(false);
+                        break;
+                    case speakingTo.Swatts:
+                        oR.gameObject.SetActive(false);
+                        G.gameObject.SetActive(false);
+                        cS.gameObject.SetActive(true);
+                        cC.gameObject.SetActive(false);
+                        F.gameObject.SetActive(false);
+                        N.gameObject.SetActive(false);
+                        M.gameObject.SetActive(false);
+                        break;
+                    case speakingTo.CeeCee:
+                        oR.gameObject.SetActive(false);
+                        G.gameObject.SetActive(false);
+                        cS.gameObject.SetActive(false);
+                        cC.gameObject.SetActive(true);
+                        F.gameObject.SetActive(false);
+                        N.gameObject.SetActive(false);
+                        M.gameObject.SetActive(false);
+                        break;
+                    case speakingTo.Gnomies:
+                        oR.gameObject.SetActive(false);
+                        G.gameObject.SetActive(true);
+                        cS.gameObject.SetActive(false);
+                        cC.gameObject.SetActive(false);
+                        F.gameObject.SetActive(false);
+                        N.gameObject.SetActive(false);
+                        M.gameObject.SetActive(false);
+                        break;
+                    case speakingTo.Fred:
+                        oR.gameObject.SetActive(false);
+                        G.gameObject.SetActive(false);
+                        cS.gameObject.SetActive(false);
+                        cC.gameObject.SetActive(false);
+                        F.gameObject.SetActive(true);
+                        N.gameObject.SetActive(false);
+                        M.gameObject.SetActive(false);
+                        break;
+                    case speakingTo.Nico:
+                        oR.gameObject.SetActive(false);
+                        G.gameObject.SetActive(false);
+                        cS.gameObject.SetActive(false);
+                        cC.gameObject.SetActive(false);
+                        F.gameObject.SetActive(false);
+                        N.gameObject.SetActive(true);
+                        M.gameObject.SetActive(false);
+                        break;
+                    case speakingTo.Morgan:
+                        oR.gameObject.SetActive(false);
+                        G.gameObject.SetActive(false);
+                        cS.gameObject.SetActive(false);
+                        cC.gameObject.SetActive(false);
+                        F.gameObject.SetActive(false);
+                        N.gameObject.SetActive(false);
+                        M.gameObject.SetActive(true);
+                        break;
+                    default:
+                        break;
+                }
+            }
+            
             /*currentStory.BindExternalFunction("StartBAMicro", () =>
             {
                  Debug.Log("called StartBAMicro");
@@ -1061,6 +1092,7 @@ namespace InterDineMension.Manager
             //dV.StopListening(currentStory);
             if (quickSave)
             {
+                dV = new DialogueVariables(currentStory);
                 QuickSave();
             }
             
