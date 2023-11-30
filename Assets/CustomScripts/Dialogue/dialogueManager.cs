@@ -218,9 +218,17 @@ namespace InterDineMension.Manager
                 aM = GameObject.FindGameObjectWithTag("eventSystem").GetComponent<AppartmentManager>();
                 charSpeakTo = speakingTo.Swatts;
                 aM.dM = this;
-                QuickLoad();
+                //QuickLoad();
                 //QuickSave();
-                EnterDialogueMode(aM.appartmentIntro);
+                if (PlayerPrefs.GetString("currentConvo") != "practiceB"&&PlayerPrefs.GetString("currentConvo")!="practiceT")
+                {
+                    EnterDialogueMode(aM.appartmentIntro);
+                }
+                else
+                {
+                    //EnterDialogueMode
+                }
+                
                 
             }
            

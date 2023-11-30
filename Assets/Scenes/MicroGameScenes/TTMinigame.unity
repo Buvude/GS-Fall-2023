@@ -1578,6 +1578,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+--- !u!114 &1052039160 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+  m_PrefabInstance: {fileID: 1052039159}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e3cfa8b450ff8848b228ff262f7ef5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1059251439
 GameObject:
   m_ObjectHideFlags: 0
@@ -1750,6 +1761,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1180557059}
   - component: {fileID: 1180557060}
+  - component: {fileID: 1180557061}
   m_Layer: 0
   m_Name: TTMinigame
   m_TagString: Untagged
@@ -1801,7 +1813,7 @@ MonoBehaviour:
   recyclingBag: {fileID: 1182229581749575020, guid: d3c68c1fdff6bba499512a255bbe03d4, type: 3}
   compostBag: {fileID: 1182229581749575020, guid: 219c6e15d52db5a41b8090b5ea5f1cc3, type: 3}
   vH: {fileID: 0}
-  scorepause: 1
+  scorepause: 0.25
   score: 0
   goal: 2
   correct: {fileID: 8300000, guid: a7e6dd97f7bfe2d4d8978d80db0c598b, type: 3}
@@ -1817,6 +1829,19 @@ MonoBehaviour:
   rc: {fileID: 112831376}
   topCollider: {fileID: 580048486}
   gameEnded: 0
+--- !u!114 &1180557061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1180557058}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c76bb9d4a239db47956034ead3ca339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 1052039160}
 --- !u!1 &1298585365
 GameObject:
   m_ObjectHideFlags: 0
@@ -1889,7 +1914,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: d9e15afe7c4d2d94db48a882daf7c449, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

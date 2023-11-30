@@ -9,7 +9,7 @@ namespace InterDineMension.Manager
         public List<GameObject> appartmentUpgrades, charAptUp;
         public List<string> CharAptKeys;
         public Dictionary<string, GameObject> charAptUpDict;
-        public TextAsset appartmentIntro;
+        public TextAsset appartmentIntro, postTTMPractice, postBAMPractice;
         public dialogueManager dM;
         // Start is called before the first frame update
         void Start()

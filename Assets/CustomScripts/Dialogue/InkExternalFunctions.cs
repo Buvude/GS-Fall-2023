@@ -75,6 +75,8 @@ namespace InterDineMension
             });
             currentStory.BindExternalFunction("StartTTMicro", () =>
             {
+                dM.QuickSave();
+                PlayerPrefs.SetString("currentConvo", currentStory.variablesState["currentConvo"].ToString());
                 mGC.loadTTM();
             });
             currentStory.BindExternalFunction("SaveGame", () =>
