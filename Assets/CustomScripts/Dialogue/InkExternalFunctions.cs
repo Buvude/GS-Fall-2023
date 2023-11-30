@@ -81,6 +81,7 @@ namespace InterDineMension
             {
                 dM.dV = new DialogueVariables(currentStory);
                 dM.SaveGame();
+                Debug.Break();
             });
             currentStory.BindExternalFunction("QuickSave", () =>
             {
@@ -94,7 +95,7 @@ namespace InterDineMension
             currentStory.BindExternalFunction("GoToAppartment", () =>
             {
                 PlayerPrefs.SetString("timeOfDay", "Night");
-                dM.QuickSave();
+                dM.SaveGame();
                 SceneManager.LoadScene(5);
             });
         }

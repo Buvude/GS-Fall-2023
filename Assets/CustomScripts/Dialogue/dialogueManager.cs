@@ -137,8 +137,13 @@ namespace InterDineMension.Manager
                 Debug.LogError("bgmTittles and bgmSounds are not at an equal count");
             }
             currentStory = new Story(loadGlobalsJSON.text);
-            vH = GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
-            vH.dM = this;
+
+            GameObject[] tempList = GameObject.FindGameObjectsWithTag("variableHolder");
+            foreach (GameObject temp in tempList)
+            {
+                temp.GetComponent<VariableHolder>().dM = this;
+            }
+            
            /* cS.sR.color = Color.HSVToRGB(0, 0, 40);*/
             grac.sR.color = Color.HSVToRGB(0, 0, 40);
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
@@ -182,6 +187,7 @@ namespace InterDineMension.Manager
 
         private void Start()
         {
+            vH= GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
             //conditional of what state the day is in
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
             {
@@ -1092,7 +1098,7 @@ namespace InterDineMension.Manager
             //dV.StopListening(currentStory);
             if (quickSave)
             {
-                dV = new DialogueVariables(currentStory);
+                //dV = new DialogueVariables(currentStory);
                 QuickSave();
             }
             
