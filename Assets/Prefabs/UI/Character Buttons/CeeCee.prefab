@@ -60,7 +60,12 @@ MonoBehaviour:
   - sad
   - blank
   - annoyed
-  dDictKey: []
+  dDictKey:
+  - CCTalkTo1
+  - CCTalkTo2
+  - CCTalkTo3
+  - CCEndings
+  - brushOff
   sDictValue:
   - {fileID: 21300000, guid: c5903308058dab746979b3c68bacb805, type: 3}
   - {fileID: 21300000, guid: 5f92d9f7476740f438d413756ac3b384, type: 3}
@@ -68,7 +73,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f6c3aea8c65f17c408db155c3eba6f8d, type: 3}
   - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
   - {fileID: 21300000, guid: c5903308058dab746979b3c68bacb805, type: 3}
-  dDictValue: []
+  dDictValue:
+  - {fileID: 4900000, guid: 81686ccdd03b12b4c9529fcbcd2451a2, type: 3}
+  - {fileID: 4900000, guid: 81686ccdd03b12b4c9529fcbcd2451a2, type: 3}
+  - {fileID: 4900000, guid: 81686ccdd03b12b4c9529fcbcd2451a2, type: 3}
+  - {fileID: 4900000, guid: 517de22457fbfea43ac9196d880fadec, type: 3}
+  - {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
 --- !u!222 &2442933825277518471
 CanvasRenderer:
   m_ObjectHideFlags: 0

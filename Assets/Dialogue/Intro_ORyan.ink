@@ -1,6 +1,6 @@
 //#day:2 #CSConvo:1
 EXTERNAL StartO_Ryan()
-
+EXTERNAL GoToAppartment()
 ==mainORYAN==
 ~StartO_Ryan()
 (Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral
@@ -68,4 +68,7 @@ Uh...
     (I finish closing up and head on home, envelope in hand.)
     // You got paid [amount] Øllars!
     
-    ->NextDayVarAdjust//temp until appartment is set up
+    // ->NextDayVarAdjust//temp until appartment is set up
+    ~convo_numberCS=1
+    ~GoToAppartment()
+    ->DONE

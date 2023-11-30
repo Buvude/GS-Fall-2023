@@ -34,7 +34,7 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
     
     ** [Peel it]
         // GOOD OPTION
-        ~affectionCS=affectionCS+2
+        ~affectionCS+=2
         (I take a potato skin peeler, and begin peeling away at the bombado.) #speaker:Graciana #sfx:gainedPoint
         (Piece by piece, the skin comes off with relative ease. The inside is almost gelatin-like.)
         (Chef Swatts turns back around, looking over my shoulder...)
@@ -49,7 +49,7 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
 
         (Chef Swatts takes the bombado from my hand, and squeezes it over a bowl.) #speaker:Graciana
 
-        (POP!) #speaker: 
+        (POP!) #speaker:??? 
 
         (The bombado pops in his hands, juice pouring out exessively into the bowl.) #speaker:Graciana
 
@@ -64,7 +64,7 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
     
     ** [Squeeze it]
         // CHAOTIC OPTION
-        ~chaosCS=chaosCS+2
+        ~chaosCS+=2
         (I take the bombado into a bowl and squeeze it with both hands.) #speaker:Graciana #sfx:cosmicPoint
 
         (POP!) #speaker: 

@@ -7,19 +7,23 @@ INCLUDE WednesdayMorning.ink
 INCLUDE ThursdayMorning.ink
 INCLUDE FridayMorning.ink
 INCLUDE SaturdayMorning.ink
+// INCLUDE AppartmentIntro.ink
 EXTERNAL QuickSave()
+EXTERNAL NewDay()
 //VAR pokemon_name=""
 
-
+ 
 
 
 //saves at the end of each day
+VAR aptUpgrade=0
 VAR convo_numberCS=0
 VAR convo_numberN=0
 VAR convo_numberCC=0
 VAR convo_numberM=0
 VAR convo_numberG=0
 VAR convo_numberF=0
+VAR convo_numberOR=0
 VAR dayVar = 1//may not need to be used
 VAR weekDay = "Tut"//Tut=Tutorial
 //Cheff Swatts variables
@@ -40,6 +44,9 @@ VAR chaosM = 0
 //Fred variables
 VAR affectionF = 0
 VAR chaosF = 0
+//O'Ryan variables
+VAR affectionOR = 0
+VAR chaosOR = 0
 
 
 //used in game, no need to save
@@ -78,44 +85,64 @@ LIST TBuns3 = (Plain), (Lettucebun), (Sourdough),(Pretzel) //(Bun_of_the_Deep) s
 {
     -weekDay=="Tut":
         ~weekDay="Mon"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->monday
+        ~NewDay()
+        // ->monday
     -weekDay=="Mon":
         ~weekDay="Tue"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->tuesday
+        ~NewDay()        
+        // ->tuesday
     -weekDay=="Tue":
         ~weekDay="Wed"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->wednesday
+        ~NewDay()        
+        // ->wednesday
     -weekDay=="Wed":
         ~weekDay="Thu"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->thursday
+        ~NewDay()        
+        // ->thursday
     -weekDay=="Thu":
         ~weekDay="Fri"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->friday
+        ~NewDay()        
+        // ->friday
     -weekDay=="Fri":
         ~weekDay="Sat"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->saturday
+        ~NewDay()        
+        // ->saturday
     -weekDay=="Sat":
+        // ~weekDay="Sun"
+        // ~dayVar+=1
+        // ~SaveGame()
+        // ->DONE
+        //redirect to Day Off events
         ~weekDay="Sun"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->DONE
-        //redirect to Day Off events
+        // ->monday
     -weekDay=="Sun":
         ~weekDay="Mon"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->monday
+        ~NewDay()        
+        // ->monday
         
 }
+->DONE

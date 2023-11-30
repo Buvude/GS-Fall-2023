@@ -14,6 +14,7 @@ namespace InterDineMension.MicroGame.BA
     using InterDineMension.Manager;
     public class BAManeger : MonoBehaviour
     {
+        public bool reseted;
         public Animator final;
         public GameObject orderImages;
         public PlayerController pC;
@@ -61,7 +62,7 @@ namespace InterDineMension.MicroGame.BA
 
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)
         {
-            ResetMiniGame();
+            dM.manager.imagePopUp.enabled = false;
             dM.manager.imagePopUp.enabled = false;
             for (int i = 0; i < ingredients.Count; i++)
             {
@@ -81,6 +82,7 @@ namespace InterDineMension.MicroGame.BA
 
         public void LevelUp(GameObject bun, GameObject pickle, GameObject greens, GameObject patty, GameObject condiment, GameObject veggie, GameObject tbun)
         {
+
             bottomBunOptions.Add(bun);
             pickleOptions.Add(pickle);
             lettuceOptions.Add(greens);
@@ -89,6 +91,7 @@ namespace InterDineMension.MicroGame.BA
             veggieOptions.Add(veggie);
             topBunOptions.Add(tbun);
         }
+            
 
         public void LevelUp(GameObject bBun2, GameObject pickles2, GameObject greens2, GameObject patty2, GameObject condiment2, GameObject veggie2, GameObject bun2, GameObject bBun3, GameObject pickles3, GameObject greens3, GameObject patty3, GameObject condiment3, GameObject veggie3, GameObject bun3)
         {
@@ -117,14 +120,50 @@ namespace InterDineMension.MicroGame.BA
 
         public void ResetMiniGame()
         {
-            vH.dM.gameObject.GetComponent<dialogueSpriteManager>().imagePopUp.enabled = true;
+            //reseted = true;
+            vH.dM.gameObject.GetComponent<dialogueSpriteManager>().imagePopUp.enabled = false;
             pC.ingredientTypes.Clear();
             orderedIngredients.Clear();
             pC.resetMiniGameSprites();
             bAState = phase.bottomBun;
             finalScore = 0;
             finishedBurger.gameObject.SetActive(false);
+            final.enabled = false;
             startBtn.gameObject.SetActive(true);
+            switch (level)
+            {
+                case 1:
+                    break;
+                case 2:
+                    bottomBunOptions.Remove(bottomBunOptions[3]);
+                    pickleOptions.Remove(pickleOptions[3]);
+                    lettuceOptions.Remove(lettuceOptions[3]);
+                    PattyOptions.Remove(PattyOptions[3]);
+                    condimentsOptions.Remove(condimentsOptions[3]);
+                    veggieOptions.Remove(veggieOptions[3]);
+                    topBunOptions.Remove(topBunOptions[3]);
+                    break;
+                case 3:
+                    bottomBunOptions.Remove(bottomBunOptions[3]);
+                    pickleOptions.Remove(pickleOptions[3]);
+                    lettuceOptions.Remove(lettuceOptions[3]);
+                    PattyOptions.Remove(PattyOptions[3]);
+                    condimentsOptions.Remove(condimentsOptions[3]);
+                    veggieOptions.Remove(veggieOptions[3]);
+                    topBunOptions.Remove(topBunOptions[3]); 
+                    bottomBunOptions.Remove(bottomBunOptions[4]);
+                    pickleOptions.Remove(pickleOptions[4]);
+                    lettuceOptions.Remove(lettuceOptions[4]);
+                    PattyOptions.Remove(PattyOptions[4]);
+                    condimentsOptions.Remove(condimentsOptions[4]);
+                    veggieOptions.Remove(veggieOptions[4]);
+                    topBunOptions.Remove(topBunOptions[4]);
+                    break;
+                default:
+                    break;
+            }
+
+            dM.QuickSave();
         }
         public void StartTheNextPhase()
         {
@@ -436,13 +475,13 @@ namespace InterDineMension.MicroGame.BA
                         final.enabled = true;
                         break;
                     }
-                case <= 5:
+                /*case <= 5:
                     {
                         finishedBurger.sprite = MediocreBurger;
                         final.enabled = true;
                         break;
-                    }
-                case > 5:
+                    }*/
+                case >= 5:
                     {
                         finishedBurger.sprite = GoodBurger;
                         final.enabled = true;
@@ -459,32 +498,36 @@ namespace InterDineMension.MicroGame.BA
             Debug.Log(dM.vH.currentStory.variablesState["currentConvo"].ToString());
             if (finalScore >= 4)
             { 
-                
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
                 if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
                 {
-                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGPass1"]); //only valid for day one
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGPass1"]); //only valid for day one
                 }
                 else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
                 {
-                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGPass2"]);
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGPass2"]);
                 }
                 
             }
             else
             {
+
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
                 if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
                 {
-                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGFail1"]);//only valid for day one
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFail1"]);//only valid for day one
                 }
                 else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
                 {
-                    dM.EnterDialogueMode(dM.cS.dialogueDictionary["cSMGFail2"]);
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFail2"]);
                 }
 
             }

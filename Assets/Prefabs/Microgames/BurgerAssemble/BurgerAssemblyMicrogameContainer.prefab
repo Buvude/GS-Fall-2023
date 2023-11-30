@@ -570,6 +570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0811a9ad8c671e4099a60eab324692f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reseted: 0
   final: {fileID: 2690876806367202051}
   orderImages: {fileID: 2842711599391330572}
   pC: {fileID: 3833102980267247129}
@@ -751,7 +752,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &8015628118462198046
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1465,7 +1466,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 20.15
+  m_fontSize: 36.2
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2324,7 +2325,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14.15
+  m_fontSize: 24.75
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
