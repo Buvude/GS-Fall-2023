@@ -1152,8 +1152,8 @@ namespace InterDineMension.Manager
             fBtn.SetActive(false);
             mBtn.SetActive(false);
             nBtn.SetActive(false);
-            Debug.Log(PlayerPrefs.GetString("weekDay"));
-            switch (PlayerPrefs.GetString("weekDay"))//will determine who's avalible
+            Debug.Log(PlayerPrefs.GetString("weekDayT"));
+            switch (PlayerPrefs.GetString("weekDayT"))//will determine who's avalible
             {
                 case "Tut":
                     cSBtn.gameObject.SetActive(true);
