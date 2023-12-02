@@ -149,22 +149,25 @@ namespace InterDineMension.Manager
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
             dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(currentStory);
-            if (PlayerPrefs.GetString("timeOfDay") == "night")
+            if (PlayerPrefs.GetString("currentConvo")!="practiceT"&&PlayerPrefs.GetString("currentConvo")!="practiceB")
             {
-                QuickLoad();
-            }
-            else if (PlayerPrefs.GetString("timeOfDay") == "morning")
-            {
-                QuickSave();
-            }
-            
-            //QuickSave();
-            if (PlayerPrefs.GetString("newGame").Equals("false"))
-            {
-                useSaveSystem = true;
-                //Debug.Log("Using save system");
-                dV.LoadVariables();
-                QuickSave();
+                if (PlayerPrefs.GetString("timeOfDay") == "night")
+                {
+                    QuickLoad();
+                }
+                else if (PlayerPrefs.GetString("timeOfDay") == "morning")
+                {
+                    QuickSave();
+                }
+
+                //QuickSave();
+                if (PlayerPrefs.GetString("newGame").Equals("false"))
+                {
+                    useSaveSystem = true;
+                    //Debug.Log("Using save system");
+                    dV.LoadVariables();
+                    QuickSave();
+                }
             }
             PlayerPrefs.SetString("newGame", "false");
 
@@ -218,7 +221,7 @@ namespace InterDineMension.Manager
                 aM = GameObject.FindGameObjectWithTag("eventSystem").GetComponent<AppartmentManager>();
                 charSpeakTo = speakingTo.Swatts;
                 aM.dM = this;
-                //QuickLoad();
+                QuickLoad();
                 //QuickSave();
                 if (PlayerPrefs.GetString("currentConvo") != "practiceB"&&PlayerPrefs.GetString("currentConvo")!="practiceT")
                 {
@@ -226,6 +229,14 @@ namespace InterDineMension.Manager
                 }
                 else
                 {
+                    if (PlayerPrefs.GetString("currentConvo") == "practiceT")
+                    {
+                        EnterDialogueMode(aM.postTTMPractice);
+                    }
+                    else if (PlayerPrefs.GetString("currentConvo") == "practiceB")
+                    {
+                        EnterDialogueMode(aM.postBAMPractice);
+                    }
                     //EnterDialogueMode
                 }
                 
@@ -1141,8 +1152,8 @@ namespace InterDineMension.Manager
             fBtn.SetActive(false);
             mBtn.SetActive(false);
             nBtn.SetActive(false);
-
-            switch (PlayerPrefs.GetString("weekDayT"))//will determine who's avalible
+            Debug.Log(PlayerPrefs.GetString("weekDay"));
+            switch (PlayerPrefs.GetString("weekDay"))//will determine who's avalible
             {
                 case "Tut":
                     cSBtn.gameObject.SetActive(true);
@@ -1219,6 +1230,7 @@ namespace InterDineMension.Manager
                         break;
                     }
                 default:
+                    Debug.Log("not a valid day set in playerprefs");
                     break;
             }
             convoModeImages.gameObject.SetActive(false);

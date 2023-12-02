@@ -136,6 +136,7 @@ LIST TBuns3 = (Plain), (Lettucebun), (Sourdough),(Pretzel) //(Bun_of_the_Deep) s
         ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
+        ~NewDay()
         // ->monday
     -weekDay=="Sun":
         ~weekDay="Mon"

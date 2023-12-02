@@ -12,6 +12,8 @@ using Unity.VisualScripting;
 namespace InterDineMension.MicroGame.BA
 {
     using InterDineMension.Manager;
+    using UnityEngine.SceneManagement;
+
     public class BAManeger : MonoBehaviour
     {
         public bool reseted;
@@ -493,43 +495,65 @@ namespace InterDineMension.MicroGame.BA
             //will be used for passing the score through to another script as needed
         }
 
-        private IEnumerator BAMicroGameScore(int finalScore)
+        private IEnumerator BAMicroGameScore(int finalScore)//used to determine where to go next
         {
             Debug.Log(dM.vH.currentStory.variablesState["currentConvo"].ToString());
-            if (finalScore >= 4)
+            if (finalScore >= 5)
             { 
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
-                if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
+                if (PlayerPrefs.GetString("currentConvo") == "cSD1")
                 {
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGPass1"]); //only valid for day one
                 }
-                else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
+                else if (PlayerPrefs.GetString("currentConvo") == "cSD2")
                 {
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGPass2"]);
                 }
+                else if (PlayerPrefs.GetString("currentConvo") == "practiceB")
+                {
+                    PlayerPrefs.SetString("winStatus", "Win");
+                    SceneManager.LoadScene(5);
+                }
                 
             }
-            else
+            else if(finalScore > -7) 
             {
 
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
-                if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD1")
+                if (PlayerPrefs.GetString("currentConvo")== "cSD1")
                 {
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFail1"]);//only valid for day one
                 }
-                else if (dM.vH.currentStory.variablesState["currentConvo"].ToString() == "cSD2")
+                else if (PlayerPrefs.GetString("currentConvo") == "cSD2")
                 {
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFail2"]);
                 }
+                else if (PlayerPrefs.GetString("currentConvo") == "practiceB")
+                {
+                    PlayerPrefs.SetString("winStatus", "Loss");
+                    SceneManager.LoadScene(5);
+                }
 
+            }
+            else if (finalScore == -7)
+            {
+                if (PlayerPrefs.GetString("currentConvo") == "practiceB")
+                {
+                    PlayerPrefs.SetString("winStatus", "Chaos");
+                    SceneManager.LoadScene(5);
+                }
+            }
+            else
+            {
+                Debug.LogError("final score was below -7");
             }
         }
 
