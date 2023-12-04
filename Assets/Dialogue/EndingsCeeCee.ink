@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-EXTERNAL GoToAppartment()
+// EXTERNAL GoToAppartment()
 continue to trigger endings
 {
 -chaosCC>=3:

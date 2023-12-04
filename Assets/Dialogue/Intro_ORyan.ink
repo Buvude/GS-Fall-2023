@@ -1,9 +1,9 @@
 //#day:2 #CSConvo:1
 // EXTERNAL StartO_Ryan()
-EXTERNAL GoToAppartment()
+// EXTERNAL GoToAppartment()
 ==mainORYAN==
 ~StartO_Ryan()
-(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral
+(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral #bgm:dinNight
 (Just gotta clean and close up...)
 (...)
 (Suddenly, the entrance portal flashes and opens up!)

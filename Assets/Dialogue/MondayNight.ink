@@ -1,4 +1,4 @@
-Phew, what a day. Almost finished cleaning up... #speaker:Graciana #speaker:neutral
+Phew, what a day. Almost finished cleaning up... #speaker:Graciana #speaker:neutral #bgm:dinNight
 (Suddenly, O'Ryan enters through the portal, and walks over.)
 
 ... #speaker:O'Ryan

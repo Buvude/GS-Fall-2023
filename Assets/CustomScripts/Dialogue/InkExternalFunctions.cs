@@ -74,6 +74,9 @@ namespace InterDineMension
                 dM.G.gameObject.SetActive(false);
                 dM.cS.gameObject.SetActive(false);
                 dM.cC.gameObject.SetActive(false);
+                dM.N.gameObject.SetActive(false);
+                dM.G.gameObject.SetActive(false);
+                dM.M.gameObject.SetActive(false);
                 //dM.EnterDialogueMode(dM.TTMicroArcadeConvo);
                 switch (PlayerPrefs.GetString("weekDay"))
                 {

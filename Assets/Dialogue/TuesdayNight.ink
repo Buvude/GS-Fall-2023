@@ -1,4 +1,4 @@
-An interesting day, to say the least... #speaker:Graciana #mood:neutral
+An interesting day, to say the least... #speaker:Graciana #mood:neutral #bgm:dinNight
 (I hear the familiar portal sound, and look over to see O'Ryan entering.)
 
 O-oh, O'Ryan, hey! #speaker:Graciana

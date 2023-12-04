@@ -1,4 +1,4 @@
-Hm... I think that's everything... #speaker:Graciana
+Hm... I think that's everything... #speaker:Graciana #bgm:dinNight
 ...That's weird, O'Ryan should be in by now... #speaker:Graciana #mood:think
 
 (And right as I say that...)
