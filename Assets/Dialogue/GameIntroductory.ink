@@ -6,7 +6,7 @@ INCLUDE globals.ink
     ~dayVar=1
     ~weekDay="Tut"
     ~convo_numberCS=0
-    (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana
+    (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana #bgm:dinMorning
     (Here we are... The Portal Diner...) #speaker:Graciana #mood:think
     (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)
     (I still haven’t met or even seen the owner; I interviewed online. They said to find a “fly guy,” whatever that means–)
@@ -107,7 +107,7 @@ INCLUDE globals.ink
     Jus' be a good listener, an' say what they wanna hear.
     Ya got it? #speaker:Chef Swatts #mood:happy
     
-    Got it! #speaker:Graciana #mood:happy
+    Got it! #speaker:Graciana #mood:happy #bgm:dinDay
     ~GoToDiner()
     
     ->END

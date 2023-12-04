@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-
+EXTERNAL GoToAppartment()
 
 ->MainCS3
 
@@ -67,7 +67,8 @@ I'm headin' back to Dipterra, babeh! #speaker:Chef Swatts #mood:happy
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~affectionOR+=1
-->NextDayVarAdjust
+~GoToAppartment()
+->DONE
 
 
 ==BadEndCS==
@@ -102,7 +103,8 @@ Ahahaha! #speaker:Chef Swatts #mood:happy
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~affectionOR-=1
-->NextDayVarAdjust
+~GoToAppartment()
+->DONE
 
 ==ChaosEndCS==
 I got an idea for what I wanna do afta O'Ryan finally finds a proper manager #speaker:Chef Swatts
@@ -142,4 +144,5 @@ Y-yeah... I figured... #speaker:Graciana #mood:sad
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~chaosOR+=1
-->NextDayVarAdjust
+~GoToAppartment()
+->DONE

@@ -3,7 +3,7 @@
 EXTERNAL GoToDiner()
 
 // ==wednesday==
-Hey Chef! Happy Wednesday!#speaker:Graciana #mood:happy
+Hey Chef! Happy Wednesday!#speaker:Graciana #mood:happy #bgm:dinMorning
 
 Ay, Graciana... #speaker:Chef Swatts #mood:sad
 
@@ -19,8 +19,8 @@ Their energy! Don't ya feel it? #speaker:Chef Swatts #mood:angry
 ...No? #speaker:Graciana #mood:sad
 
 There's somethin' I tell ya... Somethin' goin' on... #speaker:Chef Swatts #mood:sad
-Go an' open up tha portal, ya?
+Go an' open up tha portal, ya? 
 
-Sure thing, Chef... #speaker:Graciana #mood:neutral
+Sure thing, Chef... #speaker:Graciana #mood:neutral #bgm:dinDay
     ~GoToDiner()
     -> DONE

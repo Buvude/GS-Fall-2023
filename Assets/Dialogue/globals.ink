@@ -56,6 +56,7 @@ VAR TTMLevel = 0
 VAR TBMLevel = 1
 VAR currentConvo="test"
 VAR winState="Win"
+
 LIST BBuns1 = (Plain), (Lettucebun), (Sourdough) //(Bun_of_the_Deep) only orderable by O'ryan
 LIST Pickles1 = (Chips), (Relish), (Plain) 
 LIST Greens1 = (Wholeleaf), (Chopped), (Purple) //(Biblically_Accurate_Green) only orderable by O'ryan
@@ -135,6 +136,7 @@ LIST TBuns3 = (Plain), (Lettucebun), (Sourdough),(Pretzel) //(Bun_of_the_Deep) s
         ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
+        ~NewDay()
         // ->monday
     -weekDay=="Sun":
         ~weekDay="Mon"

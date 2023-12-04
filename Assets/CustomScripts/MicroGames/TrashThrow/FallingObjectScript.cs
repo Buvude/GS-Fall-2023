@@ -67,6 +67,7 @@ namespace InterDineMension.MicroGame.TT
                 canScore=false;
                 location=BinLandedIn.none;
                 worthPoint=false;
+                this.gameObject.SetActive(false);
             }
 
         }

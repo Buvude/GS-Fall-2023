@@ -1,6 +1,6 @@
 // INCLUDE globals.ink
 // ->friday
-// EXTERNAL GoToDiner()
+ //EXTERNAL GoToDiner()
 ==friday==
 Hey Chef! Morning! #speaker:Graciana #mood:neutral
 

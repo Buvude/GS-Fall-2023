@@ -4,7 +4,7 @@ EXTERNAL GoToDiner()
 
 
 
-    Ey, Graciana! #speaker:Chef Swatts
+    Ey, Graciana! #speaker:Chef Swatts #bgm:dinMorning
     
     Oh, hi Chef! #speaker:Graciana
     
@@ -22,6 +22,6 @@ EXTERNAL GoToDiner()
     Well, time to unlock tha portal, ya? #speaker:Chef Swatts #mood:neutral
     Look sharp! #speaker:Chef Swatts #mood:angry
     
-    Y-yes Chef! #speaker:Graciana #mood:neutral
+    Y-yes Chef! #speaker:Graciana #mood:neutral #bgm:dinDay
     ~GoToDiner()
     -> DONE

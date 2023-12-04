@@ -79,6 +79,10 @@ namespace InterDineMension
             PlayerPrefs.SetInt("TTMLevel", int.Parse(globalVariablesStory.variablesState["TTMLevel"].ToString()));
             PlayerPrefs.SetInt("TBMLevel", int.Parse(globalVariablesStory.variablesState["TBMLevel"].ToString()));
 
+            PlayerPrefs.SetString("currentConvo", globalVariablesStory.variablesState["currentConvo"].ToString());
+
+
+
 
 
             PlayerPrefs.Save();
@@ -127,6 +131,9 @@ namespace InterDineMension
             PlayerPrefs.DeleteKey("BAMLevel");
             PlayerPrefs.DeleteKey("TTMLevel");
             PlayerPrefs.DeleteKey("TBMLevel");
+
+            PlayerPrefs.DeleteKey("currentConvo");
+            PlayerPrefs.DeleteKey("winStatus");
         }
         public void SaveVariables()
         {
@@ -253,6 +260,7 @@ namespace InterDineMension
         }
         public void QuickLoadVariables()
         {
+
             globalVariablesStory.variablesState["dayVar"] = PlayerPrefs.GetInt("dayVarT");
             globalVariablesStory.variablesState["aptUpgrade"] = PlayerPrefs.GetInt("aptUpgradeT");
             globalVariablesStory.variablesState["weekDay"] = PlayerPrefs.GetString("weekDayT");
@@ -288,6 +296,13 @@ namespace InterDineMension
             globalVariablesStory.variablesState["BAMLevel"] = PlayerPrefs.GetInt("BAMLevel");
             globalVariablesStory.variablesState["TTMLevel"] = PlayerPrefs.GetInt("TTMLevel");
             globalVariablesStory.variablesState["TBMLevel"] = PlayerPrefs.GetInt("TBMLevel");
+
+            globalVariablesStory.variablesState["currentConvo"] = PlayerPrefs.GetString("currentConvo");
+
+            if (PlayerPrefs.GetString("winStatus") != null)
+            {
+                globalVariablesStory.variablesState["winState"] = PlayerPrefs.GetString("winStatus");
+            }
 
 
         }

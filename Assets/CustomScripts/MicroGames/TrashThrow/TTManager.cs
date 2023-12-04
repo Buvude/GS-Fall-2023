@@ -5,6 +5,7 @@ using TMPro;
 using InterDineMension.Manager;
 using JetBrains.Annotations;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace InterDineMension.MicroGame.TT
 {
@@ -130,6 +131,7 @@ namespace InterDineMension.MicroGame.TT
             if (score >= goal)
             {
                 vH.wonMini = true;
+
             }
             else
             {
@@ -142,6 +144,16 @@ namespace InterDineMension.MicroGame.TT
             else
             {
                 PlayerPrefs.SetString("winStatus", "lost");
+            }
+            switch (PlayerPrefs.GetString("currentConvo"))
+            {
+                case "practiceT":
+                    {
+                        SceneManager.LoadScene(5);
+                        break;
+                    }
+                default:
+                    break;
             }
 
         }

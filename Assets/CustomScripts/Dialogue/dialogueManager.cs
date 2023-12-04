@@ -21,6 +21,8 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+        
+        public float fadeInOutRate;
         public AppartmentManager aM;
         public bool useSaveSystem;
 
@@ -149,22 +151,25 @@ namespace InterDineMension.Manager
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
             dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(currentStory);
-            if (PlayerPrefs.GetString("timeOfDay") == "night")
+            if (PlayerPrefs.GetString("currentConvo")!="practiceT"&&PlayerPrefs.GetString("currentConvo")!="practiceB")
             {
-                QuickLoad();
-            }
-            else if (PlayerPrefs.GetString("timeOfDay") == "morning")
-            {
-                QuickSave();
-            }
-            
-            //QuickSave();
-            if (PlayerPrefs.GetString("newGame").Equals("false"))
-            {
-                useSaveSystem = true;
-                //Debug.Log("Using save system");
-                dV.LoadVariables();
-                QuickSave();
+                if (PlayerPrefs.GetString("timeOfDay") == "night")
+                {
+                    QuickLoad();
+                }
+                else if (PlayerPrefs.GetString("timeOfDay") == "morning")
+                {
+                    QuickSave();
+                }
+
+                //QuickSave();
+                if (PlayerPrefs.GetString("newGame").Equals("false"))
+                {
+                    useSaveSystem = true;
+                    //Debug.Log("Using save system");
+                    dV.LoadVariables();
+                    QuickSave();
+                }
             }
             PlayerPrefs.SetString("newGame", "false");
 
@@ -220,7 +225,23 @@ namespace InterDineMension.Manager
                 aM.dM = this;
                 QuickLoad();
                 //QuickSave();
-                EnterDialogueMode(aM.appartmentIntro);
+                if (PlayerPrefs.GetString("currentConvo") != "practiceB"&&PlayerPrefs.GetString("currentConvo")!="practiceT")
+                {
+                    EnterDialogueMode(aM.appartmentIntro);
+                }
+                else
+                {
+                    if (PlayerPrefs.GetString("currentConvo") == "practiceT")
+                    {
+                        EnterDialogueMode(aM.postTTMPractice);
+                    }
+                    else if (PlayerPrefs.GetString("currentConvo") == "practiceB")
+                    {
+                        EnterDialogueMode(aM.postBAMPractice);
+                    }
+                    //EnterDialogueMode
+                }
+                
                 
             }
            
@@ -1085,13 +1106,32 @@ namespace InterDineMension.Manager
                             sfxAudioSource.Play();
                             break;
                         }
+                    case BGM:
+                        {
+                            StartCoroutine(musicFadeIn(musicLibrary[tagValue]));
+                            break;
+                        }
                     default:
                         Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
                         break;
                 }
             }
         }
-
+        public IEnumerator musicFadeIn(AudioClip temp)
+        {
+            while (bgmAudioSource.volume > 0)
+            {
+                yield return new WaitForSeconds(.1f);
+                bgmAudioSource.volume -= fadeInOutRate;
+            }
+            bgmAudioSource.clip = temp;
+            bgmAudioSource.Play();
+            while(bgmAudioSource.volume < 1)
+            {
+                yield return new WaitForSeconds(.1f);
+                bgmAudioSource.volume += fadeInOutRate;
+            }
+        }
         public void ExitDialogueMode(bool enterDinnerMode, int day, string whereCameFrom, bool quickSave)
         {
             //Debug.Log($"Got to exit dialogue mode from {whereCameFrom} ");
@@ -1133,7 +1173,7 @@ namespace InterDineMension.Manager
             fBtn.SetActive(false);
             mBtn.SetActive(false);
             nBtn.SetActive(false);
-
+            Debug.Log(PlayerPrefs.GetString("weekDayT"));
             switch (PlayerPrefs.GetString("weekDayT"))//will determine who's avalible
             {
                 case "Tut":
@@ -1211,6 +1251,7 @@ namespace InterDineMension.Manager
                         break;
                     }
                 default:
+                    Debug.Log("not a valid day set in playerprefs");
                     break;
             }
             convoModeImages.gameObject.SetActive(false);
