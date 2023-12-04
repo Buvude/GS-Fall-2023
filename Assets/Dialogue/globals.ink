@@ -7,6 +7,9 @@ INCLUDE WednesdayMorning.ink
 INCLUDE ThursdayMorning.ink
 INCLUDE FridayMorning.ink
 INCLUDE SaturdayMorning.ink
+//I feel like including stuff here is not a great idea, but I have nut run into issues yet... so here we go...
+EXTERNAL StartO_Ryan()
+EXTERNAL GoToAppartment()
 // INCLUDE AppartmentIntro.ink
 EXTERNAL QuickSave()
 EXTERNAL NewDay()

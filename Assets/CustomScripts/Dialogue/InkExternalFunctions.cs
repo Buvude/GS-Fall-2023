@@ -75,6 +75,29 @@ namespace InterDineMension
                 dM.cS.gameObject.SetActive(false);
                 dM.cC.gameObject.SetActive(false);
                 //dM.EnterDialogueMode(dM.TTMicroArcadeConvo);
+                switch (PlayerPrefs.GetString("weekDay"))
+                {
+                    case "Mon":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["monNight"]);
+                        break;
+                    case "Tue":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["tueNight"]);
+                        break;
+                    case "Wed":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["wedNight"]);
+                        break;
+                    case "Thu":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["thuNight"]);
+                        break;
+                    case "Fri":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["friNight"]);
+                        break;
+                    case "Sat":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["satNight"]);
+                        break;
+                    default:
+                        break;
+                }
             });
             currentStory.BindExternalFunction("StartTTMicro", () =>
             {
@@ -111,6 +134,7 @@ namespace InterDineMension
                 dM.SaveGame();
                 SceneManager.LoadScene(5);
             });
+            
         }
 
         public void unBind(Story currentStory)

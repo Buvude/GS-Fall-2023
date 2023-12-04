@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-EXTERNAL GoToAppartment()
+// EXTERNAL GoToAppartment()
 Nico says fuck.jpeg
 *[good option]
     ~affectionN+=1
@@ -15,5 +15,6 @@ Nico says fuck.jpeg
 
 ===EndConvo===
 ~convo_numberN+=1
-~GoToAppartment()
+// ~GoToAppartment()
+~StartO_Ryan()
 ->DONE

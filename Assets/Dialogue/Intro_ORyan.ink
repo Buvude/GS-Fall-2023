@@ -1,5 +1,5 @@
 //#day:2 #CSConvo:1
-EXTERNAL StartO_Ryan()
+// EXTERNAL StartO_Ryan()
 EXTERNAL GoToAppartment()
 ==mainORYAN==
 ~StartO_Ryan()

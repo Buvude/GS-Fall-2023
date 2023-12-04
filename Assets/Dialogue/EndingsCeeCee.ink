@@ -14,5 +14,6 @@ continue to trigger endings
 }
 ~convo_numberCC+=1
 ~convo_numberOR+=1
-~GoToAppartment()
+// ~GoToAppartment()
+~StartO_Ryan()
 ->DONE

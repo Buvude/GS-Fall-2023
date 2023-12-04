@@ -61,7 +61,24 @@ MonoBehaviour:
   - hug
   - angry
   - blank
-  dDictKey: []
+  dDictKey:
+  - wedNight
+  - tueNight
+  - thuNight
+  - satNight
+  - finalTTPass
+  - finalTTFail
+  - finalTTChaos
+  - finalBMPass
+  - finalBMFail
+  - finalBGChaos
+  - postMinigame
+  - final
+  - monNight
+  - goodEnd
+  - chaosEnd
+  - badEnd
+  - friNight
   sDictValue:
   - {fileID: 21300000, guid: d041da730b72e45419e2ede2bcd0a783, type: 3}
   - {fileID: 21300000, guid: b749b593a8a55b041b7ae84c422dae35, type: 3}
@@ -70,7 +87,24 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f585cc34a35f7c2479f3c17ead5c052e, type: 3}
   - {fileID: 21300000, guid: b5bc3fb151ef4de48b0698fd6e8d5d5f, type: 3}
   - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
-  dDictValue: []
+  dDictValue:
+  - {fileID: 4900000, guid: facfefde2934fee46aa32f8c74449947, type: 3}
+  - {fileID: 4900000, guid: 4059932d7b48c3f4bb889a672eb9a2cc, type: 3}
+  - {fileID: 4900000, guid: 654556818c6fe6a458fe0bf36e7d2f58, type: 3}
+  - {fileID: 4900000, guid: 67794c0b75ba06a48a4cf6623c44cf50, type: 3}
+  - {fileID: 4900000, guid: dcb0099f91a6a3749b0fbdeafc4cfdfd, type: 3}
+  - {fileID: 4900000, guid: 3a2b3146bbfc25748af843631bb09ea3, type: 3}
+  - {fileID: 4900000, guid: 1911c5a36151e5042bc5ef65654691d5, type: 3}
+  - {fileID: 4900000, guid: e08757282d6b77b40a3401a4ed0ddb9b, type: 3}
+  - {fileID: 4900000, guid: 3daa483f841e23747b180cc0853b7f52, type: 3}
+  - {fileID: 4900000, guid: dde2e0f0b76deab4286fa4ab52c9f793, type: 3}
+  - {fileID: 4900000, guid: 19147344b13d0fc4e8bb6667cf265030, type: 3}
+  - {fileID: 4900000, guid: 3901ecee64585564680af54acb72de41, type: 3}
+  - {fileID: 4900000, guid: c650598b2f9a26042aa923a9c6f1762a, type: 3}
+  - {fileID: 4900000, guid: 58595e1e3d426ce4791020cd4e3cceb0, type: 3}
+  - {fileID: 4900000, guid: 701c9e57fd20143488a150cebbb7c804, type: 3}
+  - {fileID: 4900000, guid: f84b655bfc8ace34a92958f3a65f599b, type: 3}
+  - {fileID: 4900000, guid: b7c9366ada5b67c43bdb8805c9b6f56f, type: 3}
 --- !u!222 &2442933825277518471
 CanvasRenderer:
   m_ObjectHideFlags: 0

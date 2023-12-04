@@ -50,7 +50,7 @@ No. I can't afford a repair. It's not covered by Tundra Insurance Policy. #speak
 Is that like, your Insurance Company?
 
 No! Tundra Enterprise is-- #speaker:NiCo
-*BZZZZT*
+\*BZZZZT*
 
 A-are you okay?? #speaker:Graciana #mood:fear
 
@@ -83,7 +83,7 @@ REBOOTING. PLEASE WAIT.
 (God help me.) #speaker:Graciana #mood:sad
 
 ...... #speaker:NiCo
-*BZZZZT*
+\*BZZZZT*
 
 ...Are you... Okay...? #speaker:Graciana #mood:sad
 
@@ -107,7 +107,7 @@ All while you work for them until you rust, paying off the service that they giv
 (...Guess some worlds aren't too different from mine, heh...) #speaker:Graciana #mood:sad
 
 Of course, this means that-- #speaker:NiCo
-*BZZZT*
+\*BZZZT*
 ...
 
 Oh no. #speaker:Graciana #mood:neutral
