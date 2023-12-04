@@ -21,6 +21,8 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+        
+        public float fadeInOutRate;
         public AppartmentManager aM;
         public bool useSaveSystem;
 
@@ -1104,13 +1106,32 @@ namespace InterDineMension.Manager
                             sfxAudioSource.Play();
                             break;
                         }
+                    case BGM:
+                        {
+                            StartCoroutine(musicFadeIn(musicLibrary[tagValue]));
+                            break;
+                        }
                     default:
                         Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
                         break;
                 }
             }
         }
-
+        public IEnumerator musicFadeIn(AudioClip temp)
+        {
+            while (bgmAudioSource.volume > 0)
+            {
+                yield return new WaitForSeconds(.1f);
+                bgmAudioSource.volume -= fadeInOutRate;
+            }
+            bgmAudioSource.clip = temp;
+            bgmAudioSource.Play();
+            while(bgmAudioSource.volume < 1)
+            {
+                yield return new WaitForSeconds(.1f);
+                bgmAudioSource.volume += fadeInOutRate;
+            }
+        }
         public void ExitDialogueMode(bool enterDinnerMode, int day, string whereCameFrom, bool quickSave)
         {
             //Debug.Log($"Got to exit dialogue mode from {whereCameFrom} ");
