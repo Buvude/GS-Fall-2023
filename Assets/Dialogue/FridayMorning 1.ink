@@ -1,8 +1,7 @@
 // INCLUDE globals.ink
-// ->friday
-EXTERNAL GoToDiner()
+ EXTERNAL GoToDiner()
 // ==friday==
-Hey Chef! Morning! #speaker:Graciana #mood:neutral
+Hey Chef! Morning! #speaker:Graciana #mood:neutral #bgm:dinMorning
 
 Ay, Gracie, thank tha 'eavens ya here! #speaker:Chef Swatts #mood:pray
 
@@ -19,6 +18,6 @@ Good! 'Cause I'ma be stuck in the kitchen all day! #speaker:Chef Swatts
 
 Alright, yeah! I can handle it! #speaker:Graciana #mood:happy
 
-Aight! let's crack open the portal and get rockin'! #speaker:Chef Swatts
+Aight! let's crack open the portal and get rockin'! #speaker:Chef Swatts #bgm:dinDay
     ~GoToDiner()
     -> DONE

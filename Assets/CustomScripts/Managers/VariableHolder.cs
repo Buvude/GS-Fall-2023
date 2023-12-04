@@ -29,7 +29,7 @@ namespace InterDineMension.Manager
             if (instance != null)
             {
                 Destroy(this.gameObject);
-                Debug.LogWarning("Found more then one DialogueManager instance");
+                Debug.LogWarning($"Found more then one DialogueManager instance ");
             }
             instance = this;
             DontDestroyOnLoad(instance);

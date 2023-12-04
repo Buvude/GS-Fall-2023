@@ -7,8 +7,8 @@ namespace InterDineMension.Manager
 {
     public class GameplayManager : MonoBehaviour
     {
-        [SerializeField] public List<TextAsset> cheffSwattsConvos;
-        [SerializeField] public List<TextAsset> FredConvos;
+        /*[SerializeField] public List<TextAsset> cheffSwattsConvos;
+        [SerializeField] public List<TextAsset> FredConvos;*/
         public dialogueManager manager;
         // Start is called before the first frame update
         void Start()
@@ -27,7 +27,7 @@ namespace InterDineMension.Manager
         public void StartConvoCheffSwatts()
         {
             //check variables to see which conversation to start. 
-            manager.EnterDialogueMode(cheffSwattsConvos[0]);
+            //manager.EnterDialogueMode(cheffSwattsConvos[0]);
             //filler for until we have implimented the variables
 
         }
@@ -38,7 +38,11 @@ namespace InterDineMension.Manager
         }
         private void OnApplicationQuit()
         {
-            manager.dV.clearTempVars();
+            if (manager.dV != null)
+            {
+                manager.dV.clearTempVars();
+            }
+            
         }
     }
 }

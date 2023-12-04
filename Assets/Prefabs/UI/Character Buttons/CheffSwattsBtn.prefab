@@ -76,6 +76,8 @@ MonoBehaviour:
   - Thu
   - Tue
   - Wed
+  - brushOff
+  - CSFinale
   sDictValue:
   - {fileID: 21300000, guid: f6208e39c56e08b4598c00394e192c0e, type: 3}
   - {fileID: 21300000, guid: ce5eaec2011c9f44dbcc544d9dfd391d, type: 3}
@@ -99,6 +101,8 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 3dc0b93e9ba7a2e42b4ed0a982095fcc, type: 3}
   - {fileID: 4900000, guid: 3c0d97bba0158914f9b1464b32e8bf1b, type: 3}
   - {fileID: 4900000, guid: fd933fbde340c334daa91f3a2892af43, type: 3}
+  - {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
+  - {fileID: 4900000, guid: 3e255e368ab93f5499dfd87d2e71c2ea, type: 3}
 --- !u!222 &3453327873401711260
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -7,12 +7,14 @@ namespace InterDineMension.Character
 {
     public class Graciana : CharBtnParent
     {
-        
+        public Dictionary<string, Sprite> GrspriteDictionary;
+        public Dictionary<string, TextAsset> GrdialogueDictionary;
+
         // Start is called before the first frame update
         void Start()
         {
             //stuff
-            spriteDictionary = new Dictionary<string, Sprite>();
+            GrspriteDictionary = new Dictionary<string, Sprite>();
             if (sDictKey.Length != sDictValue.Length)
             {
                 Debug.LogWarning("The length of moods is different then the list of sprites");
@@ -22,10 +24,10 @@ namespace InterDineMension.Character
             {
                 for (int i = 0; i < sDictKey.Length; i++)
                 {
-                    spriteDictionary.Add(sDictKey[i], sDictValue[i]);
+                    GrspriteDictionary.Add(sDictKey[i], sDictValue[i]);
                 }
             }
-            dialogueDictionary = new Dictionary<string, TextAsset>();
+            GrdialogueDictionary = new Dictionary<string, TextAsset>();
             if (dDictKey.Length != dDictValue.Length)
             {
                 Debug.LogWarning("The length of dialogue is different then the list of dialogue assets");
@@ -35,7 +37,7 @@ namespace InterDineMension.Character
             {
                 for (int i = 0; i < dDictKey.Length; i++)
                 {
-                    dialogueDictionary.Add(dDictKey[i], dDictValue[i]);
+                    GrdialogueDictionary.Add(dDictKey[i], dDictValue[i]);
                 }
             }
         }

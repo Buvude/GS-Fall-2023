@@ -9,6 +9,9 @@ namespace InterDineMension
     using MicroGame;
     using Manager;
     using JetBrains.Annotations;
+    using UnityEngine.SceneManagement;
+    using UnityEditor;
+    using System.Runtime.CompilerServices;
 
     public class InkExternalFunctions
     {
@@ -36,6 +39,9 @@ namespace InterDineMension
 
         public void Bind(Story currentStory, BAManeger bAM, Microgamecontroller mGC, dialogueManager dM)
         {
+            currentStory.BindExternalFunction("StartBAMPractice",()=>{
+                SceneManager.LoadScene(2);
+            });
             currentStory.BindExternalFunction("StartBAMicro1", () =>
             {
                 mGC.StartBAM(1);
@@ -72,16 +78,38 @@ namespace InterDineMension
             });
             currentStory.BindExternalFunction("StartTTMicro", () =>
             {
+                dM.QuickSave();
+                PlayerPrefs.SetString("currentConvo", currentStory.variablesState["currentConvo"].ToString());
                 mGC.loadTTM();
             });
             currentStory.BindExternalFunction("SaveGame", () =>
             {
-                mGC.dM.dV = new DialogueVariables(currentStory);
-                mGC.dM.SaveGame();
+                dM.dV = new DialogueVariables(currentStory);
+                dM.SaveGame();
             });
             currentStory.BindExternalFunction("QuickSave", () =>
             {
+                dM.dV = new DialogueVariables(currentStory);
                 dM.QuickSave();
+            });
+            currentStory.BindExternalFunction("QuickLoad", () =>
+            {
+                dM.dV = new DialogueVariables(currentStory);
+                dM.QuickLoad();
+            });
+            currentStory.BindExternalFunction("NewDay", () =>
+            {
+                if (PlayerPrefs.GetString("weekDay") == "Sun")
+                {
+                    SceneManager.LoadScene(5);
+                }
+                else { SceneManager.LoadScene(1); }
+            });
+            currentStory.BindExternalFunction("GoToAppartment", () =>
+            {
+                PlayerPrefs.SetString("timeOfDay", "Night");
+                dM.SaveGame();
+                SceneManager.LoadScene(5);
             });
         }
 
@@ -95,6 +123,9 @@ namespace InterDineMension
             currentStory.UnbindExternalFunction("StartTTMicro");
             currentStory.UnbindExternalFunction("SaveGame");
             currentStory.UnbindExternalFunction("QuickSave");
+            currentStory.UnbindExternalFunction("QuickLoad");
+            currentStory.UnbindExternalFunction("NewDay");
+            currentStory.UnbindExternalFunction("GoToAppartment");
         }
     }
 }

@@ -10,6 +10,7 @@ namespace InterDineMension.MicroGame.BA
 
     public class PlayerController : MonoBehaviour
     {
+
         public BoxCollider2D bc2;
         public float speed;
         public Slider playerMovment;
@@ -25,7 +26,8 @@ namespace InterDineMension.MicroGame.BA
             beefPatty, mushroomPatty, unspeakableHorror,Chicken,withCheese,//patty type
             ketchup, mustard, both,mayo,slime,//condiment choice
             tomatoe, choppedOnions, none,mushrooms,onionRings,theThing,//final bonus choice
-            classicTopBun, lettuceWrapTop, noTopBun,topBunOfTheDeep, sourDoughTop, pretzelTop;//top bun choice
+            classicTopBun, lettuceWrapTop, noTopBun,topBunOfTheDeep, sourDoughTop, pretzelTop,
+            blank;//top bun choice
         public GameObject Lane1, Lane2, Lane3;
         public List<BurgerIngredients.ingredientType> ingredientTypes = new List<BurgerIngredients.ingredientType>();
         public enum lanePos
@@ -734,12 +736,19 @@ namespace InterDineMension.MicroGame.BA
         public void resetMiniGameSprites()
         {
             bottomBunRend.enabled = false;
+            bottomBunRend.sprite = blank;
             picklesRend.enabled = false;
+            picklesRend.sprite = blank;
             lettuceRend.enabled = false;
+            lettuceRend.sprite=blank;
             pattyRend.enabled = false;
+            pattyRend.sprite = blank;
             condimentRend.enabled = false;
+            condimentRend.sprite = blank;
             finalBonusRend.enabled = false;
+            finalBonusRend.sprite = blank;
             topBunRend.enabled = false;
+            topBunRend.sprite = blank;
         }
         public Image FindLowestNullRenderer()
         {

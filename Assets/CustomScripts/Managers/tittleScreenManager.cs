@@ -28,12 +28,26 @@ namespace InterDineMension.Manager
         public void NewGameStart()
         {
             PlayerPrefs.DeleteAll();
+            PlayerPrefs.SetString("newGame", "true");
+            PlayerPrefs.SetString("timeOfDay", "morning");
             SceneManager.LoadScene(1);
         }
 
         public void LoadGameStart()
         {
-            SceneManager.LoadScene(1);
+            if (PlayerPrefs.GetString("weekDay") != "Sun")
+            {
+                PlayerPrefs.SetString("newGame", "false");
+                PlayerPrefs.SetString("timeOfDay", "morning");
+                SceneManager.LoadScene(1);
+            }
+            else
+            {
+                PlayerPrefs.SetString("newGame", "false");
+                PlayerPrefs.SetString("timeOfDay", "Apt");
+                SceneManager.LoadScene(5);
+            }
+            
         }
 
         public void QuitGame()
