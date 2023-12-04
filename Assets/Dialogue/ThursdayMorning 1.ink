@@ -2,7 +2,7 @@
 // -> thursday
 EXTERNAL GoToDiner()
 // ==thursday==
-Hey Chef! Morning! #speaker:Graciana #mood:happy
+Hey Chef! Morning! #speaker:Graciana #mood:happy #bgm:dinMorning
 ...Chef? #speaker:Graciana #mood:think
 
 <i>...ZZZ...</i> #speaker:Chef Swatts
@@ -26,6 +26,6 @@ Nothin' in particular, was just experimentin' with some stuff. #speaker:Chef Swa
 
 Ya. Why wouldn't I? I had a lot of ideas! #speaker:Chef Swatts
 
-...I'm gonna open unlock the portal... #speaker:Graciana #mood:neutral
+...I'm gonna open unlock the portal... #speaker:Graciana #mood:neutral #bgm:dinDay
     ~GoToDiner()
     -> END
