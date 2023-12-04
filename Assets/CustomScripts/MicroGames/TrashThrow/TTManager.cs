@@ -41,7 +41,7 @@ namespace InterDineMension.MicroGame.TT
 
         public void initializeTTMiniGame()
         {
-            Debug.Log(vH.currentStory.variablesState["TTMLevel"]);
+            Debug.Log(vH.currentStory.variablesState["TTMLevel"]); 
             switch (vH.currentStory.variablesState["TTMLevel"].ToString())
             {
                 case "1":
@@ -81,7 +81,7 @@ namespace InterDineMension.MicroGame.TT
                     aS.clip = wrong; aS.Play();
                 }
 
-                if(score>=goal)
+                if(score>=goal||score<=goal*-1)
                 {
                     score = 0;
                     gameEnded = true;
@@ -92,7 +92,9 @@ namespace InterDineMension.MicroGame.TT
             }
             if(!timerHasStarted&&fallenObjects.Count>=1 && !gameEnded) 
             {
-                scoretxt.text = "";
+                instructions.text = "";
+                scoretxt.gameObject.SetActive(true);
+                scoretxt.text = $"<b>{score}/{goal}</b> pieces of trash sorted correctly"; 
                 timerHasStarted = true;
                 StartCoroutine(timer() );
             }
@@ -103,6 +105,7 @@ namespace InterDineMension.MicroGame.TT
 
         IEnumerator tallyUp()
         {
+            scoretxt.text = "";
             score=0; gameEnded = true;
             rc.player.GetComponent<Animator>().SetTrigger("End");
             timerHasEnded = true;
@@ -141,6 +144,10 @@ namespace InterDineMension.MicroGame.TT
             {
                 PlayerPrefs.SetString("winStatus", "won");
             }
+            /*else if (score <= goal * -1)
+            {
+                PlayerPrefs.SetString("winStatus", "chaos");
+            }*/
             else
             {
                 PlayerPrefs.SetString("winStatus", "lost");
@@ -150,6 +157,12 @@ namespace InterDineMension.MicroGame.TT
                 case "practiceT":
                     {
                         SceneManager.LoadScene(5);
+                        break;
+                    }
+                case "finale":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
                         break;
                     }
                 default:

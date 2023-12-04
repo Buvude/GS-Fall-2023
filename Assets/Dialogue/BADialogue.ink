@@ -67,6 +67,25 @@ VAR tempHolder =""
         ~StartBAMicro3()
         Aight! Graciana, get ready! It's comin' in hot! #speaker:Chef Swatts
 ->DONE
+      -BAMLevel==3:
+         Make me a burger, no peaking at the order #speaker:O'Ryan #mood:neutral
+        ~tempHolder=pop_random(BBuns3)
+        bottom is {tempHolder}. #BBun:{tempHolder}
+        ~tempHolder=pop_random(Pickles3)
+        With {tempHolder} on top #Pickles:{tempHolder}
+        ~tempHolder=pop_random(Greens3)
+        with {tempHolder}. #lettuce:{tempHolder}
+        ~tempHolder=pop_random(patty3)
+        and {tempHolder} patty. #patty:{tempHolder}
+        ~tempHolder=pop_random(Condiments3)
+        squirt of {tempHolder}...#Condiments:{tempHolder}
+        ~tempHolder=pop_random(Veggies3)
+        and {tempHolder}...#veggie:{tempHolder}
+        ~tempHolder=pop_random(TBuns3)
+        And {tempHolder} on top.#TBun:{tempHolder}
+        ~StartBAMicro3()
+        prepare yourself, there will be no redos. #speaker:O'Ryan
+->DONE
 }
 
 

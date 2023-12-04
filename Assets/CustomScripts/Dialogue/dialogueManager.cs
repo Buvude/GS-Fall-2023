@@ -159,16 +159,17 @@ namespace InterDineMension.Manager
                 }
                 else if (PlayerPrefs.GetString("timeOfDay") == "morning")
                 {
-                    QuickSave();
+                    PPSave();
                 }
 
                 //QuickSave();
                 if (PlayerPrefs.GetString("newGame").Equals("false"))
                 {
+                    Debug.Log("test");
                     useSaveSystem = true;
                     //Debug.Log("Using save system");
                     dV.LoadVariables();
-                    QuickSave();
+                    PPSave();
                 }
             }
             PlayerPrefs.SetString("newGame", "false");
@@ -258,6 +259,12 @@ namespace InterDineMension.Manager
              PlayerPrefs.SetString("savedjson", savedjson);*/
             dV.QuickSaveVariables();
         }
+        public void PPSave()
+        {
+            quicksaved = true;
+            dV.PPSave();
+
+        }
 
         public void QuickLoad()
         {
@@ -269,6 +276,7 @@ namespace InterDineMension.Manager
             charSpeakTo = speakingTo.Swatts;
             if (PlayerPrefs.GetInt("convo_numberOR") == 6)
             {
+                cS.sR.sprite = cS.CsspriteDictionary["neutral"];
                 PlayerPrefs.SetString("weekDayT", "Fin");
                 QuickLoad();
                 EnterDialogueMode(cS.CsdialogueDictionary["CSFinale"]);
@@ -284,6 +292,7 @@ namespace InterDineMension.Manager
 
                         /* EnterDialogueMode(cS.ORdialogueDictionary["morning"]);*/
                         morning = true;
+                        cS.sR.sprite= cS.CsspriteDictionary["neutral"];
                         EnterDialogueMode(cS.CsdialogueDictionary[PlayerPrefs.GetString("weekDayT")]);
                         break;
                 }
@@ -300,6 +309,24 @@ namespace InterDineMension.Manager
                 case "NMG1":
 
                     break;
+                case "finale":
+                    {
+                        switch (PlayerPrefs.GetString("winStatus"))
+                        {
+                            case "won":
+                                EnterDialogueMode(oR.ORdialogueDictionary["finalTTPass"]);
+                                break;
+                            case "lost":
+                                EnterDialogueMode(oR.ORdialogueDictionary["finalTTFail"]);
+                                break;
+                            case "chaos":
+                                EnterDialogueMode(oR.ORdialogueDictionary["finalTTChaos"]);
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    }
                 default:
                     break;
             }
@@ -364,7 +391,10 @@ namespace InterDineMension.Manager
             switch (charSpeakTo)
             {
                 case speakingTo.O_Ryan:
-                    //start dialogue option
+                    PlayerPrefs.SetString("currentConvo", "finale");
+                    QuickLoad();
+                    oR.sR.sprite = oR.ORspriteDictionary["neutral"];
+                    EnterDialogueMode(oR.ORdialogueDictionary["final"]);
                     break;
                 case speakingTo.Swatts:
                     {
