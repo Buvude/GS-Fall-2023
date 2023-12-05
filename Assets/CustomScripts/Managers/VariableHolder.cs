@@ -7,6 +7,8 @@ namespace InterDineMension.Manager
 {
     public class VariableHolder : MonoBehaviour
     {
+        public TextAsset preventFarming;
+        internal Story preventFarmingStory;
         public bool wonMini = false;
         public Story currentStory;
         public TextAsset curStor;
@@ -26,6 +28,7 @@ namespace InterDineMension.Manager
         // Start is called before the first frame update
         void Awake()
         {
+            preventFarmingStory = new Story(preventFarming.text);
             if (instance != null)
             {
                 Destroy(this.gameObject);

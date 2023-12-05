@@ -6,9 +6,13 @@ using System.IO;
 using UnityEditor.Experimental;
 using UnityEditor;
 using Unity.VisualScripting;
+using System;
 
 namespace InterDineMension
 {
+    using InterDineMension.Manager;
+    using UnityEngine.SceneManagement;
+
     public class DialogueVariables
     {
         public Dictionary<string, Ink.Runtime.Object> variables {  get; private set; }
@@ -16,6 +20,8 @@ namespace InterDineMension
         internal Story globalVariablesStory;
 
         private const string saveVariablesKey = "INK_VARIABLES";
+
+        
         
 
         
@@ -129,8 +135,9 @@ namespace InterDineMension
             PlayerPrefs.Save();
         }
 
-        public void clearTempVars()
+        public void clearTempVars(VariableHolder vH)
         {
+            PreventFarming(vH);
             PlayerPrefs.DeleteKey("newGame");
 
             PlayerPrefs.DeleteKey("winStatus");
@@ -175,7 +182,21 @@ namespace InterDineMension
 
             PlayerPrefs.DeleteKey("currentConvo");
             PlayerPrefs.DeleteKey("winStatus");
+
+            PlayerPrefs.SetString("timeOfDay", "morning");
+
+            
         }
+
+        private void PreventFarming(VariableHolder vH)
+        {
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(5))//prevents farming by quiting once appartment is loaded in. will force you to the next day. 
+            {
+                vH.dM.EnterDialogueMode(vH.preventFarming);
+            }
+            
+        }
+
         public void SaveVariables()
         {
             if(globalVariablesStory != null)

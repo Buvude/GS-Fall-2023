@@ -116,6 +116,7 @@ namespace InterDineMension.Manager
         internal bool morning;
         private void Awake()
         {
+            
             if (sfxTittles.Count == sfxSounds.Count)
             {
                 for (int i = 0; i < sfxTittles.Count; i++)
@@ -159,7 +160,8 @@ namespace InterDineMension.Manager
                 }
                 else if (PlayerPrefs.GetString("timeOfDay") == "morning")
                 {
-                    PPSave();
+                    if (PlayerPrefs.GetString("newGame") != "false") { PPSave(); }
+                    else { QuickSave(); }
                 }
 
                 //QuickSave();
@@ -285,7 +287,7 @@ namespace InterDineMension.Manager
             {
                 switch (PlayerPrefs.GetInt("dayVarT"))//so it defaults to the random quip thing unless there is something specific for CS to say today
                 {
-                    case 1:
+                    case 0:
                         EnterDialogueMode(cS.CsdialogueDictionary["gameIntro"]);
                         break;
                     default:
