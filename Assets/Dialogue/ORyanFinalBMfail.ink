@@ -19,7 +19,7 @@ Garbage next.
 
 U-uh, right, okay! #speaker:Graciana
 ~TTMLevel=3
-
+~timeOfDay="afternoon"
 ~QuickSave()
 ~StartTTMicro()
     -> END

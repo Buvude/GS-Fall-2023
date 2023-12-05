@@ -152,7 +152,7 @@ namespace InterDineMension.Manager
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
             dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(currentStory);
-            if (PlayerPrefs.GetString("currentConvo")!="practiceT"&&PlayerPrefs.GetString("currentConvo")!="practiceB")
+            if (PlayerPrefs.GetString("currentConvo")!="practiceT"&&PlayerPrefs.GetString("currentConvo")!="practiceB"&&PlayerPrefs.GetString("currentConvo")!="finale")
             {
                 if (PlayerPrefs.GetString("timeOfDay") == "night")
                 {
@@ -160,8 +160,9 @@ namespace InterDineMension.Manager
                 }
                 else if (PlayerPrefs.GetString("timeOfDay") == "morning")
                 {
-                    if (PlayerPrefs.GetString("newGame") != "false") { PPSave(); }
-                    else { QuickSave(); }
+                    
+                    if (PlayerPrefs.GetString("newGame") != "false") { Debug.Log("quicksave lacation test"); PPSave(); }
+                    else {  QuickSave(); }
                 }
 
                 //QuickSave();
@@ -279,7 +280,7 @@ namespace InterDineMension.Manager
             if (PlayerPrefs.GetInt("convo_numberOR") == 6)
             {
                 cS.sR.sprite = cS.CsspriteDictionary["neutral"];
-                PlayerPrefs.SetString("weekDayT", "Fin");
+                PlayerPrefs.SetString("weekDay", "Fin");
                 QuickLoad();
                 EnterDialogueMode(cS.CsdialogueDictionary["CSFinale"]);
             }
@@ -313,6 +314,8 @@ namespace InterDineMension.Manager
                     break;
                 case "finale":
                     {
+                        charSpeakTo = speakingTo.O_Ryan;
+                        //QuickLoad();
                         switch (PlayerPrefs.GetString("winStatus"))
                         {
                             case "won":
@@ -332,6 +335,7 @@ namespace InterDineMension.Manager
                 default:
                     break;
             }
+           
         }
         public static dialogueManager GetInstance()
         {
@@ -608,7 +612,7 @@ namespace InterDineMension.Manager
             {
                 if (quicksaved)
                 {
-                    QuickSave();
+                    PPSave();
                 }
                 currentStory = new Story(inkJSON.text);
                 if (quicksaved)
@@ -702,6 +706,7 @@ namespace InterDineMension.Manager
                 }
             }
             
+
             /*currentStory.BindExternalFunction("StartBAMicro", () =>
             {
                  Debug.Log("called StartBAMicro");
@@ -710,6 +715,7 @@ namespace InterDineMension.Manager
             iEF.Bind(currentStory,bAM,mGC,this);
             vH.currentStory = currentStory;
             morning = false;
+
             ContinueStory();
         }
 
@@ -725,12 +731,18 @@ namespace InterDineMension.Manager
 
         private void ContinueStory()
         {
+
             if (currentStory.canContinue)
             {
                 //set text for current dialogue line
                 if (displayLineCorutine != null)
                 {
+
+                    oR.sR.sprite = oR.ORspriteDictionary["neutral"];
+
                     StopCoroutine(displayLineCorutine);
+                    oR.sR.sprite = oR.ORspriteDictionary["neutral"];
+
 
                 }
                 displayLineCorutine = StartCoroutine(DisplayLine(currentStory.Continue()));
@@ -744,9 +756,12 @@ namespace InterDineMension.Manager
 
             else
             {
+                Debug.Log("error test");
+
                 ExitDialogueMode(false,0,"ContinueStory",true);
                 dPTest.enabled = false;
             }
+
         }
 
         /// <summary>
@@ -832,9 +847,11 @@ namespace InterDineMension.Manager
                             {
                                 case speaker.Graciana:
                                     {
-                                        grac.sR.sprite = grac.GrspriteDictionary[tagValue];
+
+                                        grac.sR.sprite = grac.GrspriteDictionary[tagValue];                                        
+                                        break;
                                     }
-                                    break;
+                                    
                                 case speaker.Swatts:
                                     {
                                         cS.sR.sprite = cS.CsspriteDictionary[tagValue];

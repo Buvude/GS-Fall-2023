@@ -1,3 +1,4 @@
+===GoodGameEnd===
 ... #speaker:O'Ryan
 And then, you arrived.
 

@@ -20,7 +20,8 @@ Take out the garbage.
 
 R-right! #speaker:Graciana
 ~TTMLevel=3
-
+~timeOfDay="afternoon"
 ~QuickSave()
 ~StartTTMicro()
     -> END
+~timeOfDay="afternoon"

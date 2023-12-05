@@ -26,7 +26,7 @@ namespace InterDineMension.MicroGame.TT
         public BoxCollider2D topCollider;
         public bool gameEnded=false;
         public const int SCORE1=3, SCORE2=6, SCORE3=9;
-
+        internal Coroutine timerCo;
         // Start is called before the first frame update
         void Start()
         {
@@ -41,7 +41,7 @@ namespace InterDineMension.MicroGame.TT
 
         public void initializeTTMiniGame()
         {
-            Debug.Log(vH.currentStory.variablesState["TTMLevel"]); 
+            Debug.Log(vH.currentStory.variablesState["TTMLevel"]);  
             switch (vH.currentStory.variablesState["TTMLevel"].ToString())
             {
                 case "1":
@@ -85,7 +85,7 @@ namespace InterDineMension.MicroGame.TT
                 {
                     score = 0;
                     gameEnded = true;
-                    StopCoroutine(timer() );
+                    StopCoroutine(timerCo );
                     StartCoroutine(tallyUp() );
                     topCollider.enabled = false;
                 }
@@ -96,7 +96,8 @@ namespace InterDineMension.MicroGame.TT
                 scoretxt.gameObject.SetActive(true);
                 scoretxt.text = $"<b>{score}/{goal}</b> pieces of trash sorted correctly"; 
                 timerHasStarted = true;
-                StartCoroutine(timer() );
+                if (!timerHasEnded) {timerCo= StartCoroutine(timer()); }
+                
             }
 
         }
@@ -109,6 +110,7 @@ namespace InterDineMension.MicroGame.TT
             score=0; gameEnded = true;
             rc.player.GetComponent<Animator>().SetTrigger("End");
             timerHasEnded = true;
+            StopCoroutine(timerCo);
             rc.speed = 0f;
             instructions.text=$"Score: {score}/{goal}";
 
@@ -187,15 +189,23 @@ namespace InterDineMension.MicroGame.TT
         }
         IEnumerator timer()
         {
-            for (int i = timeLimit; i>=0; i--)
+            if (!gameEnded)
             {
-                timerText.text = $"{i} seconds";
-                yield return new WaitForSeconds(1);
+                for (int i = timeLimit; i >= 0; i--)
+                {
+                    timerText.text = $"{i} seconds";
+                    yield return new WaitForSeconds(1);
+                }
+                topCollider.enabled = false;
+                StartCoroutine(tallyUp());
+                gameEnded = true;
+                StopCoroutine(timerCo);
             }
-            topCollider.enabled = false;   
-            StartCoroutine(tallyUp());
-            gameEnded = true;
-            StopCoroutine(timer());
+            else
+            {
+                yield return new WaitForEndOfFrame();
+            }
+            
         }
     }
 }

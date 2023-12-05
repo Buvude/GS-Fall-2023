@@ -85,7 +85,7 @@ namespace InterDineMension
             PlayerPrefs.SetInt("TTMLevel", int.Parse(globalVariablesStory.variablesState["TTMLevel"].ToString()));
             PlayerPrefs.SetInt("TBMLevel", int.Parse(globalVariablesStory.variablesState["TBMLevel"].ToString()));
 
-            PlayerPrefs.SetString("currentConvo", globalVariablesStory.variablesState["currentConvo"].ToString());
+            PlayerPrefs.SetString("currentConvo", PlayerPrefs.GetString("currentConvo"));
         }
         public void QuickSaveVariables()
         {
@@ -126,6 +126,7 @@ namespace InterDineMension
             PlayerPrefs.SetInt("TTMLevel", int.Parse(globalVariablesStory.variablesState["TTMLevel"].ToString()));
             PlayerPrefs.SetInt("TBMLevel", int.Parse(globalVariablesStory.variablesState["TBMLevel"].ToString()));
 
+            PlayerPrefs.SetString("timeOfDay", globalVariablesStory.variablesState["timeOfDay"].ToString());
             PlayerPrefs.SetString("currentConvo", globalVariablesStory.variablesState["currentConvo"].ToString());
 
 

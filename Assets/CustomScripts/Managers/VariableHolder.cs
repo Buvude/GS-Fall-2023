@@ -25,6 +25,8 @@ namespace InterDineMension.Manager
             finalEncounterTracker;//used to keep track of wins and losses in the final encounter with */
         //public bool characterStateNico;
         private static VariableHolder instance;
+        public bool testTest;
+
         // Start is called before the first frame update
         void Awake()
         {
@@ -43,7 +45,10 @@ namespace InterDineMension.Manager
         // Update is called once per frame
         void Update()
         {
-            
+            if (PlayerPrefs.GetString("currentConvo") == "test"&&testTest)
+            {
+                Debug.Break();
+            }
         }
     }
 }

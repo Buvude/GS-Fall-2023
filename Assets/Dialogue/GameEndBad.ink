@@ -1,3 +1,4 @@
+===BadGameEnd===
 ... #speaker:O'Ryan
 And it appears things will remain that way for quite some time.
 

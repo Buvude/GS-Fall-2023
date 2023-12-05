@@ -21,7 +21,7 @@ Garbage time.
 O-okay...! #speaker:Graciana #mood:neutral
 
 ~TTMLevel=3
-
+~timeOfDay="afternoon"
 ~QuickSave()
 ~StartTTMicro()
 -> END
