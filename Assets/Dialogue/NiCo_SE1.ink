@@ -539,5 +539,4 @@ Of course. Hope you come back soon! #speaker:Graciana
 ~currentConvo="NMG1"
 ~timeOfDay="afternoon"
 //trash minigame will go here. i'm not sure if putting in cece out of nowhere will break the game, so i'm leaving it like this for now once that's fully implemented
-
 -> DONE
