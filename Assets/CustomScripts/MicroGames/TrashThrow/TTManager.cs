@@ -15,7 +15,7 @@ namespace InterDineMension.MicroGame.TT
         public VariableHolder vH;
         public float scorepause;
         public int score, goal;
-        public AudioClip correct, wrong;
+        public AudioClip correct, wrong, cosmic;
         public AudioSource aS;
         public int timeLimit;
         public TextMeshProUGUI timerText, instructions, scoretxt;
@@ -56,7 +56,7 @@ namespace InterDineMension.MicroGame.TT
                     recycling.SetActive(true);
                     compost.SetActive(true);
                     rc.player.options.Add(recyclingBag);
-                    rc.player.options.Add(compostBag);
+                    //rc.player.options.Add(compostBag);
                     break;
                 default:
                     break;
@@ -74,6 +74,12 @@ namespace InterDineMension.MicroGame.TT
                 {
                     aS.clip = correct; aS.Play();
                     score++;
+                    scoretxt.text = $"<b>{score}/{goal}</b> pieces of trash sorted correctly";
+                }
+                else if (fallenObjects[fOSize - 1].cosmic)
+                {
+                    aS.clip = cosmic; aS.Play();
+                    score--;
                     scoretxt.text = $"<b>{score}/{goal}</b> pieces of trash sorted correctly";
                 }
                 else
@@ -124,6 +130,14 @@ namespace InterDineMension.MicroGame.TT
                     f.transform.localScale.Set(1, 1, 1);
                     PlusPoint(f);
                 }
+                else if (f.cosmic)
+                {
+                    f.transform.parent = null;
+                    f.transform.localScale.Set(1,1,1);
+                    f.gameObject.SetActive(true);
+                    MinusPoint(f);
+                    
+                }
                 else
                 {
                     f.gameObject.SetActive(true);
@@ -146,10 +160,10 @@ namespace InterDineMension.MicroGame.TT
             {
                 PlayerPrefs.SetString("winStatus", "won");
             }
-            /*else if (score <= goal * -1)
+            else if (score <= goal * -1)
             {
                 PlayerPrefs.SetString("winStatus", "chaos");
-            }*/
+            }
             else
             {
                 PlayerPrefs.SetString("winStatus", "lost");
@@ -167,6 +181,19 @@ namespace InterDineMension.MicroGame.TT
                         SceneManager.LoadScene(1);
                         break;
                     }
+                case "NMG1":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+                case "NMG2":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+
                 default:
                     break;
             }
@@ -178,6 +205,15 @@ namespace InterDineMension.MicroGame.TT
             f.gameObject.layer = 7;
             f.gameObject.GetComponent<Rigidbody2D>().gravityScale = -10f;
             aS.clip= correct;aS.Play();
+            instructions.text = $"Score: {score}/{goal}";
+        }
+        public void MinusPoint(FallingObjectScript f)
+        {
+            f.gameObject.layer = 7;
+            score--;
+            f.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f;
+            f.animator.enabled = true;
+            aS.clip=cosmic;aS.Play();
             instructions.text = $"Score: {score}/{goal}";
         }
 

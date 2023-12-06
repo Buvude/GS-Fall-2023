@@ -1,3 +1,4 @@
+INCLUDE globals.ink
 Phew... Feels like I barely made it through today... #speaker:Graciana #bgm:dinNight
 
 (The portal activates, and O'Ryan steps through.)
@@ -18,5 +19,5 @@ Thanks... Just gotta finish cleaning up, and everything should be all set.
 (O'Ryan nods, turns, and leaves the diner through the portal.) #speaker:Graciana
 
 Alright... I still got a lotta cleaning to do...
-
+~GoToAppartment()
     -> DONE

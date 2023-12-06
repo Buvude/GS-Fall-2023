@@ -1,6 +1,6 @@
 INCLUDE globals.ink
 // EXTERNAL GoToAppartment()
-Gnomies says fuck.jpeg
+Gnomies says placeholder
 *[good option]
     ~affectionG+=1
     ->EndConvo

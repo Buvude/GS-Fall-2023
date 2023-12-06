@@ -137,7 +137,17 @@ namespace InterDineMension
                 dM.SaveGame();
                 SceneManager.LoadScene(5);
             });
-            
+            currentStory.BindExternalFunction("EndGame", () =>
+            {
+                PlayerPrefs.DeleteAll();
+                SceneManager.LoadScene(0);
+            });
+            currentStory.BindExternalFunction("EndGame2", () =>
+            {
+                PlayerPrefs.DeleteAll();
+                Application.Quit();
+            });
+
         }
 
         public void unBind(Story currentStory)
@@ -153,6 +163,8 @@ namespace InterDineMension
             currentStory.UnbindExternalFunction("QuickLoad");
             currentStory.UnbindExternalFunction("NewDay");
             currentStory.UnbindExternalFunction("GoToAppartment");
+            currentStory.UnbindExternalFunction("EndGame");
+            currentStory.UnbindExternalFunction("EndGame2");
         }
     }
 }

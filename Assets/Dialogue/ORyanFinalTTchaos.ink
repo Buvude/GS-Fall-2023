@@ -1,5 +1,6 @@
-// INCLUDE globals.ink
+INCLUDE globals.ink
 INCLUDE ORyanFinalAfterMinigames.ink
+~chaosOR+=1
 ... #speaker:Graciana #mood:think
 
 ... #speaker:O'Ryan

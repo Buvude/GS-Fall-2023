@@ -1,7 +1,8 @@
-INCLUDE globals.ink
+// INCLUDE globals.ink
 INCLUDE GameEndBad.ink
 INCLUDE GameEndGood.ink
 INCLUDE GameEndChaos.ink
+INCLUDE CreditsPlaceHolder.ink
 
 ===Oryanfinale===
 ... #speaker:O'Ryan

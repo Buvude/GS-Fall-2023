@@ -1,3 +1,7 @@
+INCLUDE globals.ink
+EXTERNAL StartTTMicro()
+~currentConvo="NMG1"
+~QuickSave()
 (Huh, did someone leave their computer behind...?) #speaker:Graciana
 (I think they might've left it on... It doesn't seem to be in great condition.)
 (...)
@@ -119,4 +123,10 @@ I, uh, think I'm just gonna, go do some dishes now, uh... #speaker:Graciana
 What started as a humble garage start-up in the technology industry rapidly evolved into the most profitable corporation on the entirety of MX-3319! #speaker:NiCo
 
 Just, uh, call me over when you're... Done? #speaker:Graciana
-    -> END
+There will be a transistion where CeeCee tells you to take out the trash here.
+
+~TTMLevel=1
+~timeOfDay="afternoon"
+~QuickSave()
+~StartTTMicro()
+-> END

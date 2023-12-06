@@ -7,19 +7,31 @@ Hey NiCo! #speaker:Graciana #mood:happy
 
 Oh... Hey, Graciana. #speaker:NiCo #mood:neutral
 
-* [What's goin' on?]
-
-What's goin' on, NiCo? #speaker:Graciana
-
-Nothing, just the usual. #speaker:NiCo
-
-Usual being...? #speaker:Graciana #mood:think
+    * [What's goin' on?]
+    
+    What's goin' on, NiCo? #speaker:Graciana
+    
+    Nothing, just the usual. #speaker:NiCo
+    
+    Usual being...? #speaker:Graciana #mood:think
+    ->CalculateEnding
 //Here, divert to the corresponding ending. I gotta discuss with you (David) about how to integrate that exactly. Might be better to move some stuff around, if possible.
 //If not, at least I got it in inky so i can just copy-paste if needed lol
 * [Oops, nevermind!]
     -> DONE
-    
+   
+   
+===CalculateEnding===
+{
+-chaosN>=chaosTotalN:
+    ->NiCoChaosEnding
+-affectionN>=0:
+    ->NiCoGoodEnding
+-affectionN<0:
+    ->NiCoBadEnding
+}
 ==NiCoGoodEnding==
+~affectionOR+=1
 ... #speaker:NiCo
 You know what? No.
 Things are actually fairly good.
@@ -75,9 +87,11 @@ You gave me the push I needed. Thank you. #speaker:NiCo #mood:happy
 
 Well... I'm flattered. #speaker:Graciana #mood:happy
 I was just doing my job, after all!
+->EndConvo
 //CG goes here
 
 ==NiCoBadEnding==
+~affectionOR-=1
 Not great. #speaker:NiCo
 N-not great a-a-a-at all, actually. #speaker:NiCo #mood:error
 
@@ -122,9 +136,11 @@ Maybe...
 Maybe I can do something, eventually.
 My programming skills are a little rusty, but...
 I'll see what I can do, NiCo...
+->EndConvo
 //CG goes here
 
 ==NiCoChaosEnding==
+~chaosOR+=1
 Actually... #speaker:NiCo
 Things have gotten rather interesting since last time we chatted, Graciana. #speaker:NiCo #mood:smug
 
@@ -189,4 +205,13 @@ Just... Be careful, y'know? #speaker:Graciana #mood:think
 
 Of course, I understand. #speaker:NiCo
 We shall see.
+->EndConvo
 //CG goes here
+
+===EndConvo===
+~convo_numberN+=1
+~convo_numberOR+=1
+~SaveGame()
+~GoToAppartment()
+// ~StartO_Ryan()
+->DONE

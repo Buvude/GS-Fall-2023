@@ -472,7 +472,7 @@ namespace InterDineMension.MicroGame.BA
                         final.enabled = true;
                         break;
                     }
-                case <= 2:
+                case < 5:
                     {
                         finishedBurger.sprite = BadBurger;
                         final.enabled = true;

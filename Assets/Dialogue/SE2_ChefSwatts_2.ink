@@ -166,6 +166,7 @@
     (I really hope Swatts does the right thing here. The insectica seem to have been suffering for centuries--this could be their chance at freedom.)
     (But for now... I still have some more cleaning to do.)
     ~convo_numberCS=2
+    ~QuickSave()
     // ~GoToAppartment()
     ~StartO_Ryan()
     ->DONE

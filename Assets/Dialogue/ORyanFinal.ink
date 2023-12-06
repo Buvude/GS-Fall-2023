@@ -1,6 +1,6 @@
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
-EXTERNAL QuickLoad()
+// EXTERNAL QuickLoad()
 ->start
 ==start==
 ~QuickLoad()

@@ -154,19 +154,19 @@ namespace InterDineMension.Manager
             dV = new DialogueVariables(currentStory);
             if (PlayerPrefs.GetString("currentConvo")!="practiceT"&&PlayerPrefs.GetString("currentConvo")!="practiceB"&&PlayerPrefs.GetString("currentConvo")!="finale")
             {
-                if (PlayerPrefs.GetString("timeOfDay") == "night")
+                if (PlayerPrefs.GetString("timeOfDay") == "Apt")
                 {
                     QuickLoad();
                 }
                 else if (PlayerPrefs.GetString("timeOfDay") == "morning")
                 {
-                    
-                    if (PlayerPrefs.GetString("newGame") != "false") { Debug.Log("quicksave lacation test"); PPSave(); }
-                    else {  QuickSave(); }
+
+                    if (PlayerPrefs.GetString("newGame") != "false") { Debug.Log("quicksave lacation test"); PPSave(); QuickLoad(); }
+                    else { QuickSave(); }
                 }
 
                 //QuickSave();
-                if (PlayerPrefs.GetString("newGame").Equals("false"))
+                if (PlayerPrefs.GetString("newGame").Equals("false") && PlayerPrefs.GetString("timeOfDay") == "morning")
                 {
                     Debug.Log("test");
                     useSaveSystem = true;
@@ -296,7 +296,8 @@ namespace InterDineMension.Manager
                         /* EnterDialogueMode(cS.ORdialogueDictionary["morning"]);*/
                         morning = true;
                         cS.sR.sprite= cS.CsspriteDictionary["neutral"];
-                        EnterDialogueMode(cS.CsdialogueDictionary[PlayerPrefs.GetString("weekDayT")]);
+                        
+                        EnterDialogueMode(cS.CsdialogueDictionary[PlayerPrefs.GetString("weekDay")]);
                         break;
                 }
             }
@@ -310,7 +311,13 @@ namespace InterDineMension.Manager
             switch (PlayerPrefs.GetString("currentConvo"))
             {
                 case "NMG1":
-
+                    EnterDialogueMode(N.NdialogueDictionary["postMini"]);
+                    break;
+                case "NMG2":
+                    EnterDialogueMode(N.NdialogueDictionary["postMini"]);
+                    break;
+                case "NMG3":
+                    EnterDialogueMode(N.NdialogueDictionary["postMini"]);
                     break;
                 case "finale":
                     {
@@ -408,21 +415,26 @@ namespace InterDineMension.Manager
                         {
                             case 0:
                                 {
+                                    morning = false;
                                     EnterDialogueMode(cS.CsdialogueDictionary["cSTalkTo1"]);
                                     break;
                                 }
                             case 1:
                                 {
+                                    morning = false;
+                                    
                                     EnterDialogueMode(cS.CsdialogueDictionary["cSTalkTo2"]);
                                     break;
                                 }
                             case 2:
                                 {
+                                    morning = false;
                                     EnterDialogueMode(cS.CsdialogueDictionary["cSTalkTo3"]);
                                     break;
                                 }
                             case >=3:
                                 {
+                                    morning = false;
                                     EnterDialogueMode(cS.CsdialogueDictionary["brushOff"]);
                                     break;
                                 }
@@ -564,16 +576,25 @@ namespace InterDineMension.Manager
                     {
                         case 0:
                             {
-                                EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NTalkTo1"]);
+                                    morning = false;
+                                convoModeImages.SetActive(true);
+                                PlayerPrefs.SetString("currentConvo", "NMG1");
+                                EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NicoIntro"]);
                                 break;
                             }
                         case 1:
                             {
+                                    morning = false;
+                                convoModeImages.SetActive(true);
+                                PlayerPrefs.SetString("currentConvo", "NMG2");
                                 EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NTalkTo2"]);
                                 break;
                             }
                         case 2:
                             {
+                                    morning = false;
+                                convoModeImages.SetActive(true);
+                                PlayerPrefs.SetString("currentConvo", "NMG3");
                                 EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NTalkTo3"]);
                                 break;
                             }
@@ -611,8 +632,13 @@ namespace InterDineMension.Manager
             if (!morning)
             {
                 if (quicksaved)
-                {
-                    PPSave();
+                {/*
+                    if (PlayerPrefs.GetString("weekDayT") == "Tut")
+                    {
+                        QuickSave();
+                    }
+                    else { PPSave(); }*/
+                    QuickSave();
                 }
                 currentStory = new Story(inkJSON.text);
                 if (quicksaved)
@@ -622,7 +648,9 @@ namespace InterDineMension.Manager
             }
             else
             {
+                //QuickSave();
                 currentStory = new Story(inkJSON.text);
+                //QuickLoad();
             }
 
             
@@ -738,10 +766,10 @@ namespace InterDineMension.Manager
                 if (displayLineCorutine != null)
                 {
 
-                    oR.sR.sprite = oR.ORspriteDictionary["neutral"];
+                    //oR.sR.sprite = oR.ORspriteDictionary["neutral"];
 
                     StopCoroutine(displayLineCorutine);
-                    oR.sR.sprite = oR.ORspriteDictionary["neutral"];
+                    //oR.sR.sprite = oR.ORspriteDictionary["neutral"];
 
 
                 }
@@ -977,7 +1005,7 @@ namespace InterDineMension.Manager
                         }
                         else
                         {
-                            Debug.LogError($"parsing the speaker tag \"{tagValue}\" ");
+                            Debug.LogWarning($"parsing the speaker tag \"{tagValue}\" ");
                         }
                         break;
                     case BBUN_TAG:
@@ -1200,7 +1228,12 @@ namespace InterDineMension.Manager
             {
                 item.SetActive(false);
             }
-
+            /*cS.sR.sprite = cS.CsspriteDictionary["blank"];
+            cC.sR.sprite = cC.CcspriteDictionary["blank"];
+            G.sR.sprite = G.GspriteDictionary["blank"];
+            F.sR.sprite = F.FspriteDictionary["blank"];
+            M.sR.sprite = M.MspriteDictionary["blank"];
+            N.sR.sprite = N.NspriteDictionary["blank"];*/
             iEF.unBind(currentStory);
             //currentStory.UnbindExternalFunction("StartBAMicro1");
             convoModeImages.gameObject.SetActive(false);
@@ -1222,8 +1255,9 @@ namespace InterDineMension.Manager
             fBtn.SetActive(false);
             mBtn.SetActive(false);
             nBtn.SetActive(false);
+            if (PlayerPrefs.GetString("newGame") != "false") { Debug.Log("quicksave lacation test"); PPSave(); }
             Debug.Log(PlayerPrefs.GetString("weekDayT"));
-            switch (PlayerPrefs.GetString("weekDayT"))//will determine who's avalible
+            switch (PlayerPrefs.GetString("weekDay"))//will determine who's avalible
             {
                 case "Tut":
                     cSBtn.gameObject.SetActive(true);

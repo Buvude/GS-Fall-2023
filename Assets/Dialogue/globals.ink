@@ -1,4 +1,5 @@
 //EXTERNAL GoToDiner()
+EXTERNAL QuickLoad()
 EXTERNAL SaveGame()
 INCLUDE MorningPlaceHolder.ink
 INCLUDE MondayMorning.ink
@@ -15,7 +16,13 @@ EXTERNAL QuickSave()
 EXTERNAL NewDay()
 //VAR pokemon_name=""
 
- 
+ VAR chaosTotalCS=9
+VAR chaosTotalN=12
+VAR chaosTotalCC=0
+VAR chaosTotalM=0
+VAR chaosTotalG=0
+VAR chaosTotalF=0
+VAR chaosTotalOR=6
 
 
 //saves at the end of each day
