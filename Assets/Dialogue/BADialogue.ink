@@ -8,6 +8,8 @@ VAR tempHolder =""
 //->MainBAD
 ===MainBAD===
     //TODO replace variable here
+    
+    *pause
     {
     -BAMLevel==0:
     // ~Random_Holder=Random(1,3)
