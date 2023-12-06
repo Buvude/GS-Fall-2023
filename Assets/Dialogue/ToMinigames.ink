@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 //INCLUDE TTMicroTestConvo.ink
 INCLUDE TTmicroTestConvo.ink
-EXTERNAL QuickLoad()
+// EXTERNAL QuickLoad()
 EXTERNAL StartBAMPractice()
 ~QuickLoad()
  {

@@ -16,7 +16,7 @@ Ay, Gracie, ya got a minute? #speaker:Chef Swatts
     Ay, just wanted to lend ya ear for a minute #speaker:Chef Swatts
     //go to ending
     {
-    -chaosCS>=9:
+    -chaosCS>=chaosTotalCS:
         ->ChaosEndCS
     -affectionCS>=0:
         ->GoodEndCS

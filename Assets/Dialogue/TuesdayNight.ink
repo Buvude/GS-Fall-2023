@@ -1,3 +1,4 @@
+INCLUDE globals.ink
 An interesting day, to say the least... #speaker:Graciana #mood:neutral #bgm:dinNight
 (I hear the familiar portal sound, and look over to see O'Ryan entering.)
 
@@ -17,5 +18,5 @@ Y-yea, see ya! #speaker:Graciana
 
 Alright... Not bad...
 (With all my chores done for the day, I guess it's time to head on home...)
-
+~GoToAppartment()
     -> DONE

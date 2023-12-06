@@ -1,4 +1,5 @@
 INCLUDE globals.ink
+EXTERNAL StartTTMicro()
 
 ... #speaker:NiCo
 Hi, Graciana.
@@ -9,6 +10,8 @@ You should probably go help the customers who actually need to eat.
     -> DONE
     
 ==whatup==
+~currentConvo="NMG2"
+~QuickSave()
 What's up? Would you like something to... #speaker:Graciana
 ...Eat? ...Drink? #speaker:Graciana #mood:think
 
@@ -85,210 +88,210 @@ So you either live with the hand you've been forcibly dealt, or try to struggle 
 
 Yes. Some people think there's something that can be done still--That there's still hope for our world. But at this point, I just don't want to get scrapped. #speaker:NiCo
 
-**[Is anyone doing anything?]
-//good
-~affectionN=affectionN+2
-
-Is anyone doing anything about this? #speaker:Graciana #mood:think
-
-... #speaker:NiCo
-Doing what? There isn't anything to do. Tundra runs the world. It's impossible to "do" anything. 
-
-W-well yeah, but... #speaker:Graciana #mood:sad
-Surely there's gotta be some sort of law that helps you guys, right? I mean, if they were able to change it. #speaker:Graciana #mood:neutral
-Like, what's the legal system? Democracy? Republic? Autocracy? Monarchy...? #speaker:Graciana #mood:think
-...Government isn't my forte, but I know some stuff...
-
-Well, on paper the government calls itself a "Democratic Republic." #speaker:NiCo
-Theoretically, we're supposed to be able to vote for representatives to make policies for us, things like that.
-But with how hard Tundra has lobbied and bribed their way into the government...
-It's basically an Oligarchy now.
-
-Ah, I see, well... #speaker:Graciana
-...Hm...
-(This... sounds kinda familiar...)
-
-***[Representatives?]
-...So, do you guys have like, representatives? Could you contact them to try to help? Or are those too being bribed?
-
-Unfortunately, yes. #speaker:NiCo
-Tundra has their money in the pockets of every part of our government.
-It's more of Tundra's government, rather than our government's government
-Our representatives, our leaders, our president...
-All the decisions they make are based on whether or not Tundra finds it acceptable, and it doesn't hurt their business.
-
-****[Drop it]
-->dropped
-
-****[Evidence for your injury?]
-->injury
-
-***[Evidence for your injury?]
-->injury
-
-(...Jeez, this really does sound familiar...) #speaker:Graciana
-
-**[Just move!]
-//chaos
-~chaosN=chaosN+2
-
-Why don't you just... get outta there? Like move out? If you can travel interdimentionally, surely you can just move, right? #speaker:Graciana
-
-God, I wish it were that simple. #speaker:NiCo
-We can only travel for a little bit at a time. And they keep tabs on our location. They'd track us down, fast.
-
-How do they keep tabs? Just go really really far away! #speaker:Graciana
-
-... #speaker:NiCo
-They made us. Our bodies have trackers built into them. No matter what, there isn't anything we can do about it. They can shut us down remotely whenever they want, too.
-
-S-shut you down? #speaker:Graciana #mood:fear
-
-Yes. #speaker:NiCo
-They can control us directly from their headquarters. If the algorithm detects that we are misbehaving, they'll override us directly.
-
-Oh... Well... You could... Uh... Get... rid of them...? #speaker:Graciana
-
-... #speaker:NiCo
-The algorithm? I mean. Hm...
-It isn't impossible... There have been rumors of someone able to do that...
-
-O-oh, like, actually? #speaker:Graciana
-
-Yes, I've heard of it before... #speaker:NiCo
-But I shouldn't talk about it outloud. Tundra would take notice.
-
-Right, they can probably hear you too... #speaker:Graciana
-Jeez, that's terrifying. When do you get any privacy?
-
-No. #speaker:NiCo
-
-Like, no as in-- #speaker:Graciana
-
-No as in we don't ever get any privacy. We are monitored 24/7. #speaker:NiCo
-
-Like, even at home? When you aren't working? #speaker:Graciana
-
-That's what 24/7 means, yes? #speaker:NiCo
-
-R-right, yeah... #speaker:Graciana
-Well, regardless, I think you should look into that person you mentioned earlier--the person that can hack that algorithm.
-And, uh, see if you can, uh...
-Report them... *(wink wink)*
-
-... #speaker:NiCo
-Why would I want to report them?
-
-...That's... Uh... #speaker:Graciana
-
-***[Be more obvious]
-//bad
-~affectionN=affectionN-1
-
-I mean like, y'know, uh... #speaker:Graciana
-See if you can like, get them to, uh, take a look at you?
-
-... #speaker:NiCo
-
-To like, y'know, see if he can hack you? #speaker:Graciana
-To maybe... Make it so they aren't listening...?
-
-... #speaker:NiCo
-You are suggesting that I violate Tundra Enterprise Terms of Service? #speaker:NiCo #mood:ad
-
-W-wait, uh, n-no, I didn't mean to-- #speaker:Graciana
-
-Voice signature identified. #speaker:NiCo
-
-V-voice signature?! #speaker:Graciana
-
-You, [GRACIANA], have been registered in the Tundra Enterprise Customer Database as a violator of the Terms of Service. #speaker:NiCo
-You have been stricken from use of Tundra Enterprise products, devices, and transportation for an indefinite period of time.
-Please contact your local Tundra Kiosk for further information.
-
-U-uh, I don't know if I--
-
-<i>BZZZZZZZZZZZZT</i> #speaker:NiCo
-...
-
-... #speaker:Graciana
-
-...#speaker:NiCo
-Do you not remember when I just said that they listen in, and can detect misbehavior?
-
-Right, uh... S-sorry about that... #speaker:Graciana
-I hope I didn't get you in any trouble...
-
-No, I should be fine since I didn't say anything wrong. #speaker:NiCo
-You, on the other hand, should probably not go to MX-3319 any time soon.
-
-Am I gonna get like, arrested? #speaker:Graciana
-Are they gonna put me on garbage duty?! #speaker:Graciana #mood:fear
-
-No, nothing like that. You don't live in MX-3319, so they can't do anything like that. #speaker:NiCo
-You're just restricted from doing... Well, basically anything.
-
-Oh... #speaker:Graciana
-Well, it's not like I wanted to go to there anyways--No offense.
-
-Trust me, I'm not at all offended. #speaker:NiCo
-
-This happen before? #speaker:Graciana
-
-Yes, a few times. #speaker:NiCo
-Like I said, Tundra is always listening. They have an algorithm that detects what we and others around us say.
-
-(There's gotta be *something* they can do...) #speaker:Graciana
-
-****[Evidence for your injury?]
-->injury
-****[Strike!]
-->strike
-
-***[Try to insinuate]
-//good
-~affectionN=affectionN+2
-
-Hm... #speaker:Graciana
-I mean... You could try to see if there's a way for you to learn more about this hacking process that seems to be going around.
-
-... #speaker:NiCo
-
-Like, uh... #speaker:Graciana
-Gather all the information you can about it. So you can *definitely* try to avoid that person. *(wink wink)*
-In fact, you might want to go to where they are, just so you can be fully sure of where they are so you can avoid it. *(wink wink)* 
-
-... #speaker:NiCo
-Avoid it...? But isn't that counterintuitive to what I was talking about? 
-Unless...
-
-Unless... *(wink wink)* #speaker:Graciana
-
-... #speaker:NiCo
-Ah......
-I think I understand what you mean...
-I should learn about the person that can hack into the listening algorithm... So I can "avoid" them...
-
-Yeah, exactly! #speaker:Graciana #mood:happy
-Maybe even talk to that person and see if you can find out how they do it, so you can maybe...
-"Report" it...
-
-... #speaker:NiCo
-And whatever I do, I shouldn't let them take a look at me, or let them hack into me, right?
-
-R-right, yeah, definitely don't let them do that! *(wink wink)* #speaker:Graciana 
-
-Got it. I think I already have a few ideas on what to do... #speaker:NiCo
-Thanks, Graciana.
-
-Anytime at all. #speaker:Graciana
-...
-(Surely there's even more that they can do, right...?) #speaker:Graciana #mood:think
-
-****[Evidence for your injury?]
--> injury
-****[Strike!]
-->strike
+    **[Is anyone doing anything?]
+    //good
+    ~affectionN=affectionN+2
+    
+    Is anyone doing anything about this? #speaker:Graciana #mood:think
+    
+    ... #speaker:NiCo
+    Doing what? There isn't anything to do. Tundra runs the world. It's impossible to "do" anything. 
+    
+    W-well yeah, but... #speaker:Graciana #mood:sad
+    Surely there's gotta be some sort of law that helps you guys, right? I mean, if they were able to change it. #speaker:Graciana #mood:neutral
+    Like, what's the legal system? Democracy? Republic? Autocracy? Monarchy...? #speaker:Graciana #mood:think
+    ...Government isn't my forte, but I know some stuff...
+    
+    Well, on paper the government calls itself a "Democratic Republic." #speaker:NiCo
+    Theoretically, we're supposed to be able to vote for representatives to make policies for us, things like that.
+    But with how hard Tundra has lobbied and bribed their way into the government...
+    It's basically an Oligarchy now.
+    
+    Ah, I see, well... #speaker:Graciana
+    ...Hm...
+    (This... sounds kinda familiar...)
+    
+        ***[Representatives?]
+        ...So, do you guys have like, representatives? Could you contact them to try to help? Or are those too being bribed?
+        
+        Unfortunately, yes. #speaker:NiCo
+        Tundra has their money in the pockets of every part of our government.
+        It's more of Tundra's government, rather than our government's government
+        Our representatives, our leaders, our president...
+        All the decisions they make are based on whether or not Tundra finds it acceptable, and it doesn't hurt their business.
+            
+            ****[Drop it]
+            ->dropped
+            
+            ****[Evidence for your injury?]
+            ->injury
+            
+        ***[Evidence for your injury?]
+        ->injury
+        
+        (...Jeez, this really does sound familiar...) #speaker:Graciana
+    
+    **[Just move!]
+    //chaos
+    ~chaosN=chaosN+2
+    
+    Why don't you just... get outta there? Like move out? If you can travel interdimentionally, surely you can just move, right? #speaker:Graciana
+    
+    God, I wish it were that simple. #speaker:NiCo
+    We can only travel for a little bit at a time. And they keep tabs on our location. They'd track us down, fast.
+    
+    How do they keep tabs? Just go really really far away! #speaker:Graciana
+    
+    ... #speaker:NiCo
+    They made us. Our bodies have trackers built into them. No matter what, there isn't anything we can do about it. They can shut us down remotely whenever they want, too.
+    
+    S-shut you down? #speaker:Graciana #mood:fear
+    
+    Yes. #speaker:NiCo
+    They can control us directly from their headquarters. If the algorithm detects that we are misbehaving, they'll override us directly.
+    
+    Oh... Well... You could... Uh... Get... rid of them...? #speaker:Graciana
+    
+    ... #speaker:NiCo
+    The algorithm? I mean. Hm...
+    It isn't impossible... There have been rumors of someone able to do that...
+    
+    O-oh, like, actually? #speaker:Graciana
+    
+    Yes, I've heard of it before... #speaker:NiCo
+    But I shouldn't talk about it outloud. Tundra would take notice.
+    
+    Right, they can probably hear you too... #speaker:Graciana
+    Jeez, that's terrifying. When do you get any privacy?
+    
+    No. #speaker:NiCo
+    
+    Like, no as in-- #speaker:Graciana
+    
+    No as in we don't ever get any privacy. We are monitored 24/7. #speaker:NiCo
+    
+    Like, even at home? When you aren't working? #speaker:Graciana
+    
+    That's what 24/7 means, yes? #speaker:NiCo
+    
+    R-right, yeah... #speaker:Graciana
+    Well, regardless, I think you should look into that person you mentioned earlier--the person that can hack that algorithm.
+    And, uh, see if you can, uh...
+    Report them... *(wink wink)*
+    
+    ... #speaker:NiCo
+    Why would I want to report them?
+    
+    ...That's... Uh... #speaker:Graciana
+        
+        ***[Be more obvious]
+        //bad
+        ~affectionN=affectionN-2
+        
+        I mean like, y'know, uh... #speaker:Graciana
+        See if you can like, get them to, uh, take a look at you?
+        
+        ... #speaker:NiCo
+        
+        To like, y'know, see if he can hack you? #speaker:Graciana
+        To maybe... Make it so they aren't listening...?
+        
+        ... #speaker:NiCo
+        You are suggesting that I violate Tundra Enterprise Terms of Service? #speaker:NiCo #mood:ad
+        
+        W-wait, uh, n-no, I didn't mean to-- #speaker:Graciana
+        
+        Voice signature identified. #speaker:NiCo
+        
+        V-voice signature?! #speaker:Graciana
+        
+        You, [GRACIANA], have been registered in the Tundra Enterprise Customer Database as a violator of the Terms of Service. #speaker:NiCo
+        You have been stricken from use of Tundra Enterprise products, devices, and transportation for an indefinite period of time.
+        Please contact your local Tundra Kiosk for further information.
+        
+        U-uh, I don't know if I--
+        
+        <i>BZZZZZZZZZZZZT</i> #speaker:NiCo
+        ...
+        
+        ... #speaker:Graciana
+        
+        ...#speaker:NiCo
+        Do you not remember when I just said that they listen in, and can detect misbehavior?
+        
+        Right, uh... S-sorry about that... #speaker:Graciana
+        I hope I didn't get you in any trouble...
+        
+        No, I should be fine since I didn't say anything wrong. #speaker:NiCo
+        You, on the other hand, should probably not go to MX-3319 any time soon.
+        
+        Am I gonna get like, arrested? #speaker:Graciana
+        Are they gonna put me on garbage duty?! #speaker:Graciana #mood:fear
+        
+        No, nothing like that. You don't live in MX-3319, so they can't do anything like that. #speaker:NiCo
+        You're just restricted from doing... Well, basically anything.
+        
+        Oh... #speaker:Graciana
+        Well, it's not like I wanted to go to there anyways--No offense.
+        
+        Trust me, I'm not at all offended. #speaker:NiCo
+        
+        This happen before? #speaker:Graciana
+        
+        Yes, a few times. #speaker:NiCo
+        Like I said, Tundra is always listening. They have an algorithm that detects what we and others around us say.
+        
+        (There's gotta be *something* they can do...) #speaker:Graciana
+            
+            ****[Evidence for your injury?]
+            ->injury
+            ****[Strike!]
+            ->strike
+        
+        ***[Try to insinuate]
+        //good
+        ~affectionN=affectionN+2
+        
+        Hm... #speaker:Graciana
+        I mean... You could try to see if there's a way for you to learn more about this hacking process that seems to be going around.
+        
+        ... #speaker:NiCo
+        
+        Like, uh... #speaker:Graciana
+        Gather all the information you can about it. So you can *definitely* try to avoid that person. *(wink wink)*
+        In fact, you might want to go to where they are, just so you can be fully sure of where they are so you can avoid it. *(wink wink)* 
+        
+        ... #speaker:NiCo
+        Avoid it...? But isn't that counterintuitive to what I was talking about? 
+        Unless...
+        
+        Unless... *(wink wink)* #speaker:Graciana
+        
+        ... #speaker:NiCo
+        Ah......
+        I think I understand what you mean...
+        I should learn about the person that can hack into the listening algorithm... So I can "avoid" them...
+        
+        Yeah, exactly! #speaker:Graciana #mood:happy
+        Maybe even talk to that person and see if you can find out how they do it, so you can maybe...
+        "Report" it...
+        
+        ... #speaker:NiCo
+        And whatever I do, I shouldn't let them take a look at me, or let them hack into me, right?
+        
+        R-right, yeah, definitely don't let them do that! *(wink wink)* #speaker:Graciana 
+        
+        Got it. I think I already have a few ideas on what to do... #speaker:NiCo
+        Thanks, Graciana.
+        
+        Anytime at all. #speaker:Graciana
+        ...
+        (Surely there's even more that they can do, right...?) #speaker:Graciana #mood:think
+        
+        ****[Evidence for your injury?]
+        -> injury
+        ****[Strike!]
+        ->strike
 ==strike==
 //chaos
 ~chaosN=chaosN+2
@@ -353,10 +356,9 @@ You've given me a lot to think about. Thank you.
 
 Good! I'm glad I could help. #speaker:Graciana #mood:happy
 ->wrapitup
-
 ==dropped==
 //bad
-~affectionN=affectionN-1
+~affectionN=affectionN-2
 
 Alright, alright, maybe you have a point, but still... #speaker:Graciana
 
@@ -371,63 +373,62 @@ I honestly have no idea how you do it. How you manage to live there and work eve
 ... #speaker:NiCo
 What choice do I have?
 
-*****[It is what it is...]
-//bad
-~affectionN=affectionN-1
-
-I mean... Jeez, that's really rough. #speaker:Graciana
-
-Yes. It is. #speaker:NiCo
-
-I guess... It is what it is, huh? #speaker:Graciana
-Like how much can you really do there? Do they just control everything there?
-
-Yes, more or less. #speaker:NiCo
-They control where we live, they control what we buy, what we look like, they own where we go...
-Well, not on paper at least. But there's no other option. They have a full monopoly on essentially every type of market and service that exists.
-If someone tries to insinuate breaking the rules, they can get restricted, and lose access to essentially everything.
-
-Could you use some kind of alternative? Like, a different service? #speaker:Graciana
-
-There is no alternative. Tundra eliminated any competition. #speaker:NiCo
-
-Oh, right, yeah... Monopoly and all that. #speaker:Graciana
-Uh... Jeez, yeah I have no idea dude. How do you do like, anything? Like, what's an average day?
-
-Well, we wake up in our tiny pod apartments in the TundraPlex. #speaker:NiCo
-
-TundraPlex? #speaker:Graciana #mood:think
-
-The residential unit. Holds thousands of us in tiny closet-sized "apartments." #speaker:NiCo
-We at least get to decorate them... With Tundra products and Tundra furniture...
-But anyways, we go to our shift early in the day. It depends where you're stationed--I typically work in the warehouse.
-I work for twenty hours every day, with a thirty minute break in the middle.
-
-...Are you on break right now? I just assumed you had the day off. #speaker:Graciana
-
-Yes, I'm on break right now. I just like to come here for a little bit--change of scenery. #speaker:NiCo
-The one decent thing Tundra has done is make interdimentional travel quick and easy.
-...Of course, they track where we go, and we're only allowed to go to certain verified locations...
-But, that could be worse, I suppose. Still doesn't make up for everything else, but still.
-
-Yeah, I still can't believe you have to work a twenty hour shift. With only a thirty minute break?! #speaker:Graciana
-
-Our bodies are made to be twice as efficient as a human body. Therefore, they make us work twice as much as a human body. #speaker:NiCo
-
-Still, that's so much time though... #speaker:Graciana
-You basically only get 4 hours a day to yourself!
-And even then, it's not really "to yourself" since you're being monitored.
-
-Preaching to the choir, Graciana. #speaker:NiCo
-Most people are too desensitized to the system to realize there's anything wrong with it.
-And I can't blame them. It's not like we have a choice for anything different.
-
-(Why does this kinda sound like... Familiar?)
-->wrapitup
-
-*****[Strike!]
-->strike
-
+    *****[It is what it is...]
+    //bad
+    ~affectionN=affectionN-1
+    
+    I mean... Jeez, that's really rough. #speaker:Graciana
+    
+    Yes. It is. #speaker:NiCo
+    
+    I guess... It is what it is, huh? #speaker:Graciana
+    Like how much can you really do there? Do they just control everything there?
+    
+    Yes, more or less. #speaker:NiCo
+    They control where we live, they control what we buy, what we look like, they own where we go...
+    Well, not on paper at least. But there's no other option. They have a full monopoly on essentially every type of market and service that exists.
+    If someone tries to insinuate breaking the rules, they can get restricted, and lose access to essentially everything.
+    
+    Could you use some kind of alternative? Like, a different service? #speaker:Graciana
+    
+    There is no alternative. Tundra eliminated any competition. #speaker:NiCo
+    
+    Oh, right, yeah... Monopoly and all that. #speaker:Graciana
+    Uh... Jeez, yeah I have no idea dude. How do you do like, anything? Like, what's an average day?
+    
+    Well, we wake up in our tiny pod apartments in the TundraPlex. #speaker:NiCo
+    
+    TundraPlex? #speaker:Graciana #mood:think
+    
+    The residential unit. Holds thousands of us in tiny closet-sized "apartments." #speaker:NiCo
+    We at least get to decorate them... With Tundra products and Tundra furniture...
+    But anyways, we go to our shift early in the day. It depends where you're stationed--I typically work in the warehouse.
+    I work for twenty hours every day, with a thirty minute break in the middle.
+    
+    ...Are you on break right now? I just assumed you had the day off. #speaker:Graciana
+    
+    Yes, I'm on break right now. I just like to come here for a little bit--change of scenery. #speaker:NiCo
+    The one decent thing Tundra has done is make interdimentional travel quick and easy.
+    ...Of course, they track where we go, and we're only allowed to go to certain verified locations...
+    But, that could be worse, I suppose. Still doesn't make up for everything else, but still.
+    
+    Yeah, I still can't believe you have to work a twenty hour shift. With only a thirty minute break?! #speaker:Graciana
+    
+    Our bodies are made to be twice as efficient as a human body. Therefore, they make us work twice as much as a human body. #speaker:NiCo
+    
+    Still, that's so much time though... #speaker:Graciana
+    You basically only get 4 hours a day to yourself!
+    And even then, it's not really "to yourself" since you're being monitored.
+    
+    Preaching to the choir, Graciana. #speaker:NiCo
+    Most people are too desensitized to the system to realize there's anything wrong with it.
+    And I can't blame them. It's not like we have a choice for anything different.
+    
+    (Why does this kinda sound like... Familiar?)
+    ->wrapitup
+    
+    *****[Strike!]
+    ->strike
 ==injury==
 //good
 ~affectionN=affectionN+2
@@ -536,7 +537,10 @@ Of course. Hope you come back soon! #speaker:Graciana
 (He shambles his way out of the booth, and limps over through the entrance portal.)
 ...
 ...Alright, I think that should do it.
-~currentConvo="NMG1"
+There will be a transistion where CeeCee tells you to take out the trash here.
+
+~TTMLevel=2
 ~timeOfDay="afternoon"
-//trash minigame will go here. i'm not sure if putting in cece out of nowhere will break the game, so i'm leaving it like this for now once that's fully implemented
+~QuickSave()
+~StartTTMicro()
 -> DONE

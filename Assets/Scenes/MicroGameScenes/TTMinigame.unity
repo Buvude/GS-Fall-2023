@@ -2572,6 +2572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CompostDumpster
       objectReference: {fileID: 0}
+    - target: {fileID: 3393402450955198923, guid: b89f2dd221be8dd4f8f209d3c0b43170, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6180914102707461299, guid: b89f2dd221be8dd4f8f209d3c0b43170, type: 3}
       propertyPath: m_Size.x
       value: 0.960181

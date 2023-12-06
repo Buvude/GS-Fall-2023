@@ -1,5 +1,6 @@
-// INCLUDE globals.ink
+INCLUDE globals.ink
 INCLUDE ORyanFinalAfterMinigames.ink
+~affectionOR+=1
 ... #speaker:Graciana #mood:happy
 
 ... #speaker:O'Ryan

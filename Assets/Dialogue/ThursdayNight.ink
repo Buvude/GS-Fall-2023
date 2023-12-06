@@ -1,3 +1,4 @@
+INCLUDE globals.ink
 Yet another day... #speaker:Graciana
 Let's see... Hm, no, I've gotten everything done already, I guess. #speaker:Graciana #mood:happy #bgm:dinNight
 
@@ -24,5 +25,5 @@ Keep it up.
 
 Alright... Looks like I'm on their good side! #speaker:Graciana #mood:happy
 Well, since I finished early... Guess I can head out!
-
+~GoToAppartment()
     -> DONE

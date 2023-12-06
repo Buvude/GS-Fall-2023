@@ -1,4 +1,5 @@
 INCLUDE globals.ink
+EXTERNAL StartTTMicro()
 ->start
 ==start==
 Hey NiCo! #speaker:Graciana #mood:neutral
@@ -13,6 +14,8 @@ Hey, Graciana. #speaker:NiCo
     -> DONE
     
 ==convostart==
+~currentConvo="NMG2"
+~QuickSave()
 How're you holding up? #speaker:Graciana
 
 Same old. Still chugging along. #speaker:NiCo
@@ -103,7 +106,7 @@ Back when I was initially roboticized, there were a few others. But that was so 
     ->chaos2
     
 ==bad1==
-~affectionN=affectionN-3
+~affectionN=affectionN-4
 Scalpers always ruining everything. That's a big problem on Earth. #speaker:Graciana
 
 Oh, right, yes. I suppose so. #speaker:NiCo #mood:smug
@@ -404,6 +407,11 @@ Yes. See you. #speaker:NiCo #mood:neutral
 
 (NiCo exits the diner, and I clean up their table.)
 
-//ensue trash minigame 2 dialogue
+There will be a transistion where CeeCee tells you to take out the trash here.
+
+~TTMLevel=2
+~timeOfDay="afternoon"
+~QuickSave()
+~StartTTMicro()
 
     -> DONE

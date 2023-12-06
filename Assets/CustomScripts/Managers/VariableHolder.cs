@@ -45,10 +45,10 @@ namespace InterDineMension.Manager
         // Update is called once per frame
         void Update()
         {
-            /*if (PlayerPrefs.GetString("currentConvo") == "test"&&testTest)
+            if (PlayerPrefs.GetString("currentconvo") == "test" && testTest)
             {
                 Debug.Break();
-            }*/
+            }
         }
     }
 }

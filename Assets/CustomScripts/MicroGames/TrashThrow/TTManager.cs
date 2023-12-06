@@ -160,10 +160,10 @@ namespace InterDineMension.MicroGame.TT
             {
                 PlayerPrefs.SetString("winStatus", "won");
             }
-            /*else if (score <= goal * -1)
+            else if (score <= goal * -1)
             {
                 PlayerPrefs.SetString("winStatus", "chaos");
-            }*/
+            }
             else
             {
                 PlayerPrefs.SetString("winStatus", "lost");
@@ -181,6 +181,19 @@ namespace InterDineMension.MicroGame.TT
                         SceneManager.LoadScene(1);
                         break;
                     }
+                case "NMG1":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+                case "NMG2":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+
                 default:
                     break;
             }
