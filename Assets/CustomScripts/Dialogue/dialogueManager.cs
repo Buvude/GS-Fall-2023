@@ -289,6 +289,7 @@ namespace InterDineMension.Manager
                 switch (PlayerPrefs.GetInt("dayVarT"))//so it defaults to the random quip thing unless there is something specific for CS to say today
                 {
                     case 0:
+                        PlayerPrefs.SetString("weekDay", "Tut");
                         EnterDialogueMode(cS.CsdialogueDictionary["gameIntro"]);
                         break;
                     default:

@@ -1,4 +1,5 @@
 EXTERNAL EndGame()
+EXTERNAL EndGame2()
 ==CreditsPlaceholder==
 Credits will play out here, and then the following tip will be displayed:
 Fun Fact: Did you know, each character has a Chaos ending? If you would like more information on that you can ask for it now, otherwise your save will be erased because there is no more game
@@ -9,7 +10,7 @@ also this sound effect plays whenever you get a point in someone's chaos route #
 ~EndGame()  
 ->DONE
 *[Quit Game (this will also erase data)]
-
+~EndGame2()
 ->DONE
 
 ==MoreInfo==
