@@ -425,6 +425,7 @@ namespace InterDineMension.MicroGame.BA
                         toSpawn[4].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(toSpawn[4], lane5.transform);
                     }
+                    dsm.orderImages[6].enabled = false;
                     toSpawn.Clear();
 
                     break;
