@@ -142,19 +142,19 @@ LIST TBuns3 = (Plain), (Lettucebun), (Sourdough),(Pretzel) //(Bun_of_the_Deep) s
         // ~SaveGame()
         // ->DONE
         //redirect to Day Off events
-        ~weekDay="Sun"
+        ~weekDay="Mon"
         ~timeOfDay="morning"
-        ~dayVar+=1
+        ~dayVar+=2
         ~SaveGame()
         ~NewDay()
         // ->monday
-    -weekDay=="Sun":
-        ~weekDay="Mon"
-        ~timeOfDay="morning"
-        ~dayVar+=1
-        ~SaveGame()
-        ~NewDay()        
-        // ->monday
+    // -weekDay=="Sun":
+    //     ~weekDay="Mon"
+    //     ~timeOfDay="morning"
+    //     ~dayVar+=1
+    //     ~SaveGame()
+    //     ~NewDay()        
+    //     // ->monday
         
 }
 ->DONE
