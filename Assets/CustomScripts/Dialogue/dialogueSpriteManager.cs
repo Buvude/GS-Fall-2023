@@ -14,7 +14,7 @@ namespace InterDineMension.Manager
     /// </summary>
     public class dialogueSpriteManager : MonoBehaviour
     {
-        public Image imagePopUp;
+        public Image imagePopUp, imagePopUpParent;
         public List<Image> orderImages=new List<Image>();
         public Sprite
             classicBottomBun, lettuceWrapBottom, noBottomBun,bBunOfTheDeep,pretzelBBun, sourdoughBBun,//top bun types
@@ -52,7 +52,7 @@ namespace InterDineMension.Manager
             if(popUp != null)
             {
                 imagePopUp.enabled = true;
-                imagePopUp.gameObject.SetActive(true);
+                imagePopUpParent.gameObject.SetActive(true);
                 orderImages[phase-1].gameObject.SetActive(true);
                 imagePopUp.sprite = popUp;
                 orderImages[phase-1].sprite = popUp;
@@ -60,7 +60,7 @@ namespace InterDineMension.Manager
 
             else
             {
-                imagePopUp.gameObject.SetActive(false);
+                imagePopUpParent.gameObject.SetActive(false);
                 orderImages[phase-1].gameObject.SetActive(false);
             }
 
