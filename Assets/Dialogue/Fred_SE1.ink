@@ -1,5 +1,11 @@
 INCLUDE globals.ink
+
+(Fred is playfully staring out the window...) #speaker:Graciana #mood:neutral
+* [Hey Fred!]
 -> Start
+* [(Leave him be)]
+(Maybe I shouldn't disturb him...) #speaker:Graciana #mood:neutral
+->DONE
 ==Start==
 
 FRED! There's my favorite little ball of light, how are you doing buddy! #Graciana #mood:happy
