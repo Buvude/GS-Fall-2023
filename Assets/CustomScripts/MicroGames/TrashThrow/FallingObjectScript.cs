@@ -7,8 +7,9 @@ namespace InterDineMension.MicroGame.TT
 {
     public class FallingObjectScript : MonoBehaviour
     {
+        internal Animator animator;
         public TTManager manager;
-        public bool canScore = true, worthPoint=false;
+        public bool canScore = true, worthPoint=false, cosmic=false;
         public enum objectType { trash, recycling, compost };
         public objectType type;
         public enum BinLandedIn { trash, recycling, compost, none };
@@ -16,6 +17,7 @@ namespace InterDineMension.MicroGame.TT
         // Start is called before the first frame update
         void Start()
         {
+            animator = GetComponent<Animator>();
             manager.fallenObjects.Add(this);
         }
 
@@ -56,10 +58,11 @@ namespace InterDineMension.MicroGame.TT
                 
                 canScore = false;
                 location = BinLandedIn.compost;
-                if (type == objectType.compost)
+                /*if (type == objectType.compost)
                 {
                     worthPoint = true;
-                }
+                }*/
+                cosmic = true;
                 this.gameObject.SetActive(false);
             }
             else if(collision.gameObject.layer == 12&&canScore)

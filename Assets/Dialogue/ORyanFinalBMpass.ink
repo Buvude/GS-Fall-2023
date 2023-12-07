@@ -1,3 +1,7 @@
+INCLUDE globals.ink
+EXTERNAL StartTTMicro()
+~affectionOR+=1
+~QuickSave()
 ... #speaker:Graciana #mood:happy
 
 ... #speaker:O'Ryan
@@ -15,5 +19,9 @@ Come.
 Take out the garbage.
 
 R-right! #speaker:Graciana
-
+~TTMLevel=3
+~timeOfDay="afternoon"
+~QuickSave()
+~StartTTMicro()
     -> END
+~timeOfDay="afternoon"

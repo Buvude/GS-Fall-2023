@@ -7,6 +7,8 @@ namespace InterDineMension.Manager
 {
     public class VariableHolder : MonoBehaviour
     {
+        public TextAsset preventFarming;
+        internal Story preventFarmingStory;
         public bool wonMini = false;
         public Story currentStory;
         public TextAsset curStor;
@@ -23,14 +25,18 @@ namespace InterDineMension.Manager
             finalEncounterTracker;//used to keep track of wins and losses in the final encounter with */
         //public bool characterStateNico;
         private static VariableHolder instance;
+        public bool testTest;
+
         // Start is called before the first frame update
         void Awake()
         {
+            
             if (instance != null)
             {
                 Destroy(this.gameObject);
                 Debug.LogWarning($"Found more then one DialogueManager instance ");
             }
+            preventFarmingStory = new Story(preventFarming.text);
             instance = this;
             DontDestroyOnLoad(instance);
 
@@ -40,7 +46,10 @@ namespace InterDineMension.Manager
         // Update is called once per frame
         void Update()
         {
-            
+            if (PlayerPrefs.GetString("currentconvo") == "test" && testTest)
+            {
+                Debug.Break();
+            }
         }
     }
 }

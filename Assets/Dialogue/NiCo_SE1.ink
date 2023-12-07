@@ -1,4 +1,5 @@
 INCLUDE globals.ink
+EXTERNAL StartTTMicro()
 
 ... #speaker:NiCo
 Hi, Graciana.
@@ -368,7 +369,7 @@ There's a pun in that somewhere, but I don't have the energy to process it. #spe
 R-right... #speaker:Graciana #mood:sad
 I honestly have no idea how you do it. How you manage to live there and work every day, despite what's going on there. #speaker:Graciana #mood:neutral
 
-... #speaker:NiCo #mood:
+... #speaker:NiCo #mood:neutral
 What choice do I have? #speaker:NiCo #mood:sad
 
 *****[It is what it is...]
@@ -538,5 +539,8 @@ Of course. Hope you come back soon! #speaker:Graciana #mood:happy
 ...Alright, I think that should do it. #speaker:Graciana #mood:neutral
 ~currentConvo="NMG1"
 ~timeOfDay="afternoon"
+~TTMLevel=2
+~QuickSave()
+~StartTTMicro()
 //trash minigame will go here. i'm not sure if putting in cece out of nowhere will break the game, so i'm leaving it like this for now once that's fully implemented
 -> DONE

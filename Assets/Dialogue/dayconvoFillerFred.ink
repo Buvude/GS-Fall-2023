@@ -1,23 +1,19 @@
 INCLUDE globals.ink
-EXTERNAL GoToAppartment()
-GOOD MORNING!!! #speaker:Fred #mood:pump
-
-Morning, Fred. Would you like anything right now? #speaker:Graciana #mood:neutral
-
-Another bottle of lava lamp, blue please! #speaker:Fred #mood:galaxy
-
-*[I'll get you some!]
+// EXTERNAL GoToAppartment()
+Fred says placeholder
+*[good option]
     ~affectionF+=1
     ->EndConvo
-*[We only have orange!]
+*[bad option]
     ~affectionF-=1
     ->EndConvo
-*[I'll take care of that.]
+*[chaos option]
     ~chaosF+=1
     ->EndConvo
 
 
 ===EndConvo===
 ~convo_numberF+=1
-~GoToAppartment()
+// ~GoToAppartment()
+~StartO_Ryan()
 ->DONE

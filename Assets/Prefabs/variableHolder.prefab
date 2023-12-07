@@ -44,4 +44,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 346a44ada3d002b439ecf81ccdb0c8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  preventFarming: {fileID: 4900000, guid: d5e8c39cace728042bc92f510da181e8, type: 3}
+  wonMini: 0
   curStor: {fileID: 4900000, guid: 79643bfe944f4e248b2caa40b789658e, type: 3}

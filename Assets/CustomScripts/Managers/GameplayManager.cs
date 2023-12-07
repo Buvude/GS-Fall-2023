@@ -40,7 +40,7 @@ namespace InterDineMension.Manager
         {
             if (manager.dV != null)
             {
-                manager.dV.clearTempVars();
+                manager.dV.clearTempVars(manager.vH);
             }
             
         }

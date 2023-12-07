@@ -1,3 +1,7 @@
+INCLUDE globals.ink
+EXTERNAL StartTTMicro()
+~chaosOR+=1
+~QuickSave()
 ... #speaker:Graciana #mood:neutral
 
 ... #speaker:O'Ryan
@@ -16,4 +20,8 @@ Garbage time.
 
 O-okay...! #speaker:Graciana #mood:neutral
 
-    -> END
+~TTMLevel=3
+~timeOfDay="afternoon"
+~QuickSave()
+~StartTTMicro()
+-> END

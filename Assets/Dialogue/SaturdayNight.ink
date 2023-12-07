@@ -1,10 +1,11 @@
-<i>*huff... huff...*</i> #speaker:Graciana #mood:sad
+INCLUDE globals.ink
+<i>*huff... huff...*</i> #speaker:Graciana #mood:sad #bgm:dinNight
 Jeez... I need a second... to sit...
 Phew... Real busy today...
 
 (O'Ryan enters through the portal, as always.)
 
-... #speaker:O'Ryan
+... #speaker:O'Ryan #mood:neutral
 
 H-hey O'Ryan... #speaker:Graciana
 Real busy day today...
@@ -29,5 +30,5 @@ R-right, see ya! #speaker:Graciana
 
 Okay... I still gotta finish cleaning... #speaker:Graciana #mood:sad
 Well, at least I have tomorrow off...
-
+~GoToAppartment()
     -> DONE

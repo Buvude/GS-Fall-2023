@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1481297684719669176}
   - component: {fileID: 1655977164844880479}
   - component: {fileID: 5463098229845797608}
+  - component: {fileID: 3952631472188402294}
   m_Layer: 6
   m_Name: CompostBagDown
   m_TagString: Untagged
@@ -50,6 +51,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   canScore: 1
   worthPoint: 0
+  cosmic: 0
   type: 2
   location: 3
 --- !u!212 &1481297684719669176
@@ -176,3 +178,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!95 &3952631472188402294
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2595571150227461336}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fd80e5930c2f1de43af3a49d4733867d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

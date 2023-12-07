@@ -1,5 +1,10 @@
+INCLUDE globals.ink
+INCLUDE BADialogue.ink
+// EXTERNAL QuickLoad()
 ->start
 ==start==
+~QuickLoad()
+~QuickSave()
 Hey O'Ryan! What's going on? What're you doing here so early? #speaker:Graciana
 
 ... #speaker:O'Ryan
@@ -21,10 +26,10 @@ O-okay... #speaker:Graciana
 //transition to kitchen?
 
 ... #speaker:O'Ryan
-Think fast.
+// Think fast.
 
-W-woah! #speaker:Graciana
+// W-woah! #speaker:Graciana
 
-//burger mimigame
-
+~BAMLevel=3
+->MainBAD
     -> DONE

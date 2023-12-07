@@ -26,14 +26,31 @@ namespace InterDineMension.Manager
         public AppartmentManager aM;
         public bool useSaveSystem;
 
+        //tags
         public List<string> sfxTittles = new List<string>();
         public List<AudioClip> sfxSounds = new List<AudioClip>();
         public Dictionary<string, AudioClip> sfxLibrary = new Dictionary<string, AudioClip>();
         public AudioSource sfxAudioSource;
+
         public List<string> bgmTittles = new List<string>();
         public List<AudioClip> bgmSounds = new List<AudioClip>();
         public Dictionary<string, AudioClip> musicLibrary = new Dictionary<string, AudioClip>();
         public AudioSource bgmAudioSource;
+
+        /* public List<string> vOTittles = new List<string>();
+         public List<AudioClip> vOSounds = new List<AudioClip>();
+         public Dictionary<string, AudioClip> vOLibrary = new Dictionary<string, AudioClip>();
+         public AudioSource vOAudioSource;*/ //commented out until VO clips are added
+
+        public List<string> bGTittles = new List<string>();
+        public List<Sprite> bGSprites = new List<Sprite>();
+        public Dictionary<string, Sprite> bGLibray = new Dictionary<string, Sprite>();
+        public Image backgroundImage;
+
+        /*public List<string> cGTittles = new List<string>();
+        public List<Sprite> cGSprites = new List<Sprite>();
+        public Dictionary<string, Sprite> cGLibray = new Dictionary<string, Sprite>();
+        public Image cGImage;*/ //image might just be background
 
         //public GameObject charImageCS, charImageOR;
         //private bool deactivatedcorutines = false;
@@ -108,6 +125,8 @@ namespace InterDineMension.Manager
         private const string MOOD = "mood";
         private const string SFX = "sfx";
         private const string BGM = "bgm";
+        private const string BG = "bg";
+        private const string CG = "cg";
         //private const string VAR_CHANGE = "varChange"; not sure what this was supposed to me lmao
 
         public InkExternalFunctions iEF;
@@ -116,6 +135,7 @@ namespace InterDineMension.Manager
         internal bool morning;
         private void Awake()
         {
+            
             if (sfxTittles.Count == sfxSounds.Count)
             {
                 for (int i = 0; i < sfxTittles.Count; i++)
@@ -138,6 +158,18 @@ namespace InterDineMension.Manager
             {
                 Debug.LogError("bgmTittles and bgmSounds are not at an equal count");
             }
+
+            if (bGTittles.Count == bGSprites.Count)
+            {
+                for (int i = 0; i < bGTittles.Count; i++)
+                {
+                    bGLibray.Add(bGTittles[i], bGSprites[i]);
+                }
+            }
+            else
+            {
+                Debug.LogError("bGTittles and bGSprites are not at an equal count");
+            }
             currentStory = new Story(loadGlobalsJSON.text);
 
             GameObject[] tempList = GameObject.FindGameObjectsWithTag("variableHolder");
@@ -151,24 +183,27 @@ namespace InterDineMension.Manager
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
             dPTest = this.gameObject.GetComponent<Image>();
             dV = new DialogueVariables(currentStory);
-            if (PlayerPrefs.GetString("currentConvo")!="practiceT"&&PlayerPrefs.GetString("currentConvo")!="practiceB")
+            if (PlayerPrefs.GetString("currentConvo")!="practiceT"&&PlayerPrefs.GetString("currentConvo")!="practiceB"&&PlayerPrefs.GetString("currentConvo")!="finale")
             {
-                if (PlayerPrefs.GetString("timeOfDay") == "night")
+                if (PlayerPrefs.GetString("timeOfDay") == "Apt")
                 {
                     QuickLoad();
                 }
                 else if (PlayerPrefs.GetString("timeOfDay") == "morning")
                 {
-                    QuickSave();
+
+                    if (PlayerPrefs.GetString("newGame") != "false") { Debug.Log("quicksave lacation test"); PPSave(); QuickLoad(); }
+                    else { QuickSave(); }
                 }
 
                 //QuickSave();
-                if (PlayerPrefs.GetString("newGame").Equals("false"))
+                if (PlayerPrefs.GetString("newGame").Equals("false") && PlayerPrefs.GetString("timeOfDay") == "morning")
                 {
+                    Debug.Log("test");
                     useSaveSystem = true;
                     //Debug.Log("Using save system");
                     dV.LoadVariables();
-                    QuickSave();
+                    PPSave();
                 }
             }
             PlayerPrefs.SetString("newGame", "false");
@@ -258,6 +293,12 @@ namespace InterDineMension.Manager
              PlayerPrefs.SetString("savedjson", savedjson);*/
             dV.QuickSaveVariables();
         }
+        public void PPSave()
+        {
+            quicksaved = true;
+            dV.PPSave();
+
+        }
 
         public void QuickLoad()
         {
@@ -269,7 +310,8 @@ namespace InterDineMension.Manager
             charSpeakTo = speakingTo.Swatts;
             if (PlayerPrefs.GetInt("convo_numberOR") == 6)
             {
-                PlayerPrefs.SetString("weekDayT", "Fin");
+                cS.sR.sprite = cS.CsspriteDictionary["neutral"];
+                PlayerPrefs.SetString("weekDay", "Fin");
                 QuickLoad();
                 EnterDialogueMode(cS.CsdialogueDictionary["CSFinale"]);
             }
@@ -277,14 +319,17 @@ namespace InterDineMension.Manager
             {
                 switch (PlayerPrefs.GetInt("dayVarT"))//so it defaults to the random quip thing unless there is something specific for CS to say today
                 {
-                    case 1:
+                    case 0:
+                        PlayerPrefs.SetString("weekDay", "Tut");
                         EnterDialogueMode(cS.CsdialogueDictionary["gameIntro"]);
                         break;
                     default:
 
                         /* EnterDialogueMode(cS.ORdialogueDictionary["morning"]);*/
                         morning = true;
-                        EnterDialogueMode(cS.CsdialogueDictionary[PlayerPrefs.GetString("weekDayT")]);
+                        cS.sR.sprite= cS.CsspriteDictionary["neutral"];
+                        
+                        EnterDialogueMode(cS.CsdialogueDictionary[PlayerPrefs.GetString("weekDay")]);
                         break;
                 }
             }
@@ -298,11 +343,40 @@ namespace InterDineMension.Manager
             switch (PlayerPrefs.GetString("currentConvo"))
             {
                 case "NMG1":
-
+                    charSpeakTo = speakingTo.CeeCee;
+                    N.gameObject.SetActive(true);
+                    EnterDialogueMode(N.NdialogueDictionary["postMini"]);
                     break;
+                case "NMG2":
+                    EnterDialogueMode(N.NdialogueDictionary["postMini"]);
+                    break;
+                case "NMG3":
+                    EnterDialogueMode(N.NdialogueDictionary["postMini"]);
+                    break;
+                case "finale":
+                    {
+                        charSpeakTo = speakingTo.O_Ryan;
+                        //QuickLoad();
+                        switch (PlayerPrefs.GetString("winStatus"))
+                        {
+                            case "won":
+                                EnterDialogueMode(oR.ORdialogueDictionary["finalTTPass"]);
+                                break;
+                            case "lost":
+                                EnterDialogueMode(oR.ORdialogueDictionary["finalTTFail"]);
+                                break;
+                            case "chaos":
+                                EnterDialogueMode(oR.ORdialogueDictionary["finalTTChaos"]);
+                                break;
+                            default:
+                                break;
+                        }
+                        break;
+                    }
                 default:
                     break;
             }
+           
         }
         public static dialogueManager GetInstance()
         {
@@ -364,7 +438,10 @@ namespace InterDineMension.Manager
             switch (charSpeakTo)
             {
                 case speakingTo.O_Ryan:
-                    //start dialogue option
+                    PlayerPrefs.SetString("currentConvo", "finale");
+                    QuickLoad();
+                    oR.sR.sprite = oR.ORspriteDictionary["neutral"];
+                    EnterDialogueMode(oR.ORdialogueDictionary["final"]);
                     break;
                 case speakingTo.Swatts:
                     {
@@ -372,21 +449,26 @@ namespace InterDineMension.Manager
                         {
                             case 0:
                                 {
+                                    morning = false;
                                     EnterDialogueMode(cS.CsdialogueDictionary["cSTalkTo1"]);
                                     break;
                                 }
                             case 1:
                                 {
+                                    morning = false;
+                                    
                                     EnterDialogueMode(cS.CsdialogueDictionary["cSTalkTo2"]);
                                     break;
                                 }
                             case 2:
                                 {
+                                    morning = false;
                                     EnterDialogueMode(cS.CsdialogueDictionary["cSTalkTo3"]);
                                     break;
                                 }
                             case >=3:
                                 {
+                                    morning = false;
                                     EnterDialogueMode(cS.CsdialogueDictionary["brushOff"]);
                                     break;
                                 }
@@ -528,16 +610,25 @@ namespace InterDineMension.Manager
                     {
                         case 0:
                             {
-                                EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NTalkTo1"]);
+                                    morning = false;
+                                convoModeImages.SetActive(true);
+                                PlayerPrefs.SetString("currentConvo", "NMG1");
+                                EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NicoIntro"]);
                                 break;
                             }
                         case 1:
                             {
+                                    morning = false;
+                                convoModeImages.SetActive(true);
+                                PlayerPrefs.SetString("currentConvo", "NMG2");
                                 EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NTalkTo2"]);
                                 break;
                             }
                         case 2:
                             {
+                                    morning = false;
+                                convoModeImages.SetActive(true);
+                                PlayerPrefs.SetString("currentConvo", "NMG3");
                                 EnterDialogueMode(nBtn.gameObject.GetComponent<Nico>().NdialogueDictionary["NTalkTo3"]);
                                 break;
                             }
@@ -575,7 +666,12 @@ namespace InterDineMension.Manager
             if (!morning)
             {
                 if (quicksaved)
-                {
+                {/*
+                    if (PlayerPrefs.GetString("weekDayT") == "Tut")
+                    {
+                        QuickSave();
+                    }
+                    else { PPSave(); }*/
                     QuickSave();
                 }
                 currentStory = new Story(inkJSON.text);
@@ -586,7 +682,9 @@ namespace InterDineMension.Manager
             }
             else
             {
+                //QuickSave();
                 currentStory = new Story(inkJSON.text);
+                //QuickLoad();
             }
 
             
@@ -670,6 +768,7 @@ namespace InterDineMension.Manager
                 }
             }
             
+
             /*currentStory.BindExternalFunction("StartBAMicro", () =>
             {
                  Debug.Log("called StartBAMicro");
@@ -678,6 +777,7 @@ namespace InterDineMension.Manager
             iEF.Bind(currentStory,bAM,mGC,this);
             vH.currentStory = currentStory;
             morning = false;
+
             ContinueStory();
         }
 
@@ -693,12 +793,18 @@ namespace InterDineMension.Manager
 
         private void ContinueStory()
         {
+
             if (currentStory.canContinue)
             {
                 //set text for current dialogue line
                 if (displayLineCorutine != null)
                 {
+
+                    //oR.sR.sprite = oR.ORspriteDictionary["neutral"];
+
                     StopCoroutine(displayLineCorutine);
+                    //oR.sR.sprite = oR.ORspriteDictionary["neutral"];
+
 
                 }
                 displayLineCorutine = StartCoroutine(DisplayLine(currentStory.Continue()));
@@ -712,9 +818,12 @@ namespace InterDineMension.Manager
 
             else
             {
+                Debug.Log("error test");
+
                 ExitDialogueMode(false,0,"ContinueStory",true);
                 dPTest.enabled = false;
             }
+
         }
 
         /// <summary>
@@ -800,9 +909,11 @@ namespace InterDineMension.Manager
                             {
                                 case speaker.Graciana:
                                     {
-                                        grac.sR.sprite = grac.GrspriteDictionary[tagValue];
+
+                                        grac.sR.sprite = grac.GrspriteDictionary[tagValue];                                        
+                                        break;
                                     }
-                                    break;
+                                    
                                 case speaker.Swatts:
                                     {
                                         cS.sR.sprite = cS.CsspriteDictionary[tagValue];
@@ -839,98 +950,100 @@ namespace InterDineMension.Manager
                             }break;
                         }
                     case SPEAKER_TAG:
-                        displayNameText.text = tagValue;
-                        if(tagValue== "Chef Swatts")
                         {
-                            cS.sR.color = Color.HSVToRGB(0, 0, 1, true);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                            charSpeak = speaker.Swatts;
-                        }
-                        else if(tagValue== "Graciana")
-                        {
-                            charSpeak = speaker.Graciana;
-                            switch (charSpeakTo)
+                            displayNameText.text = tagValue;
+                            if (tagValue == "Chef Swatts")
                             {
-                                case speakingTo.O_Ryan:
-                                    oR.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                case speakingTo.Swatts:
-                                    cS.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                case speakingTo.CeeCee:
-                                    cC.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                case speakingTo.Gnomies:
-                                    G.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                case speakingTo.Fred:
-                                    F.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    break;
-                                case speakingTo.Morgan:
-                                    M.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                case speakingTo.Nico:
-                                    N.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                default:
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, true);
-                                    break;
+                                cS.sR.color = Color.HSVToRGB(0, 0, 1, true);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                charSpeak = speaker.Swatts;
                             }
+                            else if (tagValue == "Graciana")
+                            {
+                                charSpeak = speaker.Graciana;
+                                switch (charSpeakTo)
+                                {
+                                    case speakingTo.O_Ryan:
+                                        oR.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    case speakingTo.Swatts:
+                                        cS.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    case speakingTo.CeeCee:
+                                        cC.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    case speakingTo.Gnomies:
+                                        G.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    case speakingTo.Fred:
+                                        F.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        break;
+                                    case speakingTo.Morgan:
+                                        M.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    case speakingTo.Nico:
+                                        N.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    default:
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, true);
+                                        break;
+                                }
+                            }
+                            else if (tagValue == "O'Ryan")
+                            {
+                                oR.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.O_Ryan;
+                            }
+                            else if (tagValue == "CeCe")
+                            {
+                                cC.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.CeeCee;
+                            }
+                            else if (tagValue == "Gnomies")
+                            {
+                                G.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.Gnomies;
+                            }
+                            else if (tagValue == "Fred")
+                            {
+                                F.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.Fred;
+                            }
+                            else if (tagValue == "Morgan")
+                            {
+                                M.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.Morgan;
+                            }
+                            else if (tagValue == "NiCo")
+                            {
+                                N.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.Nico;
+                            }
+                            else if (tagValue == "???")
+                            {
+                                //cS.sR.color = Color.HSVToRGB(0, 0, 40);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.None;
+                            }
+                            else
+                            {
+                                Debug.LogWarning($"parsing the speaker tag \"{tagValue}\" ");
+                            }
+                            break;
                         }
-                        else if (tagValue == "O'Ryan")
-                        {
-                            oR.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.O_Ryan;
-                        }
-                        else if (tagValue == "CeeCee") 
-                        {
-                            cC.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.CeeCee;
-                        }
-                        else if (tagValue == "Gnomies")
-                        {
-                            G.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.Gnomies;
-                        }
-                        else if (tagValue == "Fred")
-                        {
-                            F.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.Fred;
-                        }
-                        else if (tagValue == "Morgan")
-                        {
-                            M.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.Morgan;
-                        }
-                        else if (tagValue == "Nico")
-                        {
-                            N.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.Nico;
-                        }
-                        else if (tagValue == "???")
-                        {
-                            //cS.sR.color = Color.HSVToRGB(0, 0, 40);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.None;
-                        }
-                        else
-                        {
-                            Debug.LogError($"parsing the speaker tag \"{tagValue}\" ");
-                        }
-                        break;
                     case BBUN_TAG:
                         switch (tagValue)
                         {
@@ -1106,11 +1219,17 @@ namespace InterDineMension.Manager
                             sfxAudioSource.Play();
                             break;
                         }
+                    case BG:
+                        {
+                            backgroundImage.sprite = bGLibray[tagValue];
+                            break;
+                        }
                     case BGM:
                         {
                             StartCoroutine(musicFadeIn(musicLibrary[tagValue]));
                             break;
                         }
+
                     default:
                         Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
                         break;
@@ -1151,7 +1270,12 @@ namespace InterDineMension.Manager
             {
                 item.SetActive(false);
             }
-
+            /*cS.sR.sprite = cS.CsspriteDictionary["blank"];
+            cC.sR.sprite = cC.CcspriteDictionary["blank"];
+            G.sR.sprite = G.GspriteDictionary["blank"];
+            F.sR.sprite = F.FspriteDictionary["blank"];
+            M.sR.sprite = M.MspriteDictionary["blank"];
+            N.sR.sprite = N.NspriteDictionary["blank"];*/
             iEF.unBind(currentStory);
             //currentStory.UnbindExternalFunction("StartBAMicro1");
             convoModeImages.gameObject.SetActive(false);
@@ -1173,8 +1297,9 @@ namespace InterDineMension.Manager
             fBtn.SetActive(false);
             mBtn.SetActive(false);
             nBtn.SetActive(false);
+            if (PlayerPrefs.GetString("newGame") != "false") { Debug.Log("quicksave lacation test"); PPSave(); }
             Debug.Log(PlayerPrefs.GetString("weekDayT"));
-            switch (PlayerPrefs.GetString("weekDayT"))//will determine who's avalible
+            switch (PlayerPrefs.GetString("weekDay"))//will determine who's avalible
             {
                 case "Tut":
                     cSBtn.gameObject.SetActive(true);

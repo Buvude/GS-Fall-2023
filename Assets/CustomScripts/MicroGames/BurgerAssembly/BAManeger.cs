@@ -27,7 +27,7 @@ namespace InterDineMension.MicroGame.BA
         public GameplayManager gM;
         public dialogueManager dM;
         public Image finishedBurger;
-        public Sprite GoodBurger, BadBurger, MediocreBurger;
+        public Sprite GoodBurger, BadBurger, cosHorBurger;
         public static int finalScore = 0;
         public Microgamecontroller microgamecontroller;
         public VariableHolder vH;
@@ -146,13 +146,6 @@ namespace InterDineMension.MicroGame.BA
                     topBunOptions.Remove(topBunOptions[3]);
                     break;
                 case 3:
-                    bottomBunOptions.Remove(bottomBunOptions[3]);
-                    pickleOptions.Remove(pickleOptions[3]);
-                    lettuceOptions.Remove(lettuceOptions[3]);
-                    PattyOptions.Remove(PattyOptions[3]);
-                    condimentsOptions.Remove(condimentsOptions[3]);
-                    veggieOptions.Remove(veggieOptions[3]);
-                    topBunOptions.Remove(topBunOptions[3]); 
                     bottomBunOptions.Remove(bottomBunOptions[4]);
                     pickleOptions.Remove(pickleOptions[4]);
                     lettuceOptions.Remove(lettuceOptions[4]);
@@ -160,6 +153,13 @@ namespace InterDineMension.MicroGame.BA
                     condimentsOptions.Remove(condimentsOptions[4]);
                     veggieOptions.Remove(veggieOptions[4]);
                     topBunOptions.Remove(topBunOptions[4]);
+                    bottomBunOptions.Remove(bottomBunOptions[3]);
+                    pickleOptions.Remove(pickleOptions[3]);
+                    lettuceOptions.Remove(lettuceOptions[3]);
+                    PattyOptions.Remove(PattyOptions[3]);
+                    condimentsOptions.Remove(condimentsOptions[3]);
+                    veggieOptions.Remove(veggieOptions[3]);
+                    topBunOptions.Remove(topBunOptions[3]); 
                     break;
                 default:
                     break;
@@ -468,10 +468,11 @@ namespace InterDineMension.MicroGame.BA
             {
                 case -7:
                     {
-                        //impliment cosmic end
+                        finishedBurger.sprite = cosHorBurger;
+                        final.enabled = true;
                         break;
                     }
-                case <= 2:
+                case < 5:
                     {
                         finishedBurger.sprite = BadBurger;
                         final.enabled = true;
@@ -479,7 +480,7 @@ namespace InterDineMension.MicroGame.BA
                     }
                 /*case <= 5:
                     {
-                        finishedBurger.sprite = MediocreBurger;
+                        finishedBurger.sprite = cosHorBurger;
                         final.enabled = true;
                         break;
                     }*/
@@ -503,6 +504,7 @@ namespace InterDineMension.MicroGame.BA
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
+                dM.gameObject.SetActive(true);
                 if (PlayerPrefs.GetString("currentConvo") == "cSD1")
                 {
                     ResetMiniGame();
@@ -518,7 +520,16 @@ namespace InterDineMension.MicroGame.BA
                     PlayerPrefs.SetString("winStatus", "Win");
                     SceneManager.LoadScene(5);
                 }
-                
+                else if (PlayerPrefs.GetString("currentConvo") == "finale")
+                {
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["finalBMPass"]);
+                }
+                else
+                {
+                    Debug.LogError("not a valid currentConvo");
+                }
+
             }
             else if(finalScore > -7) 
             {
@@ -526,6 +537,7 @@ namespace InterDineMension.MicroGame.BA
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
+                dM.gameObject.SetActive(true);
                 if (PlayerPrefs.GetString("currentConvo")== "cSD1")
                 {
                     ResetMiniGame();
@@ -541,14 +553,40 @@ namespace InterDineMension.MicroGame.BA
                     PlayerPrefs.SetString("winStatus", "Loss");
                     SceneManager.LoadScene(5);
                 }
+                else if (PlayerPrefs.GetString("currentConvo") == "finale")
+                {
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["finalBMFail"]);
+                }
+                else
+                {
+                    Debug.LogError("not a valid currentConvo");
+                }
 
             }
             else if (finalScore == -7)
             {
+                yield return new WaitForSeconds(3);
+                microgamecontroller.dialogueContainer.SetActive(true);
+                BAMObject.SetActive(false);
+                dM.gameObject.SetActive(true);
                 if (PlayerPrefs.GetString("currentConvo") == "practiceB")
                 {
                     PlayerPrefs.SetString("winStatus", "Chaos");
                     SceneManager.LoadScene(5);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "finale")
+                {
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["finalBMChaos"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "NMD3")
+                {
+
+                }
+                else
+                {
+                    Debug.LogError("not a valid currentConvo");
                 }
             }
             else

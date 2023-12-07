@@ -1,3 +1,5 @@
+
+===ChaosGameEnd===
 //oryan recognizes graciana's potential and shares their godlike cosmic power with her
 
 ... #speaker:O'Ryan
@@ -52,4 +54,4 @@ Let us ascend.
 Now, it all makes sense. #speaker:Graciana
 Thank you.
 
-    -> END
+->CreditsPlaceholder
