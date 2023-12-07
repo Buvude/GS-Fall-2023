@@ -5,7 +5,7 @@ Phew... Real busy today...
 
 (O'Ryan enters through the portal, as always.)
 
-... #speaker:O'Ryan
+... #speaker:O'Ryan #mood:neutral
 
 H-hey O'Ryan... #speaker:Graciana
 Real busy day today...

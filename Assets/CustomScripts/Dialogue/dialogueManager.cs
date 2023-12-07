@@ -312,6 +312,8 @@ namespace InterDineMension.Manager
             switch (PlayerPrefs.GetString("currentConvo"))
             {
                 case "NMG1":
+                    charSpeakTo = speakingTo.CeeCee;
+                    N.gameObject.SetActive(true);
                     EnterDialogueMode(N.NdialogueDictionary["postMini"]);
                     break;
                 case "NMG2":
@@ -968,7 +970,7 @@ namespace InterDineMension.Manager
                             grac.sR.color = Color.HSVToRGB(0, 0, .4f);
                             charSpeak = speaker.O_Ryan;
                         }
-                        else if (tagValue == "CeeCee") 
+                        else if (tagValue == "CeCe") 
                         {
                             cC.sR.color = Color.HSVToRGB(0, 0, 1);
                             grac.sR.color = Color.HSVToRGB(0, 0, .4f);
@@ -992,7 +994,7 @@ namespace InterDineMension.Manager
                             grac.sR.color = Color.HSVToRGB(0, 0, .4f);
                             charSpeak = speaker.Morgan;
                         }
-                        else if (tagValue == "Nico")
+                        else if (tagValue == "NiCo")
                         {
                             N.sR.color = Color.HSVToRGB(0, 0, 1);
                             grac.sR.color = Color.HSVToRGB(0, 0, .4f);

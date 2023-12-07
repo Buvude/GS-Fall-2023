@@ -4,7 +4,7 @@ Let's see... Hm, no, I've gotten everything done already, I guess. #speaker:Grac
 
 (Right on cue, O'Ryan enters the Diner.)
 
-... #speaker:O'Ryan
+... #speaker:O'Ryan #mood:neutral
 
 Hey O'Ryan! #speaker:Graciana
 Everything's all done and set for the day!

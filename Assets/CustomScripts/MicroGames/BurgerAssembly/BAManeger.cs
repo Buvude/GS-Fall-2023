@@ -580,6 +580,10 @@ namespace InterDineMension.MicroGame.BA
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["finalBMChaos"]);
                 }
+                else if (PlayerPrefs.GetString("currentConvo") == "NMD3")
+                {
+
+                }
                 else
                 {
                     Debug.LogError("not a valid currentConvo");

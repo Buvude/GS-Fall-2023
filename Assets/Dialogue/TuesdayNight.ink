@@ -4,8 +4,8 @@ An interesting day, to say the least... #speaker:Graciana #mood:neutral #bgm:din
 
 O-oh, O'Ryan, hey! #speaker:Graciana
 
-... #speaker:O'Ryan
-Payment. #speaker:O'Ryan
+... #speaker:O'Ryan #mood:neutral
+Payment. #speaker:O'Ryan 
 
 R-right, thank you! #speaker:Graciana
 

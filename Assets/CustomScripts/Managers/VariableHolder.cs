@@ -30,12 +30,13 @@ namespace InterDineMension.Manager
         // Start is called before the first frame update
         void Awake()
         {
-            preventFarmingStory = new Story(preventFarming.text);
+            
             if (instance != null)
             {
                 Destroy(this.gameObject);
                 Debug.LogWarning($"Found more then one DialogueManager instance ");
             }
+            preventFarmingStory = new Story(preventFarming.text);
             instance = this;
             DontDestroyOnLoad(instance);
 

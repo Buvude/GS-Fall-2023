@@ -5,7 +5,7 @@ Hm... I think that's everything... #speaker:Graciana #bgm:dinNight
 (And right as I say that...)
 (...O'Ryan enters through the portal)
 
-... #speaker:O'Ryan
+... #speaker:O'Ryan #mood:neutral
 
 Hi O'Ryan! #speaker:Graciana #mood:neutral
 

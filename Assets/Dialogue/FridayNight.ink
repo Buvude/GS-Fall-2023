@@ -3,7 +3,7 @@ Phew... Feels like I barely made it through today... #speaker:Graciana #bgm:dinN
 
 (The portal activates, and O'Ryan steps through.)
 
-... #speaker:O'Ryan
+... #speaker:O'Ryan #mood:neutral
 
 H-hey O'Ryan... #speaker:Graciana
 Real busy day today...

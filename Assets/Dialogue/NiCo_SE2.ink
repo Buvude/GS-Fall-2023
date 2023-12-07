@@ -1,4 +1,5 @@
 INCLUDE globals.ink
+INCLUDE BADialogue.ink
 EXTERNAL StartTTMicro()
 ->start
 ==start==
@@ -409,9 +410,12 @@ Yes. See you. #speaker:NiCo #mood:neutral
 
 There will be a transistion where CeeCee tells you to take out the trash here.
 
-~TTMLevel=2
-~timeOfDay="afternoon"
+// ~TTMLevel=2
+// ~timeOfDay="afternoon"
+// ~QuickSave()
+// ~StartTTMicro()
+~BAMLevel=2
+~currentConvo="NMG3"
 ~QuickSave()
-~StartTTMicro()
+->MainBAD
 
-    -> DONE
