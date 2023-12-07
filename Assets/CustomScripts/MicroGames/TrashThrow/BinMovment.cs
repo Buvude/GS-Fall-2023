@@ -35,12 +35,12 @@ namespace InterDineMension.MicroGame.TT
             {
                 case direction.left:
                     {
-                        this.gameObject.transform.Translate(-transform.right * speed);
+                        this.gameObject.transform.Translate(-transform.right * speed * Time.fixedDeltaTime * 50);
                         break;
                     }
                 case direction.right:
                     {
-                        this.gameObject.transform.Translate(transform.right * speed);
+                        this.gameObject.transform.Translate(transform.right * speed * Time.fixedDeltaTime*50);
                         break;
                     }
             }

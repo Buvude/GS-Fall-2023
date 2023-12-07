@@ -818,7 +818,6 @@ namespace InterDineMension.Manager
 
             else
             {
-                Debug.Log("error test");
 
                 ExitDialogueMode(false,0,"ContinueStory",true);
                 dPTest.enabled = false;
@@ -1297,6 +1296,7 @@ namespace InterDineMension.Manager
             fBtn.SetActive(false);
             mBtn.SetActive(false);
             nBtn.SetActive(false);
+            charBtn.SetActive(true);
             if (PlayerPrefs.GetString("newGame") != "false") { Debug.Log("quicksave lacation test"); PPSave(); }
             Debug.Log(PlayerPrefs.GetString("weekDayT"));
             switch (PlayerPrefs.GetString("weekDay"))//will determine who's avalible

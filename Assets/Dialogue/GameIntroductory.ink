@@ -79,5 +79,5 @@ INCLUDE globals.ink
     
     Uh, okay... #speaker:Graciana
     //do minigame and continue with the pass or fail
-    
+    ~GoToDiner()
     ->END
