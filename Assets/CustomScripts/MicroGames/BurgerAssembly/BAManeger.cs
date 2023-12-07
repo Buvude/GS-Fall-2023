@@ -425,7 +425,7 @@ namespace InterDineMension.MicroGame.BA
                         toSpawn[4].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(toSpawn[4], lane5.transform);
                     }
-                    dsm.orderImages[6].enabled = false;
+                    
                     toSpawn.Clear();
 
                     break;
@@ -455,6 +455,7 @@ namespace InterDineMension.MicroGame.BA
         /// <param name="ingredientTypes"></param> used for keeping score to compare with orderedIngredients
         public void FinalTally(List<BurgerIngredients.ingredientType> ingredientTypes)
         {
+            dsm.orderImages[6].enabled = false;
             for (int i = 0;i < ingredientTypes.Count;)
             {
                 if (ingredientTypes[i] == BurgerIngredients.ingredientType.unspeakableHorror || 

@@ -624,7 +624,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 373913248274233199, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: dDictKey.Array.data[5]
-      value: brushoff
+      value: brushOff
       objectReference: {fileID: 0}
     - target: {fileID: 373913248274233199, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: sDictKey.Array.data[6]
@@ -1438,7 +1438,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4666329604201985269, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -3.460205
+      value: -3.460209
       objectReference: {fileID: 0}
     - target: {fileID: 4846163692464896498, guid: e7305bb203ed7d44d8b3eedd3749a0d9, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2167,7 +2167,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4250145821011959298, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 2.699646
+      value: 2.6992493
       objectReference: {fileID: 0}
     - target: {fileID: 4275714582021983096, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: dDictKey.Array.size
@@ -2199,7 +2199,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4275714582021983096, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: dDictKey.Array.data[5]
-      value: brushoff
+      value: brushOff
       objectReference: {fileID: 0}
     - target: {fileID: 4275714582021983096, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: sDictKey.Array.data[6]
