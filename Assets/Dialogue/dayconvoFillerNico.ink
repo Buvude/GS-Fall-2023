@@ -1,21 +1,13 @@
-
 INCLUDE globals.ink
-EXTERNAL GoToAppartment()
-How's the leg today NiCo? #speaker:Graciana #mood:sad
-
-Rustier than before, thanks... #speaker:Nico #mood:sad
-
-Want your usual chips? #speaker:Graciana #mood:neutral
-
-Sure. #speaker:Nico #mood:neutral
-
-*[Here. I'm getting better at prepping 'em.]
+// EXTERNAL GoToAppartment()
+Nico says fuck.jpeg
+*[good option]
     ~affectionN+=1
     ->EndConvo
-*[Sorry, should be better next time.]
+*[bad option]
     ~affectionN-=1
     ->EndConvo
-*[These should be spicier than before.]
+*[chaos option]
     ~chaosF+=1
     ->EndConvo
 
@@ -23,5 +15,6 @@ Sure. #speaker:Nico #mood:neutral
 
 ===EndConvo===
 ~convo_numberN+=1
-~GoToAppartment()
+// ~GoToAppartment()
+~StartO_Ryan()
 ->DONE

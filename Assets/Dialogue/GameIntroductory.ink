@@ -6,6 +6,7 @@ INCLUDE globals.ink
     ~dayVar=1
     ~weekDay="Tut"
     ~convo_numberCS=0
+    ~QuickSave()
     (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana #bgm:dinMorning
     (Here we are... The Portal Diner...) #speaker:Graciana #mood:think
     (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)
@@ -78,5 +79,5 @@ INCLUDE globals.ink
     
     Uh, okay... #speaker:Graciana
     //do minigame and continue with the pass or fail
-    
+    ~GoToDiner()
     ->END

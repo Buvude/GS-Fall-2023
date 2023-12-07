@@ -1,22 +1,18 @@
 INCLUDE globals.ink
-EXTERNAL GoToAppartment()
-Hey there, new stuff, hows the day been treating ya? #speaker:CeeCee #mood:happy
-
-I think i'm doing okay. #speaker:Graciana #mood:happy
-
-Think you can do me a favor? #speaker:CeeCee
-
-*[No problem. Let's do it.]
+// EXTERNAL GoToAppartment()
+CeeCee says placeholder
+*[good option]
     ~affectionCC+=1
     ->EndConvo
-*[Do it yourself.]
+*[bad option]
     ~affectionCC-=1
     ->EndConvo
-*[No worries. I got it.]
+*[chaos option]
     ~chaosCC+=1
     ->EndConvo
 
 ===EndConvo===
 ~convo_numberCC+=1
-~GoToAppartment()
+// ~GoToAppartment()
+~StartO_Ryan()
 ->DONE

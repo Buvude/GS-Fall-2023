@@ -14,7 +14,10 @@ namespace InterDineMension.Manager
         // Start is called before the first frame update
         private void Awake()
         {
-            PlayerPrefs.SetString("timeOfDay", "Apt");
+            if (this.enabled == true)
+            {
+                PlayerPrefs.SetString("timeOfDay", "Apt");
+            }
             
         }
         void Start()

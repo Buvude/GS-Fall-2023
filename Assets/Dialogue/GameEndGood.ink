@@ -1,3 +1,5 @@
+
+===GoodGameEnd===
 ... #speaker:O'Ryan
 And then, you arrived.
 
@@ -30,4 +32,4 @@ Perfect.
 (They extend out their hand to shake mine.) #speaker:Graciana
 
 Welcome aboard! #speaker:O'Ryan
-    -> END
+->CreditsPlaceholder

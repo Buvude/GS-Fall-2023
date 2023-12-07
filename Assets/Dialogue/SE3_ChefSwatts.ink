@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-EXTERNAL GoToAppartment()
+// EXTERNAL GoToAppartment()
 
 ->MainCS3
 
@@ -16,7 +16,7 @@ Ay, Gracie, ya got a minute? #speaker:Chef Swatts
     Ay, just wanted to lend ya ear for a minute #speaker:Chef Swatts
     //go to ending
     {
-    -chaosCS>=9:
+    -chaosCS>=chaosTotalCS:
         ->ChaosEndCS
     -affectionCS>=0:
         ->GoodEndCS
@@ -67,7 +67,8 @@ I'm headin' back to Dipterra, babeh! #speaker:Chef Swatts #mood:happy
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~affectionOR+=1
-~GoToAppartment()
+// ~GoToAppartment()
+~StartO_Ryan()
 ->DONE
 
 
@@ -103,7 +104,8 @@ Ahahaha! #speaker:Chef Swatts #mood:happy
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~affectionOR-=1
-~GoToAppartment()
+// ~GoToAppartment()
+~StartO_Ryan()
 ->DONE
 
 ==ChaosEndCS==
@@ -144,5 +146,6 @@ Y-yeah... I figured... #speaker:Graciana #mood:sad
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~chaosOR+=1
-~GoToAppartment()
+// ~GoToAppartment()
+~StartO_Ryan()
 ->DONE

@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-EXTERNAL GoToAppartment()
+// EXTERNAL GoToAppartment()
 continue to trigger endings
 {
 -chaosCC>=3:
@@ -14,5 +14,6 @@ continue to trigger endings
 }
 ~convo_numberCC+=1
 ~convo_numberOR+=1
-~GoToAppartment()
+// ~GoToAppartment()
+~StartO_Ryan()
 ->DONE

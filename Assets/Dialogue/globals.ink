@@ -1,4 +1,5 @@
 //EXTERNAL GoToDiner()
+EXTERNAL QuickLoad()
 EXTERNAL SaveGame()
 INCLUDE MorningPlaceHolder.ink
 INCLUDE MondayMorning.ink
@@ -7,12 +8,21 @@ INCLUDE WednesdayMorning.ink
 INCLUDE ThursdayMorning.ink
 INCLUDE FridayMorning.ink
 INCLUDE SaturdayMorning.ink
+//I feel like including stuff here is not a great idea, but I have nut run into issues yet... so here we go...
+EXTERNAL StartO_Ryan()
+EXTERNAL GoToAppartment()
 // INCLUDE AppartmentIntro.ink
 EXTERNAL QuickSave()
 EXTERNAL NewDay()
 //VAR pokemon_name=""
 
- 
+ VAR chaosTotalCS=9
+VAR chaosTotalN=12
+VAR chaosTotalCC=0
+VAR chaosTotalM=0
+VAR chaosTotalG=0
+VAR chaosTotalF=0
+VAR chaosTotalOR=6
 
 
 //saves at the end of each day
@@ -132,19 +142,19 @@ LIST TBuns3 = (Plain), (Lettucebun), (Sourdough),(Pretzel) //(Bun_of_the_Deep) s
         // ~SaveGame()
         // ->DONE
         //redirect to Day Off events
-        ~weekDay="Sun"
+        ~weekDay="Mon"
         ~timeOfDay="morning"
-        ~dayVar+=1
+        ~dayVar+=2
         ~SaveGame()
         ~NewDay()
         // ->monday
-    -weekDay=="Sun":
-        ~weekDay="Mon"
-        ~timeOfDay="morning"
-        ~dayVar+=1
-        ~SaveGame()
-        ~NewDay()        
-        // ->monday
+    // -weekDay=="Sun":
+    //     ~weekDay="Mon"
+    //     ~timeOfDay="morning"
+    //     ~dayVar+=1
+    //     ~SaveGame()
+    //     ~NewDay()        
+    //     // ->monday
         
 }
 ->DONE

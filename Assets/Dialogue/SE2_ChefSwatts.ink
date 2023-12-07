@@ -14,6 +14,9 @@ Ey yo, Graciana! Think ya can gimme some help real quick? #speaker:Chef Swatts
 
 ==Sure==
 ~BAMLevel=1
+~convo_numberCS=2
+~timeOfDay="afternoon"
+~QuickSave()
 ~currentConvo="cSD2"
 Yeah, you got it. #speaker:Graciana #mood:neutral
 
@@ -306,6 +309,7 @@ B-but... #speaker:Graciana #mood:sad
 Graciana, help me with this, ya? #speaker:Chef Swatts #mood:neutral
 
 ...Okay... #speaker:Graciana
+~timeOfDay="afternoon"
 ~QuickSave()
 ->MainBAD
 -> DONE

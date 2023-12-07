@@ -1,3 +1,10 @@
+// INCLUDE globals.ink
+INCLUDE GameEndBad.ink
+INCLUDE GameEndGood.ink
+INCLUDE GameEndChaos.ink
+INCLUDE CreditsPlaceHolder.ink
+
+===Oryanfinale===
 ... #speaker:O'Ryan
 Come with me. #speaker:O'Ryan
 
@@ -94,6 +101,13 @@ I oversee a variety of different establishments in The Great Void, but this Dine
 However. Overtime, interdimensional travel became more commonplace. There were more people to check in and out. More establishments were opening at a rapid pace.
 The paperwork kept piling up, and I have not been able to dedicate the time to this Diner that it deserves.
 
-//continue to either GameEndGood, GameEndBad, or GameEndChaos
+{
+-chaosOR>=6:
+->ChaosGameEnd
+-affectionOR>=0:
+->GoodGameEnd
+-else
+->BadGameEnd
+}
 
     -> END

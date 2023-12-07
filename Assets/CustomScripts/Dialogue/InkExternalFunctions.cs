@@ -74,7 +74,33 @@ namespace InterDineMension
                 dM.G.gameObject.SetActive(false);
                 dM.cS.gameObject.SetActive(false);
                 dM.cC.gameObject.SetActive(false);
+                dM.N.gameObject.SetActive(false);
+                dM.G.gameObject.SetActive(false);
+                dM.M.gameObject.SetActive(false);
                 //dM.EnterDialogueMode(dM.TTMicroArcadeConvo);
+                switch (PlayerPrefs.GetString("weekDay"))
+                {
+                    case "Mon":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["monNight"]);
+                        break;
+                    case "Tue":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["tueNight"]);
+                        break;
+                    case "Wed":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["wedNight"]);
+                        break;
+                    case "Thu":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["thuNight"]);
+                        break;
+                    case "Fri":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["friNight"]);
+                        break;
+                    case "Sat":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["satNight"]);
+                        break;
+                    default:
+                        break;
+                }
             });
             currentStory.BindExternalFunction("StartTTMicro", () =>
             {
@@ -111,6 +137,17 @@ namespace InterDineMension
                 dM.SaveGame();
                 SceneManager.LoadScene(5);
             });
+            currentStory.BindExternalFunction("EndGame", () =>
+            {
+                PlayerPrefs.DeleteAll();
+                SceneManager.LoadScene(0);
+            });
+            currentStory.BindExternalFunction("EndGame2", () =>
+            {
+                PlayerPrefs.DeleteAll();
+                Application.Quit();
+            });
+
         }
 
         public void unBind(Story currentStory)
@@ -126,6 +163,8 @@ namespace InterDineMension
             currentStory.UnbindExternalFunction("QuickLoad");
             currentStory.UnbindExternalFunction("NewDay");
             currentStory.UnbindExternalFunction("GoToAppartment");
+            currentStory.UnbindExternalFunction("EndGame");
+            currentStory.UnbindExternalFunction("EndGame2");
         }
     }
 }

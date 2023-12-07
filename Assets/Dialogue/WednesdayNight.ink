@@ -1,10 +1,11 @@
-Hm... I think that's everything... #speaker:Graciana
+INCLUDE globals.ink
+Hm... I think that's everything... #speaker:Graciana #bgm:dinNight
 ...That's weird, O'Ryan should be in by now... #speaker:Graciana #mood:think
 
 (And right as I say that...)
 (...O'Ryan enters through the portal)
 
-... #speaker:O'Ryan
+... #speaker:O'Ryan #mood:neutral
 
 Hi O'Ryan! #speaker:Graciana #mood:neutral
 
@@ -30,5 +31,5 @@ Y-yeah, see ya tomorrow! #speaker:Graciana
 
 ...That was weird.
 Oh well, guess I'll just head home for now...
-
+~GoToAppartment()
     -> DONE

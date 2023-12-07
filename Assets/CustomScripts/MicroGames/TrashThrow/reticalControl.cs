@@ -28,19 +28,7 @@ namespace InterDineMension.MicroGame.TT
         // Update is called once per frame
         void Update()
         {
-            switch (mvmtDirection)
-            {
-                case direction.left:
-                    {
-                        this.gameObject.transform.Translate( -transform.right*speed);
-                        break;
-                    }
-                case direction.right:
-                    {
-                        this.gameObject.transform.Translate(transform.right*speed);
-                        break;
-                    }
-            }
+            
 
             
             if (canThrow&&!manager.timerHasEnded&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Z)||Input.GetKeyDown(KeyCode.Space)))
@@ -55,6 +43,22 @@ namespace InterDineMension.MicroGame.TT
                 hitMarker.transform.position = dropSpot;
                 player.GetComponent<Animator>().SetTrigger("Throw");
                 player.animating = true;
+            }
+        }
+        private void FixedUpdate()
+        {
+            switch (mvmtDirection)
+            {
+                case direction.left:
+                    {
+                        this.gameObject.transform.Translate( -transform.right*speed * Time.fixedDeltaTime * 250);
+                        break;
+                    }
+                case direction.right:
+                    {
+                        this.gameObject.transform.Translate(transform.right*speed * Time.fixedDeltaTime * 250);
+                        break;
+                    }
             }
         }
 

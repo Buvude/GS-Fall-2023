@@ -1,3 +1,7 @@
+INCLUDE globals.ink
+EXTERNAL StartTTMicro()
+~affectionOR-=1
+~QuickSave()
 ... #speaker:Graciana #mood:fear
 
 ... #speaker:O'Ryan
@@ -14,5 +18,8 @@ Come with me.
 Garbage next.
 
 U-uh, right, okay! #speaker:Graciana
-
+~TTMLevel=3
+~timeOfDay="afternoon"
+~QuickSave()
+~StartTTMicro()
     -> END
