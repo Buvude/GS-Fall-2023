@@ -59,21 +59,23 @@ But I'm sure he will eventually come back and walk with me right? #speaker:Fred 
 (...I am not built for this...) #speaker:Graciana #mood:neutral
   
  ** [Of course!] 
- //Good 
- Of course! He sounds like he cares about you a lot! I'm sure he will come back #speaker:Graciana #mood:neutral
- 
- I hope so, I like talking to people on my route, but sometimes I don't know what to say, and Frank helps me find the right words. #speaker:Fred #mood:happy
+//Good
+~affectionF=affectionF+2
 
- (Thank goodness this kid has a parent figure in his life...) #speaker:Graciana #mood:think
-
- If Frank cares so much about helping you find friends, and working even more just to spend time with you, I think there's nothing that can stop him from coming back. #speaker:Graciana #mood:happy
+Of course! He sounds like he cares about you a lot! I'm sure he will come back #speaker:Graciana #mood:neutral #sfx:GainedPoint
  
+I hope so, I like talking to people on my route, but sometimes I don't know what to say, and Frank helps me find the right words. #speaker:Fred #mood:happy
+
+(Thank goodness this kid has a parent figure in his life...) #speaker:Graciana #mood:think
+
+If Frank cares so much about helping you find friends, and working even more just to spend time with you, I think there's nothing that can stop him from coming back. #speaker:Graciana #mood:happy
+
 You think so? #speaker:Fred #mood:galaxy
 
 Of course! #speaker:Graciana #mood:happy
- 
+
 Thanks Graciana! #speaker:Fred #mood:happy
- 
+
 For what hun? #speaker:Graciana #mood:think`
 
 For this, and the lava lamp! #speaker:Fred #mood:pump
@@ -105,8 +107,8 @@ My lips are sealed! #speaker:Fred #mood:happy
 
 **[Making friends by yourself?]
 //chaotic
-
-Well even if he doesn’t, you'll still be able to make other friends on your route, right? #speaker:Graciana #mood:think
+~chaosF=chaosF+2
+Well even if he doesn’t, you'll still be able to make other friends on your route, right? #speaker:Graciana #mood:think #sfx:CosmicPoint
 
 I don't know, he really did a lot for me before, I don't think I can do much without him... #speaker:Fred #mood:sad
 
@@ -150,7 +152,9 @@ Okay! #speaker:Fred #mood:happy
 
 **[What if he doesn't...]
   //bad
-What if he doesn't come back? Would you be okay? #speaker:Graciana #mood:think
+~affectionF=affectionF-1
+
+What if he doesn't come back? Would you be okay? #speaker:Graciana #mood:think #sfx:LostPoint
 
 ...He does a lot for me... Without him, I don't know what I would do... #speaker:Fred #mood:sad
 
@@ -159,7 +163,6 @@ What if he doesn't come back? Would you be okay? #speaker:Graciana #mood:think
 But Fred, think about it. #speaker:Graciana #mood:think
 You came here and made a friend all by yourself, do you really... <i>need</i> Frank? #speaker:Graciana #mood:think
 If he's busy, your life can't just stop, right? I'm sure you will be just fine without him #speaker:Graciana #mood:neutral
-
 And it's not Frank that has you delivering packages with him everyday, right? Whether it's right or wrong it's UMS. 
 Which, side-note, you know you can make friends without delivering them something right? #speaker:Graciana #mood:think
 
