@@ -26,14 +26,31 @@ namespace InterDineMension.Manager
         public AppartmentManager aM;
         public bool useSaveSystem;
 
+        //tags
         public List<string> sfxTittles = new List<string>();
         public List<AudioClip> sfxSounds = new List<AudioClip>();
         public Dictionary<string, AudioClip> sfxLibrary = new Dictionary<string, AudioClip>();
         public AudioSource sfxAudioSource;
+
         public List<string> bgmTittles = new List<string>();
         public List<AudioClip> bgmSounds = new List<AudioClip>();
         public Dictionary<string, AudioClip> musicLibrary = new Dictionary<string, AudioClip>();
         public AudioSource bgmAudioSource;
+
+        /* public List<string> vOTittles = new List<string>();
+         public List<AudioClip> vOSounds = new List<AudioClip>();
+         public Dictionary<string, AudioClip> vOLibrary = new Dictionary<string, AudioClip>();
+         public AudioSource vOAudioSource;*/ //commented out until VO clips are added
+
+        public List<string> bGTittles = new List<string>();
+        public List<Sprite> bGSprites = new List<Sprite>();
+        public Dictionary<string, Sprite> bGLibray = new Dictionary<string, Sprite>();
+        public Image backgroundImage;
+
+        /*public List<string> cGTittles = new List<string>();
+        public List<Sprite> cGSprites = new List<Sprite>();
+        public Dictionary<string, Sprite> cGLibray = new Dictionary<string, Sprite>();
+        public Image cGImage;*/ //image might just be background
 
         //public GameObject charImageCS, charImageOR;
         //private bool deactivatedcorutines = false;
@@ -108,6 +125,8 @@ namespace InterDineMension.Manager
         private const string MOOD = "mood";
         private const string SFX = "sfx";
         private const string BGM = "bgm";
+        private const string BG = "bg";
+        private const string CG = "cg";
         //private const string VAR_CHANGE = "varChange"; not sure what this was supposed to me lmao
 
         public InkExternalFunctions iEF;
@@ -138,6 +157,18 @@ namespace InterDineMension.Manager
             else
             {
                 Debug.LogError("bgmTittles and bgmSounds are not at an equal count");
+            }
+
+            if (bGTittles.Count == bGSprites.Count)
+            {
+                for (int i = 0; i < bGTittles.Count; i++)
+                {
+                    bGLibray.Add(bGTittles[i], bGSprites[i]);
+                }
+            }
+            else
+            {
+                Debug.LogError("bGTittles and bGSprites are not at an equal count");
             }
             currentStory = new Story(loadGlobalsJSON.text);
 
@@ -919,98 +950,100 @@ namespace InterDineMension.Manager
                             }break;
                         }
                     case SPEAKER_TAG:
-                        displayNameText.text = tagValue;
-                        if(tagValue== "Chef Swatts")
                         {
-                            cS.sR.color = Color.HSVToRGB(0, 0, 1, true);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                            charSpeak = speaker.Swatts;
-                        }
-                        else if(tagValue== "Graciana")
-                        {
-                            charSpeak = speaker.Graciana;
-                            switch (charSpeakTo)
+                            displayNameText.text = tagValue;
+                            if (tagValue == "Chef Swatts")
                             {
-                                case speakingTo.O_Ryan:
-                                    oR.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                case speakingTo.Swatts:
-                                    cS.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                case speakingTo.CeeCee:
-                                    cC.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                case speakingTo.Gnomies:
-                                    G.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                case speakingTo.Fred:
-                                    F.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    break;
-                                case speakingTo.Morgan:
-                                    M.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                case speakingTo.Nico:
-                                    N.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
-                                    break;
-                                default:
-                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, true);
-                                    break;
+                                cS.sR.color = Color.HSVToRGB(0, 0, 1, true);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                charSpeak = speaker.Swatts;
                             }
+                            else if (tagValue == "Graciana")
+                            {
+                                charSpeak = speaker.Graciana;
+                                switch (charSpeakTo)
+                                {
+                                    case speakingTo.O_Ryan:
+                                        oR.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    case speakingTo.Swatts:
+                                        cS.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    case speakingTo.CeeCee:
+                                        cC.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    case speakingTo.Gnomies:
+                                        G.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    case speakingTo.Fred:
+                                        F.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        break;
+                                    case speakingTo.Morgan:
+                                        M.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    case speakingTo.Nico:
+                                        N.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                        break;
+                                    default:
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, true);
+                                        break;
+                                }
+                            }
+                            else if (tagValue == "O'Ryan")
+                            {
+                                oR.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.O_Ryan;
+                            }
+                            else if (tagValue == "CeCe")
+                            {
+                                cC.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.CeeCee;
+                            }
+                            else if (tagValue == "Gnomies")
+                            {
+                                G.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.Gnomies;
+                            }
+                            else if (tagValue == "Fred")
+                            {
+                                F.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.Fred;
+                            }
+                            else if (tagValue == "Morgan")
+                            {
+                                M.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.Morgan;
+                            }
+                            else if (tagValue == "NiCo")
+                            {
+                                N.sR.color = Color.HSVToRGB(0, 0, 1);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.Nico;
+                            }
+                            else if (tagValue == "???")
+                            {
+                                //cS.sR.color = Color.HSVToRGB(0, 0, 40);
+                                grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeak = speaker.None;
+                            }
+                            else
+                            {
+                                Debug.LogWarning($"parsing the speaker tag \"{tagValue}\" ");
+                            }
+                            break;
                         }
-                        else if (tagValue == "O'Ryan")
-                        {
-                            oR.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.O_Ryan;
-                        }
-                        else if (tagValue == "CeCe") 
-                        {
-                            cC.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.CeeCee;
-                        }
-                        else if (tagValue == "Gnomies")
-                        {
-                            G.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.Gnomies;
-                        }
-                        else if (tagValue == "Fred")
-                        {
-                            F.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.Fred;
-                        }
-                        else if (tagValue == "Morgan")
-                        {
-                            M.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.Morgan;
-                        }
-                        else if (tagValue == "NiCo")
-                        {
-                            N.sR.color = Color.HSVToRGB(0, 0, 1);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.Nico;
-                        }
-                        else if (tagValue == "???")
-                        {
-                            //cS.sR.color = Color.HSVToRGB(0, 0, 40);
-                            grac.sR.color = Color.HSVToRGB(0, 0, .4f);
-                            charSpeak = speaker.None;
-                        }
-                        else
-                        {
-                            Debug.LogWarning($"parsing the speaker tag \"{tagValue}\" ");
-                        }
-                        break;
                     case BBUN_TAG:
                         switch (tagValue)
                         {
@@ -1186,11 +1219,17 @@ namespace InterDineMension.Manager
                             sfxAudioSource.Play();
                             break;
                         }
+                    case BG:
+                        {
+                            backgroundImage.sprite = bGLibray[tagValue];
+                            break;
+                        }
                     case BGM:
                         {
                             StartCoroutine(musicFadeIn(musicLibrary[tagValue]));
                             break;
                         }
+
                     default:
                         Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
                         break;

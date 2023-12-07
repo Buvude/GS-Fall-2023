@@ -2036,12 +2036,40 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1274893111}
     - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: backgroundImage
+      value: 
+      objectReference: {fileID: 1800836466}
+    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: bGSounds.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: bGSprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: bGTittles.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: bgmSounds.Array.size
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: bgmTittles.Array.size
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: bGSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 731674714f670054cbbdd7f94551bf92, type: 3}
+    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: bGSprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 731674714f670054cbbdd7f94551bf92, type: 3}
+    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: bGTittles.Array.data[0]
+      value: dinerMainView
       objectReference: {fileID: 0}
     - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: bgmSounds.Array.data[0]

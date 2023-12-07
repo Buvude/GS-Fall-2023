@@ -369,7 +369,7 @@ There's a pun in that somewhere, but I don't have the energy to process it. #spe
 R-right... #speaker:Graciana #mood:sad
 I honestly have no idea how you do it. How you manage to live there and work every day, despite what's going on there. #speaker:Graciana #mood:neutral
 
-... #speaker:NiCo #mood:
+... #speaker:NiCo #mood:neutral
 What choice do I have? #speaker:NiCo #mood:sad
 
 *****[It is what it is...]
