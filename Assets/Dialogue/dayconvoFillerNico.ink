@@ -1,13 +1,21 @@
+
 INCLUDE globals.ink
 EXTERNAL GoToAppartment()
-Nico says fuck.jpeg
-*[good option]
+How's the leg today NiCo? #speaker:Graciana #mood:sad
+
+Rustier than before, thanks... #speaker:Nico #mood:sad
+
+Want your usual chips? #speaker:Graciana #mood:neutral
+
+Sure. #speaker:Nico #mood:neutral
+
+*[Here. I'm getting better at prepping 'em.]
     ~affectionN+=1
     ->EndConvo
-*[bad option]
+*[Sorry, should be better next time.]
     ~affectionN-=1
     ->EndConvo
-*[chaos option]
+*[These should be spicier than before.]
     ~chaosF+=1
     ->EndConvo
 

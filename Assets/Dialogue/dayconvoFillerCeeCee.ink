@@ -1,13 +1,18 @@
 INCLUDE globals.ink
 EXTERNAL GoToAppartment()
-CeeCee says fuck.jpeg
-*[good option]
+Hey there, new stuff, hows the day been treating ya? #speaker:CeeCee #mood:happy
+
+I think i'm doing okay. #speaker:Graciana #mood:happy
+
+Think you can do me a favor? #speaker:CeeCee
+
+*[No problem. Let's do it.]
     ~affectionCC+=1
     ->EndConvo
-*[bad option]
+*[Do it yourself.]
     ~affectionCC-=1
     ->EndConvo
-*[chaos option]
+*[No worries. I got it.]
     ~chaosCC+=1
     ->EndConvo
 
