@@ -16,6 +16,7 @@ namespace InterDineMension.MicroGame.BA
 
     public class BAManeger : MonoBehaviour
     {
+        public dialogueSpriteManager dsm;
         public bool reseted;
         public Animator final;
         public GameObject orderImages;
@@ -164,11 +165,16 @@ namespace InterDineMension.MicroGame.BA
                 default:
                     break;
             }
+            foreach(Image i in dsm.orderImages)
+            {
+                i.enabled = true;
+            }
 
             dM.QuickSave();
         }
         public void StartTheNextPhase()
         {
+            dsm.imagePopUp.enabled=false;
             switch (bAState)
             {
                 case phase.bottomBun:
@@ -239,6 +245,7 @@ namespace InterDineMension.MicroGame.BA
                         Instantiate(toSpawn[4], lane5.transform);
                     }
                     toSpawn.Clear();
+                    dsm.orderImages[0].enabled = false;
                     bAState = phase.lettuce;
                     break;
                 case phase.lettuce:
@@ -274,6 +281,7 @@ namespace InterDineMension.MicroGame.BA
                         Instantiate(toSpawn[4], lane5.transform);
                     }
                     toSpawn.Clear();
+                    dsm.orderImages[1].enabled = false;
                     bAState = phase.Patty;
                     break;
                 case phase.Patty:
@@ -309,6 +317,7 @@ namespace InterDineMension.MicroGame.BA
                         Instantiate(toSpawn[4], lane5.transform);
                     }
                     toSpawn.Clear();
+                    dsm.orderImages[2].enabled = false;
                     bAState = phase.condiment;
                     break;
                 case phase.condiment:
@@ -344,6 +353,7 @@ namespace InterDineMension.MicroGame.BA
                         Instantiate(toSpawn[4], lane5.transform);
                     }
                     toSpawn.Clear();
+                    dsm.orderImages[3].enabled = false;
                     bAState = phase.veggie;
                     break;
                 case phase.veggie:
@@ -379,9 +389,11 @@ namespace InterDineMension.MicroGame.BA
                         Instantiate(toSpawn[4], lane5.transform);
                     }
                     toSpawn.Clear();
+                    dsm.orderImages[4].enabled = false;
                     bAState = phase.topBun;
                     break;
                 case phase.topBun:
+                    dsm.orderImages[5].enabled = false;
                     shuffleList(topBunOptions);
                     toSpawn[0].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane1;
                     Instantiate(toSpawn[0], lane1.transform);
@@ -413,7 +425,9 @@ namespace InterDineMension.MicroGame.BA
                         toSpawn[4].GetComponent<BurgerIngredients>().currentposIngredients = BurgerIngredients.lanePos.lane5;
                         Instantiate(toSpawn[4], lane5.transform);
                     }
+                    
                     toSpawn.Clear();
+
                     break;
                 default:
                     break;
@@ -441,6 +455,7 @@ namespace InterDineMension.MicroGame.BA
         /// <param name="ingredientTypes"></param> used for keeping score to compare with orderedIngredients
         public void FinalTally(List<BurgerIngredients.ingredientType> ingredientTypes)
         {
+            dsm.orderImages[6].enabled = false;
             for (int i = 0;i < ingredientTypes.Count;)
             {
                 if (ingredientTypes[i] == BurgerIngredients.ingredientType.unspeakableHorror || 
