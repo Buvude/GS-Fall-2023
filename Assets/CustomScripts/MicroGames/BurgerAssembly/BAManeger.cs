@@ -498,6 +498,7 @@ namespace InterDineMension.MicroGame.BA
 
         private IEnumerator BAMicroGameScore(int finalScore)//used to determine where to go next
         {
+            dM.charSpeakTo = dialogueManager.speakingTo.Swatts;
             Debug.Log(dM.vH.currentStory.variablesState["currentConvo"].ToString());
             if (finalScore >= 5)
             { 
@@ -524,6 +525,12 @@ namespace InterDineMension.MicroGame.BA
                 {
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["finalBMPass"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "NMG3")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "won");
+                    dM.EnterDialogueMode(dM.N.NdialogueDictionary["postMini"]);
                 }
                 else
                 {
@@ -558,6 +565,12 @@ namespace InterDineMension.MicroGame.BA
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["finalBMFail"]);
                 }
+                else if (PlayerPrefs.GetString("currentConvo") == "NMG3")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "loss");
+                    dM.EnterDialogueMode(dM.N.NdialogueDictionary["postMini"]);
+                }
                 else
                 {
                     Debug.LogError("not a valid currentConvo");
@@ -580,9 +593,11 @@ namespace InterDineMension.MicroGame.BA
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["finalBMChaos"]);
                 }
-                else if (PlayerPrefs.GetString("currentConvo") == "NMD3")
+                else if (PlayerPrefs.GetString("currentConvo") == "NMG3")
                 {
-
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "chaos");
+                    dM.EnterDialogueMode(dM.N.NdialogueDictionary["postMini"]);
                 }
                 else
                 {

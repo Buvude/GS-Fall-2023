@@ -83,6 +83,7 @@ Ay... Ya kinda did, ya... #speaker:Chef Swatts #mood:sad
 ->EndConvo
 ==chaos==
 ~chaosN=chaosN+4
+...#speaker:Chef Swatts #mood:neutral
 ... #speaker:Graciana #mood:neutral
 Huh... What... What did I make...? #speaker:Graciana #mood:think 
 
