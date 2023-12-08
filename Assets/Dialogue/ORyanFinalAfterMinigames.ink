@@ -6,7 +6,7 @@ INCLUDE CreditsPlaceHolder.ink
 
 ===Oryanfinale===
 ... #speaker:O'Ryan
-Come with me. #speaker:O'Ryan
+Come with me. #speaker:O'Ryan #mood:neutral
 
 //transition to main diner
 

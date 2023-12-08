@@ -10,7 +10,7 @@ INCLUDE globals.ink
     (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana #bgm:dinMorning
     (Here we are... The Portal Diner...) #speaker:Graciana #mood:think
     (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)
-    (I still haven’t met or even seen the owner; I interviewed online. They said to find a “fly guy,” whatever that means–)
+    (I still haven’t met or even seen the owner; I interviewed online. They said to find a “fly guy,” whatever that means–) 
     
     Ey! We not open yet! Ya gonna have to wait! How’d ya get in here? The portal shoulda been locked! #speaker:???
     
@@ -20,7 +20,7 @@ INCLUDE globals.ink
     
     (Suddenly, the kitchen door swings open, and before me stands, literally… a “fly guy.”) #speaker:Graciana
     
-    Why didn’t ya start with that? I’m Chef Swatts, I’m tha head chef–and only–chef here! #speaker:Chef Swatts #mood:happy
+    Why didn’t ya start with that? I’m Chef Swatts, I’m tha head chef–and only–chef here! #speaker:Chef Swatts #mood:happy 
     
     H-hi, I’m Graciana–#speaker:Graciana #mood:neutral
     

@@ -34,6 +34,7 @@ namespace InterDineMension.MicroGame.BA
         public VariableHolder vH;
         void Start()
         {
+            
             microgamecontroller = GameObject.FindGameObjectWithTag("eventSystem").GetComponent<Microgamecontroller>();
             microgamecontroller.bAM = this;
             //StartMicroGame(microgamecontroller.orderedIngredients);
@@ -539,6 +540,7 @@ namespace InterDineMension.MicroGame.BA
                 else if (PlayerPrefs.GetString("currentConvo") == "finale")
                 {
                     ResetMiniGame();
+                    dM.setCharSpeakToOR();
                     dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["finalBMPass"]);
                 }
                 else if (PlayerPrefs.GetString("currentConvo") == "NMG3")
@@ -578,6 +580,7 @@ namespace InterDineMension.MicroGame.BA
                 else if (PlayerPrefs.GetString("currentConvo") == "finale")
                 {
                     ResetMiniGame();
+                    dM.setCharSpeakToOR();
                     dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["finalBMFail"]);
                 }
                 else if (PlayerPrefs.GetString("currentConvo") == "NMG3")
@@ -606,6 +609,7 @@ namespace InterDineMension.MicroGame.BA
                 else if (PlayerPrefs.GetString("currentConvo") == "finale")
                 {
                     ResetMiniGame();
+                    dM.setCharSpeakToOR();
                     dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["finalBMChaos"]);
                 }
                 else if (PlayerPrefs.GetString("currentConvo") == "NMG3")
@@ -623,8 +627,10 @@ namespace InterDineMension.MicroGame.BA
             {
                 Debug.LogError("final score was below -7");
             }
-        }
 
+            
+        }
         
+
     }
 }
