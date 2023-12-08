@@ -13,11 +13,11 @@ namespace InterDineMension.Manager
     using JetBrains.Annotations;
     using MicroGame;
     using MicroGame.BA;
+
     //using System.Diagnostics;
-    using System.Reflection.Emit;
-    using System.Runtime.CompilerServices;
-    using Unity.VisualScripting;
-    using Unity.VisualScripting.Antlr3.Runtime;
+
+
+
 
     //using UnityEngine.UIElements;
 
@@ -49,10 +49,11 @@ namespace InterDineMension.Manager
         public Dictionary<string, Sprite> bGLibray = new Dictionary<string, Sprite>();
         public Image backgroundImage;
 
-        /*public List<string> cGTittles = new List<string>();
+        public List<string> cGTittles = new List<string>();
         public List<Sprite> cGSprites = new List<Sprite>();
         public Dictionary<string, Sprite> cGLibray = new Dictionary<string, Sprite>();
-        public Image cGImage;*/ //image might just be background
+        public Image CGFade;
+        
 
         //public GameObject charImageCS, charImageOR;
         //private bool deactivatedcorutines = false;
@@ -128,7 +129,8 @@ namespace InterDineMension.Manager
         private const string SFX = "sfx";
         private const string BGM = "bgm";
         private const string BG = "bg";
-        private const string CG = "cg";
+        private const string SCG = "scg";
+        private const string ECG = "ecg";
         //private const string VAR_CHANGE = "varChange"; not sure what this was supposed to me lmao
 
         public InkExternalFunctions iEF;
@@ -179,8 +181,19 @@ namespace InterDineMension.Manager
             {
                 temp.GetComponent<VariableHolder>().dM = this;
             }
-            
-           /* cS.sR.color = Color.HSVToRGB(0, 0, 40);*/
+            if (cGTittles.Count == cGSprites.Count)
+            {
+                for (int i = 0; i < cGTittles.Count; i++)
+                {
+                    cGLibray.Add(cGTittles[i], cGSprites[i]);
+                }
+            }
+            else
+            {
+                Debug.LogError("sfxTittles and sfxSounds are not at an equal count");
+            }
+
+            /* cS.sR.color = Color.HSVToRGB(0, 0, 40);*/
             grac.sR.color = Color.HSVToRGB(0, 0, 40);
             iEF = new InkExternalFunctions(BBun2, Pickles2, Greens2, Patty2, Condiment2, Veggie2, TBun2, BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3);
             dPTest = this.gameObject.GetComponent<Image>();
@@ -1257,12 +1270,49 @@ namespace InterDineMension.Manager
                             StartCoroutine(musicFadeIn(musicLibrary[tagValue]));
                             break;
                         }
+                    case SCG:
+                        {
+                            StartCoroutine(CGFadeIn(cGLibray[tagValue]));
+                            break;
+                        }
+                    case ECG:
+                        {
+                            StartCoroutine(CGFadeOut(bGLibray[tagValue]));
+                            break;
+                        }
 
                     default:
                         Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
                         break;
                 }
             }
+        }
+        public IEnumerator CGFadeIn(Sprite temp)
+        {
+            CGFade.gameObject.SetActive(true);
+            CGFade.sprite= temp;
+            for (float a = 0; a <= 1.1; a+=.001f)
+            {
+                yield return new WaitForSeconds(.001f);
+                CGFade.color = new UnityEngine.Color(1, 1, 1, a);
+            }
+            //CGFade.color = new UnityEngine.Color(0, 0, 0, 1);
+        }
+
+        public IEnumerator CGFadeOut(Sprite temp)
+        {
+            if(temp!=null)
+            {
+                backgroundImage.sprite = temp;
+            }
+            
+            for (float a = 1; a >= -0.1; a -= .001f)
+            {
+                yield return new WaitForSeconds(.001f);
+                CGFade.color = new UnityEngine.Color(1, 1, 1, a);
+            }
+            CGFade.gameObject.SetActive(false);
+            //CGFade.color = new UnityEngine.Color(0, 0, 0, 1);
         }
         public IEnumerator musicFadeIn(AudioClip temp)
         {
