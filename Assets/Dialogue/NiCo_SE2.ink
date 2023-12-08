@@ -408,7 +408,7 @@ Yes. See you. #speaker:NiCo #mood:neutral
 
 (NiCo exits the diner, and I clean up their table.)
 
-There will be a transistion where CeeCee tells you to take out the trash here.
+
 
 // ~TTMLevel=2
 // ~timeOfDay="afternoon"

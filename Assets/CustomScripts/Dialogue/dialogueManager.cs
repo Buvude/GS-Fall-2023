@@ -17,11 +17,13 @@ namespace InterDineMension.Manager
     using System.Reflection.Emit;
     using System.Runtime.CompilerServices;
     using Unity.VisualScripting;
+    using Unity.VisualScripting.Antlr3.Runtime;
+
     //using UnityEngine.UIElements;
 
     public class dialogueManager : MonoBehaviour
     {
-        
+        public GameObject pauseScreen;
         public float fadeInOutRate;
         public AppartmentManager aM;
         public bool useSaveSystem;
@@ -134,7 +136,7 @@ namespace InterDineMension.Manager
         public GameObject BBun3, Pickles3, Greens3, Patty3, Condiment3, Veggie3, TBun3;
         internal bool morning;
         private void Awake()
-        {
+        { 
             
             if (sfxTittles.Count == sfxSounds.Count)
             {
@@ -227,7 +229,9 @@ namespace InterDineMension.Manager
 
         private void Start()
         {
-            vH= GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
+            GameObject.FindGameObjectWithTag("variableHolder").GetComponent<GameplayManager>().manager = this;
+
+            vH = GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
             //conditional of what state the day is in
             if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
             {
@@ -284,7 +288,24 @@ namespace InterDineMension.Manager
            
             
         }
+        public void UnPauseGame()
+        {
+            GameObject.FindGameObjectWithTag("variableHolder").GetComponent<GameplayManager>().paused = false;
+        }
+        public void QuitGame()
+        {
+            Application.Quit();
+        }
 
+        public void MainMenu()
+        {
+            dV.clearTempVars(vH);
+            if (bAM != null)
+            {
+                bAM.ResetMiniGame();
+            }
+            SceneManager.LoadScene(0);
+        }
         public void QuickSave()
         {
 
@@ -955,6 +976,7 @@ namespace InterDineMension.Manager
                             {
                                 cS.sR.color = Color.HSVToRGB(0, 0, 1, true);
                                 grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                charSpeakTo = speakingTo.Swatts;
                                 charSpeak = speaker.Swatts;
                             }
                             else if (tagValue == "Graciana")
@@ -999,36 +1021,42 @@ namespace InterDineMension.Manager
                             {
                                 oR.sR.color = Color.HSVToRGB(0, 0, 1);
                                 grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeakTo = speakingTo.O_Ryan;
                                 charSpeak = speaker.O_Ryan;
                             }
                             else if (tagValue == "CeCe")
                             {
                                 cC.sR.color = Color.HSVToRGB(0, 0, 1);
                                 grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeakTo = speakingTo.CeeCee;
                                 charSpeak = speaker.CeeCee;
                             }
                             else if (tagValue == "Gnomies")
                             {
                                 G.sR.color = Color.HSVToRGB(0, 0, 1);
                                 grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeakTo = speakingTo.Gnomies;
                                 charSpeak = speaker.Gnomies;
                             }
                             else if (tagValue == "Fred")
                             {
                                 F.sR.color = Color.HSVToRGB(0, 0, 1);
                                 grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeakTo = speakingTo.Fred;
                                 charSpeak = speaker.Fred;
                             }
                             else if (tagValue == "Morgan")
                             {
                                 M.sR.color = Color.HSVToRGB(0, 0, 1);
                                 grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeakTo = speakingTo.Morgan;
                                 charSpeak = speaker.Morgan;
                             }
                             else if (tagValue == "NiCo")
                             {
                                 N.sR.color = Color.HSVToRGB(0, 0, 1);
                                 grac.sR.color = Color.HSVToRGB(0, 0, .4f);
+                                charSpeakTo = speakingTo.Nico;
                                 charSpeak = speaker.Nico;
                             }
                             else if (tagValue == "???")
@@ -1225,6 +1253,7 @@ namespace InterDineMension.Manager
                         }
                     case BGM:
                         {
+
                             StartCoroutine(musicFadeIn(musicLibrary[tagValue]));
                             break;
                         }
@@ -1241,6 +1270,10 @@ namespace InterDineMension.Manager
             {
                 yield return new WaitForSeconds(.1f);
                 bgmAudioSource.volume -= fadeInOutRate;
+            }
+            if (temp == null)
+            {
+                yield break;
             }
             bgmAudioSource.clip = temp;
             bgmAudioSource.Play();

@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Ink.Runtime;
+using UnityEngine.SceneManagement;
 
 namespace InterDineMension.Manager
 {
     public class GameplayManager : MonoBehaviour
     {
+        internal bool paused;
         /*[SerializeField] public List<TextAsset> cheffSwattsConvos;
         [SerializeField] public List<TextAsset> FredConvos;*/
         public dialogueManager manager;
@@ -23,6 +25,23 @@ namespace InterDineMension.Manager
             {
                 dialogueManager.GetInstance().EnterDialogueMode(manager.BAMicroArcadeConvo);
             }*/
+            if(Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.P))
+            {
+                if(manager != null)
+                {
+                    if (paused)
+                    {
+                        paused = false;
+                        manager.pauseScreen.SetActive(false);
+                    }
+                    else
+                    {
+                        paused = true;
+                        manager.pauseScreen.SetActive(true);
+                    }
+                }
+                
+            }
         }
         public void StartConvoCheffSwatts()
         {
@@ -44,5 +63,6 @@ namespace InterDineMension.Manager
             }
             
         }
+       
     }
 }

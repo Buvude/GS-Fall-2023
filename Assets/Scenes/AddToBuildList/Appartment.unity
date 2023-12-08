@@ -131,73 +131,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 293782466}
     m_Modifications:
-    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: charBtn
-      value: 
-      objectReference: {fileID: 1560371711}
-    - target: {fileID: 1492321989724740534, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1575488744086777135, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -3.9440002
-      objectReference: {fileID: 0}
-    - target: {fileID: 2291653519848941241, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -3.126831
-      objectReference: {fileID: 0}
-    - target: {fileID: 4250145821011959298, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 2.7000122
-      objectReference: {fileID: 0}
-    - target: {fileID: 4397890961885273307, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_fontSize
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4397890961885273307, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_fontSizeBase
-      value: 32
-      objectReference: {fileID: 0}
-    - target: {fileID: 4725091877484242862, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4941432361661013881, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 6290930265342607804, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_Name
       value: InklDialogue
-      objectReference: {fileID: 0}
-    - target: {fileID: 7056364711288079091, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 551
-      objectReference: {fileID: 0}
-    - target: {fileID: 7078992610642441811, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -22.080658
-      objectReference: {fileID: 0}
-    - target: {fileID: 7078992610642441811, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 11.928375
-      objectReference: {fileID: 0}
-    - target: {fileID: 7307544250565879654, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7339515879719068460, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8055786174772144314, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8354415971455609812, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8615375139267424601, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_Pivot.x
@@ -261,11 +197,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8615375139267424601, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -0.000030517578
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8615375139267424601, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.000015258789
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8615375139267424601, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -342,7 +278,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -489,6 +425,10 @@ PrefabInstance:
     - target: {fileID: 1592966967539018707, guid: 683e0339a9fe3144590a7db4e1923b10, type: 3}
       propertyPath: m_Name
       value: MiniGameGate
+      objectReference: {fileID: 0}
+    - target: {fileID: 1592966967539018707, guid: 683e0339a9fe3144590a7db4e1923b10, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8130955590298310995, guid: 683e0339a9fe3144590a7db4e1923b10, type: 3}
       propertyPath: m_Pivot.x
@@ -669,6 +609,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1963112032455452347, guid: b07a6ea7bf2aac14483aec76167fb14c, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1170193215}
     - target: {fileID: 4508340925193967428, guid: b07a6ea7bf2aac14483aec76167fb14c, type: 3}
       propertyPath: m_Name
       value: variableHolder
@@ -718,11 +662,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b07a6ea7bf2aac14483aec76167fb14c, type: 3}
---- !u!1 &1560371711 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5626996928375492772, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-  m_PrefabInstance: {fileID: 112571884}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1666341776
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +674,6 @@ GameObject:
   - component: {fileID: 1666341778}
   - component: {fileID: 1666341780}
   - component: {fileID: 1666341781}
-  - component: {fileID: 1666341782}
   - component: {fileID: 1666341783}
   m_Layer: 0
   m_Name: EventSystem
@@ -823,19 +761,6 @@ MonoBehaviour:
   postTTMPractice: {fileID: 4900000, guid: 96cd7909e414cf347abe9be4ab1fe2f1, type: 3}
   postBAMPractice: {fileID: 4900000, guid: 832e59bc3667fd54c9f8d5d8b09a0305, type: 3}
   dM: {fileID: 1170193215}
---- !u!114 &1666341782
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1666341776}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c76bb9d4a239db47956034ead3ca339, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  manager: {fileID: 1170193215}
 --- !u!114 &1666341783
 MonoBehaviour:
   m_ObjectHideFlags: 0
