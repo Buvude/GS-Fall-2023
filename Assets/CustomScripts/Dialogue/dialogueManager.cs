@@ -465,7 +465,7 @@ namespace InterDineMension.Manager
                     dialogueHistory.SetActive(true);
                 }
             }
-            if(Input.GetKeyDown(KeyCode.A))
+            if(Input.GetKeyDown(KeyCode.A)&&!gM.paused)
             {
                 if(!autoMode&&!historyShowing)
                 {
