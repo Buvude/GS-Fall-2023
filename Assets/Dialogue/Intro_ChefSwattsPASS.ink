@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-
+~affectionCS+=1
 Ay, I knew ya had it in ya! Ya gonna be a natural already, I can tell! #speaker:Chef Swatts #mood:happy
 
 U-uh, I guess? T-thanks... #speaker:Graciana #mood:neutral

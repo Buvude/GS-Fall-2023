@@ -1,5 +1,6 @@
 //#day:1 #CSConvo:0
 INCLUDE globals.ink
+INCLUDE BADialogue.ink
 
 ->GameIntro
 ===GameIntro===
@@ -8,9 +9,9 @@ INCLUDE globals.ink
     ~convo_numberCS=0
     ~QuickSave()
     (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana #bgm:dinMorning
-    (Here we are... The Portal Diner...) #speaker:Graciana #mood:think
-    (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)#scg:black
-    (I still haven’t met or even seen the owner; I interviewed online. They said to find a “fly guy,” whatever that means–) #ecg:none
+    (Here we are... The Portal Diner...) #speaker:Graciana #mood:think 
+    (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)
+    (I still haven’t met or even seen the owner; I interviewed online. They said to find a “fly guy,” whatever that means–) 
     
     Ey! We not open yet! Ya gonna have to wait! How’d ya get in here? The portal shoulda been locked! #speaker:???
     
@@ -79,5 +80,8 @@ INCLUDE globals.ink
     
     Uh, okay... #speaker:Graciana
     //do minigame and continue with the pass or fail
-    ~GoToDiner()
+   ~BAMLevel=0
+   ~currentConvo="cSD0"
+   ~QuickSave()
+   ->MainBAD
     ->END

@@ -13,6 +13,7 @@ namespace InterDineMension.Manager
     using JetBrains.Annotations;
     using MicroGame;
     using MicroGame.BA;
+    using Unity.VisualScripting;
 
     //using System.Diagnostics;
 
@@ -23,6 +24,15 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+        public float autoPauseFloat;
+        internal bool autoMode;
+
+        public TextMeshProUGUI historyText;
+        public GameObject dialogueHistory;
+        internal bool historyShowing = false;
+        
+        internal GameplayManager gM;
+        public List<string> historyLog = new List<string>();
         public GameObject pauseScreen;
         public float fadeInOutRate;
         public AppartmentManager aM;
@@ -131,6 +141,7 @@ namespace InterDineMension.Manager
         private const string BG = "bg";
         private const string SCG = "scg";
         private const string ECG = "ecg";
+        private const string SS = "ss";
         //private const string VAR_CHANGE = "varChange"; not sure what this was supposed to me lmao
 
         public InkExternalFunctions iEF;
@@ -242,6 +253,7 @@ namespace InterDineMension.Manager
 
         private void Start()
         {
+            gM = GameObject.FindGameObjectWithTag("variableHolder").GetComponent<GameplayManager>();
             GameObject.FindGameObjectWithTag("variableHolder").GetComponent<GameplayManager>().manager = this;
 
             vH = GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
@@ -312,10 +324,11 @@ namespace InterDineMension.Manager
 
         public void MainMenu()
         {
+            GameObject.FindGameObjectWithTag("variableHolder").GetComponent<GameplayManager>().paused=false;
             dV.clearTempVars(vH);
             if (bAM != null)
             {
-                bAM.ResetMiniGame();
+                //bAM.ResetMiniGame();
             }
             SceneManager.LoadScene(0);
         }
@@ -376,6 +389,11 @@ namespace InterDineMension.Manager
         {
             switch (PlayerPrefs.GetString("currentConvo"))
             {
+                case "GMG3":
+                    charSpeakTo = speakingTo.CeeCee;
+                    G.gameObject.SetActive(true);
+                    EnterDialogueMode(G.GdialogueDictionary["postMini"]);
+                    break;
                 case "NMG1":
                     charSpeakTo = speakingTo.CeeCee;
                     N.gameObject.SetActive(true);
@@ -425,7 +443,39 @@ namespace InterDineMension.Manager
             }
             if(canContinueToNextLine&& currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)||Input.GetKey(KeyCode.LeftControl)))
             {
+                if(autoMode)
+                {
+                    autoMode = false;
+                }
                 ContinueStory();
+            }
+            if (Input.GetMouseButtonDown(2))
+            {
+                if(historyShowing)
+                {
+                    dialogueHistory.SetActive(false);
+                    historyShowing = false;
+                }
+                else
+                {
+                    historyShowing = true;
+                    dialogueHistory.SetActive(true);
+                }
+            }
+            if(Input.GetKeyDown(KeyCode.A))
+            {
+                if(!autoMode)
+                {
+                    autoMode = true;
+                    if(canContinueToNextLine)
+                    {
+                        ContinueStory();
+                    }
+                }
+                else
+                {
+                    autoMode= false;
+                }
             }
            /* if (!this.gameObject.activeInHierarchy&&!deactivatedcorutines)
             {
@@ -548,7 +598,7 @@ namespace InterDineMension.Manager
                     {
                         case 0:
                             {
-                                EnterDialogueMode(gBtn.gameObject.GetComponent<Gnomies>().GdialogueDictionary["GTalkTo1"]);
+                                EnterDialogueMode(gBtn.gameObject.GetComponent<Gnomies>().GdialogueDictionary["GIntro"]);
                                 break;
                             }
                         case 1:
@@ -579,7 +629,7 @@ namespace InterDineMension.Manager
                     {
                         case 0:
                             {
-                                EnterDialogueMode(fBtn.gameObject.GetComponent<Fred>().FdialogueDictionary["FTalkTo1"]);
+                                EnterDialogueMode(fBtn.gameObject.GetComponent<Fred>().FdialogueDictionary["FIntro"]);
                                 break;
                             }
                         case 1:
@@ -828,7 +878,7 @@ namespace InterDineMension.Manager
         private void ContinueStory()
         {
 
-            if (currentStory.canContinue)
+            if (currentStory.canContinue&& !gM.paused&&!historyShowing)
             {
                 //set text for current dialogue line
                 if (displayLineCorutine != null)
@@ -841,6 +891,11 @@ namespace InterDineMension.Manager
 
 
                 }
+                if (historyLog.Count > 0)
+                {
+                    historyText.text += $"{charSpeak.ToString()}: {historyLog[historyLog.Count - 1]}\n";
+                }
+                
                 displayLineCorutine = StartCoroutine(DisplayLine(currentStory.Continue()));
                 /*dialogueText.text = currentStory.Continue(); outdated*/
                 HandleTags(currentStory.currentTags);
@@ -850,7 +905,7 @@ namespace InterDineMension.Manager
 
             }
 
-            else
+            else if(!gM.paused&&!historyShowing)
             {
 
                 ExitDialogueMode(false,0,"ContinueStory",true);
@@ -874,7 +929,7 @@ namespace InterDineMension.Manager
             canContinueToNextLine = false;
 
             bool isAddingRichTextTag = false;
-
+            historyLog.Add(line);
             //display each letter one at a time. 
             foreach(char letter in line.ToCharArray())
             {
@@ -910,6 +965,14 @@ namespace InterDineMension.Manager
             }
             
             canContinueToNextLine = true;
+            if (autoMode)
+            {
+                yield return new WaitForSeconds(autoPauseFloat);
+                if(autoMode)
+                {
+                    ContinueStory();
+                }
+            }
             yield return new WaitForEndOfFrame();
         }
 
@@ -926,7 +989,110 @@ namespace InterDineMension.Manager
             foreach(string tag in currentTags)
             {
                 string[] splitTag = tag.Split(':');
-                if (splitTag.Length != 2)
+                if(splitTag.Length == 3)
+                {
+                    if (splitTag[0] == "ss")
+                    {
+                        string tagKeyT = splitTag[1].Trim();
+                        string tagValueT = splitTag[2].Trim();
+                        if (tagKeyT == "Chef Swatts")
+                        {
+                            cS.sR.sprite = cS.CsspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "Graciana")
+                        {
+                            grac.sR.sprite = grac.GrspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "O'Ryan")
+                        {
+                            grac.sR.sprite = grac.GrspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "CeCe")
+                        {
+                            cC.sR.sprite = cC.CcspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "Himber" || tagValueT == "Hograt")
+                        {
+                            G.sR.sprite = G.GspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "Fred")
+                        {
+                            F.sR.sprite = F.FspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "Morgan")
+                        {
+                            M.sR.sprite = M.MspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "NiCo")
+                        {
+                            N.sR.sprite = N.NspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "spotlight")
+                        {
+                            switch (tagValueT)
+                            {//this should make it so when someone is talking with a "???" name plate they can still be in the spotlight
+                                case "O'Ryan":
+                                    charSpeakTo = speakingTo.O_Ryan;
+                                    oR.sR.color = Color.HSVToRGB(0, 0, 1f, false);
+                                    oR.gameObject.SetActive(true);
+                                    return;
+                                case "Chef Swatts":
+                                    charSpeakTo = speakingTo.Swatts;
+                                    cS.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    cS.gameObject.SetActive(true);
+                                    return;
+                                case "CeCe":
+                                    charSpeakTo = speakingTo.CeeCee;
+                                    cC.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    cC.gameObject.SetActive(true);
+                                    return;
+                                case "Himber":
+                                    charSpeakTo = speakingTo.Gnomies;
+                                    G.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    G.gameObject.SetActive(true);
+                                    return;
+                                case "Hograt":
+                                    charSpeakTo = speakingTo.Gnomies;
+                                    G.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    G.gameObject.SetActive(true);
+                                    return;
+                                case "Fred":
+                                    charSpeakTo = speakingTo.Fred;
+                                    F.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    F.gameObject.SetActive(true);
+                                    return;
+                                case "Morgan":
+                                    charSpeakTo = speakingTo.Morgan;
+                                    M.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    M.gameObject.SetActive(true);
+                                    return;
+                                case "NiCo":
+                                    charSpeakTo = speakingTo.Nico;
+                                    N.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    N.gameObject.SetActive(true);
+                                    return;
+                                default:
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, true);
+                                    return;
+                            }
+                    }
+                        else
+                        {
+                            Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
+                            return;
+                        }
+                    }
+                    
+                }
+                else if (splitTag.Length != 2)
                 {
                     Debug.LogError("Tag could not be appropriatly parsed: " + tag);
                 }
@@ -1028,8 +1194,8 @@ namespace InterDineMension.Manager
                                     default:
                                         grac.sR.color = Color.HSVToRGB(0, 0, 1, true);
                                         break;
+                                    }
                                 }
-                            }
                             else if (tagValue == "O'Ryan")
                             {
                                 oR.sR.color = Color.HSVToRGB(0, 0, 1);
@@ -1044,7 +1210,7 @@ namespace InterDineMension.Manager
                                 charSpeakTo = speakingTo.CeeCee;
                                 charSpeak = speaker.CeeCee;
                             }
-                            else if (tagValue == "Gnomies")
+                            else if (tagValue == "Himber"||tagValue=="Hograt")
                             {
                                 G.sR.color = Color.HSVToRGB(0, 0, 1);
                                 grac.sR.color = Color.HSVToRGB(0, 0, .4f);

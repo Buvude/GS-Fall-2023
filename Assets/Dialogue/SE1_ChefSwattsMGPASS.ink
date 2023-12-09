@@ -1,7 +1,7 @@
 //EXTERNAL GoToDiner()
 INCLUDE Intro_ORyan.ink
 INCLUDE globals.ink
-~affectionCS+=1
+~affectionCS+=3
 Ay, there ya go! #speaker:Chef Swatts #sfx:gainedPoint
 I knew it, you're a natural at this!
 

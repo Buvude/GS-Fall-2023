@@ -1,6 +1,6 @@
 INCLUDE globals.ink
 
-(What's with this kid and the spacesuit?) #speaker:Graciana #mood:think
+(What's with this kid and the spacesuit?) #speaker:Graciana #mood:think #ss:Fred:neutral
 (That logo...)
 (Oh, UMS! Universal Mail System! He's a postboy? But why so young...?)
 
@@ -98,5 +98,5 @@ Right again Fred, you can absolutely do that! #speaker:Graciana #mood:happy
 (He waves at me as he exits the Diner.)
 ...What a kid...
 
-~GoToDiner()
+~StartO_Ryan()
     -> DONE

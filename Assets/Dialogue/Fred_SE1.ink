@@ -1,6 +1,6 @@
 INCLUDE globals.ink
 
-(Fred is playfully staring out the window...) #speaker:Graciana #mood:neutral
+(Fred is playfully staring out the window...) #speaker:Graciana #mood:neutral #ss:Fred:neutral
 * [Hey Fred!]
 -> Start
 * [(Leave him be)]
@@ -158,7 +158,7 @@ Okay! #speaker:Fred #mood:happy
 
 **[What if he doesn't...]
   //bad
-~affectionF=affectionF-1
+~affectionF=affectionF-2
 
 What if he doesn't come back? Would you be okay? #speaker:Graciana #mood:think #sfx:LostPoint
 
@@ -333,6 +333,6 @@ I will! Bye Graciana! See you soon! #speaker:Fred #mood:happy
 (He waves as he exits through the portal.) #speaker:Graciana #mood:neutral
 Okay... Didn't think I'd be basically babysitting, but... I think I got this... #speaker:Graciana #mood:think
 
-~GoToDiner()
+~StartO_Ryan()
 
     -> END

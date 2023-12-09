@@ -177,6 +177,7 @@ Speakin' of, help me wit' this burger, ya?
 
 O-oh, right, yeah! #speaker:Graciana #mood:happy
 ~currentConvo="cSD1"
+~BAMLevel=1
 ~QuickSave()
 ->MainBAD
 
