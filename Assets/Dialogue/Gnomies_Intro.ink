@@ -1,9 +1,11 @@
-EXTERNAL StartO_Ryan()
-... #speaker:Graciana #mood:neutral
-(What the hell?) #speaker:Graciana #mood:think
-Good morning, sirs...?
 
-Just sir! Do not address the subgnome, human! #speaker:??? #ss:Himber:angry
+INCLUDE BADialogue.ink
+INCLUDE globals.ink
+... #speaker:Graciana #mood:neutral #ss:Himber:neutral
+(What the hell?) #speaker:Graciana #mood:think
+Good morning, sirs...?#ss:Himber:angry
+
+Just sir! Do not address the subgnome, human! #speaker:??? #ss:spotlight:Himber
 The name is Himber, as well! #speaker:Himber 
 And would it kill you to bring me a menu?!
 
@@ -109,8 +111,11 @@ Now, if you will excuse us... #speaker:Himber #mood:neutral
 
 (Hograt walks out of the diner, with Himber standing tall on top of him.) #speaker:Graciana
 
-...
+...#ss:Himber:blank
 What the hell just happened? #speaker:Graciana #mood:think
-
-~StartO_Ryan()
-    -> DONE
+//insert transition with Chef Swatts
+~BAMLevel=0
+~timeOfDay="afternoon"
+~currentConvo="GMG1"
+~QuickSave()
+->MainBAD

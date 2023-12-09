@@ -1,4 +1,5 @@
 INCLUDE globals.ink
+EXTERNAL StartTTMicro()
 //uncomment line 1 when done writing. choices dont work properly in the editor otherwise
 
 Hello once again, human! I see you simply cannot resist me! #speaker:Himber #mood:happy
@@ -209,11 +210,15 @@ Onward, Hograt!
 We shall be back, human! #speaker:Himber #mood:happy
 
 (Himber drops a pile of gold coins on the table, and exits with Hograt beneath him.) #speaker:Graciana #mood:neutral
-...
+...#ss:Himber:blank
 Wait... #speaker:Graciana #mood:think
 ...I never got him his pie... 
 ...
 Oh well. #speaker:Graciana #mood:neutral
 
-~StartO_Ryan()
+~TTMLevel=3
+~timeOfDay="afternoon"
+~currentConvo="GMG3"
+~QuickSave()
+~StartTTMicro()
     -> DONE

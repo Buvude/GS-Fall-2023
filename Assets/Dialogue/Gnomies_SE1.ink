@@ -1,4 +1,5 @@
 INCLUDE globals.ink
+INCLUDE BADialogue.ink
 
 Ah, there you are, human! Come, serve me! #speaker:Himber #mood:neutral
 
@@ -328,11 +329,14 @@ Right... #speaker:Graciana #mood:angry
 We shall be off. Come now Hograt, onward! #speaker:Himber #mood:neutral
 
 (He taps his foot on Hograt's head, and they head off before leaving a stack of gold coins on the counter.) #speaker:Graciana #mood:angry
-...
+...#ss:Himber:blank
 Yeah, I still don't think I'm much of a fan of that guy...
 Wonder what the deal with Hograt is, though... #speaker:Graciana #mood:think
 ...
-Anyways, I've got some more work to do. #speaker:Graciana #mood:neutral
+Anyways, I've got some more work to do. #speaker:Graciana #mood:neutral #ss:spotlight:Chef Swatts
 
-~StartO_Ryan()
-    -> DONE
+~BAMLevel=1
+~timeOfDay="afternoon"
+~currentConvo="GMG2"
+~QuickSave()
+->MainBAD

@@ -24,6 +24,12 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+        public TextMeshProUGUI historyText;
+        public GameObject dialogueHistory;
+        internal bool historyShowing = false;
+        
+        internal GameplayManager gM;
+        public List<string> historyLog = new List<string>();
         public GameObject pauseScreen;
         public float fadeInOutRate;
         public AppartmentManager aM;
@@ -244,6 +250,7 @@ namespace InterDineMension.Manager
 
         private void Start()
         {
+            gM = GameObject.FindGameObjectWithTag("variableHolder").GetComponent<GameplayManager>();
             GameObject.FindGameObjectWithTag("variableHolder").GetComponent<GameplayManager>().manager = this;
 
             vH = GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
@@ -314,10 +321,11 @@ namespace InterDineMension.Manager
 
         public void MainMenu()
         {
+            GameObject.FindGameObjectWithTag("variableHolder").GetComponent<GameplayManager>().paused=false;
             dV.clearTempVars(vH);
             if (bAM != null)
             {
-                bAM.ResetMiniGame();
+                //bAM.ResetMiniGame();
             }
             SceneManager.LoadScene(0);
         }
@@ -378,6 +386,11 @@ namespace InterDineMension.Manager
         {
             switch (PlayerPrefs.GetString("currentConvo"))
             {
+                case "GMG3":
+                    charSpeakTo = speakingTo.CeeCee;
+                    G.gameObject.SetActive(true);
+                    EnterDialogueMode(G.GdialogueDictionary["postMini"]);
+                    break;
                 case "NMG1":
                     charSpeakTo = speakingTo.CeeCee;
                     N.gameObject.SetActive(true);
@@ -428,6 +441,19 @@ namespace InterDineMension.Manager
             if(canContinueToNextLine&& currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)||Input.GetKey(KeyCode.LeftControl)))
             {
                 ContinueStory();
+            }
+            if (Input.GetMouseButtonDown(2))
+            {
+                if(historyShowing)
+                {
+                    dialogueHistory.SetActive(false);
+                    historyShowing = false;
+                }
+                else
+                {
+                    historyShowing = true;
+                    dialogueHistory.SetActive(true);
+                }
             }
            /* if (!this.gameObject.activeInHierarchy&&!deactivatedcorutines)
             {
@@ -830,7 +856,7 @@ namespace InterDineMension.Manager
         private void ContinueStory()
         {
 
-            if (currentStory.canContinue)
+            if (currentStory.canContinue&& !gM.paused&&!historyShowing)
             {
                 //set text for current dialogue line
                 if (displayLineCorutine != null)
@@ -843,6 +869,11 @@ namespace InterDineMension.Manager
 
 
                 }
+                if (historyLog.Count > 0)
+                {
+                    historyText.text += $"{charSpeak.ToString()}: {historyLog[historyLog.Count - 1]}\n";
+                }
+                
                 displayLineCorutine = StartCoroutine(DisplayLine(currentStory.Continue()));
                 /*dialogueText.text = currentStory.Continue(); outdated*/
                 HandleTags(currentStory.currentTags);
@@ -852,7 +883,7 @@ namespace InterDineMension.Manager
 
             }
 
-            else
+            else if(!gM.paused&&!historyShowing)
             {
 
                 ExitDialogueMode(false,0,"ContinueStory",true);
@@ -876,7 +907,7 @@ namespace InterDineMension.Manager
             canContinueToNextLine = false;
 
             bool isAddingRichTextTag = false;
-
+            historyLog.Add(line);
             //display each letter one at a time. 
             foreach(char letter in line.ToCharArray())
             {
@@ -936,7 +967,6 @@ namespace InterDineMension.Manager
                         string tagValueT = splitTag[2].Trim();
                         if (tagKeyT == "Chef Swatts")
                         {
-                            Debug.Log("test");
                             cS.sR.sprite = cS.CsspriteDictionary[tagValueT];
                             return;
                         }
@@ -975,6 +1005,55 @@ namespace InterDineMension.Manager
                             N.sR.sprite = N.NspriteDictionary[tagValueT];
                             return;
                         }
+                        else if (tagKeyT == "spotlight")
+                        {
+                            switch (tagValueT)
+                            {//this should make it so when someone is talking with a "???" name plate they can still be in the spotlight
+                                case "O'Ryan":
+                                    charSpeakTo = speakingTo.O_Ryan;
+                                    oR.sR.color = Color.HSVToRGB(0, 0, 1f, false);
+                                    oR.gameObject.SetActive(true);
+                                    return;
+                                case "Chef Swatts":
+                                    charSpeakTo = speakingTo.Swatts;
+                                    cS.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    cS.gameObject.SetActive(true);
+                                    return;
+                                case "CeCe":
+                                    charSpeakTo = speakingTo.CeeCee;
+                                    cC.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    cC.gameObject.SetActive(true);
+                                    return;
+                                case "Himber":
+                                    charSpeakTo = speakingTo.Gnomies;
+                                    G.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    G.gameObject.SetActive(true);
+                                    return;
+                                case "Hograt":
+                                    charSpeakTo = speakingTo.Gnomies;
+                                    G.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    G.gameObject.SetActive(true);
+                                    return;
+                                case "Fred":
+                                    charSpeakTo = speakingTo.Fred;
+                                    F.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    F.gameObject.SetActive(true);
+                                    return;
+                                case "Morgan":
+                                    charSpeakTo = speakingTo.Morgan;
+                                    M.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    M.gameObject.SetActive(true);
+                                    return;
+                                case "NiCo":
+                                    charSpeakTo = speakingTo.Nico;
+                                    N.sR.color = Color.HSVToRGB(0, 0, 1, false);
+                                    N.gameObject.SetActive(true);
+                                    return;
+                                default:
+                                    grac.sR.color = Color.HSVToRGB(0, 0, 1, true);
+                                    return;
+                            }
+                    }
                         else
                         {
                             Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
@@ -1085,8 +1164,8 @@ namespace InterDineMension.Manager
                                     default:
                                         grac.sR.color = Color.HSVToRGB(0, 0, 1, true);
                                         break;
+                                    }
                                 }
-                            }
                             else if (tagValue == "O'Ryan")
                             {
                                 oR.sR.color = Color.HSVToRGB(0, 0, 1);
