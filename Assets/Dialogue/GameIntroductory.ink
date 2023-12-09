@@ -1,5 +1,6 @@
 //#day:1 #CSConvo:0
 INCLUDE globals.ink
+INCLUDE BADialogue.ink
 
 ->GameIntro
 ===GameIntro===
@@ -79,5 +80,8 @@ INCLUDE globals.ink
     
     Uh, okay... #speaker:Graciana
     //do minigame and continue with the pass or fail
-    ~GoToDiner()
+   ~BAMLevel=0
+   ~currentConvo="cSD0"
+   ~QuickSave()
+   ->MainBAD
     ->END

@@ -522,7 +522,12 @@ namespace InterDineMension.MicroGame.BA
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
                 dM.gameObject.SetActive(true);
-                if (PlayerPrefs.GetString("currentConvo") == "cSD1")
+                if (PlayerPrefs.GetString("currentConvo") == "cSD0")
+                {
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGPassIntro"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "cSD1")
                 {
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGPass1"]); //only valid for day one
@@ -562,7 +567,12 @@ namespace InterDineMension.MicroGame.BA
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
                 dM.gameObject.SetActive(true);
-                if (PlayerPrefs.GetString("currentConvo")== "cSD1")
+                if (PlayerPrefs.GetString("currentConvo") == "cSD0")
+                {
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFailIntro"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo")== "cSD1")
                 {
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFail1"]);//only valid for day one
