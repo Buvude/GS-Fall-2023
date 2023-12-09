@@ -2014,14 +2014,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 819664210}
     m_Modifications:
-    - target: {fileID: 910193767499215341, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: cadc6ad8e1786374880948a433253caa, type: 2}
-    - target: {fileID: 910193767499215341, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: bAM
       value: 
@@ -2063,10 +2055,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1637327998}
     - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: autoPauseFloat
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: bgmAudioSource
       value: 
       objectReference: {fileID: 1732245923}
@@ -2106,14 +2094,6 @@ PrefabInstance:
       propertyPath: orderImages.Array.data[6]
       value: 
       objectReference: {fileID: 1644217951}
-    - target: {fileID: 1228649709972225511, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: cadc6ad8e1786374880948a433253caa, type: 2}
-    - target: {fileID: 1228649709972225511, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
-      propertyPath: m_hasFontAssetChanged
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6290930265342607804, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_Name
       value: InklDialogue
