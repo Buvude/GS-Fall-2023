@@ -24,6 +24,9 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+        public float autoPauseFloat;
+        internal bool autoMode;
+
         public TextMeshProUGUI historyText;
         public GameObject dialogueHistory;
         internal bool historyShowing = false;
@@ -440,6 +443,10 @@ namespace InterDineMension.Manager
             }
             if(canContinueToNextLine&& currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)||Input.GetKey(KeyCode.LeftControl)))
             {
+                if(autoMode)
+                {
+                    autoMode = false;
+                }
                 ContinueStory();
             }
             if (Input.GetMouseButtonDown(2))
@@ -453,6 +460,21 @@ namespace InterDineMension.Manager
                 {
                     historyShowing = true;
                     dialogueHistory.SetActive(true);
+                }
+            }
+            if(Input.GetKeyDown(KeyCode.A))
+            {
+                if(!autoMode)
+                {
+                    autoMode = true;
+                    if(canContinueToNextLine)
+                    {
+                        ContinueStory();
+                    }
+                }
+                else
+                {
+                    autoMode= false;
                 }
             }
            /* if (!this.gameObject.activeInHierarchy&&!deactivatedcorutines)
@@ -943,6 +965,14 @@ namespace InterDineMension.Manager
             }
             
             canContinueToNextLine = true;
+            if (autoMode)
+            {
+                yield return new WaitForSeconds(autoPauseFloat);
+                if(autoMode)
+                {
+                    ContinueStory();
+                }
+            }
             yield return new WaitForEndOfFrame();
         }
 
