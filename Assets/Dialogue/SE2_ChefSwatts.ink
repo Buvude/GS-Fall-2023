@@ -13,7 +13,7 @@ Ey yo, Graciana! Think ya can gimme some help real quick? #speaker:Chef Swatts
     ->DONE
 
 ==Sure==
-~BAMLevel=1
+~BAMLevel=2
 ~currentConvo="cSD2"
 ~convo_numberCS=2
 ~timeOfDay="afternoon"

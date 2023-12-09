@@ -1015,6 +1015,10 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictKey.Array.data[0]
+      value: GIntro
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: dDictKey.Array.data[4]
       value: brushOff
       objectReference: {fileID: 0}
@@ -1023,12 +1027,32 @@ PrefabInstance:
       value: happy
       objectReference: {fileID: 0}
     - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 758563b3b1681d74b984e3754c1f1c66, type: 3}
+    - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.data[1]
+      value: 
+      objectReference: {fileID: 4900000, guid: f204d76c763fa8140a77c9166deab8e1, type: 3}
+    - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.data[2]
+      value: 
+      objectReference: {fileID: 4900000, guid: caf7b40878960ba4c9e76582ddf80f8d, type: 3}
+    - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: sDictValue.Array.data[5]
       value: 
       objectReference: {fileID: 21300000, guid: e4634ff67a1dca4428fdcf25563f4581, type: 3}
     - target: {fileID: 6365556639219059066, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: dDictKey.Array.data[4]
       value: brushOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455568721426174580, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: sDictKey.Array.data[0]
+      value: annoyed
+      objectReference: {fileID: 0}
+    - target: {fileID: 6455568721426174580, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: sDictKey.Array.data[1]
+      value: happy
       objectReference: {fileID: 0}
     - target: {fileID: 6643326929146933455, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -1211,9 +1235,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8907645710299587922, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907645710299587922, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictKey.Array.data[0]
+      value: FIntro
+      objectReference: {fileID: 0}
+    - target: {fileID: 8907645710299587922, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: dDictKey.Array.data[4]
       value: brushOff
       objectReference: {fileID: 0}
+    - target: {fileID: 8907645710299587922, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: d59ebbea38053e947bf8b627e63e651d, type: 3}
+    - target: {fileID: 8907645710299587922, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.data[1]
+      value: 
+      objectReference: {fileID: 4900000, guid: 53903cca9a2234145802238c1cf7d078, type: 3}
+    - target: {fileID: 8907645710299587922, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.data[3]
+      value: 
+      objectReference: {fileID: 4900000, guid: 1af90c3f6035d984d8962edc64ab6acc, type: 3}
+    - target: {fileID: 8907645710299587922, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.data[4]
+      value: 
+      objectReference: {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
+    - target: {fileID: 8907645710299587922, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.data[5]
+      value: 
+      objectReference: {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
+    - target: {fileID: 8907645710299587922, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.data[6]
+      value: 
+      objectReference: {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
     - target: {fileID: 9114128897161383268, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: sR
       value: 
@@ -2149,6 +2205,42 @@ PrefabInstance:
       propertyPath: orderImages.Array.data[6]
       value: 
       objectReference: {fileID: 1644217951}
+    - target: {fileID: 1644052766371552225, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644052766371552225, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKey.Array.data[0]
+      value: FIntro
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644052766371552225, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKey.Array.data[4]
+      value: brushOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 1644052766371552225, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: d59ebbea38053e947bf8b627e63e651d, type: 3}
+    - target: {fileID: 1644052766371552225, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.data[1]
+      value: 
+      objectReference: {fileID: 4900000, guid: 53903cca9a2234145802238c1cf7d078, type: 3}
+    - target: {fileID: 1644052766371552225, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.data[3]
+      value: 
+      objectReference: {fileID: 4900000, guid: 1af90c3f6035d984d8962edc64ab6acc, type: 3}
+    - target: {fileID: 1644052766371552225, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.data[4]
+      value: 
+      objectReference: {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
+    - target: {fileID: 1644052766371552225, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.data[5]
+      value: 
+      objectReference: {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
+    - target: {fileID: 1644052766371552225, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.data[6]
+      value: 
+      objectReference: {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
     - target: {fileID: 2433414677008864774, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_fontSize
       value: 23.6
@@ -2165,6 +2257,26 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3677981040014956514, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKey.Array.data[0]
+      value: GIntro
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677981040014956514, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictKey.Array.data[4]
+      value: brushOff
+      objectReference: {fileID: 0}
+    - target: {fileID: 3677981040014956514, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.data[0]
+      value: 
+      objectReference: {fileID: 4900000, guid: 758563b3b1681d74b984e3754c1f1c66, type: 3}
+    - target: {fileID: 3677981040014956514, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.data[1]
+      value: 
+      objectReference: {fileID: 4900000, guid: f204d76c763fa8140a77c9166deab8e1, type: 3}
+    - target: {fileID: 3677981040014956514, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.data[2]
+      value: 
+      objectReference: {fileID: 4900000, guid: caf7b40878960ba4c9e76582ddf80f8d, type: 3}
     - target: {fileID: 4250145821011959298, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 2.6991425

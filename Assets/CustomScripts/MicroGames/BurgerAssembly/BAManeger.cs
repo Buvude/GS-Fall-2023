@@ -611,7 +611,12 @@ namespace InterDineMension.MicroGame.BA
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
                 dM.gameObject.SetActive(true);
-                if (PlayerPrefs.GetString("currentConvo") == "practiceB")
+                if (PlayerPrefs.GetString("currentConvo") == "cSD0")
+                {
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFailIntro"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "practiceB")
                 {
                     PlayerPrefs.SetString("winStatus", "Chaos");
                     SceneManager.LoadScene(5);

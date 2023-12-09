@@ -47,14 +47,14 @@ Human, do not accuse me so lightly of things you know nothing of. #speaker:Himbe
 Then tell me, what's the deal with you? Hograt too! #speaker:Graciana #mood:angry
     ->gnomestuck
 ==bad1==
-~affectionG=affectionG-3
+~affectionG=affectionG-4
 M-my bad, I just... #speaker:Graciana #sfx:LostPoint
 
 You cannot comprehend the intricacies of this bond, human! #speaker:Himber #mood:angry
 As a Gnomestack, this is simply the way things are! This is how we are meant to be!
     ->gnomestuck
 ==chaos1==
-~chaosG=chaosG-3
+~chaosG=chaosG+4
 Hey, don't talk to me like that! #speaker:Graciana #mood:angry #sfx:CosmicPoint
 I'm not your subordinate, I'm a person, just like you!
 
@@ -98,7 +98,7 @@ We can ascend further beyond our own strengths! #speaker:Himber #mood:happy
 * [What about Hograt?]
     ->good3
 ==bad2==
-~affectionG=affectionG-3
+~affectionG=affectionG-4
 Like... #speaker:Graciana #mood:neutral #sfx:LostPoint
 A stack of pancakes? #speaker:Graciana #mood:think
 
@@ -121,7 +121,7 @@ We ascend further beyond our own strengths! #speaker:Himber #mood:happy
 * [What about Hograt?]
     ->good3
 ==chaos2==
-~chaosG=chaosG+2
+~chaosG=chaosG+4
 A stack of raw power. #speaker:Graciana #mood:happy #sfx:CosmicPoint
 
 Haha! #speaker:Himber #mood:happy
@@ -157,7 +157,7 @@ Of course Hograt does! We've been at this for decades! If he did not want this, 
 (...But also bothered by something.) #speaker:Graciana #mood:sad
     -> ByeByeGnomies
 ==bad3==
-~affectionG=affectionG-3
+~affectionG=affectionG-4
 Somehow, I doubt that. #speaker:Graciana #mood:neutral #sfx:LostPoint
 
 What do you mean, human? What does your feeble, human mind doubt? #speaker:Himber #mood:neutral
@@ -176,7 +176,7 @@ Sure, whatever... #speaker:Graciana #mood:angry
 (...But also looks as if he's glaring me down, confused...)
     -> ByeByeGnomies
 ==chaos3==
-~chaosG=chaosG+2
+~chaosG=chaosG+4
 But... #speaker:Graciana #mood:think #sfx:CosmicPoint
 You look the same. #speaker:Graciana #mood:neutral
 
@@ -215,5 +215,5 @@ Wait... #speaker:Graciana #mood:think
 ...
 Oh well. #speaker:Graciana #mood:neutral
 
-~GoToDiner()
+~StartO_Ryan()
     -> DONE

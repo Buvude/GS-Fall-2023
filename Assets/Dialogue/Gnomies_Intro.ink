@@ -1,9 +1,10 @@
+EXTERNAL StartO_Ryan()
 ... #speaker:Graciana #mood:neutral
 (What the hell?) #speaker:Graciana #mood:think
 Good morning, sirs...?
 
-Just sir! Do not address the subgnome, human! #speaker:???
-The name is Himber, as well! #speaker:Himber #mood:angry
+Just sir! Do not address the subgnome, human! #speaker:??? #ss:Himber:angry
+The name is Himber, as well! #speaker:Himber 
 And would it kill you to bring me a menu?!
 
 (...Oh my god...) #speaker:Graciana #mood:neutral
@@ -111,5 +112,5 @@ Now, if you will excuse us... #speaker:Himber #mood:neutral
 ...
 What the hell just happened? #speaker:Graciana #mood:think
 
-
+~StartO_Ryan()
     -> DONE

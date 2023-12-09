@@ -25,19 +25,26 @@ namespace InterDineMension.Manager
             finalEncounterTracker;//used to keep track of wins and losses in the final encounter with */
         //public bool characterStateNico;
         private static VariableHolder instance;
+        public VariableHolder test;
         public bool testTest;
 
         // Start is called before the first frame update
-        void Awake()
+        void Start()
         {
-            
-            if (instance != null)
+            test = instance;
+            if (GameObject.FindGameObjectsWithTag("variableHolder").Length>=2)
             {
-                Destroy(this.gameObject);
-                Debug.LogWarning($"Found more then one DialogueManager instance ");
+                Destroy(gameObject);
             }
+            /*if (instance != null)
+            {
+                instance.DestroyCopy(this.gameObject); 
+                //Destroy(this.gameObject);
+                Debug.LogWarning($"Found more then one DialogueManager instance ");
+            }*/
             preventFarmingStory = new Story(preventFarming.text);
             instance = this;
+            test = instance;
             DontDestroyOnLoad(instance);
 
             currentStory = new Story(curStor.text);
@@ -50,6 +57,10 @@ namespace InterDineMension.Manager
             {
                 Debug.Break();
             }
+        }
+        public void DestroyCopy(GameObject clone)
+        {
+            Destroy(clone.gameObject);
         }
     }
 }

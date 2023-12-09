@@ -13,6 +13,7 @@ namespace InterDineMension.Manager
     using JetBrains.Annotations;
     using MicroGame;
     using MicroGame.BA;
+    using Unity.VisualScripting;
 
     //using System.Diagnostics;
 
@@ -131,6 +132,7 @@ namespace InterDineMension.Manager
         private const string BG = "bg";
         private const string SCG = "scg";
         private const string ECG = "ecg";
+        private const string SS = "ss";
         //private const string VAR_CHANGE = "varChange"; not sure what this was supposed to me lmao
 
         public InkExternalFunctions iEF;
@@ -548,7 +550,7 @@ namespace InterDineMension.Manager
                     {
                         case 0:
                             {
-                                EnterDialogueMode(gBtn.gameObject.GetComponent<Gnomies>().GdialogueDictionary["GTalkTo1"]);
+                                EnterDialogueMode(gBtn.gameObject.GetComponent<Gnomies>().GdialogueDictionary["GIntro"]);
                                 break;
                             }
                         case 1:
@@ -579,7 +581,7 @@ namespace InterDineMension.Manager
                     {
                         case 0:
                             {
-                                EnterDialogueMode(fBtn.gameObject.GetComponent<Fred>().FdialogueDictionary["FTalkTo1"]);
+                                EnterDialogueMode(fBtn.gameObject.GetComponent<Fred>().FdialogueDictionary["FIntro"]);
                                 break;
                             }
                         case 1:
@@ -926,7 +928,62 @@ namespace InterDineMension.Manager
             foreach(string tag in currentTags)
             {
                 string[] splitTag = tag.Split(':');
-                if (splitTag.Length != 2)
+                if(splitTag.Length == 3)
+                {
+                    if (splitTag[0] == "ss")
+                    {
+                        string tagKeyT = splitTag[1].Trim();
+                        string tagValueT = splitTag[2].Trim();
+                        if (tagKeyT == "Chef Swatts")
+                        {
+                            Debug.Log("test");
+                            cS.sR.sprite = cS.CsspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "Graciana")
+                        {
+                            grac.sR.sprite = grac.GrspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "O'Ryan")
+                        {
+                            grac.sR.sprite = grac.GrspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "CeCe")
+                        {
+                            cC.sR.sprite = cC.CcspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "Himber" || tagValueT == "Hograt")
+                        {
+                            G.sR.sprite = G.GspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "Fred")
+                        {
+                            F.sR.sprite = F.FspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "Morgan")
+                        {
+                            M.sR.sprite = M.MspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else if (tagKeyT == "NiCo")
+                        {
+                            N.sR.sprite = N.NspriteDictionary[tagValueT];
+                            return;
+                        }
+                        else
+                        {
+                            Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
+                            return;
+                        }
+                    }
+                    
+                }
+                else if (splitTag.Length != 2)
                 {
                     Debug.LogError("Tag could not be appropriatly parsed: " + tag);
                 }
@@ -1044,7 +1101,7 @@ namespace InterDineMension.Manager
                                 charSpeakTo = speakingTo.CeeCee;
                                 charSpeak = speaker.CeeCee;
                             }
-                            else if (tagValue == "Gnomies")
+                            else if (tagValue == "Himber"||tagValue=="Hograt")
                             {
                                 G.sR.color = Color.HSVToRGB(0, 0, 1);
                                 grac.sR.color = Color.HSVToRGB(0, 0, .4f);

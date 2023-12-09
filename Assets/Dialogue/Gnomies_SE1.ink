@@ -62,7 +62,7 @@ One slice of Lingonberry Sweet Pie! #speaker:Graciana #mood:happy
 Yes, right on time too! You are doing wonderful today, human! #speaker:Himber #mood:happy
     -> yummypie
 ==bad1==
-~affectionG=affectionG-1
+~affectionG=affectionG-2
 What, like, a chunk of rock or something? #speaker:Graciana #mood:think #sfx:LostPoint
 I gave you a piece of the old Granite table, right?
 
@@ -177,7 +177,7 @@ Well, if you recall from our last encounter, subgnomes dine on the finest of ore
 As is natural, being a species born and raised below the surface.
     -> surfaces
 ==bad2==
-~affectionG=affectionG-1
+~affectionG=affectionG-2
 
 Oh, uh... #speaker:Graciana #mood:neutral #sfx:LostPoint
 Were you saying something? #speaker:Graciana #mood:think
@@ -334,5 +334,5 @@ Wonder what the deal with Hograt is, though... #speaker:Graciana #mood:think
 ...
 Anyways, I've got some more work to do. #speaker:Graciana #mood:neutral
 
-~GoToDiner()
+~StartO_Ryan()
     -> DONE
