@@ -1,5 +1,5 @@
 INCLUDE ToMinigames.ink
- the outcome of the minigame was: {winState}
+the outcome of the minigame was: {winState}
  
 what would you like to do?
 ~currentConvo=""
@@ -7,6 +7,6 @@ what would you like to do?
     ->difficultySelectionT
 *[change minigame]
     ->ToMiniGame
-*[return to appartment]
+*[return to apartment]
     Time to relax.
     ->DONE

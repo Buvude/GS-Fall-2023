@@ -97,7 +97,7 @@ Eventually, they let me start working at the United Dimensions.
 Typically, every World has their own representative. But The Great Void did not have any native citizens.
 Until me.
 
-I oversee a variety of different establishments in The Great Void, but this Diner I personally opened and ran.
+I oversee a variety of different establishments in The Great Void, but this Diner I personally opened and run.
 However. Overtime, interdimensional travel became more commonplace. There were more people to check in and out. More establishments were opening at a rapid pace.
 The paperwork kept piling up, and I have not been able to dedicate the time to this Diner that it deserves.
 
