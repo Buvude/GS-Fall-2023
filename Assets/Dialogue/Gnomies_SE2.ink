@@ -8,6 +8,7 @@ Hello once again, human! I see you simply cannot resist me! #speaker:Himber #moo
     ->GnomiesConvoStart2
 * [Nope, see ya!]
 Hmph! #speaker:Himber #mood:angry
+    ~GoToDiner()
     -> DONE
 
 ==GnomiesConvoStart2==

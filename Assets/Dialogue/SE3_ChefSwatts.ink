@@ -26,6 +26,7 @@ Ay, Gracie, ya got a minute? #speaker:Chef Swatts
     ->DONE //temporary place holder so no error
     
 * I'm busy
+    ~GoToDiner()
     -> DONE
     
     

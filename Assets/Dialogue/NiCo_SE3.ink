@@ -18,6 +18,7 @@ Oh... Hey, Graciana. #speaker:NiCo #mood:neutral
 //Here, divert to the corresponding ending. I gotta discuss with you (David) about how to integrate that exactly. Might be better to move some stuff around, if possible.
 //If not, at least I got it in inky so i can just copy-paste if needed lol
 * [Oops, nevermind!]
+    ~GoToDiner()
     -> DONE
    
    

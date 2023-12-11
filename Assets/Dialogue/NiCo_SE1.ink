@@ -7,6 +7,7 @@ Hi, Graciana.
 ->whatup
 *[Sorry, nevermind.]
 You should probably go help the customers who actually need to eat.
+    ~GoToDiner()
     -> DONE
     
 ==whatup==
