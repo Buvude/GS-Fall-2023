@@ -20,7 +20,7 @@ EXTERNAL NewDay()
 VAR chaosTotalN=12
 VAR chaosTotalCC=0
 VAR chaosTotalM=0
-VAR chaosTotalG=0
+VAR chaosTotalG=6
 VAR chaosTotalF=0
 VAR chaosTotalOR=6
 

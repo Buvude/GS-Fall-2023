@@ -8,10 +8,10 @@ INCLUDE BADialogue.ink
     ~weekDay="Tut"
     ~convo_numberCS=0
     ~QuickSave()
-    (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana #bgm:dinMorning
+    (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana #bgm:dinMorning #pu:gfb
     (Here we are... The Portal Diner...) #speaker:Graciana #mood:think 
     (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)
-    (I still haven’t met or even seen the owner; I interviewed online. They said to find a “fly guy,” whatever that means–) 
+    (I still haven’t met or even seen the owner; I interviewed online. They said to find a “fly guy,” whatever that means–) #pd:blank
     
     Ey! We not open yet! Ya gonna have to wait! How’d ya get in here? The portal shoulda been locked! #speaker:???
     
