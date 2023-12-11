@@ -12,6 +12,7 @@ Ah, there you are, human! Come, serve me! #speaker:Himber #mood:neutral
 *[Serve yourself.]
 Sorry, in a minute! #speaker:Graciana #mood:neutral
 (Yeah, right.) #speaker:Graciana #mood:happy
+    ~GoToDiner()
     -> DONE
 
 ==GnomiesConvoStart1==

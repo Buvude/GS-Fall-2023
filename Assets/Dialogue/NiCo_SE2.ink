@@ -12,6 +12,7 @@ Hey, Graciana. #speaker:NiCo
     ->convostart
 * [Oopsie, nevermind...]
 ...Guess not... #speaker:NiCo
+    ~GoToDiner()
     -> DONE
     
 ==convostart==
