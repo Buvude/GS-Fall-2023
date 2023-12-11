@@ -1,6 +1,22 @@
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
+EXTERNAL StartTTMicro()
 ~QuickLoad()
+
+{winState=="loss":
+    Would you like to retry the minigame?
+    *[Yes]
+        {currentConvo=="GMG3":
+        ~StartTTMicro()
+        ->DONE
+        }
+        ->MainBAD
+    *[No]
+        ->DecideFate
+}
+
+->DecideFate
+==DecideFate==
 {
 -currentConvo=="GMG1":
     {
