@@ -4,7 +4,12 @@ EXTERNAL StartTTMicro()
 ~QuickLoad()
 
 {winState=="loss":
-    Would you like to retry the minigame?
+    ->retry
+}
+
+->DecideFate
+==retry==
+Would you like to retry the minigame?
     *[Yes]
         {currentConvo=="GMG3":
         ~StartTTMicro()
@@ -13,32 +18,44 @@ EXTERNAL StartTTMicro()
         ->MainBAD
     *[No]
         ->DecideFate
-}
 
-->DecideFate
 ==DecideFate==
 {
 -currentConvo=="GMG1":
     {
     -winState=="won":
+    ~affectionG+=2
+    ~convo_numberG=1
     ->pass1
     -winState=="loss":
+    ~affectionG-=2
+    ~convo_numberG=1
     ->fail1
     }
 -currentConvo=="GMG2":
     {
     -winState=="won":
+     ~affectionG+=3
+     ~convo_numberG=2
     ->pass2
     -winState=="loss":
+    ~affectionG-=3
+    ~convo_numberG=2
     ->fail2
     }
 -currentConvo=="GMG3":
     {
     -winState=="chaos":
+    ~chaosG+=4
+    ~convo_numberG=3
     ->chaos
     -winState=="won":
+    ~affectionG+=4
+    ~convo_numberG=3
     ->pass3
     -winState=="loss":
+    ~affectionG+=4
+    ~convo_numberG=3
     ->fail3
     }
 }

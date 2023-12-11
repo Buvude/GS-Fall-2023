@@ -166,7 +166,7 @@ namespace InterDineMension.MicroGame.TT
             }
             else
             {
-                PlayerPrefs.SetString("winStatus", "lost");
+                PlayerPrefs.SetString("winStatus", "loss");
             }
             switch (PlayerPrefs.GetString("currentConvo"))
             {
