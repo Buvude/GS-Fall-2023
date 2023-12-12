@@ -1,9 +1,11 @@
-(Fred seems to be staring out into space...) #speaker:Graciana #mood:think
+
+(Fred is excitedly waving me down...) #speaker:Graciana #mood:neutral
 
 * [Hey Fred!]
     ->Start
 * [(Leave him be)]
-(I'll let him stare a bit longer...) #speaker:Graciana #mood:think
+Sorry Fred, I'll be back in a minute! #speaker:Graciana #mood:neutral
+~GoToDiner()
     -> DONE
 
 ==Start==
@@ -14,98 +16,343 @@ How did it go with Frank! What did you do? Tell me everything! #speaker:Graciana
 ... #speaker:Fred #mood:neutral
 You seem to be more excited about this than me...
 
-Well I gave you advice, and I wanna know how it panned out! #speaker:Graciana #mood:happy
+Well, I gave you advice, and I wanna know how it panned out! #speaker:Graciana #mood:happy
 And as your friend, I am heavily invested in what happens to you!
 
 Aww... #speaker:Fred #mood:sad
 I was gonna make a joke but that's actualy just really nice! #speaker:Fred #mood:galaxy
 
-Let me get you a smoothie and you prep your story! #speaker:Graciana #mood:neutral
+Let me get you a smoothie, and you prep your story! #speaker:Graciana #mood:neutral #scg:BlackCG
 //blackout scene i dont remember what the tag is rn  it's like 1am i promise ill do it soon ;-;
 
-Alrighty, there you go! Now dish what happened! #speaker:Graciana #mood:happy
+Alrighty, there you go! Now dish what happened! #speaker:Graciana #mood:happy #ecg:
 
 Well I don't really know where to start... #speaker:Fred #mood:neutral
 We went and watched the shows you recommended after work! #speaker:Fred #mood:happy
 
-And did he like them? #speaker:Graciana #mood:neutral
+And did he like them? #speaker:Graciana #mood:think
 
 Yeah! He talked a lot about stuff I didn't really understand... #speaker:Fred #mood:neutral
 But I think he liked them! #speaker:Fred #mood:happy
 
-That's awesome, Fred! And did you talk about school and the suit, or the whole adoption situation?  #speaker:Graciana #mood:think
+That's awesome, Fred! And did you talk about school and the suit, or the whole adoption situation?  #speaker:Graciana #mood:neutral
 
- Well... #speaker:Fred #mood:neutral
-
- Did you? #speaker:Graciana #mood:neutral
-
- I was scared to #speaker:Fred #mood:Happy
+Well... #speaker:Fred #mood:sad
  
- Whenever I bring it up he goes quiet and I don't know what to do #speaker:Fred #mood:Happy
+Did you? #speaker:Graciana #mood:neutral
+
+I was scared to... #speaker:Fred #mood:sad
+Whenever I bring it up he goes quiet, and I don't know what to do.
+He seemed to be enjoying himself and talking about the characters he liked when he was growing up though #speaker:Fred #mood:neutral
+I didn't want to ruin it... #speaker:Fred #mood:sad
+
+(Damn, I don't know whether to praise the observation, or critize him avoiding the conversation...) #speaker:Graciana #mood:think
+// Ending Divert goes here
+~convo_numberF(4)
+
+==FredGoodEnd==
+That's actually really thoughtful of you, Fred! #speaker:Graciana #mood:happy
+
+I love that you care about Frank so much, but if you're gonna move forward in your life you need to do it, right? #speaker:Graciana #mood:neutral
+
+If he says yes, you could instantly have a Dad who cares very deeply about you and who is willing and parently obiligated to help you with your situation. #speaker:Graciana #mood:neutral
+
+Giving him the benefit of the doubt, not knowing about your situation and caring enough to work basically 20 hours a day to help you... #speaker:Graciana #mood:think
+I think he could be a really great parent.  #speaker:Graciana #mood:neutral
+What do you think? #speaker:Graciana #mood:neutral
+
+I think you're right! #speaker:Fred #mood:happy
+He's really nice, and we like a lot of the same stuff too! #speaker:Fred #mood:pump
+
+Exactly! And think about it, he gets paid. #speaker:Graciana #mood:neutral
+So long as he's somewhat responsible with his money, he should be able to pay for you to go to school.
+And you can make friends your own age! #speaker:Graciana #mood:happy
+
+I haven't really thought about that... #speaker:Fred #mood:neutral
+
+Well, now's the time to, bud! #speaker:Graciana #mood:happy
+
+What do you do think? What would <i>you</i> wanna do first? #speaker:Fred #mood:galaxy
+
+**[Work at UMS with Frank]
  
- He seemed to be enjoying himself and talking about the characters he liked when he was growing up though #speaker:Fred #mood:Happy
+I think it would be nice to work with Frank more. #speaker:Graciana #mood:think
+As long as you don't have to work to pay off the suit, that is. #speaker:Graciana #mood:neutral
+
+I think I understand that's a bad thing now... #speaker:Fred #mood:neutral
+
+Damn right it is, little star. #speaker:Graciana #mood:happy
+Never let them take advantage of you again! Especially now with Frank in your corner, you should be untouchable by those corporate bastards!
+
+You called them "bastards" a few times now... What does that mean? #speaker:Fred #mood:neutral
+
+Shit... #speaker:Graciana #mood:neutral
+
+Shit? #speaker:Fred #mood:neutral
+
+Learn from Frank, not me when it comes to words, hun. #speaker:Graciana #mood:think
+I have... "Earth Syndrome." #speaker:Graciana #mood:neutral
+Our language hasn't evolved to be understanding of others in hundreds of years... #speaker:Graciana #mood:think
+So don't repeat the words I say. #speaker:Graciana #mood:neutral
+
+Oh. #speaker:Fred #mood:neutral
+
+Oh indeed. #speaker:Graciana #mood:neutral
+
+Okay, so I should keep working with Frank as long as I get money for it? #speaker:Fred #mood:neutral
+And then what?
+->GoodFinal
+**[Go to school]
+
+You could always to school! #speaker:Graciana #mood:happy
+
+Is school really worth it? #speaker:Fred #mood:neutral
+A lot of my coworkers never went to school, but they got jobs anyways... #speaker:Fred #mood:neutral
+
+Well, it's not needed for UMS jobs... #speaker:Graciana #mood:think
+
+BUT! It's still important you go for the social aspect! #speaker:Graciana #mood:ha
+
+You can make friends, talk to people of all different cultures, planets, realms, planes of existence, and even other dimensions! #speaker:Graciana #mood:neutral
+Plus, you can learn about anything you want! If you want to learn more about stars you can do that! You can even learn about history, languages, math, though that's not really fun for most people, anything you want to at all! #speaker:Graciana #mood:neutral
+
+Hm... #speaker:Fred #mood:neutral
+Okay! If you think it's the right thing to do, I don't see why not! #speaker:Fred #mood:neutral
+
+Well, you can also ask Frank about it and he'll agree with me, I'm 99% sure! #speaker:Graciana #mood:happy
+
+What's the 1% for? #speaker:Fred #mood:neutral
+
+Don't worry about it, it's just a saying. #speaker:Graciana #mood:neutral
+
+But isn't that math? I thought you didn't like math? #speaker:Fred #mood:neutral
+
+... #speaker:Graciana #mood:neutral
+
+You are going to make some poor underpaid teacher's day with all these questions. #speaker:Graciana #mood:happy
+
+I am? #speaker:Fred #mood:happy
+
+Of course, little star. #speaker:Graciana #mood:neutral
+
+Okay! So once I go to school, what do I do after that? #speaker:Fred #mood:neutral
+->GoodFinal
+**[Be a kid!]
+
+Be a kid for once! #speaker:Graciana #mood:happy
+
+I don't get it... #speaker:Fred #mood:neutral
+
+Fred, you've been working for hundreds of years! #speaker:Graciana #mood:neutral
+
+...? #speaker:Fred #mood:neutral
  
- I didn't want to ruin it  #speaker:Fred #mood:Happy
+Most kids don't work 'til they're older, or have had some sort of education or learned a trade. #speaker:Graciana #mood:neutral
+
+Okay... #speaker:Fred #mood:neutral
+
+And think about it... #speaker:Graciana #mood:think
+You could do whatever you want for a few years, to relax after working for a suit you should have paid off hundreds of years ago! #speaker:Graciana #mood:happy
+
+I think I'm following you... #speaker:Fred #mood:happy
+
+You could watch cartoons, play with other kids, go out and talk with people whenever you want, eat whatever you want, go wherever you want... #speaker:Graciana #mood:think
+Really, just have fun! #speaker:Graciana #mood:happy
+
+That's a lot... #speaker:Fred #mood:sad
+
+It very much is Fred! You missed out on a lot of kid shenanigans--Might not be a bad idea to enjoy life with Frank for a little bit! #speaker:Graciana #mood:neutral
+Earth has some great Theme parks and carnivals you could go to! #speaker:Graciana #mood:happy
+
+What are those? #speaker:Fred #mood:neutral
+
+Massive thruster propelled carts that shoot you around the sky, using only small metal railings to keep you in place on a winding track... #speaker:Graciana #mood:neutral
+
+Oh...
+That kinda sounds scary, not fun #speaker:Fred #mood:neutral
  
- (Dam I don't know whether to praise the obersevation or critize him avoiding the conversation) #speaker:Graciana #mood:neutral
+Well it is in concept, but it's actually really fun when you try it! 
+Some even go to the moon and back! #speaker:Graciana #mood:neutral
+
+Oh, that does sound fun! #speaker:Fred #mood:Happy
+
+See! And you and Frank could bond over all that, and make some really nice memories! #speaker:Graciana #mood:happy
+
+Hmm... #speaker:Fred #mood:neutral
+
+You seem to think it's fun, so I think it will be, too! #speaker:Fred #mood:happy
+
+(I feel like a proud teacher whose student is graduating...) #speaker:Graciana #mood:happy
+
+But after all the coasters and parks, what do I after? #speaker:Fred #mood:neutral
+School, Work, just having fun forever? #speaker:Fred #mood:neutral
+
+->GoodFinal
+==FredChaosEnd==
+Well, when are you planning on asking him? #speaker:Graciana #mood:think
+
+I don't know. #speaker:Fred #mood:neutral
+
+Well, do you still want to ask him? #speaker:Graciana #mood:think
  
-**[Thats actually really thoughtful of you Fred]
+I don't know... #speaker:Fred #mood:neutral
 
- Thats really thoughtful of you Fred #speaker:Graciana #mood:neutral
+Oh boy, what changed? #speaker:Graciana #mood:think
 
- I love that you care about Frank so much but if you are going to move forward in your life you need to do it right? #speaker:Graciana #mood:neutral
+I don't know... #speaker:Fred #mood:sad
  
- If he says yes you could instantly have a Dad who cares very deeply about you and who is willing and parently obiligated to help you with your situation. #speaker:Graciana #mood:neutral
+You're worrying me my little clueless star... Speak in more than three words please... #speaker:Graciana #mood:neutral
+
+Well, I had fun with him, right? #speaker:Fred #mood:neutral
+
+Yes? I feel a "but" coming after that... #speaker:Graciana #mood:think
+
+But what you said earlier got me thinking... #speaker:Fred #mood:neutral
+
+About? #speaker:Graciana #mood:think
+
+Well, do you remember what you first said me to when I mentioned Frank worked with me before? #speaker:Fred #mood:neutral
+
+**[How long you two worked...] 
+
+How long you had worked with each other? #speaker:Graciana #mood:think
+
+Right!#speaker:Fred #mood:happy
+And I thought about it a little... #speaker:Fred #mood:neutral
+
+What about it, hun? #speaker:Graciana #mood:neutral
+
+He's nice to me at work... #speaker:Fred #mood:neutral
+And he's been nice for a while. #speaker:Fred #mood:neutral
+
+Mhm, and? #speaker:Graciana #mood:think
+
+Well, that's it. #speaker:Fred #mood:neutral
+It's been a while that he's been doing this...
+
+And that brings us to...? #speaker:Graciana #mood:think
+
+He hasn't tried to help outside of being nice to me for hundreds of years... #speaker:Fred #mood:sad
+Hasn't even brought up UMS using me once... #speaker:Fred #mood:sad
+
+Oh... right... #speaker:Graciana #mood:sad
+
+But there was one person that did, as soon as they heard about it happening... #speaker:Fred #mood:neutral
+Oh...? #speaker:Graciana #mood:think
+
+... #speaker:Fred #mood:neutral
+
+(He's staring at me...) #speaker:Graciana #mood:think
+
+->ChaosFinal
+**[How much you trust Frank?]
+
+How much you trusted Frank? #speaker:Graciana #mood:think
+
+No, silly, the other one! #speaker:Fred #mood:happy
+
+Hey, I talk a lot, it could be just about anything! #speaker:Graciana #mood:neutral
+
+What you said about him working with me...? #speaker:Fred #mood:neutral
+
+Mhm, I'm following. #speaker:Graciana #mood:neutral
+
+When you asked me how old I was ? #speaker:Fred #mood:neutral
+
+Mhm, I certaintly did ask that. #speaker:Graciana #mood:think
+
+You also asked how old he was? #speaker:Fred #mood:neutral
+
+Sounds like a reasonable question for me to ask, your honor. #speaker:Graciana #mood:think
+
+You asked how long we knew each other? #speaker:Fred #mood:neutral
+
+Mhm, good follow up by me... #speaker:Graciana #mood:think
+
+And during that time, how long we knew of each other? #speaker:Fred #mood:neutral
+
+I seem to be quite thorough... #speaker:Graciana #mood:think
+
+I don't know what that means... #speaker:Fred #mood:sad
+
+Persistent? #speaker:Graciana #mood:think
+
+Nope. #speaker:Fred #mood:neutral
+
+Keeping questioning stuff 'til it makes sense. #speaker:Graciana #mood:neutral
+
+Ah...? #speaker:Fred #mood:neutral
+
+Ah, indeed. #speaker:Graciana #mood:neutral
+Well yes, "Miss Thorough," you mentioned we worked together for a long time? #speaker:Fred #mood:neutral
+Mhm, I did #speaker:Graciana #mood:neutral
+
+And he had all that time to try and get closer with me if he wanted to...? #speaker:Fred #mood:neutral
+
+That he did. #speaker:Graciana #mood:neutral
+
+But he didn't? #speaker:Fred #mood:neutral
+
+That, he did not. #speaker:Graciana #mood:neutral
+
+You are being really smart today! #speaker:Fred #mood:galaxy
+
+Why thank you, my good star sir! #speaker:Graciana #mood:happy
+
+Other meaning of smart? #speaker:Fred #mood:Happy
+
+Ha, someone's picked up a little sass, have we? #speaker:Graciana #mood:happy
+
+Wonder where I got it from...? #speaker:Fred #mood:happy
+
+Oh no, I'm a problem it seems! #speaker:Graciana #mood:happy
+
+That we agree? #speaker:Fred #mood:neutral
+
+And your point is, smarty suit pants? #speaker:Graciana #mood:think
+
+Only one sassy person has tried to help me out of this... #speaker:Fred #mood:neutral
+
+->ChaosFinal
+**[Franks favorite shows?]
+What Franks favorite shows were? #speaker:Graciana #mood:think
+
+No! Before that! #speaker:Fred #mood:angry
+
+Uhhh... #speaker:Graciana #mood:think
+What he was?
+
+No! #speaker:Fred
+
+What his favorite color was? #speaker:Graciana
+
+You're not even trying! #speaker:Fred
+
+Help a gal out here, little star. #speaker:Graciana #mood:neutral
+
+Time! #speaker:Fred
+
+Ah time, it <i>is</i> a weird soup. #speaker:Graciana #mood:neutral
+
+Yes, you said that, but Frank's time at UMS. #speaker:Fred #mood:neutral
+It's just as long if not longer than mine... #speaker:Fred #mood:sad
+but he said nothing during that time #speaker:Fred #mood:neutral
+
+Nothing about me, nothing about the suit--He just helped me learn how to do things by myself.  #speaker:Fred #mood:neutral
+
+Okay, I see now. And this brings us to you feeling bad about Frank? #speaker:Graciana #mood:think
+
+No! of course not! #speaker:Fred #mood:angry
+I still really care what he has done for me... #speaker:Fred #mood:sad
+But he didn't try and fix anything, just make it more bearable. #speaker:Fred #mood:neutral
+Ah... #speaker:Graciana #mood:think
+Only one person really tried to change my life... #speaker:Fred #mood:neutral
+Oh? and who's that? #speaker:Graciana #mood:think
+
+... #speaker:Fred #mood:neutral 
+->ChaosFinal
  
- Giving him the benefit of the doubt for not knowing about your situation and caring enough to work basically 20 hours a day to help you I think he could be a really great parent  #speaker:Graciana #mood:neutral
-
- What do you think? #speaker:Graciana #mood:neutral
-
- I think your right #speaker:Fred #mood:Happy
-
- He is really nice and we like a lot of the same stuff #speaker:Fred #mood:Happy
-
- Exactly! And think about it he gets paid so as long as he is somewhat responable with his money he should be able to pay for you to go to school! and you can make friends your own age! #speaker:Graciana #mood:neutral
-
- I haven't really thought about that #speaker:Fred #mood:Happy
- 
- Well nows the time to bud #speaker:Graciana #mood:neutral
-
- What do you do think you would want to do first? #speaker:Fred #mood:Happy
-
-
-->GoodEnding
-
-**[Well when are you planning on asking him?]
-
- I dont know #speaker:Fred #mood:Happy
-
- Well do you still want to ask him? #speaker:Graciana #mood:neutral
- 
- I don't know #speaker:Fred #mood:Happy
-
- Oh boy, what changed? #speaker:Graciana #mood:neutral
-
- I don't know #speaker:Fred #mood:Happy
- 
- Fred your scaring my little clueless star speak in more than three words #speaker:Graciana #mood:neutral
-
- Well, I had fun with him right #speaker:Fred #mood:Happy
-
- Yes? I feel a but coming after that #speaker:Graciana #mood:neutral
-
- but what you said earlier got me thinking #speaker:Fred #mood:Happy
-
- about? 
-
- Well do you remember what you first said me to when I mentioned Frank worked with me before? #speaker:Fred #mood:Happy
- 
-
-
-
-
-->ChaosEnding
-
+==FredBadEnd==
 **[Fred even if he says no its better knowing]
 
  Just remember even if he ends up being a dead end for adoption its still better to ask now versus later so you can find someone to help you sooner than later #speaker:Graciana #mood:neutral
@@ -164,143 +411,19 @@ The more you talk about them using me the more I notice things they say at work 
 
 
 ->BadEnding
-
-
-==GoodEnding==
-
-**[Continue ot work at UMS with Frank]
- 
- I think it would be nice to be working with Frank more #speaker:Graciana #mood:neutral
-
- As long as I don't have to work to pay off the suit that is #speaker:Graciana #mood:neutral
-
- I think I understand thats a bad thing now #speaker:Fred #mood:Happy
-
- Dam right it is little star #speaker:Graciana #mood:neutral
-
- Never let them take advantage of you again! Espically now with Frank in your corner you should be untouchable by those coperate bastards! #speaker:Graciana #mood:neutral
-
- You called them bastards a few times now what does that mean? #speaker:Fred #mood:Happy
-
- Shit #speaker:Graciana #mood:neutral
-
- Shit? #speaker:Fred #mood:Happy
-
- Learn from Frank not me when it comes to words hun I have Earth Synrdome #speaker:Graciana #mood:neutral
-
- Our language has not evovled to be understanding of others in hundreds of years #speaker:Graciana #mood:neutral
-
- Oh #speaker:Fred #mood:Happy
-
- oh indeed #speaker:Graciana #mood:neutral
-
- Ok so I should keep working with Frank as long as I get money for it #speaker:Fred #mood:Happy
-
- And then what? #speaker:Fred #mood:Happy
-
-
-
-->GoodFinal
-**[Go to school]
-
- Is school really worth it? #speaker:Fred #mood:Happy
-
- a lot of my co workers never went to school but they got jobs #speaker:Fred #mood:Happy
-
- Well its not needed for UMS jobs no #speaker:Graciana #mood:neutral
-
- BUTTTT it is still important you go for the social aspect! #speaker:Graciana #mood:neutral
-
-You can make friends, talk to people of all different cultures, planets, realms, planes of existence, and even other dimenions! #speaker:Graciana #mood:neutral
-
- plus you can learn about anything you want! If you want to learn more about stars you can do that! You can even learn about history, languages, math thought its not really fun for most people, anything you want to at all! #speaker:Graciana #mood:neutral
-
- Oh #speaker:Fred #mood:Happy
-
- ok! if you think its the right thing to do I don't see why not #speaker:Fred #mood:Happy
-
- Well you can also ask Frank about it and he will agree with me, Im 99% sure #speaker:Graciana #mood:neutral
-
- whats the 1% for? #speaker:Fred #mood:Happy
- 
- Don't worry about it its just a saying #speaker:Graciana #mood:neutral
-
- But isn't that math, I thought you didn't like math? #speaker:Fred #mood:Happy
-
-....................................... #speaker:Graciana #mood:neutral
-
- You are going to make some poor underpaid teachers day with all these questions #speaker:Graciana #mood:neutral
-
- I am? #speaker:Fred #mood:Happy
-
- Of course little star #speaker:Graciana #mood:neutral
-
- Ok! So once I go to school what do I do after that? #speaker:Fred #mood:Happy
-
-
-
-->GoodFinal
-**[Be a kid for once and take time off]
- I don't get it #speaker:Fred #mood:Happy
-
- Fred you have been working for hundreds of years! #speaker:Graciana #mood:neutral
-
- Yeah? #speaker:Fred #mood:Happy
- 
- Most kids don't work till they are older or have had some sort of education or learned a trade #speaker:Graciana #mood:neutral
-
- ok #speaker:Fred #mood:Happy
-
- And think about it, you could do whatever you want for a few years to relax after working for a suit you should have paid off hundreds of years ago! #speaker:Graciana #mood:neutral
- 
- I think Im following you #speaker:Fred #mood:Happy
- 
- You could watch cartoons, play with other kids, go out and talk with people whenever you want, eat whateever you want, go wherever you want, really just have fun! #speaker:Graciana #mood:neutral
- 
- Thats a lot #speaker:Fred #mood:Happy
- 
- It very much is Fred! You missed out on a lot of kid shennigans, might not be a bad idea to enjoy life with Frank for a little bit #speaker:Graciana #mood:neutral
- 
- Earth has some great Theme parks and carnivals you could go to! #speaker:Graciana #mood:neutral
- 
- What are those? #speaker:Fred #mood:Happy
- 
- Massive thruster propelled carts that shoot you around the sky using only small metal railings to keep you in place on a winding track #speaker:Graciana #mood:neutral
- 
- oh, that kind of sounds scary not fun #speaker:Fred #mood:Happy
- 
- Well it is in concept but it is actually really fun when you try it, some even go to the moon and back! #speaker:Graciana #mood:neutral
-
- Oh that does sound fun! #speaker:Fred #mood:Happy
- 
- See! And you and Frank could bond over all of that and make some really nice memories! #speaker:Graciana #mood:neutral
-
- hmmmm #speaker:Fred #mood:Happy
-
- You seem to think its fun, so I think it will be too! #speaker:Fred #mood:Happy
- 
- I feel like a proud teacher whos student is graduating from #speaker:Graciana #mood:neutral
- 
- But after all the coasters and parks what do I after? #speaker:Fred #mood:Happy
- 
- School, Work, just having fun forever? #speaker:Fred #mood:Happy
-
-
-
-->GoodFinal
 ==GoodFinal==
- 
- After you are done with everything you want, there will always be me here for bits of amazing life changing advice, and Frank will be there to take care of you #speaker:Graciana #mood:neutral
- 
- Don't worry about your entire future now, enjoy the present and do whatever you think is best, even if you chose wrong you will have thousands of chances to chose right in your life little star #speaker:Graciana #mood:neutral
- 
- that sounds like a lot #speaker:Fred #mood:Happy
- 
- It is! #speaker:Graciana #mood:neutral
- 
- And what happens if I don't have enough time to visit, or if Frank takes me somewher else? #speaker:Fred #mood:Happy
- 
- Well Fred, here at the portal diner we have a saying do you know what that is? #speaker:Graciana #mood:neutral
+
+After you are done with everything you want, there will always be me here for bits of amazing life changing advice, and Frank will be there to take care of you #speaker:Graciana #mood:neutral
+
+Don't worry about your entire future now, enjoy the present and do whatever you think is best, even if you chose wrong you will have thousands of chances to chose right in your life little star #speaker:Graciana #mood:neutral
+
+that sounds like a lot #speaker:Fred #mood:Happy
+
+It is! #speaker:Graciana #mood:neutral
+
+And what happens if I don't have enough time to visit, or if Frank takes me somewher else? #speaker:Fred #mood:Happy
+
+Well Fred, here at the portal diner we have a saying do you know what that is? #speaker:Graciana #mood:neutral
 
  nope #speaker:Fred #mood:Happy
  
@@ -344,143 +467,51 @@ Achivement Unlocked: Rising Star
 ->END
 
 
-==ChaosEnding==
-
-Don't know #speaker:Fred #mood:Happy
-
-Well do you still want to ask him?  #speaker:Graciana #mood:neutral
-
-Don't know #speaker:Fred #mood:Happy
- 
-Oh boy, what changed?  #speaker:Graciana #mood:neutral
-
-I don't know #speaker:Fred #mood:Happy
-
-Fred your scaring my little clueless star speak in more than three words  #speaker:Graciana #mood:neutral
-
-Well, I had fun with him right #speaker:Fred #mood:Happy
-
-Yes? I feel a but coming after that  #speaker:Graciana #mood:neutral
- 
-But what you said earlier got me thinking #speaker:Fred #mood:Happy
-
-About?  #speaker:Graciana #mood:neutral
-
- Well do you remember what you first said me to when I mentioned Frank worked with me before? #speaker:Fred #mood:Happy
-
-
-**[How long you had worked with each other] 
- Right!#speaker:Fred #mood:Happy
- And I thought about it a little #speaker:Fred #mood:Happy
- what about it hun? #speaker:Graciana #mood:neutral
- Hes nice to me at work #speaker:Fred #mood:Happy
- and hes been nice for a while #speaker:Fred #mood:Happy
- mhm and? #speaker:Graciana #mood:neutral
- well thats it #speaker:Fred #mood:Happy
- Its been a while that he has been doing this #speaker:Fred #mood:Happy
- And that brings us to? #speaker:Graciana #mood:neutral
- he hasn't tried to help outside of be nice to me for hundreds of years #speaker:Fred #mood:Happy
- Hasn't even brought up UMS using me once #speaker:Fred #mood:Happy
- Oh..... right #speaker:Graciana #mood:neutral
- but there was one person that did as soon as they heard about it happening #speaker:Fred #mood:Happy
- oh? #speaker:Graciana #mood:neutral
- ............................ (Fred stares at you) #speaker:Fred #mood:Happy
-
-->ChaosFinal
-**[How much you trusted Frank?]
-
- No silly the other one! ? #speaker:Fred #mood:Happy
- Hey I talk a lot it could be just about anything #speaker:Graciana #mood:neutral
- What you said about him working with me? #speaker:Fred #mood:Happy
- uh huh Im following #speaker:Graciana #mood:neutral
- When you asked me how old I was ? #speaker:Fred #mood:Happy
- mhm I certaintly did ask that #speaker:Graciana #mood:neutral
- You also asked how old he was ? #speaker:Fred #mood:Happy
- Sounds like a reasonable question for me to ask your honor #speaker:Graciana #mood:neutral
- You ask how long we knew each other ? #speaker:Fred #mood:Happy
- mhm good follow up by me #speaker:Graciana #mood:neutral
- And during that time how long we knew of each other ? #speaker:Fred #mood:Happy
- I seem to be quite thorough #speaker:Graciana #mood:neutral
- I don't know what that means ? #speaker:Fred #mood:Happy
- Persistant? #speaker:Graciana #mood:neutral
- nope ? #speaker:Fred #mood:Happy
- keeping questioning stuff till it makes sense #speaker:Graciana #mood:neutral
- ah ? #speaker:Fred #mood:Happy
- ah indeed #speaker:Graciana #mood:neutral
- Well yes Ms. Thorough you mentioned we worked together for a long time ? #speaker:Fred #mood:Happy
- mhm I did #speaker:Graciana #mood:neutral
- and he had all that time to try and get closer with me if he wanted to ? #speaker:Fred #mood:Happy
- that he did #speaker:Graciana #mood:neutral
- but he didnt? #speaker:Fred #mood:Happy
- that he did not #speaker:Graciana #mood:neutral
- you are being really smart today ? #speaker:Fred #mood:Happy
- why thank you my good star sir #speaker:Graciana #mood:neutral
- other meaning of smart ? #speaker:Fred #mood:Happy
- Ha, someones picked up a little sass have we little star #speaker:Graciana #mood:neutral
- wonder where I got it from ? #speaker:Fred #mood:Happy
- oh no, I'm a problem #speaker:Graciana #mood:neutral
- that we agree ? #speaker:Fred #mood:Happy
- and your point is smarty suit pants? #speaker:Graciana #mood:neutral
- only one sassy person has tried to help me out of this ? #speaker:Fred #mood:Happy 
-
-->ChaosFinal
-**[What Franks favorite shows were?]
- no! before that! #speaker:Fred #mood:Happy 
- uuuuhhhh #speaker:Graciana #mood:neutral
- What he was? #speaker:Graciana #mood:neutral
- no! #speaker:Fred #mood:Happy 
- What his favorite color was? #speaker:Graciana #mood:neutral
- Your not even trying! #speaker:Fred #mood:Happy 
- Help this a gal out here little star #speaker:Graciana #mood:neutral
- Time! #speaker:Fred #mood:Happy 
- Ah time, it is a weird soup #speaker:Graciana #mood:neutral
- yes you said that, but Franks time at UMS #speaker:Fred #mood:Happy 
- its just as long if not longer then mine #speaker:Fred #mood:Happy 
- but he said nothing during that time #speaker:Fred #mood:Happy 
- nothing about me, nothing about the suit, just helped me learn how to do things by myself  #speaker:Fred #mood:Happy 
- ok, I see now. And this brings us to you feeling bad about Frank? #speaker:Graciana #mood:neutral
- No! of course not! #speaker:Fred #mood:Happy 
- I still really care what he has done for me #speaker:Fred #mood:Happy 
- but he didn't try and fix anything, just make it more bearable #speaker:Fred #mood:Happy 
- Ah #speaker:Graciana #mood:neutral
- only one person really tried to change my life #speaker:Fred #mood:Happy 
- oh and who is that? #speaker:Graciana #mood:neutral
- ................................................ 
-
-->ChaosFinal
 ==ChaosFinal==
 
- I have a strong feeling Im going to turn around and see no one behind me but I'm going to do it anyway to be absolutely sure I get what your putting down little man #speaker:Graciana #mood:neutral
- (Shit no ones there he is for sure suggesting I could be his mom) #speaker:Graciana #mood:neutral
-  Shit Shit shit shit shit, I mean I thought about it before right? Right? its perfectly fine if I do?) #speaker:Graciana #mood:neutral
- (I never really wanted kids but he wouldn't really be like having a baby because I am skipping the painful part of finding a boyfriend first) #speaker:Graciana #mood:neutral
- (I mean I have a job, I could help pay off his suit and get him out early of his contract with UMS) #speaker:Graciana #mood:neutral
- (I could also take care of him after work and on weekends) #speaker:Graciana #mood:neutral
- (Fuckkkkkkkkkk am I ready for this) #speaker:Graciana #mood:neutral
- Fuck am I ready for this? #speaker:Graciana #mood:neutral
- Fuck? #speaker:Fred #mood:Happy 
- Shit #speaker:Graciana #mood:neutral
- Shit? #speaker:Fred #mood:Happy 
- I'm going to stop talking now #speaker:Graciana #mood:neutral
- Do not repeat any of what I just said outloud those a Earthern customs to be used when frustrated or when someone cuts you off in interdiminsional traffic #speaker:Graciana #mood:neutral
- Ok! #speaker:Fred #mood:Happy 
- But gods dammit Fred #speaker:Graciana #mood:neutral
- This is the weirdest sentence I have ever thought of or probably uttered outloud but do you want me to be your mom!?! #speaker:Graciana #mood:neutral
-.................................................. #speaker:Fred #mood:Happy 
-..................................................... #speaker:Graciana #mood:neutral
-....................................................... #speaker:Fred #mood:Happy 
- YES!  #speaker:Fred #mood:Happy 
- You can be my teacher, mother, caretaker, main source of income
- Hey now that last part we gotta talk about  #speaker:Graciana #mood:neutral
- But your fine with the rest!!! #speaker:Fred #mood:Happy 
- Your god dam right I am my little star #speaker:Graciana #mood:neutral
- The legal process is easy, its just a matter of fixing your situation with UMS 
- whooooooo! I'm going to be just like you! #speaker:Graciana #mood:neutral
- I can work in the diner, talk to people about their problems all day, serve food, make friends, go to school #speaker:Fred #mood:Happy 
- Alright alright alright, sure thing Fred.  #speaker:Graciana #mood:neutral
- Let me cleanup and then lets go see your new home bud #speaker:Graciana #mood:neutral
+I have a strong feeling I'm gonna turn around and see no one behind me, but I'm going to do it anyway to be absolutely sure I get what you're putting down, little man #speaker:Graciana #mood:happy
+...
+(Shit, no one's there, he's for sure suggesting I could be his mom...) #speaker:Graciana #mood:neutral
+(Shit, I mean I thought about it before right? Right? It's perfectly fine if I do?) #speaker:Graciana #mood:think
+(I never really wanted kids, but he wouldn't really be like having a baby, because I'm skipping the painful part of finding a partner first...)
+(I mean I have a job, I could help pay off his suit and get him out of his contract with UMS...) 
+(I could also take care of him after work and on weekends)
+(Fuck, am I ready for this?)
+Fuck, am I ready for this?
+ 
+Fuck? #speaker:Fred #mood:neutral
 
-Achievement Unlocked: Obtain the Child
+Shit. #speaker:Graciana #mood:neutral
+
+Shit? #speaker:Fred
+ 
+I'm going to stop talking now. #speaker:Graciana #mood:neutral
+Do not repeat any of what I just said outloud, those are Earthly customs to be used when frustrated or when someone cuts you off in interdimensional traffic. #speaker:Graciana #mood:neutral
+
+Okay! #speaker:Fred #mood:happy
+
+But... Dammit Fred... #speaker:Graciana #mood:think
+This is the weirdest sentence I have ever thought of, or probably uttered outloud... But... 
+Do you want me to be your mom?! #speaker:Graciana #mood:fear
+ 
+... #speaker:Fred #mood:neutral
+... #speaker:Graciana
+...... #speaker:Fred
+
+YES! #speaker:Fred #mood:galaxy 
+You can be my teacher, mother, caretaker, main source of income-- #speaker:Fred #mood:pump
+Hey now, that last part we gotta talk about.  #speaker:Graciana #mood:neutral
+But you're fine with the rest?! #speaker:Fred
+
+Damn right I am, my little star. #speaker:Graciana #mood:happy
+The legal process is easy I think, it's just a matter of fixing your situation with UMS.
+
+Woooooo! I'm going to be just like you! #speaker:Fred #mood:happy
+ I can work in the diner, talk to people about their problems all day, serve food, make friends, go to school--
+Alright alright alright, sure thing Fred.  #speaker:Graciana #mood:neutral
+Let me cleanup and then lets go see your new home bud #speaker:Graciana #mood:neutral
+~GoToAppartment()
+
 ->END
 
 
