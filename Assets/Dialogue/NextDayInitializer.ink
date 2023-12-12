@@ -1,8 +1,9 @@
 INCLUDE globals.ink
 
-Would you like to go to sleep for the night?
+(Should I call it a night, and save?) #speaker:Graciana #mood:think
 *[Yes]
+(Phew, I'm beat...) #speaker:Graciana #mood:neutral
 ->NextDayVarAdjust
 *[No]
-Ok, I'll stay up for now.
+Okay, I'll stay up for now. #speaker:Graciana #mood:neutral
 ->DONE
