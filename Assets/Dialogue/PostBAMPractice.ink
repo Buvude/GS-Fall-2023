@@ -8,6 +8,6 @@ what would you like to do?
     ->DONE
 *[change minigame]
     ->ToMiniGame
-*[return to appartment]
+*[return to apartment]
     Time to relax.
     ->DONE
