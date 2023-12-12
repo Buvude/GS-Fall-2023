@@ -980,6 +980,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4900000, guid: caf7b40878960ba4c9e76582ddf80f8d, type: 3}
     - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: dDictValue.Array.data[3]
+      value: 
+      objectReference: {fileID: 4900000, guid: 2c33b6acf5eb398418771900de66de42, type: 3}
+    - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: dDictValue.Array.data[5]
       value: 
       objectReference: {fileID: 4900000, guid: 34c2df41199c15f48bf9355e2012c3bf, type: 3}
@@ -2098,6 +2102,10 @@ PrefabInstance:
       propertyPath: orderImages.Array.data[6]
       value: 
       objectReference: {fileID: 1644217951}
+    - target: {fileID: 3677981040014956514, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: dDictValue.Array.data[3]
+      value: 
+      objectReference: {fileID: 4900000, guid: 2c33b6acf5eb398418771900de66de42, type: 3}
     - target: {fileID: 6290930265342607804, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_Name
       value: InklDialogue

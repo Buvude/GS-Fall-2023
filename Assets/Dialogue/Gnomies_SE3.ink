@@ -11,6 +11,8 @@ Uh, sorry, maybe later? #speaker:Graciana #mood:think
 (Definitely not later.) #speaker:Graciana #mood:neutral
     -> DONE
 ==FinalsGnomiesConversation==
+~convo_numberG=4
+~QuickSave()
 Hey, what's up Gnomies? #speaker:Graciana #mood:happy
 
 ... #speaker:Himber #mood:neutral
@@ -157,7 +159,7 @@ And in trying to achieve that goal, I have become bitter. Not just to you, but t
 Moreso than you, I must apologize to Hograt. #speaker:Himber #mood:neutral
 ... #speaker:Himber #mood:sad
 
-(Himber climbs down from atop Hograts head, and looks at him face to face...!) #speaker:Graciana #scg:BlackCG
+(Himber climbs down from atop Hograts head, and looks at him face to face...!) #speaker:Graciana #scg:black
 
 ... #speaker:Himber
 Hograt, I am truly sorry for my behavior these past few months.
@@ -180,7 +182,7 @@ I... forgive... you...
 
 (They pull away, and Hograt gently grabs Himber, placing him atop his head once more.) #speaker:Graciana
 
-... #speaker:Himber #scg:blank
+... #speaker:Himber #ecg:blank
 
 ... #speaker:Graciana #mood:neutral
 
@@ -192,7 +194,7 @@ Yes, you! #speaker:Himber #mood:happy
 I cannot express it with the right words, but you pushed me towards this realization. And I can never properly repay you for that. #speaker:Himber #mood:neutral
 In fact, I made this exclusively for you...
 
-(He holds out a bracelet, made of beautiful stones...) #speaker:Graciana
+(He holds out a bracelet, made of beautiful stones...) #speaker:Graciana #pu:gfb
 //show bracelet teehee
 
 This was made using both the stones from above the surface, and beneath the surface, of Tometopia. #speaker:Himber #mood:neutral
@@ -213,9 +215,9 @@ Until we meet again, Graciana! #speaker:Himber #mood:happy
 (Hograt walks out of the Diner, happily waving at me with Himber atop his head, also waving slightly.) #speaker:Graciana #mood:happy
 
 Huh... #speaker:Graciana #mood:think
-That was interesting...
+I'm just glad I could help.
 
-~GoToDiner()
+~GoToAppartment()
     -> DONE
 ==GnomiesBadEnd==
 But it is of no concern. The thought would never even cross my mind. #speaker:Himber #mood:neutral
@@ -229,7 +231,7 @@ Isn't that right, Hograt?
 Please, you must communicate with me via your internal monologue! How many times have we gone over this?! #speaker:Himber #mood:angry
 We will never achieve enlightenment with your poor attitude!
 You need to start putting in more effort! I cannot do everything for you!
-...Hograt? #speaker:Himber #scg:BlackCG
+...Hograt? #speaker:Himber #scg:black
 
 ... #speaker:Hograt
 I've... Had... Enough...
@@ -243,26 +245,26 @@ Don't you dare raise your voice at me! You are not to communicate with me verbal
 Hograt?! What are you doing?! Put me back up this instant! #speaker:Himber #mood:angry
 
 (With one hand, Hograt grasps Himber like a baseball, winds up...) #speaker:Graciana
-<i><b>CRASH!</i></b> #speaker: 
+<i><b>CRASH!</i></b> #speaker:window
 (...And flings him out the window!) #speaker:Graciana
 //having a sound here would be neat
 //adding more sound effects in general would be something i should look into in these last few days, would help the game feel less empty & give scenes more impact
 ...I accept my consequences... #speaker:Hograt
 
 Hograt... #speaker:Graciana
-(Without another word, Hograt slowly shambles out of the Diner, walking through the portal.) #scg:blank
+(Without another word, Hograt slowly shambles out of the Diner, walking through the portal.) #ecg:blank #ss:Himber:blank
 //also hide himber here whoops
 
 ... #speaker:Graciana #mood:fear
 ... #speaker:Graciana #mood:neutral
-Oh, Himber's hat... #speaker:Graciana #mood:neutral
+Oh, Himber's hat... #speaker:Graciana #mood:neutral #pu:gh
 //show hat popup here
 ...
 I'm not sure what to make of this...
 ...
 I should probably tell O'Ryan about the broken window...
 
-~GoToDiner()
+~GoToAppartment()
     ->DONE
 ==GnomiesChaosEnd==
 But that is irrelevant. #speaker:Himber #mood:neutral
@@ -278,7 +280,7 @@ But of course! If we can ascend to a greater power here in this establishment, w
 
 Should I take cover or something? #speaker:Graciana #mood:fear
 
-No time! #speaker:Himber #mood:happy #scg:BlackCG
+No time! #speaker:Himber #mood:happy #scg:black
 
 Hograt, are you ready? #speaker:Himber
 
@@ -355,7 +357,7 @@ U-uh, t-thank you...? #speaker:Graciana #mood:neutral
 
 Please, refer to us as "Gnomies." #speaker:Gnomies
 This is the name you gave us earlier. We have grown a fondness for it, as we now comprehend your intellectual prowess.
-Thank you, Graciana. Please, take this as a momento of this occasion.
+Thank you, Graciana. Please, take this as a momento of this occasion. #pu:gmb
 //call that magic bag here✨
 
 This was Himber's bag of magical components. We do not require it anymore, since we have ascended past the need to fuel our arcane abilities. #speaker:Gnomies
@@ -372,5 +374,5 @@ Thank you, Graciana. We will be leaving now.
 ...
 Man, what the hell did I just witness? #speaker:Graciana #mood:think
 
-~GoToDiner()
+~GoToAppartment()
     ->DONE

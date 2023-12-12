@@ -1247,7 +1247,7 @@ namespace InterDineMension.Manager
                                 charSpeakTo = speakingTo.CeeCee;
                                 charSpeak = speaker.CeeCee;
                             }
-                            else if (tagValue == "Himber"||tagValue=="Hograt")
+                            else if (tagValue == "Himber"||tagValue=="Hograt"||tagValue=="Gnomies")
                             {
                                 G.sR.color = Color.HSVToRGB(0, 0, 1);
                                 grac.sR.color = Color.HSVToRGB(0, 0, .4f);
@@ -1275,7 +1275,7 @@ namespace InterDineMension.Manager
                                 charSpeakTo = speakingTo.Nico;
                                 charSpeak = speaker.Nico;
                             }
-                            else if (tagValue == "???")
+                            else if (tagValue == "???"||tagValue=="window"||tagValue=="blobster")
                             {
                                 //cS.sR.color = Color.HSVToRGB(0, 0, 40);
                                 grac.sR.color = Color.HSVToRGB(0, 0, .4f);
@@ -1595,6 +1595,23 @@ namespace InterDineMension.Manager
 
         public void EnterDinerMode(int day)
         {
+            bool nicoGone = false, fredGone = false, ceceGone = false, gnomiesGone = false;
+            if (PlayerPrefs.GetInt("convo_numberN") >= 4 && PlayerPrefs.GetInt("affectionN") < 0) //if NiCo has reached the bad ending
+            {
+                nicoGone = true;
+            }
+            if (PlayerPrefs.GetInt("convo_numberF") >= 4 && PlayerPrefs.GetInt("affectionF") < 0) //if Fred has reached the bad ending
+            {
+                fredGone = true;
+            }
+            if (PlayerPrefs.GetInt("convo_numberCC") >= 4 && PlayerPrefs.GetInt("affectionCC") < 0) //if CeCe has reached the bad ending
+            {
+                ceceGone = true;
+            }
+            if (PlayerPrefs.GetInt("convo_numberG") >= 4 && (PlayerPrefs.GetInt("affectionG") < 0||PlayerPrefs.GetInt("chaosG")>=14)) //if Gnomies have reached the bad ending or chaos ending
+            {
+                gnomiesGone = true;
+            }
             cSBtn.gameObject.SetActive(false);
             oRBtn.gameObject.SetActive(false); 
             cCBtn.SetActive(false);
@@ -1619,56 +1636,56 @@ namespace InterDineMension.Manager
                 case "Mon":                   
                     cSBtn.gameObject.SetActive(true);
                     oRBtn.gameObject.SetActive(false);
-                    cCBtn.SetActive(false);
-                    gBtn.SetActive(true);
-                    fBtn.SetActive(false);
+                    if (!ceceGone) { cCBtn.SetActive(true); }
+                    if (!gnomiesGone) { gBtn.SetActive(false); }
+                    if (!fredGone) { fBtn.SetActive(false); }
                     mBtn.SetActive(false);
-                    nBtn.SetActive(true);
+                    if(!nicoGone) { nBtn.SetActive(true); }
                     break;
                 case "Tue":
                     cSBtn.gameObject.SetActive(true);
                     oRBtn.gameObject.SetActive(false);
-                    cCBtn.SetActive(true);
-                    gBtn.SetActive(true);
-                    fBtn.SetActive(false);
+                    if (!ceceGone) { cCBtn.SetActive(false); }
+                    if (!gnomiesGone) { gBtn.SetActive(true); }
+                    if (!fredGone) { fBtn.SetActive(true); }
                     mBtn.SetActive(false);
-                    nBtn.SetActive(false);
+                    if (!nicoGone) { nBtn.SetActive(false); }
                     break;
                 case "Wed":
                     cSBtn.gameObject.SetActive(true);
                     oRBtn.gameObject.SetActive(false);
-                    cCBtn.SetActive(false);
-                    gBtn.SetActive(false);
-                    fBtn.SetActive(true);
+                    if (!ceceGone) { cCBtn.SetActive(false); }
+                    if (!gnomiesGone) { gBtn.SetActive(false); }
+                    if (!fredGone) { fBtn.SetActive(false); }
                     mBtn.SetActive(true);
-                    nBtn.SetActive(false);
+                    if (!nicoGone) { nBtn.SetActive(false); }
                     break;
                 case "Thu":
                     cSBtn.gameObject.SetActive(true);
                     oRBtn.gameObject.SetActive(false);
-                    cCBtn.SetActive(false);
-                    gBtn.SetActive(true);
-                    fBtn.SetActive(false);
-                    mBtn.SetActive(true);
-                    nBtn.SetActive(false);
+                    if (!ceceGone) { cCBtn.SetActive(true); }
+                    if (!gnomiesGone) { gBtn.SetActive(true); }
+                    if (!fredGone) { fBtn.SetActive(false); }
+                    mBtn.SetActive(false);
+                    if (!nicoGone) { nBtn.SetActive(false); }
                     break;
                 case "Fri":
                     cSBtn.gameObject.SetActive(false);
                     oRBtn.gameObject.SetActive(false);
-                    cCBtn.SetActive(true);
-                    gBtn.SetActive(false);
-                    fBtn.SetActive(true);
-                    mBtn.SetActive(false);
-                    nBtn.SetActive(false);
-                break;
+                    if (!ceceGone) { cCBtn.SetActive(false); }
+                    if (!gnomiesGone) { gBtn.SetActive(false); }
+                    if (!fredGone) { fBtn.SetActive(true); }
+                    mBtn.SetActive(true);
+                    if (!nicoGone) { nBtn.SetActive(false); }
+                    break;
                 case "Sat":
                     cSBtn.gameObject.SetActive(false);
                     oRBtn.gameObject.SetActive(false);
-                    cCBtn.SetActive(true);
-                    gBtn.SetActive(false);
-                    fBtn.SetActive(false);
-                    mBtn.SetActive(false);
-                    nBtn.SetActive(true);
+                    if (!ceceGone) { cCBtn.SetActive(true); }
+                    if (!gnomiesGone) { gBtn.SetActive(false); }
+                    if (!fredGone) { fBtn.SetActive(false); }
+                    mBtn.SetActive(true);
+                    if (!nicoGone) { nBtn.SetActive(true); }
                     break;
                 case "Fin":
                     {
