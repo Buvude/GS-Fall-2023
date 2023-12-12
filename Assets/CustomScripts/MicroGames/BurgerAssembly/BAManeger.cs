@@ -133,7 +133,10 @@ namespace InterDineMension.MicroGame.BA
             finalScore = 0;
             finishedBurger.gameObject.SetActive(false);
             final.enabled = false;
-            startBtn.gameObject.SetActive(true);
+            /* startBtn.gameObject.SetActive(true);*/
+            pC.instructions.gameObject.SetActive(true);
+            pC.playerMovment.value = 50;
+            pC.playermovmentStarted = false;
             switch (level)
             {
                 case 1:
