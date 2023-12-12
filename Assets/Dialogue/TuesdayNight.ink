@@ -1,6 +1,9 @@
 INCLUDE globals.ink
-An interesting day, to say the least... #speaker:Graciana #mood:neutral #bgm:dinNight
-(I hear the familiar portal sound, and look over to see O'Ryan entering.)
+
+
+
+.An interesting day, to say the least... #speaker:Graciana #mood:neutral #bgm:dinNight #ss:spotlight:O'Ryan
+(I hear the familiar portal sound, and look over to see O'Ryan entering.)#ss:O'Ryan:neutral
 
 O-oh, O'Ryan, hey! #speaker:Graciana
 

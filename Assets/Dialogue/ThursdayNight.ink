@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-Yet another day... #speaker:Graciana
+.Yet another day... #speaker:Graciana
 Let's see... Hm, no, I've gotten everything done already, I guess. #speaker:Graciana #mood:happy #bgm:dinNight
 
 (Right on cue, O'Ryan enters the Diner.)

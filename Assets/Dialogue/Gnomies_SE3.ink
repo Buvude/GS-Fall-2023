@@ -33,7 +33,7 @@ What do you think of me? #speaker:Himber #mood:neutral
 * [You're a jerk.]
     ->good1
 ==good1==
-~affectionG=affectionG+8
+~affectionG=affectionG+4
 Honestly...? #speaker:Graciana #mood:think #sfx:GainedPoint
 You're kind of a jerk. #speaker:Graciana #mood:angry
 Not just to me, but to Hograt, too.
@@ -49,7 +49,7 @@ You mentioned that this is how things are in your culture, but is everyone this 
 A lot of it is pressure from the Planar Society... But I understand your meaning, human.
     ->PreEnd
 ==bad1==
-~affectionG=affectionG-8
+~affectionG=affectionG-4
 I mean, you're okay, I guess... #speaker:Graciana #mood:sad #sfx:LostPoint
 
 ...Okay? #speaker:Himber
@@ -112,6 +112,15 @@ Not very good? #speaker:Graciana #mood:think
 What do they do, kick you out or something?
 
 No, even worse... #speaker:Himber #mood:sad
+//deivert to ending calculation
+{
+-chaosG>=chaosTotalG:
+    ->GnomiesChaosEnd
+-affectionG>=0:
+    ->GnomiesGoodEnd
+-else:
+    ->GnomiesBadEnd
+}
 
 ==GnomiesGoodEnd==
 But, that is irrelevant. #speaker:Himber #mood:neutral
@@ -287,7 +296,7 @@ Hograt, are you ready? #speaker:Himber
 (In a split second, a blinding light fills the Diner. The two of them morph into each other seamlessly, as if made of light.)
 (The light dies down, and suddenly I am faced with...)
 
-... #speaker:Gnomies #mood:neutral #scg:blank
+... #speaker:Gnomies #mood:neutral #ecg:blank
 //i forget, does "blank" clear the cg? i hope so 🧍
 //also oh my god i can put emojis in my ink comments??? wish i knew that earlier, i would've gone crazy🙇
 //watch this end up bricking the entire game lmao 😪

@@ -459,7 +459,7 @@ namespace InterDineMension.Manager
             {
                 return;
             }
-            if(canContinueToNextLine&& currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)||Input.GetKey(KeyCode.LeftControl)))
+            if(canContinueToNextLine&& currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)||Input.GetKey(KeyCode.RightControl)))
             {
                 if(autoMode)
                 {
@@ -468,7 +468,7 @@ namespace InterDineMension.Manager
                 }
                 ContinueStory();
             }
-            if (Input.GetMouseButtonDown(2))
+            if (Input.GetMouseButtonDown(2)||Input.GetKeyDown(KeyCode.Tab))
             {
                 if(historyShowing)
                 {
@@ -915,7 +915,7 @@ namespace InterDineMension.Manager
                 }
                 if (historyLog.Count > 0)
                 {
-                    historyText.text += $"{charSpeak.ToString()}: {historyLog[historyLog.Count - 1]}\n";
+                    historyText.text += $"{charSpeak.ToString()}: {historyLog[historyLog.Count-1]}";
                 }
                 
                 displayLineCorutine = StartCoroutine(DisplayLine(currentStory.Continue()));
@@ -951,12 +951,27 @@ namespace InterDineMension.Manager
             canContinueToNextLine = false;
 
             bool isAddingRichTextTag = false;
-            historyLog.Add(line);
+            if (line != "")
+            {
+                
+                if(historyLog.Count > 0)
+                {
+                    if(line != historyLog[historyLog.Count - 1])
+                    {
+                        historyLog.Add(line);
+                    }
+                }
+                else
+                {
+                    historyLog.Add(line);
+                }
+            }
+            
             //display each letter one at a time. 
             foreach(char letter in line.ToCharArray())
             {
                 //if the submit button is pressed, finish up displaying the line right away
-                if (Input.GetKey(KeyCode.LeftControl))
+                if (Input.GetKey(KeyCode.RightControl))
                 {
                     dialogueText.text = line;
                     break;
@@ -1029,7 +1044,7 @@ namespace InterDineMension.Manager
                         }
                         else if (tagKeyT == "O'Ryan")
                         {
-                            grac.sR.sprite = grac.GrspriteDictionary[tagValueT];
+                            oR.sR.sprite = oR.ORspriteDictionary[tagValueT];
                             return;
                         }
                         else if (tagKeyT == "CeCe")
@@ -1465,7 +1480,16 @@ namespace InterDineMension.Manager
                         }
                     case ECG:
                         {
-                            StartCoroutine(CGFadeOut(bGLibray[tagValue]));
+                            
+                            if (cGLibray.ContainsKey(tagValue))
+                            {
+                                StartCoroutine(CGFadeOut(bGLibray[tagValue]));
+                            }
+                            else
+                            {
+                                StartCoroutine(CGFadeOut(null));
+                            }
+                            
                             break;
                         }
                     case PU:
@@ -1489,9 +1513,9 @@ namespace InterDineMension.Manager
         {
             CGFade.gameObject.SetActive(true);
             CGFade.sprite= temp;
-            for (float a = 0; a <= 1.1; a+=.001f)
+            for (float a = 0; a <= 1.1; a+=.01f)
             {
-                yield return new WaitForSeconds(.001f);
+                yield return new WaitForSeconds(.01f);
                 CGFade.color = new UnityEngine.Color(1, 1, 1, a);
             }
             //CGFade.color = new UnityEngine.Color(0, 0, 0, 1);
@@ -1504,9 +1528,9 @@ namespace InterDineMension.Manager
                 backgroundImage.sprite = temp;
             }
             
-            for (float a = 1; a >= -0.1; a -= .001f)
+            for (float a = 1; a >= -0.1; a -= .01f)
             {
-                yield return new WaitForSeconds(.001f);
+                yield return new WaitForSeconds(.01f);
                 CGFade.color = new UnityEngine.Color(1, 1, 1, a);
             }
             CGFade.gameObject.SetActive(false);
@@ -1550,6 +1574,7 @@ namespace InterDineMension.Manager
             {
                 item.SetActive(false);
             }
+            historyLog.RemoveAt(historyLog.Count - 1);
             /*cS.sR.sprite = cS.CsspriteDictionary["blank"];
             cC.sR.sprite = cC.CcspriteDictionary["blank"];
             G.sR.sprite = G.GspriteDictionary["blank"];
