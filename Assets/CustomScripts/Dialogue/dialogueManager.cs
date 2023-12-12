@@ -65,6 +65,9 @@ namespace InterDineMension.Manager
         public Dictionary<string, Sprite> cGLibray = new Dictionary<string, Sprite>();
         public Image CGFade;
         
+        public List<string> popUpKey = new List<string>();
+        public List<Sprite> popUpSprites = new List<Sprite>();
+        public Dictionary<string, Sprite> popUpLibrary = new Dictionary<string, Sprite>();
 
         //public GameObject charImageCS, charImageOR;
         //private bool deactivatedcorutines = false;
@@ -143,6 +146,8 @@ namespace InterDineMension.Manager
         private const string SCG = "scg";
         private const string ECG = "ecg";
         private const string SS = "ss";
+        private const string PU = "pu";
+        private const string PD = "pd";
         //private const string VAR_CHANGE = "varChange"; not sure what this was supposed to me lmao
 
         public InkExternalFunctions iEF;
@@ -180,6 +185,18 @@ namespace InterDineMension.Manager
                 for (int i = 0; i < bGTittles.Count; i++)
                 {
                     bGLibray.Add(bGTittles[i], bGSprites[i]);
+                }
+            }
+            else
+            {
+                Debug.LogError("bGTittles and bGSprites are not at an equal count");
+            }
+
+            if (popUpKey.Count == popUpSprites.Count)
+            {
+                for (int i = 0; i < popUpKey.Count; i++)
+                {
+                    popUpLibrary.Add(popUpKey[i], popUpSprites[i]);
                 }
             }
             else
@@ -1451,7 +1468,17 @@ namespace InterDineMension.Manager
                             StartCoroutine(CGFadeOut(bGLibray[tagValue]));
                             break;
                         }
-
+                    case PU:
+                        {
+                            manager.imagePopUpParent.gameObject.SetActive(true);
+                            manager.imagePopUp.sprite = popUpLibrary[tagValue];
+                            break;
+                        }
+                    case PD:
+                        {
+                            manager.imagePopUpParent.gameObject.SetActive(false);
+                            break;
+                        }
                     default:
                         Debug.LogWarning("Tag came in but is not currently being handled: " + tag);
                         break;
