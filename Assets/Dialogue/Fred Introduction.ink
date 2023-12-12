@@ -96,7 +96,7 @@ Right again Fred, you can absolutely do that! #speaker:Graciana #mood:happy
 
  Alright, bye-bye now Fred, travel safe! #speaker:Graciana #mood:neutral
 (He waves at me as he exits the Diner.)
-...What a kid...
+...What a kid... #ss:Fred:blank
 
 ~StartO_Ryan()
     -> DONE

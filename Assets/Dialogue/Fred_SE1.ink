@@ -5,6 +5,7 @@ INCLUDE globals.ink
 -> Start
 * [(Leave him be)]
 (Maybe I shouldn't disturb him...) #speaker:Graciana #mood:neutral
+~GoToDiner()
 ->DONE
 ==Start==
 
@@ -200,7 +201,7 @@ Thanks Graciana, I feel better now!  #speaker:Fred #mood:pump
   
   
   
-  ==Next==
+==Next==
   
 But I do want to circle back real quick... #speaker:Graciana #mood:neutral
 Fred, did you say you were made from a star? #speaker:Graciana #mood:think
@@ -252,7 +253,7 @@ Do you think life is better now working for UMS? #speaker:Graciana #mood:think
 
 Well its been fun making friends on my deliveries for a while, but its gotten better now that I've met more people, like you and Frank! #speaker:Fred #mood:happy
 
-Aww that's nice Fred, when did you and Fred first meet? #speaker:Graciana #mood:happy
+Aww that's nice Fred, when did you and Frank first meet? #speaker:Graciana #mood:happy
 
 Well he had been working at UMS before I got there, but he was in a different department, so I never saw him. #speaker:Fred #mood:neutral
 I think he got moved to my route 300ish years ago? 
