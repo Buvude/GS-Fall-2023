@@ -408,7 +408,7 @@ Hmmm, let me think... #speaker:Graciana #mood:think
 ->BadEnding
 ==GoodFinal==
 
-After you are done with everything you want, I'll always be here for bits of amazing life changing advice, and Frank will be there to take care of you! #speaker:Graciana #mood:happy
+After you're done with everything you want, I'll always be here for bits of amazing life changing advice, and Frank will be there to take care of you! #speaker:Graciana #mood:happy
 
 Don't worry about your entire future now! Enjoy the present and do whatever you think is best, even if you choose wrong, you will have thousands of chances to choose right in your life, little star. #speaker:Graciana #mood:neutral
 
@@ -424,7 +424,7 @@ Nope! #speaker:Fred #mood:pump
  
 No matter where you are or what you desire, we are just a wormhole away! #speaker:Graciana #mood:happy
  
- Oh... #speaker:Fred #mood:happy
+Oh... #speaker:Fred #mood:happy
 
 Thanks Graciana! I think I had a lot of fun talking to you! #speaker:Fred #mood:pump
 Wait no, with you! #speaker:Fred #mood:happy
