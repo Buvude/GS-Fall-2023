@@ -1,4 +1,5 @@
-//INCLUDE globals.ink
+INCLUDE globals.ink
+INCLUDE BADialogue.ink
 //2 chaos options
 (Morgan is back...) #speaker:Graciana #mood:neutral
 
@@ -9,7 +10,7 @@
 ~GoToDiner()
     -> DONE
 ==Start==
-~convo_numberM=1
+~convo_numberM=2
 
 Oh well hello again Morgan nice to see you again so soon #speaker:Graciana #mood:neutral
 
@@ -237,4 +238,9 @@ I haven't found myself to do really anything much that kind of stand in awe when
 Alright then, See you soon Morgan #speaker:Graciana #mood:neutral
 
 Pleasure talking to you as always! #speaker:Graciana #mood:neutral
-    -> END
+~BAMLevel=1
+~timeOfDay="afternoon"
+~currentConvo="MMG2"
+~QuickSave()
+->MainBAD
+

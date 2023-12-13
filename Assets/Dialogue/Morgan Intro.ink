@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-
+EXTERNAL StartTTMicro()
 (Something about this shadowy woman fills me with an undescribable dread, for some reason...) #speaker:Graciana #mood:think
 
 * [(Approach her)]
@@ -10,6 +10,7 @@ INCLUDE globals.ink
 ~GoToDiner()
     -> DONE
 ==BeginMorganIntro==
+~convo_numberM=1
 Hello there Miss, welcome to O'Ryan's Diner! What can I get you today? #speaker:Graciana #mood:neutral
 
 A coffin perhaps, to rest the remnants of a dying soul... #speaker:Morgan #mood:sad
@@ -85,7 +86,11 @@ You are mortal, a spec of dust home to the infinite void, one whose lifetime wil
  That is..... Acceptable..... #speaker:Morgan #mood:neutral
  (You return and all other parts of the diner are pitch black, only a small note written in black ink reads see you soon)#speaker:Graciana #mood:neutral
  
- ~GoToDiner()
- 
+
+ ~TTMLevel=1
+~timeOfDay="afternoon"
+~currentConvo="MMG1"
+~QuickSave()
+~StartTTMicro()
  ->DONE
 

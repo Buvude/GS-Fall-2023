@@ -47,6 +47,15 @@ perhaps, but I believe it was more on the lines of he was leading me on to somet
 What exactly did he say? #speaker:Graciana #mood:happy
 Well, we conversed in the ancient tongue of the gods so I don't know the exact translation to your language, but it would probably be somewhere around the lines of "You may have me if you wish" #speaker:Morgan #mood:happy
 Oh my...  #speaker:Graciana #mood:happy
+
+{
+-chaosM>=chaosTotalM:
+    ->MorganChaosEnding
+-affectionM>=0:
+    ->MorganGoodEnding
+-else:
+    ->MorganBadEnding
+}
 //Divert Endings here pretty please with a cherry on top
 ==MorganGoodEnding==
 I think that means he is offering himself as an friend/ally #speaker:Graciana
