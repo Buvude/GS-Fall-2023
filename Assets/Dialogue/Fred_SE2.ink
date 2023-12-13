@@ -1,8 +1,9 @@
 INCLUDE globals.ink
+EXTERNAL StartTTMicro()
 ->Start 
 
 ==Start==
-
+~convo_numberF=3
 Fred! Good to see you stop by again my friend, what can I get ya today? #speaker:Graciana #mood:happy
 
 Hi Graciana! Orange swirl please #speaker:Fred #mood:happy
@@ -349,5 +350,9 @@ Bye, my favorite little star! #speaker:Graciana #mood:happy
 (Fred waves at me, as he exits the Diner.) #speaker:Graciana #mood:neutral #ss:Fred:blank
 Alright... Time to see what else there is to do around here... #speaker:Graciana #mood:think
 
-~GoToDiner()
-    -> END
+~TTMLevel=3
+~timeOfDay="afternoon"
+~currentConvo="GMG3"
+~QuickSave()
+~StartTTMicro()
+    -> DONE

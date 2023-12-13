@@ -48,6 +48,7 @@ namespace InterDineMension
 
         public void PPSave()
         {
+            Debug.Log("ppsave");
             PlayerPrefs.SetInt("dayVarT", PlayerPrefs.GetInt("dayVar"));
             PlayerPrefs.SetString("weekDayT", PlayerPrefs.GetString("weekDay"));
             PlayerPrefs.SetInt("aptUpgradeT", PlayerPrefs.GetInt("aptUpgrade"));
@@ -341,7 +342,7 @@ namespace InterDineMension
             globalVariablesStory.variablesState["chaosCC"] = PlayerPrefs.GetInt("chaosCCT");
 
             globalVariablesStory.variablesState["convo_numberM"] = PlayerPrefs.GetInt("convo_numberMT");
-            globalVariablesStory.variablesState["affectionM"] = PlayerPrefs.GetInt("affectionMT ");
+            globalVariablesStory.variablesState["affectionM"] = PlayerPrefs.GetInt("affectionMT");
             globalVariablesStory.variablesState["chaosM"] = PlayerPrefs.GetInt("chaosMT");
 
             globalVariablesStory.variablesState["convo_numberG"] = PlayerPrefs.GetInt("convo_numberGT");

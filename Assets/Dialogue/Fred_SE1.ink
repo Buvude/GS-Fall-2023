@@ -1,4 +1,5 @@
 INCLUDE globals.ink
+INCLUDE BADialogue.ink
 
 (Fred is playfully staring out the window...) #speaker:Graciana #mood:neutral #ss:Fred:neutral
 * [Hey Fred!]
@@ -8,7 +9,7 @@ INCLUDE globals.ink
 ~GoToDiner()
 ->DONE
 ==Start==
-
+~convo_numberF=2
 FRED! There's my favorite little ball of light, how are you doing buddy! #Graciana #mood:happy
 
 Hi Graciana! I have today off so I wanted to stop by and say hi! #speaker:Fred #mood:happy
@@ -334,6 +335,8 @@ I will! Bye Graciana! See you soon! #speaker:Fred #mood:happy
 (He waves as he exits through the portal.) #speaker:Graciana #mood:neutral
 Okay... Didn't think I'd be basically babysitting, but... I think I got this... #speaker:Graciana #mood:think
 
-~StartO_Ryan()
-
-    -> END
+~BAMLevel=1
+~timeOfDay="afternoon"
+~currentConvo="FMG2"
+~QuickSave()
+->MainBAD
