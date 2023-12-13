@@ -353,116 +353,97 @@ Oh? and who's that? #speaker:Graciana #mood:think
 ->ChaosFinal
  
 ==FredBadEnd==
-**[Fred even if he says no its better knowing]
 
- Just remember even if he ends up being a dead end for adoption its still better to ask now versus later so you can find someone to help you sooner than later #speaker:Graciana #mood:neutral
- 
- And that way you aren't stuck working at Ums for another hundred years getting paid nothing for wearing a suit that does nothing #speaker:Graciana #mood:neutral
+Fred... #speaker:Graciana #mood:sad
+Even if he says no, it's better knowing.
+Just remember, even if he ends up being a dead end for adoption, it's still better to ask now versus later, so you can find someone to help you sooner than later. #speaker:Graciana #mood:neutral
+And that way you aren't stuck working at UMS for another hundred years, getting paid nothing for wearing a suit that does nothing. #speaker:Graciana #mood:angry
 
- I mean yeah but I don't know #speaker:Fred #mood:Happy
+I mean yeah, but I don't know... #speaker:Fred #mood:sad
 
- Everything you have been saying has kind of been making sense #speaker:Fred #mood:Happy
+Everything you've been saying has kinda been making sense... #speaker:Fred #mood:neutral
+Kinda...
 
- kinda of #speaker:Fred #mood:Happy
+Oh? And that was? #speaker:Graciana #mood:think
 
- oh? and that was? #speaker:Graciana #mood:neutral
+The work thing, UMS is sadly my life right now... #speaker:Fred #mood:sad
+And I'm not sure I want that. #speaker:Fred #mood:sad
+Frank is great... #speaker:Fred #mood:neutral
+But I don't know if he's worth spending all my time working at UMS. #speaker:Fred #mood:sad
+Does that make sense? #speaker:Fred #mood:neutral
 
- The work thing, Ums is sadly my life right now #speaker:Fred #mood:Happy
- 
- And Im not sure I want that #speaker:Fred #mood:Happy
+Of course! #speaker:Graciana #mood:neutral
 
- Frank is great #speaker:Fred #mood:Happy
+And remember what I said a few days ago, you have other options for people that care for you, and it's better to leave UMS and that whole suit business behind anyways! #speaker:Graciana #mood:happy
+Nothing good will come from working for a corporation that doesn't value you as a person. #speaker:Graciana #mood:angry
+But speaking of caring for you, did find out more about the two mysterious people you mentioned before? #speaker:Graciana #mood:think
 
- But I don't know if he is worth spending all my time working at Ums great #speaker:Fred #mood:Happy
- 
- Does that make sense? #speaker:Fred #mood:Happy
+Yeah... #speaker:Fred #mood:neutral
+I don't know if they like me enough to adopt me. #speaker:Fred #mood:sad
+But I know I don't want to work at UMS for much longer! #speaker:Fred #mood:angry
+The more you talk about them using me, the more I notice things they say at work are bad!
 
- Of course! #speaker:Graciana #mood:neutral
+And you're right, this suit isn't my world. #speaker:Fred #mood:angry
+I can live without it!
+Even if it <i>is</i> fun to wear, I can get another one, right?!
 
- And remember what I said a few days ago, you have other opitions for people that care for you, and its better to leave Ums and that whole suit business behind anyways #speaker:Graciana #mood:neutral
+Of course! #speaker:Graciana #mood:happy
 
- Nothing good will come from working for a coperation that doesn't value you as a person #speaker:Graciana #mood:neutral
+What do you think it should be? #speaker:Fred #mood:neutral
 
- but speaking of caring for you did find out more about the two mysterious people you mentioned before? 
- Yeah #speaker:Fred #mood:Happy
+The new suit? #speaker:Graciana #mood:think
 
-I don't know if they like me enough to adopt me #speaker:Fred #mood:Happy
- 
-But I know I don't want to work at Ums for much longer #speaker:Fred #mood:Happy
+Yeah! #speaker:Fred #mood:happy
 
-The more you talk about them using me the more I notice things they say at work are bad #speaker:Fred #mood:Happy
-
- And your right this suit isn't my world #speaker:Fred #mood:Happy
-
- I can live without it #speaker:Fred #mood:Happy
-
- Even if it is fun to wear I can get another one right! #speaker:Fred #mood:Happy
-
- of course! #speaker:Graciana #mood:neutral
-
- What do you think it should be? #speaker:Fred #mood:Happy
-
- The new suit? #speaker:Graciana #mood:neutral
-
- Yeah! #speaker:Fred #mood:Happy
-
- hmmm let me think #speaker:Graciana #mood:neutral
- 
-
+Hmmm, let me think... #speaker:Graciana #mood:think
 
 ->BadEnding
 ==GoodFinal==
 
-After you are done with everything you want, there will always be me here for bits of amazing life changing advice, and Frank will be there to take care of you #speaker:Graciana #mood:neutral
+After you are done with everything you want, I'll always be here for bits of amazing life changing advice, and Frank will be there to take care of you! #speaker:Graciana #mood:happy
 
-Don't worry about your entire future now, enjoy the present and do whatever you think is best, even if you chose wrong you will have thousands of chances to chose right in your life little star #speaker:Graciana #mood:neutral
+Don't worry about your entire future now! Enjoy the present and do whatever you think is best, even if you choose wrong, you will have thousands of chances to choose right in your life, little star. #speaker:Graciana #mood:neutral
 
-that sounds like a lot #speaker:Fred #mood:Happy
+That sounds like a lot... #speaker:Fred #mood:neutral
 
 It is! #speaker:Graciana #mood:neutral
 
-And what happens if I don't have enough time to visit, or if Frank takes me somewher else? #speaker:Fred #mood:Happy
+And what happens if I don't have enough time to visit, or if Frank takes me somewhere else? #speaker:Fred #mood:sad
 
-Well Fred, here at the portal diner we have a saying do you know what that is? #speaker:Graciana #mood:neutral
+Well Fred, here at O'Ryan's Diner we have a saying, do you know what that is? #speaker:Graciana #mood:think
 
- nope #speaker:Fred #mood:Happy
+Nope! #speaker:Fred #mood:pump
  
- No matter where you are or what you desire, we are just a wormhole away #speaker:Graciana #mood:neutral
+No matter where you are or what you desire, we are just a wormhole away! #speaker:Graciana #mood:happy
  
- oh.................. ok! #speaker:Fred #mood:Happy
+ Oh... #speaker:Fred #mood:happy
 
- Thanks Graciana, I think I had a lot of fun talking to you #speaker:Fred #mood:Happy
+Thanks Graciana! I think I had a lot of fun talking to you! #speaker:Fred #mood:pump
+Wait no, with you! #speaker:Fred #mood:happy
 
- Wait no, with you! #speaker:Fred #mood:Happy
-
- *Shit Im tearing up here* #speaker:Graciana #mood:neutral
+(I'm  gonna start tearing up here...) #speaker:Graciana #mood:neutral
  
- Me too little star, make sure you visit every so often to keep me up to date on how your doing alright? #speaker:Graciana #mood:neutral
+Me too, little star. Make sure you visit every so often to keep me up to date on how you're doing, alright? #speaker:Graciana #mood:neutral
 
- Alright! #speaker:Fred #mood:Happy
- 
- Well I have to go tell Frank the good news and ask him a very important question! #speaker:Fred #mood:Happy
- 
- Bye! #speaker:Fred #mood:Happy
+Alright! #speaker:Fred #mood:happy
 
-(Fred gives you a quick hug before running off towards a portal and diving head first into the swirling vortex that leads to Ums headquarters)#speaker:Fred #mood:Happy
+Well I have to go tell Frank the good news, and ask him a very important question! #speaker:Fred #mood:happy
 
- Shit I'm going to miss that kid #speaker:Graciana #mood:neutral
+Bye! #speaker:Fred #mood:pump
 
- (Stares off into the distance as a Ums ship soars past the diner in the distance) #speaker:Graciana #mood:neutral
+(Fred gives me a quick hug before running off towards the portal, and diving head first into the swirling vortex that leads to UMS headquarters) #speaker:Graciana #mood:neutral
 
- I'm really going to miss that little star #speaker:Graciana #mood:neutral
+Shit I'm going to miss that kid #speaker:Graciana #mood:neutral
 
+(Stares off into the distance as a Ums ship soars past the diner in the distance) #speaker:Graciana #mood:neutral
+
+I'm really going to miss that little star #speaker:Graciana #mood:neutral
 (a few months go by before a tall lanky figure in a Ums uniform comes in asking for you by name)
-
 (his presence is somewhat mysterious and you feel certain there is something strange about him)
 
 (But he carries a gentle smile and a relaxed tone as he thanks you for helping Fred and he steps to the side to reveal Fred holding a sign that says Part time Certified UMS Employee, Student, and full time Fred.)
 
 Hi Graciana! Did you miss me! #speaker:Fred #mood:Happy
-
-Achivement Unlocked: Rising Star
-
 
 ->END
 
