@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-Phew, what a day. Almost finished cleaning up... #speaker:Graciana #mood:neutral
+.Phew, what a day. Almost finished cleaning up... #speaker:Graciana #mood:neutral
 
 (Suddenly, O'Ryan enters through the portal, and walks over.)
 

@@ -38,7 +38,7 @@ He is a lower lifeform, such as yourself!
     ->chaos1
 
 ==good1==
-~affectionG=affectionG+4
+~affectionG=affectionG+3
 You know, you shouldn't talk to Hograt like that! #speaker:Graciana #mood:angry #sfx:GainedPoint
 He carries you around on his head non-stop, and all you do is yell at him!
 Does he even want to be there? Are you like, holding him captive or something?!
@@ -49,14 +49,14 @@ Human, do not accuse me so lightly of things you know nothing of. #speaker:Himbe
 Then tell me, what's the deal with you? Hograt too! #speaker:Graciana #mood:angry
     ->gnomestuck
 ==bad1==
-~affectionG=affectionG-4
+~affectionG=affectionG-3
 M-my bad, I just... #speaker:Graciana #sfx:LostPoint
 
 You cannot comprehend the intricacies of this bond, human! #speaker:Himber #mood:angry
 As a Gnomestack, this is simply the way things are! This is how we are meant to be!
     ->gnomestuck
 ==chaos1==
-~chaosG=chaosG+4
+~chaosG=chaosG+2
 Hey, don't talk to me like that! #speaker:Graciana #mood:angry #sfx:CosmicPoint
 I'm not your subordinate, I'm a person, just like you!
 
@@ -81,7 +81,7 @@ I feel like it is fairly self explanatory, no?
 * [A stack of... Pancakes?]
     ->bad2
 ==good2==
-~affectionG=affectionG+4
+~affectionG=affectionG+3
 C'mon, I'm not that dumb. You're two gnomes stacked on top of eachother, obviously that's what a Gnomestack is. #speaker:Graciana #mood:happy #sfx:GainedPoint
 
 I see your human brain is rather sharp! At least, compared to a topgnome such as myself! #speaker:Himber #mood:happy
@@ -100,7 +100,7 @@ We can ascend further beyond our own strengths! #speaker:Himber #mood:happy
 * [What about Hograt?]
     ->good3
 ==bad2==
-~affectionG=affectionG-4
+~affectionG=affectionG-3
 Like... #speaker:Graciana #mood:neutral #sfx:LostPoint
 A stack of pancakes? #speaker:Graciana #mood:think
 
@@ -123,7 +123,7 @@ We ascend further beyond our own strengths! #speaker:Himber #mood:happy
 * [What about Hograt?]
     ->good3
 ==chaos2==
-~chaosG=chaosG+4
+~chaosG=chaosG+2
 A stack of raw power. #speaker:Graciana #mood:happy #sfx:CosmicPoint
 
 Haha! #speaker:Himber #mood:happy
@@ -138,7 +138,7 @@ But, more literally, we combine our capabilities and become one entity--a Gnomes
 * [What about Hograt?]
     ->good3
 ==good3==
-~affectionG=affectionG+4
+~affectionG=affectionG+3
 Okay, sure, that makes sense I guess... #mood:Graciana #mood:think #sfx:GainedPoint
 But what about Hograt?
 
@@ -159,7 +159,7 @@ Of course Hograt does! We've been at this for decades! If he did not want this, 
 (...But also bothered by something.) #speaker:Graciana #mood:sad
     -> ByeByeGnomies
 ==bad3==
-~affectionG=affectionG-4
+~affectionG=affectionG-3
 Somehow, I doubt that. #speaker:Graciana #mood:neutral #sfx:LostPoint
 
 What do you mean, human? What does your feeble, human mind doubt? #speaker:Himber #mood:neutral
@@ -178,7 +178,7 @@ Sure, whatever... #speaker:Graciana #mood:angry
 (...But also looks as if he's glaring me down, confused...)
     -> ByeByeGnomies
 ==chaos3==
-~chaosG=chaosG+4
+~chaosG=chaosG+2
 But... #speaker:Graciana #mood:think #sfx:CosmicPoint
 You look the same. #speaker:Graciana #mood:neutral
 

@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-<i>*huff... huff...*</i> #speaker:Graciana #mood:sad #bgm:dinNight
+.<i>*huff... huff...*</i> #speaker:Graciana #mood:sad #bgm:dinNight
 Jeez... I need a second... to sit...
 Phew... Real busy today...
 
