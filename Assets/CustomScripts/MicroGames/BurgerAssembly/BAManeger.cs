@@ -558,6 +558,18 @@ namespace InterDineMension.MicroGame.BA
                     PlayerPrefs.SetString("winStatus", "Win");
                     SceneManager.LoadScene(5);
                 }
+                else if (PlayerPrefs.GetString("currentConvo") == "FMG1")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "won");
+                    dM.EnterDialogueMode(dM.F.FdialogueDictionary["postMini"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "FMG2")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "won");
+                    dM.EnterDialogueMode(dM.F.FdialogueDictionary["postMini"]);
+                }
                 else if (PlayerPrefs.GetString("currentConvo") == "finale")
                 {
                     ResetMiniGame();
@@ -609,6 +621,18 @@ namespace InterDineMension.MicroGame.BA
                     ResetMiniGame();
                     PlayerPrefs.SetString("winStatus", "loss");
                     dM.EnterDialogueMode(dM.G.GdialogueDictionary["postMini"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "FMG1")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "loss");
+                    dM.EnterDialogueMode(dM.F.FdialogueDictionary["postMini"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "FMG2")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "loss");
+                    dM.EnterDialogueMode(dM.F.FdialogueDictionary["postMini"]);
                 }
                 else if (PlayerPrefs.GetString("currentConvo") == "practiceB")
                 {

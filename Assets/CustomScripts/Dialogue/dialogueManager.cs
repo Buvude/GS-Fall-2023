@@ -412,6 +412,11 @@ namespace InterDineMension.Manager
                     G.gameObject.SetActive(true);
                     EnterDialogueMode(G.GdialogueDictionary["postMini"]);
                     break;
+                case "FMG3":
+                    charSpeakTo = speakingTo.CeeCee;
+                    F.gameObject.SetActive(true);
+                    EnterDialogueMode(F.FdialogueDictionary["postMini"]);
+                    break;
                 case "NMG1":
                     charSpeakTo = speakingTo.CeeCee;
                     N.gameObject.SetActive(true);

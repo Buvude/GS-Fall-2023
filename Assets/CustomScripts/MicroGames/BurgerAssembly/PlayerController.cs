@@ -45,7 +45,7 @@ namespace InterDineMension.MicroGame.BA
         }
         IEnumerator StartGame()
         {
-            if(BAManeger.level == 1)
+            if(BAManeger.level == 1&&PlayerPrefs.GetString("weekDay")=="Tut")
             {
                 yield return new WaitForSeconds(3);
             }

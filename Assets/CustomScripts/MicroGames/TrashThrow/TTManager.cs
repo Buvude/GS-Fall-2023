@@ -194,11 +194,17 @@ namespace InterDineMension.MicroGame.TT
                         break;
                     }
                 case "GMG3":
-                {
-                    PlayerPrefs.SetString("timeOfDay", "afternoon");
-                    SceneManager.LoadScene(1);
-                    break;
-                }
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+                case "FMG3":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
 
                 default:
                     break;

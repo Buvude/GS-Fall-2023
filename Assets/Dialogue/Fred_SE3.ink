@@ -1,3 +1,4 @@
+INCLUDE globals.ink
 
 (Fred is excitedly waving me down...) #speaker:Graciana #mood:neutral
 
@@ -9,7 +10,7 @@ Sorry Fred, I'll be back in a minute! #speaker:Graciana #mood:neutral
     -> DONE
 
 ==Start==
-
+~convo_numberF=4
 Fred! My favorite little star, how are you? #speaker:Graciana #mood:neutral
 How did it go with Frank! What did you do? Tell me everything! #speaker:Graciana #mood:happy
 
@@ -22,7 +23,7 @@ And as your friend, I am heavily invested in what happens to you!
 Aww... #speaker:Fred #mood:sad
 I was gonna make a joke but that's actualy just really nice! #speaker:Fred #mood:galaxy
 
-Let me get you a smoothie, and you prep your story! #speaker:Graciana #mood:neutral #scg:BlackCG
+Let me get you a smoothie, and you prep your story! #speaker:Graciana #mood:neutral #scg:black
 //blackout scene i dont remember what the tag is rn  it's like 1am i promise ill do it soon ;-;
 
 Alrighty, there you go! Now dish what happened! #speaker:Graciana #mood:happy #ecg:
@@ -48,7 +49,14 @@ I didn't want to ruin it... #speaker:Fred #mood:sad
 
 (Damn, I don't know whether to praise the observation, or critize him avoiding the conversation...) #speaker:Graciana #mood:think
 // Ending Divert goes here
-~convo_numberF(4)
+{
+-chaosF>=chaosTotalF:
+    ->FredChaosEnd
+-affectionF>=0:
+    ->FredGoodEnd
+-else:
+    ->FredBadEnd
+}
 
 ==FredGoodEnd==
 That's actually really thoughtful of you, Fred! #speaker:Graciana #mood:happy
@@ -165,7 +173,7 @@ It very much is Fred! You missed out on a lot of kid shenanigans--Might not be a
 Earth has some great Theme parks and carnivals you could go to! #speaker:Graciana #mood:happy
 
 What are those? #speaker:Fred #mood:neutral
-
+//...carnivals Fred asks what they are, and Graciana starts describing roller coasters
 Massive thruster propelled carts that shoot you around the sky, using only small metal railings to keep you in place on a winding track... #speaker:Graciana #mood:neutral
 
 Oh...
