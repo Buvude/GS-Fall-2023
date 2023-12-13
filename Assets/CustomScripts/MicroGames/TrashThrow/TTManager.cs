@@ -205,6 +205,14 @@ namespace InterDineMension.MicroGame.TT
                         SceneManager.LoadScene(1);
                         break;
                     }
+                case "MMG1":
+                    PlayerPrefs.SetString("timeOfDay", "afternoon");
+                    SceneManager.LoadScene(1);
+                    break;
+                case "MMG3":
+                    PlayerPrefs.SetString("timeOfDay", "afternoon");
+                    SceneManager.LoadScene(1);
+                    break;
 
                 default:
                     break;

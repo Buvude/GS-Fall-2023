@@ -570,6 +570,12 @@ namespace InterDineMension.MicroGame.BA
                     PlayerPrefs.SetString("winStatus", "won");
                     dM.EnterDialogueMode(dM.F.FdialogueDictionary["postMini"]);
                 }
+                else if (PlayerPrefs.GetString("currentConvo") == "MMG2")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "won");
+                    dM.EnterDialogueMode(dM.M.MdialogueDictionary["postMini"]);
+                }
                 else if (PlayerPrefs.GetString("currentConvo") == "finale")
                 {
                     ResetMiniGame();
@@ -633,6 +639,12 @@ namespace InterDineMension.MicroGame.BA
                     ResetMiniGame();
                     PlayerPrefs.SetString("winStatus", "loss");
                     dM.EnterDialogueMode(dM.F.FdialogueDictionary["postMini"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "MMG2")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "loss");
+                    dM.EnterDialogueMode(dM.M.MdialogueDictionary["postMini"]);
                 }
                 else if (PlayerPrefs.GetString("currentConvo") == "practiceB")
                 {
