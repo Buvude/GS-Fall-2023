@@ -395,6 +395,7 @@ What do you mean? #speaker:Graciana #mood:think
 
 I'm not entirely sure myself, frankly. #speaker:NiCo
 Your words... They always carry some sort of heavy weight with them.
+With you believing in me, I feel like I can do anything.
 I'm going to think over some things. You've given me a lot to think about.
 
 (NiCo slinks out of the booth, and hobbles over to the exit.) #speaker:Graciana #mood:neutral
