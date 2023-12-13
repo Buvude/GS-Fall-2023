@@ -59,31 +59,40 @@ Would you like to retry the minigame?
     ->fail3
     }
 }
+//bam bam trash
 ==pass1==
-You won1!
+Alright, looks like I'm getting it! #speaker:Graciana #mood:happy
+(I doubt Himber would compliment me for this.)
 ~StartO_Ryan()
 ->DONE
 ==pass2==
-You won2!
+Getting better and better! #speaker:Graciana #mood:happy
+(I wonder... Gnomestacks, burger stacks... There's a joke there, probably.)
 ~StartO_Ryan()
 ->DONE
 ==pass3==
-You won3!
+Alright, all set! #speaker:Graciana #mood:happy
+(Y'know, I could probably toss Himber like this...)
 ~StartO_Ryan()
 ->DONE
 ==fail1==
-You lost1.
+Jeez, that's rough... #speaker:Graciana #mood:sad
+(I wouldn't wanna disappoint Hograt...)
 ~StartO_Ryan()
 ->DONE
 ==fail2==
-You lost2.
+Yikes... Guess I'm not great at stacking... #speaker:Graciana #mood:sad
+(I can already imagine what Himber would say...)
 ~StartO_Ryan()
 ->DONE
 ==fail3==
-You lost3.
+Welp, close enough...? #speaker:Graciana #mood:sad
+(If I were throwing Himber instead, I'm sure I'd be more accurate...)
 ~StartO_Ryan()
 ->DONE
 ==chaos==
-You got chaotic.
+Hm... I wonder where that black hole leads to...? #speaker:Graciana #mood:think
+(Maybe I can throw Himber in there, and find out...)
+//i'm making jokes about graciana throwing himber to kinda foreshadow the bad ending lmao
 ~StartO_Ryan()
 ->DONE

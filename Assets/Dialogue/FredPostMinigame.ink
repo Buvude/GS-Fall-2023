@@ -60,30 +60,37 @@ Would you like to retry the minigame?
     }
 }
 ==pass1==
-You won1!
+Nice, I think I'm pretty good at this! #speaker:Graciana #mood:happy
+(I think Fred would like a burger like this... If he could eat them...)
 ~StartO_Ryan()
 ->DONE
 ==pass2==
-You won2!
+I just keep getting better, huh? #speaker:Graciana #mood:happy
+(I wonder what Fred would think about a burger like this...?)
 ~StartO_Ryan()
 ->DONE
 ==pass3==
-You won3!
+Awesome, nailed all of 'em! #speaker:Graciana #mood:happy
+(I think Fred would find this pretty fun...)
 ~StartO_Ryan()
 ->DONE
 ==fail1==
-You lost1.
+Oof, that could've been better... #speaker:Graciana #mood:sad
+(At least Fred wasn't here to see that...)
 ~StartO_Ryan()
 ->DONE
 ==fail2==
-You lost2.
+This is pretty tough, huh... #speaker:Graciana #mood:sad
+(Fred would probably say something to cheer me up, I bet...)
 ~StartO_Ryan()
 ->DONE
 ==fail3==
-You lost3.
+Jeez, it's tough getting these in... #speaker:Graciana #mood:sad
+(I'm sure Fred would probably ace it, since he's used to space...)
 ~StartO_Ryan()
 ->DONE
 ==chaos==
-You got chaotic.
+Huh... I wonder... Where does that black hole take the trash? #speaker:Graciana #mood:think
+(Maybe Fred knows something about it? Since he's a star?)
 ~StartO_Ryan()
 ->DONE
