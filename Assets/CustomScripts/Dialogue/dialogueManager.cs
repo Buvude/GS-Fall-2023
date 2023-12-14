@@ -429,6 +429,12 @@ namespace InterDineMension.Manager
                 case "NMG3":
                     EnterDialogueMode(N.NdialogueDictionary["postMini"]);
                     break;
+                case "MMG1":
+                    EnterDialogueMode(M.MdialogueDictionary["postMini"]);
+                    break;
+                case "MMG3":
+                    EnterDialogueMode(M.MdialogueDictionary["postMini"]);
+                    break;
                 case "finale":
                     {
                         charSpeakTo = speakingTo.O_Ryan;

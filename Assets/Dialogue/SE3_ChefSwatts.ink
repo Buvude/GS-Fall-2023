@@ -69,7 +69,7 @@ I'm headin' back to Dipterra, babeh! #speaker:Chef Swatts #mood:happy
 ~convo_numberCS+=1
 ~affectionOR+=1
 // ~GoToAppartment()
-~StartO_Ryan()
+~GoToAppartment()
 ->DONE
 
 
@@ -106,7 +106,7 @@ Ahahaha! #speaker:Chef Swatts #mood:happy
 ~convo_numberCS+=1
 ~affectionOR-=1
 // ~GoToAppartment()
-~StartO_Ryan()
+~GoToAppartment()
 ->DONE
 
 ==ChaosEndCS==
@@ -148,5 +148,5 @@ Y-yeah... I figured... #speaker:Graciana #mood:sad
 ~convo_numberCS+=1
 ~chaosOR+=1
 // ~GoToAppartment()
-~StartO_Ryan()
+~GoToAppartment()
 ->DONE
