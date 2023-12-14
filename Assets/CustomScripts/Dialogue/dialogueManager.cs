@@ -24,6 +24,7 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+        public Scrollbar sb;
         public GameObject autoText;
         public float autoPauseFloat;
         internal bool autoMode;
@@ -373,7 +374,7 @@ namespace InterDineMension.Manager
         public void StartMorningConvo()
         {
             charSpeakTo = speakingTo.Swatts;
-            if (PlayerPrefs.GetInt("convo_numberOR") == 6)
+            if (PlayerPrefs.GetInt("convo_numberOR") == 5)
             {
                 cS.sR.sprite = cS.CsspriteDictionary["neutral"];
                 PlayerPrefs.SetString("weekDay", "Fin");
@@ -920,7 +921,9 @@ namespace InterDineMension.Manager
                 }
                 if (historyLog.Count > 0)
                 {
-                    historyText.text += $"{charSpeak.ToString()}: {historyLog[historyLog.Count-1]}";
+                    //string temp=historyText.text.ToString();
+                    historyText.text = $"{charSpeak.ToString()}: {historyLog[historyLog.Count-1]}" +
+                        $" {historyText.text.ToString()}";
                 }
                 
                 displayLineCorutine = StartCoroutine(DisplayLine(currentStory.Continue()));

@@ -2,12 +2,12 @@ INCLUDE SE2_ChefSwatts_2.ink
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
 
-Would you like to retry the minigame?
-    *[Yes]
-        ~BAMLevel=1
-        ~currentConvo="cSD2"
-        ->MainBAD
-    *[No]
+// Would you like to retry the minigame?
+//     *[Yes]
+//         ~BAMLevel=1
+//         ~currentConvo="cSD2"
+//         ->MainBAD
+//     *[No]
         ->MainFail2
     ===MainFail2===
     ~affectionCS-=2

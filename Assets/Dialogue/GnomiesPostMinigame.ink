@@ -9,14 +9,14 @@ EXTERNAL StartTTMicro()
 
 ->DecideFate
 ==retry==
-Would you like to retry the minigame?
-    *[Yes]
-        {currentConvo=="GMG3":
-        ~StartTTMicro()
-        ->DONE
-        }
-        ->MainBAD
-    *[No]
+// Would you like to retry the minigame?
+//     *[Yes]
+//         {currentConvo=="GMG3":
+//         ~StartTTMicro()
+//         ->DONE
+//         }
+//         ->MainBAD
+//     *[No]
         ->DecideFate
 
 ==DecideFate==

@@ -2,12 +2,12 @@ INCLUDE globals.ink
 INCLUDE BADialogue.ink
 ~affectionCS-=3
 
-Would you like to retry the minigame?
-    *[Yes]
-        ~BAMLevel=0
-        ~currentConvo="cSD0"
-        ->MainBAD
-    *[No]
+// Would you like to retry the minigame?
+//     *[Yes]
+//         ~BAMLevel=0
+//         ~currentConvo="cSD0"
+//         ->MainBAD
+//     *[No]
         ->MainFail0
     ===MainFail0===
 Ay, don't worry, it takes a wee bit to get used to, ya? #speaker:Chef Swatts #mood:neutral

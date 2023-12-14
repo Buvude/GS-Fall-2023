@@ -67,7 +67,7 @@ namespace InterDineMension.MicroGame.BA
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)
         {
             dM.manager.imagePopUp.enabled = false;
-            dM.manager.imagePopUp.enabled = false;
+            dM.manager.imagePopUpParent.gameObject.SetActive(false);
             for (int i = 0; i < ingredients.Count; i++)
             {
                 orderedIngredients.Add(ingredients[i]);
