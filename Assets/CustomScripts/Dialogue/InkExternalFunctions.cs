@@ -101,6 +101,8 @@ namespace InterDineMension
                         dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["satNight"]);
                         break;
                     default:
+                        Debug.Log("test");
+                        dM.EnterDialogueMode(dM.IntroOryan);
                         break;
                 }
             });

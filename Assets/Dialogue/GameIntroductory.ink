@@ -9,7 +9,7 @@ INCLUDE BADialogue.ink
     ~convo_numberCS=0
     ~QuickSave()
 
-    Apron, check! Glasses, check! #speaker:Graciana
+    Apron, check! Glasses, check! #speaker:Graciana #bgm:dinMorning
     Okay, I think I'm ready!
     ...Oh yeah, the employee handbook... I never looked at it...
     Do I really need to...?
