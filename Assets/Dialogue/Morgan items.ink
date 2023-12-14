@@ -1,5 +1,13 @@
 INCLUDE globals.ink
 
+{
+    -chaosM>=chaosTotalM:
+        ->Mapron
+    -affectionM>=0:
+        ->Mhand
+    -affectionM<0:
+        ->Mjar
+    }
 ==Mhand==
 //good
 Morgan, well, gave me her hand...? #speaker:Graciana #mood:think #pu:mhand

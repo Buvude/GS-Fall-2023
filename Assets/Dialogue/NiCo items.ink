@@ -1,3 +1,13 @@
+INCLUDE globals.ink
+{
+    -chaosN>=chaosTotalN:
+        ->Nsign
+    -affectionN>=0:
+        ->Npostcard
+    -affectionN<0:
+        ->Nscrap
+    }
+
 ==Npostcard==
 //good
 NiCo gave me this postcard, from his vacation... #speaker:Graciana #mood:neutral #:pu:npost
