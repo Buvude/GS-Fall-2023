@@ -7,12 +7,12 @@ INCLUDE BADialogue.ink
 ~currentConvo="Arcade"
 What level do you want to try? #speaker:Chef Swatts #mood:happy
     *[Level 1]
-        ~convo_numberCS=0
+        ~BAMLevel=0
         ->MainBAD
     *[Level 2]
-        ~convo_numberCS=1
+        ~BAMLevel=1
         ->MainBAD
     *[Level 3]
-        ~convo_numberCS=2
+        ~BAMLevel=2
         ->MainBAD
     ->DONE

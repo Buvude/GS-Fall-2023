@@ -29,18 +29,18 @@ namespace InterDineMension.MicroGame.TT
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
             switch (mvmtDirection)
             {
                 case direction.left:
                     {
-                        this.gameObject.transform.Translate(-transform.right * speed);
+                        this.gameObject.transform.Translate(-transform.right * speed * Time.fixedDeltaTime * 150);
                         break;
                     }
                 case direction.right:
                     {
-                        this.gameObject.transform.Translate(transform.right * speed);
+                        this.gameObject.transform.Translate(transform.right * speed * Time.fixedDeltaTime*150);
                         break;
                     }
             }

@@ -8,15 +8,13 @@ namespace InterDineMension
     public class CharBtnParent : MonoBehaviour
     {
         public Image sR;
-        public Dictionary<string, Sprite> spriteDictionary;
-        public Dictionary<string, TextAsset> dialogueDictionary;
         public string[] sDictKey, dDictKey;
         public Sprite[] sDictValue;
         public TextAsset[] dDictValue;
         // Start is called before the first frame update
         void Start()
         {
-            /* spriteDictionary = new Dictionary<string, Sprite>();
+            /* ORspriteDictionary = new Dictionary<string, Sprite>();
             if (sDictKey.Length != sDictValue.Length)
             {
                 Debug.LogWarning("The length of moods is different then the list of sprites");
@@ -26,10 +24,10 @@ namespace InterDineMension
             {
                 for(int i = 0; i < sDictKey.Length; i++)
                 {
-                    spriteDictionary.Add(sDictKey[i], sDictValue[i]);
+                    ORspriteDictionary.Add(sDictKey[i], sDictValue[i]);
                 }
             }
-            dialogueDictionary = new Dictionary<string, TextAsset>();
+            ORdialogueDictionary = new Dictionary<string, TextAsset>();
             if (dDictKey.Length != dDictValue.Length)
             {
                 Debug.LogWarning("The length of dialogue is different then the list of dialogue assets");
@@ -39,7 +37,7 @@ namespace InterDineMension
             {
                 for (int i = 0; i < dDictKey.Length; i++)
                 {
-                    dialogueDictionary.Add(dDictKey[i], dDictValue[i]);
+                    ORdialogueDictionary.Add(dDictKey[i], dDictValue[i]);
                 }
             }*/
         }

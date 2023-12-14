@@ -1,15 +1,52 @@
 //#day:1 #CSConvo:0
 INCLUDE globals.ink
+INCLUDE BADialogue.ink
 
 ->GameIntro
 ===GameIntro===
     ~dayVar=1
     ~weekDay="Tut"
     ~convo_numberCS=0
-    (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana
-    (Here we are... The Portal Diner...) #speaker:Graciana #mood:think
+    ~QuickSave()
+
+    Apron, check! Glasses, check! #speaker:Graciana #bgm:dinMorning
+    Okay, I think I'm ready!
+    ...Oh yeah, the employee handbook... I never looked at it...
+    Do I really need to...?
+    * [No]
+    Reading's for chumps, I'm sure I can figure it out.
+    How hard could it possibly be? It's just waiting tables.
+        ->TheGameBegins
+    * [Yes (Instructions)]
+    Okay, let's see here...
+//i really wanna make this a different font color to signify that it's being "read" but it's 2am and my brain cannot process digging through inky documentation right now, i promise i'll come back to this ;-;
+    (To proceed in a conversation, simply "click" anywhere--but you already knew that.)
+    (To set "auto mode," press the "A" key. To skip through conversations--if you must--press the "Right Control" key. To view the "log," press the "Tab" key. To "pause," press the "P" or "Escape" key. Note that the "pause screen" will not pause minigames, as to prevent any "dishonesty.")
+    (The "Game" will automatically "save" at the end of each day, when you return to your apartment and go to sleep.)
+    Okay, I think that's the basics... There's a bit more though, in case I need it...
+    ** [I'm all set!]
+    Boooooring! I already knew all that!
+    It's just waiting tables, how hard could it possibly be?
+        ->TheGameBegins
+    ** [(Read more)]
+    (When in the Dining Room, to initiate a new conversation, simply "click" on the customer you wish to speak with.)
+    (During conversation, you may be given an opportunity to respond. These are called "choices")
+    ...No duh...
+    (Your conversations may hold serious ramifications to the fate of the customer, so be sure to pay attention!)
+    (Some beings are able to <b>hear</b> the outcome of their choices, but this is a rare skill not many have.)
+    (And who knows, their fate may affect you as well in the end... So do your best!)
+    (At the end of a conversation, you will be tasked with a job in the Diner--The instructions will be visible when they appear, so don't panic!)
+    (And lastly, the most crucial instruction of all--)
+    Jeez, this thing just goes on and on, does it ever stop?! There's like 20 more pages...
+    Whatever, I can figure it out! It's just waiting tables, how hard could it be?
+        ->TheGameBegins
+        
+==TheGameBegins==
+
+    (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana #bgm:dinMorning
+    (Here we are... O'Ryan's Diner...) #speaker:Graciana #mood:think 
     (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)
-    (I still haven’t met or even seen the owner; I interviewed online. They said to find a “fly guy,” whatever that means–)
+    (I still haven’t met or even seen the owner; I interviewed online. They said to find a “fly guy,” whatever that means–) 
     
     Ey! We not open yet! Ya gonna have to wait! How’d ya get in here? The portal shoulda been locked! #speaker:???
     
@@ -19,7 +56,7 @@ INCLUDE globals.ink
     
     (Suddenly, the kitchen door swings open, and before me stands, literally… a “fly guy.”) #speaker:Graciana
     
-    Why didn’t ya start with that? I’m Chef Swatts, I’m tha head chef–and only–chef here! #speaker:Chef Swatts #mood:happy
+    Why didn’t ya start with that? I’m Chef Swatts, I’m tha head chef–and only–chef here! #speaker:Chef Swatts #mood:happy 
     
     H-hi, I’m Graciana–#speaker:Graciana #mood:neutral
     
@@ -77,37 +114,9 @@ INCLUDE globals.ink
     Nonsense! Jus' a lil practice round, ya? #speaker:Chef Swatts
     
     Uh, okay... #speaker:Graciana
-    //MINIGAME HAPPENS HERE I DON'T KNOW HOW TO CALL IT LOL
-    //also just for the sake of simplicity and also story it makes sense to just keep it in one ink file. splitting the dialogue between pass/fail on the first ever minigame is ehhh (also because it's an intro and i dont wanna make the player feel bad for fucking up)
-    
-    Ay, how're ya feelin'? #speaker:Chef Swatts #mood:neutral
-    
-    U-uh, okay I guess? #speaker:Graciana #mood:neutral
-    (Does he have to fling it at me like that?!) #speaker:Graciana #mood:angry
-    Also, why does the food look... like that? #speaker:Graciana #mood:think
-    
-    Whattya mean? #speaker:Chef Swatts #mood:neutral
-    
-    Like, y'know... Different? #speaker:Graciana
-    
-    Ay, we source all our food from a dimension deep in The Great Void--I ain't ever even heard of it before. #speaker:Chef Swatts
-    Big Boss O'Ryan really likes to make sure it's only the highest quality of ingredients, ya?
-    
-    U-uh, yeah, I guess that makes sense... #speaker:Graciana
-    Anyways...
-    …When do we open? #speaker:Graciana #mood:think
-    
-    Oh! Ya! Soon! Like, 2 minutes! #speaker:Chef Swatts #mood:happy
-    
-    O-oh! #speaker:Graciana #mood:neutral
-    
-    Looks like they startin' to come in, look alive! #speaker:Chef Swatts
-    Just go right up to 'em! Don't be shy!
-    Some of 'em are a bit more talkative than others, they gonna try to talk ya ear off. #speaker:Chef Swatts #mood:neutral
-    Jus' be a good listener, an' say what they wanna hear.
-    Ya got it? #speaker:Chef Swatts #mood:happy
-    
-    Got it! #speaker:Graciana #mood:happy
-    ~GoToDiner()
-    
+    //do minigame and continue with the pass or fail
+   ~BAMLevel=0
+   ~currentConvo="cSD0"
+   ~QuickSave()
+   ->MainBAD
     ->END

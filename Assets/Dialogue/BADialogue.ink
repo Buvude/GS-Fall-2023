@@ -8,10 +8,12 @@ VAR tempHolder =""
 //->MainBAD
 ===MainBAD===
     //TODO replace variable here
+    
+
     {
     -BAMLevel==0:
     // ~Random_Holder=Random(1,3)
-        Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral
+        Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral #ss:spotlight:Chef Swatts 
         ~tempHolder=pop_random(BBuns1)
         For the bottom bun, it's {tempHolder}. #BBun:{tempHolder}
         ~tempHolder=pop_random(Pickles1)
@@ -49,7 +51,7 @@ VAR tempHolder =""
         Aight! Graciana, get ready! It's comin' in hot! #speaker:Chef Swatts
 ->DONE
     -BAMLevel==2:
-         Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral
+         Order up, just a heads up, you won't have time to look at the order once I start tossin'! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral #ss:spotlight:Chef Swatts
         ~tempHolder=pop_random(BBuns3)
         For the bottom bun, it's {tempHolder}. #BBun:{tempHolder}
         ~tempHolder=pop_random(Pickles3)
@@ -66,6 +68,25 @@ VAR tempHolder =""
         And the bun to top it all off... {tempHolder}.#TBun:{tempHolder}
         ~StartBAMicro3()
         Aight! Graciana, get ready! It's comin' in hot! #speaker:Chef Swatts
+->DONE
+      -BAMLevel==3:
+         Make me a burger, no peaking at the order once I start tossing ingredients. #speaker:O'Ryan #mood:neutral #ss:spotlight:Chef Swatts
+        ~tempHolder=pop_random(BBuns3)
+        bottom is {tempHolder}. #BBun:{tempHolder}
+        ~tempHolder=pop_random(Pickles3)
+        With {tempHolder} on top #Pickles:{tempHolder}
+        ~tempHolder=pop_random(Greens3)
+        with {tempHolder}. #lettuce:{tempHolder}
+        ~tempHolder=pop_random(patty3)
+        and {tempHolder} patty. #patty:{tempHolder}
+        ~tempHolder=pop_random(Condiments3)
+        squirt of {tempHolder}...#Condiments:{tempHolder}
+        ~tempHolder=pop_random(Veggies3)
+        and {tempHolder}...#veggie:{tempHolder}
+        ~tempHolder=pop_random(TBuns3)
+        And {tempHolder} on top.#TBun:{tempHolder}
+        ~StartBAMicro3()
+        prepare yourself, there will be no redos. #speaker:O'Ryan
 ->DONE
 }
 

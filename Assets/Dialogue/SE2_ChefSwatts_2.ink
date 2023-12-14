@@ -1,5 +1,5 @@
 //->MainCS2    
-    
+// EXTERNAL GoToAppartment()
 ===MainCS2===    
     So, uh... #speaker:Graciana #mood:think
     You wanna... Uh...
@@ -96,7 +96,8 @@
     (Jeez... I hope I didn't come across as too depressing...) #speaker:Graciana #mood:sad
     (Well, I can't dwell on it now. I got more cleaning to do...)
     ~convo_numberCS=2
-    ->NextDayVarAdjust
+    // ~GoToAppartment()
+    ~StartO_Ryan()
     ->DONE
     
     * [The other flyfolk?]
@@ -131,7 +132,8 @@
     (I don't know if Swatts is genuine or not, but I hope he actually thinks of what I said...) #mood:think
     (For now, I still got some cleaning to do.)
     ~convo_numberCS=2
-    ->NextDayVarAdjust
+    // ~GoToAppartment()
+    ~StartO_Ryan()
     ->DONE
     
     * [Overthrow the Spiders!]
@@ -164,5 +166,7 @@
     (I really hope Swatts does the right thing here. The insectica seem to have been suffering for centuries--this could be their chance at freedom.)
     (But for now... I still have some more cleaning to do.)
     ~convo_numberCS=2
-    ->NextDayVarAdjust
+    ~QuickSave()
+    // ~GoToAppartment()
+    ~StartO_Ryan()
     ->DONE

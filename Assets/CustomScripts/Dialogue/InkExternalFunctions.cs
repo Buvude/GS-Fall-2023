@@ -9,6 +9,9 @@ namespace InterDineMension
     using MicroGame;
     using Manager;
     using JetBrains.Annotations;
+    using UnityEngine.SceneManagement;
+    using UnityEditor;
+    using System.Runtime.CompilerServices;
 
     public class InkExternalFunctions
     {
@@ -36,6 +39,9 @@ namespace InterDineMension
 
         public void Bind(Story currentStory, BAManeger bAM, Microgamecontroller mGC, dialogueManager dM)
         {
+            currentStory.BindExternalFunction("StartBAMPractice",()=>{
+                SceneManager.LoadScene(2);
+            });
             currentStory.BindExternalFunction("StartBAMicro1", () =>
             {
                 mGC.StartBAM(1);
@@ -52,7 +58,7 @@ namespace InterDineMension
             });
             currentStory.BindExternalFunction("GoToDiner", (/*int day, int csConvo*/) =>
             {
-                day = int.Parse(currentStory.variablesState["dayVar"].ToString());
+                day = PlayerPrefs.GetInt("dayVar");
                 /* if (currentStory.variablesState["dayVar"].ToString() == "1")
                  {
                      Debug.Log("made it to day one");
@@ -63,26 +69,89 @@ namespace InterDineMension
             });
             currentStory.BindExternalFunction("StartO_Ryan", () =>
             {
-                dM.charSpeakTo = dialogueManager.speakingTo.O_Ryan;
+                dM.ExitDialogueMode(false, PlayerPrefs.GetInt("dayVar"), "StartO_Ryan", false);
                 dM.oR.gameObject.SetActive(true);
+                //dM.charSpeakTo = dialogueManager.speakingTo.O_Ryan;
+                /*dM.oR.gameObject.SetActive(true);
                 dM.G.gameObject.SetActive(false);
                 dM.cS.gameObject.SetActive(false);
                 dM.cC.gameObject.SetActive(false);
+                dM.N.gameObject.SetActive(false);
+                dM.G.gameObject.SetActive(false);
+                dM.M.gameObject.SetActive(false);*/
                 //dM.EnterDialogueMode(dM.TTMicroArcadeConvo);
+                switch (PlayerPrefs.GetString("weekDay"))
+                {
+                    case "Mon":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["monNight"]);
+                        break;
+                    case "Tue":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["tueNight"]);
+                        break;
+                    case "Wed":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["wedNight"]);
+                        break;
+                    case "Thu":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["thuNight"]);
+                        break;
+                    case "Fri":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["friNight"]);
+                        break;
+                    case "Sat":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["satNight"]);
+                        break;
+                    default:
+                        Debug.Log("test");
+                        dM.EnterDialogueMode(dM.IntroOryan);
+                        break;
+                }
             });
             currentStory.BindExternalFunction("StartTTMicro", () =>
             {
+                dM.QuickSave();
+                PlayerPrefs.SetString("currentConvo", currentStory.variablesState["currentConvo"].ToString());
                 mGC.loadTTM();
             });
             currentStory.BindExternalFunction("SaveGame", () =>
             {
-                mGC.dM.dV = new DialogueVariables(currentStory);
-                mGC.dM.SaveGame();
+                dM.dV = new DialogueVariables(currentStory);
+                dM.SaveGame();
             });
             currentStory.BindExternalFunction("QuickSave", () =>
             {
+                dM.dV = new DialogueVariables(currentStory);
                 dM.QuickSave();
             });
+            currentStory.BindExternalFunction("QuickLoad", () =>
+            {
+                dM.dV = new DialogueVariables(currentStory);
+                dM.QuickLoad();
+            });
+            currentStory.BindExternalFunction("NewDay", () =>
+            {
+                if (PlayerPrefs.GetString("weekDay") == "Sun")
+                {
+                    SceneManager.LoadScene(5);
+                }
+                else { SceneManager.LoadScene(1); }
+            });
+            currentStory.BindExternalFunction("GoToAppartment", () =>
+            {
+                PlayerPrefs.SetString("timeOfDay", "Night");
+                dM.SaveGame();
+                SceneManager.LoadScene(5);
+            });
+            currentStory.BindExternalFunction("EndGame", () =>
+            {
+                PlayerPrefs.DeleteAll();
+                SceneManager.LoadScene(0);
+            });
+            currentStory.BindExternalFunction("EndGame2", () =>
+            {
+                PlayerPrefs.DeleteAll();
+                Application.Quit();
+            });
+
         }
 
         public void unBind(Story currentStory)
@@ -95,6 +164,11 @@ namespace InterDineMension
             currentStory.UnbindExternalFunction("StartTTMicro");
             currentStory.UnbindExternalFunction("SaveGame");
             currentStory.UnbindExternalFunction("QuickSave");
+            currentStory.UnbindExternalFunction("QuickLoad");
+            currentStory.UnbindExternalFunction("NewDay");
+            currentStory.UnbindExternalFunction("GoToAppartment");
+            currentStory.UnbindExternalFunction("EndGame");
+            currentStory.UnbindExternalFunction("EndGame2");
         }
     }
 }

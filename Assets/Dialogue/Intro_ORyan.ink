@@ -1,9 +1,10 @@
 //#day:2 #CSConvo:1
-EXTERNAL StartO_Ryan()
-
+// EXTERNAL StartO_Ryan()
+// EXTERNAL GoToAppartment()
+// INCLUDE globals.ink
 ==mainORYAN==
-~StartO_Ryan()
-(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral
+
+(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral #bgm:dinNight #ss:spotlight:O'Ryan
 (Just gotta clean and close up...)
 (...)
 (Suddenly, the entrance portal flashes and opens up!)
@@ -14,7 +15,8 @@ E-excuse me, we're closing now, so if you could please-- #speaker:Graciana #mood
 (It's almost like... if a galaxy was a person...) #speaker:Graciana #mood:fear
 S-sir? Uh... Ma'am? Uh...
 
-... #speaker:???//set to slower text speed for O'Ryan while they are ???
+... #speaker:??? 
+//set to slower text speed for O'Ryan while they are ???
 
 (I can't tell if it has eyes, but I somehow feel them staring into my soul...) #speaker:Graciana
 C-can I help you...?
@@ -68,4 +70,7 @@ Uh...
     (I finish closing up and head on home, envelope in hand.)
     // You got paid [amount] Øllars!
     
-    ->NextDayVarAdjust//temp until appartment is set up
+    // ->NextDayVarAdjust//temp until appartment is set up
+    ~convo_numberCS=1
+    ~GoToAppartment()
+    ->DONE

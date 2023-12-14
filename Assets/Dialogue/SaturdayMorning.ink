@@ -1,6 +1,6 @@
-INCLUDE globals.ink
-->saturday
-
+// INCLUDE globals.ink
+// ->saturday
+// EXTERNAL GoToDiner()
 ==saturday==
 Ay ay ay, Gracie! #speaker:Chef Swatts #mood:happy
 
@@ -15,6 +15,6 @@ Ay, very! Another day in the kitchen for me! #speaker:Chef Swatts #mood:neutral
 
 (Yeah, that makes sense...) #speaker:Graciana #mood:happy
 
-Ay, unlock the portal and let's get crackin'! #speaker:Chef Swatts #mood:happys
-
+Ay, unlock the portal and let's get crackin'! #speaker:Chef Swatts #mood:happy
+    ~GoToDiner()
     -> END

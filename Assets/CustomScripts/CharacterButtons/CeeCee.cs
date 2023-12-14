@@ -7,11 +7,13 @@ namespace InterDineMension.Character
 {
     public class CeeCee : CharBtnParent
     {
-       
+        public Dictionary<string, Sprite> CcspriteDictionary;
+        public Dictionary<string, TextAsset> CcdialogueDictionary;
+
         // Start is called before the first frame update
         void Awake()
         {
-            spriteDictionary = new Dictionary<string, Sprite>();
+            CcspriteDictionary = new Dictionary<string, Sprite>();
             if (sDictKey.Length != sDictValue.Length)
             {
                 Debug.LogWarning("The length of moods is different then the list of sprites");
@@ -21,10 +23,10 @@ namespace InterDineMension.Character
             {
                 for (int i = 0; i < sDictKey.Length; i++)
                 {
-                    spriteDictionary.Add(sDictKey[i], sDictValue[i]);
+                    CcspriteDictionary.Add(sDictKey[i], sDictValue[i]);
                 }
             }
-            dialogueDictionary = new Dictionary<string, TextAsset>();
+            CcdialogueDictionary = new Dictionary<string, TextAsset>();
             if (dDictKey.Length != dDictValue.Length)
             {
                 Debug.LogWarning("The length of dialogue is different then the list of dialogue assets");
@@ -34,7 +36,7 @@ namespace InterDineMension.Character
             {
                 for (int i = 0; i < dDictKey.Length; i++)
                 {
-                    dialogueDictionary.Add(dDictKey[i], dDictValue[i]);
+                    CcdialogueDictionary.Add(dDictKey[i], dDictValue[i]);
                 }
             }
 

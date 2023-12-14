@@ -1,19 +1,41 @@
 //EXTERNAL GoToDiner()
+EXTERNAL QuickLoad()
 EXTERNAL SaveGame()
 INCLUDE MorningPlaceHolder.ink
+INCLUDE MondayMorning.ink
+INCLUDE TuesdayMorning.ink
+INCLUDE WednesdayMorning.ink
+INCLUDE ThursdayMorning.ink
+INCLUDE FridayMorning.ink
+INCLUDE SaturdayMorning.ink
+//I feel like including stuff here is not a great idea, but I have nut run into issues yet... so here we go...
+EXTERNAL StartO_Ryan()
+EXTERNAL GoToAppartment()
+// INCLUDE AppartmentIntro.ink
 EXTERNAL QuickSave()
+EXTERNAL NewDay()
 //VAR pokemon_name=""
 
+//used to calculate if you've earned the chaos ending or not
 
+VAR chaosTotalCS=9
+VAR chaosTotalN=12
+VAR chaosTotalCC=6
+VAR chaosTotalM=6
+VAR chaosTotalG=14
+VAR chaosTotalF=6
+VAR chaosTotalOR=5
 
 
 //saves at the end of each day
+VAR aptUpgrade=0
 VAR convo_numberCS=0
 VAR convo_numberN=0
 VAR convo_numberCC=0
 VAR convo_numberM=0
 VAR convo_numberG=0
 VAR convo_numberF=0
+VAR convo_numberOR=0
 VAR dayVar = 1//may not need to be used
 VAR weekDay = "Tut"//Tut=Tutorial
 //Cheff Swatts variables
@@ -34,6 +56,9 @@ VAR chaosM = 0
 //Fred variables
 VAR affectionF = 0
 VAR chaosF = 0
+//O'Ryan variables
+VAR affectionOR = 0
+VAR chaosOR = 0
 
 
 //used in game, no need to save
@@ -43,6 +68,7 @@ VAR TTMLevel = 0
 VAR TBMLevel = 1
 VAR currentConvo="test"
 VAR winState="Win"
+
 LIST BBuns1 = (Plain), (Lettucebun), (Sourdough) //(Bun_of_the_Deep) only orderable by O'ryan
 LIST Pickles1 = (Chips), (Relish), (Plain) 
 LIST Greens1 = (Wholeleaf), (Chopped), (Purple) //(Biblically_Accurate_Green) only orderable by O'ryan
@@ -72,44 +98,65 @@ LIST TBuns3 = (Plain), (Lettucebun), (Sourdough),(Pretzel) //(Bun_of_the_Deep) s
 {
     -weekDay=="Tut":
         ~weekDay="Mon"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ~NewDay()
+        // ->monday
     -weekDay=="Mon":
         ~weekDay="Tue"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ~NewDay()        
+        // ->tuesday
     -weekDay=="Tue":
         ~weekDay="Wed"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ~NewDay()        
+        // ->wednesday
     -weekDay=="Wed":
         ~weekDay="Thu"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ~NewDay()        
+        // ->thursday
     -weekDay=="Thu":
         ~weekDay="Fri"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ~NewDay()        
+        // ->friday
     -weekDay=="Fri":
         ~weekDay="Sat"
+        ~timeOfDay="morning"
         ~dayVar+=1
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ~NewDay()        
+        // ->saturday
     -weekDay=="Sat":
-        ~weekDay="Sun"
-        ~dayVar+=1
-        ~SaveGame()
-        ->DONE
+        // ~weekDay="Sun"
+        // ~dayVar+=1
+        // ~SaveGame()
+        // ->DONE
         //redirect to Day Off events
-    -weekDay=="Sun":
         ~weekDay="Mon"
-        ~dayVar+=1
+        ~timeOfDay="morning"
+        ~dayVar+=2
         ~SaveGame()
-        ->MorningPlaceholderMain
+        ~NewDay()
+        // ->monday
+    // -weekDay=="Sun":
+    //     ~weekDay="Mon"
+    //     ~timeOfDay="morning"
+    //     ~dayVar+=1
+    //     ~SaveGame()
+    //     ~NewDay()        
+    //     // ->monday
         
 }
+->DONE

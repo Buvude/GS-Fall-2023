@@ -62,6 +62,8 @@ MonoBehaviour:
   - angry
   dDictKey:
   - gameIntro
+  - cSMGPassIntro
+  - cSMGFailIntro
   - cSTalkTo1
   - cSMGFail1
   - cSMGPass1
@@ -69,7 +71,16 @@ MonoBehaviour:
   - cSTalkTo2
   - cSMGFail2
   - cSMGPass2
+  - cSMGChaos
   - cSTalkTo3
+  - Fri
+  - Mon
+  - Sat
+  - Thu
+  - Tue
+  - Wed
+  - brushOff
+  - CSFinale
   sDictValue:
   - {fileID: 21300000, guid: f6208e39c56e08b4598c00394e192c0e, type: 3}
   - {fileID: 21300000, guid: ce5eaec2011c9f44dbcc544d9dfd391d, type: 3}
@@ -79,6 +90,8 @@ MonoBehaviour:
   - {fileID: 21300000, guid: f6208e39c56e08b4598c00394e192c0e, type: 3}
   dDictValue:
   - {fileID: 4900000, guid: 5325151c076c8e3418d8a2ed9b3b5e14, type: 3}
+  - {fileID: 4900000, guid: 94f0c0d24f8a7cb43a832e5805952e13, type: 3}
+  - {fileID: 4900000, guid: 639799046bc26394e9912848cff1dfcd, type: 3}
   - {fileID: 4900000, guid: 34e0e12b4b640cf4b939c56959b6c81b, type: 3}
   - {fileID: 4900000, guid: 493981d5a2af59e419c91105c19638c5, type: 3}
   - {fileID: 4900000, guid: b1b521620d3923748a993db49a3958d0, type: 3}
@@ -86,7 +99,16 @@ MonoBehaviour:
   - {fileID: 4900000, guid: 41656c98891803c41bcd5e378621f6af, type: 3}
   - {fileID: 4900000, guid: 5928dc06a3ad23b45b204b3260f17e61, type: 3}
   - {fileID: 4900000, guid: dd1d934898fa1814cb31d10707489dbc, type: 3}
+  - {fileID: 4900000, guid: 31c35d74c67160646bff30e6e413ed4f, type: 3}
   - {fileID: 4900000, guid: 8b8707f507da77540987723d60045bd0, type: 3}
+  - {fileID: 4900000, guid: ed39969938726f74ca687a359b6d62a0, type: 3}
+  - {fileID: 4900000, guid: 066328ce9ca081b418343f563f782892, type: 3}
+  - {fileID: 4900000, guid: 3add1946003838e4cb5bc6657dcd9970, type: 3}
+  - {fileID: 4900000, guid: 3dc0b93e9ba7a2e42b4ed0a982095fcc, type: 3}
+  - {fileID: 4900000, guid: 3c0d97bba0158914f9b1464b32e8bf1b, type: 3}
+  - {fileID: 4900000, guid: fd933fbde340c334daa91f3a2892af43, type: 3}
+  - {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
+  - {fileID: 4900000, guid: 3e255e368ab93f5499dfd87d2e71c2ea, type: 3}
 --- !u!222 &3453327873401711260
 CanvasRenderer:
   m_ObjectHideFlags: 0

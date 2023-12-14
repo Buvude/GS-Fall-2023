@@ -5,6 +5,7 @@ using TMPro;
 using InterDineMension.Manager;
 using JetBrains.Annotations;
 using System;
+using UnityEngine.SceneManagement;
 
 namespace InterDineMension.MicroGame.TT
 {
@@ -14,7 +15,7 @@ namespace InterDineMension.MicroGame.TT
         public VariableHolder vH;
         public float scorepause;
         public int score, goal;
-        public AudioClip correct, wrong;
+        public AudioClip correct, wrong, cosmic;
         public AudioSource aS;
         public int timeLimit;
         public TextMeshProUGUI timerText, instructions, scoretxt;
@@ -25,7 +26,7 @@ namespace InterDineMension.MicroGame.TT
         public BoxCollider2D topCollider;
         public bool gameEnded=false;
         public const int SCORE1=3, SCORE2=6, SCORE3=9;
-
+        internal Coroutine timerCo;
         // Start is called before the first frame update
         void Start()
         {
@@ -40,7 +41,7 @@ namespace InterDineMension.MicroGame.TT
 
         public void initializeTTMiniGame()
         {
-            Debug.Log(vH.currentStory.variablesState["TTMLevel"]);
+            Debug.Log(vH.currentStory.variablesState["TTMLevel"]);  
             switch (vH.currentStory.variablesState["TTMLevel"].ToString())
             {
                 case "1":
@@ -55,7 +56,7 @@ namespace InterDineMension.MicroGame.TT
                     recycling.SetActive(true);
                     compost.SetActive(true);
                     rc.player.options.Add(recyclingBag);
-                    rc.player.options.Add(compostBag);
+                    //rc.player.options.Add(compostBag);
                     break;
                 default:
                     break;
@@ -75,25 +76,34 @@ namespace InterDineMension.MicroGame.TT
                     score++;
                     scoretxt.text = $"<b>{score}/{goal}</b> pieces of trash sorted correctly";
                 }
+                else if (fallenObjects[fOSize - 1].cosmic)
+                {
+                    aS.clip = cosmic; aS.Play();
+                    score--;
+                    scoretxt.text = $"<b>{score}/{goal}</b> pieces of trash sorted correctly";
+                }
                 else
                 {
                     aS.clip = wrong; aS.Play();
                 }
 
-                if(score>=goal)
+                if(score>=goal||score<=goal*-1)
                 {
                     score = 0;
                     gameEnded = true;
-                    StopCoroutine(timer() );
+                    StopCoroutine(timerCo );
                     StartCoroutine(tallyUp() );
                     topCollider.enabled = false;
                 }
             }
             if(!timerHasStarted&&fallenObjects.Count>=1 && !gameEnded) 
             {
-                scoretxt.text = "";
+                instructions.text = "";
+                scoretxt.gameObject.SetActive(true);
+                scoretxt.text = $"<b>{score}/{goal}</b> pieces of trash sorted correctly"; 
                 timerHasStarted = true;
-                StartCoroutine(timer() );
+                if (!timerHasEnded) {timerCo= StartCoroutine(timer()); }
+                
             }
 
         }
@@ -102,9 +112,11 @@ namespace InterDineMension.MicroGame.TT
 
         IEnumerator tallyUp()
         {
+            scoretxt.text = "";
             score=0; gameEnded = true;
             rc.player.GetComponent<Animator>().SetTrigger("End");
             timerHasEnded = true;
+            StopCoroutine(timerCo);
             rc.speed = 0f;
             instructions.text=$"Score: {score}/{goal}";
 
@@ -118,6 +130,14 @@ namespace InterDineMension.MicroGame.TT
                     f.transform.localScale.Set(1, 1, 1);
                     PlusPoint(f);
                 }
+                else if (f.cosmic)
+                {
+                    f.transform.parent = null;
+                    f.transform.localScale.Set(1,1,1);
+                    f.gameObject.SetActive(true);
+                    MinusPoint(f);
+                    
+                }
                 else
                 {
                     f.gameObject.SetActive(true);
@@ -130,6 +150,7 @@ namespace InterDineMension.MicroGame.TT
             if (score >= goal)
             {
                 vH.wonMini = true;
+
             }
             else
             {
@@ -139,9 +160,62 @@ namespace InterDineMension.MicroGame.TT
             {
                 PlayerPrefs.SetString("winStatus", "won");
             }
+            else if (score <= goal * -1)
+            {
+                PlayerPrefs.SetString("winStatus", "chaos");
+            }
             else
             {
-                PlayerPrefs.SetString("winStatus", "lost");
+                PlayerPrefs.SetString("winStatus", "loss");
+            }
+            switch (PlayerPrefs.GetString("currentConvo"))
+            {
+                case "practiceT":
+                    {
+                        SceneManager.LoadScene(5);
+                        break;
+                    }
+                case "finale":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+                case "NMG1":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+                case "NMG2":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+                case "GMG3":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+                case "FMG3":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+                case "MMG1":
+                    PlayerPrefs.SetString("timeOfDay", "afternoon");
+                    SceneManager.LoadScene(1);
+                    break;
+                case "MMG3":
+                    PlayerPrefs.SetString("timeOfDay", "afternoon");
+                    SceneManager.LoadScene(1);
+                    break;
+
+                default:
+                    break;
             }
 
         }
@@ -153,6 +227,15 @@ namespace InterDineMension.MicroGame.TT
             aS.clip= correct;aS.Play();
             instructions.text = $"Score: {score}/{goal}";
         }
+        public void MinusPoint(FallingObjectScript f)
+        {
+            f.gameObject.layer = 7;
+            score--;
+            f.gameObject.GetComponent<Rigidbody2D>().gravityScale = 0f;
+            f.animator.enabled = true;
+            aS.clip=cosmic;aS.Play();
+            instructions.text = $"Score: {score}/{goal}";
+        }
 
         public void noPoint(FallingObjectScript f)
         {
@@ -162,15 +245,23 @@ namespace InterDineMension.MicroGame.TT
         }
         IEnumerator timer()
         {
-            for (int i = timeLimit; i>=0; i--)
+            if (!gameEnded)
             {
-                timerText.text = $"{i} seconds";
-                yield return new WaitForSeconds(1);
+                for (int i = timeLimit; i >= 0; i--)
+                {
+                    timerText.text = $"{i} seconds";
+                    yield return new WaitForSeconds(1);
+                }
+                topCollider.enabled = false;
+                StartCoroutine(tallyUp());
+                gameEnded = true;
+                StopCoroutine(timerCo);
             }
-            topCollider.enabled = false;   
-            StartCoroutine(tallyUp());
-            gameEnded = true;
-            StopCoroutine(timer());
+            else
+            {
+                yield return new WaitForEndOfFrame();
+            }
+            
         }
     }
 }
