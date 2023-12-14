@@ -1,14 +1,7 @@
 INCLUDE globals.ink
 
-//the formatting & grammar is messy but it's set to impliment, i'm gonna go back and fix more later i promise
-//dom you are my favorite child but you are also SO MESSY with these inks it's making me lose my mind
-//please bear with me i am so overworked and stressed out right now im about to lose it LOL
-//it's like, i'm so stressed out that i'm almost whimsical and delirious. i feel like im genuinely starting to lose my mind
-//but i also haven't gotten more than 4 hours of sleep in like a week so. teehee!
-//anyways enough venting in the ink comments. guess it's fitting for this to be on morgan's branches considering her character lol
-
-//my mental breakdown aside, her character and arc is really good. the relationship between her and graciana is so cool too
-//thought i should balance out me losing my mind with a compliment LOL. dom you're genuinely a phenomenal writer just PLEASE use spell check and follow my ink formatting more, i BEG OF YOU
+//my mental breakdown aside, her character and arc is really good. the relationship between her and graciana is so fun and cool
+//dom you're genuinely a phenomenal writer just PLEASE use spell check and follow my ink formatting more, i BEG OF YOU
 
 (Morgan is sitting alone, contemplating something...) #speaker:Graciana #mood:think
 
@@ -22,18 +15,29 @@ INCLUDE globals.ink
 ==Start==
 ~convo_numberM=4
 
-Well well well, if it isn't my favorite Eldritch customer. What can I get for ya today Morgan #speaker:Graciana #mood:happy
-Hello Graciana, pleasure to see you as always
-I think today I will just have a slice of marble cake with black fondant and red frosting in the shape of roses #speaker:Morgan #mood:happy
-oohhh such a specific and fancy request makes me think that something amazing has happened!! What's the good news Morgan!?! #speaker:Graciana #mood:happy
-The request had nothing to do with anything occurring outside the diner, I simply saw it in one of your earth programs and it caught me eye #speaker:Morgan #mood:happy
- oh.... #speaker:Graciana #mood:happy
- But as you stated previously, something did happen #speaker:Morgan #mood:happy
- I knew it!!! Tell me everything! #speaker:Graciana #mood:happy
- Cake first please #speaker:Morgan #mood:happy
- Right no that makes sense one second #speaker:Graciana #mood:happy
- Alright tell me what happened!!! #speaker:Graciana #mood:happy
- Well as you suggested for reaching out to those around me and for those who would like to help see me come to power, better myself, and all of the friendships benefits you listed previously #speaker:Morgan #mood:happy
+Well well well, if it isn't my favorite Eldritch customer. What can I get for ya today, Morgan? #speaker:Graciana #mood:happy
+
+Hello Graciana, pleasure to see you as always. #speaker:Morgan #mood:neutral
+I think today I will just have a slice of marble cake, with black fondant and red frosting in the shape of roses #speaker:Morgan #mood:happy
+
+Oooo, such a specific and fancy request makes me think that something amazing has happened! What's the good news Morgan!?! #speaker:Graciana #mood:happy
+
+The request had nothing to do with anything occurring outside the diner, I simply saw it in one of your Earth programs and it caught me eye. #speaker:Morgan #mood:neutral
+
+Oh... #speaker:Graciana #mood:sad
+
+But as you stated previously, something did happen. #speaker:Morgan #mood:neutral
+
+I knew it! Tell me everything! #speaker:Graciana #mood:happy
+
+Cake first, please. #speaker:Morgan #mood:neutral
+
+Right, no that makes sense. #speaker:Graciana #mood:neutral
+One second... #speaker:Graciana #mood:neutral #scg:black
+...
+Alright, tell me what happened! #speaker:Graciana #mood:happy #ecg: 
+
+Well, you suggested I reached out to those around me, and for those who would like to help see me come to power, better myself, and all of the friendships benefits you listed previously... #speaker:Morgan #mood:think
  annndd? #speaker:Graciana #mood:happy
  I decided to meet with O'Ryan briefly, we talked for a few minutes outside one of his other establishments I saw he frequented on towards the afternoon #speaker:Morgan #mood:happy
  oooohhhhh, how did it go! #speaker:Graciana #mood:happy

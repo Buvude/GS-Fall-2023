@@ -60,30 +60,37 @@ Would you like to retry the minigame?
     }
 }
 ==pass1==
-You won1!
+Nice, scored! #speaker:Graciana #mood:happy
+(I wonder if Morgan would be good at this. She's got a bunch of tentacles... Can she grab with them?)
 ~StartO_Ryan()
 ->DONE
 ==pass2==
-You won2!
+This burger's lookin' good! #speaker:Graciana #mood:happy
+(Morgan can eat real food, right? I wonder what she'd think of a burger...)
 ~StartO_Ryan()
 ->DONE
 ==pass3==
-You won3!
+I'm doin' great at this! #speaker:Graciana #mood:happy
+(Maybe Morgan would feel better if she tried this, I'm feelin' pretty good...)
 ~StartO_Ryan()
 ->DONE
 ==fail1==
-You lost1.
+Yikes, I made a mess... #speaker:Graciana #mood:sad
+(I'm glad Morgan isn't my boss, I'd be terrified of messing up...)
 ~StartO_Ryan()
 ->DONE
 ==fail2==
-You lost2.
+This burger looks... Interesting... #speaker:Graciana #mood:sad
+(I wonder, would Morgan eat this? I'd think worse food tastes more like human souls...)
 ~StartO_Ryan()
 ->DONE
 ==fail3==
-You lost3.
+Wuh oh... #speaker:Graciana #mood:sad
+(I'm sure Morgan would have a bit to say about my performance here...)
 ~StartO_Ryan()
 ->DONE
 ==chaos==
-You got chaotic.
+Aaaand there goes the trash... #speaker:Graciana #mood:think
+(I wonder if Morgan knows anything about this black hole...?)
 ~StartO_Ryan()
 ->DONE
