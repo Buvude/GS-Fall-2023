@@ -112,7 +112,7 @@ namespace InterDineMension.Manager
 
         [SerializeField] private GameObject[] choices;
 
-        [SerializeField] public TextAsset BAMicroArcadeConvo;
+        [SerializeField] public TextAsset IntroOryan;
         [SerializeField] public TextAsset TTMicroArcadeConvo;
         [SerializeField] private TextAsset loadGlobalsJSON;
         
@@ -299,7 +299,7 @@ namespace InterDineMension.Manager
             else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2))
             {
                 charSpeakTo = speakingTo.Swatts;
-                EnterDialogueMode(BAMicroArcadeConvo);
+                EnterDialogueMode(IntroOryan);
             }
             else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(5))
             {
@@ -900,7 +900,7 @@ namespace InterDineMension.Manager
         public void debugCommand()
         {
             
-            EnterDialogueMode(BAMicroArcadeConvo);
+            EnterDialogueMode(IntroOryan);
         }
 
         private void ContinueStory()

@@ -23,7 +23,7 @@ namespace InterDineMension.Manager
         {
             /*if (!dialogueManager.GetInstance().dialoguePlaying)
             {
-                dialogueManager.GetInstance().EnterDialogueMode(manager.BAMicroArcadeConvo);
+                dialogueManager.GetInstance().EnterDialogueMode(manager.IntroOryan);
             }*/
             if(Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.P))
             {

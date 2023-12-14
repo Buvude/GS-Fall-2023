@@ -1754,11 +1754,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 985285647512750360, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 9.4964905
+      value: 9.49646
       objectReference: {fileID: 0}
     - target: {fileID: 985285647512750360, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -0.00047302246
+      value: -0.00045776367
       objectReference: {fileID: 0}
     - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: bAM
@@ -1801,6 +1801,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1637327998}
     - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: IntroOryan
+      value: 
+      objectReference: {fileID: 4900000, guid: 7e5b8cce95b4b484baf4c6fb1ccb0789, type: 3}
+    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: bgmAudioSource
       value: 
       objectReference: {fileID: 1732245923}
@@ -1812,6 +1816,10 @@ PrefabInstance:
       propertyPath: backgroundImage
       value: 
       objectReference: {fileID: 1800836466}
+    - target: {fileID: 1004010480444796423, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
+      propertyPath: BAMicroArcadeConvo
+      value: 
+      objectReference: {fileID: 4900000, guid: 7e5b8cce95b4b484baf4c6fb1ccb0789, type: 3}
     - target: {fileID: 1022270413289010190, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: orderImages.Array.data[0]
       value: 

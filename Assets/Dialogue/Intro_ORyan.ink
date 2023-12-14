@@ -1,9 +1,10 @@
 //#day:2 #CSConvo:1
 // EXTERNAL StartO_Ryan()
 // EXTERNAL GoToAppartment()
+// INCLUDE globals.ink
 ==mainORYAN==
-~StartO_Ryan()
-(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral #bgm:dinNight
+
+(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral #bgm:dinNight #ss:spotlight:O'Ryan
 (Just gotta clean and close up...)
 (...)
 (Suddenly, the entrance portal flashes and opens up!)
