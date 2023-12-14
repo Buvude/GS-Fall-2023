@@ -37,6 +37,6 @@ Some of 'em are a bit more talkative than others, they gonna try to talk ya ear 
     Jus' be a good listener, an' say what they wanna hear.
     Ya got it? #speaker:Chef Swatts #mood:happy
     
-    Got it! #speaker:Graciana #mood:happy #bgm:dinDay
+    Got it! #speaker:Graciana #mood:happy 
     ~GoToDiner()
     -> DONE

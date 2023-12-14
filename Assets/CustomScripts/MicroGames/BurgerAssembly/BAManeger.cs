@@ -63,10 +63,10 @@ namespace InterDineMension.MicroGame.BA
         public List<GameObject> veggieOptions;
         public List<GameObject> topBunOptions;
         public List<GameObject> toSpawn;
-
+        public AudioClip bam, afternoon;
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)
         {
-            dM.musicBAM();
+            StartCoroutine(musicFadeIn(bam));
             dM.manager.imagePopUp.enabled = false;
             dM.manager.imagePopUpParent.gameObject.SetActive(false);
             for (int i = 0; i < ingredients.Count; i++)
@@ -84,7 +84,27 @@ namespace InterDineMension.MicroGame.BA
             rightOrder.text = orderForSide;
             level = levelSetter;
         }
-
+        public IEnumerator musicFadeIn(AudioClip temp)
+        {
+            AudioSource bgmAudioSource = dM.bgmAudioSource;
+            float fadeInOutRate = dM.fadeInOutRate;
+            while (bgmAudioSource.volume > 0)
+            {
+                yield return new WaitForSeconds(.1f);
+                bgmAudioSource.volume -= fadeInOutRate;
+            }
+            if (temp == null)
+            {
+                yield break;
+            }
+            bgmAudioSource.clip = temp;
+            bgmAudioSource.Play();
+            while (bgmAudioSource.volume < 1)
+            {
+                yield return new WaitForSeconds(.1f);
+                bgmAudioSource.volume += fadeInOutRate;
+            }
+        }
         public void LevelUp(GameObject bun, GameObject pickle, GameObject greens, GameObject patty, GameObject condiment, GameObject veggie, GameObject tbun)
         {
 
@@ -460,7 +480,7 @@ namespace InterDineMension.MicroGame.BA
         /// <param name="ingredientTypes"></param> used for keeping score to compare with orderedIngredients
         public void FinalTally(List<BurgerIngredients.ingredientType> ingredientTypes)
         {
-            dM.afternoonMusic();
+            StartCoroutine(musicFadeIn(afternoon));
             dsm.orderImages[6].enabled = false;
             for (int i = 0;i < ingredientTypes.Count;)
             {
