@@ -2,10 +2,10 @@
 INCLUDE Intro_ORyan.ink
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
-Would you like to retry the minigame?
-    *[Yes]
-        ->MainBAD
-    *[No]
+// Would you like to retry the minigame?
+//     *[Yes]
+//         ->MainBAD
+//     *[No]
         ->MainFail
 
 
