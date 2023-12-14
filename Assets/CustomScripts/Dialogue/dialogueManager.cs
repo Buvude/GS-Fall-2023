@@ -1517,6 +1517,14 @@ namespace InterDineMension.Manager
                 }
             }
         }
+        public void musicBAM()
+        {
+            musicFadeIn(musicLibrary["BAM"]);
+        }
+        public void afternoonMusic()
+        {
+            musicFadeIn(musicLibrary["dinDay"]);
+        }
         public IEnumerator CGFadeIn(Sprite temp)
         {
             CGFade.gameObject.SetActive(true);

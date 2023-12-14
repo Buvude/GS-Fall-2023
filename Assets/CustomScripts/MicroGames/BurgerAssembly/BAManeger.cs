@@ -66,6 +66,7 @@ namespace InterDineMension.MicroGame.BA
 
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)
         {
+            dM.musicBAM();
             dM.manager.imagePopUp.enabled = false;
             dM.manager.imagePopUpParent.gameObject.SetActive(false);
             for (int i = 0; i < ingredients.Count; i++)
@@ -459,6 +460,7 @@ namespace InterDineMension.MicroGame.BA
         /// <param name="ingredientTypes"></param> used for keeping score to compare with orderedIngredients
         public void FinalTally(List<BurgerIngredients.ingredientType> ingredientTypes)
         {
+            dM.afternoonMusic();
             dsm.orderImages[6].enabled = false;
             for (int i = 0;i < ingredientTypes.Count;)
             {
@@ -517,6 +519,7 @@ namespace InterDineMension.MicroGame.BA
 
         private IEnumerator BAMicroGameScore(int finalScore)//used to determine where to go next
         {
+            
             dM.charSpeakTo = dialogueManager.speakingTo.Swatts;
             /*Debug.Log(dM.vH.currentStory.variablesState["currentConvo"].ToString());
             Debug.Log(PlayerPrefs.GetString("currentConvo"));*/
