@@ -20,11 +20,11 @@ EXTERNAL NewDay()
 
 VAR chaosTotalCS=9
 VAR chaosTotalN=12
-VAR chaosTotalCC=3
-VAR chaosTotalM=3
+VAR chaosTotalCC=6
+VAR chaosTotalM=6
 VAR chaosTotalG=14
-VAR chaosTotalF=3
-VAR chaosTotalOR=6
+VAR chaosTotalF=6
+VAR chaosTotalOR=5
 
 
 //saves at the end of each day

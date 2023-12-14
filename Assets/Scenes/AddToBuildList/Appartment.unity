@@ -822,7 +822,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7986331243093328922, guid: aa140ed9a003f7244ae45cb919371095, type: 3}
       propertyPath: chaosUnlockNum
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7986331243093328922, guid: aa140ed9a003f7244ae45cb919371095, type: 3}
       propertyPath: pPrefChrChaosKey
@@ -1863,7 +1863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7986331243093328922, guid: aa140ed9a003f7244ae45cb919371095, type: 3}
       propertyPath: chaosUnlockNum
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7986331243093328922, guid: aa140ed9a003f7244ae45cb919371095, type: 3}
       propertyPath: pPrefChrChaosKey
@@ -2860,7 +2860,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7986331243093328922, guid: aa140ed9a003f7244ae45cb919371095, type: 3}
       propertyPath: chaosUnlockNum
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7986331243093328922, guid: aa140ed9a003f7244ae45cb919371095, type: 3}
       propertyPath: pPrefChrChaosKey
