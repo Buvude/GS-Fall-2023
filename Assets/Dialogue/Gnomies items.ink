@@ -1,3 +1,12 @@
+INCLUDE globals.ink
+{
+    -chaosG>=chaosTotalG:
+        ->Gmagicbag
+    -affectionG>=0:
+        ->Gbracelet
+    -affectionG<0:
+        ->Ghat
+    }
 ==Gbracelet==
 //good
 The gnomes gave me this after they decided to make up... #speaker:Graciana #mood:think #pu:gfb

@@ -1,5 +1,12 @@
 INCLUDE globals.ink
-
+{
+    -chaosCS>=chaosTotalCS:
+        ->CSbombado
+    -affectionCS>=0:
+        ->CSbombadoplant
+    -affectionCS<0:
+        ->CSportaldevice
+    }
 ==CSbombadoplant==
 //good
 Chef Swatts got this Bombado plant from Dipterra, and put it in a pot for me... #speaker:Graciana #mood:neutral #pu:sbombplant
