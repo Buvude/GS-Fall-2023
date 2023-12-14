@@ -1,6 +1,7 @@
 using InterDineMension.MicroGame.BA;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,7 +11,8 @@ namespace InterDineMension.MicroGame.BA
 
     public class PlayerController : MonoBehaviour
     {
-
+        public TextMeshProUGUI instructions;
+        internal bool playermovmentStarted;
         public BoxCollider2D bc2;
         public float speed;
         public Slider playerMovment;
@@ -41,10 +43,24 @@ namespace InterDineMension.MicroGame.BA
         {
             currentpos = lanePos.lane2;
         }
-
+        IEnumerator StartGame()
+        {
+            if(BAManeger.level == 1&&PlayerPrefs.GetString("weekDay")=="Tut")
+            {
+                yield return new WaitForSeconds(3);
+            }
+            instructions.gameObject.SetActive(false);
+            BAManeger.StartTheNextPhase();
+        }
         // Update is called once per frame
         void Update()
         {
+            if (!playermovmentStarted && playerMovment.value != 50)
+            {
+                playermovmentStarted = true;
+                StartCoroutine(StartGame());
+
+            }
             switch (playerMovment.value)//naming system is confusing, sorry about that if anyone else is reading this
             {
                 case < lane4:
@@ -126,6 +142,8 @@ namespace InterDineMension.MicroGame.BA
         /// the top bun cases will have a function to end the microgame and pass through the final score
         /// </summary>
         /// <param name="type"></param> (the lane the ingredient is in)
+        /// 
+        
         public void CollectIngredient(BurgerIngredients.ingredientType type)
         {
             switch (type)

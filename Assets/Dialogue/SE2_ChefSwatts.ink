@@ -13,11 +13,12 @@ Ey yo, Graciana! Think ya can gimme some help real quick? #speaker:Chef Swatts
     ->DONE
 
 ==Sure==
-~BAMLevel=1
+~BAMLevel=2
+~currentConvo="cSD2"
 ~convo_numberCS=2
 ~timeOfDay="afternoon"
 ~QuickSave()
-~currentConvo="cSD2"
+
 Yeah, you got it. #speaker:Graciana #mood:neutral
 
 Good good! Get ovah here an' help me with this! #speaker:Chef Swatts #mood:angry
@@ -310,6 +311,7 @@ Graciana, help me with this, ya? #speaker:Chef Swatts #mood:neutral
 
 ...Okay... #speaker:Graciana
 ~timeOfDay="afternoon"
+
 ~QuickSave()
 ->MainBAD
 -> DONE

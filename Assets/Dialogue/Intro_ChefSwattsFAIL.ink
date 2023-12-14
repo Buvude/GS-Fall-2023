@@ -1,5 +1,15 @@
 INCLUDE globals.ink
+INCLUDE BADialogue.ink
+~affectionCS-=3
 
+// Would you like to retry the minigame?
+//     *[Yes]
+//         ~BAMLevel=0
+//         ~currentConvo="cSD0"
+//         ->MainBAD
+//     *[No]
+        ->MainFail0
+    ===MainFail0===
 Ay, don't worry, it takes a wee bit to get used to, ya? #speaker:Chef Swatts #mood:neutral
 
 U-uh, yeah, I can see... #speaker:Graciana #mood:neutral
@@ -27,6 +37,6 @@ Some of 'em are a bit more talkative than others, they gonna try to talk ya ear 
     Jus' be a good listener, an' say what they wanna hear.
     Ya got it? #speaker:Chef Swatts #mood:happy
     
-    Got it! #speaker:Graciana #mood:happy #bgm:dinDay
+    Got it! #speaker:Graciana #mood:happy 
     ~GoToDiner()
     -> DONE

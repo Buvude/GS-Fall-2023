@@ -2,7 +2,7 @@ INCLUDE globals.ink
 // EXTERNAL GoToAppartment()
 continue to trigger endings
 {
--chaosCC>=3:
+-chaosCC>=chaosTotalCC:
     triggering chaos ending
     ~chaosOR+=1
 -affectionCC>=0:

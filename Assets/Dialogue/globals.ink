@@ -16,13 +16,15 @@ EXTERNAL QuickSave()
 EXTERNAL NewDay()
 //VAR pokemon_name=""
 
- VAR chaosTotalCS=9
+//used to calculate if you've earned the chaos ending or not
+
+VAR chaosTotalCS=9
 VAR chaosTotalN=12
-VAR chaosTotalCC=0
-VAR chaosTotalM=0
-VAR chaosTotalG=0
-VAR chaosTotalF=0
-VAR chaosTotalOR=6
+VAR chaosTotalCC=6
+VAR chaosTotalM=6
+VAR chaosTotalG=14
+VAR chaosTotalF=6
+VAR chaosTotalOR=5
 
 
 //saves at the end of each day

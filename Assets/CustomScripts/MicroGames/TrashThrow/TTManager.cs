@@ -166,7 +166,7 @@ namespace InterDineMension.MicroGame.TT
             }
             else
             {
-                PlayerPrefs.SetString("winStatus", "lost");
+                PlayerPrefs.SetString("winStatus", "loss");
             }
             switch (PlayerPrefs.GetString("currentConvo"))
             {
@@ -193,6 +193,26 @@ namespace InterDineMension.MicroGame.TT
                         SceneManager.LoadScene(1);
                         break;
                     }
+                case "GMG3":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+                case "FMG3":
+                    {
+                        PlayerPrefs.SetString("timeOfDay", "afternoon");
+                        SceneManager.LoadScene(1);
+                        break;
+                    }
+                case "MMG1":
+                    PlayerPrefs.SetString("timeOfDay", "afternoon");
+                    SceneManager.LoadScene(1);
+                    break;
+                case "MMG3":
+                    PlayerPrefs.SetString("timeOfDay", "afternoon");
+                    SceneManager.LoadScene(1);
+                    break;
 
                 default:
                     break;

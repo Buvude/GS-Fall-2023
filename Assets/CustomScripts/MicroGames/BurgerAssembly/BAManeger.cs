@@ -63,11 +63,12 @@ namespace InterDineMension.MicroGame.BA
         public List<GameObject> veggieOptions;
         public List<GameObject> topBunOptions;
         public List<GameObject> toSpawn;
-
+        public AudioClip bam, afternoon;
         public void StartMicroGame(List<BurgerIngredients.ingredientType> ingredients, int levelSetter)
         {
+            StartCoroutine(musicFadeIn(bam));
             dM.manager.imagePopUp.enabled = false;
-            dM.manager.imagePopUp.enabled = false;
+            dM.manager.imagePopUpParent.gameObject.SetActive(false);
             for (int i = 0; i < ingredients.Count; i++)
             {
                 orderedIngredients.Add(ingredients[i]);
@@ -83,7 +84,27 @@ namespace InterDineMension.MicroGame.BA
             rightOrder.text = orderForSide;
             level = levelSetter;
         }
-
+        public IEnumerator musicFadeIn(AudioClip temp)
+        {
+            AudioSource bgmAudioSource = dM.bgmAudioSource;
+            float fadeInOutRate = dM.fadeInOutRate;
+            while (bgmAudioSource.volume > 0)
+            {
+                yield return new WaitForSeconds(.1f);
+                bgmAudioSource.volume -= fadeInOutRate;
+            }
+            if (temp == null)
+            {
+                yield break;
+            }
+            bgmAudioSource.clip = temp;
+            bgmAudioSource.Play();
+            while (bgmAudioSource.volume < 1)
+            {
+                yield return new WaitForSeconds(.1f);
+                bgmAudioSource.volume += fadeInOutRate;
+            }
+        }
         public void LevelUp(GameObject bun, GameObject pickle, GameObject greens, GameObject patty, GameObject condiment, GameObject veggie, GameObject tbun)
         {
 
@@ -133,7 +154,10 @@ namespace InterDineMension.MicroGame.BA
             finalScore = 0;
             finishedBurger.gameObject.SetActive(false);
             final.enabled = false;
-            startBtn.gameObject.SetActive(true);
+            /* startBtn.gameObject.SetActive(true);*/
+            pC.instructions.gameObject.SetActive(true);
+            pC.playerMovment.value = 50;
+            pC.playermovmentStarted = false;
             switch (level)
             {
                 case 1:
@@ -456,6 +480,7 @@ namespace InterDineMension.MicroGame.BA
         /// <param name="ingredientTypes"></param> used for keeping score to compare with orderedIngredients
         public void FinalTally(List<BurgerIngredients.ingredientType> ingredientTypes)
         {
+            StartCoroutine(musicFadeIn(afternoon));
             dsm.orderImages[6].enabled = false;
             for (int i = 0;i < ingredientTypes.Count;)
             {
@@ -514,15 +539,22 @@ namespace InterDineMension.MicroGame.BA
 
         private IEnumerator BAMicroGameScore(int finalScore)//used to determine where to go next
         {
+            
             dM.charSpeakTo = dialogueManager.speakingTo.Swatts;
-            Debug.Log(dM.vH.currentStory.variablesState["currentConvo"].ToString());
+            /*Debug.Log(dM.vH.currentStory.variablesState["currentConvo"].ToString());
+            Debug.Log(PlayerPrefs.GetString("currentConvo"));*/
             if (finalScore >= 5)
             { 
                 yield return new WaitForSeconds(3);
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
                 dM.gameObject.SetActive(true);
-                if (PlayerPrefs.GetString("currentConvo") == "cSD1")
+                if (PlayerPrefs.GetString("currentConvo") == "cSD0")
+                {
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGPassIntro"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "cSD1")
                 {
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGPass1"]); //only valid for day one
@@ -532,10 +564,40 @@ namespace InterDineMension.MicroGame.BA
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGPass2"]);
                 }
+                else if (PlayerPrefs.GetString("currentConvo") == "GMG1")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "won");
+                    dM.EnterDialogueMode(dM.G.GdialogueDictionary["postMini"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "GMG2")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "won");
+                    dM.EnterDialogueMode(dM.G.GdialogueDictionary["postMini"]);
+                }
                 else if (PlayerPrefs.GetString("currentConvo") == "practiceB")
                 {
                     PlayerPrefs.SetString("winStatus", "Win");
                     SceneManager.LoadScene(5);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "FMG1")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "won");
+                    dM.EnterDialogueMode(dM.F.FdialogueDictionary["postMini"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "FMG2")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "won");
+                    dM.EnterDialogueMode(dM.F.FdialogueDictionary["postMini"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "MMG2")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "won");
+                    dM.EnterDialogueMode(dM.M.MdialogueDictionary["postMini"]);
                 }
                 else if (PlayerPrefs.GetString("currentConvo") == "finale")
                 {
@@ -551,7 +613,7 @@ namespace InterDineMension.MicroGame.BA
                 }
                 else
                 {
-                    Debug.LogError("not a valid currentConvo");
+                    Debug.LogError($"not a valid currentConvo {PlayerPrefs.GetString("currentConvo")}");
                 }
 
             }
@@ -562,7 +624,12 @@ namespace InterDineMension.MicroGame.BA
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
                 dM.gameObject.SetActive(true);
-                if (PlayerPrefs.GetString("currentConvo")== "cSD1")
+                if (PlayerPrefs.GetString("currentConvo") == "cSD0")
+                {
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFailIntro"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo")== "cSD1")
                 {
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFail1"]);//only valid for day one
@@ -571,6 +638,36 @@ namespace InterDineMension.MicroGame.BA
                 {
                     ResetMiniGame();
                     dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGFail2"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "GMG1")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "loss");
+                    dM.EnterDialogueMode(dM.G.GdialogueDictionary["postMini"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "GMG2")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "loss");
+                    dM.EnterDialogueMode(dM.G.GdialogueDictionary["postMini"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "FMG1")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "loss");
+                    dM.EnterDialogueMode(dM.F.FdialogueDictionary["postMini"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "FMG2")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "loss");
+                    dM.EnterDialogueMode(dM.F.FdialogueDictionary["postMini"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "MMG2")
+                {
+                    ResetMiniGame();
+                    PlayerPrefs.SetString("winStatus", "loss");
+                    dM.EnterDialogueMode(dM.M.MdialogueDictionary["postMini"]);
                 }
                 else if (PlayerPrefs.GetString("currentConvo") == "practiceB")
                 {
@@ -601,7 +698,12 @@ namespace InterDineMension.MicroGame.BA
                 microgamecontroller.dialogueContainer.SetActive(true);
                 BAMObject.SetActive(false);
                 dM.gameObject.SetActive(true);
-                if (PlayerPrefs.GetString("currentConvo") == "practiceB")
+                if (PlayerPrefs.GetString("currentConvo") == "cSD2")
+                {
+                    ResetMiniGame();
+                    dM.EnterDialogueMode(dM.cS.CsdialogueDictionary["cSMGChaos"]);
+                }
+                else if (PlayerPrefs.GetString("currentConvo") == "practiceB")
                 {
                     PlayerPrefs.SetString("winStatus", "Chaos");
                     SceneManager.LoadScene(5);
