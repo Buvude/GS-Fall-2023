@@ -193,24 +193,24 @@ Oh? Worshiped Eldritch beings before me now, have we? #speaker:Morgan #mood:neut
 Please, allow me to express my gratitude in a way that a Human such as yourself would appreciate. #speaker:Morgan #mood:happy
 
 (Morgan reaches out her hand...) #speaker:Graciana
-(And pulls out an insanely fat stack of cash!)
+(And pulls out an insanely fat stack of cash!) #speaker:Graciana #mood:money
 O-oh, wow, uh, this is a lot! I don't know if I--
 
 Nonsense, dear. The service you have given me is worth even beyond this currency. #speaker:Morgan
 Please, accept it as a--
 
-<i>(CRACK!)<i>
+<i>(CRACK!)<i> #bgm:none
 
 !!! #speaker:Graciana #mood:fear
 (Her hand just popped clean off?!)
 
-... #speaker:Morgan
+... #speaker:Morgan #mood:neutral
 Oh dear.
-I suppose I am rather on the elder side, hahah!
+I suppose I am rather on the elder side, hahah! #speaker:Morgan #mood:happy #bgm:dinDay
 
 A-are you okay?! #speaker:Graciana
 
-Yes my dear, I am fine. This simply occurs from time to time. #speaker:Morgan
+Yes my dear, I am fine. This occurs from time to time. #speaker:Morgan
 You can simply take your tip out of the hand, I can regenerate a new one in no time.
 
 O-oh, uh, okay... #speaker:Graciana #mood:neutral
@@ -218,12 +218,12 @@ Hm... #speaker:Graciana #mood:think #pu:mhand
 (The hand is shut so tightly... I can't even slide the money out...) #speaker:Graciana #mood:sad
 
 Ah, yes, I suppose the rigor mortis is setting in. #speaker:Morgan #pd: 
-Feel free to take my hand with you, it should come lose eventually.
+Feel free to take my hand with you, it should come loose eventually.
 
 R-right... #speaker:Graciana #mood:neutral
 
 In any case, I shall be off. #speaker:Morgan
-Thank you once again, for all you have done for me, Graciana. #speaker:Morgan #mood:happy
+Thank you once again for all you have done for me, Graciana. #speaker:Morgan #mood:happy
 
 Of course! #speaker:Graciana #mood:happy
 So long, Morgan! #esfo: 
@@ -238,50 +238,54 @@ Perhaps they are offering themself as sacrifice for my rebirth. #speaker:Morgan 
 
 It is a rare offer to see in most beings as it means the end for one so another can live on a new, a very stupid notion for the one that dies. #speaker:Morgan #mood:think
 
-But if they are willing to offer themself for my sake I am willing to receive this gift with open arms #speaker:Morgan #mood:neutral
+But if they are willing to offer themself for my sake, I am willing to receive this gift with open arms. #speaker:Morgan #mood:neutral
 
-Hey now, there is no reason in my mind that he would willingly do this after meeting you for mere what? Minutes? Seconds? #speaker:Graciana #mood:neutral
+Hey now, there's no reason in my mind that they would willingly do this after meeting you for mere, what? Minutes? Seconds? #speaker:Graciana #mood:neutral
 
-I believe we conversed for a minute exactly before he departed #speaker:Morgan #mood:neutral
+I believe we conversed for a minute exactly before he departed. #speaker:Morgan #mood:neutral
 
-Dam him and his short but precise timing #speaker:Graciana #mood:angry
+Damn them and their short but precise timing. #speaker:Graciana #mood:angry
 
-Well what else could he have meant by this?#speaker:Graciana #mood:think
+Well, what else could they have meant by this?#speaker:Graciana #mood:think
 
-There is no other way I can see it in my mind as one Eldritch being to another #speaker:Morgan #mood:neutral
+There is no other way I can see it in my mind, as one Eldritch being to another. #speaker:Morgan #mood:neutral
 
-But what about the Diner, and my job, and all of his customers. Without him everything falls apart, I don't know if this is a good idea  #speaker:Graciana #mood:neutral
+But what about the Diner, and my job, and all of their customers. Without O'Ryan everything falls apart, I don't know if this is a good idea...  #speaker:Graciana #mood:neutral
 
 You said you would be willing to do anything to help me and see me return to power, yes? #speaker:Morgan #mood:angry 
 
-Would you not want to see me happy Graciana? #speaker:Morgan #mood:think
+Would you not want to see me happy, Graciana? #speaker:Morgan #mood:neutral
 
-Well yes I do ...... it just doesn't make sense to me #speaker:Graciana #mood:fear
+Well... Yes, I do... #speaker:Graciana #mood:fear
+It just doesn't make sense to me. #speaker:Graciana #mood:think
 
-Well rationalize it for yourself and maybe we can walk through this together before he arrives #speaker:Morgan #mood:neutral
+Well, rationalize it for yourself and maybe we can walk through this together, before they arrive. #speaker:Morgan #mood:neutral
 
-Well...... #speaker:Graciana #mood:neutral
+Well... #speaker:Graciana #mood:neutral
 
-**[Maybe he built the diner chain for someone else to take over for him?]
+**[The Diner is a con?]
 
-Maybe this was some sort of long con operation, to make this diner chain successful and retire for a life of convenience after giving all of his power over to someone else to run it for him? #speaker:Graciana #mood:neutral
+Maybe this was some sort of long con operation, to make this diner chain successful and retire for a life of convenience after giving all of their power over to someone else to run it for them? #speaker:Graciana #mood:think
 
-Well even if that is the case I have no intention to run his business once they are gone so he will have to deal with that aspect of his life without his power #speaker:Morgan #mood:neutral
+Even if that is the case, I have no intention to run this business once they are gone, so they will have to deal with that aspect of their life without their power. #speaker:Morgan #mood:neutral
 
-right.... I assume we would all be out of jobs then without him #speaker:Graciana #mood:neutral
+Right... I assume we would all be out of jobs then, without him... #speaker:Graciana #mood:neutral
 
-I would have to go back to job hunting on Earth...... #speaker:Graciana #mood:neutral 
+I would have to go back to job hunting on Earth... #speaker:Graciana #mood:think 
 
-Fear not my dear, once I gain his power I will leave you enough coin to support yourself for eons for the great services you have provided me #speaker:Morgan #mood:happy
+Fear not my dear, once I gain O'Ryan's power I will leave you enough coin to support yourself for eons, for the great services you have provided me. #speaker:Morgan #mood:happy
 
 Really? #speaker:Graciana #mood:neutral
 
-of course! It would be insulting for me to not take care of those who have taken care of me #speaker:Morgan #mood:neutral
+But of course! It would be insulting for me to not take care of those who have taken care of me. #speaker:Morgan #mood:neutral
 
-Well thank you, that means a lot Morgan. But I do prefer the work. Without work I am nothing and when I am nothing I am very sad #speaker:Graciana #mood:neutral
+Well thank you, that means a lot Morgan. But I do prefer the work. #speaker:Graciana #mood:neutral
+Without work, I am nothing, and when I am nothing, I get all weird and sad. #speaker:Graciana #mood:neutral
 
 ->BadContinued
-**[Maybe he won't actually die but will just lose his strength?]
+**[Maybe they won't die?]
+
+Maybe O'Ryan won't actually die, but just lose some of their strength? #speaker:Graciana #mood:think
 
 that is more likely for a creature of his stature, with his current power he would not die for sharing even 90% of what he currently holds within him #speaker:Morgan #mood:neutral
 
