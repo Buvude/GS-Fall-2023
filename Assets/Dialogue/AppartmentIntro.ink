@@ -2,7 +2,7 @@
 INCLUDE globals.ink
 {
 -weekDay=="Tut":
-Welcome to the appartment, click the bed to progress to the next day.  #speaker:Graciana #mood:blank #bgm:dinNight
+Welcome to the apartment, click the bed to progress to the next day.  #speaker:Graciana #mood:blank #bgm:dinNight
 
 As you progress through the story you'll unlock items that will automatically decorate your appartment.
 

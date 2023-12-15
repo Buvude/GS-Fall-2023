@@ -15,7 +15,7 @@
     They ain't! #speaker:Chef Swatts #mood:happy
     It's lively 'cause it's dead here!
     
-    R-right, I get it... Uh... #speaker:Graciana
+    R-right, I get it... Uh... #speaker:Graciana #bgm:none
     (I absolutely do not get it.) #speaker:Graciana #mood:sad
     
     Well, time to unlock tha portal, ya? #speaker:Chef Swatts #mood:neutral
