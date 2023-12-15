@@ -38,19 +38,31 @@ One second... #speaker:Graciana #mood:neutral #scg:black
 Alright, tell me what happened! #speaker:Graciana #mood:happy #ecg: 
 
 Well, you suggested I reached out to those around me, and for those who would like to help see me come to power, better myself, and all of the friendships benefits you listed previously... #speaker:Morgan #mood:think
- annndd? #speaker:Graciana #mood:happy
- I decided to meet with O'Ryan briefly, we talked for a few minutes outside one of his other establishments I saw he frequented on towards the afternoon #speaker:Morgan #mood:happy
- oooohhhhh, how did it go! #speaker:Graciana #mood:happy
- I discussed with him my goals and position, and how someone has been trying to get me to branch myself out to those around me to help me grow and create friendships #speaker:Morgan #mood:happy
- and what did he say! #speaker:Graciana #mood:happy
- a few words and a tip of his void filled hat as he left, you were right about his very short and to the point personality. #speaker:Morgan #mood:happy
- I am not quite sure on what to do about him at the moment. If I am to be completely honest, he is a bit of an enigma. #speaker:Morgan #mood:happy
-He neither stated he would directly support me, nor be my friend, but I felt there was some kind of hidden meaning or message behind his words than I picked up on at first. #speaker:Morgan #mood:happy
-Oh? like he said something in a secret message to not alert other gods of your talk? #speaker:Graciana #mood:happy
-perhaps, but I believe it was more on the lines of he was leading me on to something, I just can not find what it is #speaker:Morgan #mood:happy
-What exactly did he say? #speaker:Graciana #mood:happy
-Well, we conversed in the ancient tongue of the gods so I don't know the exact translation to your language, but it would probably be somewhere around the lines of "You may have me if you wish" #speaker:Morgan #mood:happy
-Oh my...  #speaker:Graciana #mood:happy
+
+Annndd? #speaker:Graciana #mood:think
+
+I decided to meet with O'Ryan briefly, we talked for a few minutes outside one of his other establishments I saw he frequented towards the afternoon. #speaker:Morgan #mood:neutral
+
+Oooohhhhh, how did it go?! #speaker:Graciana #mood:think
+
+I discussed with him my goals and position, and how someone has been trying to get me to branch myself out to those around me, to help me grow and create friendships. #speaker:Morgan #mood:neutral
+
+And what did he say? #speaker:Graciana #mood:think
+
+A few words, and a tip of his void-filled hat as he left. You were right about his very short and to-the-point personality. #speaker:Morgan #mood:neutral
+I am not quite sure on what to do about him at the moment. If I am to be completely honest, he is a bit of an enigma.
+He neither stated he would directly support me, nor be my friend, but I felt there was some kind of hidden meaning or message behind his words. #speaker:Morgan #mood:neutral
+
+Oh? Like he said something in a secret message to not alert other Gods of your talk? #speaker:Graciana #mood:think
+
+Perhaps, but I believe it was more on the lines of "he was leading me on to something," I just cannot find what it is #speaker:Morgan #mood:neutral
+
+What exactly did he say? #speaker:Graciana #mood:think
+
+Well, we conversed in the ancient tongue of the gods, so I don't know the exact translation to your language, but it would probably be somewhere around the lines of... #speaker:Morgan #mood:neutral
+"You may have me, if you wish."
+
+Oh my... #speaker:Graciana #mood:neutral
 
 {
 -chaosM>=chaosTotalM:
@@ -62,82 +74,122 @@ Oh my...  #speaker:Graciana #mood:happy
 }
 //Divert Endings here pretty please with a cherry on top
 ==MorganGoodEnding==
-I think that means he is offering himself as an friend/ally #speaker:Graciana
+I think that means they're offering themself as an friend! #speaker:Graciana #mood:happy
 
- Really? Just like that, I ask for help and he would be willing to potentially throw the universe out of balance because I said please and thank you? #speaker:Morgan #mood:happy
- I mean did you say please and thank you #speaker:Graciana #mood:happy
- Yes it was disturbing for those words to be coming out of my mouth #speaker:Morgan #mood:happy
- I think I fell ill moments later#speaker:Morgan #mood:happy
- Oh boy, we will find another way for you to express nice things then  #speaker:Graciana #mood:happy
- Please do ................................. #speaker:Morgan #mood:happy
- ............................................ #speaker:Graciana #mood:happy
- .............................................. #speaker:Morgan #mood:happy
-Are you ok? #speaker:Graciana #mood:happy
-I fear you are changing me for the better and worse #speaker:Morgan #mood:happy
-Lets try and avoid the worst part then #speaker:Graciana #mood:happy
-But that's good news that he is willing to be a friend or ally or whatever you want to call him to restore you to power. Did he say how they were going to do it? #speaker:Graciana #mood:happy
-Not a word, just that one phrase mixed with a hello and a good evening #speaker:Morgan #mood:happy
-Wow they really do say next to nothing #speaker:Graciana #mood:happy
-So how do you think he will go about it? #speaker:Morgan #mood:happy
+Really? Just like that? #speaker:Morgan #mood:neutral
+I ask for help, and they would be willing to potentially throw the universe out of balance because I said please and thank you?
 
+I mean, did you say please and thank you? #speaker:Graciana #mood:think
 
-**[Give you a boon of unfathomable power]
+Yes, it was disturbing for those words to be coming out of my mouth. #speaker:Morgan #mood:sad
+I believe I fell ill moments later... #speaker:Morgan #mood:neutral
 
- It is not exactly underheard of for beings to bestow their power on beings lesser than themselves, however I am unsure the  disparity #speaker:Morgan #mood:happy
- Unlikely but not out of the question, I certainly would not mind having access to his extraordinary cosmic abilities #speaker:Morgan #mood:happy
- I know he can appear in places and change his form, but what else can he do? #speaker:Graciana #mood:happy
- Well I'm unsure of everything he can do, but I've heard he can turn himself into a blackhole that consumes entire galaxies into his body. Certainly useful #speaker:Morgan #mood:happy
- ...................... useful............yeah...................can you please make sure he doesn't do that to my galaxy though, I prefer not to live inside of his belt for the rest of my life.#speaker:Graciana #mood:happy 
- Fair enough, although I'm sure in my current state neither one of us would even notice the difference #speaker:Morgan #mood:happy
- Alrightly then moving on #speaker:Graciana #mood:happy
- I do have to ask though #speaker:Morgan #mood:happy
+Oh boy, we'll find another way for you to express nice things, then. #speaker:Graciana #mood:think
 
+Please do... #speaker:Morgan #mood:sad
 
+...#speaker:Graciana #mood:neutral
 
-->GoodContinued
-**[Do the dirty work himself]
-
- Well it would be strange if he did, even though I am far weaker than I once was I should still be more than enough to be#speaker:Graciana #mood:happy considered a powerful ally #speaker:Morgan #mood:happy
- Right, but isn't he made up of multiple galaxies and stuff? 
- Doesn't that make him like a god level threat since he controls the existence of probably a couple one hundred billion peoples or something #speaker:Graciana #mood:happy
- Perhaps, I would be confused on why they would even help me reclaim my throne then instead of taking it for himself if it was that simple for them #speaker:Morgan #mood:happy
- Good point #speaker:Graciana #mood:happy
- It's pretty hard to understand what goes on in that Void's head most of the time anyways, so until he shows signs of the worst expect the best I guess? #speaker:Morgan #mood:happy
- I will still have to plan for the worse just in case, but I am somewhat optimistic about his indifference being a large factor in him coming to my aid #speaker:Morgan #mood:happy
- Either way this is a huge win Morgan! #speaker:Graciana #mood:happy
- Indeed, the battle has yet to be won, however the sun seems to be rising upon a new era once more #speaker:Morgan #mood:happy
-
-
-
-->GoodContinued
-**[Make some sort of deal]
+... #speaker:Morgan
  
- While it is true most beings of tremendous power can and will make deals with creatures lesser than them, it is rare for one to make a deal with a being closer to their own  #speaker:Morgan #mood:happy
- It would be unusual to say the least, but I also am not sure just how powerful O'Ryan is #speaker:Morgan #mood:happy
- It appears he can travel seamlessly throughout the universe without issues, and is comprised of multiple galaxies fueling his body #speaker:Morgan #mood:happy
- But I have never seen or heard of him outside rumors and his  obvious branching out to the food industry, which was a shock to most #speaker:Morgan #mood:happy
- Oh yeah? What kind of rumors happened before he became a diner owner? #speaker:Graciana #mood:happy
- Since you work beneath him I fear anything I say could directly cause you to change careers which would lead to these conversations ending, so I shall refrain from telling you for now #speaker:Morgan #mood:happy
- oh............ roger that message received loud and clear #speaker:Graciana #mood:happy
+Are you ok? #speaker:Graciana #mood:think
+
+I fear you are changing me, for the better and worse #speaker:Morgan #mood:neutral
+
+Let's try and avoid the "worse" part, then. #speaker:Graciana #mood:neutral
+But that's good news that O'Ryan is willing to be a friend, or ally, or whatever you wanna call him, to restore you to your former power. Did they say how they're gonna do it? #speaker:Graciana #mood:think
+
+Not a word, just that one phrase mixed with a "hello" and a "good evening..." #speaker:Morgan #mood:neutral
+
+Wow, O'Ryan really does say next to nothing, huh... #speaker:Graciana #mood:think
+
+So how do you think they'll go about it? #speaker:Morgan #mood:neutral
+
+
+**[Give you some of their power!]
+
+Maybe O'Ryan'll give you a boon of some of their unfathomable power? #speaker:Graciana #mood:think
+
+It is not exactly unheard of for beings to bestow their power on beings lesser than themselves, however, I am unsure of the disparity... #speaker:Morgan #mood:neutral
+Unlikely, but not out of the question. I certainly would not mind having access to his extraordinary cosmic abilities. #speaker:Morgan #mood:happy
+
+ I know they can appear in multiple places and change form, but what else can O'Ryan do? #speaker:Graciana #mood:think
+
+Well, I'm unsure of everything they can do, but I've heard O'Ryan can turn themself into a blackhole that consumes entire galaxies into his body... Certainly useful... #speaker:Morgan #mood:neutral
+
+...Useful...Yeah... #speaker:Graciana #mood:sad
+Can you please make sure they don't do that to my galaxy though? I prefer not to live inside of their belt for the rest of my life. #speaker:Graciana #mood:neutral
+
+ Fair enough, although I'm sure in my current state neither one of us would even notice the difference. #speaker:Morgan #mood:happy
+ 
+ Alrighty then, moving on. #speaker:Graciana #mood:neutral
+
+->GoodContinued
+**[Do the dirtywork themself?]
+
+Maybe O'Ryan would do the dirtywork themself? #speaker:Graciana #mood:think
+
+It would be strange if they did. #speaker:Morgan #mood:neutral
+Even though I am far weaker than I once was, I should still be more than enough to be considered a powerful ally...
+
+ Right, but isn't O'Ryan made up of multiple galaxies and stuff? #speaker:Graciana #mood:think
+ Doesn't that make them like, a god level threat, since they control the existence of probably a couple trillion people or something? #speaker:Graciana #mood:think
+ 
+ Perhaps... #speaker:Morgan
+ I would be confused on why they would even help me reclaim my throne, instead of taking it for themself, if it was that simple for them... #speaker:Morgan #mood:neutral
+ 
+Good point. #speaker:Graciana #mood:neutral
+It's pretty hard to understand what goes on in that Void's head most of the time anyways, so until they show signs of the worst, expect the best I guess? #speaker:Graciana #mood:think
+
+I will still have to plan for the worse just in case, but I am somewhat optimistic about their indifference being a large factor in coming to my aid. #speaker:Morgan #mood:happy
+
+Either way, this is a huge win Morgan! #speaker:Graciana #mood:happy
+
+Indeed... #speaker:Morgan #mood:neutral
+The battle has yet to be won, however the sun seems to be rising upon a new era once more. #speaker:Morgan #mood:happy
+
+->GoodContinued
+**[Make a deal?]
+
+Maybe O'Ryan wants to make some sort of deal with you?
+ 
+While it is true most beings of tremendous power can and will make deals with creatures lesser than them, it is rare for one to make a deal with a being closer to their own power. #speaker:Morgan #mood:neutral
+It would be unusual to say the least, but I also am not sure just how powerful O'Ryan is.
+It appears they can travel seamlessly throughout the universe without issue, and is comprised of multiple galaxies fueling their body.
+But I have never seen or heard of them outside rumors, and their branching out to the food industry is rather unusual for a Voidspawn. #speaker:Morgan #mood:neutral
+
+Oh yeah? What kind of rumors happened before they became a diner owner? #speaker:Graciana #mood:think
+
+Since you work beneath them, I fear anything I say could directly cause you to change careers which would lead to these conversations ending, so I shall refrain from telling you for now. #speaker:Morgan #mood:sad
+Roger that, message received loud and clear. #speaker:Graciana #mood:neutral
 
 ->GoodContinued
 ==GoodContinued==
 
- Well I would pick up from where I left off, continue my reign and rule over the passed souls of the dead for all eternity.#speaker:Morgan #mood:happy
- Perhaps add a few more vacations and time off to see the worlds and universes far and wide #speaker:Morgan #mood:happy
- But once I return to my throne I want to destroy the void, allow the universe to see its birthplace. And get a fresh view, no inky blackness every day, just a starry filled space slowly passing by. #speaker:Morgan #mood:happy
- I will miss my freedom as someone always must be on the throne to maintain the natural balance of order in the collection and passing on of souls. But perhaps this time I will try talking to them more, learning about their short but interesting lives#speaker:Morgan #mood:happy 
- Maybe I will even learn a thing or two from them, such as I have with you Graciana #speaker:Morgan #mood:happy
- Hey now Im still very much in the flesh for the moment #speaker:Graciana #mood:happy
- But I appreciate that, and think all mentioned desires sound wonderful for you #speaker:Graciana #mood:happy
- I hope you can still visit and stop by every now and then, I will miss my favorite Goddess #speaker:Graciana #mood:happy
- WAIT, If I pray to you or something does that mean we can talk over long distance #speaker:Graciana #mood:happy
- Like an old fashioned occult version of phone service? #speaker:Graciana #mood:happy
- ahahahahahahah AHAHAHAHAHAHA ahahahahaha #speaker:Morgan #mood:happy
- You would make a wonderful jester my dear, but I had not thought about that #speaker:Morgan #mood:happy
- If I do regain my position on the throne and reclaim my title as Queen of the Damned, it would make sense like any other being I have worked with in the past you would be able to reach out to me through prayer and communions #speaker:Morgan #mood:happy
- Would seances work too? I think I still have some candles and a board from when I was younger #speaker:Graciana #mood:happy
- Oh? Worshiped Eldritch beings before me now have we?
+I do have to ask, though... #speaker:Graciana #mood:neutral
+What would you do after you regain your power? #speaker:Graciana #mood:think
+
+Well, I would pick up from where I left off, continue my reign, and rule over the passed souls of the dead for all eternity. #speaker:Morgan #mood:neutral
+Perhaps add a few more vacations and time off to see the worlds and universes far and wide. #speaker:Morgan #mood:happy
+But once I return to my throne, I want to destroy the void--Allow the universe to see its birthplace. And get a fresh view. No inky blackness every day, just a starry-filled space slowly passing by. #speaker:Morgan #mood:happy
+I will miss my freedom as someone always must be on the throne, to maintain natural balance of order in the collection and passing on of souls... #speaker:Morgan #mood:sad
+But perhaps this time I will try talking to them more, and learning about their short but interesting lives. #speaker:Morgan #mood:neutral
+Maybe I will even learn a thing or two from them, such as I have with you, Graciana. #speaker:Morgan #mood:happy
+
+Hey now, I'm still very much in the flesh for the moment. #speaker:Graciana #mood:angry
+But I appreciate that, and think all mentioned desires sound wonderful for you! #speaker:Graciana #mood:happy
+I hope you can still visit and stop by every now and then, I'll miss my favorite Goddess. #speaker:Graciana #mood:happy
+WAIT, If I pray to you or something, does that mean we can talk over long distance? #speaker:Graciana #mood:think
+Like an old fashioned occult version of phone service?
+ 
+Hah... #speaker:Morgan #mood:happy
+Hahahaha!
+You would make a wonderful jester my dear, but I had not thought about that. #speaker:Morgan #mood:happy
+If I do regain my position on the throne and reclaim my title as Queen of the Damned, like any other being I have worked with in the past, you would be able to reach out to me through prayer and communions. #speaker:Morgan #mood:neutral
+
+Would seances work too? I think I still have some candles and a board from when I was younger... #speaker:Graciana #mood:think
+
+Oh? Worshipped Eldritch beings before me now, have we? #speaker:Morgan #mood:neutral
  More like trying to see if anyone or anything was out there, but no not really. It ended up being an awkward hour or me holding my hand on a board with nothing moving #speaker:Graciana #mood:happy
  well perhaps I can use that as a way to stay in touch, even after I go back home. #speaker:Morgan #mood:happy
  One way or another you have provided me with a great service that I shall not forget Graciana, and for that you have my thanks. #speaker:Morgan #mood:happy
@@ -147,177 +199,177 @@ So how do you think he will go about it? #speaker:Morgan #mood:happy
 ==MorganBadEnding==
 Is he offering himself as a sacrifice for you to regain power? #speaker:Graciana
 
-Perhaps he is offering himself as sacrifice for my rebirth #speaker:Morgan #mood: neutral
+Perhaps he is offering himself as sacrifice for my rebirth #speaker:Morgan #mood:neutral
 
-It is a rare offer to see in most beings as it means the end for one so another can live on a new, a very stupid notion for the one that dies. #speaker:Morgan #mood: neutral
+It is a rare offer to see in most beings as it means the end for one so another can live on a new, a very stupid notion for the one that dies. #speaker:Morgan #mood:neutral
 
-But if he is willing to offer himself for my sake I am willing to receive this gift with open arms #speaker:Morgan #mood: neutral
+But if he is willing to offer himself for my sake I am willing to receive this gift with open arms #speaker:Morgan #mood:neutral
 
-Hey now, there is no reason in my mind that he would willingly do this after meeting you for mere what? Minutes? Seconds? #speaker:Graciana #mood: neutral
+Hey now, there is no reason in my mind that he would willingly do this after meeting you for mere what? Minutes? Seconds? #speaker:Graciana #mood:neutral
 
-I believe we conversed for a minute exactly before he departed #speaker:Morgan #mood: neutral
+I believe we conversed for a minute exactly before he departed #speaker:Morgan #mood:neutral
 
-Dam him and his short but precise timing #speaker:Graciana #mood: neutral
+Dam him and his short but precise timing #speaker:Graciana #mood:neutral
 
-Well what else could he have meant by this?#speaker:Graciana #mood: neutral
+Well what else could he have meant by this?#speaker:Graciana #mood:neutral
 
-There is no other way I can see it in my mind as one Eldritch being to another #speaker:Morgan #mood: neutral
+There is no other way I can see it in my mind as one Eldritch being to another #speaker:Morgan #mood:neutral
 
-But what about the Diner, and my job, and all of his customers. Without him everything falls apart, I don't know if this is a good idea  #speaker:Graciana #mood: neutral
+But what about the Diner, and my job, and all of his customers. Without him everything falls apart, I don't know if this is a good idea  #speaker:Graciana #mood:neutral
 
-You said you would be willing to do anything to help me and see me return to power, yes? #speaker:Morgan #mood: neutral 
+You said you would be willing to do anything to help me and see me return to power, yes? #speaker:Morgan #mood:neutral 
 
-Would you not want to see me happy Graciana? #speaker:Morgan #mood: neutral
+Would you not want to see me happy Graciana? #speaker:Morgan #mood:neutral
 
-Well yes I do ...... it just doesn't make sense to me #speaker:Graciana #mood: neutral
+Well yes I do ...... it just doesn't make sense to me #speaker:Graciana #mood:neutral
 
-Well rationalize it for yourself and maybe we can walk through this together before he arrives #speaker:Morgan #mood: neutral
+Well rationalize it for yourself and maybe we can walk through this together before he arrives #speaker:Morgan #mood:neutral
 
-Well...... #speaker:Graciana #mood: neutral
+Well...... #speaker:Graciana #mood:neutral
 
 **[Maybe he built the diner chain for someone else to take over for him?]
 
-Maybe this was some sort of long con operation, to make this diner chain successful and retire for a life of convenience after giving all of his power over to someone else to run it for him? #speaker:Graciana #mood: neutral
+Maybe this was some sort of long con operation, to make this diner chain successful and retire for a life of convenience after giving all of his power over to someone else to run it for him? #speaker:Graciana #mood:neutral
 
-Well even if that is the case I have no intention to run his business once he is gone so he will have to deal with that aspect of his life without his power #speaker:Morgan #mood: neutral
+Well even if that is the case I have no intention to run his business once he is gone so he will have to deal with that aspect of his life without his power #speaker:Morgan #mood:neutral
 
-right.... I assume we would all be out of jobs then without him #speaker:Graciana #mood: neutral
+right.... I assume we would all be out of jobs then without him #speaker:Graciana #mood:neutral
 
-I would have to go back to job hunting on Earth...... #speaker:Graciana #mood: neutral 
+I would have to go back to job hunting on Earth...... #speaker:Graciana #mood:neutral 
 
-Fear not my dear, once I gain his power I will leave you enough coin to support yourself for eons for the great services you have provided me #speaker:Morgan #mood: neutral
+Fear not my dear, once I gain his power I will leave you enough coin to support yourself for eons for the great services you have provided me #speaker:Morgan #mood:neutral
 
-Really? #speaker:Graciana #mood: neutral
+Really? #speaker:Graciana #mood:neutral
 
-of course! It would be insulting for me to not take care of those who have taken care of me #speaker:Morgan #mood: neutral
+of course! It would be insulting for me to not take care of those who have taken care of me #speaker:Morgan #mood:neutral
 
-well thank you, that means a lot Morgan. But I do prefer the work. Without work I am nothing and when i am nothing I am very sad #speaker:Graciana #mood: neutral
+well thank you, that means a lot Morgan. But I do prefer the work. Without work I am nothing and when i am nothing I am very sad #speaker:Graciana #mood:neutral
 
 ->BadContinued
 **[Maybe he won't actually die but will just lose his strength?]
 
-that is more likely for a creature of his stature, with his current power he would not die for sharing even 90% of what he currently holds within him #speaker:Morgan #mood: neutral
+that is more likely for a creature of his stature, with his current power he would not die for sharing even 90% of what he currently holds within him #speaker:Morgan #mood:neutral
 
-oh well thats good news, he could just look after the diners even if he does not have his Eldritch strength right? #speaker:Graciana #mood: neutral 
+oh well thats good news, he could just look after the diners even if he does not have his Eldritch strength right? #speaker:Graciana #mood:neutral 
 
-Of course! He would have to find a new way to get around the universes, but besides that nothing else should impair his business empire. #speaker:Morgan #mood: neutral
+Of course! He would have to find a new way to get around the universes, but besides that nothing else should impair his business empire. #speaker:Morgan #mood:neutral
 
-Besides a hostile takeover from a powerful being who seeks to take his business in his weakened state perhaps #speaker:Morgan #mood: neutral
+Besides a hostile takeover from a powerful being who seeks to take his business in his weakened state perhaps #speaker:Morgan #mood:neutral
 
-Why would you even suggest that! What if that happens now! #speaker:Graciana #mood: neutral
+Why would you even suggest that! What if that happens now! #speaker:Graciana #mood:neutral
 
-Oh my dear, your specicies has always held onto the belief of saying something out loud causing it to happen. #speaker:Morgan #mood: neutral
+Oh my dear, your specicies has always held onto the belief of saying something out loud causing it to happen. #speaker:Morgan #mood:neutral
 
-Its just not true, I have wished the downfall of many who were both weak and strong and it only happened when I took action. #speaker:Morgan #mood: neutral
+Its just not true, I have wished the downfall of many who were both weak and strong and it only happened when I took action. #speaker:Morgan #mood:neutral
 
-Keep that in mind when you are looking towards your future in O'Ryans employment #speaker:Morgan #mood: neutral
+Keep that in mind when you are looking towards your future in O'Ryans employment #speaker:Morgan #mood:neutral
 
-Right....... #speaker:Graciana #mood: neutral
+Right....... #speaker:Graciana #mood:neutral
 
 
 
 ->BadContinued
 **[I dont know man maybe he is just crazy]
 
-Maybe he just lost his shit finally after working in and being lost in his own void for eons #speaker:Graciana #mood: neutral
+Maybe he just lost his shit finally after working in and being lost in his own void for eons #speaker:Graciana #mood:neutral
 
-Whether that means he will give up his empire or not through logic and clarity of mind does not change my goals #speaker:Morgan #mood: neutral
+Whether that means he will give up his empire or not through logic and clarity of mind does not change my goals #speaker:Morgan #mood:neutral
 
-Although it does lead me to question if I could get more than just his power if he has lost his sanity #speaker:Morgan #mood: neutral
+Although it does lead me to question if I could get more than just his power if he has lost his sanity #speaker:Morgan #mood:neutral
 
-Hey now, lets not kick dead horses  #speaker:Graciana #mood: neutral
+Hey now, lets not kick dead horses  #speaker:Graciana #mood:neutral
 
-Is that an actual saying or did you just make that up just now? #speaker:Morgan #mood: neutral
+Is that an actual saying or did you just make that up just now? #speaker:Morgan #mood:neutral
 
-I just made it up I panicked and tried to make something related to your whole theme I apologize please don't turn me into a cat #speaker:Graciana #mood: neutral
+I just made it up I panicked and tried to make something related to your whole theme I apologize please don't turn me into a cat #speaker:Graciana #mood:neutral
 
-Oh my Dear we are far past the cat jokes now, fear not it was relevant and funny. I think I will make note of that for the future #speaker:Morgan #mood: neutral
+Oh my Dear we are far past the cat jokes now, fear not it was relevant and funny. I think I will make note of that for the future #speaker:Morgan #mood:neutral
 
-oh gods what I have done #speaker:Graciana #mood: neutral
+oh gods what I have done #speaker:Graciana #mood:neutral
 
 
 ->BadContinued
 ==BadContinued==
 
-Just remember please try not to outright kill him even if he is offering himself as some sort of battery for you to drain #speaker:Graciana #mood: neutral
+Just remember please try not to outright kill him even if he is offering himself as some sort of battery for you to drain #speaker:Graciana #mood:neutral
 
-oh that is a good example, you are excellent at this Graciana #speaker:Morgan #mood: neutral
+oh that is a good example, you are excellent at this Graciana #speaker:Morgan #mood:neutral
 
-I appreciate the kind words but not the time to be complementing one another #speaker:Graciana #mood: neutral
+I appreciate the kind words but not the time to be complementing one another #speaker:Graciana #mood:neutral
 
-Now, can we go over everything we have talked about over the past few days we have talked together #speaker:Graciana #mood: neutral
+Now, can we go over everything we have talked about over the past few days we have talked together #speaker:Graciana #mood:neutral
 
-All of the friendship talks, the bettering yourself talks, all of the your happiness matters talks combined into one its good to help yourself but maybe not destroy everything else around you talk? #speaker:Graciana #mood: neutral
+All of the friendship talks, the bettering yourself talks, all of the your happiness matters talks combined into one its good to help yourself but maybe not destroy everything else around you talk? #speaker:Graciana #mood:neutral
 
-I don't remember that last part #speaker:Morgan #mood: neutral
+I don't remember that last part #speaker:Morgan #mood:neutral
 
-That's on me it's normally implied but for you it totally makes sense to not be #speaker:Graciana #mood: neutral
+That's on me it's normally implied but for you it totally makes sense to not be #speaker:Graciana #mood:neutral
 
-Right an attempt will be made then upon my throne being reclaimed #speaker:Morgan #mood: neutral
+Right an attempt will be made then upon my throne being reclaimed #speaker:Morgan #mood:neutral
 
-Morgan #speaker:Graciana #mood: neutral
+Morgan #speaker:Graciana #mood:neutral
 
-Graciana #speaker:Morgan #mood: neutral
+Graciana #speaker:Morgan #mood:neutral
 
-In case this is the last time we do get to speak with one another I just want you to know it has been a genuine pleasure getting to know you #speaker:Graciana #mood: neutral
+In case this is the last time we do get to speak with one another I just want you to know it has been a genuine pleasure getting to know you #speaker:Graciana #mood:neutral
 
-Eldritch horror aside you are a very interesting and wonderful being #speaker:Graciana #mood: neutral
+Eldritch horror aside you are a very interesting and wonderful being #speaker:Graciana #mood:neutral
 
-And I hope this power does not change that #speaker:Graciana #mood: neutral
+And I hope this power does not change that #speaker:Graciana #mood:neutral
 
-My Dear nothing could ever change what you have done for me and how I feel about my new but trusted friend #speaker:Morgan #mood: neutral
+My Dear nothing could ever change what you have done for me and how I feel about my new but trusted friend #speaker:Morgan #mood:neutral
 
-Alright then, that makes me feel slightly better about this #speaker:Graciana #mood: neutral
+Alright then, that makes me feel slightly better about this #speaker:Graciana #mood:neutral
 
-Just like your wise man once said, A new day is upon us and then so a new dawn greets our vision #speaker:Morgan #mood: neutral
+Just like your wise man once said, A new day is upon us and then so a new dawn greets our vision #speaker:Morgan #mood:neutral
 
-Was that the actual quote? #speaker:Graciana #mood: neutral
+Was that the actual quote? #speaker:Graciana #mood:neutral
 
-Of course, has it changed in recent history? #speaker:Morgan #mood: neutral
+Of course, has it changed in recent history? #speaker:Morgan #mood:neutral
 
-Nevermind #speaker:Graciana #mood: neutral
+Nevermind #speaker:Graciana #mood:neutral
 
-Good luck Morgan, I hope the throne fits you better now. And that you stay in touch somehow or at least maybe talk to some of the departed souls every now and then #speaker:Graciana #mood: neutral
+Good luck Morgan, I hope the throne fits you better now. And that you stay in touch somehow or at least maybe talk to some of the departed souls every now and then #speaker:Graciana #mood:neutral
 
-That I shall, Farewell Graciana #speaker:Morgan #mood: neutral
+That I shall, Farewell Graciana #speaker:Morgan #mood:neutral
 
-Farewell Morgan #speaker:Graciana #mood: neutral
+Farewell Morgan #speaker:Graciana #mood:neutral
 
 //transition here im gonna do this don't worry this comment is just for myself
 //i gotta do that like speaker replacement thingy
 
-YESSSS THE TIME IS NOW O'RYAN COME TO ME #speaker:Morgan #mood: neutral
+YESSSS THE TIME IS NOW O'RYAN COME TO ME #speaker:Morgan #mood:neutral
 
-GRANT ME WHAT IS MINE, RELINQUISH ONTO ME YOUR STRENGTH SO I MAY RULE THE VOID ONCE MORE #speaker:Morgan #mood: neutral
+GRANT ME WHAT IS MINE, RELINQUISH ONTO ME YOUR STRENGTH SO I MAY RULE THE VOID ONCE MORE #speaker:Morgan #mood:neutral
 
-(You watch as Morgan dives into O'Ryans stomach and the galaxies inside twinkle out of existence one by one) #speaker:Graciana #mood: neutral
+(You watch as Morgan dives into O'Ryans stomach and the galaxies inside twinkle out of existence one by one) #speaker:Graciana #mood:neutral
 
-(O'Ryan stands completely still as the life is sapped of him and slowly turns to look at you before saying "Be in work early tomorrow Swatts needs help with inventory" before exploding into a infinite amount of pieces of void that fizzle out of existence) #speaker:Graciana #mood: neutral
+(O'Ryan stands completely still as the life is sapped of him and slowly turns to look at you before saying "Be in work early tomorrow Swatts needs help with inventory" before exploding into a infinite amount of pieces of void that fizzle out of existence) #speaker:Graciana #mood:neutral
 
-MINEEEEEEEEEEEEEEEEEE FINALLY MMMMIIIIIINNNNNEEEEEEEEEEEEEEEEEEE #speaker:Morgan #mood: neutral
+MINEEEEEEEEEEEEEEEEEE FINALLY MMMMIIIIIINNNNNEEEEEEEEEEEEEEEEEEE #speaker:Morgan #mood:neutral
 
-I CAN FEEL THE STRENGTH SURGING THROUGH ME #speaker:Morgan #mood: neutral
+I CAN FEEL THE STRENGTH SURGING THROUGH ME #speaker:Morgan #mood:neutral
 
-GRACIANA, I WILL TAKE WHAT YOU SAID TO HEART. SETTLING FOR HAPPINESS IN MY CURRENT STATE WOULD BE AN INSULT TO MYSELF #speaker:Morgan #mood: neutral
+GRACIANA, I WILL TAKE WHAT YOU SAID TO HEART. SETTLING FOR HAPPINESS IN MY CURRENT STATE WOULD BE AN INSULT TO MYSELF #speaker:Morgan #mood:neutral
 
-THE THRONE IS NOT ENOUGH NOW I WISH TO SIT ABOVE ALL CREATURES, ALL UNIVERSES, THE VOID SHALL NOT CONTAIN ME ANY LONGER #speaker:Morgan #mood: neutral
+THE THRONE IS NOT ENOUGH NOW I WISH TO SIT ABOVE ALL CREATURES, ALL UNIVERSES, THE VOID SHALL NOT CONTAIN ME ANY LONGER #speaker:Morgan #mood:neutral
 
-FROM THIS DAY FORWARD I, THE MORGAN, GODDESS OF NOT JUST THE DEPARTED, BUT NOW THE LIVING AND THE DEAD WILL RULE FOR ETERNITY OVER ALL KINGDOMS #speaker:Morgan #mood: neutral
+FROM THIS DAY FORWARD I, THE MORGAN, GODDESS OF NOT JUST THE DEPARTED, BUT NOW THE LIVING AND THE DEAD WILL RULE FOR ETERNITY OVER ALL KINGDOMS #speaker:Morgan #mood:neutral
 
-AHAHHAHAHAHAHHAHAHAHHAHHAHAHHA #speaker:Morgan #mood: neutral
+AHAHHAHAHAHAHHAHAHAHHAHHAHAHHA #speaker:Morgan #mood:neutral
 
-Oh and here is your tip dear #speaker:Morgan #mood: neutral
+Oh and here is your tip dear #speaker:Morgan #mood:neutral
 
-AHAHAHHAHAHHAHAHAHHAHHA #speaker:Morgan #mood: neutral
+AHAHAHHAHAHHAHAHAHHAHHA #speaker:Morgan #mood:neutral
 
-(The Morgans form vanishes into smoke leaving you alone in the diner confused, terrified for what you have unleashed upon the universe) #speaker:Morgan #mood: neutral
+(The Morgans form vanishes into smoke leaving you alone in the diner confused, terrified for what you have unleashed upon the universe) #speaker:Morgan #mood:neutral
 
-What have I done.............. O'Ryan I am so sorry#speaker:Graciana #mood: neutral
-....................... #speaker:Graciana #mood: neutral
+What have I done.............. O'Ryan I am so sorry#speaker:Graciana #mood:neutral
+....................... #speaker:Graciana #mood:neutral
 
-(You hear a faint "Apology accepted now get back to work" from the surrounding space around you) #speaker:Graciana #mood: neutral
+(You hear a faint "Apology accepted now get back to work" from the surrounding space around you) #speaker:Graciana #mood:neutral
 
-This diner makes no sense anymore............ #speaker:Graciana #mood: neutral
+This diner makes no sense anymore............ #speaker:Graciana #mood:neutral
 ~GoToAppartment()
 
 ->END
