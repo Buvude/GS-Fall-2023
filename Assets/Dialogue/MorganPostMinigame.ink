@@ -3,9 +3,9 @@ INCLUDE BADialogue.ink
 EXTERNAL StartTTMicro()
 ~QuickLoad()
 
-{winState=="loss":
-    ->retry
-}
+// {winState=="loss":
+//     ->retry
+// }
 
 ->DecideFate
 ==retry==
@@ -21,7 +21,7 @@ EXTERNAL StartTTMicro()
 
 ==DecideFate==
 {
--currentConvo=="GMG1":
+-currentConvo=="MMG1":
     {
     -winState=="won":
     ~affectionG+=2
@@ -32,7 +32,7 @@ EXTERNAL StartTTMicro()
     ~convo_numberG=1
     ->fail1
     }
--currentConvo=="GMG2":
+-currentConvo=="MMG2":
     {
     -winState=="won":
      ~affectionG+=3
@@ -43,7 +43,7 @@ EXTERNAL StartTTMicro()
     ~convo_numberG=2
     ->fail2
     }
--currentConvo=="GMG3":
+-currentConvo=="MMG3":
     {
     -winState=="chaos":
     ~chaosG+=4
