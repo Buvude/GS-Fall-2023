@@ -43,7 +43,7 @@ INCLUDE BADialogue.ink
         
 ==TheGameBegins==
 
-    (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana #bgm:dinMorning
+    (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana 
     (Here we are... O'Ryan's Diner...) #speaker:Graciana #mood:think 
     (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)
     (I still haven’t met or even seen the owner; I interviewed online. They said to find a “fly guy,” whatever that means–) 

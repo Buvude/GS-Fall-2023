@@ -84,7 +84,7 @@ You are mortal, a spec of dust home to the infinite void, one whose lifetime wil
  ......( Morgan stares at you for a few moments before you finally realize they mean they trust you) #speaker:Morgan #mood:neutral
   Oh well I’m flattered, but I have to go check in with Swatts to see if he needs any help real quick.... Maybe if there isn’t any other customers that need serving I can talk with you some more? #speaker:Graciana #mood:neutral
  That is..... Acceptable..... #speaker:Morgan #mood:neutral
- (You return and all other parts of the diner are pitch black, only a small note written in black ink reads see you soon)#speaker:Graciana #mood:neutral
+ (You return and all other parts of the diner are pitch black, only a small note written in black ink reads see you soon)#speaker:Graciana #mood:neutral 
  
 
  ~TTMLevel=1
