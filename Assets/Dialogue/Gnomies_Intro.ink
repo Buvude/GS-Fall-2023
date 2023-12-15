@@ -31,7 +31,7 @@ Not that it matters to you, human, but my partner below me is known as Hograt. #
 
 ("Partner" sounds a bit too generous for how he's been acting...) #speaker:Graciana
 
-Please do not address Hograt, his lesser IQ makes him more susceptible to distractions.
+Please do not address Hograt, his lesser IQ makes him more susceptible to distractions. #speaker:Himber
 
 (This dude needs to be humbled, desperately.) #speaker:Graciana #mood:angry
 Well, what can I get for you anyways?
@@ -57,11 +57,11 @@ What took you so long? Do you have no care for your paying patrons?! I'm famishe
 
 (He stabs through the slice with his fork, and gulps it all down without even chewing!) #speaker:Graciana
 (Did he not notice the seasoning?)
-(...Or does he just not care...?)
+(...Or does he just not care...?) #speaker:Graciana #mood:think
 
 Ah... Simply scrumptious! #speaker:Himber #mood:happy
 
-R-right... #speaker:Graciana
+R-right... #speaker:Graciana #mood:neutral
 Are you sure Hograt doesn't want anything? #speaker:Graciana #mood:think
 
 Human, for the last time... #speaker:Himber #mood:angry
@@ -88,7 +88,7 @@ Maybe I can just... Take this? #speaker:Graciana #mood:think
 
 Is this good...? #speaker:Graciana #mood:think
 
-Yes, yes! Put it here, here! #speaker:Himber #mood:happy
+Yes, yes! Put it here, here! #speaker:Himber #mood:neutral
 (I hand the plate to Hograt, who has his hands outstretched.) #speaker:Graciana #mood:neutral
 (He gently takes it, and shoves the whole thing in his mouth--plate and all!)
 
@@ -99,7 +99,7 @@ Well, I'm glad he's enjoying it... Somehow... #speaker:Graciana #mood:happy
 Yes, subgnomes are quite fond of ores and other aggregates of mineral. #speaker:Himber
 As you can tell, Granite is among Hograt's favorites. Isn't that right, Hograt?
 
-(Hograt nods and smiles with his teeth. Those things look like they could cut through diamonds...) #speaker:Graciana
+(Hograt nods and smiles with his teeth. Those things look like they could cut through diamonds...) #speaker:Graciana #mood:neutral
 (I guess he really does enjoy it? But I'm still confused on the... relationship... going on here...) #speaker:Graciana #mood:think
 Well... Is there anything else I can get for you? #speaker:Graciana #mood:neutral
 

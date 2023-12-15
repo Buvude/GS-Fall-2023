@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
 ~convo_numberF=1
-(What's with this kid and the spacesuit?) #speaker:Graciana #mood:think #ss:Fred:neutral
+(What's with this kid and the spacesuit?) #speaker:Graciana #mood:think
 (That logo...)
 (Oh, UMS! Universal Mail System! He's a postboy? But why so young...?)
 

@@ -6,7 +6,7 @@ INCLUDE globals.ink
 ==MainCS3==
 Ay, Gracie, ya got a minute? #speaker:Chef Swatts
 
-* [Yeah]
+* [Yeah.]
     Yeah, I got some time. #speaker:Graciana #mood:neutral
 
     Ay, good good! c'mere for a sec, ya? #speaker:Chef Swatts #mood:neutral
@@ -25,7 +25,7 @@ Ay, Gracie, ya got a minute? #speaker:Chef Swatts
     }
     ->DONE //temporary place holder so no error
     
-* I'm busy
+* [I'm busy, sorry...]
     ~GoToDiner()
     -> DONE
     
@@ -45,7 +45,7 @@ I wanna help tha folk of Dipterra. I feel like... Like I gotta. Like it's my... 
 
 Destiny... #speaker:Graciana #mood:think
 
-Ya. I got my own Personal Portal Device, an' I can bring tha leftover scraps from here, an' go scoutin' around, handing 'em out to whoever seems like they strugglin'.
+Ya. I got my own Personal Portal Device, an' I can bring tha leftover scraps from here, an' go scoutin' around, handing 'em out to whoever seems like they strugglin'. #speaker:Chef Swatts
 I been avoiding goin' back for years an' years. I think it's time I finally pay a proper visit to where I'm from, ya?
 Besides...
 I feel... Guilty. Havin' this Portal Device. This life. This job. All this food...

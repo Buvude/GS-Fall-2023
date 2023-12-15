@@ -66,7 +66,7 @@ I am--
 The Morgan, if you wish to use my full title. #speaker:Morgan #mood:neutral
 Right... Well, Miss The Morgan, I hate to poke my nose where it doesn’t belong, but you seem to be troubled by something. Is there anything I can help you with? #speaker:Graciana #mood:think
 
-I wish not to burden your mind with my quarries as you preside over your dominion of O'Ryan's Diner. I am fine.
+I wish not to burden your mind with my quarries as you preside over your dominion of O'Ryan's Diner. I am fine. #speaker:Morgan
 
 (Well, O'Ryan doesn't come in 'til later, and she seems to be going through something.... Maybe I could talk with her a little bit?) #speaker:Graciana #mood:think
 
