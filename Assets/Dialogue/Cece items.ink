@@ -1,4 +1,13 @@
 INCLUDE globals.ink
+{
+    -chaosCC>=chaosTotalCC:
+        ->CCchest
+    -affectionCS>=0:
+        ->CCsword
+    -affectionCS<0:
+        ->CCletter
+    }
+
 ==CCsword==
 //good
 oh wow a sword #speaker:Graciana #pu:ccsword

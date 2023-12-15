@@ -8,7 +8,7 @@ CeeCee says placeholder
     ~affectionCC-=1
     ->EndConvo
 *[chaos option]
-    ~chaosCC+=1
+    ~chaosCC+=2
     ->EndConvo
 
 ===EndConvo===

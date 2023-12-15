@@ -1,5 +1,13 @@
-INCLUDE globals.ink
 
+INCLUDE globals.ink
+{
+    -chaosF>=chaosTotalF:
+        ->Flicense
+    -affectionF>=0:
+        ->Fletter
+    -affectionF<0:
+        ->Fhelmet
+    }
 ==Fletter==
 //good
 Fred gave me this after he started attending school... #speaker:Graciana #mood:neutral #pu:fletter

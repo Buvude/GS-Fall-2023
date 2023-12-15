@@ -24,6 +24,7 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+        public Scrollbar sb;
         public GameObject autoText;
         public float autoPauseFloat;
         internal bool autoMode;
@@ -111,7 +112,7 @@ namespace InterDineMension.Manager
 
         [SerializeField] private GameObject[] choices;
 
-        [SerializeField] public TextAsset BAMicroArcadeConvo;
+        [SerializeField] public TextAsset IntroOryan;
         [SerializeField] public TextAsset TTMicroArcadeConvo;
         [SerializeField] private TextAsset loadGlobalsJSON;
         
@@ -298,7 +299,7 @@ namespace InterDineMension.Manager
             else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(2))
             {
                 charSpeakTo = speakingTo.Swatts;
-                EnterDialogueMode(BAMicroArcadeConvo);
+                EnterDialogueMode(IntroOryan);
             }
             else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(5))
             {
@@ -373,7 +374,7 @@ namespace InterDineMension.Manager
         public void StartMorningConvo()
         {
             charSpeakTo = speakingTo.Swatts;
-            if (PlayerPrefs.GetInt("convo_numberOR") == 6)
+            if (PlayerPrefs.GetInt("convo_numberOR") == 5)
             {
                 cS.sR.sprite = cS.CsspriteDictionary["neutral"];
                 PlayerPrefs.SetString("weekDay", "Fin");
@@ -899,7 +900,7 @@ namespace InterDineMension.Manager
         public void debugCommand()
         {
             
-            EnterDialogueMode(BAMicroArcadeConvo);
+            EnterDialogueMode(IntroOryan);
         }
 
         private void ContinueStory()
@@ -920,7 +921,9 @@ namespace InterDineMension.Manager
                 }
                 if (historyLog.Count > 0)
                 {
-                    historyText.text += $"{charSpeak.ToString()}: {historyLog[historyLog.Count-1]}";
+                    //string temp=historyText.text.ToString();
+                    historyText.text = $"{charSpeak.ToString()}: {historyLog[historyLog.Count-1]}" +
+                        $" {historyText.text.ToString()}";
                 }
                 
                 displayLineCorutine = StartCoroutine(DisplayLine(currentStory.Continue()));
@@ -1513,6 +1516,14 @@ namespace InterDineMension.Manager
                         break;
                 }
             }
+        }
+        public void musicBAM()
+        {
+            musicFadeIn(musicLibrary["BAM"]);
+        }
+        public void afternoonMusic()
+        {
+            musicFadeIn(musicLibrary["dinDay"]);
         }
         public IEnumerator CGFadeIn(Sprite temp)
         {

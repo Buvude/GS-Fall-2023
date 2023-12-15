@@ -13,7 +13,7 @@ VAR tempHolder =""
     {
     -BAMLevel==0:
     // ~Random_Holder=Random(1,3)
-        Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral #ss:spotlight:Chef Swatts
+        Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral #ss:spotlight:Chef Swatts 
         ~tempHolder=pop_random(BBuns1)
         For the bottom bun, it's {tempHolder}. #BBun:{tempHolder}
         ~tempHolder=pop_random(Pickles1)

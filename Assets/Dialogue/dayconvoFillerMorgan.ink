@@ -8,7 +8,7 @@ Morgan says placeholder
     ~affectionM-=1
     ->EndConvo
 *[chaos option]
-    ~chaosM+=1
+    ~chaosM+=2
     ->EndConvo
 
 
