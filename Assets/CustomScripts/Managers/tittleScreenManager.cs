@@ -3,11 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using static Unity.Collections.AllocatorManager;
 
 namespace InterDineMension.Manager
 {
     public class tittleScreenManager : MonoBehaviour
     {
+        public Image CGFade;
+        public Sprite black;
         public Button loadgame;
         public GameObject warning;
         // Start is called before the first frame update
@@ -22,7 +25,7 @@ namespace InterDineMension.Manager
         // Update is called once per frame
         void Update()
         {
-    
+
         }
 
         public void NewGameStart()
@@ -30,7 +33,7 @@ namespace InterDineMension.Manager
             PlayerPrefs.DeleteAll();
             PlayerPrefs.SetString("newGame", "true");
             PlayerPrefs.SetString("timeOfDay", "morning");
-            SceneManager.LoadScene(1);
+            StartCoroutine(EndSceneFadeOut());
         }
 
         public void LoadGameStart()
@@ -39,15 +42,17 @@ namespace InterDineMension.Manager
             {
                 PlayerPrefs.SetString("newGame", "false");
                 PlayerPrefs.SetString("timeOfDay", "morning");
-                SceneManager.LoadScene(1);
+                StartCoroutine(EndSceneFadeOut());
+
             }
             else
             {
                 PlayerPrefs.SetString("newGame", "false");
                 PlayerPrefs.SetString("timeOfDay", "Apt");
-                SceneManager.LoadScene(5);
+                StartCoroutine(EndSceneFadeOut());
+
             }
-            
+
         }
 
         public void QuitGame()
@@ -65,6 +70,17 @@ namespace InterDineMension.Manager
             {
                 NewGameStart();
             }
+        }
+        public IEnumerator EndSceneFadeOut()
+        {
+            CGFade.gameObject.SetActive(true);
+            CGFade.sprite = black;
+            for (float a = 0; a <= 1.1; a += .01f)
+            {
+                yield return new WaitForSeconds(.01f);
+                CGFade.color = new UnityEngine.Color(1, 1, 1, a);
+            }
+            SceneManager.LoadScene(1);
         }
     }
 }

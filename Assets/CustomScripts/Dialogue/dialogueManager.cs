@@ -24,6 +24,7 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+        public Sprite black;
         public Scrollbar sb;
         public GameObject autoText;
         public float autoPauseFloat;
@@ -132,6 +133,8 @@ namespace InterDineMension.Manager
         /// <summary>
         /// this is for the BAMicro game
         /// </summary>
+        /// 
+        //all of the tags
         private const string SPEAKER_TAG = "speaker";
         private const string BBUN_TAG = "BBun";
         private const string PICKLES_TAG = "Pickles";
@@ -146,6 +149,7 @@ namespace InterDineMension.Manager
         private const string BG = "bg";
         private const string SCG = "scg";
         private const string ECG = "ecg";
+        private const string ESFO = "esfo";
         private const string SS = "ss";
         private const string PU = "pu";
         private const string PD = "pd";
@@ -1506,6 +1510,11 @@ namespace InterDineMension.Manager
                             
                             break;
                         }
+                    case ESFO:
+                        {
+                            StartCoroutine(EndSceneFadeOut());
+                            break;
+                        }
                     case PU:
                         {
                             manager.imagePopUpParent.gameObject.SetActive(true);
@@ -1541,6 +1550,27 @@ namespace InterDineMension.Manager
                 CGFade.color = new UnityEngine.Color(1, 1, 1, a);
             }
             //CGFade.color = new UnityEngine.Color(0, 0, 0, 1);
+        }
+        public IEnumerator EndSceneFadeOut()
+        {
+            CGFade.gameObject.SetActive(true);
+            CGFade.sprite = black;
+            for (float a = 0; a <= 1.1; a += .01f)
+            {
+                yield return new WaitForSeconds(.01f);
+                CGFade.color = new UnityEngine.Color(0, 0, 0, a);
+            }
+            //CGFade.color = new UnityEngine.Color(0, 0, 0, 1);
+            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
+            {
+                PlayerPrefs.SetString("timeOfDay", "Night");
+                SaveGame();
+                SceneManager.LoadScene(5);
+            }
+            else if(SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(5))
+            {
+                SceneManager.LoadScene(1);
+            }
         }
 
         public IEnumerator CGFadeOut(Sprite temp)
