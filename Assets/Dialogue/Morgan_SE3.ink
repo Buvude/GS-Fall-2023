@@ -287,93 +287,93 @@ Without work, I am nothing, and when I am nothing, I get all weird and sad. #spe
 
 Maybe O'Ryan won't actually die, but just lose some of their strength? #speaker:Graciana #mood:think
 
-that is more likely for a creature of his stature, with his current power he would not die for sharing even 90% of what he currently holds within him #speaker:Morgan #mood:neutral
+That is more likely for a creature of their stature, with O'Ryan's current power they would not die for sharing even 90% of what they currently hold within themself. #speaker:Morgan #mood:neutral
 
-oh well that's good news, he could just look after the diners even if he does not have his Eldritch strength right? #speaker:Graciana #mood:neutral 
+Oh, well that's good news. He could just look after the diner even if they don't have Eldritch strength, right? #speaker:Graciana #mood:think
 
-Of course! He would have to find a new way to get around the universes, but besides that nothing else should impair his business empire. #speaker:Morgan #mood:neutral
+Of course! They would have to find a new way to get around the universes, but besides that nothing else should impair O'Ryan's business empire. #speaker:Morgan #mood:neutral
 
-Besides a hostile takeover from a powerful being who seeks to take his business in his weakened state perhaps #speaker:Morgan #mood:neutral
+Besides a hostile takeover from a powerful being who seeks to take their business in its weakened state, perhaps. #speaker:Morgan #mood:neutral
 
-Why would you even suggest that! What if that happens now! #speaker:Graciana #mood:neutral
+Why would you even suggest that?! What if that happens now?! #speaker:Graciana #mood:angry
 
 Oh my dear, your species has always held onto the belief of saying something out loud causing it to happen. #speaker:Morgan #mood:neutral
 
 It's just not true, I have wished for the downfall of many who were both weak and strong and it only happened when I took action. #speaker:Morgan #mood:neutral
 
-Keep that in mind when you are looking towards your future in O'Ryans employment #speaker:Morgan #mood:neutral
+Keep that in mind when you are looking towards your future in O'Ryans employment. #speaker:Morgan #mood:neutral
 
-Right....... #speaker:Graciana #mood:neutral
+Right... #speaker:Graciana #mood:neutral
 
 
 
 ->BadContinued
-**[I don't know man maybe they are just crazy]
+**[O'Ryan's just lost it...]
 
-Maybe he just lost his shit finally after working in and being lost in his own void for eons #speaker:Graciana #mood:neutral
+Maybe O'Ryan just lost their mind finally, after working in and being lost in their own void for eons. #speaker:Graciana #mood:think
 
-Whether that means he will give up his empire or not through logic and clarity of mind does not change my goals #speaker:Morgan #mood:neutral
+Whether that means they'll give up their empire or not through logic and clarity of mind does not change my goals. #speaker:Morgan #mood:neutral
 
-Although it does lead me to question if I could get more than just his power if he has lost his sanity #speaker:Morgan #mood:neutral
+Although, it does lead me to question if I could get more than just his power, if he has lost his sanity... #speaker:Morgan #mood:neutral
 
-Hey now, lets not kick dead horses  #speaker:Graciana #mood:neutral
+Hey now, let's not kick dead horses.  #speaker:Graciana #mood:neutral
 
-Is that an actual saying or did you just make that up just now? #speaker:Morgan #mood:think
+Is that an actual saying, or did you make that up just now? #speaker:Morgan #mood:think
 
-I just made it up I panicked and tried to make something related to your whole theme I apologize please don't turn me into a cat #speaker:Graciana #mood:fear
+I just made it up I panicked and tried to make something related to your whole theme I apologize please don't turn me into a cat-- #speaker:Graciana #mood:fear
 
-Oh my Dear we are far past the cat jokes now, fear not it was relevant and funny. I think I will make note of that for the future #speaker:Morgan #mood:happy
+Oh my dear, we are far past the cat jokes now; fear not, it was relevant and funny. I think I will make note of that for the future. #speaker:Morgan #mood:happy
 
-oh gods what I have done #speaker:Graciana #mood:fear
+(Oh Gods, what I have done...) #speaker:Graciana #mood:fear
 
 
 ->BadContinued
 ==BadContinued==
 
-Just remember please try not to outright kill him even if they are offering themself as some sort of battery for you to drain #speaker:Graciana #mood:neutral
+Just remember, please try not to outright kill O'Ryan, even if they're offering themself as some sort of battery for you to drain. #speaker:Graciana #mood:neutral
 
-oh that is a good example, you are excellent at this Graciana #speaker:Morgan #mood:neutral
+Oh that is a good example, you are excellent at this Graciana! #speaker:Morgan #mood:neutral
 
-I appreciate the kind words but not the time to be complementing one another #speaker:Graciana #mood:happy
+I appreciate the kind words, but not the time to be complementing one another. #speaker:Graciana #mood:happy
 
-Now, can we go over everything we have talked about over the past few days we have talked together #speaker:Graciana #mood:neutral
+Now, can we go over everything we've talked about over the past few days we've talked together? #speaker:Graciana #mood:think
 
-All of the friendship talks, the bettering yourself talks, all of the happiness matters talks combined into one. #speaker:Graciana #mood:neutral
-It's good to help yourself but maybe not destroy everything else around you talk? #speaker:Graciana #mood:neutral
+All of the "friendship" talks, the "bettering yourself" talks, all of the "happiness matters" talks, combined into one. #speaker:Graciana #mood:neutral
+"It's good to help yourself but maybe not destroy everything else around you" talk? #speaker:Graciana #mood:neutral
 
-I don't remember that last part #speaker:Morgan #mood:neutral
+I don't remember that last part... #speaker:Morgan #mood:neutral
 
-That's on me it's normally implied but for you it totally makes sense to not be #speaker:Graciana #mood:neutral
+It's normally implied, but for you it totally makes sense to not be. #speaker:Graciana #mood:neutral
 
-Right an attempt will be made then upon my throne being reclaimed #speaker:Morgan #mood:neutral
+Right, an attempt will be made then, upon my throne being reclaimed. #speaker:Morgan #mood:neutral
 
-Morgan #speaker:Graciana #mood:neutral
+Morgan. #speaker:Graciana #mood:neutral
 
-Graciana #speaker:Morgan #mood:neutral
+Graciana. #speaker:Morgan #mood:neutral
 
-In case this is the last time we do get to speak with one another I just want you to know it has been a genuine pleasure getting to know you #speaker:Graciana #mood:happy
+In case this is the last time we do get to speak with one another, I just want you to know it has been a genuine pleasure getting to know you. #speaker:Graciana #mood:happy
 
-Eldritch horror aside you are a very interesting and wonderful being #speaker:Graciana #mood:neutral
+Eldritch horror aside, you are a very interesting and wonderful being. #speaker:Graciana #mood:neutral
 
-And I hope this power does not change that #speaker:Graciana #mood:neutral
+And I hope this power does not change that. #speaker:Graciana #mood:neutral
 
-My Dear nothing could ever change what you have done for me and how I feel about my new but trusted friend #speaker:Morgan #mood:happy
+My dear, nothing could ever change what you have done for me and how I feel about my new but trusted friend. #speaker:Morgan #mood:happy
 
-Alright then, that makes me feel slightly better about this #speaker:Graciana #mood:neutral
+Alright then, that makes me feel slightly better about this... #speaker:Graciana #mood:neutral
 
-Just like your wise man once said, A new day is upon us and then so a new dawn greets our vision #speaker:Morgan #mood:neutral
+Just like your wise man once said, A new day is upon us and then so a new dawn greets our vision. #speaker:Morgan #mood:neutral
 
 Was that the actual quote? #speaker:Graciana #mood:think
 
 Of course, has it changed in recent history? #speaker:Morgan #mood:neutral
 
-Nevermind #speaker:Graciana #mood:neutral
+Nevermind... #speaker:Graciana #mood:sad
 
-Good luck Morgan, I hope the throne fits you better now. And that you stay in touch somehow or at least maybe talk to some of the departed souls every now and then #speaker:Graciana #mood:neutral
+Good luck Morgan, I hope the throne fits you better now. And that you stay in touch somehow or at least maybe talk to some of the departed souls every now and then. #speaker:Graciana #mood:neutral
 
-That I shall, Farewell Graciana #speaker:Morgan #mood:neutral
+That I shall, Farewell Graciana. #speaker:Morgan #mood:neutral
 
-Farewell Morgan #speaker:Graciana #mood:neutral
+Farewell Morgan. #speaker:Graciana #mood:neutral
 
 //transition here im gonna do this don't worry this comment is just for myself
 //i gotta do that like speaker replacement thingy
