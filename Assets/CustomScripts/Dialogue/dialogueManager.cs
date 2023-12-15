@@ -1496,7 +1496,11 @@ namespace InterDineMension.Manager
                         }
                     case BGM:
                         {
-
+                            if (tagValue == "none")
+                            {
+                                StartCoroutine(musicFadeIn(null));
+                                return;
+                            }
                             StartCoroutine(musicFadeIn(musicLibrary[tagValue]));
                             break;
                         }
