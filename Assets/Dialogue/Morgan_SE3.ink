@@ -206,12 +206,29 @@ Please, accept it as a--
 
 ... #speaker:Morgan
 Oh dear.
-I suppose I am rather on the elder side, haha!
+I suppose I am rather on the elder side, hahah!
 
-A-are you okay? #speaker:Graciana
+A-are you okay?! #speaker:Graciana
 
-Yes dear, I am fine. This simply occurs from time to time. #speaker:Morgan
-#ss:spotlight:Morgan:blank
+Yes my dear, I am fine. This simply occurs from time to time. #speaker:Morgan
+You can simply take your tip out of the hand, I can regenerate a new one in no time.
+
+O-oh, uh, okay... #speaker:Graciana #mood:neutral
+Hm... #speaker:Graciana #mood:think #pu:mhand
+(The hand is shut so tightly... I can't even slide the money out...) #speaker:Graciana #mood:sad
+
+Ah, yes, I suppose the rigor mortis is setting in. #speaker:Morgan #pd: 
+Feel free to take my hand with you, it should come lose eventually.
+
+R-right... #speaker:Graciana #mood:neutral
+
+In any case, I shall be off. #speaker:Morgan
+Thank you once again, for all you have done for me, Graciana. #speaker:Morgan #mood:happy
+
+Of course! #speaker:Graciana #mood:happy
+So long, Morgan! #esfo: 
+
+
 
 ->END
 ==MorganBadEnding==
