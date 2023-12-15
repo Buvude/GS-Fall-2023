@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-
+EXTERNAL StartTTMicro()
 (Morgan is staring ahead blankly...) #speaker:Graciana #mood:think
 
 *[(Leave her be.)]
@@ -358,5 +358,10 @@ That carrys a hint of concern, so just keep that in mind to keep giving me good 
 (Morgan then turns, and exits the Diner.) #speaker:Graciana #mood:neutral #ss:Morgan:blank
 Okay... Just got a few more things to do today, and I'm set.
 
-~GoToDiner()
-    -> END
+~TTMLevel=1
+~timeOfDay="afternoon"
+~currentConvo="MMG1"
+~QuickSave()
+~StartTTMicro()
+ ->DONE
+

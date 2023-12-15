@@ -21,7 +21,7 @@ INCLUDE BADialogue.ink
     Okay, let's see here...
 //i really wanna make this a different font color to signify that it's being "read" but it's 2am and my brain cannot process digging through inky documentation right now, i promise i'll come back to this ;-;
     (To proceed in a conversation, simply "click" anywhere--but you already knew that.)
-    (To set "auto mode," press the "A" key. To skip through conversations--if you must--press the "Right Control" key. To view the "log," press the "Tab" key. To "pause," press the "P" or "Escape" key. Note that the "pause screen" will not pause minigames, as to prevent any "dishonesty.")#esfo:
+    (To set "auto mode," press the "A" key. To skip through conversations--if you must--press the "Right Control" key. To view the "log," press the "Tab" key. To "pause," press the "P" or "Escape" key. Note that the "pause screen" will not pause minigames, as to prevent any "dishonesty.")
     (The "Game" will automatically "save" at the end of each day, when you return to your apartment and go to sleep.)
     Okay, I think that's the basics... There's a bit more though, in case I need it...
     ** [I'm all set!]

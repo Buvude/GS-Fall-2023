@@ -24,6 +24,7 @@ namespace InterDineMension.Manager
 
     public class dialogueManager : MonoBehaviour
     {
+        internal bool fading = false;
         public Sprite black;
         public Scrollbar sb;
         public GameObject autoText;
@@ -428,15 +429,23 @@ namespace InterDineMension.Manager
                     EnterDialogueMode(N.NdialogueDictionary["postMini"]);
                     break;
                 case "NMG2":
+                    charSpeakTo = speakingTo.CeeCee;
+                    N.gameObject.SetActive(true);
                     EnterDialogueMode(N.NdialogueDictionary["postMini"]);
                     break;
                 case "NMG3":
+                    charSpeakTo = speakingTo.CeeCee;
+                    N.gameObject.SetActive(true);
                     EnterDialogueMode(N.NdialogueDictionary["postMini"]);
                     break;
                 case "MMG1":
+                    charSpeakTo = speakingTo.CeeCee;
+                    mBtn.gameObject.SetActive(true);
                     EnterDialogueMode(M.MdialogueDictionary["postMini"]);
                     break;
                 case "MMG3":
+                    charSpeakTo = speakingTo.CeeCee;
+                    M.gameObject.SetActive(true);
                     EnterDialogueMode(M.MdialogueDictionary["postMini"]);
                     break;
                 case "finale":
@@ -989,7 +998,7 @@ namespace InterDineMension.Manager
             foreach(char letter in line.ToCharArray())
             {
                 //if the submit button is pressed, finish up displaying the line right away
-                if (Input.GetKey(KeyCode.RightControl))
+                if (Input.GetKey(KeyCode.RightControl)&&!fading)
                 {
                     dialogueText.text = line;
                     break;
@@ -1512,7 +1521,7 @@ namespace InterDineMension.Manager
                         }
                     case ESFO:
                         {
-                            StartCoroutine(EndSceneFadeOut());
+                            StartCoroutine(EndSceneFadeOut(false));
                             break;
                         }
                     case PU:
@@ -1542,6 +1551,7 @@ namespace InterDineMension.Manager
         }
         public IEnumerator CGFadeIn(Sprite temp)
         {
+            fading = true;
             CGFade.gameObject.SetActive(true);
             CGFade.sprite= temp;
             for (float a = 0; a <= 1.1; a+=.01f)
@@ -1549,10 +1559,17 @@ namespace InterDineMension.Manager
                 yield return new WaitForSeconds(.01f);
                 CGFade.color = new UnityEngine.Color(1, 1, 1, a);
             }
+            fading = false;
             //CGFade.color = new UnityEngine.Color(0, 0, 0, 1);
         }
-        public IEnumerator EndSceneFadeOut()
+        public void ttmStart()
         {
+            StartCoroutine(EndSceneFadeOut(true));
+        }
+        public IEnumerator EndSceneFadeOut(bool ttm)
+        {
+            Debug.Log("test");
+            fading = true;
             CGFade.gameObject.SetActive(true);
             CGFade.sprite = black;
             for (float a = 0; a <= 1.1; a += .01f)
@@ -1561,7 +1578,11 @@ namespace InterDineMension.Manager
                 CGFade.color = new UnityEngine.Color(0, 0, 0, a);
             }
             //CGFade.color = new UnityEngine.Color(0, 0, 0, 1);
-            if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
+            if( ttm )
+            {
+                mGC.loadTTM();
+            }
+            else if (SceneManager.GetActiveScene() == SceneManager.GetSceneByBuildIndex(1))
             {
                 PlayerPrefs.SetString("timeOfDay", "Night");
                 SaveGame();
@@ -1575,6 +1596,7 @@ namespace InterDineMension.Manager
 
         public IEnumerator CGFadeOut(Sprite temp)
         {
+            fading = true;
             if(temp!=null)
             {
                 backgroundImage.sprite = temp;
@@ -1587,6 +1609,7 @@ namespace InterDineMension.Manager
             }
             CGFade.gameObject.SetActive(false);
             //CGFade.color = new UnityEngine.Color(0, 0, 0, 1);
+            fading = false;
         }
         public IEnumerator musicFadeIn(AudioClip temp)
         {

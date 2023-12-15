@@ -72,13 +72,13 @@ namespace InterDineMension
                 dM.ExitDialogueMode(false, PlayerPrefs.GetInt("dayVar"), "StartO_Ryan", false);
                 dM.oR.gameObject.SetActive(true);
                 //dM.charSpeakTo = dialogueManager.speakingTo.O_Ryan;
-                /*dM.oR.gameObject.SetActive(true);
+                dM.oR.gameObject.SetActive(true);
                 dM.G.gameObject.SetActive(false);
                 dM.cS.gameObject.SetActive(false);
                 dM.cC.gameObject.SetActive(false);
                 dM.N.gameObject.SetActive(false);
                 dM.G.gameObject.SetActive(false);
-                dM.M.gameObject.SetActive(false);*/
+                dM.M.gameObject.SetActive(false);
                 //dM.EnterDialogueMode(dM.TTMicroArcadeConvo);
                 switch (PlayerPrefs.GetString("weekDay"))
                 {
@@ -110,7 +110,7 @@ namespace InterDineMension
             {
                 dM.QuickSave();
                 PlayerPrefs.SetString("currentConvo", currentStory.variablesState["currentConvo"].ToString());
-                mGC.loadTTM();
+                dM.ttmStart();
             });
             currentStory.BindExternalFunction("SaveGame", () =>
             {
