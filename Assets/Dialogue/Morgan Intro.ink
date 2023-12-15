@@ -75,38 +75,95 @@ Well, you're the only customer at the moment, and we do care deeply about our cu
 So if you’re alright with it, I would gladly listen to your troubles and see if there is anything I can do for you! #speaker:Graciana #mood:happy
 
 ... #speaker:Morgan #mood:neutral
-Very well. I am in constant peril as of the recent times. I’ve found myself drifting in these voids full of stars for countless lost years as I drift without rhyme nor reason. My respect from others has been vanquished, my passion to move forward crushed underfoot, and my title revoked.  #speaker:Morgan #mood:neutral
-I'm so sorry to hear that. What exactly happened to cause all of this? #speaker:Graciana #mood:neutral
-As I previously mentioned, I was once known as The Morgan, Goddess of Death, The one who walks in shadow, Mistress of fear, and the Mother of all Evil. That was until I retired 5,000 years ago. Now I am just ...... Well, I don’t know what I am.#speaker:Morgan #mood:neutral
-....... What led you to retire? #speaker:Graciana #mood:neutral
-Well
+Very well... 
+I am in constant peril as of the recent times. I’ve found myself drifting in these voids full of stars for countless lost years as I drift without rhyme nor reason. #speaker:Morgan #mood:sad
+My respect from others has been vanquished, my passion to move forward crushed underfoot, and my title revoked.
 
-, truthfully, I’m not sure. I spent my entire existence feeding, conquering, and building my grand visage of Queen. But then all of a sudden, it meant nothing to me. #speaker:Morgan #mood:neutral
-I found myself empty, no matter how many souls I consumed, how many worlds I birthed or felled, nothing was enough. It was as if I had been sprinting towards a goal I had already achieved millennia ago. 
-And now with that goal achieved and my purpose seemingly fulfilled, you would think I would have some sense of satisfaction. Some sense of accomplishment, success, victory!!!! #speaker:Morgan #mood:neutral
-But instead I felt nothing. I found myself barely interested enough to feed myself for thousands of years. Drifting about the stars, walking over the lands below, and even gazing over the raging seas void of all emotion. #speaker:Morgan #mood:neutral
-....... Excuse me if this is a dumb question Miss Morgan, but does this happen to other Eldri- ..... I mean, powerful beings like you? #speaker:Graciana #mood:neutral
+I'm so sorry to hear that... What exactly happened to cause all of this? #speaker:Graciana #mood:think
+
+As I previously mentioned, I was once known as The Morgan, Goddess of Death, The one who walks in shadow, Mistress of fear, and the Mother of all Evil. #speaker:Morgan #mood:neutral
+That was until I retired five thousand years ago. Now I am just... 
+Well, I don’t know what I am. #speaker:Morgan #mood:sad
+
+...What led you to retire? #speaker:Graciana #mood:think
+
+Truthfully, I’m not sure. #speaker:Morgan #mood:neutral
+I spent my entire existence feeding, conquering, and building my grand visage of Queen. 
+But then all of a sudden, it meant nothing to me. #speaker:Morgan #mood:sad
+I found myself empty no matter how many souls I consumed, how many worlds I birthed or felled, nothing was enough. 
+It was as if I had been sprinting towards a goal I had already achieved millennia ago...
+And now with that goal achieved and my purpose seemingly fulfilled, you would think I would have some sense of satisfaction. 
+Some sense of accomplishment, success, victory! #speaker:Morgan #mood:neutral
+But instead, I felt nothing. #speaker:Morgan #mood:sad
+I found myself barely interested enough to feed myself for thousands of years. Drifting about the stars, walking over the lands below, and even gazing over the raging seas, void of all emotion.
+
+... #speaker:Graciana #mood:think
+Excuse me if this is a dumb question Miss Morgan, but does this happen to other Eldri--
+I mean, powerful beings like you? #speaker:Graciana #mood:neutral
+
 I would not know. Any other Eldritch abominations I have run into, I have either forced them to bend the knee to me, killed them, or cast them into the void from which they came from. #speaker:Morgan #mood:neutral
-..... Fair enough. I haven’t conquered worlds or killed gods, but I think what you're describing to me is similar to what we humans call being in a state of stagnation, or in other words perhaps dealing with some sort of depression. #speaker:Graciana #mood:neutral
-Like how someone can feel lost doing something they love with no real reason, and all of a sudden the world comes to a grinding halt and they’re suddenly working at a diner in space and living in an apartment building that only has affordable rent because it drifted away from its space station housing complex years ago and has no stable foundation anymore.......... #speaker:Graciana #mood:neutral
-...............
-..........................#speaker:Graciana #mood:neutral
-Well, I feel surprisingly the same way about the first part but you lost me towards the end of your description. 
-How do you “Humans” slay this stag of nations? A fierce battle? Ancient relics? Perhaps finding a chosen one of fate and giving them the power to slay it for you? #speaker:Morgan #mood:neutral
-..... right, that's on me. It's not an actual deer creature or anything, it's a mental health issue that affects a lot of people when they are going through changes in their lives or their bodies have grown tired of putting on certain acts or false faces. A lot of us go through it at some point in our lives, but everyone deals with it in different ways. #speaker:Graciana #mood:neutral
-I see.... And how did you slay this deep recession of yours? #speaker:Morgan #mood:neutral
-Oh, well..... Good question. I'm pretty happy with my job and my life right now, butttt if I were to try something to help, maybe talk to someone? Reach out to any friends, family, or trusted beings you may know and tell them how you are feeling?  #speaker:Graciana #mood:neutral
-And this is to lower their guards and then feast on their souls when they least expect it? #speaker:Morgan #mood:neutral
-No no no no! No Soul feeding required! You just talk about how you got here, what you want to do, and how they can maybe help you do it? #speaker:Graciana #mood:neutral
-(Morgan pauses for a moment listening carefully to your words)#speaker:Morgan #mood:neutral
-You are quite wise Spawn- “hmmhm” Excuse me, I mean Human. However, I’m afraid I have no such beings. My own family abandoned me when I was born after I devoured the strong ones to feed on their power so I could control the weak ones. #speaker:Morgan #mood:neutral
-.............. Ok so no family.... How ‘bout friends? #speaker:Graciana #mood:neutral
-...................#speaker:Morgan #mood:neutral
-Right... Anyone you trust or respect? #speaker:Graciana #mood:neutral
-......( Morgan stares at you for a few moments before you finally realize they mean they trust you) #speaker:Morgan #mood:neutral
-Oh well I’m flattered, but I have to go check in with Swatts to see if he needs any help real quick.... Maybe if there isn’t any other customers that need serving I can talk with you some more? #speaker:Graciana #mood:neutral
-That is..... Acceptable..... #speaker:Morgan #mood:neutral
-(You return and all other parts of the diner are pitch black, only a small note written in black ink reads see you soon)#speaker:Graciana #mood:neutral
+
+...Fair enough. #speaker:Graciana #mood:neutral
+I haven’t conquered worlds or killed Gods yet, but I think what you're describing to me is similar to what we humans call being in a state of stagnation, or in other words... 
+...Perhaps dealing with some sort of depression? #speaker:Graciana #mood:think
+Like how someone can feel lost doing something they love with no real reason, and all of a sudden the world comes to a grinding halt...
+And they’re suddenly working at a diner in space and living in an apartment building, that only has affordable rent because it drifted away from its space station housing complex years ago, and has no stable foundation anymore... #speaker:Graciana #mood:neutral
+
+... #speaker:Morgan #mood:neutral
+
+... #speaker:Graciana #mood:neutral
+
+Well, I feel surprisingly the same way about the first part but you lost me towards the end of your description. #speaker:Morgan 
+How do you “Humans” slay this "stag of nations?" A fierce battle? Ancient relics? Perhaps finding a chosen one of fate and giving them the power to slay it for you?
+
+(...Right, that's on me...) #speaker:Graciana #mood:sad
+It's not an actual deer creature or anything, it's a mental health issue that affects a lot of people when they're going through changes in their lives... #speaker:Graciana #mood:think
+...Or their bodies have grown tired of putting on certain acts or false faces. 
+A lot of us go through it at some point in our lives, but everyone deals with it in different ways. #speaker:Graciana #mood:neutral
+
+I see.... And how did <i>you</i> slay this deep recession of yours? #speaker:Morgan #mood:neutral
+
+Oh, well... Good question. #speaker:Graciana #mood:neutral
+I'm pretty happy with my job and my life right now... 
+<i>Buuuuuut...</i>
+if I were to try something to help, maybe talk to someone? Reach out to any friends, family, or trusted beings you may know and tell them how you are feeling?  #speaker:Graciana #mood:think
+
+And this is to lower their guards, and then feast on their souls when they least expect it? #speaker:Morgan #mood:happy
+
+No no no no! No soul feeding required! #speaker:Graciana #mood:fear
+You just talk about how you got here, what you want to do, and how they can maybe help you do it? #speaker:Graciana #mood:think
+
+Hm... #speaker:Morgan #mood:neutral
+You are quite wise, Spawn--
+(AHEM) #speaker:Morgan #mood:angry
+Excuse me, I mean Human. #speaker:Morgan #mood:neutral
+However, I’m afraid I have no such beings. My own family abandoned me when I was born after I devoured the strong ones to feed on their power, so I could control the weak ones. #speaker:Morgan #mood:neutral
+
+Okay, so no family... How ‘bout friends? #speaker:Graciana #mood:think
+
+... #speaker:Morgan #mood:neutral
+
+Right... Anyone you trust or respect? #speaker:Graciana #mood:think
+
+......#speaker:Morgan #mood:neutral
+
+Oh, well, I have to, uh, go check in with Swatts to see if he needs any help real quick... #speaker:Graciana #mood:think
+Maybe if there isn’t any other customers that need serving I can talk with you some more?
+
+That is... Acceptable... #speaker:Morgan #mood:neutral
+
+Alright, be back in a bit! #speaker:Graciana #mood:neutral #scg:black
+...
+...
+Okay Morgan, how's it-- #speaker:Graciana #mood:neutral #ss:Morgan:blank #ecg: 
+(Huh, she's not here anymore...) 
+(A note?) #speaker:Graciana #mood:think
+(It's written in a weird, drippy black in...)
+<b><i>"See you soon."</i></b>
+... #speaker:Graciana #mood:fear
+That's not ominous at all... #speaker:Graciana #mood:sad
+...
+Well, I guess I got some more chores to do... #speaker:Graciana #mood:neutral
  
 
  ~TTMLevel=1
