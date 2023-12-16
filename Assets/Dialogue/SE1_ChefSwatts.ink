@@ -16,9 +16,13 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
 
     Sure, why not. #speaker:Graciana #mood:neutral
 
-    Perfect! Come come, prep this for me ya? #speaker:Chef Swatts
+    Perfect! Come come, I need ya help in tha kitchen! #speaker:Chef Swatts #scg:black
+    
+    ... #speaker:Graciana
+    
+    Come, prep this for me ya? #speaker:Chef Swatts #ecg:dinkit
 
-    Whatcha making? #speaker:Graciana #mood:happy
+    Whatcha making? #speaker:Graciana #mood:neutral
 
     Experimenting wit some pasta. I had an idea for a new kinda sauce. #speaker:Chef Swatts #mood:happy
     Here, prep these bombadoes for me?
@@ -28,7 +32,8 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
     No no no, I mean bombadoes. BIG difference. #speaker:Chef Swatts #mood:neutral
 
 
-    (He hands me a strange looking vegetable, and goes back to grabbing more ingredients. It's about the size of a normal tomato, except it's green, and small hairs are growing out of it... It's strangely damp too, and the skin is almost leathery.) #speaker:Graciana #mood:neutral
+    (He hands me a strange looking vegetable, and goes back to grabbing more ingredients.) #speaker:Graciana
+    (It's about the size of a normal tomato, except it's green, and small hairs are growing out of it... It's strangely damp too, and the skin is almost leathery.)
 
     (...How am I supposed to prep this?) #speaker:Graciana #mood:think
     

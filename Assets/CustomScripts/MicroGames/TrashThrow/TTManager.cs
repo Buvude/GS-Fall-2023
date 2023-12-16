@@ -6,11 +6,15 @@ using InterDineMension.Manager;
 using JetBrains.Annotations;
 using System;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements.Experimental;
+using UnityEngine.UI;
 
 namespace InterDineMension.MicroGame.TT
 {
     public class TTManager : MonoBehaviour
     {
+        public Image CGFade;
+        public Sprite black;
         public GameObject recycling, compost, recyclingBag, compostBag;
         public VariableHolder vH;
         public float scorepause;
@@ -30,6 +34,7 @@ namespace InterDineMension.MicroGame.TT
         // Start is called before the first frame update
         void Start()
         {
+            StartCoroutine(CGFadeIn());
             vH=GameObject.FindGameObjectWithTag("variableHolder").GetComponent<VariableHolder>();
 
 
@@ -178,40 +183,41 @@ namespace InterDineMension.MicroGame.TT
                 case "finale":
                     {
                         PlayerPrefs.SetString("timeOfDay", "afternoon");
-                        SceneManager.LoadScene(1);
+                        StartCoroutine(EndSceneFadeOut());
                         break;
                     }
                 case "NMG1":
                     {
                         PlayerPrefs.SetString("timeOfDay", "afternoon");
-                        SceneManager.LoadScene(1);
+                        StartCoroutine(EndSceneFadeOut());
+
                         break;
                     }
                 case "NMG2":
                     {
                         PlayerPrefs.SetString("timeOfDay", "afternoon");
-                        SceneManager.LoadScene(1);
+                        StartCoroutine(EndSceneFadeOut());
                         break;
                     }
                 case "GMG3":
                     {
                         PlayerPrefs.SetString("timeOfDay", "afternoon");
-                        SceneManager.LoadScene(1);
+                        StartCoroutine(EndSceneFadeOut());
                         break;
                     }
                 case "FMG3":
                     {
                         PlayerPrefs.SetString("timeOfDay", "afternoon");
-                        SceneManager.LoadScene(1);
+                        StartCoroutine(EndSceneFadeOut());
                         break;
                     }
                 case "MMG1":
                     PlayerPrefs.SetString("timeOfDay", "afternoon");
-                    SceneManager.LoadScene(1);
+                    StartCoroutine(EndSceneFadeOut());
                     break;
                 case "MMG3":
                     PlayerPrefs.SetString("timeOfDay", "afternoon");
-                    SceneManager.LoadScene(1);
+                    StartCoroutine(EndSceneFadeOut());
                     break;
 
                 default:
@@ -262,6 +268,30 @@ namespace InterDineMension.MicroGame.TT
                 yield return new WaitForEndOfFrame();
             }
             
+        }
+        public IEnumerator CGFadeIn()
+        {
+            CGFade.gameObject.SetActive(true);
+            for (float a = 1; a >=0; a -= .01f)
+            {
+                yield return new WaitForSeconds(.01f);
+                CGFade.color = new UnityEngine.Color(1, 1, 1, a);
+            }
+            CGFade.gameObject.SetActive(false);
+            //CGFade.color = new UnityEngine.Color(0, 0, 0, 1);
+        }
+        public IEnumerator EndSceneFadeOut()
+        {
+            CGFade.gameObject.SetActive(true);
+            CGFade.sprite = black;
+            for (float a = 0; a <= 1.1; a += .01f)
+            {
+                yield return new WaitForSeconds(.01f);
+                CGFade.color = new UnityEngine.Color(0, 0, 0, a);
+            }
+            //CGFade.color = new UnityEngine.Color(0, 0, 0, 1);
+           
+                SceneManager.LoadScene(1);
         }
     }
 }

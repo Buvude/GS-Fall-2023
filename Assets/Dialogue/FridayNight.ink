@@ -1,5 +1,5 @@
 INCLUDE globals.ink
-.Phew... Feels like I barely made it through today... #speaker:Graciana #bgm:dinNight
+.Phew... Feels like I barely made it through today... #speaker:Graciana #speaker:sad #bgm:dinNight
 
 (The portal activates, and O'Ryan steps through.)
 

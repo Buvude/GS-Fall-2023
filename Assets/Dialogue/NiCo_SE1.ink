@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 EXTERNAL StartTTMicro()
 
-... #speaker:NiCo
+... #speaker:NiCo #mood:neutral
 Hi, Graciana.
 *[What's up?]
 ->whatup
@@ -11,6 +11,7 @@ You should probably go help the customers who actually need to eat.
     -> DONE
     
 ==whatup==
+~convo_numberN=2
 What's up? Would you like something to... #speaker:Graciana
 ...Eat? ...Drink? #speaker:Graciana #mood:think
 

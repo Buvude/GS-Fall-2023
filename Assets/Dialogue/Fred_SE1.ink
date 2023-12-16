@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
 
-(Fred is playfully staring out the window...) #speaker:Graciana #mood:neutral #ss:Fred:neutral
+(Fred is playfully staring out the window...) #speaker:Graciana #mood:neutral
 * [Hey Fred!]
 -> Start
 * [(Leave him be)]
