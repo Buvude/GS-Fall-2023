@@ -1028,7 +1028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: sDictValue.Array.size
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: dDictKey.Array.data[0]
@@ -1048,7 +1048,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: sDictKey.Array.data[6]
-      value: happy
+      value: chaos
       objectReference: {fileID: 0}
     - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: dDictValue.Array.data[0]
@@ -1074,6 +1074,10 @@ PrefabInstance:
       propertyPath: sDictValue.Array.data[5]
       value: 
       objectReference: {fileID: 21300000, guid: e4634ff67a1dca4428fdcf25563f4581, type: 3}
+    - target: {fileID: 6325513993415713113, guid: a8965b57116a0f54db002fcea8373573, type: 3}
+      propertyPath: sDictValue.Array.data[6]
+      value: 
+      objectReference: {fileID: 21300000, guid: c173944cf29069541b616586f6b0f89c, type: 3}
     - target: {fileID: 6365556639219059066, guid: a8965b57116a0f54db002fcea8373573, type: 3}
       propertyPath: dDictKey.Array.size
       value: 6
@@ -2054,7 +2058,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6290930265342607804, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6728086303315712827, guid: 521c9382bf14ba74fbbe097d2a56b86e, type: 3}
       propertyPath: m_AnchoredPosition.x
