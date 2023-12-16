@@ -447,31 +447,47 @@ This diner makes no sense anymore... #speaker:Graciana #mood:sad #esfo:
 
 ->END
 ==MorganChaosEnding==
-I think that means he wants you as a partner #speaker:Graciana #mood:happy
+I think that means O'Ryan wants you as a partner! #speaker:Graciana #mood:happy
 
 Come again? #speaker:Morgan #mood:neutral
-That sounds very similar to how my people offer themselves awkwardly into a romantic partnership (or least how I have seen it portrayed in shows) #speaker:Graciana #mood:neutral
+
+That sounds similar to how my people offer themselves awkwardly into a romantic partnership... 
+(Or least how I've seen it portrayed in shows...) #speaker:Graciana #mood:neutral
  Maybe they are offering themself as both an ally and a partner? #speaker:Graciana #mood:think
-.................................. #speaker:Morgan #mood:think
- Do you think this could be true? But even if it was, what would it entail? Would we live together for the rest of eternity? #speaker:Morgan #mood:think
- Have voidlings? I'm not sure I am ready for a commitment like that to a man I have spoken to just once! #speaker:Morgan #mood:think
- So you are saying you aren't interested in O'ryan? I mean I get the scared part but it seemed like before you were keeping tabs on him #speaker:Graciana #mood:think
- In a totally normal stalking routine to keep tabs on my enemies #speaker:Morgan #mood:angry
- yes! #speaker:Morgan #mood:angry
- Just for keeping tabs? (hehe goddess of death got boy problems, this is definitely going into my journal entry tonight)  #speaker:Graciana #mood:happy
- Of course! I mean how would it even work between us, one is a voidspawn and one the previous ruler of the void. #speaker:Morgan #mood:think
- That means he would have been one of my subjects at some point in time #speaker:Morgan #mood:neutral
- Ah yes, the classic royalty falls in love with the common man shaped void creature #speaker:Graciana #mood:neutral
- This is a common occurance on your world? #speaker:Morgan #mood:think
- More common than you would think #speaker:Graciana #mood:neutral
- Interesting, perhaps my exposure to your world has influenced me to feel the same as the ones you described just now. Royals falling for their subjects #speaker:Morgan #mood:think
- I mean think of it this way, with no crown to your name right now technically you are now both on equal footing, which means the perfect time to explore any curiosities you might have towards him #speaker:Graciana #mood:neutral
- (playing wingwoman to Morgan should definitely go on my resume after this) #speaker:Graciana #mood:think
- I'm just saying there a few ways you could go about this to find out if he really likes you #speaker:Graciana #mood:happy
+ 
+... #speaker:Morgan #mood:neutral
+Do you think this could be true? Even if it was, what would it entail? Would we live together for the rest of eternity? #speaker:Morgan #mood:neutral
+Have voidlings? I'm not sure I am ready for a commitment like that to a being I have spoken to just once!
+
+So you are saying you aren't interested in O'Ryan? I mean I get the scared part, but it seemed like before you were keeping tabs earlier. #speaker:Graciana #mood:think
+
+ In a totally normal stalking routine to keep tabs on my enemies... #speaker:Morgan #mood:neutral
+ Yes! #speaker:Morgan #mood:angry
+ 
+ Just for keeping tabs? #speaker:Graciana #mood:think 
+ (Hehe, Goddess of Death got boy problems, this is definitely going into my journal entry tonight.)
+ 
+ Of course! I mean, how would it even work between us? #speaker:Morgan #mood:neutral
+ One is a voidspawn and one the previous ruler of the void. #speaker:Morgan #mood:sad
+ 
+ That means they would have been one of my subjects at some point in time... #speaker:Morgan #mood:neutral
+ 
+ Ah yes, the classic "royalty falls in love with the common man-shaped-void-creature" trope. #speaker:Graciana #mood:happy
+ 
+ This is a common occurance on your world? #speaker:Morgan #mood:neutral
+ 
+ Surprisingly, more common than you would think. #speaker:Graciana #mood:think
+ 
+ Interesting, perhaps my exposure to your world has influenced me to feel the same as the ones you described just now--Royals falling for their subjects. #speaker:Morgan #mood:neutral
+ 
+ I mean think of it this way, with no crown to your name right now, technically you're now both on equal footing, which means now is the perfect time to explore any curiosities you might have towards them. #speaker:Graciana #mood:think
+ (Playing wingwoman to a Goddess of Death should definitely go on my resume after this...) #speaker:Graciana #mood:think
+ I'm just saying, there are few ways you could go about this to find out if they really like you. #speaker:Graciana #mood:happy
+ 
  Such as? #speaker:Morgan #mood:neutral
 
 
-**[Ask him directly]
+**[Ask directly!]
 
  You could always ask them directly, you know just walk up and say hey you beautiful voidling you, wanna be my life partner? #speaker:Graciana #mood:neutral
  Just like that? #speaker:Morgan #mood:think
