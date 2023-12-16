@@ -1,9 +1,9 @@
 INCLUDE globals.ink
 
-.... #ss:Chef Swatts:blank #ss:CeCe:blank
+.... #ss:Chef Swatts:blank #ss:CeeCee:blank
 Phew, what a day. Almost finished cleaning up... #speaker:Graciana #mood:neutral #bgm:dinNight #ecg: 
 
-(Suddenly, O'Ryan enters through the portal, and walks over.)
+(Suddenly, O'Ryan enters through the portal, and walks over.) #ss:spotlight:O'Ryan
 
 ... #speaker:O'Ryan #mood:neutral
 

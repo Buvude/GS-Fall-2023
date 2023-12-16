@@ -3,7 +3,7 @@ INCLUDE globals.ink
 {
 -weekDay=="Tut":
 Finally home! What a first day, I'm exhausted...  #speaker:Graciana #mood:sad #ecg: 
-If I had some decorations, I could at least look at them... 
+If I had some decorations, I could at least look at them... #ecg: 
 Maybe once I've worked more, someone'll give me some...? #speaker:Graciana #mood:think
 
 For now, I can probably just go to bed and save... #speaker:Graciana #mood:neutral

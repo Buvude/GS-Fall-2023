@@ -12,7 +12,7 @@ Hmph! #speaker:Himber #mood:angry
     -> DONE
 
 ==GnomiesConvoStart2==
-~convo_numberG=3
+
 I guess, sure... #speaker:Graciana #mood:neutral
 
 Perfect! You know what I want by now, yes? #speaker:Himber #mood:neutral
@@ -217,7 +217,7 @@ Wait... #speaker:Graciana #mood:think
 ...I never got him his pie... 
 ...
 Oh well. #speaker:Graciana #mood:neutral
-
+~convo_numberG=3
 ~TTMLevel=3
 ~timeOfDay="afternoon"
 ~currentConvo="GMG3"

@@ -284,7 +284,7 @@ Right, of course. #speaker:Morgan #mood:neutral
 *[Get your throne back!]
 //Bad
 ~affectionM-=4
-I just want to see you happy, Morgan, and from what you tell me, you're looking for someone to help you do that. #speaker:Graciana #mood:happy
+I just want to see you happy, Morgan, and from what you tell me, you're looking for someone to help you do that. #speaker:Graciana #mood:happy #sfx:lostPoint
 
 Whether that's a friend, ally, or partner, I'll be happy for you either way. #speaker:Graciana #mood:neutral
 

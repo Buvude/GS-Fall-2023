@@ -386,7 +386,7 @@ O-oh, hi O'Ryan...! #speaker:Graciana #mood:neutral
 ... #speaker:O'Ryan
 <i>(sniff)</i> #speaker:O'Ryan #mood:sad
 
-(Suddenly, all the lights in the diner go out...!) #speaker:Graciana #mood:fear #scg:black
+(Suddenly, all the lights in the diner go out...!) #speaker:Graciana #mood:fear #bgm:none #scg:black
 
 ... #speaker:O'Ryan
 U-uh... #speaker:Graciana #ss:spotlight:Morgan:angry
@@ -424,14 +424,14 @@ Oh, and here is your tip, dear. #speaker:Morgan #mood:happy
 
 AHAHAHHAHAHHAHAHAHHAHHA #speaker:Morgan #mood:angry
 
-(The Morgan's form vanishes into smoke, leaving me alone in the diner confused and terrified.) #ss:Morgan:blank
+(The Morgan's form vanishes into smoke, leaving me alone in the diner confused and terrified.) #speaker:Graciana #mood:fear #ss:Morgan:blank
 
 What have I just unleashed upon the universe...?
 What have I done...? 
 O'Ryan... I am so sorry... #speaker:Graciana #mood:sad
 ...
 
-... #speaker:O'Ryan #mood:blank
+... #speaker:O'Ryan #mood:blank #bgm:dinNight
 
 ...Huh? #speaker:Graciana
 ...Where...?
