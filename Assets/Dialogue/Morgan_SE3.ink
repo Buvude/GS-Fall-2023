@@ -489,75 +489,132 @@ So you are saying you aren't interested in O'Ryan? I mean I get the scared part,
 
 **[Ask directly!]
 
- You could always ask them directly, you know just walk up and say hey you beautiful voidling you, wanna be my life partner? #speaker:Graciana #mood:neutral
- Just like that? #speaker:Morgan #mood:think
- Just like that #speaker:Graciana #mood:think
- How many times have you seen this strategy work #speaker:Morgan #mood:neutral
- Many times #speaker:Graciana #mood:neutral
- Has it worked personally? #speaker:Morgan #mood:happy
- Ouch, um I don't really date at the moment because I lack time and resources to do so #speaker:Graciana #mood:happy
+ You could always ask them directly, y'know? Just walk up and say "hey you beautiful voidling you, wanna be my life partner?" #speaker:Graciana #mood:happy
+ 
+ Just like that? #speaker:Morgan #mood:neutral
+ 
+ Just like that. #speaker:Graciana
+ 
+ How many times have you seen this strategy work? #speaker:Morgan #mood:neutral
+ 
+ Many times. #speaker:Graciana
+ Has it worked, personally? #speaker:Morgan #mood:happy
+ 
+ Ouch, uh, I don't really date at the moment because I lack time and resources to do so... #speaker:Graciana #mood:sad
+ 
  But have you seen this work with others? #speaker:Morgan #mood:neutral
- Absolutely #speaker:Graciana #mood:happy
- You are sure this is not one of those program viewings you watch on earth that is telling you this #speaker:Morgan #mood:think
- ........................ I mean partially, BUT my uncle did propose to my aunt that way #speaker:Graciana #mood:think
+ 
+ Absolutely. #speaker:Graciana #mood:happy
+ 
+ You are sure this is not one of those program viewings you watch on Earth that is telling you this? #speaker:Morgan #mood:neutral
+ 
+ ... #speaker:Graciana #mood:neutral
+ I mean partially, BUT my Uncle did propose to my Aunt that way. #speaker:Graciana #mood:think
+ 
  And she said yes? #speaker:Morgan #mood:neutral
- well no, it took like 6 tries but she eventually said yes #speaker:Graciana #mood:think
- Graciana, most of your advice has been sound #speaker:Morgan #mood:neutral 
- mhm #speaker:Graciana #mood:neutral
- This one I am not sure of #speaker:Morgan #mood:neutral
- right #speaker:Graciana #mood:neutral
- If your source is scripted events to cause dramatic emotions to be felt by a consumer, I am not sure that has applicable actions in the real world #speaker:Morgan #mood:think
- ..................... I mean I was basing it off of some real events to but fair #speaker:Graciana #mood:think
+ 
+ Well no, it took like six tries, but she eventually said yes. #speaker:Graciana #mood:think
+ 
+ Graciana, most of your advice has been sound. #speaker:Morgan #mood:neutral 
+ 
+ Mhm. #speaker:Graciana #mood:happy
+ 
+ This one, I am not sure of. #speaker:Morgan #mood:neutral
+ 
+ Right... #speaker:Graciana #mood:neutral
+ 
+ If your source is scripted events to cause dramatic emotions to be felt by a consumer, I am not sure that has applicable actions in the real world. #speaker:Morgan #mood:sad
+ 
+ ...I mean, I was basing it off of some real events to be fair... #speaker:Graciana #mood:think
  
 
 ->ChaoticContinued
-**[Make the first move]
+**[Make the first move!]
  
- What would that entail? #speaker:Morgan #mood:think
- Kiss em #speaker:Graciana #mood:happy
- ....................................... #speaker:Morgan #mood:think 
+ You could... Make the first move! #speaker:Graciana #mood:happy
+ 
+ What would that entail? #speaker:Morgan #mood:neutral
+ 
+ Kiss 'em. #speaker:Graciana #mood:happy
+ 
+ ... #speaker:Morgan #mood:neutral
+ 
  What? #speaker:Graciana #mood:happy
- Come again? #speaker:Morgan #mood:think
- Kiss em right on the cosmo filled face #speaker:Graciana #mood:happy
- surely you jest #speaker:Morgan #mood:neutral
- Jest, I do not #speaker:Graciana #mood:happy
- stop it #speaker:Morgan #mood:angry
- yes mamm #speaker:Graciana #mood:fear
- I am not sure such a intense first step would be a wise one, there are many factors that could cause this to be seen as an act of violence #speaker:Morgan #mood:happy
- What if he thinks I'm trying to tear his face off to consume it, or consume one of the galaxies within his face, or just consume all of him? #speaker:Morgan #mood:think
- I guess........... (I want to make a consuming joke so bad but hearing the polite and fancily spoken Morgan say stop it scares me) #speaker:Graciana #mood:think
+ 
+ Come again? #speaker:Morgan #mood:sad
+ 
+ Kiss 'em right on the cosmo filled face. #speaker:Graciana #mood:happy
+ 
+ Surely you jest. #speaker:Morgan #mood:neutral
+ 
+ Jest, I do not. #speaker:Graciana #mood:happy
+ 
+ Stop it. #speaker:Morgan #mood:angry
+ 
+ Yes ma'am. #speaker:Graciana #mood:fear
+ 
+ I am not sure such a intense first step would be a wise one, there are many factors that could cause this to be seen as an act of violence #speaker:Morgan #mood:neutral
+ 
+ What if they think I'm trying to tear their face off to consume it, or consume one of the galaxies within their face, or just consume all of them? #speaker:Morgan #mood:sad
+ 
+ I guess... #speaker:Graciana #mood:think 
+ (I wanna make a "consuming" joke so bad but hearing the polite and fancily spoken Morgan say "stop..." It scares me.) #speaker:Graciana #mood:sad
 
 ->ChaoticContinued
-**[Write him a love letter]
+**[Write a love letter!]
 
- huh? #speaker:Morgan #mood:neutral
- you know a love letter, something where you put everything on the line and just write down your feelings for someone in hopes it reaches them and they respond in the same way #speaker:Graciana #mood:happy
- I think I have seen this in some of my followers before, they left blood soaked letters of passion for me when they tried to summon me to the mortal planes. #speaker:Morgan #mood:neutral
- I have so many questions, one did it work? two of your followers actually hit on you through blood letters? and three Huh!?!?! #speaker:Graciana #mood:happy
- Well the earth phrase of flirting with death has many meanings, that is one of them. but no I never found them to be enough.#speaker:Morgan #mood:neutral
- Most were just sad men looking for anyone or anything to talk to so I would just send cats to them instead and they would be fine. #speaker:Morgan #mood:think
- Do you have control over cats? #speaker:Graciana #mood:happy
- Partially, they are a lesser Eldritch being than I so most obey my commands if it follows in line with their own goals. Most of which is causing chaos or mayhem and getting scratched on the belly #speaker:Morgan #mood:think
- Interesting, but juicy new lore aside, do you think you would be interested in something like this? #speaker:Graciana #mood:happy
- I'm not sure, it seems too new of a trend for me to take part in. #speaker:Morgan #mood:think 
- oh yeah, you both lived for a long time before this #speaker:Graciana #mood:think
- ummmm, let me think #speaker:Graciana #mood:think
+If you're too shy to say it... #speaker:Graciana #mood:think
+You could write a love letter! #speaker:Graciana #mood:happy
+
+ Huh? #speaker:Morgan #mood:neutral
+ You know, a love letter! Something where you put everything on the line and just write down your feelings for someone, in hopes it reaches them and they respond in the same way! #speaker:Graciana #mood:happy
+ 
+ I think I have seen this in some of my followers before... #speaker:Morgan #mood:sad
+ They left blood-soaked letters of passion for me when they tried to summon me to the mortal planes. #speaker:Morgan #mood:neutral
+ 
+ I have so many questions... #speaker:Graciana #mood:think
+ One, did it work? Two, your followers actually hit on you through blood letters? And three...
+ Huh?!?! #speaker:Graciana #mood:fear
+ 
+ Well the Earth phrase of "flirting with death" has many meanings, that is one of them. But no, I never found them to be enough. #speaker:Morgan #mood:neutral
+ Most were just sad men, looking for anyone or anything to talk to... #speaker:Morgan #mood:sad
+ So I would just send cats to them instead, and they would be fine. #speaker:Morgan #mood:happy
+ 
+ Do you have control over cats or something? #speaker:Graciana #mood:happy
+ 
+ Partially, they are a lesser Eldritch being than I, so most obey my commands if it follows in line with their own goals. Most of which is causing chaos or mayhem, and getting scratched on the belly. #speaker:Morgan #mood:happy
+ 
+ Interesting, but juicy new lore aside, do you think you would be interested in something like this? #speaker:Graciana #mood:think
+ 
+ I'm not sure, it seems too new of a trend for me to take part in. #speaker:Morgan #mood:sad
+ 
+ Oh yeah, you both lived for a long time before this. #speaker:Graciana #mood:think
+ Ummmm, let me think... #speaker:Graciana #mood:think
 
 
 ->ChaoticContinued
 ==ChaoticContinued==
- interesting, showing the hint of romantic intent but not directly showing my feelings or actions until I can further tell whether or not they share them. #speaker:Morgan #mood:happy
- Seems foolproof, but how do I accomplish this? #speaker:Morgan #mood:neutral
- Well similar to option b of asking him to be yours directly, you could simply ask him to go on this date to get dinner or go see a part of history together, or gaze at blackholes, or whatever interests you. #speaker:Graciana #mood:think
- And if he says yes well that shows they are interested and you can ask them after the date is done to see if you like them or not, and if it goes bad you can chalk it up to a night out with a friend #speaker:Graciana #mood:happy 
- Your wisdom is truly unexpected for your age, but pleasantly so #speaker:Morgan #mood:neutral
- Why thank you, I have watche- I mean seen much in my short life so far #speaker:Graciana #mood:fear
- Anyways I think it is worth a shot, especially because you could accomplish all your goals at once with him in this way. #speaker:Graciana #mood:happy
- Life partner, someone who can help you get back your power, and someone to help you grow as a person and challenge you to be better #speaker:Graciana #mood:neutral
- I would hope he would not challenge me if we were to be wed #speaker:Morgan #mood:think
- no no no, like make you try new things to become a better and even more interesting person then you are now. I know it's hard to believe since you are already such an amazing Goddess. #speaker:Graciana #mood:neutral
- Your flattery is appreciated my friend #speaker:Morgan #mood:happy
- So what activity should I ask him to partake in with me?#speaker:Morgan #mood:happy
+ Hm... #speaker:Morgan #mood:neutral
+ The art of showing the hint of romantic intent, but not directly showing my feelings or actions until I can further tell whether or not they share them, is... Interesting. #speaker:Morgan #mood:neutral
+ It seems foolproof, but how do I accomplish this? #speaker:Morgan #mood:sad
+ 
+ Similar to "Option B" of asking them to be yours directly, you could simply ask them to go on this date to get dinner, or go see a part of history together, or gaze at blackholes, or whatever interests Eldritch Beings. #speaker:Graciana #mood:think
+ And if they say yes, then that shows they're interested and you can ask them after the date is done to see if they like you or not... 
+ And if it goes bad, you can chalk it up to a night out with a friend. #speaker:Graciana #mood:happy 
+ 
+ Your wisdom is truly unexpected for your age, but pleasantly so. #speaker:Morgan #mood:happy
+ Why thank you, I have watche-- #speaker:Graciana #mood:happy
+ I mean, seen much in my short life so far #speaker:Graciana #mood:fear
+ Anyways I think it is worth a shot, especially because you could accomplish all your goals at once with them in this way. #speaker:Graciana #mood:happy
+ Life partner, someone who can help you get back your power, and someone to help you grow as a person and challenge you to be better. #speaker:Graciana #mood:neutral
+ 
+ I would hope O'Ryan would not challenge me if we were to be wed... #speaker:Morgan #mood:neutral
+ 
+ No no no, like, make you try new things to become a better and even more interesting person then you are now. #speaker:Graciana #mood:neutral
+ I know it's hard to believe since you're already such an amazing Goddess. #speaker:Graciana #mood:happy
+ 
+ Your flattery is appreciated, my friend. #speaker:Morgan #mood:happy
+ So what activity should I ask him to partake in with me?#speaker:Morgan #mood:neutral
 
 **[Sitting on the edge of the universe watching the stars]
  That would not be the worst experience in the world, I admit  despite my many travels and long life I don't believe I've done this before #speaker:Morgan #mood:think
