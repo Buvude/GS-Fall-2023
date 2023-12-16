@@ -373,44 +373,77 @@ Good luck Morgan, I hope the throne fits you better now. And that you stay in to
 
 That I shall, Farewell Graciana. #speaker:Morgan #mood:neutral
 
-Farewell Morgan. #speaker:Graciana #mood:neutral
+Farewell, Morgan. #speaker:Graciana #mood:neutral #scg:black
 
-//transition here im gonna do this don't worry this comment is just for myself
-//i gotta do that like speaker replacement thingy
+... #ss:Morgan:blank
+//background change to night once those are implemented
 
-YESSSS THE TIME IS NOW O'RYAN COME TO ME #speaker:Morgan #mood:neutral
+It's getting kinda late... #speaker:Graciana #mood:neutral #ecg: 
+(I hear that familiar sound of the portal activating, and O'Ryan steps through.) #ss:spotlight:O'Ryan:neutral
 
-GRANT ME WHAT IS MINE, RELINQUISH ONTO ME YOUR STRENGTH SO I MAY RULE THE VOID ONCE MORE #speaker:Morgan #mood:angry
+... #speaker:O'Ryan
 
-(You watch as Morgan dives into O'Ryans stomach and the galaxies inside twinkle out of existence one by one) #speaker:Graciana #mood:neutral
+O-oh, hi O'Ryan...! #speaker:Graciana #mood:neutral
 
-(O'Ryan stands completely still as the life is sapped of him and slowly turns to look at you before saying "Be in work early tomorrow Swatts needs help with inventory" before exploding into a infinite amount of pieces of void that fizzle out of existence) #speaker:Graciana #mood:neutral
+... #speaker:O'Ryan
+<i>(sniff)</i> #speaker:O'Ryan #mood:sad
 
-MINEEEEEEEEEEEEEEEEEE FINALLY MMMMIIIIIINNNNNEEEEEEEEEEEEEEEEEEE #speaker:Morgan #mood:angry
+(Suddenly, all the lights in the diner go out...!) #speaker:Graciana #mood:fear #scg:black
 
-I CAN FEEL THE STRENGTH SURGING THROUGH ME #speaker:Morgan #mood:angry
+... #speaker:O'Ryan
+U-uh... #speaker:Graciana #ss:spotlight:Morgan:angry
 
-GRACIANA, I WILL TAKE WHAT YOU SAID TO HEART. SETTLING FOR HAPPINESS IN MY CURRENT STATE WOULD BE AN INSULT TO MYSELF #speaker:Morgan #mood:angry
+Hah... Hah... #speaker:Morgan #mood:angry
+AHAHAHAHAHAHAHAHAHAHA!
+YESSSS, THE TIME IS NOW! O'RYAN, COME TO ME! #speaker:Morgan #mood:angry
 
-THE THRONE IS NOT ENOUGH NOW I WISH TO SIT ABOVE ALL CREATURES, ALL UNIVERSES, THE VOID SHALL NOT CONTAIN ME ANY LONGER #speaker:Morgan #mood:angry
+GRANT ME WHAT IS MINE, RELINQUISH ONTO ME YOUR STRENGTH SO I MAY RULE THE VOID ONCE MORE! #speaker:Morgan #mood:angry
 
-FROM THIS DAY FORWARD I, THE MORGAN, GODDESS OF NOT JUST THE DEPARTED, BUT NOW THE LIVING AND THE DEAD WILL RULE FOR ETERNITY OVER ALL KINGDOMS #speaker:Morgan #mood:angry
+(Morgan dives into O'Ryans stomach, and the galaxies inside twinkle out of existence one by one...) #speaker:Graciana #mood:fear
 
-AHAHHAHAHAHAHHAHAHAHHAHHAHAHHA #speaker:Morgan #mood:angry
+(O'Ryan stands completely still as the life is slowly sapped out...) #speaker:Graciana
 
-Oh and here is your tip dear #speaker:Morgan #mood:happy
+... #speaker:O'Ryan
+Graciana...
+...
+Be in work early tomorrow. Swatts needs help with inventory. 
+
+(The second they finish their sentence, O'Ryan explodes into thousands upon thousands of small twinkling partices, that twinkle and fade out of existence...) #speaker:Graciana #mood:fear
+
+MINEEEEEEEEEEEEEEEEEE FINALLY MMMMIIIIIINNNNNEEEEEEEEEEEEEEEEEEE!!!! #speaker:Morgan #mood:angry #ecg: 
+
+I CAN FEEL THE STRENGTH SURGING THROUGH ME!! #speaker:Morgan #mood:angry
+
+GRACIANA, I WILL TAKE WHAT YOU SAID TO HEART. SETTLING FOR HAPPINESS IN MY CURRENT STATE WOULD BE AN INSULT TO MYSELF. #speaker:Morgan #mood:angry
+
+THE THRONE IS NOT ENOUGH NOW I WISH TO SIT ABOVE ALL CREATURES, ALL UNIVERSES, THE VOID SHALL NOT CONTAIN ME ANY LONGER! #speaker:Morgan #mood:angry
+
+FROM THIS DAY FORWARD I, THE MORGAN, GODDESS OF NOT JUST THE DEPARTED, BUT NOW THE LIVING AND THE DEAD WILL RULE FOR ETERNITY OVER ALL KINGDOMS. #speaker:Morgan #mood:angry
+
+AHAHHAHAHAHAHHAHAHAHHAHHAHAHHA! #speaker:Morgan #mood:angry
+
+Oh, and here is your tip, dear. #speaker:Morgan #mood:happy
 
 AHAHAHHAHAHHAHAHAHHAHHA #speaker:Morgan #mood:angry
 
-(The Morgans form vanishes into smoke leaving you alone in the diner confused, terrified for what you have unleashed upon the universe) 
+(The Morgan's form vanishes into smoke, leaving me alone in the diner confused and terrified.) #ss:Morgan:blank
 
-What have I done.............. O'Ryan I am so sorry#speaker:Graciana #mood:neutral
-....................... #speaker:Graciana #mood:fear
+What have I just unleashed upon the universe...?
+What have I done...? 
+O'Ryan... I am so sorry... #speaker:Graciana #mood:sad
+...
 
-(You hear a faint "Apology accepted now get back to work" from the surrounding space around you) #speaker:Graciana #mood:fear
+... #speaker:O'Ryan #mood:blank
 
-This diner makes no sense anymore............ #speaker:Graciana #mood:think
-~GoToAppartment()
+...Huh? #speaker:Graciana
+...Where...?
+
+... #speaker:O'Ryan
+Apology accepted.
+Now get back to work.
+
+... #speaker:Graciana #mood:think
+This diner makes no sense anymore... #speaker:Graciana #mood:sad #esfo: 
 
 ->END
 ==MorganChaosEnding==
