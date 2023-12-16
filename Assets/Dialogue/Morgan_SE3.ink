@@ -656,35 +656,57 @@ You could maybe ask them on a date to the edge of the universe, and watch the st
 
 
 ->Chaotic
-**[Fine dining at a restaurant overlooking the milky way]
+**[Fine dining!]
 
- Oh I know just the place, in my search for the finest sugary treats I found a restaurant that does overlook the Andromeda Galaxy.#speaker:Morgan #mood:neutral 
- Oh fantastic, you can take em there wine and dine and finish off with some sugary treats #speaker:Graciana #mood:neutral
- Hmmm this does sound like a decent idea #speaker:Morgan #mood:happy
- Perhaps I shall endeavor to invite him on this trip to the stars soon, so that we might share in a night of personal discourse and test the waters for any strong feelings #speaker:Morgan #mood:think
- Sounds like the perfect plan, you can ask him when he stops by all his stores in the evening I think he does a few others after this one #speaker:Graciana #mood:think
- It is quite alright I know which one he frequents around this time #speaker:Morgan #mood:neutral
- and that information is perfectly normal #speaker:Graciana #mood:neutral
- Of course #speaker:Morgan #mood:happy
- ...........................#speaker:Graciana #mood:nuetral
-........................... #speaker:Morgan #mood:nuetral
+You could invite them out to fine dining! At a fancy restaurant! #speaker:Graciana #mood:happy
+
+ Oh, I know just the place! In my search for the finest sugary treats I found a restaurant that overlooks the Andromeda Galaxy.#speaker:Morgan #mood:happy
+ 
+ Fantastic! You can take 'em there, wine and dine, and finish off with some sugary treats! #speaker:Graciana #mood:happy
+ 
+ Hmmm, this does sound like a decent idea #speaker:Morgan #mood:neutral
+ Perhaps I shall endeavor to invite them on this trip to the stars soon, so that we might share a night of personal discourse, and test the waters for any strong feelings #speaker:Morgan #mood:happy
+ 
+ Sounds like the perfect plan, you can ask them when they stop by all their stores in the evening. I think they do a few others after this one...? #speaker:Graciana #mood:think
+ 
+ It is quite alright, I know which one O'Ryan frequents around this time. #speaker:Morgan #mood:neutral
+ 
+ And that information is perfectly normal! #speaker:Graciana #mood:happy
+ Of course! #speaker:Morgan #mood:happy
+ ... #speaker:Graciana #mood:neutral
+ ... #speaker:Morgan #mood:neutral
 ->Chaotic
-**[Go explore somewhere new together]
+**[Explore somewhere new!]
 
- Is there even such a place? I have viewed this universe for eons and have seen almost every planet, star, and living being upon them #speaker:Morgan #mood:think
- Well yes, but with O'Ryan he could take you to new universes right? Ones you would never dream of seeing? If that is your dream.... Do you dream? #speaker:Graciana #mood:think
- You have a fascinating way of spilling out all your thoughts from your mouth without ever thinking about them don't you #speaker:Morgan #mood:happy
- Yes ma’am #speaker:Graciana #mood:fear
- Well most of those ideas do happen to be useful so I can't complain all that much #speaker:Morgan #mood:neutral
- Why thank you ma'am#speaker:Graciana #mood:happy
- I will flick your nose and turn you into a cat the next time you call me ma'am #speaker:Morgan #mood:angry
- Yes ma- Righty oh Morgan #speaker:Graciana #mood:fear
- There, much better #speaker:Morgan #mood:happy
- Now I am a little uneasy about going to a different universe or plane of existence that even my knowledge has not seen yet, but I guess it can be done for the sake of our date #speaker:Morgan #mood:think
- That's the spirit! And plus if it is to weird you can always just go to a favorite place if you have found one since you left the void #speaker:Graciana #mood:nuetral
- Not really #speaker:Morgan #mood:neutral
- Welp go with the flow and make good choices #speaker:Graciana #mood:neutral
- That I shall #speaker:Morgan #mood:neutral
+The two of you could go explore somewhere new together! Somewhere neither of you have ever been! #speaker:Graciana #mood:happy
+
+ Is there even such a place? I have viewed this universe for eons and have seen almost every planet, star, and living being upon them, #speaker:Morgan #mood:neutral
+ 
+ Well, yes, but with O'Ryan they could take you to new universes, right? Ones you would never dream of seeing? If that is your dream.... #speaker:Graciana #mood:neutral
+ Do you dream? #speaker:Graciana #mood:think
+ 
+ You have a fascinating way of spilling out all your thoughts from your mouth without ever thinking about, them don't you? #speaker:Morgan #mood:happy
+ 
+ Yes ma'am! #speaker:Graciana #mood:fear
+ 
+ Well, most of those ideas do happen to be useful, so I can't complain all that much. #speaker:Morgan #mood:neutral
+ 
+ Why thank you ma'am. #speaker:Graciana #mood:happy
+ 
+ I will flick your nose and turn you into a cat the next time you call me ma'am! #speaker:Morgan #mood:angry
+ 
+ Yes ma-- #speaker:Graciana #mood:fear
+ Righty 'o Morgan!
+ 
+ There, much better. #speaker:Morgan #mood:happy
+ Now, I am a little uneasy about going to a different universe or plane of existence that even my knowledge has not seen yet, but I guess it can be done for the sake of our date. #speaker:Morgan #mood:neutral
+ 
+ That's the spirit! And plus, if it is too weird, you can always just go to a favorite place if you've found one since you left the void #speaker:Graciana #mood:neutral
+ 
+ Not really. #speaker:Morgan #mood:neutral
+ 
+ Welp, go with the flow and make good choices. #speaker:Graciana #mood:think
+ That I shall. #speaker:Morgan #mood:neutral
     ->Chaotic
 
 ==Chaotic==
