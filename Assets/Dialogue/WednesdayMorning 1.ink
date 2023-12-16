@@ -3,7 +3,7 @@
 EXTERNAL GoToDiner()
 
 // ==wednesday==
-Hey Chef! Happy Wednesday!#speaker:Graciana #mood:happy #bgm:dinMorning
+Hey Chef! Happy Wednesday!#speaker:Graciana #mood:happy #bgm:dinMorning #ecg: 
 
 Ay, Graciana... #speaker:Chef Swatts #mood:sad
 

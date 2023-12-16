@@ -1,7 +1,7 @@
 // INCLUDE globals.ink
  EXTERNAL GoToDiner()
 // ==friday==
-Hey Chef! Morning! #speaker:Graciana #mood:neutral #bgm:dinMorning
+Hey Chef! Morning! #speaker:Graciana #mood:neutral #bgm:dinMorning #ecg: 
 
 Ay, Gracie, thank tha 'eavens ya here! #speaker:Chef Swatts #mood:pray
 

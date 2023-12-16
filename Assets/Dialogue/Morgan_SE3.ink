@@ -107,7 +107,7 @@ Wow, O'Ryan really does say next to nothing, huh... #speaker:Graciana #mood:thin
 So how do you think they'll go about it? #speaker:Morgan #mood:neutral
 
 
-**[Give you some of their power!]
+*[Give you some of their power!]
 
 Maybe O'Ryan will give you a boon of some of their unfathomable power? #speaker:Graciana #mood:think
 
@@ -126,7 +126,7 @@ Can you please make sure they don't do that to my galaxy though? I prefer not to
  Alrighty then, moving on. #speaker:Graciana #mood:neutral
 
 ->GoodContinued
-**[Do the dirty work themself?]
+*[Do the dirty work themself?]
 
 Maybe O'Ryan would do the dirty work themself? #speaker:Graciana #mood:think
 
@@ -150,7 +150,7 @@ Indeed... #speaker:Morgan #mood:neutral
 The battle has yet to be won, however the sun seems to be rising upon a new era once more. #speaker:Morgan #mood:neutral
 
 ->GoodContinued
-**[Make a deal?]
+*[Make a deal?]
 
 Maybe O'Ryan wants to make some sort of deal with you? #speaker:Graciana #mood:think
  
@@ -228,8 +228,6 @@ Thank you once again for all you have done for me, Graciana. #speaker:Morgan #mo
 Of course! #speaker:Graciana #mood:happy
 So long, Morgan! #esfo: 
 
-
-
 ->END
 ==MorganBadEnding==
 Is O'Ryan offering themself as a sacrifice for you to regain power? #speaker:Graciana #mood:think
@@ -263,7 +261,7 @@ Well, rationalize it for yourself and maybe we can walk through this together, b
 
 Well... #speaker:Graciana #mood:neutral
 
-**[The Diner is a con?]
+*[The Diner is a con?]
 
 Maybe this was some sort of long con operation, to make this diner chain successful and retire for a life of convenience after giving all of their power over to someone else to run it for them? #speaker:Graciana #mood:think
 
@@ -283,7 +281,7 @@ Well thank you, that means a lot Morgan. But I do prefer the work. #speaker:Grac
 Without work, I am nothing, and when I am nothing, I get all weird and sad. #speaker:Graciana #mood:neutral
 
 ->BadContinued
-**[Maybe they won't die?]
+*[Maybe they won't die?]
 
 Maybe O'Ryan won't actually die, but just lose some of their strength? #speaker:Graciana #mood:think
 
@@ -308,7 +306,7 @@ Right... #speaker:Graciana #mood:neutral
 
 
 ->BadContinued
-**[O'Ryan's just lost it...]
+*[O'Ryan's just lost it...]
 
 Maybe O'Ryan just lost their mind finally, after working in and being lost in their own void for eons. #speaker:Graciana #mood:think
 
@@ -487,7 +485,7 @@ So you are saying you aren't interested in O'Ryan? I mean I get the scared part,
  Such as? #speaker:Morgan #mood:neutral
 
 
-**[Ask directly!]
+*[Ask directly!]
 
  You could always ask them directly, y'know? Just walk up and say "hey you beautiful voidling you, wanna be my life partner?" #speaker:Graciana #mood:happy
  
@@ -529,7 +527,7 @@ So you are saying you aren't interested in O'Ryan? I mean I get the scared part,
  
 
 ->ChaoticContinued
-**[Make the first move!]
+*[Make the first move!]
  
  You could... Make the first move! #speaker:Graciana #mood:happy
  
@@ -561,7 +559,7 @@ So you are saying you aren't interested in O'Ryan? I mean I get the scared part,
  (I wanna make a "consuming" joke so bad but hearing the polite and fancily spoken Morgan say "stop..." It scares me.) #speaker:Graciana #mood:sad
 
 ->ChaoticContinued
-**[Write a love letter!]
+*[Write a love letter!]
 
 If you're too shy to say it... #speaker:Graciana #mood:think
 You could write a love letter! #speaker:Graciana #mood:happy
@@ -616,7 +614,7 @@ You could write a love letter! #speaker:Graciana #mood:happy
  Your flattery is appreciated, my friend. #speaker:Morgan #mood:happy
  So, what activity should I ask O'Ryan to partake in with me? #speaker:Morgan #mood:neutral
 
-**[Watching the stars.]
+*[Watching the stars.]
 
 You could maybe ask them on a date to the edge of the universe, and watch the stars together... #speaker:Graciana #mood:happy
 
@@ -656,7 +654,7 @@ You could maybe ask them on a date to the edge of the universe, and watch the st
 
 
 ->Chaotic
-**[Fine dining!]
+*[Fine dining!]
 
 You could invite them out to fine dining! At a fancy restaurant! #speaker:Graciana #mood:happy
 
@@ -676,7 +674,7 @@ You could invite them out to fine dining! At a fancy restaurant! #speaker:Gracia
  ... #speaker:Graciana #mood:neutral
  ... #speaker:Morgan #mood:neutral
 ->Chaotic
-**[Explore somewhere new!]
+*[Explore somewhere new!]
 
 The two of you could go explore somewhere new together! Somewhere neither of you have ever been! #speaker:Graciana #mood:happy
 

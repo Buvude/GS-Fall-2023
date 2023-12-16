@@ -66,7 +66,7 @@ But I'm sure he will eventually come back and walk with me right? #speaker:Fred 
 
 (...I am not built for this...) #speaker:Graciana #mood:neutral
   
- ** [Of course!] 
+* [Of course!] 
 //Good
 ~affectionF=affectionF+2
 
@@ -113,7 +113,7 @@ My lips are sealed! #speaker:Fred #mood:happy
  //moving on
  
 
-**[Making friends by yourself?]
+*[Making friends by yourself?]
 //chaotic
 ~chaosF=chaosF+2
 Well even if he doesn’t, you'll still be able to make other friends on your route, right? #speaker:Graciana #mood:think #sfx:CosmicPoint
@@ -158,7 +158,7 @@ Okay! #speaker:Fred #mood:happy
  -> Next
 
 
-**[What if he doesn't...]
+*[What if he doesn't...]
   //bad
 ~affectionF=affectionF-2
 

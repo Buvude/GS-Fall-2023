@@ -2,7 +2,7 @@
 // ->saturday
 EXTERNAL GoToDiner()
 // ==saturday==
-Ay ay ay, Gracie! #speaker:Chef Swatts #mood:happy #bgm:dinMorning
+Ay ay ay, Gracie! #speaker:Chef Swatts #mood:happy #bgm:dinMorning #ecg: 
 
 Yo Chef, How's it going? #speaker:Graciana
 

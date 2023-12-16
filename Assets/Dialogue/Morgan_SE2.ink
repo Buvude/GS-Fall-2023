@@ -60,7 +60,7 @@ It sounds more like someone else having control of your actions, which you know 
  
 Think of it like this... #speaker:Graciana #mood:think
 
-**[Like a tour guide!]
+*[Like a tour guide!]
  
 It's like letting them be a tour guide to their life. #speaker:Graciana #mood:neutral
  
@@ -87,7 +87,7 @@ End of the unvierse? Like it stops at some point? #speaker:Graciana #mood:think
 And I thank you for it, I think just got a headache from thinking about that... #speaker:Graciana #mood:sad
 
 ->Next
-**[Be part of their life.]
+*[Be part of their life.]
 
 It's like them allowing you to be a part of their life for a time. #speaker:Graciana #mood:neutral
 
@@ -113,7 +113,7 @@ And the exchange of power for only part of someone's life seems pointless for th
 Exactly! They pull back the curtain to let you look into their life, and see what you look like once you step through it. Sharing something with someone can be a great way to grow closer to people. #speaker:Graciana #mood:neutral
 
 ->Next
-**[Merging your destinies...?]
+*[Merging your destinies...?]
 
 Think of it like... briefly merging your destinies? #speaker:Graciana #mood:think
 
@@ -195,7 +195,7 @@ Ahahaha, no, I just like cats too, and that is for sure an accurate description 
 Indeed. #speaker:Morgan #mood:happy
 Do you have a favorite species of feline?
  
-**[Calicos!]
+*[Calicos!]
  
 Well, I really like Calico cats! #speaker:Graciana #mood:happy
 
@@ -208,7 +208,7 @@ Ah, I see. #speaker:Morgan #mood:neutral
 While their behavior might be more "cute," as you may call it, I do find more powerful cats to be of my taste. #speaker:Morgan #mood:sad
 
 ->FavoriteCat
-**[Siamese!]
+*[Siamese!]
  
 I'm more of a Siamese cats kinda gal. #speaker:Graciana #mood:happy
 
@@ -222,7 +222,7 @@ Ah, I see. Well, they may be on the more friendly side, but I relish in the powe
 
 
 ->FavoriteCat
-**[Tuxedo!]
+*[Tuxedo!]
 
 I love Tuxedo cats! #speaker:Graciana #mood:happy
 
@@ -246,7 +246,7 @@ Is this guidance or influence? I myself cannot tell, so please be honest about y
 (Dear Gods, I am not prepared for this level of deep. I got like four hours of sleep, and I'm out of smart stuff to say.) #speaker:Graciana #mood:think
 Well... #speaker:Graciana #mood:think
 
-**[I want you to be happy.]
+*[I want you to be happy.]
 //Good
 ~affectionM+=4
 You've never had someone in your ring before, no one rooting for you, no one supporting you... #speaker:Graciana #mood:neutral #sfx:gainedPoint
@@ -281,7 +281,7 @@ Right, of course. #speaker:Morgan #mood:neutral
 
 
 ->Final
-**[I want to see you get your throne back]
+*[Get your throne back!]
 //Bad
 ~affectionM-=4
 I just want to see you happy, Morgan, and from what you tell me, you're looking for someone to help you do that. #speaker:Graciana #mood:happy
@@ -310,7 +310,7 @@ Just kidding, it has improved. #speaker:Morgan #mood:happy
 
 
 ->Final
-**[I want to see you meet someone]
+*[Meet someone!]
 //Chaotic
 ~chaosM+=2
 

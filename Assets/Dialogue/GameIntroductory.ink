@@ -9,7 +9,7 @@ INCLUDE BADialogue.ink
     ~convo_numberCS=0
     ~QuickSave()
 
-    Apron, check! Glasses, check! #speaker:Graciana #bgm:dinMorning
+    Apron, check! Glasses, check! #speaker:Graciana #bgm:none
     Okay, I think I'm ready!
     ...Oh yeah, the employee handbook... I never looked at it...
     Do I really need to...?
@@ -43,7 +43,7 @@ INCLUDE BADialogue.ink
         
 ==TheGameBegins==
 
-    (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana 
+    (I enter through the portal, and in a moment I'm whisked into the building.) #speaker:Graciana #bgm:dinMorning #ecg: 
     (Here we are... O'Ryan's Diner...) #speaker:Graciana #mood:think 
     (Today’s my first day as a waitress here. It isn’t much, but it’s easy money while I look for an actual job.)
     (I still haven’t met or even seen the owner; I interviewed online. They said to find a “fly guy,” whatever that means–) 

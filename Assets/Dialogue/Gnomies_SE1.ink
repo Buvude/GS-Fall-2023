@@ -16,6 +16,7 @@ Sorry, in a minute! #speaker:Graciana #mood:neutral
     -> DONE
 
 ==GnomiesConvoStart1==
+~convo_numberG=2
 Ah, finally, it's about time! #speaker:Himber #mood:neutral
 What took you so long?
 

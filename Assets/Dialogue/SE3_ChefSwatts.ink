@@ -64,12 +64,12 @@ But I wouldn't mind helping you prepare some food to bring over, for sure!
 
 Ay, that sounds good to me. #speaker:Chef Swatts #mood:neutral
 Once things calm down a bit, an' O'Ryan finally finds a proper manager so I don' have to stay here all the time...
-I'm headin' back to Dipterra, babeh! #speaker:Chef Swatts #mood:happy
+I'm headin' back to Dipterra, babeh! #speaker:Chef Swatts #mood:happy #esfo: 
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~affectionOR+=1
 // ~GoToAppartment()
-~GoToAppartment()
+
 ->DONE
 
 
@@ -89,7 +89,7 @@ And ya too, Gracie. Ya stuck on ya Earth, but to me it looks like just another D
 
 Well I mean-- #speaker:Graciana
 
-So I want ya to have this. Cuz I ain't goin' nowhere else but here! #speaker:Chef Swatts #mood:happy
+So I want ya to have this. Cuz I ain't goin' nowhere else but here! #speaker:Chef Swatts #mood:happy #pu:sportal
 
 (He takes my hand and places his Personal Portal Device in it, without any hesitation.) #speaker:Graciana
 ...Are you sure about this...?
@@ -97,16 +97,16 @@ So I want ya to have this. Cuz I ain't goin' nowhere else but here! #speaker:Che
 Ya, of course! Ya said that portal travel is inconvenient on Earth, ya? #speaker:Chef Swatts
 Ya can use that to get around, no sweat!
 I got no problem stayin' here!
-For the rest of my life... #speaker:Chef Swatts #mood:sad
+For the rest of my life... #speaker:Chef Swatts #mood:sad #pd: 
 Ahahaha! #speaker:Chef Swatts #mood:happy
 
 (I mean, he seems content with staying here... But is that really what he wants? To stay in this dinky kitchen for the rest of his life?) #speaker:Graciana #mood:think
-(He could be doing so much more, I think...)
+(He could be doing so much more, I think...) #esfo: 
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~affectionOR-=1
 // ~GoToAppartment()
-~GoToAppartment()
+
 ->DONE
 
 ==ChaosEndCS==
@@ -143,10 +143,10 @@ They would eat ya alive in a minute. #speaker:Chef Swatts #mood:neutral
 
 Y-yeah... I figured... #speaker:Graciana #mood:sad
 (I'm glad that Chef Swatts has found some sort of "greater purpose" aside from working here for the rest of his life.) #speaker:Graciana #mood:happy
-(I wonder when I'll get a chance to lead such a great difference like that...) #speaker:Graciana #mood:think
+(I wonder when I'll get a chance to lead such a great difference like that...) #speaker:Graciana #mood:think #esfo: 
 ~convo_numberOR+=1
 ~convo_numberCS+=1
 ~chaosOR+=1
 // ~GoToAppartment()
-~GoToAppartment()
+
 ->DONE

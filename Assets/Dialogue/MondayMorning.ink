@@ -3,7 +3,7 @@
 // EXTERNAL GoToDiner()
 
 ==monday==
-    Ey, Graciana! #speaker:Chef Swatts
+    Ey, Graciana! #speaker:Chef Swatts #ecg: 
     
     Oh, hi Chef! #speaker:Graciana
     

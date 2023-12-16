@@ -19,7 +19,7 @@ It ain't anything real or physical, ya know? It's just tha... flow... tha food s
 Ya gonna get it one day. Ya already got a good start here! #speaker:Chef Swatts
 Go ahead an' take this burger out to tha customer, ya?
 
-Got it. #speaker:Graciana #mood:happy
+Got it. #speaker:Graciana #mood:happy #scg:black
 (I take the burger out to the customer, and help Chef Swatts with some more prepwork and cleaning.) #ss:Chef Swatts:blank
 
 ~convo_numberCS=1

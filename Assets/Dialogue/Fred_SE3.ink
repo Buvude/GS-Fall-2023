@@ -82,7 +82,7 @@ Well, now's the time to, bud! #speaker:Graciana #mood:happy
 
 What do you do think? What would <i>you</i> wanna do first? #speaker:Fred #mood:galaxy
 
-**[Work at UMS with Frank]
+*[Work at UMS with Frank]
  
 I think it would be nice to work with Frank more. #speaker:Graciana #mood:think
 As long as you don't have to work to pay off the suit, that is. #speaker:Graciana #mood:neutral
@@ -110,7 +110,7 @@ Oh indeed. #speaker:Graciana #mood:neutral
 Okay, so I should keep working with Frank as long as I get money for it? #speaker:Fred #mood:neutral
 And then what?
 ->GoodFinal
-**[Go to school]
+*[Go to school]
 
 You could always to school! #speaker:Graciana #mood:happy
 
@@ -145,7 +145,7 @@ Of course, little star. #speaker:Graciana #mood:neutral
 
 Okay! So once I go to school, what do I do after that? #speaker:Fred #mood:neutral
 ->GoodFinal
-**[Be a kid!]
+*[Be a kid!]
 
 Be a kid for once! #speaker:Graciana #mood:happy
 
@@ -221,7 +221,7 @@ About? #speaker:Graciana #mood:think
 
 Well, do you remember what you first said me to when I mentioned Frank worked with me before? #speaker:Fred #mood:neutral
 
-**[How long you two worked...] 
+*[How long you two worked...] 
 
 How long you had worked with each other? #speaker:Graciana #mood:think
 
@@ -253,7 +253,7 @@ Oh...? #speaker:Graciana #mood:think
 (He's staring at me...) #speaker:Graciana #mood:think
 
 ->ChaosFinal
-**[How much you trust Frank?]
+*[How much you trust Frank?]
 
 How much you trusted Frank? #speaker:Graciana #mood:think
 
@@ -322,7 +322,7 @@ And your point is, smarty suit pants? #speaker:Graciana #mood:think
 Only one sassy person has tried to help me out of this... #speaker:Fred #mood:neutral
 
 ->ChaosFinal
-**[Franks favorite shows?]
+*[Franks favorite shows?]
 What Franks favorite shows were? #speaker:Graciana #mood:think
 
 No! Before that! #speaker:Fred #mood:angry
@@ -507,7 +507,7 @@ Let me clean up and then lets go see your new home, bud. #speaker:Graciana #mood
 
 ==BadEnding==
 
-**[Polar bear]
+*[Polar bear]
 What's a polar bear? #speaker:Fred #mood:neutral
 
 Oh, they used to be the apex predators of the Northern Icy planes of Earth, until Penguins evovled to hunt in packs and started hunting them.  #speaker:Graciana #mood:think
@@ -533,7 +533,7 @@ But that still leaves me with a question... #speaker:Fred #mood:neutral
 
 What's up hun?  #speaker:Graciana #mood:think
 ->BadEndingFinal
-**[Frog]
+*[Frog]
 Frogs? I thought people didn't like them because they're gross and slimey... #speaker:Fred #mood:sad
 
 Some, yes.  #speaker:Graciana #mood:think
@@ -562,7 +562,7 @@ And what would that be, little hopping star?  #speaker:Graciana #mood:think
 
 ->BadEndingFinal
 
-**[Puppy]
+*[Puppy]
 Well I think you would look adorable in a puppy suit! #speaker:Graciana #mood:neutral
 You're already a loyal and adorable little star who everyone loves to be around, so it would fit the bill! #speaker:Graciana #mood:neutral
 

@@ -12,6 +12,7 @@ Hmph! #speaker:Himber #mood:angry
     -> DONE
 
 ==GnomiesConvoStart2==
+~convo_numberG=3
 I guess, sure... #speaker:Graciana #mood:neutral
 
 Perfect! You know what I want by now, yes? #speaker:Himber #mood:neutral

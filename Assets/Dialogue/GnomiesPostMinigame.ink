@@ -61,7 +61,7 @@ EXTERNAL StartTTMicro()
 }
 //bam bam trash
 ==pass1==
-Alright, looks like I'm getting it! #speaker:Graciana #mood:happy
+Alright, looks like I'm getting it! #speaker:Graciana #mood:happy 
 (I doubt Himber would compliment me for this.)
 ~StartO_Ryan()
 ->DONE
@@ -71,7 +71,7 @@ Getting better and better! #speaker:Graciana #mood:happy
 ~StartO_Ryan()
 ->DONE
 ==pass3==
-Alright, all set! #speaker:Graciana #mood:happy
+Alright, all set! #speaker:Graciana #mood:happy #ecg: 
 (Y'know, I could probably toss Himber like this...)
 ~StartO_Ryan()
 ->DONE
@@ -86,12 +86,12 @@ Yikes... Guess I'm not great at stacking... #speaker:Graciana #mood:sad
 ~StartO_Ryan()
 ->DONE
 ==fail3==
-Welp, close enough...? #speaker:Graciana #mood:sad
+Welp, close enough...? #speaker:Graciana #mood:sad #ecg: 
 (If I were throwing Himber instead, I'm sure I'd be more accurate...)
 ~StartO_Ryan()
 ->DONE
 ==chaos==
-Hm... I wonder where that black hole leads to...? #speaker:Graciana #mood:think
+Hm... I wonder where that black hole leads to...? #speaker:Graciana #mood:think #ecg: 
 (Maybe I can throw Himber in there, and find out...)
 //i'm making jokes about graciana throwing himber to kinda foreshadow the bad ending lmao
 ~StartO_Ryan()

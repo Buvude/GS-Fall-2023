@@ -4,8 +4,8 @@
 // INCLUDE globals.ink
 ==mainORYAN==
 
-(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral #bgm:dinNight #ss:spotlight:O'Ryan
-(Just gotta clean and close up...)
+(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral #bgm:dinNight #bg:diner #ss:spotlight:O'Ryan
+(Just gotta clean and close up...) #ecg: 
 (...)
 (Suddenly, the entrance portal flashes and opens up!)
 // Portal Sound
@@ -32,10 +32,10 @@ Uh...
         
         ... #speaker:???
         I am O'Ryan. #speaker:O'Ryan #mood:happy
-        I am the owner of The Portal Diner.
+        I am the owner of O'Ryan's Diner.
         
         !! #speaker:Graciana
-        Oh! Right! Yeah, of course! Hi, uh, thank you, for, uh, hiring me, and, and, uh, I'm Graciana!
+        Oh! Right! Yeah, duh, of course! Hi, uh, thank you, for, uh, hiring me, and, and, uh, I'm Graciana!
         
         ... #speaker:O'Ryan
         I know.
@@ -52,14 +52,14 @@ Uh...
         Who's Graciana? I-I've never heard that n-name before... #speaker:Graciana
         
         ... #speaker:???
-        I am O'Ryan. #speaker:O'Ryan 
-        I am the owner of The Portal Diner.
+        I am O'Ryan. #speaker:O'Ryan #mood:happy
+        I am the owner of O'Ryan's Diner.
         
         !!!! #speaker:Graciana
-        O-oh! Y-yeah! Right, s-sorry, I, uh, yeah, uh, I am, uh, Graciana, ha, ha, s-sorry, I, uh, j-just--
+        O-oh! Y-yeah! Duh, of course! S-sorry, I, uh, yeah, uh, I am, uh, Graciana, ha, ha, s-sorry, I, uh, j-just--
         (O'Ryan holds out an envelope without a word. They gesture for me to take it.)
         
-        Payment. For today. #speaker:O'Ryan #mood:annoyed
+        Payment. For today. #speaker:O'Ryan #mood:neutral
         ...
         Graciana.
         ->continue

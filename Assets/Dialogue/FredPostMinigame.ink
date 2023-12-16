@@ -70,7 +70,7 @@ I just keep getting better, huh? #speaker:Graciana #mood:happy
 ~StartO_Ryan()
 ->DONE
 ==pass3==
-Awesome, nailed all of 'em! #speaker:Graciana #mood:happy
+Awesome, nailed all of 'em! #speaker:Graciana #mood:happy #ecg: 
 (I think Fred would find this pretty fun...)
 ~StartO_Ryan()
 ->DONE
@@ -85,12 +85,12 @@ This is pretty tough, huh... #speaker:Graciana #mood:sad
 ~StartO_Ryan()
 ->DONE
 ==fail3==
-Jeez, it's tough getting these in... #speaker:Graciana #mood:sad
+Jeez, it's tough getting these in... #speaker:Graciana #mood:sad #ecg: 
 (I'm sure Fred would probably ace it, since he's used to space...)
 ~StartO_Ryan()
 ->DONE
 ==chaos==
-Huh... I wonder... Where does that black hole take the trash? #speaker:Graciana #mood:think
+Huh... I wonder... Where does that black hole take the trash? #speaker:Graciana #mood:think #ecg: 
 (Maybe Fred knows something about it? Since he's a star?)
 ~StartO_Ryan()
 ->DONE

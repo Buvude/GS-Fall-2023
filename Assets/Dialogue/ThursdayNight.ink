@@ -1,8 +1,10 @@
 INCLUDE globals.ink
-.Yet another day... #speaker:Graciana
+
+.... #ss:Chef Swatts:blank #ss:CeCe:blank
+Yet another day... #speaker:Graciana #ecg: 
 Let's see... Hm, no, I've gotten everything done already, I guess. #speaker:Graciana #mood:happy #bgm:dinNight
 
-(Right on cue, O'Ryan enters the Diner.)
+(Right on cue, O'Ryan enters the Diner.) #ss:spotlight:O'Ryan:neutral
 
 ... #speaker:O'Ryan #mood:neutral
 
@@ -24,6 +26,6 @@ Keep it up.
 (Just like that, O'Ryan turns and leaves through the portal.) #speaker:Graciana
 
 Alright... Looks like I'm on their good side! #speaker:Graciana #mood:happy
-Well, since I finished early... Guess I can head out!
-~GoToAppartment()
+Well, since I finished early... Guess I can head out! #esfo: 
+
     -> DONE

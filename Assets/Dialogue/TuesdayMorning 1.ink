@@ -2,7 +2,7 @@
 // ->tuesday
 EXTERNAL GoToDiner()
 // ==tuesday==
-Yo, Gracie! #speaker:Chef Swatts #bgm:dinMorning
+Yo, Gracie! #speaker:Chef Swatts #bgm:dinMorning #ecg: 
 
 Good morning, Chef! #speaker:Graciana
 

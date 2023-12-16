@@ -28,10 +28,10 @@ INCLUDE BADialogue.ink
     
     ... #speaker:Graciana #mood:neutral
     
-    Aight aight, lemme fix it up. I'll take it out. #speaker:Chef Swatts #mood:angry
+    Aight aight, lemme fix it up. I'll take it out. #speaker:Chef Swatts #mood:blank
     
     (Chef Swatts makes the burger a bit better, and takes it out to the customer. After a minute, he comes back in looking a bit disgruntled...) #speaker:Graciana #mood:think
-    Something happen?
+    Something happen? #ss:Chef Swatts:angry
     
     I dunno what that lady's deal is. She actin' like she never seen a fly be a chef before! #speaker:Chef Swatts #mood:angry
     
