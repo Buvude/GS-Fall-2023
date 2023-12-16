@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/AddToBuildList/TittleScreen.unity
+    path: Assets/Scenes/AddToBuildList/TitleScreen.unity
     guid: c11541cc49b8b1f4ca7343e128e6bce4
   - enabled: 1
     path: Assets/Scenes/AddToBuildList/DinerScene.unity
