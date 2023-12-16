@@ -712,43 +712,41 @@ The two of you could go explore somewhere new together! Somewhere neither of you
 ==Chaotic==
 //add more here, transition or like a day goes by or something idk
 
-Well the only logical thing would be to gaze out into the stars and scout out world for our honeymoon and then conquer those worlds #speaker:Morgan #mood:neutral 
+Well, the  logical thing would be to gaze out into the stars, scout out worlds for our honeymoon, and then conquer those worlds. #speaker:Morgan #mood:neutral 
 
-honeymoon? #speaker:Graciana #mood:think
+Honeymoon? #speaker:Graciana #mood:think
 
-Well yes I assume like any Eldritch being with a modicum of respect for themselves that he would propose to me after a successful first date #speaker:Morgan #mood:neutral
+Well yes, I assume like any Eldritch being with a modicum of respect for themselves, that they would propose to me after a successful first date. #speaker:Morgan #mood:neutral
 
-that quick!??!?! #speaker:Graciana #mood:think
+That quick?! #speaker:Graciana #mood:think
 
-Well we are very simple beings at our core, we will know whether we will work as partners from the day we attempt to romance one another #speaker:Morgan #mood:neutral
+We <i>are</i> very simple beings at our core, we will know whether we will work as partners from the day we attempt to romance one another. #speaker:Morgan #mood:neutral
+If it is meant to be, why waste time in reaching our goal of an eternity of harmonic existence? #speaker:Morgan #mood:neutral
 
-If it is meant to be why waste time in reaching our goal of an eternity of harmonic existence #speaker:Morgan #mood:neutral
+Wow. That sounds almost pleasant. #speaker:Graciana #mood:think
 
-wow that sounds almost pleasant #speaker:Graciana #mood:think
+Until both of us merge together to form a new Eldritch entity, that is capable of both its parents, and takes control of our current minds with all of the memories of us combined. #speaker:Morgan #mood:neutral
 
-well until both of us merge together to form a new Eldritch entity that is capable of both its parents and takes control of our current minds with all of the memories of us combined #speaker:Morgan #mood:neutral
+Oh my. #speaker:Graciana #mood:fear
 
-oh my #speaker:Graciana #mood:fear
+Yes, it is a beautiful process. #speaker:Morgan #mood:happy
 
-yes it is a beautiful process #speaker:Morgan #mood:happy
+If that's what you want... #speaker:Graciana #mood:think
 
-well if that's what you want #speaker:Graciana #mood:neutral
+Indeed, it is. #speaker:Morgan #mood:happy
 
-Indeed it is #speaker:Morgan #mood:neutral
+I wish you the best of luck, then. #speaker:Graciana #mood:happy
 
-I wish you the best of luck #speaker:Graciana #mood:happy
+Thank you dear, I will try to visit as often as I can. #speaker:Morgan #mood:neutral
 
-Thank you dear, I will try to visit as often as I can #speaker:Morgan #mood:neutral
+That, or send nightmares to you so we can speak when you are off. work#speaker:Morgan #mood:happy 
 
-That or send nightmares to you so we can speak when you are off work#speaker:Morgan #mood:happy 
-
-That's not necessary but if you want to I physically can't stop you #speaker:Graciana #mood:fear
+That's not necessary, but if you want to I physically can't stop you. #speaker:Graciana #mood:fear
 
 Wonderful! #speaker:Morgan #mood:happy
+Tah-tah my dear, I must go now. #speaker:Morgan #mood:neutral
 
-Tata my dear I must go now #speaker:Morgan #mood:neutral
-
-Go get em Morgan! #speaker:Graciana #mood:happy
+Go get 'em Morgan! #speaker:Graciana #mood:happy
 
 (Days go by without me seeing or hearing from the Morgan, a slight worry started to build as I was unsure of what the outcome of her date was) 
 
