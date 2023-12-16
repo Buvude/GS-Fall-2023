@@ -614,28 +614,44 @@ You could write a love letter! #speaker:Graciana #mood:happy
  I know it's hard to believe since you're already such an amazing Goddess. #speaker:Graciana #mood:happy
  
  Your flattery is appreciated, my friend. #speaker:Morgan #mood:happy
- So what activity should I ask him to partake in with me?#speaker:Morgan #mood:neutral
+ So, what activity should I ask O'Ryan to partake in with me? #speaker:Morgan #mood:neutral
 
-**[Sitting on the edge of the universe watching the stars]
- That would not be the worst experience in the world, I admit  despite my many travels and long life I don't believe I've done this before #speaker:Morgan #mood:think
- It sounds peaceful, simple, but enjoyable #speaker:Morgan #mood:happy
- I like it, but I fear O'Ryan being a voidling made of galaxies and stars themself it would be redundant no? Would they really  enjoy such an activity? #speaker:Morgan #mood:neutral
- You won't know till you try right? All you gotta do is ask and if not you can suggest something else  #speaker:Graciana #mood:think
- Perhaps, you are correct it is worth the attempt over sitting idle in anticipation #speaker:Morgan #mood:neutral
+**[Watching the stars.]
+
+You could maybe ask them on a date to the edge of the universe, and watch the stars together... #speaker:Graciana #mood:happy
+
+ That would not be the worst experience in the world, I admit despite my many travels and long life, I don't believe I've done this before. #speaker:Morgan #mood:neutral
+ It sounds peaceful. Simple, but enjoyable. #speaker:Morgan #mood:happy
+ I like it, but I fear O'Ryan being a voidling made of galaxies and stars themself... It may be redundant, no? Would they really enjoy such an activity? #speaker:Morgan #mood:sad
+ 
+ You won't know 'til you try right? All you gotta do is ask, and if not you can suggest something else.  #speaker:Graciana #mood:think
+ 
+ Perhaps you are correct, it is worth the attempt over sitting idle in anticipation. #speaker:Morgan #mood:neutral
+ 
  There you go, that's the spirit! #speaker:Graciana #mood:happy
- And you might even see a black hole or two while your star gazing! #speaker:Graciana #mood:happy
- That would be quite an profound sight for our first date #speaker:Morgan #mood:think
- Oh my I believe I just experienced shivers when that phrase came out of my mouth #speaker:Morgan #mood:fear
- Is this what you normally feel when faced with this kind of event? #speaker:Morgan #mood:think
- Exactly like that, well hopefully its related to O'Ryan and not some random problem springing up #speaker:Graciana #mood:neutral
- Why would you say that? What if it is, I could be draining of my power and very life essence #speaker:Morgan #mood:fear
- (OH GODS WHAT HAVE I DONE) I am so sorry Morgan I didn't mean it like that! #speaker:Graciana #mood:fear
- I really meant it as an internal thought but it came out loud but I'm sure you're fine you're basically immortal right? Right? #speaker:Graciana #mood:fear
- My humor causing you to squirm in confusion and discomfort makes my days more and more enjoyable #speaker:Morgan #mood:happy
- And I love your laugh even though it comes at the cost of my sanity #speaker:Graciana #mood:fear
- (hide the tears Graciana, hide the tears)#speaker:Graciana #mood:fear
- small price to pay to hear such a rare occurrence #speaker:Morgan #mood:happy
- mhm #speaker:Graciana #mood:neutral
+ 
+ And you might even see a blackhole or two while you're stargazing! #speaker:Graciana #mood:happy
+ 
+ That would be quite an profound sight for our first date. #speaker:Morgan #mood:neutral
+ Oh my, I believe I just experienced shivers when that phrase came out of my mouth #speaker:Morgan #mood:happy
+ Is this what you normally feel when faced with this kind of event? #speaker:Morgan #mood:neutral
+ 
+ Exactly like that! #speaker:Graciana #mood:happy 
+ Well, hopefully it's related to O'Ryan and not some random problem springing up. #speaker:Graciana #mood:neutral
+ 
+ Why would you say that? What if it is? I could be draining my power and very life essence! #speaker:Morgan #mood:angry
+ 
+ (OH GODS WHAT HAVE I DONE?!) I am so sorry Morgan I didn't mean it like that! #speaker:Graciana #mood:fear
+ I really meant it as an internal thought but it came out loud, but I'm sure you're fine you're basically immortal, right? Right? #speaker:Graciana #mood:fear
+ 
+ ...My humor causing you to squirm in confusion and discomfort makes my days more and more enjoyable! #speaker:Morgan #mood:happy
+ 
+ ...And I love your laugh, even though it comes at the cost of my sanity... #speaker:Graciana #mood:fear
+ (Hide the tears Graciana, Hide the tears...)#speaker:Graciana #mood:sad
+ 
+ A small price to pay, to hear such a rare occurrence. #speaker:Morgan #mood:happy
+ 
+ Mhm... #speaker:Graciana #mood:neutral
 
 
 
