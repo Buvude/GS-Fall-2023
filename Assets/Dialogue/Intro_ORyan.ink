@@ -4,9 +4,9 @@
 // INCLUDE globals.ink
 ==mainORYAN==
 
-(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral #bgm:dinNight #bg:diner #ss:spotlight:O'Ryan
+(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral #bgm:dinNight #bg:diner 
 (Just gotta clean and close up...) #ecg: 
-(...)
+(...) #ss:spotlight:O'Ryan
 (Suddenly, the entrance portal flashes and opens up!)
 // Portal Sound
 E-excuse me, we're closing now, so if you could please-- #speaker:Graciana #mood:think

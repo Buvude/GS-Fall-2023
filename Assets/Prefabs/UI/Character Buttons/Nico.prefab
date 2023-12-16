@@ -78,10 +78,10 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 0ef1323974c69ad4bab03017d13c73a3, type: 3}
   - {fileID: 21300000, guid: 6411f56594dff8742a8a1adcf6c5d748, type: 3}
   dDictValue:
-  - {fileID: 4900000, guid: 18d132f9c7322d9469209c0b87c9dd1c, type: 3}
-  - {fileID: 4900000, guid: 18d132f9c7322d9469209c0b87c9dd1c, type: 3}
-  - {fileID: 4900000, guid: 18d132f9c7322d9469209c0b87c9dd1c, type: 3}
-  - {fileID: 4900000, guid: f06a5a46a6f82cb41aebf93f33e16398, type: 3}
+  - {fileID: 4900000, guid: b5ef256a3456a3245a89f43af1fdac27, type: 3}
+  - {fileID: 4900000, guid: 9f17625391f31074398caa0e32c1c4cc, type: 3}
+  - {fileID: 4900000, guid: 25f1b8e2a4917c64085641badf449845, type: 3}
+  - {fileID: 4900000, guid: cdfe4652f38bc874595f92c47c697a53, type: 3}
   - {fileID: 4900000, guid: 28ccff3ecfbcb9f4eba2b5b1ac352a6e, type: 3}
 --- !u!222 &2442933825277518471
 CanvasRenderer:

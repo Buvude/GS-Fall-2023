@@ -3,7 +3,7 @@ INCLUDE globals.ink
 .... #ss:Chef Swatts:blank #ss:CeCe:blank
 Phew... Feels like I barely made it through today... #speaker:Graciana #speaker:sad #bgm:dinNight #ecg: 
 
-(The portal activates, and O'Ryan steps through.) #ss:spotlight:O'Ryan:neutral
+(The portal activates, and O'Ryan steps through.) #ss:spotlight:O'Ryan
 
 ... #speaker:O'Ryan #mood:neutral
 

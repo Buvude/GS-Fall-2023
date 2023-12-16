@@ -5,7 +5,7 @@ INCLUDE globals.ink
 Jeez... I need a second... to sit...
 Phew... Real busy today...
 
-(O'Ryan enters through the portal, as always.) #ss:spotlight:O'Ryan:neutral
+(O'Ryan enters through the portal, as always.) #ss:spotlight:O'Ryan
 
 ... #speaker:O'Ryan #mood:neutral
 

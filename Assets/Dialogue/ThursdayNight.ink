@@ -4,7 +4,7 @@ INCLUDE globals.ink
 Yet another day... #speaker:Graciana #ecg: 
 Let's see... Hm, no, I've gotten everything done already, I guess. #speaker:Graciana #mood:happy #bgm:dinNight
 
-(Right on cue, O'Ryan enters the Diner.) #ss:spotlight:O'Ryan:neutral
+(Right on cue, O'Ryan enters the Diner.) #ss:spotlight:O'Ryan
 
 ... #speaker:O'Ryan #mood:neutral
 
