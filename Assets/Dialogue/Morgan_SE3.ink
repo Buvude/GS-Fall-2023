@@ -739,22 +739,36 @@ I wish you the best of luck, then. #speaker:Graciana #mood:happy
 
 Thank you dear, I will try to visit as often as I can. #speaker:Morgan #mood:neutral
 
-That, or send nightmares to you so we can speak when you are off. work#speaker:Morgan #mood:happy 
+That, or send nightmares to you so we can speak when you are off work. #speaker:Morgan #mood:happy 
 
 That's not necessary, but if you want to I physically can't stop you. #speaker:Graciana #mood:fear
 
 Wonderful! #speaker:Morgan #mood:happy
 Tah-tah my dear, I must go now. #speaker:Morgan #mood:neutral
 
-Go get 'em Morgan! #speaker:Graciana #mood:happy
+Go get 'em Morgan! #speaker:Graciana #mood:happy #scg:
 
-(Days go by without me seeing or hearing from the Morgan, a slight worry started to build as I was unsure of what the outcome of her date was) 
+...
+...
+...
 
-(That is until 6 days 6 hours and 6 minutes after the date send off I saw behind the counter The Morgan herself in all of her glory wearing a pink apron and holding O'Ryans hand)
+(I haven't seen Morgan in a while...)
+(O'Ryan hasn't been in much, either...)
+(It's been like... What...)
+(Six days? Six hours, and six minutes?)
+(I'm worried... Did something happen?)
+(...)
+(Oh well... I gotta open up the Diner today, I guess...)
+(Hm? The portal's already unlocked...) #ecg: 
+...
+...Morgan?! #speaker:Graciana #mood:fear
 
-(I guess there is some good endings after all..... even if this one is still kinda weird) #speaker:Graciana #mood:happy
+Hello, dear! #speaker:Morgan #mood:happy
 
+Is that... #speaker:Graciana #mood:think
+Is that a ring?! #speaker:Graciana #mood:happy 
 
-~GoToAppartment()
+(I guess there are some happy endings after all...) #esfo: 
+(Even if this one is still kinda weird.)
 
 ->END
