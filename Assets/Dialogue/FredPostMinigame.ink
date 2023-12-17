@@ -24,38 +24,38 @@ EXTERNAL StartTTMicro()
 -currentConvo=="FMG1":
     {
     -winState=="won":
-    ~affectionG+=2
-    ~convo_numberG=1
+    ~affectionF+=2
+    ~convo_numberF=1
     ->pass1
     -winState=="loss":
-    ~affectionG-=2
-    ~convo_numberG=1
+    ~affectionF-=2
+    ~convo_numberF=1
     ->fail1
     }
 -currentConvo=="FMG2":
     {
     -winState=="won":
-     ~affectionG+=3
-     ~convo_numberG=2
+     ~affectionF+=3
+     ~convo_numberF=2
     ->pass2
     -winState=="loss":
-    ~affectionG-=3
-    ~convo_numberG=2
+    ~affectionF-=3
+    ~convo_numberF=2
     ->fail2
     }
 -currentConvo=="FMG3":
     {
     -winState=="chaos":
-    ~chaosG+=4
-    ~convo_numberG=3
+    ~chaosF+=4
+    ~convo_numberF=3
     ->chaos
     -winState=="won":
-    ~affectionG+=4
-    ~convo_numberG=3
+    ~affectionF+=4
+    ~convo_numberF=3
     ->pass3
     -winState=="loss":
-    ~affectionG+=4
-    ~convo_numberG=3
+    ~affectionF+=4
+    ~convo_numberF=3
     ->fail3
     }
 }
@@ -70,7 +70,7 @@ I just keep getting better, huh? #speaker:Graciana #mood:happy
 ~StartO_Ryan()
 ->DONE
 ==pass3==
-Awesome, nailed all of 'em! #speaker:Graciana #mood:happy
+Awesome, nailed all of 'em! #speaker:Graciana #mood:happy #ecg: 
 (I think Fred would find this pretty fun...)
 ~StartO_Ryan()
 ->DONE
@@ -85,12 +85,12 @@ This is pretty tough, huh... #speaker:Graciana #mood:sad
 ~StartO_Ryan()
 ->DONE
 ==fail3==
-Jeez, it's tough getting these in... #speaker:Graciana #mood:sad
+Jeez, it's tough getting these in... #speaker:Graciana #mood:sad #ecg: 
 (I'm sure Fred would probably ace it, since he's used to space...)
 ~StartO_Ryan()
 ->DONE
 ==chaos==
-Huh... I wonder... Where does that black hole take the trash? #speaker:Graciana #mood:think
+Huh... I wonder... Where does that black hole take the trash? #speaker:Graciana #mood:think #ecg: 
 (Maybe Fred knows something about it? Since he's a star?)
 ~StartO_Ryan()
 ->DONE

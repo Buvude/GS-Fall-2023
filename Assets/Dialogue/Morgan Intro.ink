@@ -158,7 +158,7 @@ Alright, be back in a bit! #speaker:Graciana #mood:neutral #scg:black
 Okay Morgan, how's it-- #speaker:Graciana #mood:neutral #ss:Morgan:blank #ecg: 
 (Huh, she's not here anymore...) 
 (A note?) #speaker:Graciana #mood:think
-(It's written in a weird, drippy black in...)
+(It's written in a weird, drippy black ink...)
 <b><i>"See you soon."</i></b>
 ... #speaker:Graciana #mood:fear
 That's not ominous at all... #speaker:Graciana #mood:sad

@@ -25,72 +25,72 @@ EXTERNAL StartTTMicro()
     {
     -winState=="won":
     ~affectionG+=2
-    ~convo_numberG=1
+    ~convo_numberM=1
     ->pass1
     -winState=="loss":
-    ~affectionG-=2
-    ~convo_numberG=1
+    ~affectionM-=2
+    ~convo_numberM=1
     ->fail1
     }
 -currentConvo=="MMG2":
     {
     -winState=="won":
-     ~affectionG+=3
-     ~convo_numberG=2
+     ~affectionM+=3
+     ~convo_numberM=2
     ->pass2
     -winState=="loss":
-    ~affectionG-=3
-    ~convo_numberG=2
+    ~affectionM-=3
+    ~convo_numberM=2
     ->fail2
     }
 -currentConvo=="MMG3":
     {
     -winState=="chaos":
     ~chaosG+=4
-    ~convo_numberG=3
+    ~convo_numberM=3
     ->chaos
     -winState=="won":
     ~affectionG+=4
-    ~convo_numberG=3
+    ~convo_numberM=3
     ->pass3
     -winState=="loss":
     ~affectionG+=4
-    ~convo_numberG=3
+    ~convo_numberM=3
     ->fail3
     }
 }
 ==pass1==
-Nice, scored! #speaker:Graciana #mood:happy
+Nice, scored! #speaker:Graciana #mood:happy #ecg: 
 (I wonder if Morgan would be good at this. She's got a bunch of tentacles... Can she grab with them?)
 ~StartO_Ryan()
 ->DONE
 ==pass2==
-This burger's lookin' good! #speaker:Graciana #mood:happy
+This burger's lookin' good! #speaker:Graciana #mood:happy #ecg: 
 (Morgan can eat real food, right? I wonder what she'd think of a burger...)
 ~StartO_Ryan()
 ->DONE
 ==pass3==
-I'm doin' great at this! #speaker:Graciana #mood:happy
+I'm doin' great at this! #speaker:Graciana #mood:happy #ecg: 
 (Maybe Morgan would feel better if she tried this, I'm feelin' pretty good...)
 ~StartO_Ryan()
 ->DONE
 ==fail1==
-Yikes, I made a mess... #speaker:Graciana #mood:sad
+Yikes, I made a mess... #speaker:Graciana #mood:sad #ecg: 
 (I'm glad Morgan isn't my boss, I'd be terrified of messing up...)
 ~StartO_Ryan()
 ->DONE
 ==fail2==
-This burger looks... Interesting... #speaker:Graciana #mood:sad
+This burger looks... Interesting... #speaker:Graciana #mood:sad #ecg: 
 (I wonder, would Morgan eat this? I'd think worse food tastes more like human souls...)
 ~StartO_Ryan()
 ->DONE
 ==fail3==
-Wuh oh... #speaker:Graciana #mood:sad
+Wuh oh... #speaker:Graciana #mood:sad #ecg: 
 (I'm sure Morgan would have a bit to say about my performance here...)
 ~StartO_Ryan()
 ->DONE
 ==chaos==
-Aaaand there goes the trash... #speaker:Graciana #mood:think
+Aaaand there goes the trash... #speaker:Graciana #mood:think #ecg: 
 (I wonder if Morgan knows anything about this black hole...?)
 ~StartO_Ryan()
 ->DONE

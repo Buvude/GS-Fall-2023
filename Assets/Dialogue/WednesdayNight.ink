@@ -1,9 +1,11 @@
 INCLUDE globals.ink
+.... #ss:Chef Swatts:blank #ss:CeCe:blank
+
 Hm... I think that's everything... #speaker:Graciana #bgm:dinNight
 ...That's weird, O'Ryan should be in by now... #speaker:Graciana #mood:think
 
 (And right as I say that...)
-(...O'Ryan enters through the portal) #ss:O'Ryan:neutral
+(...O'Ryan enters through the portal) #ss:spotlight:O'Ryan
 
 ... #speaker:O'Ryan #mood:neutral
 
@@ -30,6 +32,6 @@ Y-yeah, see ya tomorrow! #speaker:Graciana
 (And just like that, O'Ryan turns and leaves the Diner.)
 
 ...That was weird.
-Oh well, guess I'll just head home for now...
-~GoToAppartment()
+Oh well, guess I'll just head home for now... #esfo: 
+
     -> DONE

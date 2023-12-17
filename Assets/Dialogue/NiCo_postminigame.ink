@@ -31,63 +31,52 @@ INCLUDE globals.ink
 //trash toss 1
 ~affectionN=affectionN+2
 
-Hey, nice goin'! #speaker:CeCe #mood:happy
-
-Hm! #speaker:Graciana #mood:happy
-Guess I'm pretty good at this, huh?
+Hm! Guess I'm pretty good at this, huh? #speaker:Graciana #mood:happy #ecg: 
+(I wonder if I could salvage some of this junk for NiCo...?)
 
 -> EndConvo
 ==pass2==
 //trash toss 2
 ~affectionN=affectionN+3
 
-Hey, good job! #speaker:CeCe #mood:happy
-
-Hm! #speaker:Graciana #mood:happy
-I'm gettin' better at this!
+Hm! I'm gettin' better at this! #speaker:Graciana #mood:happy #ecg: 
+(Does Tundra take care of trash also, maybe?)
 
 ->EndConvo
 ==pass3==
 //burger stack 3
 ~affectionN=affectionN+4
 
-Phew! I'm nailing this, huh? #speaker:Graciana #mood:happy
+Phew! I'm nailing this, huh? #speaker:Graciana #mood:happy #ecg: 
+(If NiCo could process this burger, I'm sure they'd love it!)
 
-Ay, I see ya are! #speaker:Chef Swatts #mood:happy
-Keep it up, Gracie!
 ->EndConvo
 ==fail1==
 ~affectionN=affectionN-4
 
-Yikes... #speaker:CeCe #mood:sad
-
-S-sorry... #speaker:Graciana #mood:happy
-I got a ways to go I guess, huh?
+Yikes... Guess I still got a ways to go, huh? #speaker:Graciana #mood:sad #ecg: 
+(NiCo's a service robot, right? maybe they'd be better at this...)
 
 ->EndConvo
 ==fail2==
 ~affectionN=affectionN-3
 
-Yikes... #speaker:CeCe #mood:sad
-
-S-sorry... #speaker:Graciana #mood:happy
-Still not getting it...
+I still keep missing... #speaker:Graciana #mood:sad #ecg: 
+(NiCo would definitely make a snide joke about me...)
 
 ->EndConvo
 ==fail3==
 ~affectionN=affectionN-2
-Yeesh, I really messed that one up, huh... #speaker:Graciana #mood:sad
 
-Ay... Ya kinda did, ya... #speaker:Chef Swatts #mood:sad
+Yeesh, I really messed that one up, huh... #speaker:Graciana #mood:sad #ecg: 
+(NiCo wouldn't even dare to touch this, probably...)
 
 ->EndConvo
 ==chaos==
 ~chaosN=chaosN+4
-...#speaker:Chef Swatts #mood:neutral
-... #speaker:Graciana #mood:neutral
-Huh... What... What did I make...? #speaker:Graciana #mood:think 
 
-Ay... I ain't too sure, honestly... #speaker:Chef Swatts #mood:neutral
+Huh... What... What did I make...? #speaker:Graciana #mood:think #ecg: 
+(I wonder what would happen if NiCo processed a burger like this...?)
 
 ->EndConvo
 ===EndConvo===

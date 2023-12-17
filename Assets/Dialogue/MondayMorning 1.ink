@@ -4,7 +4,7 @@ EXTERNAL GoToDiner()
 
 
 
-    Ey, Graciana! #speaker:Chef Swatts #bgm:dinMorning
+    Ey, Graciana! #speaker:Chef Swatts #bgm:dinMorning #ecg: 
     
     Oh, hi Chef! #speaker:Graciana
     

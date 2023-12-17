@@ -69,7 +69,7 @@ Any companions or friends at all? You mentioned previously that you were alone, 
 It is as you say... #speaker:Morgan #mood:sad 
 I have lived in solitude without the need to communicate with lesser beings, unless it was to demand the soul of those who were hiding from me. #speaker:Morgan #mood:neutral
 ->Next
-**[Life when you were Queen?]
+*[Life when you were Queen?]
 ~affectionM-=2
 //bad
 
@@ -100,7 +100,7 @@ I lived in the void, the darkness where nothing can thrive and no one leaves; on
 But you mentioned on a few occasions there being other people or, I guess, beings existing in the void with you, right? #speaker:Graciana #mood:think
 So even if they aren't the closest of friends, they went through the same experiences as you, no? #speaker:Graciana #mood:neutral
 ->Next
-**[Talk about what she wants right now]
+*[Talk about what she wants right now]
 ~chaosM+=2
 //chaos
 
@@ -166,7 +166,7 @@ O'Ryan, as in the owner of this establishment? They do sound familiar, but they 
 
 Oh, so you do know them? #speaker:Graciana #mood:think
 
-I've heard of the empire they have slowly building over the centuries. #speaker:Morgan #mood:neutral
+I've heard of the empire they have slowly been building over the centuries. #speaker:Morgan #mood:neutral
 
 Empire?! #speaker:Graciana #mood:fear
 
@@ -206,7 +206,7 @@ But before I do, I must ask, what would you use to define O'Ryan's presence? Wha
 
 Well...  #speaker:Graciana #mood:neutral
 
-**[Ominous I guess?]
+*[Ominous I guess?]
 I feel like I'm looking at them, but not really looking at anything at the same time... #speaker:Graciana #mood:think
 They're just strangely absent, but present since they're actually a big guy too; it's just, I'm not sure if I stuck my hand into them if I would hit anything, you know?
 
@@ -226,7 +226,7 @@ Be careful for how deep you dig before you end up falling into your own actions.
 Of course! But we've been talking for a bit now; would you like anything to eat or drink? #speaker:Graciana #mood:think
 
 ->Final
-**[Overwhelming]
+*[Overwhelming]
 I haven't found myself to do really anything, other than kinda stand in awe whenever I talk to them. #speaker:Graciana #mood:neutral
 Their body, their few words, their strange galaxy patterns... #speaker:Graciana #mood:think
 All of it is pretty overwhelming for a human like me. #speaker:Graciana #mood:neutral
@@ -246,7 +246,7 @@ You have been quite helpful, Graciana. O'Ryan should be lucky to have such a wor
 Of course! But we have been talking for a bit now--would you like anything to eat or drink? #speaker:Graciana #mood:think
 
 ->Final
-**[Kinda strange]
+*[Kinda strange]
 I'm not saying they're strange in a bad way... #speaker:Graciana #mood:think
 I'm just saying they are, at best, one of the most unique beings or people I have ever met. #speaker:Graciana #mood:neutral
 This is my first time really experiencing new outerworld people, and they're the one who stands out the most in just about every way. #speaker:Graciana #mood:think

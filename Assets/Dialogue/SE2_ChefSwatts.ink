@@ -21,9 +21,11 @@ Ey yo, Graciana! Think ya can gimme some help real quick? #speaker:Chef Swatts
 
 Yeah, you got it. #speaker:Graciana #mood:neutral
 
-Good good! Get ovah here an' help me with this! #speaker:Chef Swatts #mood:angry
+Good good! Get ovah here an' help me with this! #speaker:Chef Swatts #mood:angry #scg:black
 
-What's going on? #speaker:Graciana #mood:think
+... #speaker:Graciana #bg:dinkit
+
+What's going on? #speaker:Graciana #mood:think #ecg: 
 
 I need ya help ASAP! Help me with this Blobster! #speaker:Chef Swatts
 

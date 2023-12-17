@@ -23,7 +23,7 @@ Yes, and no. #speaker:Fred #mood:neutral
 Frank really likes them, and he mentions them sometimes when we're working! #speaker:Fred #mood:happy
 I really want to watch a few of them, but I don’t know which one he like the best. #speaker:Fred #mood:neutral
 
-**[How thoughtful!]
+*[How thoughtful!]
 //Good
 ~affectionF=affectionF+4
 Aww, that's so thoughtful of you! What are the shows? #speaker:Graciana #mood:happy #sfx:GainedPoint
@@ -38,7 +38,7 @@ Well, there are a few, but he talks about these three the most. #speaker:Fred #m
 
 -> Cartoons
 
-**[Pick one & wing it!]
+*[Pick one & wing it!]
 //Chaotic
 ~chaosF=chaosF+2
 Why don’t you just pick one at random and wing it? #speaker:Graciana #mood:think #sfx:CosmicPoint
@@ -59,7 +59,7 @@ Then you can still talk to me about them over a orange swirl anytime! #speaker:G
 Well, which one do you think sounds interesting? #speaker:Fred #mood:galaxy
 ->Cartoons
 
-**[Watch what *you* want]
+*[Watch what *you* want]
 //Bad
 ~affectionF=affectionF-3
 You know, you can watch anything you want, not just Franks' shows, right? #speaker:Graciana #mood:think #sfx:LostPoint
@@ -101,7 +101,7 @@ Well, there were a few. #speaker:Fred #mood:neutral
 
 There's The Adventures of Liquid Boy and Flammable Girl, Ladel Heads' Bizzare Tale, and Ra, Vi, & Har, The Last Full Senders! #speaker:Fred #mood:neutral
 
-**[Liquid Boy and Flammable Girl]
+*[Liquid Boy and Flammable Girl]
 
 Oh hey, that one sounds familiar! I think I might've watched something similar when I was a kid. #speaker:Graciana #mood:think
 Tell me a bit about it! #speaker:Graciana #mood:think
@@ -127,7 +127,7 @@ But on that note... I do have another question for you, Fred. #speaker:Graciana 
 
 ->TheTalk
 
-**[Ladel Heads Bizzare Tale] 
+*[Ladel Heads Bizzare Tale] 
 
 Okay, now this one I have definitely not heard of before. #speaker:Graciana #mood:neutral
 
@@ -144,7 +144,7 @@ Speaking of which... #speaker:Graciana #mood:think
 
 ->TheTalk
 
-**[Ra, Vi, and Har The Last Full Senders]
+*[Ra, Vi, and Har The Last Full Senders]
 
 That seems a little cheesy, no? #speaker:Graciana #mood:think
 Sounds like a direct rip off of a show I used to watch when I was a kid. #speaker:Graciana #mood:neutral
@@ -187,7 +187,7 @@ My most recent memories are of when I entered this UMS suit. #speaker:Fred #mood
 But ever since then, Frank has taken care me in being someone to talk to, and showing me how to do work while also having fun meeting people!  #speaker:Fred #mood:happy
 He's the closest thing I've had to a dad, or any family really... #speaker:Fred #mood:sad
  
-**[A dad like him?]
+*[A dad like him?]
 ~affectionF=affectionF+4
 
 And do you want a father like him? #speaker:Graciana #mood:think #sfx:GainedPoint
@@ -233,7 +233,7 @@ Now, I can feel one of Chef Swatts million eyes staring at me not doing work, so
 Alright, thanks Graciana! #speaker:Fred #mood:happy
 ->Final
 
-**[A mother figure?]
+*[A mother figure?]
 ~chaosF=chaosF+2
 
 Have you ever had a mother-like figure in your life? #speaker:Graciana #mood:think #sfx:CosmicPoint
@@ -285,7 +285,7 @@ But I appreciate the effort, Fred.
 Now your break is about to end, and I gotta go back to doing my job before I'm fired, so let's go little star. #speaker:Graciana #mood:happy
 ->Final
 
-**[Do you want a family?]
+*[Do you want a family?]
 ~affectionF=affectionF-3
 
 Are you sure a work family is the real family you're looking for? #speaker:Graciana #mood:think #sfx:LostPoint

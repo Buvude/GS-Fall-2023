@@ -1,6 +1,8 @@
 
 INCLUDE BADialogue.ink
 INCLUDE globals.ink
+
+~convo_numberG=1
 ... #speaker:Graciana #mood:neutral #ss:Himber:neutral
 (What the hell?) #speaker:Graciana #mood:think
 Good morning, sirs...?#ss:Himber:angry
@@ -42,16 +44,17 @@ Have it done and served in less than ten minutes, understood?
 Surely this... "Fine" establishment can handle a simple pie, yes?
 
 ... #speaker:Graciana
-You got it, sir.
-(Jeez, what a jerk.)
-(I head back into the kitchen and grab a frozen Lingonberry Sweet Pie slice, and heat them up in the microwave.)
+You got it, sir. #scg:black
+(Jeez, what a jerk.) #bg:dinkit #ss:Himber:blank
+(I head back into the kitchen and grab a frozen Lingonberry Sweet Pie slice, and heat it up in the microwave.) #ecg: 
 Hm... Maybe if I... #speaker:Graciana #mood:think
 (I rummage around the spices for a bit, before finding...)
 Perfect... Cthulu Dandruff...
-(I take some, and carefully season the slice of pie with it...)
-This'll show him... #speaker:Graciana #mood:angry
-(I head out of the kitchen, and place the seasoned slice of pie in front of Himber.)
-Enjoy...
+(I take some, and carefully season the slice of pie with it...)#speaker:Graciana #mood:angry #scg:black
+This'll show him...
+... #bg:diner
+(I head out of the kitchen, and place the seasoned slice of pie in front of Himber.) #ecg: #ss:Himber:neutral 
+Enjoy... 
 
 What took you so long? Do you have no care for your paying patrons?! I'm famished! #speaker:Himber #mood:angry
 
@@ -73,26 +76,26 @@ Uh... #speaker:Graciana #mood:think
 (I look down at Hograt, and he looks back at me, excited.)
 ...Does it... Like that...?
 (Hograt nods back.)
-Oh, uh, okay then... I'll see what I can find! #speaker:Graciana #mood:neutral
-(I head to the kitchen and poke around, trying not to disturb Chef Swatts.)
-(Jeez, if he found out I was serving rocks...)
+Oh, uh, okay then... I'll see what I can find! #speaker:Graciana #mood:neutral #scg:black
+(I head to the kitchen and poke around, trying not to disturb Chef Swatts.) #ss:Himber:blank
+(Jeez, if he found out I was serving rocks...) #bg:dinkit #ecg: 
 ...
-(Where the hell am I gonna find Granite?!)
+(Where the hell am I gonna find Granite?!) #speaker:Graciana #mood:think
 ...
 (I go back to the storage closet.)
 Surely there's no--
-(I see an old table, broken into pieces.)
+(I see an old table, broken into pieces.) #speaker:Graciana #mood:neutral
+Maybe I can just... Take this? #speaker:Graciana #mood:think #scg:black
 ...
-Maybe I can just... Take this? #speaker:Graciana #mood:think
-(I take a chunk, put it on a plate, and bring it out to Hograt.) #speaker:Graciana #mood:neutral
+(I take a chunk, put it on a plate, and bring it out to Hograt.) #bg:diner #speaker:Graciana #mood:neutral
 
-Is this good...? #speaker:Graciana #mood:think
+Is this good...? #ecg:  #speaker:Graciana #mood:think #ss:Himber:neutral
 
 Yes, yes! Put it here, here! #speaker:Himber #mood:neutral
 (I hand the plate to Hograt, who has his hands outstretched.) #speaker:Graciana #mood:neutral
 (He gently takes it, and shoves the whole thing in his mouth--plate and all!)
 
-Yes, thank you human! Hograt is most pleased with your service! #speaker:Himber #mood:happy
+Yes, thank you human! Hograt is most pleased with your service! #speaker:Himber #mood:neutral
 
 Well, I'm glad he's enjoying it... Somehow... #speaker:Graciana #mood:happy
 

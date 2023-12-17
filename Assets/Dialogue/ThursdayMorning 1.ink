@@ -2,10 +2,10 @@
 // -> thursday
 EXTERNAL GoToDiner()
 // ==thursday==
-Hey Chef! Morning! #speaker:Graciana #mood:happy #bgm:dinMorning
+Hey Chef! Morning! #speaker:Graciana #mood:happy #bgm:dinMorning #ecg: 
 ...Chef? #speaker:Graciana #mood:think
 
-<i>...ZZZ...</i> #speaker:Chef Swatts
+<i>...ZZZ...</i> #speaker:Chef Swatts #mood:sad
 
 Uh... <i>Ahem.</i> #speaker:Graciana
 

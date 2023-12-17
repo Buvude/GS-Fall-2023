@@ -18,9 +18,9 @@ Ey, <b>Graciana</b>! Think ya can give me some help real quick? #speaker:Chef Sw
 
     Perfect! Come come, I need ya help in tha kitchen! #speaker:Chef Swatts #scg:black
     
-    ... #speaker:Graciana
+    ... #speaker:Graciana #bg:dinkit
     
-    Come, prep this for me ya? #speaker:Chef Swatts #ecg:dinkit
+    Come, prep this for me ya? #speaker:Chef Swatts #ecg: 
 
     Whatcha making? #speaker:Graciana #mood:neutral
 

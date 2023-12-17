@@ -1,9 +1,11 @@
 INCLUDE globals.ink
-.<i>*huff... huff...*</i> #speaker:Graciana #mood:sad #bgm:dinNight
+
+.... #ss:Chef Swatts:blank #ss:CeCe:blank
+<i>*huff... huff...*</i> #speaker:Graciana #mood:sad #bgm:dinNight #ecg: 
 Jeez... I need a second... to sit...
 Phew... Real busy today...
 
-(O'Ryan enters through the portal, as always.)
+(O'Ryan enters through the portal, as always.) #ss:spotlight:O'Ryan
 
 ... #speaker:O'Ryan #mood:neutral
 
@@ -29,6 +31,6 @@ R-right, see ya! #speaker:Graciana
 (O'Ryan turns, and exits through the portal.)
 
 Okay... I still gotta finish cleaning... #speaker:Graciana #mood:sad
-Well, at least I have tomorrow off...
-~GoToAppartment()
+Well, at least I have tomorrow off... #esfo:
+
     -> DONE
