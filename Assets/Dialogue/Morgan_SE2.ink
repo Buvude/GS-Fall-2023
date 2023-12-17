@@ -351,7 +351,7 @@ See you soon, Graciana.
 
 Safe travels, and good luck with your goals! #speaker:Graciana #mood:happy
 
-One last thing Graciaca... #speaker:Morgan 
+One last thing Graciana... #speaker:Morgan 
 For being a mere mortal you certainly have a powerful influence over those around you, including myself. #speaker:Morgan
 That carrys a hint of concern, so just keep that in mind to keep giving me good advice, and not stray from that path. #speaker:Morgan
 

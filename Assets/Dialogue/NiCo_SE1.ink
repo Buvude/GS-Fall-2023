@@ -92,7 +92,7 @@ Yes. Some people think there's something that can be done still--That there's st
 //good
 ~affectionN=affectionN+2
 
-Is anyone doing anything about this? #speaker:Graciana #mood:think
+Is anyone doing anything about this? #speaker:Graciana #mood:think #sfx:gainedPoint
 
 ... #speaker:NiCo #mood:neutral
 Doing what? There isn't anything to do. Tundra runs the world. It's impossible to "do" anything. #speaker:NiCo #mood:neutral
@@ -135,7 +135,7 @@ All the decisions they make are based on whether or not Tundra finds it acceptab
 //chaos
 ~chaosN=chaosN+2
 
-Why don't you just... get outta there? Like move out? If you can travel interdimentionally, surely you can just move, right? #speaker:Graciana #mood:think
+Why don't you just... get outta there? Like move out? If you can travel interdimentionally, surely you can just move, right? #speaker:Graciana #mood:think #sfx:cosmicPoint
 
 God, I wish it were that simple. #speaker:NiCo #mood:smug
 We can only travel for a little bit at a time. And they keep tabs on our location. They'd track us down, fast. #speaker:NiCo #mood:neutral
@@ -188,7 +188,7 @@ Why would I want to report them?
 //bad
 ~affectionN=affectionN-1
 
-I mean like, y'know, uh... #speaker:Graciana #mood:neutral
+I mean like, y'know, uh... #speaker:Graciana #mood:neutral #sfx:lostPoint
 See if you can like, get them to, uh, take a look at you? #speaker:Graciana #mood:think
 
 ... #speaker:NiCo
@@ -211,7 +211,7 @@ Please contact your local Tundra Kiosk for further information.
 
 U-uh, I don't know if I--
 
-<i>BZZZZZZZZZZZZT</i> #speaker:NiCo
+<i>(BZZZZZZZZZZZZT)</i> #speaker:NiCo
 ...
 
 ... #speaker:Graciana #mood:sad
@@ -252,7 +252,7 @@ Like I said, Tundra is always listening. They have an algorithm that detects wha
 //good
 ~affectionN=affectionN+2
 
-Hm... #speaker:Graciana #mood:think
+Hm... #speaker:Graciana #mood:think #sfx:gainedPoint
 I mean... You could try to see if there's a way for you to learn more about this hacking process that seems to be going around.
 
 ... #speaker:NiCo #mood:smug
@@ -296,7 +296,7 @@ Anytime at all. #speaker:Graciana #mood:happy
 //chaos
 ~chaosN=chaosN+2
 
-What about, uh... #speaker:Graciana #mood:think
+What about, uh... #speaker:Graciana #mood:think #sfx:cosmicPoint
 (Hm, I gotta be careful about how I word this...)
 What if...
 You, and a few other workers got together and... Maybe... #speaker:Graciana #mood:neutral
@@ -361,7 +361,7 @@ Good! I'm glad I could help. #speaker:Graciana #mood:happy
 //bad
 ~affectionN=affectionN-1
 
-Alright, alright, maybe you have a point, but still... #speaker:Graciana #mood:sad
+Alright, alright, maybe you have a point, but still... #speaker:Graciana #mood:sad #sfx:lostPoint
 
 Told you, there really isn't much any of us can do about anything on MX-3319. #speaker:NiCo #mood:neutral
 We're all just the cogs of their machine. #speaker:NiCo #mood:sad
@@ -378,7 +378,7 @@ What choice do I have? #speaker:NiCo #mood:sad
 //bad
 ~affectionN=affectionN-1
 
-I mean... Jeez, that's really rough. #speaker:Graciana #mood:sad
+I mean... Jeez, that's really rough. #speaker:Graciana #mood:sad #sfx:lostPoint
 
 Yes. It is. #speaker:NiCo #mood:sad
 
@@ -435,7 +435,7 @@ And I can't blame them. It's not like we have a choice for anything different. #
 //good
 ~affectionN=affectionN+2
 
-So, going back to what you said earlier, about how hard it is to fight Tundra in court... #speaker:Graciana
+So, going back to what you said earlier, about how hard it is to fight Tundra in court... #speaker:Graciana #sfx:gainedPoint
 I know it's intimidating, but do you have like, any evidence in your favor? Doesn't matter how big or small it is. #speaker:Graciana #mood:think
 
 Well, there is the security footage... #speaker:NiCo #mood:smug
@@ -461,7 +461,7 @@ I appreciate your concern, Graciana, but I really don't think it's possible.
 //good
 ~affectionN=affectionN+2
 
-Nope, there's gotta be a way! #speaker:Graciana #mood:happy
+Nope, there's gotta be a way! #speaker:Graciana #mood:happy #sfx:gainedPoint
 What about the machine itself? You mentioned that it was made with cheap materials. The machine might've been at fault! #speaker:Graciana #mood:angry
 
 The TundraTrucks, yes. They're cheaply mass produced meant to transport bulk materials and packages. #speaker:NiCo #mood:angry

@@ -25,37 +25,37 @@ EXTERNAL StartTTMicro()
     {
     -winState=="won":
     ~affectionG+=2
-    ~convo_numberG=1
+    ~convo_numberM=1
     ->pass1
     -winState=="loss":
-    ~affectionG-=2
-    ~convo_numberG=1
+    ~affectionM-=2
+    ~convo_numberM=1
     ->fail1
     }
 -currentConvo=="MMG2":
     {
     -winState=="won":
-     ~affectionG+=3
-     ~convo_numberG=2
+     ~affectionM+=3
+     ~convo_numberM=2
     ->pass2
     -winState=="loss":
-    ~affectionG-=3
-    ~convo_numberG=2
+    ~affectionM-=3
+    ~convo_numberM=2
     ->fail2
     }
 -currentConvo=="MMG3":
     {
     -winState=="chaos":
     ~chaosG+=4
-    ~convo_numberG=3
+    ~convo_numberM=3
     ->chaos
     -winState=="won":
     ~affectionG+=4
-    ~convo_numberG=3
+    ~convo_numberM=3
     ->pass3
     -winState=="loss":
     ~affectionG+=4
-    ~convo_numberG=3
+    ~convo_numberM=3
     ->fail3
     }
 }

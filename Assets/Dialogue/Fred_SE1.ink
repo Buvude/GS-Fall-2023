@@ -98,7 +98,7 @@ Do friends also pay for meals when you don't have money? #speaker:Fred #mood:neu
 
 ... #speaker:Fred #mood:neutral
 
- (O'ryan please don't kill me...) 
+ (O'Ryan please don't kill me...) 
  It's on the house bud, but next time maybe ask Frank for a little lamp money, huh? #speaker:Graciana #mood:happy
 
 You're the best! #speaker:Fred #mood:happy

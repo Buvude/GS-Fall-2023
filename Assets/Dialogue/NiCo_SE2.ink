@@ -72,7 +72,7 @@ Really? How so? #speaker:NiCo
     
 ==good1==
 ~affectionN=affectionN+4
-The way big corporations treat their employees like garbage. #speaker:Graciana
+The way big corporations treat their employees like garbage. #speaker:Graciana #sfx:gainedPoint
 Honestly, one of the main reasons why I wanted to work out in The Great Void is just so I didn't have to succumb to a monopoly.
 The idea of a "small local business" is more or less dead where I'm from. #speaker:Graciana #mood:sad
 
@@ -109,7 +109,7 @@ Back when I was initially roboticized, there were a few others. But that was so 
     
 ==bad1==
 ~affectionN=affectionN-4
-Scalpers always ruining everything. That's a big problem on Earth. #speaker:Graciana
+Scalpers always ruining everything. That's a big problem on Earth. #speaker:Graciana #sfx:lostPoint
 
 Oh, right, yes. I suppose so. #speaker:NiCo #mood:smug
 
@@ -148,7 +148,7 @@ In any case... #mood:neutral
     ->chaos2
 ==chaos1==
 ~chaosN=chaosN+4
-In terms of culture. #speaker:Graciana #mood:neutral
+In terms of culture. #speaker:Graciana #mood:neutral #sfx:cosmicPoint
 Well, culture in the sense of how the people are, I guess. #speaker:Graciana #mood:think
 The average person in my world will work until they're like, senile. Still paying off loans, or a mortgage, or just taxes in general. #speaker:Graciana #mood:neutral
 It's weird. We're conditioned to enjoy it, too. And anyone that breaks outside of that mold is considered the weird one... #speaker:Graciana #mood:think
@@ -191,7 +191,7 @@ It's almost like Tundra makes them to have limited ambition or something. It wou
 
 ==good2==
 ~affectionN=affectionN+4
-Uh, NiCo, I don't mean to be rude or anything, but... #speaker:Graciana #mood:neutral
+Uh, NiCo, I don't mean to be rude or anything, but... #speaker:Graciana #mood:neutral #sfx:gainedPoint
 
 Go on, say it. #speaker:NiCo #mood:neutral
 
@@ -250,7 +250,7 @@ This is true. #speaker:NiCo
 
 ==good3==
 ~affectionN=affectionN+4
-You would think that after working for that long, they'd give you some kind of reward, or at least respect... #speaker:Graciana
+You would think that after working for that long, they'd give you some kind of reward, or at least respect... #speaker:Graciana #sfx:gainedPoint
 Or at least a new leg...
 
 Yes... You would think, huh. #speaker:NiCo #mood:angry
@@ -301,7 +301,7 @@ Well, in any case, I need to get back to my shift. #speaker:NiCo #mood:neutral
 
 ==bad3==
 ~affectionN=affectionN-3
-Dude, what're you still doing? #speaker:Graciana
+Dude, what're you still doing? #speaker:Graciana #sfx:lostPoint
 You gotta get outta there! #speaker:Graciana #mood:angry
 
 And do what, exactly? #speaker:NiCo #mood:neutral
@@ -339,7 +339,7 @@ Excuse me.
 
 ==chaos2==
 ~chaosN=chaosN+4
-Although... #speaker:Graciana
+Although... #speaker:Graciana #sfx:cosmicPoint
 There is a key difference between our worlds.
 
 Well, I can think of a handful of differences. #speaker:NiCo

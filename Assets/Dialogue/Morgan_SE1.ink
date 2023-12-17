@@ -166,7 +166,7 @@ O'Ryan, as in the owner of this establishment? They do sound familiar, but they 
 
 Oh, so you do know them? #speaker:Graciana #mood:think
 
-I've heard of the empire they have slowly building over the centuries. #speaker:Morgan #mood:neutral
+I've heard of the empire they have slowly been building over the centuries. #speaker:Morgan #mood:neutral
 
 Empire?! #speaker:Graciana #mood:fear
 
