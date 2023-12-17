@@ -1,5 +1,5 @@
 //EXTERNAL GoToDiner()
-INCLUDE Intro_ORyan.ink
+// INCLUDE Intro_ORyan.ink
 INCLUDE globals.ink
 INCLUDE BADialogue.ink
 // EXTERNAL mainORYAN()
@@ -28,4 +28,5 @@ Anyways, go ahead an' take this burger out to tha customer, ya?
 Got it... #speaker:Graciana #scg:black
 (I take the burger out to the customer, and help Chef Swatts with some more prepwork and cleaning.) #ss:Chef Swatts:blank
 ~convo_numberCS=1
-->mainORYAN
+~StartO_Ryan()
+->DONE

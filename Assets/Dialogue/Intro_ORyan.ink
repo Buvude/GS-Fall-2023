@@ -1,7 +1,7 @@
 //#day:2 #CSConvo:1
 // EXTERNAL StartO_Ryan()
 // EXTERNAL GoToAppartment()
-// INCLUDE globals.ink
+INCLUDE globals.ink
 ==mainORYAN==
 
 (Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral #bgm:dinNight #bg:diner 
