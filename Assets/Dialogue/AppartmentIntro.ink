@@ -1,5 +1,6 @@
 
 INCLUDE globals.ink
+~QuickLoad()
 {
 -weekDay=="Tut":
 Finally home! What a day, I'm exhausted...  #speaker:Graciana #mood:sad #ecg: 

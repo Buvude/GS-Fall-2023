@@ -5,6 +5,7 @@ using Ink.Runtime;
 
 namespace InterDineMension
 {
+    using Character;
     using MicroGame.BA;
     using MicroGame;
     using Manager;
@@ -82,6 +83,9 @@ namespace InterDineMension
                 //dM.EnterDialogueMode(dM.TTMicroArcadeConvo);
                 switch (PlayerPrefs.GetString("weekDay"))
                 {
+                    case "Tut":
+                        dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["intro"]);
+                        break;
                     case "Mon":
                         dM.EnterDialogueMode(dM.oR.ORdialogueDictionary["monNight"]);
                         break;

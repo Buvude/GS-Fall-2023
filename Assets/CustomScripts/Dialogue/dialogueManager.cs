@@ -1708,7 +1708,7 @@ namespace InterDineMension.Manager
                     oRBtn.gameObject.SetActive(false);
                     cCBtn.SetActive(false);
                     gBtn.SetActive(false);
-                    fBtn.SetActive(false);
+                    fBtn.SetActive(true);
                     mBtn.SetActive(false);
                     nBtn.SetActive(false);
                     break;

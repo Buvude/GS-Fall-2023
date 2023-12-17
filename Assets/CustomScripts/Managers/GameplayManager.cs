@@ -57,10 +57,14 @@ namespace InterDineMension.Manager
         }
         private void OnApplicationQuit()
         {
-            if (manager.dV != null)
+            if (manager != null)
             {
-                manager.dV.clearTempVars(manager.vH);
+                if (manager.dV != null)
+                {
+                    manager.dV.clearTempVars(manager.vH);
+                }
             }
+            
             
         }
        
