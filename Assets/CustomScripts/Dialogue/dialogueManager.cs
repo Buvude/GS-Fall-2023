@@ -96,6 +96,7 @@ namespace InterDineMension.Manager
 
         public GameObject cSBtn, oRBtn, cCBtn, gBtn, fBtn, mBtn, nBtn;
 
+        internal bool choicesDisplayed = false;
         public enum speaker { Graciana, Swatts,O_Ryan, CeeCee, Gnomies, Fred, Morgan, Nico, None};
         public enum speakingTo {  O_Ryan, Swatts, CeeCee, Gnomies, Fred, Morgan, Nico};
         public speaker charSpeak;
@@ -484,8 +485,7 @@ namespace InterDineMension.Manager
             {
                 return;
             }
-            if(canContinueToNextLine&& currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)||Input.GetKey(KeyCode.RightControl)))
-            {
+            if(!choicesDisplayed&& (canContinueToNextLine && currentStory.currentChoices.Count==0&&(Input.GetMouseButtonDown(0)||Input.GetKeyDown(KeyCode.Space)||Input.GetKeyDown(KeyCode.Z)||Input.GetKey(KeyCode.RightControl))))            {
                 if(autoMode)
                 {
                     autoText.SetActive(false);
@@ -507,7 +507,7 @@ namespace InterDineMension.Manager
                     dialogueHistory.SetActive(true);
                 }
             }
-            if(Input.GetKeyDown(KeyCode.A)&&!gM.paused)
+            if(Input.GetKeyDown(KeyCode.A)&&!gM.paused&&!choicesDisplayed)
             {
                 if(!autoMode&&!historyShowing)
                 {
@@ -1028,11 +1028,11 @@ namespace InterDineMension.Manager
                 continueIcon.SetActive(true);
             }
             
-            canContinueToNextLine = true;
-            if (autoMode)
+            
+            if (autoMode&&canContinueToNextLine)
             {
                 yield return new WaitForSeconds(autoPauseFloat);
-                if(autoMode)
+                if(autoMode&&canContinueToNextLine)
                 {
                     ContinueStory();
                 }
@@ -1042,6 +1042,7 @@ namespace InterDineMension.Manager
 
         private void Hidechoices()
         {
+            choicesDisplayed = false;
             foreach(GameObject choiceButton in choices)
             {
                 choiceButton.SetActive(false);
@@ -1245,7 +1246,7 @@ namespace InterDineMension.Manager
                                         break;
                                     case speakingTo.Fred:
                                         F.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                        grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
                                         break;
                                     case speakingTo.Morgan:
                                         M.sR.color = Color.HSVToRGB(0, 0, .4f, false);
@@ -1675,7 +1676,7 @@ namespace InterDineMension.Manager
         public void EnterDinerMode(int day)
         {
             bool nicoGone = false, fredGone = false, ceceGone = false, gnomiesGone = false;
-            if (PlayerPrefs.GetInt("convo_numberN") >= 4 && PlayerPrefs.GetInt("affectionN") < 0) //if NiCo has reached the bad ending
+            if (PlayerPrefs.GetInt("convo_numberN") >= 4 && PlayerPrefs.GetInt("chaosN") >= 12) //if NiCo has reached the bad ending
             {
                 nicoGone = true;
             }
@@ -1787,6 +1788,7 @@ namespace InterDineMension.Manager
 
         private void DisplayChoices()
         {
+            
             List<Choice> currentChoices = currentStory.currentChoices;
             if (currentChoices.Count > choices.Length)
             {
@@ -1794,7 +1796,17 @@ namespace InterDineMension.Manager
                 Debug.LogError("More choies were given than the UI can support. Number of choices given: " + currentChoices.Count);
 
             }
-
+            if (currentChoices.Count > 0)
+            {
+                choicesDisplayed = true;
+                autoMode = false;
+                autoText.SetActive(false);
+                canContinueToNextLine = true;
+            }
+            else
+            {
+                canContinueToNextLine = true;
+            }
             int index = 0;
             foreach (Choice choice in currentChoices)
             {
@@ -1802,7 +1814,6 @@ namespace InterDineMension.Manager
                 choicesText[index].text = choice.text;
                 index++;
             }
-
             for(int i = index; i<choices.Length; i++)
             {
                 choices[i].gameObject.SetActive(false);
