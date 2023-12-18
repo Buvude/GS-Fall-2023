@@ -1676,7 +1676,7 @@ namespace InterDineMension.Manager
         public void EnterDinerMode(int day)
         {
             bool nicoGone = false, fredGone = false, ceceGone = false, gnomiesGone = false;
-            if (PlayerPrefs.GetInt("convo_numberN") >= 4 && PlayerPrefs.GetInt("affectionN") < 0) //if NiCo has reached the bad ending
+            if (PlayerPrefs.GetInt("convo_numberN") >= 4 && PlayerPrefs.GetInt("chaosN") >= 12) //if NiCo has reached the bad ending
             {
                 nicoGone = true;
             }
