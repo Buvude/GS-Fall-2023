@@ -393,9 +393,9 @@ O-oh, hi O'Ryan...! #speaker:Graciana #mood:neutral
 ... #speaker:O'Ryan
 <i>(sniff)</i> #speaker:O'Ryan #mood:sad
 
-(Suddenly, all the lights in the diner go out...!) #speaker:Graciana #mood:fear #bgm:none #scg:black
+(Suddenly, all the lights in the diner go out...!) #speaker:Graciana #mood:fear #bgm:none 
 
-... #speaker:O'Ryan
+... #speaker:O'Ryan #scg:black
 U-uh... #speaker:Graciana #ss:spotlight:Morgan:angry
 
 Hah... Hah... #speaker:Morgan #mood:angry
