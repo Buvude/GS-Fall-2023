@@ -1245,7 +1245,7 @@ namespace InterDineMension.Manager
                                         break;
                                     case speakingTo.Fred:
                                         F.sR.color = Color.HSVToRGB(0, 0, .4f, false);
-                                        grac.sR.color = Color.HSVToRGB(0, 0, .4f, false);
+                                        grac.sR.color = Color.HSVToRGB(0, 0, 1, false);
                                         break;
                                     case speakingTo.Morgan:
                                         M.sR.color = Color.HSVToRGB(0, 0, .4f, false);
