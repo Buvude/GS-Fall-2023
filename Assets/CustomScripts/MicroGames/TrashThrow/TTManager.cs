@@ -50,13 +50,16 @@ namespace InterDineMension.MicroGame.TT
             switch (vH.currentStory.variablesState["TTMLevel"].ToString())
             {
                 case "1":
+                    timeLimit = 15;
                     goal=SCORE1 ; break;
                 case "2":
+                    timeLimit = 30;
                     goal = SCORE2;
                     recycling.SetActive(true);
                     rc.player.options.Add(recyclingBag);
                     break;
                 case "3":
+                    timeLimit = 60;
                     goal = SCORE3;
                     recycling.SetActive(true);
                     compost.SetActive(true);
