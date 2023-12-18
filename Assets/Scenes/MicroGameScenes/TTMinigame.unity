@@ -531,7 +531,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.108672895, y: 0.38200003}
   m_AnchorMax: {x: 0.86200005, y: 0.6314055}
-  m_AnchoredPosition: {x: 3.7900085, y: -4.0599976}
+  m_AnchoredPosition: {x: 3.790039, y: -4.0599976}
   m_SizeDelta: {x: -3, y: -15.018799}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &164145538
@@ -2565,7 +2565,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1511790212650676167, guid: 7ce14711ba3815b41b47b75660ee5787, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.23
+      value: -6.15
       objectReference: {fileID: 0}
     - target: {fileID: 1511790212650676167, guid: 7ce14711ba3815b41b47b75660ee5787, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2606,6 +2606,14 @@ PrefabInstance:
     - target: {fileID: 3585363857671582840, guid: 7ce14711ba3815b41b47b75660ee5787, type: 3}
       propertyPath: m_Name
       value: RecyclingDumpster
+      objectReference: {fileID: 0}
+    - target: {fileID: 3585363857671582840, guid: 7ce14711ba3815b41b47b75660ee5787, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656473610484148650, guid: 7ce14711ba3815b41b47b75660ee5787, type: 3}
+      propertyPath: speed
+      value: 0.04
       objectReference: {fileID: 0}
     - target: {fileID: 8656473610484148650, guid: 7ce14711ba3815b41b47b75660ee5787, type: 3}
       propertyPath: leftBoundary
@@ -2772,6 +2780,10 @@ PrefabInstance:
     - target: {fileID: 3585363857671582840, guid: bd3316b5222814d49b6815d22641261b, type: 3}
       propertyPath: m_Name
       value: trashDumpster
+      objectReference: {fileID: 0}
+    - target: {fileID: 8656473610484148650, guid: bd3316b5222814d49b6815d22641261b, type: 3}
+      propertyPath: speed
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 8656473610484148650, guid: bd3316b5222814d49b6815d22641261b, type: 3}
       propertyPath: leftBoundary

@@ -25,7 +25,7 @@ namespace InterDineMension.Manager
             {
                 dialogueManager.GetInstance().EnterDialogueMode(manager.IntroOryan);
             }*/
-            if(Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.P))
+            if(Input.GetKeyDown(KeyCode.Escape)||Input.GetKeyDown(KeyCode.P)||Input.GetMouseButtonDown(1))
             {
                 if(manager != null)
                 {
