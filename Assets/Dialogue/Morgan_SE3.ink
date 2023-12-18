@@ -422,7 +422,7 @@ AHAHHAHAHAHAHHAHAHAHHAHHAHAHHA! #speaker:Morgan #mood:angry
 
 Oh, and here is your tip, dear. #speaker:Morgan #mood:happy
 
-AHAHAHHAHAHHAHAHAHHAHHA #speaker:Morgan #mood:angry
+AHAHAHHAHAHHAHAHAHHAHHA! #speaker:Morgan #mood:angry
 
 (The Morgan's form vanishes into smoke, leaving me alone in the diner confused and terrified.) #speaker:Graciana #mood:fear #ss:Morgan:blank
 
@@ -602,7 +602,7 @@ You could write a love letter! #speaker:Graciana #mood:happy
  
  Your wisdom is truly unexpected for your age, but pleasantly so. #speaker:Morgan #mood:happy
  Why thank you, I have watche-- #speaker:Graciana #mood:happy
- I mean, seen much in my short life so far #speaker:Graciana #mood:fear
+ I mean, seen much in my short life so far. #speaker:Graciana #mood:fear
  Anyways I think it is worth a shot, especially because you could accomplish all your goals at once with them in this way. #speaker:Graciana #mood:happy
  Life partner, someone who can help you get back your power, and someone to help you grow as a person and challenge you to be better. #speaker:Graciana #mood:neutral
  
@@ -744,7 +744,7 @@ That's not necessary, but if you want to I physically can't stop you. #speaker:G
 Wonderful! #speaker:Morgan #mood:happy
 Tah-tah my dear, I must go now. #speaker:Morgan #mood:neutral
 
-Go get 'em Morgan! #speaker:Graciana #mood:happy #scg:
+Go get 'em Morgan! #speaker:Graciana #mood:happy #scg:black
 
 ...
 ...

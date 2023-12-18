@@ -514,7 +514,7 @@ Is your friend one of these people?
 Yes, exactly. #speaker:NiCo #mood:angry
 It'll be hard to convince them to do... Well, anything really. #speaker:NiCo #mood:sad
 They would know what's wrong with the TundraTruck almost immediately. They know all the common errors and faults that could possibly occur.
-Again, the problem is getting imperical evidence of that, but...
+Again, the problem is getting emperical evidence of that, but...
 
 But...? #speaker:Graciana #mood:think
 
@@ -537,8 +537,14 @@ Thank you for chatting with me, Graciana.
 
 Of course. Hope you come back soon! #speaker:Graciana #mood:happy
 (He shambles his way out of the booth, and limps over through the entrance portal.)
+...Alright, time to see if there's anything else I can do... #speaker:Graciana #mood:neutral #scg:black
 ...
-...Alright, I think that should do it. #speaker:Graciana #mood:neutral
+Hey, Graciana! It's trash time. #speaker:CeCe #mood:neutral #ecg: 
+We got some recycling this time! Be sure you sort it correctly based on the color!
+
+Got it! #speaker:Graciana #mood:neutral
+
+
 ~currentConvo="NMG1"
 ~timeOfDay="afternoon"
 ~TTMLevel=2
