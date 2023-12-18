@@ -20,23 +20,23 @@ INCLUDE BADialogue.ink
     * [Yes (Instructions)]
     Okay, let's see here...
 //i really wanna make this a different font color to signify that it's being "read" but it's 2am and my brain cannot process digging through inky documentation right now, i promise i'll come back to this ;-;
-    (To proceed in a conversation, simply "click" anywhere--but you already knew that.)
-    (To set "auto mode," press the "A" key. To skip through conversations--if you must--press the "Right Control" key. To view the "log," press the "Tab" key. To "pause," press the "P" or "Escape" key. Note that the "pause screen" will not pause minigames, as to prevent any "dishonesty.")
-    (The "Game" will automatically "save" at the end of each day, when you return to your apartment and go to sleep.)
+    <i>(To proceed in a conversation, simply "click" anywhere--but you already knew that.)</i>
+    <i>(To set "auto mode," press the "A" key. To skip through conversations--if you must--press the "Right Control" key. To view the "log," press the "Tab" key. To "pause," press the "P" or "Escape" key. Note that the "pause screen" will not pause minigames, as to prevent any "dishonesty.")</i>
+    <i>(The "Game" will automatically "save" at the end of each day, when you return to your apartment and go to sleep.)</i>
     Okay, I think that's the basics... There's a bit more though, in case I need it...
     ** [I'm all set!]
     Boooooring! I already knew all that!
     It's just waiting tables, how hard could it possibly be?
         ->TheGameBegins
     ** [(Read more)]
-    (When in the Dining Room, to initiate a new conversation, simply "click" on the customer you wish to speak with.)
-    (During conversation, you may be given an opportunity to respond. These are called "choices")
+    <i>(When in the Dining Room, to initiate a new conversation, simply "click" on the customer you wish to speak with.)</i>
+    <i>(During conversation, you may be given an opportunity to respond. These are called "choices")</i>
     ...No duh...
-    (Your conversations may hold serious ramifications to the fate of the customer, so be sure to pay attention!)
-    (Some beings are able to <b>hear</b> the outcome of their choices, but this is a rare skill not many have.)
-    (And who knows, their fate may affect you as well in the end... So do your best!)
-    (At the end of a conversation, you will be tasked with a job in the Diner--The instructions will be visible when they appear, so don't panic!)
-    (And lastly, the most crucial instruction of all--)
+    <i>(Your conversations may hold serious ramifications to the fate of the customer, so be sure to pay attention!)</i>
+    <i>(Some beings are able to <b>hear</b> the outcome of their choices, but this is a rare skill not many have.)</i>
+    <i>(And who knows, their fate may affect you as well in the end... So do your best!)</i>
+    <i>(At the end of a conversation, you will be tasked with a job in the Diner--The instructions will be visible when they appear, so don't panic!)</i>
+    <i>(And lastly, the most crucial instruction of all--)</i>
     Jeez, this thing just goes on and on, does it ever stop?! There's like 20 more pages...
     Whatever, I can figure it out! It's just waiting tables, how hard could it be?
         ->TheGameBegins

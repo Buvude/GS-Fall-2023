@@ -166,6 +166,9 @@ Roger that message was received loud and clear. #speaker:Graciana #mood:neutral
 
 ->GoodContinued
 ==GoodContinued==
+~convo_numberOR+=1
+~convo_numberM+=1
+~affectionOR+=1
 
 I do have to ask, though... #speaker:Graciana #mood:neutral
 What would you do after you regain your power? #speaker:Graciana #mood:think
@@ -327,6 +330,10 @@ Oh my dear, we are far past the cat jokes now; fear not, it was relevant and fun
 
 ->BadContinued
 ==BadContinued==
+~convo_numberOR+=1
+~convo_numberM+=1
+~affectionOR-=1
+
 
 Just remember, please try not to outright kill O'Ryan, even if they're offering themself as some sort of battery for you to drain. #speaker:Graciana #mood:neutral
 
@@ -708,7 +715,9 @@ The two of you could go explore somewhere new together! Somewhere neither of you
     ->Chaotic
 
 ==Chaotic==
-//add more here, transition or like a day goes by or something idk
+~convo_numberOR+=1
+~convo_numberM+=1
+~chaosOR+=1
 
 Well, the  logical thing would be to gaze out into the stars, scout out worlds for our honeymoon, and then conquer those worlds. #speaker:Morgan #mood:neutral 
 
@@ -766,7 +775,7 @@ Hello, dear! #speaker:Morgan #mood:happy
 Is that... #speaker:Graciana #mood:think
 Is that a ring?! #speaker:Graciana #mood:happy 
 
-(I guess there are some happy endings after all...) #esfo: 
-(Even if this one is still kinda weird.)
+(I guess there are some happy endings after all...)
+(Even if this one is still kinda weird.) #esfo:
 
 ->END

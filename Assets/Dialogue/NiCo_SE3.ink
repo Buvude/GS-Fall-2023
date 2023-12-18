@@ -33,6 +33,8 @@ Oh... Hey, Graciana. #speaker:NiCo #mood:neutral
 }
 ==NiCoGoodEnding==
 ~affectionOR+=1
+~convo_numberN+=1
+~convo_numberOR+=1
 ... #speaker:NiCo
 You know what? No.
 Things are actually fairly good.
@@ -87,12 +89,14 @@ I would have sat around feeling sorry for myself, getting worse until I inevitab
 You gave me the push I needed. Thank you. #speaker:NiCo #mood:happy
 
 Well... I'm flattered. #speaker:Graciana #mood:happy
-I was just doing my job, after all!
-->EndConvo
+I was just doing my job, after all! #esfo: 
+->DONE
 //CG goes here
 
 ==NiCoBadEnding==
 ~affectionOR-=1
+~convo_numberN+=1
+~convo_numberOR+=1
 Not great. #speaker:NiCo
 N-not great a-a-a-at all, actually. #speaker:NiCo #mood:error
 
@@ -136,12 +140,14 @@ A command prompt...?
 Maybe...
 Maybe I can do something, eventually.
 My programming skills are a little rusty, but...
-I'll see what I can do, NiCo...
-->EndConvo
+I'll see what I can do, NiCo... #esfo: 
+->DONE
 //CG goes here
 
 ==NiCoChaosEnding==
 ~chaosOR+=1
+~convo_numberN+=1
+~convo_numberOR+=1
 Actually... #speaker:NiCo
 Things have gotten rather interesting since last time we chatted, Graciana. #speaker:NiCo #mood:smug
 
@@ -205,14 +211,7 @@ I'm so glad for you, NiCo.
 Just... Be careful, y'know? #speaker:Graciana #mood:think
 
 Of course, I understand. #speaker:NiCo
-We shall see.
-->EndConvo
+We shall see. #esfo: 
+->DONE
 //CG goes here
 
-===EndConvo===
-~convo_numberN+=1
-~convo_numberOR+=1
-~SaveGame()
-~GoToAppartment()
-// ~StartO_Ryan()
-->DONE

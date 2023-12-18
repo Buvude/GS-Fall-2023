@@ -19,7 +19,7 @@ Oh yeah they're not far, I can still see them! #speaker:Fred #mood:happy
 (He turns toward the window and waves off in the distance.) #speaker:Graciana #mood:neutral
 (...Something's up with this kid...) #speaker:Graciana #mood:think
 
- Well alright, as long as you can make it back to you crew that's fine. #speaker:Graciana #mood:neutral 
+ Well alright, as long as you can make it back to your crew that's fine. #speaker:Graciana #mood:neutral 
  What were you in the mood for lil guy? #speaker:Graciana #mood:think
 
 Well, I noticed you had a fun looking lava lamp sitting on the counter and I thought I might ask if that was the only one you had available, or if there were any other flavors? #speaker:Fred #mood:happy

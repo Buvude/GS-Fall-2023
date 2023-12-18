@@ -351,13 +351,13 @@ Bye, my favorite little star! #speaker:Graciana #mood:happy
 Alright... Time to see what else there is to do around here... #speaker:Graciana #mood:think #scg:black
 ...
 
-Hey, Graciana, can you come help me with this trash? The black hole appeared again! #speaker:CeCe #mood:neutral #ecg:
+Hey, Graciana, can you come help me with this trash? The black hole appeared again! #speaker:CeCe #mood:neutral #ss:spotlight:CeCe #ecg:
 Got it... #speaker:Graciana #mood:neutral
 (I still don't know if I should be avoiding it or not...) #speaker:Graciana #mood:think
 
 ~TTMLevel=3
 ~timeOfDay="afternoon"
-~currentConvo="GMG3"
+~currentConvo="FMG3"
 ~QuickSave()
 ~StartTTMicro()
     -> DONE

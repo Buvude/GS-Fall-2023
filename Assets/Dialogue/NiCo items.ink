@@ -10,7 +10,7 @@ INCLUDE globals.ink
 
 ==Npostcard==
 //good
-NiCo gave me this postcard, from his vacation... #speaker:Graciana #mood:neutral #:pu:npost
+NiCo gave me this postcard, from his vacation... #speaker:Graciana #mood:neutral #pu:npost
 I'm glad he finally got a break. I hope all that money he won from the lawsuit can help him finally retire. #speaker:Graciana #mood:happy #pd:
 ->DONE
 ==Nscrap==

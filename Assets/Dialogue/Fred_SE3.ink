@@ -59,6 +59,8 @@ I didn't want to ruin it... #speaker:Fred #mood:sad
 }
 
 ==FredGoodEnd==
+~convo_numberOR+=1
+~affectionOR+=1
 That's actually really thoughtful of you, Fred! #speaker:Graciana #mood:happy
 
 I love that you care about Frank so much, but if you're gonna move forward in your life you need to do it, right? #speaker:Graciana #mood:neutral
@@ -197,6 +199,8 @@ School, Work, just having fun forever? #speaker:Fred #mood:neutral
 
 ->GoodFinal
 ==FredChaosEnd==
+~convo_numberOR+=1
+~chaosOR+=1
 Well, when are you planning on asking him? #speaker:Graciana #mood:think
 
 I don't know. #speaker:Fred #mood:neutral
@@ -361,6 +365,8 @@ Oh? and who's that? #speaker:Graciana #mood:think
 ->ChaosFinal
  
 ==FredBadEnd==
+~convo_numberOR+=1
+~affectionOR-=1
 
 Fred... #speaker:Graciana #mood:sad
 Even if he says no, it's better knowing.
@@ -439,20 +445,39 @@ Well I have to go tell Frank the good news, and ask him a very important questio
 
 Bye! #speaker:Fred #mood:pump
 
-(Fred gives me a quick hug before running off towards the portal, and diving head first into the swirling vortex that leads to UMS headquarters) #speaker:Graciana #mood:neutral
+(Fred gives me a quick hug before running off towards the portal, and diving head first into the swirling vortex that leads to UMS headquarters.) #speaker:Graciana #mood:neutral
+(I look off into the distance, and see the UMS ship soar past the diner.) #speaker:Graciana #mood:neutral
 
-Shit I'm going to miss that kid #speaker:Graciana #mood:neutral
+I'm really going to miss that little star... #speaker:Graciana #mood:neutral #scg:black
 
-(Stares off into the distance as a Ums ship soars past the diner in the distance) #speaker:Graciana #mood:neutral
+(It's been a few days now...)
+(I wonder how Fred is doing...?)
+...
+(I hear the familiar sound of the portal opening up, and...)
+(A lanky man in a UMS uniform, and a long beard, steps through.)
+Hi... Is Graciana here? #speaker:???
 
-I'm really going to miss that little star #speaker:Graciana #mood:neutral
-(a few months go by before a tall lanky figure in a Ums uniform comes in asking for you by name)
-(his presence is somewhat mysterious and you feel certain there is something strange about him)
+Y-yeah, that's me... #speaker:Graciana
+What's going on? How can I help you?
+(This dude seems strange... But somewhat... Gentle?)
 
-(But he carries a gentle smile and a relaxed tone as he thanks you for helping Fred and he steps to the side to reveal Fred holding a sign that says Part time Certified UMS Employee, Student, and full time Fred.)
+... #speaker:???
+I'm Frank. #speaker:Frank
+Fred's... Caretaker.
 
-Hi Graciana! Did you miss me! #speaker:Fred #mood:Happy
+O-oh! It's great to meet you! #speaker:Graciana
+Where's Fred? How's he doing?
 
+Well... #speaker:Frank
+
+(He turns around, and Fred is hanging on to Frank's back!) #speaker:Graciana
+Hi Graciana! Look!
+(He holds out a sign that says...)
+
+Certified UMS Employee, Part-Time Student, and full-time Fred! #speaker:Fred
+
+...! #speaker:Graciana
+~GoToAppartment()
 ->END
 
 
@@ -499,7 +524,7 @@ Woooooo! I'm going to be just like you! #speaker:Fred #mood:happy
  I can work in the diner, talk to people about their problems all day, serve food, make friends, go to school--
 Alright alright alright, sure thing Fred.  #speaker:Graciana #mood:neutral
 Let me clean up and then lets go see your new home, bud. #speaker:Graciana #mood:neutral
-~GoToAppartment()
+... #esfo
 
 ->END
 
@@ -636,7 +661,7 @@ I'll only make friends with people who I want to talk to from now on!
 
 ?!?!?! #speaker:Graciana #mood:fear #scg:black
 
-(A blinding white light fills the Diner...)
+(A blinding white light fills the Diner...) #bgm:none
 Ugh, my head--That ringing...
 (I lose balance, and fall over...)
 W-what...
@@ -658,10 +683,10 @@ Fred?!
 (Forming a confused and saddened face...)
 Is that...
 ...
-Fred...
+Fred...?
 ...
 What have I done...
-Did I...
+Did I...?
 ...
 I'm so sorry...
     -> END

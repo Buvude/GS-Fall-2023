@@ -8,7 +8,7 @@ INCLUDE globals.ink
 Good morning, sirs...?#ss:Himber:angry
 
 Just sir! Do not address the subgnome, human! #speaker:??? #ss:spotlight:Himber
-The name is Himber, as well! #speaker:Himber
+The name is Himber, as well!
 And would it kill you to bring me a menu?!
 
 (...Oh my god...) #speaker:Graciana #mood:neutral

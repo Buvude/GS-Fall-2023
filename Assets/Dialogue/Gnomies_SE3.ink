@@ -36,12 +36,12 @@ What do you think of me? #speaker:Himber #mood:neutral
     ->good1
 ==good1==
 ~affectionG=affectionG+4
-Honestly...? #speaker:Graciana #mood:think #sfx:GainedPoint
+Honestly...? #speaker:Graciana #mood:think #sfx:gainedPoint
 You're kind of a jerk. #speaker:Graciana #mood:angry
 Not just to me, but to Hograt, too.
 I feel like every time you've been in here, you say or do something nasty to either me, Hograt, or both.
 And I don't get it. You're a gnome, for crying out loud. #speaker:Graciana #mood:neutral
-The gnomes I know of are all happy, giddy, y'know, stuff like that. #speaker:Graciana #mood:think
+The typical gnomes I know of are all happy, giddy, y'know, stuff like that. #speaker:Graciana #mood:think
 But you're just bitter. #speaker:Graciana #mood:neutral
 And this whole Gnomestack thing... #speaker:Graciana #mood:think
 I don't get it. But if it's something Hograt genuinely wants to take part in, then you shouldn't be so hard on him.
@@ -52,7 +52,7 @@ A lot of it is pressure from the Planar Society... But I understand your meaning
     ->PreEnd
 ==bad1==
 ~affectionG=affectionG-4
-I mean, you're okay, I guess... #speaker:Graciana #mood:sad #sfx:LostPoint
+I mean, you're okay, I guess... #speaker:Graciana #mood:sad #sfx:lostPoint
 
 ...Okay? #speaker:Himber
 
@@ -85,7 +85,7 @@ We have already created a union between Gnomes with the Planar Society. The cons
     ->PreEnd
 ==chaos1==
 ~chaosG=chaosG+2
-Well... #speaker:Graciana #mood:think #sfx:CosmicPoint
+Well... #speaker:Graciana #mood:think #sfx:cosmicPoint
 I think you're kinda silly, honestly. #speaker:Graciana #mood:neutral
 
 ... #speaker:Himber #mood:neutral
@@ -125,6 +125,10 @@ No, even worse... #speaker:Himber #mood:sad
 }
 
 ==GnomiesGoodEnd==
+~convo_numberOR+=1
+~convo_numberG+=1
+~affectionOR+=1
+
 But, that is irrelevant. #speaker:Himber #mood:neutral
 There is something I must admit to you, human...
 No, I'm sorry... #speaker:Himber #mood:sad
@@ -150,7 +154,7 @@ But... #speaker:Himber #mood:sad
 
 But? #speaker:Graciana
 
-But, Hograt and I have not yet achieved our maximum potential. Or at least, the potential that is required by The Planar Society.
+But, Hograt and I have not yet achieved our maximum potential. Or at least, the potential that is required by The Planar Society. #speaker:Himber #mood:neutral
 Every member is a finely established and polished Gnomestack! #speaker:Himber #mood:happy
 ... #speaker:Himber #mood:sad
 Except for us. #speaker:Himber #mood:neutral
@@ -204,7 +208,7 @@ Well, thank you... #speaker:Graciana
 (This is now probably the nicest piece of jewelry I own...) #speaker:Graciana #mood:think
 (Actually, I think it's the only piece of jewelry I own...)
 
-Now, if you will excuse us, we shall be off. #speaker:Himber
+Now, if you will excuse us, we shall be off. #speaker:Himber #pd: 
 We must take a break from training, to spend some...
 Quality time? #speaker:Himber #mood:happy
 
@@ -220,6 +224,9 @@ I'm just glad I could help.
 ~GoToAppartment()
     -> DONE
 ==GnomiesBadEnd==
+~convo_numberOR+=1
+~convo_numberG+=1
+~affectionOR-=1
 But it is of no concern. The thought would never even cross my mind. #speaker:Himber #mood:neutral
 And even with his lesser IQ, Hograt still wouldn't dare to disrespect The Planar Society. #speaker:Himber #mood:happy
 Isn't that right, Hograt?
@@ -231,9 +238,9 @@ Isn't that right, Hograt?
 Please, you must communicate with me via your internal monologue! How many times have we gone over this?! #speaker:Himber #mood:angry
 We will never achieve enlightenment with your poor attitude!
 You need to start putting in more effort! I cannot do everything for you!
-...Hograt? #speaker:Himber #scg:black
+...Hograt? #speaker:Himber
 
-... #speaker:Hograt
+... #speaker:Hograt #scg:black
 I've... Had... Enough...
 
 Hograt?! #speaker:Himber
@@ -252,7 +259,7 @@ Hograt?! What are you doing?! Put me back up this instant! #speaker:Himber #mood
 ...I accept my consequences... #speaker:Hograt
 
 Hograt... #speaker:Graciana
-(Without another word, Hograt slowly shambles out of the Diner, walking through the portal.) #ecg:blank #ss:Himber:blank
+(Without another word, Hograt slowly shambles out of the Diner, walking through the portal.) #ecg: #ss:Himber:blank
 //also hide himber here whoops
 
 ... #speaker:Graciana #mood:fear
@@ -261,12 +268,16 @@ Oh, Himber's hat... #speaker:Graciana #mood:neutral #pu:gh
 //show hat popup here
 ...
 I'm not sure what to make of this...
-...
+... #pd:
 I should probably tell O'Ryan about the broken window...
+... #esfo
 
-~GoToAppartment()
     ->DONE
 ==GnomiesChaosEnd==
+~convo_numberOR+=1
+~convo_numberG+=1
+~chaosOR+=1
+
 But that is irrelevant. #speaker:Himber #mood:neutral
 We have discovered a new power beyond our originally perceived strength. #speaker:Himber #mood:happy
 
@@ -280,7 +291,7 @@ But of course! If we can ascend to a greater power here in this establishment, w
 
 Should I take cover or something? #speaker:Graciana #mood:fear
 
-No time! #speaker:Himber #mood:happy #scg:black
+No time! #speaker:Himber #mood:happy 
 
 Hograt, are you ready? #speaker:Himber
 
@@ -291,14 +302,14 @@ Hograt, are you ready? #speaker:Himber
 //rob is currently making a new sprite that can fill that slot
 //it's a really funny buff gnome
 
-...Yes... #speaker:Hograt
+...Yes... #speaker:Hograt #scg:black
 ...I am ready...
 
 !! #speaker:Graciana #mood:fear
 (In a split second, a blinding light fills the Diner. The two of them morph into each other seamlessly, as if made of light.)
 (The light dies down, and suddenly I am faced with...)
 
-... #speaker:Gnomies #mood:neutral #ecg:blank
+... #ecg: #speaker:Gnomies #mood:chaos 
 //i forget, does "blank" clear the cg? i hope so 🧍
 //also oh my god i can put emojis in my ink comments??? wish i knew that earlier, i would've gone crazy🙇
 //watch this end up bricking the entire game lmao 😪
@@ -352,7 +363,7 @@ I kneel to you, O' Graciana The Powerful.
 U-uh, t-thank you...? #speaker:Graciana #mood:neutral
 (Funny, just a few days ago, Himber was just yelling about how "low intelligence" I am...) #speaker:Graciana #mood:think
 (But now, he's bowing to me...?)
-(He? They? It's both Himber and Hograt, right?)
+(He? They? It's both Himber <i>and</i> Hograt, right?)
 (...They've probably ascended past the "need for pronouns," I bet...)
 
 Please, refer to us as "Gnomies." #speaker:Gnomies
@@ -364,15 +375,15 @@ This was Himber's bag of magical components. We do not require it anymore, since
 
 (Gnomies places the bag in my hands. It's surprisingly a lot heavier than it looks...) #speaker:Graciana #mood:neutral
 
-Even if using it is trivial to a being of your power, we still would like for you to keep it, as a momento of our accomplishment. #speaker:Gnomies
+Even if using it is trivial to a being of your power, we still would like for you to keep it, as a momento of our accomplishment. #speaker:Gnomies #pd: 
 Thank you, Graciana. We will be leaving now.
 
 (And just like that...) #speaker:Graciana #mood:neutral
 //ITS SO LATE I PROMISE ILL ADD THE TAG FOR HIDING GNOMIES SPRITE LATER ;-;
 
-(The absolute unit of a Gnome exits the Diner...)
+(The absolute unit of a Gnome exits the Diner...) #ss:Gnomies:blank
 ...
 Man, what the hell did I just witness? #speaker:Graciana #mood:think
+... #esfo:
 
-~GoToAppartment()
     ->DONE

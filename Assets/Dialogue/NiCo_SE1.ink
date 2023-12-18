@@ -536,10 +536,10 @@ Well, I need to get back to my shift.
 Thank you for chatting with me, Graciana.
 
 Of course. Hope you come back soon! #speaker:Graciana #mood:happy
-(He shambles his way out of the booth, and limps over through the entrance portal.)
+(He shambles his way out of the booth, and limps over through the entrance portal.) #ss:NiCo:blank
 ...Alright, time to see if there's anything else I can do... #speaker:Graciana #mood:neutral #scg:black
 ...
-Hey, Graciana! It's trash time. #speaker:CeCe #mood:neutral #ecg: 
+Hey, Graciana! It's trash time. #ecg: #speaker:CeCe #mood:neutral #ss:spotlight:CeCe 
 We got some recycling this time! Be sure you sort it correctly based on the color!
 
 Got it! #speaker:Graciana #mood:neutral

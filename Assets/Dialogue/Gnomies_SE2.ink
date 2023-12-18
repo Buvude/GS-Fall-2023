@@ -216,7 +216,15 @@ We shall be back, human! #speaker:Himber #mood:happy
 Wait... #speaker:Graciana #mood:think
 ...I never got him his pie... 
 ...
-Oh well. #speaker:Graciana #mood:neutral
+Oh well. #speaker:Graciana #mood:neutral #scg:black
+
+...
+
+Hey, Graciana, can you come help me with this trash? The black hole appeared again! #speaker:CeCe #ss:spotlight:CeCe #mood:neutral #ecg: 
+Got it... #speaker:Graciana #mood:neutral
+(I still don't know if I should be avoiding it or not...) #speaker:Graciana #mood:think
+
+
 ~convo_numberG=3
 ~TTMLevel=3
 ~timeOfDay="afternoon"

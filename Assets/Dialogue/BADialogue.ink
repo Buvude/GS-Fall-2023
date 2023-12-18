@@ -32,7 +32,7 @@ VAR tempHolder =""
         Aight! Graciana, get ready! It's comin' in hot! #speaker:Chef Swatts
 ->DONE
     -BAMLevel==1:
-        Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral
+        Order up! Let's take a lookie here... #speaker:Chef Swatts #mood:neutral #ss:spotlight:Chef Swatts 
         ~tempHolder=pop_random(BBuns2)
         For the bottom bun, it's {tempHolder}. #BBun:{tempHolder}
         ~tempHolder=pop_random(Pickles2)
@@ -71,7 +71,7 @@ VAR tempHolder =""
         Aight! Hope you got all that! It's comin' in hot! #speaker:Chef Swatts
 ->DONE
       -BAMLevel==3:
-         Make me a burger. No peeking at the order once I start tossing ingredients. #speaker:O'Ryan #mood:neutral #ss:spotlight:Chef Swatts
+         Make me a burger. <b>No peeking at the order once I start tossing ingredients.</b> #speaker:O'Ryan #mood:neutral #ss:spotlight:Chef Swatts
         ~tempHolder=pop_random(BBuns3)
         bottom is {tempHolder}. #BBun:{tempHolder}
         ~tempHolder=pop_random(Pickles3)

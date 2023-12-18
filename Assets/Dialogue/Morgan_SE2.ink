@@ -52,7 +52,7 @@ I hate doing nothing, and if I'm doing something I have to do it to the fullest 
 How so? #speaker:Morgan #mood:neutral
  
 I was more of a shut in. #speaker:Graciana #mood:sad
-When I finished work I would go home and either browse the interdimensional shows available, or read. I never really liked going out of my to make plans with people, but she did. #speaker:Graciana #mood:neutral
+When I finished work I would go home and either browse the interdimensional shows available, or read. I never really liked going out of my way to make plans with people, but she did. #speaker:Graciana #mood:neutral
 Constantly making our afterwork time useful by going fun places, or talking with other coworkers, or friends of friends to keep life interesting. #speaker:Graciana #mood:neutral
 
 But you mentioned you yourself did not go out of your way to find these activities, you were forced into them, did you not? #speaker:Morgan #mood:neutral
@@ -360,13 +360,13 @@ Okay... Just got a few more things to do today, and I'm set. #scg:black
 
 ...
 
-Hey, Graciana, can you come help me with this trash? The black hole appeared again! #speaker:CeCe #mood:neutral #ecg: 
+Hey, Graciana, can you come help me with this trash? The black hole appeared again! #speaker:CeCe #ss:spotlight:CeCe #mood:neutral #ecg: 
 Got it... #speaker:Graciana #mood:neutral
 (I still don't know if I should be avoiding it or not...) #speaker:Graciana #mood:think
 
 ~TTMLevel=3
 ~timeOfDay="afternoon"
-~currentConvo="MMG1"
+~currentConvo="MMG3"
 ~QuickSave()
 ~StartTTMicro()
  ->DONE

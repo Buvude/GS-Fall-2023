@@ -410,6 +410,8 @@ Yes. See you. #speaker:NiCo #mood:neutral
 
 (NiCo exits the diner, and I clean up their table.)
 
+Alright, that should do it. Time to check in with Swatts... #speaker:Graciana #mood:neutral
+
 
 
 // ~TTMLevel=2
