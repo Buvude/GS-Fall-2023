@@ -24,10 +24,10 @@ But I cannot think of any other person more worthy than you, Graciana.
 Do you accept my offer? #speaker:O'Ryan
 
 ... #speaker:Graciana #mood:think
-Yes! Of course, absolutely! //shmoney face mood lol
+Yes! Of course, absolutely! #speaker:Graciana #mood:money
 
 ... #speaker:O'Ryan
-Perfect.
+Perfect. #scg:black
 
 (They extend out their hand to shake mine.) #speaker:Graciana
 

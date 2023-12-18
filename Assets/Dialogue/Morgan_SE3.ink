@@ -380,7 +380,7 @@ That I shall, Farewell Graciana. #speaker:Morgan #mood:neutral
 
 Farewell, Morgan. #speaker:Graciana #mood:neutral #scg:black
 
-... #ss:Morgan:blank
+... #bgm:dinNight #ss:Morgan:blank
 //background change to night once those are implemented
 
 It's getting kinda late... #speaker:Graciana #mood:neutral #ecg: 
@@ -395,11 +395,11 @@ O-oh, hi O'Ryan...! #speaker:Graciana #mood:neutral
 
 (Suddenly, all the lights in the diner go out...!) #speaker:Graciana #mood:fear #bgm:none 
 
-... #speaker:O'Ryan #scg:black
-U-uh... #speaker:Graciana #ss:spotlight:Morgan:angry
+... #speaker:O'Ryan 
+U-uh... #scg:black #speaker:Graciana #ss:spotlight:Morgan
 
 Hah... Hah... #speaker:Morgan #mood:angry
-AHAHAHAHAHAHAHAHAHAHA!
+AHAHAHAHAHAHAHAHAHAHA! #bgm:BAM
 YESSSS, THE TIME IS NOW! O'RYAN, COME TO ME! #speaker:Morgan #mood:angry
 
 GRANT ME WHAT IS MINE, RELINQUISH ONTO ME YOUR STRENGTH SO I MAY RULE THE VOID ONCE MORE! #speaker:Morgan #mood:angry
@@ -433,7 +433,7 @@ AHAHAHHAHAHHAHAHAHHAHHA! #speaker:Morgan #mood:angry
 
 (The Morgan's form vanishes into smoke, leaving me alone in the diner confused and terrified.) #speaker:Graciana #mood:fear #ss:Morgan:blank
 
-What have I just unleashed upon the universe...?
+What have I just unleashed upon the universe...? #bgm:none
 What have I done...? 
 O'Ryan... I am so sorry... #speaker:Graciana #mood:sad
 ...
@@ -755,7 +755,7 @@ Tah-tah my dear, I must go now. #speaker:Morgan #mood:neutral
 
 Go get 'em Morgan! #speaker:Graciana #mood:happy #scg:black
 
-...
+... #bgm:dinNight
 ...
 ...
 

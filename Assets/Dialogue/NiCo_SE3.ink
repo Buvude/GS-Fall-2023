@@ -37,7 +37,7 @@ Oh... Hey, Graciana. #speaker:NiCo #mood:neutral
 ~convo_numberOR+=1
 ... #speaker:NiCo
 You know what? No.
-Things are actually fairly good.
+Things are actually fairly good. #bgm:dinNight
 
 Oh! I'm really glad to hear that! #speaker:Graciana
 What's going on?
