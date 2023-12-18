@@ -1,9 +1,15 @@
 EXTERNAL EndGame()
 EXTERNAL EndGame2()
 ==CreditsPlaceholder==
-Credits will play out here, and then the following tip will be displayed:
-Fun Fact: Did you know, each character has a Chaos ending? If you would like more information on that you can ask for it now, otherwise your save will be erased because there is no more game
-Also this sound effect plays whenever you get a point in someone's chaos route #sfx:cosmicPoint
+CREDITS:
+Producer: Sol P.
+Narrative Designers: Dom Malo, Sol P.
+Programming: David Eisenberg.
+Art: Rob Morrison, Jordan Carey
+...
+Did you know, each character has a secret Chaos ending? And getting all of them might make something special happen... 
+If you would like more information on that you can ask for it now, otherwise your save will be erased because there is no more game.
+Keep an ear out for this sound! #sfx:cosmicPoint
 *[More Info]
 ->MoreInfo
 *[Erase My Data]
@@ -48,8 +54,12 @@ what stats do you want about the characters?
     ->CharacterInfo
 *[Character chaos points aquired]
     {chaosCS}/{chaosTotalCS} required for Chef Swatts Chaos ending.
-    {chaosN}/{chaosTotalN} required for Nico's Chaos ending.
-    those are the characters who's endings are implimented right now. 
+    {chaosN}/{chaosTotalN} required for NiCo's Chaos ending.
+    {chaosF}/{chaosTotalF} required for Fred's Chaos ending.
+    {chaosM}/{chaosTotalM} required for Morgan's Chaos ending.
+    {chaosG}/{chaosTotalG} required for Himber's Chaos ending.
+    {chaosOR}/{chaosTotalOR} required for... Something secret!
+
     ->CharacterInfo
 *[back]
     ->MoreInfo
