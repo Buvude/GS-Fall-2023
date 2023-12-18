@@ -458,7 +458,7 @@ namespace InterDineMension.Manager
                             case "won":
                                 EnterDialogueMode(oR.ORdialogueDictionary["finalTTPass"]);
                                 break;
-                            case "lost":
+                            case "loss":
                                 EnterDialogueMode(oR.ORdialogueDictionary["finalTTFail"]);
                                 break;
                             case "chaos":
