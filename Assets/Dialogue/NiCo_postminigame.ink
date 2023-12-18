@@ -7,14 +7,14 @@ INCLUDE globals.ink
 {
 -winState=="won":
 ->pass1
--winState=="lost":
+-winState=="loss":
 ->fail1
 }
 -currentConvo=="NMG2":
 {
 -winState=="won":
 ->pass2
--winState=="lost":
+-winState=="loss":
 ->fail2
 }
 -currentConvo=="NMG3":
@@ -23,7 +23,7 @@ INCLUDE globals.ink
 ->chaos
 -winState=="won":
 ->pass3
--winState=="lost":
+-winState=="loss":
 ->fail3
 }
 }
