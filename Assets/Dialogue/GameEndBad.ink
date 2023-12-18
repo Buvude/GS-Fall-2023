@@ -15,14 +15,15 @@
     I see... #speaker:Graciana #mood:sad
     
     ... #speaker:O'Ryan
-    There are some that say showing care and kindness to the patrons is more important than the food itself.
+    There are some that say showing care and kindness to the patrons is more important than the food itself. 
     
     ...? #speaker:Graciana #mood:think
     
     Keep that in mind, Graciana. #speaker:O'Ryan
     
-    (O'Ryan then turns, and slowly marches out of the Diner.) #speaker:Graciana
+    (O'Ryan then turns, and slowly marches out of the Diner.) #scg:black #speaker:Graciana
     
     ... #speaker:Graciana #mood:sad
+    I guess I'll keep cleaning up...
     ->CreditsPlaceholder
 

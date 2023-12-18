@@ -44,7 +44,7 @@ We are far beyond this realm.
 Come. #speaker:O'Ryan
 Let us ascend.
 
-(As if instinctual, I clasp O'Ryan's hand.) #speaker:Graciana
+(As if instinctual, I clasp O'Ryan's hand.) #scg:black #speaker:Graciana
 (In an instant, I feel as if all of the knowledge in the universe is being poured into my brain all at once.)
 (It's almost overwhelming.)
 (But...)
