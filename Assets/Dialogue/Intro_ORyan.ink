@@ -2,9 +2,9 @@
 // EXTERNAL StartO_Ryan()
 // EXTERNAL GoToAppartment()
 INCLUDE globals.ink
-==mainORYAN==
+//==mainORYAN==
 
-(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral #bgm:dinNight #bg:diner 
+(Phew... Finally, after a long first day...) #speaker:Graciana #mood:neutral #ss:Chef Swatts:blank #bgm:dinNight #bg:diner 
 (Just gotta clean and close up...) #ecg: 
 (...) #ss:spotlight:O'Ryan
 (Suddenly, the entrance portal flashes and opens up!)

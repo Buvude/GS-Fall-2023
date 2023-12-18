@@ -166,6 +166,9 @@ Roger that message was received loud and clear. #speaker:Graciana #mood:neutral
 
 ->GoodContinued
 ==GoodContinued==
+~convo_numberOR+=1
+~convo_numberM+=1
+~affectionOR+=1
 
 I do have to ask, though... #speaker:Graciana #mood:neutral
 What would you do after you regain your power? #speaker:Graciana #mood:think
@@ -327,6 +330,10 @@ Oh my dear, we are far past the cat jokes now; fear not, it was relevant and fun
 
 ->BadContinued
 ==BadContinued==
+~convo_numberOR+=1
+~convo_numberM+=1
+~affectionOR-=1
+
 
 Just remember, please try not to outright kill O'Ryan, even if they're offering themself as some sort of battery for you to drain. #speaker:Graciana #mood:neutral
 
@@ -386,9 +393,9 @@ O-oh, hi O'Ryan...! #speaker:Graciana #mood:neutral
 ... #speaker:O'Ryan
 <i>(sniff)</i> #speaker:O'Ryan #mood:sad
 
-(Suddenly, all the lights in the diner go out...!) #speaker:Graciana #mood:fear #bgm:none #scg:black
+(Suddenly, all the lights in the diner go out...!) #speaker:Graciana #mood:fear #bgm:none 
 
-... #speaker:O'Ryan
+... #speaker:O'Ryan #scg:black
 U-uh... #speaker:Graciana #ss:spotlight:Morgan:angry
 
 Hah... Hah... #speaker:Morgan #mood:angry
@@ -422,7 +429,7 @@ AHAHHAHAHAHAHHAHAHAHHAHHAHAHHA! #speaker:Morgan #mood:angry
 
 Oh, and here is your tip, dear. #speaker:Morgan #mood:happy
 
-AHAHAHHAHAHHAHAHAHHAHHA #speaker:Morgan #mood:angry
+AHAHAHHAHAHHAHAHAHHAHHA! #speaker:Morgan #mood:angry
 
 (The Morgan's form vanishes into smoke, leaving me alone in the diner confused and terrified.) #speaker:Graciana #mood:fear #ss:Morgan:blank
 
@@ -602,7 +609,7 @@ You could write a love letter! #speaker:Graciana #mood:happy
  
  Your wisdom is truly unexpected for your age, but pleasantly so. #speaker:Morgan #mood:happy
  Why thank you, I have watche-- #speaker:Graciana #mood:happy
- I mean, seen much in my short life so far #speaker:Graciana #mood:fear
+ I mean, seen much in my short life so far. #speaker:Graciana #mood:fear
  Anyways I think it is worth a shot, especially because you could accomplish all your goals at once with them in this way. #speaker:Graciana #mood:happy
  Life partner, someone who can help you get back your power, and someone to help you grow as a person and challenge you to be better. #speaker:Graciana #mood:neutral
  
@@ -708,7 +715,9 @@ The two of you could go explore somewhere new together! Somewhere neither of you
     ->Chaotic
 
 ==Chaotic==
-//add more here, transition or like a day goes by or something idk
+~convo_numberOR+=1
+~convo_numberM+=1
+~chaosOR+=1
 
 Well, the  logical thing would be to gaze out into the stars, scout out worlds for our honeymoon, and then conquer those worlds. #speaker:Morgan #mood:neutral 
 
@@ -744,7 +753,7 @@ That's not necessary, but if you want to I physically can't stop you. #speaker:G
 Wonderful! #speaker:Morgan #mood:happy
 Tah-tah my dear, I must go now. #speaker:Morgan #mood:neutral
 
-Go get 'em Morgan! #speaker:Graciana #mood:happy #scg:
+Go get 'em Morgan! #speaker:Graciana #mood:happy #scg:black
 
 ...
 ...
@@ -766,7 +775,7 @@ Hello, dear! #speaker:Morgan #mood:happy
 Is that... #speaker:Graciana #mood:think
 Is that a ring?! #speaker:Graciana #mood:happy 
 
-(I guess there are some happy endings after all...) #esfo: 
-(Even if this one is still kinda weird.)
+(I guess there are some happy endings after all...)
+(Even if this one is still kinda weird.) #esfo:
 
 ->END

@@ -14,12 +14,12 @@ Hi there! I’m Fred, what's your name!? #speaker:Fred #mood:happy
 
  Do you know where your ship is going? Do you need help getting back to them? #speaker:Graciana #mood:think
 
-Oh yeah they are not far I can still see them! #speaker:Fred #mood:happy 
+Oh yeah they're not far, I can still see them! #speaker:Fred #mood:happy 
 
 (He turns toward the window and waves off in the distance.) #speaker:Graciana #mood:neutral
 (...Something's up with this kid...) #speaker:Graciana #mood:think
 
- Well alright, as long as you can make it back to you crew that's fine. #speaker:Graciana #mood:neutral 
+ Well alright, as long as you can make it back to your crew that's fine. #speaker:Graciana #mood:neutral 
  What were you in the mood for lil guy? #speaker:Graciana #mood:think
 
 Well, I noticed you had a fun looking lava lamp sitting on the counter and I thought I might ask if that was the only one you had available, or if there were any other flavors? #speaker:Fred #mood:happy
@@ -52,13 +52,13 @@ Let me go get you that lava lamp then, did you have a preference of color or fla
 
  If you have blue that would be great, it tastes more sulfuric than the others, my favorite. #speaker:Fred #mood:happy
 
- Right... Coming right up, Fred. #speaker:Graciana #mood:neutral
+ Right... Coming right up, Fred. #speaker:Graciana #mood:neutral #scg:black
 
  (I head to the storage closet in the back, digging around a bunch of old junk until I find a brand new blue lava lamp, in the box and everything.) #speaker:Graciana #mood:neutral
  (What kinda junk is lying around in here...?) #speaker:Graciana #mood:think
  (Anyways, I take it out of the box and bring it back out to Fred).
 
- Fred, if you don’t mind me asking, how old are you? #speaker:Graciana #mood:think
+ Fred, if you don’t mind me asking, how old are you? #speaker:Graciana #mood:think #ecg: 
 
  Oh I’m not really sure! I could be anywhere between one or five, but my crew hasn’t been able to properly carbon date me yet. #speaker:Fred #mood:galaxy
 
@@ -98,6 +98,9 @@ Right again Fred, you can absolutely do that! #speaker:Graciana #mood:happy
  Alright, bye-bye now Fred, travel safe! #speaker:Graciana #mood:neutral
 (He waves at me as he exits the Diner.)
 ...What a kid... #ss:Fred:blank
+In any case... 
+I should probably go see what else there is to do...
+...
 ~BAMLevel=0
 ~timeOfDay="afternoon"
 ~currentConvo="FMG1"

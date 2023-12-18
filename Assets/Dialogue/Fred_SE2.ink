@@ -184,7 +184,7 @@ Which is great that Frank means so much to you, but I just wanted to make sure I
 It's what you said, I never met my parents. #speaker:Fred #mood:neutral
 I don't even know if I have parents... #speaker:Fred #mood:sad
 My most recent memories are of when I entered this UMS suit. #speaker:Fred #mood:neutral
-But ever since then, Frank has taken care me in being someone to talk to, and showing me how to do work while also having fun meeting people!  #speaker:Fred #mood:happy
+But ever since then, Frank has taken care of me in being someone to talk to, and showing me how to do work while also having fun meeting people!  #speaker:Fred #mood:happy
 He's the closest thing I've had to a dad, or any family really... #speaker:Fred #mood:sad
  
 *[A dad like him?]
@@ -348,11 +348,16 @@ Bye, my favorite little star! #speaker:Graciana #mood:happy
 ==Final==
 
 (Fred waves at me, as he exits the Diner.) #speaker:Graciana #mood:neutral #ss:Fred:blank
-Alright... Time to see what else there is to do around here... #speaker:Graciana #mood:think
+Alright... Time to see what else there is to do around here... #speaker:Graciana #mood:think #scg:black
+...
+
+Hey, Graciana, can you come help me with this trash? The black hole appeared again! #speaker:CeCe #mood:neutral #ss:spotlight:CeCe #ecg:
+Got it... #speaker:Graciana #mood:neutral
+(I still don't know if I should be avoiding it or not...) #speaker:Graciana #mood:think
 
 ~TTMLevel=3
 ~timeOfDay="afternoon"
-~currentConvo="GMG3"
+~currentConvo="FMG3"
 ~QuickSave()
 ~StartTTMicro()
     -> DONE

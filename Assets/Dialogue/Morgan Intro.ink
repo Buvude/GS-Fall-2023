@@ -164,7 +164,11 @@ Okay Morgan, how's it-- #speaker:Graciana #mood:neutral #ss:Morgan:blank #ecg:
 That's not ominous at all... #speaker:Graciana #mood:sad
 ...
 Well, I guess I got some more chores to do... #speaker:Graciana #mood:neutral
- 
+...
+
+Yo, Graciana, help me take out this trash, will ya? #ecg: #speaker:CeCe #mood:neutral #ss:spotlight:CeCe 
+
+On it! #speaker:Graciana #mood:neutral
 
  ~TTMLevel=1
 ~timeOfDay="afternoon"

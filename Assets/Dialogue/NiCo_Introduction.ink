@@ -85,7 +85,7 @@ REBOOTING. PLEASE WAIT.
 (God help me.) #speaker:Graciana #mood:sad
 
 ...... #speaker:NiCo
-<i>BZZZZT</i> #speaker:NiCo #mood:error
+<i>(BZZZZT)</i> #speaker:NiCo #mood:error
 
 ...Are you... Okay...? #speaker:Graciana #mood:sad
 
@@ -121,6 +121,14 @@ I, uh, think I'm just gonna, go do some dishes now, uh... #speaker:Graciana #moo
 What started as a humble garage start-up in the technology industry rapidly evolved into the most profitable corporation on the entirety of MX-3319! #speaker:NiCo
 
 Just, uh, call me over when you're... Done? #speaker:Graciana
+(I should probably go see what else I can do around here...) #scg:black #ss:NiCo:blank
+
+... 
+... #ecg: 
+
+Yo, Graciana, help me take out this trash, will ya? #speaker:CeCe #mood:neutral #ss:spotlight:CeCe
+
+On it! #speaker:Graciana #mood:neutral
 ~TTMLevel=1
 ~timeOfDay="afternoon"
 ~currentConvo="NMG1"

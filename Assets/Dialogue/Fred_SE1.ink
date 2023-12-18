@@ -300,7 +300,7 @@ You get my point, what is Frank?
 I think he is human, or at least he looks human. #speaker:Fred #mood:neutral
 Oh, but he does have a Black cat named May too! #speaker:Fred #mood:happy
 
-(Guy who never sleeps, looks human, and has a Black cat... This guys either a wizard or some Eldritch Creature...) #speaker:Graciana #mood:think
+(Guy who never sleeps, looks human, and has a Black cat... This guy's either a wizard or some Eldritch Creature...) #speaker:Graciana #mood:think
 (But it doesn't sound like he's all bad news with how much Fred adores him...)
 
 I see! How cool! #speaker:Graciana #mood:happy
@@ -332,8 +332,10 @@ Come back after talking with Frank and UMS, and you just might find out! #speake
 
 I will! Bye Graciana! See you soon! #speaker:Fred #mood:happy
 
-(He waves as he exits through the portal.) #speaker:Graciana #mood:neutral
+(He waves as he exits through the portal.) #speaker:Graciana #mood:neutral #ss:Fred:blank
 Okay... Didn't think I'd be basically babysitting, but... I think I got this... #speaker:Graciana #mood:think
+
+...Alright, time to see if Chef Swatts need help with anything...
 
 ~BAMLevel=1
 ~timeOfDay="afternoon"

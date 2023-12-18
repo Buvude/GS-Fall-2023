@@ -32,13 +32,13 @@ Yeah! In a way, you don't rely on them to live, but they can become a big part o
 
 Right, if you would be so kind, can you tell me of your friends and how they aided in your health? #speaker:Morgan #mood:neutral 
 (Uh... Right... Friends...) #speaker:Graciana #mood:sad
-Of course! Let me grab you that slice of cake real quick first! #speaker:Graciana #mood:happy
+Of course! Let me grab you that slice of cake real quick first! #speaker:Graciana #mood:happy 
 ... #scg:black
-(Y'know, I feel like if I give her advice to a friendship I myself can't achieve, she might just strike me out of existence for leading her on...) #speaker:Graciana #mood:think #ecg:dinkit #ss:Morgan:blank
+(Y'know, I feel like if I give her advice to a friendship I myself can't achieve, she might just strike me out of existence for leading her on...) #speaker:Graciana #mood:think #ss:Morgan:blank 
 //I really hope i did this right lmao, this definitely needs to be checked lol
 
 (Now that I think about it, I did have two good friends back on Earth before I left--Yeah, I can use one of them as an example!) #speaker:Graciana #mood:think
-... #speaker:Graciana #scg:black
+... #speaker:Graciana #ecg:
 
 One lavish slice of Choclate cake with Crimson Icing and filling for yours truely #speaker:Graciana #mood:happy #ecg:diner #ss:Morgan:neutral
  //again i hope i did this right lmao
@@ -46,13 +46,13 @@ One lavish slice of Choclate cake with Crimson Icing and filling for yours truel
 Wonderful, now please continue with your explanation. #speaker:Morgan #mood:neutral
 
 Right, well I did have a friend back home who lived a similar lifestyle to me, I work to live and live to work, if you get what I mean. #speaker:Graciana #mood:neutral
-I hate doing nothing, and if I'm doing something I have to do it to the fullest of my ability, or I'll be upset with myself afterwards
- She was just like me in that way, but unlike m,e she kept that mindset when going into the social aspects of life, too.
+I hate doing nothing, and if I'm doing something I have to do it to the fullest of my ability, or I'll be upset with myself afterwards.
+ She was just like me in that way, but unlike me, she kept that mindset when going into the social aspects of life, too.
  
 How so? #speaker:Morgan #mood:neutral
  
 I was more of a shut in. #speaker:Graciana #mood:sad
-When I finished work I would go home and either browse the interdimensional shows available, or read. I never really liked going out of my to make plans with people, but she did. #speaker:Graciana #mood:neutral
+When I finished work I would go home and either browse the interdimensional shows available, or read. I never really liked going out of my way to make plans with people, but she did. #speaker:Graciana #mood:neutral
 Constantly making our afterwork time useful by going fun places, or talking with other coworkers, or friends of friends to keep life interesting. #speaker:Graciana #mood:neutral
 
 But you mentioned you yourself did not go out of your way to find these activities, you were forced into them, did you not? #speaker:Morgan #mood:neutral
@@ -80,7 +80,7 @@ You're already a pro at this! #speaker:Graciana #mood:happy
 Well, I was a Goddess. We tend to have a better grasp of the universal laws and fundamentals then most other beings. #speaker:Morgan #mood:neutral
 I've just had a slightly less grasp since I only ever observed your kind, through a small lens at the opposite end of the universe. #speaker:Morgan #mood:sad
 
-End of the unvierse? Like it stops at some point? #speaker:Graciana #mood:think
+End of the universe? Like it stops at some point? #speaker:Graciana #mood:think
 
 ...I will not continue further so that you may continue on in life, without bearing the great burdens of knowledge about how vast the universe actually is. #speaker:Morgan #mood:neutral
 
@@ -356,11 +356,17 @@ For being a mere mortal you certainly have a powerful influence over those aroun
 That carrys a hint of concern, so just keep that in mind to keep giving me good advice, and not stray from that path. #speaker:Morgan
 
 (Morgan then turns, and exits the Diner.) #speaker:Graciana #mood:neutral #ss:Morgan:blank
-Okay... Just got a few more things to do today, and I'm set.
+Okay... Just got a few more things to do today, and I'm set. #scg:black
 
-~TTMLevel=1
+...
+
+Hey, Graciana, can you come help me with this trash? The black hole appeared again! #speaker:CeCe #ss:spotlight:CeCe #mood:neutral #ecg: 
+Got it... #speaker:Graciana #mood:neutral
+(I still don't know if I should be avoiding it or not...) #speaker:Graciana #mood:think
+
+~TTMLevel=3
 ~timeOfDay="afternoon"
-~currentConvo="MMG1"
+~currentConvo="MMG3"
 ~QuickSave()
 ~StartTTMicro()
  ->DONE

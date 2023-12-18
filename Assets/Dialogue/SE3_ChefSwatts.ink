@@ -33,6 +33,9 @@ Ay, Gracie, ya got a minute? #speaker:Chef Swatts
     
     
 ==GoodEndCS==
+~convo_numberOR+=1
+~convo_numberCS+=1
+~affectionOR+=1
 I been thinkin' about what ya been sayin'. #speaker:Chef Swatts
 I think I'ma start headin' back to Dipterra more often.
 
@@ -65,15 +68,16 @@ But I wouldn't mind helping you prepare some food to bring over, for sure!
 Ay, that sounds good to me. #speaker:Chef Swatts #mood:neutral
 Once things calm down a bit, an' O'Ryan finally finds a proper manager so I don' have to stay here all the time...
 I'm headin' back to Dipterra, babeh! #speaker:Chef Swatts #mood:happy #esfo: 
-~convo_numberOR+=1
-~convo_numberCS+=1
-~affectionOR+=1
+
 // ~GoToAppartment()
 
 ->DONE
 
 
 ==BadEndCS==
+~convo_numberOR+=1
+~convo_numberCS+=1
+~affectionOR-=1
 I ain't got no reason to evah go back to Dipterra. #speaker:Chef Swatts
 
 R-really? What makes you say that...? #speaker:Graciana #mood:sad
@@ -102,14 +106,15 @@ Ahahaha! #speaker:Chef Swatts #mood:happy
 
 (I mean, he seems content with staying here... But is that really what he wants? To stay in this dinky kitchen for the rest of his life?) #speaker:Graciana #mood:think
 (He could be doing so much more, I think...) #esfo: 
-~convo_numberOR+=1
-~convo_numberCS+=1
-~affectionOR-=1
+
 // ~GoToAppartment()
 
 ->DONE
 
 ==ChaosEndCS==
+~convo_numberOR+=1
+~convo_numberCS+=1
+~chaosOR+=1
 I got an idea for what I wanna do afta O'Ryan finally finds a proper manager #speaker:Chef Swatts
 
 What do you mean? #speaker:Graciana #mood:think
@@ -144,9 +149,7 @@ They would eat ya alive in a minute. #speaker:Chef Swatts #mood:neutral
 Y-yeah... I figured... #speaker:Graciana #mood:sad
 (I'm glad that Chef Swatts has found some sort of "greater purpose" aside from working here for the rest of his life.) #speaker:Graciana #mood:happy
 (I wonder when I'll get a chance to lead such a great difference like that...) #speaker:Graciana #mood:think #esfo: 
-~convo_numberOR+=1
-~convo_numberCS+=1
-~chaosOR+=1
+
 // ~GoToAppartment()
 
 ->DONE

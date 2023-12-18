@@ -106,8 +106,8 @@ Fine, fine! #speaker:Chef Swatts #mood:angry
 
 (Swatts clasps two of his hands together, bows his head and closes his eyes, whispering something to himself.) #speaker:Graciana
 ... #speaker:Chef Swatts #mood:pray
-(Then, in one swift motion, Swatts takes the Blobster in his hands and makes a cut at the bottom of it.)
-(It lets out one last gurgle before it becomes completely limp, as Swatts drops it in a pot of boiling water) #speaker:Graciana
+(Then, in one swift motion, Swatts takes the Blobster in his hands and makes a cut at the bottom of it.) #speaker:Graciana
+(It lets out one last gurgle before it becomes completely limp, as Swatts drops it in a pot of boiling water) 
 
 See, not that hard, ya? #speaker:Chef Swatts #mood:neutral
 
