@@ -1,7 +1,7 @@
 INCLUDE globals.ink
 INCLUDE ORyanFinalAfterMinigames.ink
 ~affectionOR+=1
-... #ecg:  #speaker:O'Ryan #mood:hug
+... #ecg:  #speaker:O'Ryan #mood:hug #bgm:dinNight
 
 ... #speaker:Graciana #mood:happy
 Good job. #speaker:O'Ryan

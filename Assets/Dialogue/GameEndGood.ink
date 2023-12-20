@@ -12,7 +12,7 @@ You put in the work and effort to take care of this Diner, and appreciate it for
 
 Well, I... #speaker:Graciana #mood:happy
 
-That's why I want you to take over as owner.
+That's why I want you to take over as owner. #speaker:O'Ryan
 
 Owner?! #speaker:Graciana 
 
