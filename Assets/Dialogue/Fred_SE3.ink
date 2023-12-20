@@ -476,8 +476,8 @@ Hi Graciana! Look!
 
 Certified UMS Employee, Part-Time Student, and full-time Fred! #speaker:Fred
 
-...! #speaker:Graciana
-~GoToAppartment()
+...! #speaker:Graciana #esfo: 
+
 ->END
 
 
@@ -524,7 +524,7 @@ Woooooo! I'm going to be just like you! #speaker:Fred #mood:happy
  I can work in the diner, talk to people about their problems all day, serve food, make friends, go to school--
 Alright alright alright, sure thing Fred.  #speaker:Graciana #mood:neutral
 Let me clean up and then lets go see your new home, bud. #speaker:Graciana #mood:neutral
-... #esfo
+... #esfo: 
 
 ->END
 
@@ -688,5 +688,5 @@ Fred...?
 What have I done...
 Did I...?
 ...
-I'm so sorry...
+I'm so sorry... #esfo: 
     -> END

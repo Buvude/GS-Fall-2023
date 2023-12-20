@@ -31,8 +31,7 @@ You know Morgan, I love this, but if we're going to have a deeper conversation, 
 Very well, feel free to speak in your normal tongue; I will accommodate your simpler words. #speaker:Morgan #mood:neutral
 
 Thank you; I can only sound smart for so long. #speaker:Graciana #mood:neutral
-
-To answer your previous question, I'm doing fine, but I think the bigger question is, how are you doing? #speaker:Morgan #mood:think
+To answer your previous question, I'm doing fine, but I think the bigger question is, how are you doing? #speaker:Graciana #mood:think
 
 Same as last time. Still entrapped in an internal battle with my own "nation of stags." #speaker:Morgan #mood:sad
 
@@ -82,7 +81,7 @@ I, however, have only ever felt drive, purpose, a need to fill a role in this li
 That sounds almost beautiful in a way, even if that purpose is... Death... #speaker:Graciana #mood:neutral
 
 Think, child... #speaker:Morgan #mood:neutral
-if you lived as long as I have, would you value your life equally? #speaker:Morgan #speaker:sad
+if you lived as long as I have, would you value your life equally? #speaker:Morgan #mood:sad
 If a thousand years of serving feasts to those who entered these halls was your purpose, would you feel needed? #speaker:Morgan #mood:neutral
 
 I guess? Maybe? Maybe not? I really don't know. #speaker:Graciana #mood:think
